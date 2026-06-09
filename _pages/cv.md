@@ -35,7 +35,7 @@ B.Eng. in Food Science and Engineering
 
 ## Conference Activities
 
-### Poster Presentation
+### Oral Presentation
 
 How Microplastics Affect Physiological Functions and Biochemical Status of Oysters? A Metabolomic Study  
 13th Graduate Academic Forum, Ocean University of China  
