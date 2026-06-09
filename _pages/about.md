@@ -8,13 +8,11 @@ redirect_from:
 ---
 ## About Me
 
-I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory.
+I am a Ph.D. student in Biological Systems Engineering at Virginia Tech, where I work in the Sustainable & Intelligent Seafood Bioprocessing Laboratory.
 
-My research focuses on developing sustainable technologies to improve aquaculture health, seafood quality, and food preservation. I am particularly interested in biomaterial-based delivery systems, aquatic animal health, passive radiative cooling technologies, and sustainable food systems.
+A single question runs through my work: how do we keep aquatic food healthy and high-quality without adding to the environmental cost of producing it? I approach it from both ends of the supply chain. On the production side, I design PLGA-based microparticles that carry probiotics and inactivated pathogens through the harsh gut environment of fish and shrimp, aiming to strengthen immunity and reduce the disease losses that drive antibiotic use in aquaculture. On the preservation side, I develop bio-based passive radiative cooling films that lower temperature without electricity—a route toward energy-efficient cold chains.
 
-My current research investigates PLGA-based microparticle systems for the oral delivery of probiotics and inactivated pathogens in aquaculture species. I am also involved in the development of passive radiative cooling materials for energy-efficient food preservation applications.
-
-Prior to joining Virginia Tech, I conducted research on microplastic contamination in marine bivalves and seafood preservation technologies, with a focus on oysters and mussels.
+This focus grew out of earlier work on how aquatic animals respond to their environment. During my master's, I studied microplastic contamination in oysters and mussels and the quality and flavor changes shellfish undergo during preservation. Taken together, these projects reflect what I care about most: building materials and systems that make seafood safer, fresher, and more sustainable—from the farm to the plate.
 
 ## Education
 
