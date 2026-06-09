@@ -7,75 +7,72 @@ author_profile: true
 
 ## Research Overview
 
-My research integrates aquaculture health, food engineering, and sustainable processing technologies to address critical challenges in modern aquatic food systems. By combining biomaterials, delivery systems, microbiology, food chemistry, and environmental engineering, I develop innovative strategies to improve aquatic animal health, food quality, and sustainability throughout the seafood production chain.
+My research focuses on developing sustainable technologies to improve aquaculture health, seafood quality, and food preservation. By integrating biomaterials, delivery systems, food engineering, and analytical approaches, I aim to address practical challenges in aquatic food production and processing.
 
 ---
 
 ## Aquaculture Health and Oral Delivery Systems
 
-I develop advanced delivery platforms for the administration of bioactive compounds, probiotics, and vaccines in aquaculture species. My current work focuses on biodegradable PLGA-based microparticles and Pickering emulsion systems designed to improve gastrointestinal stability, controlled release, and immune stimulation in fish and shrimp.
+My current doctoral research focuses on developing biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture species. I investigate PLGA-based microparticle systems to enhance oral delivery efficiency, stability, and immune responses in fish and shrimp.
 
-Research topics include:
+**Research topics include:**
 
 * PLGA microparticle-based delivery systems
-* Oral vaccines for aquatic animals
-* Probiotic encapsulation and controlled release
-* Immune enhancement and disease prevention
+* Oral delivery of probiotics and immunostimulants
+* Controlled-release technologies
 * Functional feed development
+* Aquaculture disease prevention
 
-These technologies aim to provide practical alternatives to conventional disease management strategies while improving production efficiency and animal welfare in aquaculture.
+This work aims to provide practical and sustainable approaches for improving aquatic animal health and reducing disease-related losses in aquaculture.
 
 ---
 
 ## Sustainable Food Preservation and Passive Radiative Cooling
 
-I investigate passive radiative cooling materials and energy-efficient preservation technologies for food systems. This research explores how advanced materials can regulate temperature without external energy input, helping reduce postharvest losses and improve food quality.
+I am also interested in sustainable preservation technologies for food systems. My current work explores passive radiative cooling materials and bio-based films for temperature regulation and food quality preservation.
 
-Research topics include:
+**Research topics include:**
 
 * Passive radiative cooling materials
 * Bio-based cooling films and coatings
 * Thermal management for food preservation
-* Sustainable cold-chain technologies
-* Energy-efficient food storage systems
+* Sustainable storage technologies
 
-This work supports the development of environmentally sustainable preservation technologies for future food supply chains.
-
----
-
-## Seafood Quality, Flavor Chemistry, and Omics Technologies
-
-My research applies metabolomics, proteomics, and analytical chemistry to understand quality formation and deterioration mechanisms in seafood products.
-
-Research topics include:
-
-* Flavor chemistry of shellfish
-* Biomarker discovery for seafood quality assessment
-* Metabolomic and proteomic responses to environmental stress
-* Live storage and preservation technologies
-* Quality prediction and shelf-life evaluation
-
-Recent studies have focused on oysters and mussels, providing mechanistic insights into flavor development, physiological adaptation, and quality maintenance during processing and storage.
+This research contributes to the development of energy-efficient solutions for food preservation and cold-chain management.
 
 ---
 
-## Environmental Stressors and Aquatic Food Safety
+## Seafood Quality and Preservation
 
-I am interested in understanding how emerging environmental contaminants influence aquatic organisms and seafood quality. My previous research examined microplastic contamination in marine bivalves and its impacts on physiology, metabolism, and food quality.
+My previous research focused on seafood quality, flavor development, and preservation of shellfish products. This work investigated quality changes during processing and storage and evaluated preservation strategies for oysters and mussels.
 
-Research topics include:
+**Research topics include:**
 
-* Microplastic contamination in seafood
+* Shellfish quality evaluation
+* Seafood preservation technologies
+* Flavor-related quality changes
+* Live storage and shelf-life extension
+
+These studies provide insights into maintaining seafood quality and extending product shelf life during storage and distribution.
+
+---
+
+## Environmental Stressors and Seafood Safety
+
+My master's research examined the effects of microplastic contamination on marine bivalves and seafood quality, providing insights into environmental stress responses and food safety concerns.
+
+**Research topics include:**
+
+* Microplastic contamination in shellfish
 * Environmental stress physiology
-* Aquatic food safety
-* Depuration technologies
-* Risk assessment and mitigation strategies
+* Seafood safety assessment
+* Depuration and mitigation strategies
 
-This work contributes to improving seafood safety and environmental sustainability in aquatic food production systems.
+This work contributes to a better understanding of emerging environmental contaminants and their impacts on aquatic food systems.
 
 ---
 
 ## Research Interests
 
-Aquaculture Health • Drug Delivery Systems • PLGA Microparticles • Oral Vaccines • Probiotics • Pickering Emulsions • Passive Radiative Cooling • Food Preservation • Metabolomics • Proteomics • Seafood Quality • Food Safety • Environmental Stress Biology • Sustainable Aquaculture
+Aquaculture Health • Oral Delivery Systems • Functional Feeds • Passive Radiative Cooling • Food Preservation • Seafood Quality • Shellfish Biology • Sustainable Aquaculture
 
