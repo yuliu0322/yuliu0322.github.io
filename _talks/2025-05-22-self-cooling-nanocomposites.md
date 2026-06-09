@@ -8,7 +8,7 @@ date: 2025-05-22
 location: "Virginia Tech, Blacksburg, VA, USA"
 ---
 
-<img src="/images/isscs2025-poster.jpg" width="750">
+<img src="/images/isscs2025-poster.jpg" width="660">
 
 Poster presentation at the International Symposium on Sustainable Cooling Systems (ISSCS), Virginia Tech.
 
