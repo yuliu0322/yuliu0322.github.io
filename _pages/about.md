@@ -1,4 +1,11 @@
-
+---
+permalink: /
+title: "About"
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
 ## About Me
 
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech. My research focuses on sustainable technologies for aquaculture and food systems, integrating advanced delivery platforms, biomaterials, and postharvest preservation strategies.
