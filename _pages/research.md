@@ -4,6 +4,7 @@ title: "Research"
 permalink: /research/
 author_profile: true
 ---
+
 ## Research Overview
 
 My research integrates aquaculture health, food engineering, and sustainable processing technologies to address critical challenges in modern aquatic food systems. By combining biomaterials, delivery systems, microbiology, food chemistry, and environmental engineering, I develop innovative strategies to improve aquatic animal health, food quality, and sustainability throughout the seafood production chain.
