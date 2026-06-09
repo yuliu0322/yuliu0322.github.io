@@ -1,7 +1,7 @@
 ---
 title: "An overview of microplastics in oysters: Analysis, hazards, and depuration"
 collection: publications
-permalink: /publication/oyster-microplastics-review
+permalink: /publication/oyster-microplastics-review/
 date: 2023-01-01
 venue: "Food Chemistry"
 citation: "Liu Y, Shi H, Chen X, Teng X, Xue C, Li Z. An overview of microplastics in oysters: Analysis, hazards, and depuration. Food Chemistry, 2023."
