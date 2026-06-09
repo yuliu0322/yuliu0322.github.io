@@ -23,7 +23,7 @@ repository               : "yuliu0322/yuliu0322.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/profile.jpg"
+  avatar           : "/images/profile.jpg"
   name             : "Yu Liu"
   pronouns         : "he/him"  
   bio              : "Ph.D. Student in the Department of Biological Systems Engineering at Virginia Tech"
