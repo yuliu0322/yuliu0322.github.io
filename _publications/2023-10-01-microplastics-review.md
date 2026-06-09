@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/oyster-microplastics-review/
 date: 2023-10-01
 venue: "Food Chemistry"
-authors: "<strong>Y. Liu</strong>, H. Shi, X. Chen, X. Teng, C. Xue, Z. Li"
+authors: "<strong>Y. Liu</strong>, H. Shi, L. Chen, X. Teng, C. Xue, Z. Li"
 doi: "10.1016/j.foodchem.2023.136153"
 paperurl: "https://doi.org/10.1016/j.foodchem.2023.136153"
 ---
