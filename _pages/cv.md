@@ -33,14 +33,18 @@ B.Eng. in Food Science and Engineering
 
 ---
 
-## Conference and Presentations
+## Conference Activities
 
-**How Microplastics Affect Physiological Functions and Biochemical Status of Oysters? A Metabolomic Study**
+### Poster Presentation
 
-13th Graduate Academic Forum, Ocean University of China
+How Microplastics Affect Physiological Functions and Biochemical Status of Oysters? A Metabolomic Study  
+13th Graduate Academic Forum, Ocean University of China  
 Qingdao, China | 2023
 
-**China Society of Fisheries Conference on Blue Ocean Aquatic Food Processing and Quality Control**
+### Conference Participation
+
+China Society of Fisheries Conference  
+Blue Granary: Aquatic Food Processing and Quality Control Session  
 Zhanjiang, China | 2023
 
 ---
