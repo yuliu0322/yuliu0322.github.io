@@ -43,7 +43,6 @@ B.Eng. in Food Science and Engineering
 Qingdao, China | 2023
 
 **China Society of Fisheries Conference on Blue Ocean Aquatic Food Processing and Quality Control**
-
 Zhanjiang, China | 2023
 
 ---
