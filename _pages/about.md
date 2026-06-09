@@ -24,12 +24,12 @@ Blacksburg, VA, USA
 2025–Present
 
 **Ocean University of China**  
-M.S. in Food Science and Engineering  
+M.Eng. in Food Science and Engineering  
 Qingdao, China  
 2021–2024
 
 **Henan University of Science and Technology**  
-B.S. in Food Science and Engineering  
+B.Eng. in Food Science and Engineering  
 Luoyang, China  
 2017–2021
 
