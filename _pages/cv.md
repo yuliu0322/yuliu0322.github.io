@@ -16,11 +16,11 @@ Ph.D. Student, Biological Systems Engineering
 2025.08–Present
 
 **Ocean University of China**, Qingdao, China
-M.S. in Food Science and Engineering
+M.Eng. in Food Science and Engineering
 2021.08–2024.06
 
 **Henan University of Science and Technology**, Luoyang, China
-B.S. in Food Science and Engineering
+B.Eng. in Food Science and Engineering
 2017.08–2021.06
 
 ---
