@@ -33,15 +33,6 @@ B.Eng. in Food Science and Engineering
 Luoyang, China  
 2017–2021
 
-## Research Interests
-
-* Aquaculture Health
-* Oral Delivery Systems
-* Passive Radiative Cooling
-* Food Preservation
-* Seafood Quality and Safety
-* Sustainable Aquaculture
-
 ## Beyond Research
 
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography gives me an opportunity to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
