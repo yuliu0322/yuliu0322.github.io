@@ -18,19 +18,19 @@ Prior to joining Virginia Tech, I conducted research on microplastic contaminati
 
 ## Education
 
-**Virginia Tech** | Blacksburg, VA, USA
-
-Ph.D. Student, Biological Systems Engineering
+**Virginia Tech**  
+Ph.D. Student, Biological Systems Engineering  
+Blacksburg, VA, USA  
 2025–Present
 
-**Ocean University of China** | Qingdao, China
-
-M.S. in Food Science and Engineering
+**Ocean University of China**  
+M.S. in Food Science and Engineering  
+Qingdao, China  
 2021–2024
 
-**Henan University of Science and Technology** | Luoyang, China
-
-B.S. in Food Science and Engineering
+**Henan University of Science and Technology**  
+B.S. in Food Science and Engineering  
+Luoyang, China  
 2017–2021
 
 ## Research Interests
