@@ -12,7 +12,7 @@ I am a Ph.D. student in the Department of Biological Systems Engineering at Virg
 
 My research focuses on developing sustainable technologies to improve aquaculture health, seafood quality, and food preservation. I am particularly interested in biomaterial-based delivery systems, aquatic animal health, passive radiative cooling technologies, and sustainable food systems.
 
-My current research investigates PLGA-based microparticles and Pickering emulsion systems for the oral delivery of probiotics and inactivated pathogens in aquaculture species. I am also involved in the development of passive radiative cooling materials for energy-efficient food preservation applications.
+My current research investigates PLGA-based microparticle systems for the oral delivery of probiotics and inactivated pathogens in aquaculture species. I am also involved in the development of passive radiative cooling materials for energy-efficient food preservation applications.
 
 Prior to joining Virginia Tech, I conducted research on microplastic contamination in marine bivalves and seafood preservation technologies, with a focus on oysters and mussels.
 
