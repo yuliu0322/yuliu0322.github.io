@@ -7,8 +7,6 @@ redirect_from:
   - /resume
 ---
 
-# Curriculum Vitae
-
 ## Education
 
 **Virginia Tech**, Blacksburg, VA, USA
