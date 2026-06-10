@@ -9,7 +9,7 @@ My research focuses on developing sustainable technologies to improve aquacultur
 
 ---
 
-## Aquaculture Health and Oral Delivery Systems
+## 1. Aquaculture Health and Oral Delivery Systems
 
 My current doctoral research focuses on developing biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture species. I investigate PLGA-based microparticle systems to enhance oral delivery efficiency, stability, and immune responses in fish and shrimp.
 
@@ -25,7 +25,7 @@ This work aims to provide practical and sustainable approaches for improving aqu
 
 ---
 
-## Sustainable Food Preservation and Passive Radiative Cooling
+## 2. Sustainable Food Preservation and Passive Radiative Cooling
 
 I am also interested in sustainable preservation technologies for food systems. My current work explores passive radiative cooling materials and bio-based films for temperature regulation and food quality preservation.
 
@@ -40,7 +40,7 @@ This research contributes to the development of energy-efficient solutions for f
 
 ---
 
-## Seafood Quality and Preservation
+## 3. Seafood Quality and Preservation
 
 My previous research focused on seafood quality, flavor development, and preservation of shellfish products. This work investigated quality changes during processing and storage and evaluated preservation strategies for oysters and mussels.
 
@@ -55,7 +55,7 @@ These studies provide insights into maintaining seafood quality and extending pr
 
 ---
 
-## Environmental Stressors and Seafood Safety
+## 4. Environmental Stressors and Seafood Safety
 
 My master's research examined the effects of microplastic contamination on marine bivalves and seafood quality, providing insights into environmental stress responses and food safety concerns.
 
