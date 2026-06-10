@@ -47,7 +47,7 @@ The appeal is doing more with less: keeping food cooler and fresher using only t
 <br>
 
 <div style="text-align:center;">
-  <img src="/assets/images/PRC Workflow.png"
+  <img src="/assets/images/PRC workflow.png"
        alt="Passive Radiative Cooling System"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
