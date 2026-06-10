@@ -1,12 +1,11 @@
 ---
 permalink: /
-title: ""
+title: "About Me"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
-## About Me
 
 I am a Ph.D. student in Biological Systems Engineering at Virginia Tech, where I work in the Sustainable & Intelligent Seafood Bioprocessing Laboratory.
 
