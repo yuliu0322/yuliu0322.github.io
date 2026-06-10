@@ -88,6 +88,14 @@ My master's research examined how microplastic contamination affects marine biva
 
 These studies linked an emerging contaminant to measurable changes in shellfish physiology and quality—and tested whether depuration can mitigate them.
 
+<br>
+
+<div style="text-align:center;">
+  <img src="/assets/images/MPs depuration.png"
+       alt="Aquaculture Contamination"
+       style="max-width:1000px; width:100%; height:auto;">
+</div>
+
 ---
 
 ## Research Interests
