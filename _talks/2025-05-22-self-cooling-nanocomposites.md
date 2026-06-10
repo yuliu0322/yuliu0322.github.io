@@ -12,4 +12,4 @@ location: "Virginia Tech, Blacksburg, VA, USA"
 
 Poster presentation at the International Symposium on Sustainable Cooling Systems (ISSCS), Virginia Tech.
 
-This work investigated bioinspired chitin nanofiber–gelatin nanocomposites for passive radiative cooling applications and sustainable thermal management.
+At ISSCS 2026, I presented our latest research on bioinspired self-cooling nanocomposites based on chitin nanofibers and gelatin. The materials exhibited enhanced mechanical properties, including increased stiffness and strength, while retaining high flexibility. They also achieved effective passive radiative and evaporative cooling, demonstrating promise as sustainable materials for thermal management applications.
