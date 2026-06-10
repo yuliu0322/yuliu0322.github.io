@@ -5,7 +5,7 @@ permalink: /research/
 author_profile: true
 ---
 
-My research develops sustainable technologies for the full arc of aquatic food—from keeping farmed animals healthy to preserving the quality of the seafood they become. I work at the intersection of biomaterials, delivery systems, food engineering, and analytical chemistry, with a consistent aim of solving practical problems in aquatic food production and processing.
+My research aims to improve the health, quality, and sustainability of aquatic foods across the production-to-consumption continuum. Specifically, I focus on three interconnected areas: biomaterial-based delivery systems for aquatic animal health, biochemical and physiological mechanisms of seafood quality deterioration during processing and storage, and bio-based passive radiative cooling materials for energy-efficient cold chains. By integrating biomaterials, food engineering, and analytical chemistry, my work seeks to address practical challenges in aquatic food production, preservation, and sustainability.
 
 ---
 
