@@ -1,11 +1,9 @@
 ---
 layout: archive
-title: 
+title: "Research Overview"
 permalink: /research/
 author_profile: true
 ---
-
-## Research Overview
 
 My research focuses on developing sustainable technologies to improve aquaculture health, seafood quality, and food preservation. By integrating biomaterials, delivery systems, food engineering, and analytical approaches, I aim to address practical challenges in aquatic food production and processing.
 
