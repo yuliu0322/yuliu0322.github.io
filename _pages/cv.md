@@ -1,21 +1,21 @@
 ---
 layout: archive
-title: 
+title: "Education"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-## Education
-
 **Virginia Tech**, Blacksburg, VA, USA
 Ph.D. Student, Biological Systems Engineering
 2025.08–Present
 
+
 **Ocean University of China**, Qingdao, China
 M.Eng. in Food Science and Engineering
 2021.08–2024.06
+
 
 **Henan University of Science and Technology**, Luoyang, China
 B.Eng. in Food Science and Engineering
