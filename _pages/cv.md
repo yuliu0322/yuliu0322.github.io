@@ -6,7 +6,7 @@ author_profile: true
 redirect_from:
   - /resume
 ---
-## Education
+## Education Background
 
 **Virginia Tech**  
 Ph.D. Student in Biological Systems Engineering | 2025.08–Present
