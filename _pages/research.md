@@ -22,6 +22,14 @@ My doctoral research centers on biodegradable platforms for delivering probiotic
 
 By making oral immunization and probiotic delivery more reliable, this work offers an alternative to the antibiotics that disease losses would otherwise demand.
 
+<br>
+
+<div style="text-align:center;">
+  <img src="/assets/images/PLGA Delivery.png"
+       alt="Aquaculture Oral Delivery System"
+       style="max-width:750px; width:100%; height:auto;">
+</div>
+
 ---
 
 ## 2. Sustainable Food Preservation and Passive Radiative Cooling
