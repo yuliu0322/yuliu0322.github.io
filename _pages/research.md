@@ -27,7 +27,7 @@ By making oral immunization and probiotic delivery more reliable, this work offe
 <div style="text-align:center;">
   <img src="/assets/images/PLGA Delivery.png"
        alt="Aquaculture Oral Delivery System"
-       style="max-width:750px; width:100%; height:auto;">
+       style="max-width:1000px; width:100%; height:auto;">
 </div>
 
 ---
