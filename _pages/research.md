@@ -66,6 +66,14 @@ Earlier in my training I studied how the quality and flavor of shellfish change 
 
 This work gave me a working understanding of how processing decisions ripple through to the flavor and freshness a consumer actually experiences.
 
+<br>
+
+<div style="text-align:center;">
+  <img src="/assets/images/Aqua Preservation.png"
+       alt="Aquaculture Preservation"
+       style="max-width:1000px; width:100%; height:auto;">
+</div>
+
 ---
 
 ## 4. Environmental Stressors and Seafood Safety
