@@ -44,6 +44,14 @@ I also develop passive radiative cooling (PRC) materials—bio-based films that 
 
 The appeal is doing more with less: keeping food cooler and fresher using only the materials themselves, not added energy.
 
+<br>
+
+<div style="text-align:center;">
+  <img src="/assets/images/PRC Workflow.png"
+       alt="Passive Radiative Cooling System"
+       style="max-width:1000px; width:100%; height:auto;">
+</div>
+
 ---
 
 ## 3. Seafood Quality and Preservation
