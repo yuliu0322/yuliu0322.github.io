@@ -15,23 +15,6 @@ I approach this challenge from both ends of the supply chain. On the production 
 
 This focus grew out of earlier work on how aquatic animals respond to their environment. During my master's, I studied the effects of microplastic contamination on the physiological and biochemical responses of oysters and mussels. Taken together, these projects reflect what I care about most: building materials and systems that make seafood safer, fresher, and more sustainable—from the farm to the plate.
 
-## Education
-
-**Virginia Tech**  
-Ph.D. Student, Biological Systems Engineering  
-Blacksburg, VA, USA  
-2025–Present
-
-**Ocean University of China**  
-M.Eng. in Food Science and Engineering  
-Qingdao, China  
-2021–2024
-
-**Henan University of Science and Technology**  
-B.Eng. in Food Science and Engineering  
-Luoyang, China  
-2017–2021
-
 ## Beyond Research
 
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography gives me an opportunity to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
