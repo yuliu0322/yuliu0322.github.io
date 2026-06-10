@@ -1,13 +1,13 @@
 ---
 layout: archive
-title: ""
+title: "Education"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-## Education
+
 
 **Virginia Tech**, Blacksburg, VA, USA
 Ph.D. Student, Biological Systems Engineering
