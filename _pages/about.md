@@ -9,7 +9,7 @@ redirect_from:
 
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory.
 
-A single question runs through my research: how can we improve seafood health, quality, and sustainability without increasing environmental cost?
+A single question runs through my research: how can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
 
 I approach this across the aquatic food value chain, from aquaculture production to post-harvest preservation. On the production side, I investigate how environmental and farming conditions influence the physiology, health, and quality of aquatic species. Understanding how such conditions can compromise health then motivates the second strand of my production work: I develop PLGA-based microparticles that deliver probiotics and inactivated pathogens through the digestive tract of fish and shrimp, strengthening immunity and reducing disease-related losses in aquaculture. On the post-harvest side, my research extends seafood quality and shelf life through two complementary approaches. First, I develop bio-based passive radiative cooling materials that provide electricity-free temperature reduction for sustainable cold-chain management. Second, I study the physiological, biochemical, and flavor changes that occur during seafood processing and storage—particularly in shellfish—to understand the mechanisms driving quality deterioration and to support more effective preservation strategies.
 
