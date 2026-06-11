@@ -104,29 +104,6 @@ This work gave me a working understanding of how processing decisions ripple thr
 
 ---
 
-## 4. Environmental Stressors and Seafood Safety
-
-Beyond transportation, my research investigates the physiological, biochemical, and flavor-related changes that occur during seafood processing and storage. By examining the mechanisms underlying quality deterioration, lipid oxidation, and flavor development, I aim to identify critical factors that determine consumer-perceived quality and develop effective preservation strategies.
-
-**Research topics:**
-- Biochemical changes during seafood storage
-- Flavor formation and deterioration mechanisms
-- Lipid oxidation and quality loss
-- Shellfish processing and preservation
-- Quality evaluation and shelf-life extension
-
-This work supports the development of preservation strategies that deliver safer, higher-quality seafood products to consumers.
-
-<br>
-
-<div style="text-align:center;">
-  <img src="/assets/images/MPs depuration.png"
-       alt="Aquaculture Contamination"
-       style="max-width:1000px; width:100%; height:auto;">
-</div>
-
----
-
 ## Research Interests
 
 Aquaculture Health • Oral Delivery Systems • Functional Feeds • Passive Radiative Cooling • Food Preservation • Seafood Quality • Shellfish Biology • Sustainable Aquaculture
