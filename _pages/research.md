@@ -13,7 +13,7 @@ My research aims to improve the health, quality, and sustainability of aquatic f
 
 My earlier research focused on how aquaculture conditions and environmental stressors influence the physiology, biochemical status, and quality of shellfish, particularly oysters and mussels. I investigated the effects of temperature, salinity, and microplastic exposure on these commercially important species, with particular emphasis on physiological responses, metabolic alterations, and flavor-related biochemical changes. Through physiological, biochemical, and metabolomic approaches, this work improved our understanding of how environmental conditions shape animal health and ultimately affect seafood quality.
 
-Research topics:
+**Research topics:**
 
 • Effects of temperature on mussel physiology and metabolism
 
@@ -27,7 +27,7 @@ Research topics:
 
 By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
 
-## 1. Aquaculture Health and Oral Delivery Systems
+## 2. Aquaculture Health and Oral Delivery Systems
 
 My doctoral research centers on biodegradable platforms for delivering probiotics and inactivated pathogens to farmed fish and shrimp. Oral delivery is the most practical route in aquaculture, but also the hardest: bioactive cargo must survive feed processing and a harsh digestive environment before it can act. I design PLGA-based microparticle systems to protect that cargo, control its release, and strengthen the immune response it triggers.
 
@@ -50,9 +50,9 @@ By making oral immunization and probiotic delivery more reliable, this work offe
 
 ---
 
-## 2. Sustainable Food Preservation and Passive Radiative Cooling
+## 3. Sustainable Cold Chain and Thermal Management
 
-I also develop passive radiative cooling (PRC) materials—bio-based films that shed heat through the atmospheric transparency window (8–13 μm), lowering temperature without any electricity. Applied to food preservation, these films point toward cold chains that work where power is scarce or expensive.
+My current research also explores sustainable technologies for post-harvest food preservation. I develop bio-based passive radiative cooling materials that reduce temperature without electricity, providing energy-efficient solutions for food transportation and cold-chain management. By lowering thermal loads during transportation and storage, these materials help maintain product quality while reducing energy consumption.
 
 **Research topics:**
 - Passive radiative cooling materials
@@ -60,7 +60,7 @@ I also develop passive radiative cooling (PRC) materials—bio-based films that 
 - Thermal management for food preservation
 - Sustainable storage technologies
 
-The appeal is doing more with less: keeping food cooler and fresher using only the materials themselves, not added energy.
+The appeal is doing more with less: keeping food cooler and fresher using only the materials themselves, not adding energy.
 
 <br>
 
@@ -72,7 +72,7 @@ The appeal is doing more with less: keeping food cooler and fresher using only t
 
 ---
 
-## 3. Seafood Quality and Preservation
+## 4. Seafood Processing, Storage, and Flavor Quality
 
 Earlier in my training I studied how the quality and flavor of shellfish change during processing, storage, and live preservation, and which strategies best extend shelf life for oysters and mussels.
 
@@ -96,15 +96,16 @@ This work gave me a working understanding of how processing decisions ripple thr
 
 ## 4. Environmental Stressors and Seafood Safety
 
-My master's research examined how microplastic contamination affects marine bivalves and the safety of the seafood they yield, using metabolomic and proteomic tools to read out the animals' stress responses.
+Beyond transportation, my research investigates the physiological, biochemical, and flavor-related changes that occur during seafood processing and storage. By examining the mechanisms underlying quality deterioration, lipid oxidation, and flavor development, I aim to identify critical factors that determine consumer-perceived quality and develop effective preservation strategies.
 
 **Research topics:**
-- Microplastic contamination in shellfish
-- Environmental stress physiology
-- Seafood safety assessment
-- Depuration and mitigation strategies
+- Biochemical changes during seafood storage
+- Flavor formation and deterioration mechanisms
+- Lipid oxidation and quality loss
+- Shellfish processing and preservation
+- Quality evaluation and shelf-life extension
 
-These studies linked an emerging contaminant to measurable changes in shellfish physiology and quality—and tested whether depuration can mitigate them.
+This work supports the development of preservation strategies that deliver safer, higher-quality seafood products to consumers.
 
 <br>
 
