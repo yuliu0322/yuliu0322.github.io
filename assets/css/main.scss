@@ -48,6 +48,15 @@
     padding-top: 0 !important;
 }
 
-#main {
-    max-width: 1300px !important;
+/* Make homepage About Me text wider */
+@media (min-width: 1024px) {
+  .page {
+    width: calc(100% - 280px) !important;
+    max-width: none !important;
+  }
+
+  .archive {
+    width: calc(100% - 280px) !important;
+    max-width: none !important;
+  }
 }
