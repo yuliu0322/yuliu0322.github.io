@@ -32,7 +32,7 @@ Liu, Y., Shi, H., Chen, L., Teng, X., Xue, C., & Li, Z. (2023). An overview of m
 
 ## Working Experience
 
-### Assistant Editor, MDPI
+### Assistant Editor
 
 **MDPI, Wuhan, China** 
 
