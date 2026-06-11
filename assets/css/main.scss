@@ -48,11 +48,12 @@
     padding-top: 0 !important;
 }
 
-/* Make only the home/about content wider */
-.page__inner-wrap {
-    max-width: 1400px !important;
+/* Make homepage text area wider */
+#main {
+    max-width: 1500px !important;
 }
 
-.page__content {
-    max-width: 1400px !important;
+.page {
+    width: calc(100% - 300px) !important;
+    padding-right: 0 !important;
 }
