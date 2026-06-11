@@ -47,16 +47,3 @@
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
-
-/* Make Home text wider */
-@media (min-width: 1024px) {
-  .page {
-    width: calc(100% - 280px) !important;
-    max-width: none !important;
-  }
-
-  .archive {
-    width: calc(100% - 280px) !important;
-    max-width: none !important;
-  }
-}
