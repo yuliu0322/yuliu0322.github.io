@@ -22,11 +22,11 @@ B.Eng. in Food Science and Engineering | 2017.08–2021.06
 
 ## Selected Publications
 
-Liu, Y., Wu, S., Chen, L., Teng, X., Shi, H., Xue, C., & Li, Z. (2025). *Metabolic profiles and protein expression responses of Pacific oyster (Crassostrea gigas) to polystyrene microplastic stress*. Food Chemistry, 462, 140961.
+Liu, Y., Wu, S., Chen, L., Teng, X., Shi, H., Xue, C., & Li, Z. (2025). Metabolic profiles and protein expression responses of Pacific oyster (*Crassostrea gigas*) to polystyrene microplastic stress. Food Chemistry, 462, 140961.
 
-Liu, Y., Teng, X., Chen, L., Wu, S., Xue, C., & Li, Z. (2024). *Changes in Flavor-Related Biomarkers in Pacific Oysters (Crassostrea gigas) Following Microplastic Exposure*. Foods, 13(5), 765.
+Liu, Y., Teng, X., Chen, L., Wu, S., Xue, C., & Li, Z. (2024). Changes in Flavor-Related Biomarkers in Pacific Oysters (*Crassostrea gigas*) Following Microplastic Exposure. Foods, 13(5), 765.
 
-Liu, Y., Shi, H., Chen, L., Teng, X., Xue, C., & Li, Z. (2023). *An overview of microplastics in oysters: Analysis, hazards, and depuration*. Food Chemistry, 422, 136153.
+Liu, Y., Shi, H., Chen, L., Teng, X., Xue, C., & Li, Z. (2023). An overview of microplastics in oysters: Analysis, hazards, and depuration. Food Chemistry, 422, 136153.
 
 ---
 
