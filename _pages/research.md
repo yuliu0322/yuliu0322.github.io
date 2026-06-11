@@ -34,7 +34,7 @@ By understanding how environmental factors influence shellfish health and qualit
 
 ## 2. Aquaculture Health and Oral Delivery Systems
 
-My doctoral research centers on biodegradable platforms for delivering probiotics and inactivated pathogens to farmed fish and shrimp. Oral delivery is the most practical route in aquaculture, but also the hardest: bioactive cargo must survive feed processing and a harsh digestive environment before it can act. I design PLGA-based microparticle systems to protect that cargo, control its release, and strengthen the immune response it triggers.
+My doctoral research focuses on biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Although oral administration is the most practical approach for large-scale disease prevention in fish and shrimp, maintaining the stability and bioavailability of active ingredients remains a major challenge. I develop PLGA-based microparticle systems that protect encapsulated cargo during feed incorporation, storage, and gastrointestinal transit, while enabling controlled release and enhanced immune protection in aquatic species.
 
 **Research topics:**
 - PLGA microparticle delivery systems
