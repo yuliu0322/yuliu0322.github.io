@@ -13,6 +13,14 @@ My research aims to improve the health, quality, and sustainability of aquatic f
 
 My earlier research focused on how aquaculture conditions and environmental stressors influence the physiology, biochemical status, and quality of shellfish, particularly oysters and mussels. I investigated the effects of temperature, salinity, and microplastic exposure on these commercially important species, with particular emphasis on physiological responses, metabolic alterations, and flavor-related biochemical changes. Through physiological, biochemical, and metabolomic approaches, this work improved our understanding of how environmental conditions shape animal health and ultimately affect seafood quality.
 
+<br>
+
+<div style="text-align:center;">
+  <img src="/assets/images/Aqua Environment.png"
+       alt="Aqua Environment"
+       style="max-width:1000px; width:100%; height:auto;">
+</div>
+
 **Research topics:**
 
 - Effects of temperature on mussel physiology and metabolism
@@ -26,14 +34,6 @@ My earlier research focused on how aquaculture conditions and environmental stre
 - Metabolomic analysis of environmental stress responses
 
 By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
-
-<br>
-
-<div style="text-align:center;">
-  <img src="/assets/images/Aqua Environment.png"
-       alt="Aqua Environment"
-       style="max-width:1000px; width:100%; height:auto;">
-</div>
 
 ---
 
