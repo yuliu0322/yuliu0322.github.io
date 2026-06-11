@@ -30,8 +30,8 @@ By understanding how environmental factors influence shellfish health and qualit
 <br>
 
 <div style="text-align:center;">
-  <img src="/assets/images/Aqua environment.png"
-       alt="Aquaculture Environment"
+  <img src="/assets/images/Aqua Environment.png"
+       alt="Aqua Environment"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
