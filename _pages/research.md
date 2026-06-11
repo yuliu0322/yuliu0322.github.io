@@ -27,6 +27,16 @@ My earlier research focused on how aquaculture conditions and environmental stre
 
 By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
 
+<br>
+
+<div style="text-align:center;">
+  <img src="/assets/images/Aqua environment.png"
+       alt="Aquaculture Environment"
+       style="max-width:1000px; width:100%; height:auto;">
+</div>
+
+---
+
 ## 2. Aquaculture Health and Oral Delivery Systems
 
 My doctoral research centers on biodegradable platforms for delivering probiotics and inactivated pathogens to farmed fish and shrimp. Oral delivery is the most practical route in aquaculture, but also the hardest: bioactive cargo must survive feed processing and a harsh digestive environment before it can act. I design PLGA-based microparticle systems to protect that cargo, control its release, and strengthen the immune response it triggers.
