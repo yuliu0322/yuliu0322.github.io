@@ -30,27 +30,11 @@ Liu, Y., Shi, H., Chen, L., Teng, X., Xue, C., & Li, Z. (2023). *An overview of 
 
 ---
 
-## Conference Activities
-
-### Oral Presentation
-
-How Microplastics Affect Physiological Functions and Biochemical Status of Oysters? A Metabolomic Study  
-13th Graduate Academic Forum, Ocean University of China  
-Qingdao, China | 2023
-
-### Conference Participation
-
-China Society of Fisheries Conference  
-Blue Granary: Aquatic Food Processing and Quality Control Session  
-Zhanjiang, China | 2023
-
----
-
 ## Working Experience
 
 ### Assistant Editor
 
-**MDPI**
+**MDPI** | Wuhan, China
 
 2024.11–2025.07
 
