@@ -13,6 +13,14 @@ My research aims to improve the health, quality, and sustainability of aquatic f
 
 My earlier research focused on how aquaculture conditions and environmental stressors influence the physiology, biochemical status, and quality of shellfish, particularly oysters and mussels. I investigated the effects of temperature, salinity, and microplastic exposure on these commercially important species, with particular emphasis on physiological responses, metabolic alterations, and flavor-related biochemical changes. Through physiological, biochemical, and metabolomic approaches, this work improved our understanding of how environmental conditions shape animal health and ultimately affect seafood quality.
 
+**Research topics:**
+
+- Effects of temperature on mussel physiology and metabolism
+- Effects of salinity on oyster growth and biochemical status
+- Flavor-related biochemical changes in oysters and mussels
+- Microplastic contamination and biological impacts in oysters
+- Metabolomic analysis of environmental stress responses
+
 <br>
 
 <div style="text-align:center;">
@@ -20,18 +28,6 @@ My earlier research focused on how aquaculture conditions and environmental stre
        alt="Aqua Environment"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
-
-**Research topics:**
-
-- Effects of temperature on mussel physiology and metabolism
-
-- Effects of salinity on oyster growth and biochemical status
-
-- Flavor-related biochemical changes in oysters and mussels
-
-- Microplastic contamination and biological impacts in oysters
-
-- Metabolomic analysis of environmental stress responses
 
 By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
 
@@ -48,8 +44,6 @@ My doctoral research centers on biodegradable platforms for delivering probiotic
 - Functional feed development
 - Aquaculture disease prevention
 
-By making oral immunization and probiotic delivery more reliable, this work offers an alternative to the antibiotics that disease losses would otherwise demand.
-
 <br>
 
 <div style="text-align:center;">
@@ -57,6 +51,8 @@ By making oral immunization and probiotic delivery more reliable, this work offe
        alt="Aquaculture Oral Delivery System"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
+
+By making oral immunization and probiotic delivery more reliable, this work offers an alternative to the antibiotics that disease losses would otherwise demand.
 
 ---
 
@@ -70,8 +66,6 @@ My current research also explores sustainable technologies for post-harvest food
 - Thermal management for food preservation
 - Sustainable storage technologies
 
-The appeal is doing more with less: keeping food cooler and fresher using only the materials themselves, not adding energy.
-
 <br>
 
 <div style="text-align:center;">
@@ -79,6 +73,8 @@ The appeal is doing more with less: keeping food cooler and fresher using only t
        alt="Passive Radiative Cooling System"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
+
+The appeal is doing more with less: keeping food cooler and fresher using only the materials themselves, not adding energy.
 
 ---
 
@@ -92,8 +88,6 @@ Earlier in my training I studied how the quality and flavor of shellfish change 
 - Flavor-related quality changes
 - Live storage and shelf-life extension
 
-This work gave me a working understanding of how processing decisions ripple through to the flavor and freshness a consumer actually experiences.
-
 <br>
 
 <div style="text-align:center;">
@@ -101,6 +95,8 @@ This work gave me a working understanding of how processing decisions ripple thr
        alt="Aquaculture Preservation"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
+
+This work gave me a working understanding of how processing decisions ripple through to the flavor and freshness a consumer actually experiences.
 
 ---
 
