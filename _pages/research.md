@@ -9,6 +9,24 @@ My research aims to improve the health, quality, and sustainability of aquatic f
 
 ---
 
+## 1. Aquaculture Environment, Animal Health, and Seafood Quality
+
+My earlier research focused on how aquaculture conditions and environmental stressors influence the physiology, biochemical status, and quality of shellfish, particularly oysters and mussels. I investigated the effects of temperature, salinity, and microplastic exposure on these commercially important species, with particular emphasis on physiological responses, metabolic alterations, and flavor-related biochemical changes. Through physiological, biochemical, and metabolomic approaches, this work improved our understanding of how environmental conditions shape animal health and ultimately affect seafood quality.
+
+Research topics:
+
+• Effects of temperature on mussel physiology and metabolism
+
+• Effects of salinity on oyster growth and biochemical status
+
+• Flavor-related biochemical changes in oysters and mussels
+
+• Microplastic contamination and biological impacts in oysters
+
+• Metabolomic analysis of environmental stress responses
+
+By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
+
 ## 1. Aquaculture Health and Oral Delivery Systems
 
 My doctoral research centers on biodegradable platforms for delivering probiotics and inactivated pathogens to farmed fish and shrimp. Oral delivery is the most practical route in aquaculture, but also the hardest: bioactive cargo must survive feed processing and a harsh digestive environment before it can act. I design PLGA-based microparticle systems to protect that cargo, control its release, and strengthen the immune response it triggers.
