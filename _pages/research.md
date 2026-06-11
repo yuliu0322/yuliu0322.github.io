@@ -5,7 +5,7 @@ permalink: /research/
 author_profile: true
 ---
 
-My research aims to improve the health, quality, and sustainability of aquatic foods across the production-to-consumption continuum. Specifically, I focus on three interconnected areas: biomaterial-based delivery systems for aquatic animal health, biochemical and physiological mechanisms of seafood quality deterioration during processing and storage, and bio-based passive radiative cooling materials for energy-efficient cold chains. By integrating biomaterials, food engineering, and analytical chemistry, my work seeks to address practical challenges in aquatic food production, preservation, and sustainability.
+My research addresses challenges across the aquatic food supply chain, from animal production to post-harvest preservation. I study how environmental conditions affect aquatic animal health, develop PLGA-based delivery systems to improve disease management in aquaculture, design bio-based passive radiative cooling materials for sustainable cold chains, and investigate the mechanisms underlying seafood quality deterioration during processing and storage. Together, these efforts aim to improve the sustainability, safety, and quality of aquatic foods from farm to plate.
 
 ---
 
