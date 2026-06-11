@@ -15,15 +15,15 @@ My earlier research focused on how aquaculture conditions and environmental stre
 
 **Research topics:**
 
-• Effects of temperature on mussel physiology and metabolism
+- Effects of temperature on mussel physiology and metabolism
 
-• Effects of salinity on oyster growth and biochemical status
+- Effects of salinity on oyster growth and biochemical status
 
-• Flavor-related biochemical changes in oysters and mussels
+- Flavor-related biochemical changes in oysters and mussels
 
-• Microplastic contamination and biological impacts in oysters
+- Microplastic contamination and biological impacts in oysters
 
-• Metabolomic analysis of environmental stress responses
+- Metabolomic analysis of environmental stress responses
 
 By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
 
