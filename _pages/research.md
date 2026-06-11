@@ -20,7 +20,6 @@ My earlier research focused on how aquaculture conditions and environmental stre
 - Flavor-related biochemical changes in oysters and mussels
 - Microplastic contamination and biological impacts in oysters
 - Metabolomic analysis of environmental stress responses
-
 <br>
 
 <div style="text-align:center;">
@@ -43,7 +42,6 @@ My doctoral research centers on biodegradable platforms for delivering probiotic
 - Controlled-release technologies
 - Functional feed development
 - Aquaculture disease prevention
-
 <br>
 
 <div style="text-align:center;">
@@ -65,7 +63,6 @@ My current research also explores sustainable technologies for post-harvest food
 - Bio-based cooling films and coatings
 - Thermal management for food preservation
 - Sustainable storage technologies
-
 <br>
 
 <div style="text-align:center;">
@@ -87,7 +84,6 @@ Earlier in my training I studied how the quality and flavor of shellfish change 
 - Seafood preservation technologies
 - Flavor-related quality changes
 - Live storage and shelf-life extension
-
 <br>
 
 <div style="text-align:center;">
