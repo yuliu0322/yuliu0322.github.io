@@ -71,7 +71,7 @@ My current research also explores sustainable technologies for post-harvest food
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
-The appeal is doing more with less: keeping food cooler and fresher using only the materials themselves, not adding energy.
+By reducing thermal loads during transportation and storage without relying on external energy input, these materials offer a practical pathway toward more sustainable cold-chain management and improved product quality.
 
 ---
 
