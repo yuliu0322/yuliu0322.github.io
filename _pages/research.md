@@ -34,7 +34,7 @@ By linking farming conditions to quality outcomes, this research provides scient
 
 ## 2. Aquaculture Health and Oral Delivery Systems
 
-An important component of my doctoral research focuses on biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Although oral administration is the most practical approach for large-scale disease prevention in fish and shrimp, maintaining the stability and bioavailability of active ingredients remains a major challenge. I develop PLGA-based microparticle systems that protect encapsulated cargo during feed incorporation, storage, and gastrointestinal transit, while enabling controlled release and enhanced immune protection in aquatic species.
+An important component of my doctoral research explores biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Oral administration is the most practical strategy for large-scale disease prevention in fish and shrimp, yet preserving the stability and bioavailability of bioactive compounds throughout feed preparation and digestion remains challenging. My work investigates PLGA-based microparticle systems that aim to protect encapsulated cargo during feed processing, storage, and gastrointestinal transit while providing controlled release and enhancing immune responses in aquatic species.
 
 **Research topics:**
 - PLGA microparticle delivery systems
@@ -56,7 +56,7 @@ By making oral immunization and probiotic delivery more reliable, this work offe
 
 ## 3. Sustainable Cold Chain and Thermal Management
 
-My primary doctoral focus lies in developing sustainable technologies for post-harvest food preservation. I develop bio-based passive radiative cooling materials that reduce temperature without electricity, providing energy-efficient solutions for food transportation and cold-chain management. By lowering thermal loads during transportation and storage, these materials help maintain product quality while reducing energy consumption.
+My primary doctoral research focuses on exploring bio-based passive radiative cooling materials for sustainable post-harvest food preservation. These materials are designed to provide cooling without external energy input, offering a promising approach for improving the energy efficiency of food transportation and cold-chain systems. Through reducing thermal loads during storage and distribution, they may help preserve product quality and extend shelf life.
 
 **Research topics:**
 - Passive radiative cooling materials
