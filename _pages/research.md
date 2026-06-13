@@ -77,7 +77,7 @@ By reducing thermal loads during transportation and storage without relying on e
 
 ## 4. Seafood Processing, Storage, and Flavor Quality (Post-harvest)
 
-If Section 1 examines how farming conditions shape shellfish quality before harvest, this line of research turns to what happens once the animals leave the water. I investigate the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and informing more effective preservation strategies.
+If Section 1 examines how farming conditions shape shellfish quality before harvest, this line of research turns to what happens once the animals leave the water. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and inform more effective preservation strategies.
 
 **Research topics:**
 - Shellfish quality evaluation
