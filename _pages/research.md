@@ -11,7 +11,7 @@ My research addresses challenges across the aquatic food supply chain, from anim
 
 ## 1. Aquaculture Environment, Animal Health, and Seafood Quality
 
-My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and contaminant exposure, such as microplastics—shape physiological responses, metabolic status, and flavor compound accumulation. Using physiological, biochemical, and metabolomic approaches, this work established how aquaculture environment translates into measurable differences in shellfish quality at harvest.
+My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure shape physiological responses, metabolic status, and flavor compound accumulation. Using physiological, biochemical, and metabolomic approaches, this work established how the aquaculture environment translates into measurable differences in shellfish quality at harvest.
 
 **Research topics:**
 
