@@ -9,9 +9,9 @@ My research addresses challenges across the aquatic food supply chain, from anim
 
 ---
 
-## 1. Aquaculture Environment, Animal Health, and Seafood Quality
+## 1. Aquaculture Environment, Animal Health, and Seafood Quality (Pre-harvest)
 
-My earlier research focused on how aquaculture conditions and environmental stressors influence the physiology, biochemical status, and quality of shellfish, particularly oysters and mussels. I investigated the effects of temperature, salinity, and microplastic exposure on these commercially important species, with particular emphasis on physiological responses, metabolic alterations, and flavor-related biochemical changes. Through physiological, biochemical, and metabolomic approaches, this work improved our understanding of how environmental conditions shape animal health and ultimately affect seafood quality.
+My earlier research examined how the conditions animals experience during farming ultimately shape the quality of the harvested product. Working primarily with oysters and mussels, I investigated how environmental and aquaculture-related stressors—including temperature, salinity, and microplastic exposure—affect physiology, biochemical status, and flavor-related characteristics measured after harvest. Using physiological, biochemical, and metabolomic approaches, this work traced how pre-harvest conditions propagate through to the intrinsic quality attributes that reach the consumer.
 
 **Research topics:**
 
@@ -28,7 +28,7 @@ My earlier research focused on how aquaculture conditions and environmental stre
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
-By understanding how environmental factors influence shellfish health and quality, this research provides a scientific foundation for sustainable aquaculture and seafood quality management.
+This research provides a scientific basis for understanding how farming decisions and environmental conditions translate into measurable differences in shellfish quality at harvest.
 
 ---
 
@@ -75,9 +75,9 @@ The appeal is doing more with less: keeping food cooler and fresher using only t
 
 ---
 
-## 4. Seafood Processing, Storage, and Flavor Quality
+## 4. Seafood Processing, Storage, and Flavor Quality (Post-harvest)
 
-Earlier in my training I studied how the quality and flavor of shellfish change during processing, storage, and live preservation, and which strategies best extend shelf life for oysters and mussels.
+While Section 1 asks how farming conditions affect shellfish quality, this line of research asks what happens to that quality once the animals leave the water. I investigate the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and informing more effective preservation strategies.
 
 **Research topics:**
 - Shellfish quality evaluation
@@ -92,7 +92,7 @@ Earlier in my training I studied how the quality and flavor of shellfish change 
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
-This work gave me a working understanding of how processing decisions ripple through to the flavor and freshness a consumer actually experiences.
+By linking post-harvest biochemical changes to sensory outcomes, this research supports the development of evidence-based handling and preservation practices that protect shellfish quality across the supply chain.
 
 ---
 
