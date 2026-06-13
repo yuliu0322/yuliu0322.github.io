@@ -34,7 +34,7 @@ By linking farming conditions to quality outcomes, this research provides scient
 
 ## 2. Aquaculture Health and Oral Delivery Systems
 
-A core component of my doctoral research focuses on biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Although oral administration is the most practical approach for large-scale disease prevention in fish and shrimp, maintaining the stability and bioavailability of active ingredients remains a major challenge. I develop PLGA-based microparticle systems that protect encapsulated cargo during feed incorporation, storage, and gastrointestinal transit, while enabling controlled release and enhanced immune protection in aquatic species.
+An important component of my doctoral research focuses on biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Although oral administration is the most practical approach for large-scale disease prevention in fish and shrimp, maintaining the stability and bioavailability of active ingredients remains a major challenge. I develop PLGA-based microparticle systems that protect encapsulated cargo during feed incorporation, storage, and gastrointestinal transit, while enabling controlled release and enhanced immune protection in aquatic species.
 
 **Research topics:**
 - PLGA microparticle delivery systems
