@@ -10,13 +10,13 @@ redirect_from:
 ## Education Background
 
 **Virginia Tech**  
-Ph.D. Student in Biological Systems Engineering | 2025.08–Present
+Ph.D. Student in Biological Systems Engineering | Aug 2025–Present
 
 **Ocean University of China**  
-M.Eng. in Food Science and Engineering | 2021.08–2024.06
+M.Eng. in Food Science and Engineering | Aug 2021–Jun 2024
 
 **Henan University of Science and Technology**  
-B.Eng. in Food Science and Engineering | 2017.08–2021.06
+B.Eng. in Food Science and Engineering | Aug 2017–Jun 2021
 
 ---
 
@@ -36,7 +36,7 @@ Liu, Y., Shi, H., Chen, L., Teng, X., Xue, C., & Li, Z. (2023). An overview of m
 
 **MDPI, Wuhan, China** 
 
-2024.11–2025.07
+Nov 2024–Jul 2025
 
 * Managed manuscript processing and editorial workflows for peer-reviewed journals.
 * Coordinated communication among authors, reviewers, and editors throughout the publication process.
