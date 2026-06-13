@@ -9,7 +9,7 @@ My research addresses challenges across the aquatic food supply chain, from anim
 
 ---
 
-## 1. Aquaculture Environment, Animal Health, and Seafood Quality (Pre-harvest)
+## 1. Aquaculture Environment, Animal Health, and Seafood Quality
 
 My earlier research examined how the conditions animals experience during farming ultimately shape the quality of the harvested product. Working primarily with oysters and mussels, I investigated how environmental and aquaculture-related stressors—including temperature, salinity, and microplastic exposure—affect physiology, biochemical status, and flavor-related characteristics measured after harvest. Using physiological, biochemical, and metabolomic approaches, this work traced how pre-harvest conditions propagate through to the intrinsic quality attributes that reach the consumer.
 
