@@ -98,4 +98,4 @@ By identifying the processing and storage conditions that best preserve flavor i
 
 ## Research Interests
 
-Aquaculture Health • Oral Delivery Systems • Functional Feeds • Passive Radiative Cooling • Food Preservation • Seafood Quality • Shellfish Biology • Sustainable Aquaculture
+Sustainable Aquaculture • Oral Delivery Systems • Passive Cooling • Food Preservation • Seafood Quality • Shellfish Biology
