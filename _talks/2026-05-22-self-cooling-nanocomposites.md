@@ -6,9 +6,10 @@ permalink: /talks/self-cooling-nanocomposites/
 venue: "International Symposium on Stochastic Complex Systems (ISSCS)"
 date: 2026-05-22
 location: "Virginia Tech, Blacksburg, VA, USA"
----
 
-<img src="/images/isscs2025-poster.jpg" width="500">
+header:
+  teaser: /images/isscs2025-poster.jpg
+---
 
 Poster presentation at the International Symposium on Stochastic Complex Systems (ISSCS), Virginia Tech.
 
