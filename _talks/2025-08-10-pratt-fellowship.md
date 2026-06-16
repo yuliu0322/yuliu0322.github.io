@@ -8,4 +8,4 @@ date: 2025-08-10
 location: "Blacksburg, VA, USA"
 ---
 
-Recipient of the Pratt Fellowship, awarded by Virginia Tech in recognition of an outstanding academic record and demonstrated potential for academic and professional success. The fellowship provided financial support during the 2025–2026 academic year.
+Awarded the Pratt Fellowship by Virginia Tech in recognition of outstanding academic achievement and demonstrated potential for academic and professional success.
