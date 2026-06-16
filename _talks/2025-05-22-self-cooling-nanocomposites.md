@@ -4,7 +4,7 @@ collection: talks
 type: "Poster Presentation"
 permalink: /talks/self-cooling-nanocomposites/
 venue: "International Symposium on Sustainable Cooling Systems (ISSCS)"
-date: 2025-05-22
+date: 2026-05-22
 location: "Virginia Tech, Blacksburg, VA, USA"
 ---
 
