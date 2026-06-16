@@ -10,10 +10,16 @@
           </li>
           {% for link in site.data.navigation.main %}
   <li class="masthead__menu-item {% if page.url == link.url %}selected{% endif %}">
-    {% if link.title == "News" %}
-      <a href="/talks/">{{ link.title }}</a>
-    {% else %}
-      <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+    {% if link.title == "Home" %}
+      <a href="/">Home</a>
+    {% elsif link.title == "Research" %}
+      <a href="/research/">Research</a>
+    {% elsif link.title == "Publications" %}
+      <a href="/publications/">Publications</a>
+    {% elsif link.title == "News" %}
+      <a href="/talks/">News</a>
+    {% elsif link.title == "CV" %}
+      <a href="/cv/">CV</a>
     {% endif %}
   </li>
 {% endfor %}
