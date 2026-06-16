@@ -1,5 +1,5 @@
 ---
-title: "Bioinspired Self-Cooling Nanocomposites"
+title: "2026 International Symposium on Sustainable Cooling Systems (ISSCS)"
 collection: talks
 type: "Poster Presentation"
 permalink: /talks/self-cooling-nanocomposites/
