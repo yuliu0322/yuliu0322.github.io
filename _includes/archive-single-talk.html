@@ -35,10 +35,19 @@
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.header.teaser %}
-  <img src="{{ post.header.teaser }}" width="500">
+  {% if post.date %}
+<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>
 {% endif %}
-  </article>
+
+{% if post.venue %}
+<p class="archive__item-excerpt" itemprop="description">
+  {{post.type}}, {{ post.venue }}, {{post.location}}
+</p>
+{% endif %}
+
+{% if post.header.teaser %}
+<img src="{{ post.header.teaser }}" width="500" style="margin-top:20px;">
+{% endif %}
+
+</article>
 </div>
