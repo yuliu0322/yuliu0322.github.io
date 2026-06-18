@@ -1,5 +1,5 @@
 ---
-title: "2026 NAJUA Graduate Student Best Paper Competition"
+title: "NAJUA Graduate Student Best Paper Competition"
 collection: talks
 type: "Competition"
 permalink: /talks/najua-best-paper-award
