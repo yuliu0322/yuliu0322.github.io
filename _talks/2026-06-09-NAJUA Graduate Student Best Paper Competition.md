@@ -3,9 +3,9 @@ title: "NAJUA Graduate Student Best Paper Competition 2026"
 collection: talks
 type: "Competition"
 permalink: /talks/najua-best-paper-award
-venue:
+venue: "Chicago, IL, USA"
 date: 2026-06-09
-location: "Chicago, IL, USA"
+location: ""
 ---
 
 Paper Competition, Chicago, IL, USA
