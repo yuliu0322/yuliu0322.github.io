@@ -10,4 +10,4 @@ location: "Blacksburg, VA, USA"
 
 Educational Outreach Activity, Virginia Tech, Blacksburg, VA, USA
 
-Served as a **Graduate Student Facilitator** in the **Professional Development for Agricultural Literacy (PDAL) 2026**, a teacher immersion program at Virginia Tech. Assisted **Prof. Justin Barone** in conducting the workshop **"Chemistry and Physics of Gummy Bears"**, engaging secondary school teachers in hands-on food science education and demonstrating how ingredients and processing influence gummy texture and flavor.
+Served as a **Graduate Student Facilitator** in the PDAL 2026, a teacher immersion program at Virginia Tech. Assisted Prof. Justin Barone in conducting the workshop **"Chemistry and Physics of Gummy Bears"**, engaging secondary school teachers in hands-on food science education and demonstrating how ingredients and processing influence gummy texture and flavor.
