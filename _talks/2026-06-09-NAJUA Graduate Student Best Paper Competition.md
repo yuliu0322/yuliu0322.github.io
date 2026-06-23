@@ -3,7 +3,6 @@ title: "NAJUA Graduate Student Best Paper Competition 2026"
 collection: talks
 type: "Competition"
 permalink: /talks/najua-best-paper-award
-venue: "North American Jiangnan University Alumni Association (NAJUA)"
 date: 2026-06-09
 location: "Chicago, IL, USA"
 ---
