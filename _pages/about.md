@@ -8,6 +8,8 @@ redirect_from:
   - /about.html
 ---
 
+<div style="max-width:850px; line-height:1.8;">
+
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory.
 
 A single question runs through my research: how can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
