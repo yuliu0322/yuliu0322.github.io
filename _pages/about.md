@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-<div style="max-width:850px;">
-
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory.
 
 A single question runs through my research: how can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
@@ -23,5 +21,3 @@ This perspective grew out of my earlier work on how aquatic organisms respond to
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography allows me to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
 
 These experiences help me maintain curiosity, creativity, and balance, qualities that I also value in scientific research and problem-solving.
-
-</div>
