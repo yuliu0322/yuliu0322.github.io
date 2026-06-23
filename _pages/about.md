@@ -18,6 +18,6 @@ This perspective grew out of my earlier work on how aquatic organisms respond to
 
 ## Beyond Research
 
-Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography gives me an opportunity to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
+Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography allows me to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
 
 These experiences help me maintain curiosity, creativity, and balance, qualities that I also value in scientific research and problem-solving.
