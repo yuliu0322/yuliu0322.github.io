@@ -1,5 +1,5 @@
 ---
-title: "PDAL 2026 Teacher Immersion Program"
+title: "Professional Development for Agricultural Literacy (PDAL) 2026"
 collection: talks
 type: "Outreach"
 permalink: /talks/pdal-2026
