@@ -1,5 +1,5 @@
 ---
-title: "International Symposium on Stochastic Complex Systems (ISSCS)"
+title: "International Symposium on Stochastic Complex Systems (ISSCS) 2026"
 collection: talks
 type: "Poster Presentation"
 permalink: /talks/self-cooling-nanocomposites/
