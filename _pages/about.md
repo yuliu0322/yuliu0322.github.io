@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 @media (min-width: 1024px) {
-  .page {
+  .archive {
     max-width: 600px !important;
   }
 
