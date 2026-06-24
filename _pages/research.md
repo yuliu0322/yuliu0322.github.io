@@ -28,8 +28,6 @@ My earlier research examined how farming conditions and environmental stressors 
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
-By linking farming conditions to quality outcomes, this research provides scientific insight for precision aquaculture management—informing how rearing decisions can be optimized to consistently produce shellfish of higher quality and safety.
-
 ---
 
 ## 2. Aquaculture Health and Oral Delivery Systems
@@ -50,8 +48,6 @@ An important component of my doctoral research explores biodegradable delivery p
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
-By making oral immunization and probiotic delivery more reliable, this work offers an alternative to the antibiotics that disease losses would otherwise demand.
-
 ---
 
 ## 3. Sustainable Cold Chain and Thermal Management
@@ -70,13 +66,11 @@ My doctoral research focuses on developing bio-based composite films that integr
        style="max-width:1000px; width:100%; height:auto;">
 </div>
 
-By reducing thermal loads during transportation and storage without relying on external energy input, these materials offer a practical pathway toward more sustainable cold-chain management and improved product quality.
-
 ---
 
 ## 4. Seafood Processing, Storage, and Flavor Quality (Post-harvest)
 
-If Section 1 examines how farming conditions shape shellfish quality before harvest, this line of research turns to what happens once the animals leave the water. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and inform more effective preservation strategies.
+If Section 1 examines how farming conditions shape shellfish quality before harvest, this line of research turns to what happens once the animals leave the water. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and inform more effective preservation strategies. By identifying the processing and storage conditions that best preserve flavor integrity and freshness, this research supports the development of practical, evidence-based post-harvest strategies that improve the eating quality and market value of shellfish products.
 
 **Research topics:**
 - Shellfish quality evaluation
@@ -90,8 +84,6 @@ If Section 1 examines how farming conditions shape shellfish quality before harv
        alt="Aquaculture Preservation"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
-
-By identifying the processing and storage conditions that best preserve flavor integrity and freshness, this research supports the development of practical, evidence-based post-harvest strategies that improve the eating quality and market value of shellfish products.
 
 ---
 
