@@ -34,7 +34,7 @@ By linking farming conditions to quality outcomes, this research provides scient
 
 ## 2. Aquaculture Health and Oral Delivery Systems
 
-An important component of my doctoral research explores biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Oral administration is the most practical strategy for large-scale disease prevention in fish and shrimp, yet preserving the stability and bioavailability of bioactive compounds throughout feed preparation and digestion remains challenging. My work investigates PLGA-based microparticle systems that aim to protect encapsulated cargo during feed processing, storage, and gastrointestinal transit while providing controlled release and enhancing immune responses in aquatic species.
+An important component of my doctoral research explores biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Oral administration is the most practical strategy for large-scale disease prevention in fish and shrimp, yet preserving the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. My work investigates PLGA-based microparticle systems that are spray-coated onto extruded feed pellets as a post-processing step, aiming to protect encapsulated cargo from storage degradation, enable controlled release, and explore their potential to enhance immune responses in aquatic species.
 
 **Research topics:**
 - PLGA microparticle delivery systems
@@ -56,13 +56,12 @@ By making oral immunization and probiotic delivery more reliable, this work offe
 
 ## 3. Sustainable Cold Chain and Thermal Management
 
-My primary doctoral research focuses on exploring bio-based passive radiative cooling materials for sustainable post-harvest food preservation. These materials are designed to provide cooling without external energy input, offering a promising approach for improving the energy efficiency of food transportation and cold-chain systems. Through reducing thermal loads during storage and distribution, they may help preserve product quality and extend shelf life.
+My doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling performance without any external energy input. In addition to their thermal performance, these films are engineered to exhibit excellent mechanical properties, making them durable and resilient. Looking ahead, I envision translating this technology into real-world cooling packaging — such as food preservation films and takeout/delivery containers — to enable energy-free, sustainable cold-chain solutions that help maintain product quality during storage and transportation.
 
 **Research topics:**
-- Passive radiative cooling materials
-- Bio-based cooling films and coatings
+- Bio-based dual-mode (radiative + evaporative) cooling films
 - Thermal management for food preservation
-- Sustainable storage technologies
+- Sustainable post-harvest preservation systems
 <br>
 
 <div style="text-align:center;">
