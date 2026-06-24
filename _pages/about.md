@@ -11,11 +11,11 @@ redirect_from:
 <style>
 @media (min-width: 1024px) {
   .page {
-    max-width: 780px !important;
+    max-width: 600px !important;
   }
 
   .page__content {
-    max-width: 780px !important;
+    max-width: 600px !important;
   }
 }
 </style>
