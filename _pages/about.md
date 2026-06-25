@@ -8,14 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-<style>
-.home-content {
-    max-width: 800px;
-}
-</style>
-
-<div class="home-content">
-
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory and the Biopolymers and Bioinspiration Laboratory.
 
 A single question runs through my research: how can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
@@ -24,10 +16,10 @@ I approach this across the aquatic food value chain, from aquaculture production
 
 This perspective grew out of my earlier work on how aquatic organisms respond to environmental stressors. During my master's research, I investigated the effects of microplastic contamination on the physiological and biochemical responses of oysters—work that grounds both my interest in how stressors shape physiology and my focus on the biochemical changes shellfish undergo during processing and storage. Together, these projects reflect my broader goal of developing science-based materials, technologies, and preservation strategies that improve the sustainability, safety, and quality of aquatic foods from farm to plate.
 
-<h2>Beyond Research</h2>
+## Beyond Research
 
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography allows me to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
 
 These experiences help me maintain curiosity, creativity, and balance, qualities that I also value in scientific research and problem-solving.
 
-</div>
+
