@@ -1,4 +1,12 @@
 ---
+layout: archive
+permalink: /
+title: "About Me"
+author_profile: true
+redirect_from:
+  - /about/
+  - /about.html
+---
 <style>
 @media (min-width: 1024px) {
   #main > .archive > p,
@@ -9,15 +17,6 @@
   }
 }
 </style>
-
-layout: archive
-permalink: /
-title: "About Me"
-author_profile: true
-redirect_from:
-  - /about/
-  - /about.html
----
 
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory and the Biopolymers and Bioinspiration Laboratory.
 
