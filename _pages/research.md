@@ -55,8 +55,6 @@ An important component of my doctoral research focuses on developing biodegradab
 
 My doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. These films are engineered to provide both efficient thermal management and the mechanical robustness required for practical food-packaging applications. By combining passive cooling with durable bio-based materials, this research aims to reduce reliance on conventional refrigeration and promote more sustainable cold-chain technologies for aquatic foods and other perishable products.
 
-Research topics
-
 **Research topics:**
 
 - Passive radiative cooling
