@@ -3,6 +3,7 @@ title: "Influence of oxygen concentration in modified atmosphere packaging on th
 collection: publications
 permalink: /publication/your-paper-under-review/
 date: 2026-06-24
-venue: "Food Packaging and Shelf Life (<strong>Under Review</strong>)"
+venue: "Food Chemistry"
+status: "Under Review"
 authors: "<strong>Y. Liu</strong>, H. Shi, H. Xiang, H. Ma, S. Wu, Z. Li, C. Xue, L. Chen"
 ---
