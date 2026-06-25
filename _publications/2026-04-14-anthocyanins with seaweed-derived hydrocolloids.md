@@ -3,6 +3,9 @@ title: "Extraction, functional properties, and applications of anthocyanins in s
 collection: publications
 permalink: /publication/your-paper-under-review/
 date: 2026-04-14
-venue: "Food Chemistry (<strong>Under Review</strong>)"
+venue: "Food Chemistry"
+status: "Under Review"
 authors: "Y. Lin, <strong>Y. Liu</strong>, J. Sun, J. Xu"
 ---
+
+Manuscript under review at *Food Chemistry*.
