@@ -13,7 +13,7 @@ redirect_from:
   #main > .archive > h2,
   #main > .archive > ul,
   #main > .archive > ol {
-    max-width: 780px !important;
+    max-width: 800px !important;
   }
 }
 </style>
