@@ -10,7 +10,7 @@ redirect_from:
 
 <style>
 .home-content {
-    max-width: 780px;
+    max-width: 800px;
 }
 </style>
 
@@ -24,7 +24,7 @@ I approach this across the aquatic food value chain, from aquaculture production
 
 This perspective grew out of my earlier work on how aquatic organisms respond to environmental stressors. During my master's research, I investigated the effects of microplastic contamination on the physiological and biochemical responses of oysters—work that grounds both my interest in how stressors shape physiology and my focus on the biochemical changes shellfish undergo during processing and storage. Together, these projects reflect my broader goal of developing science-based materials, technologies, and preservation strategies that improve the sustainability, safety, and quality of aquatic foods from farm to plate.
 
-## Beyond Research
+<h2>Beyond Research</h2>
 
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography allows me to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
 
