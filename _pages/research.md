@@ -53,7 +53,7 @@ An important component of my doctoral research focuses on developing biodegradab
 
 ## 3. Sustainable Cold Chain and Thermal Management
 
-My doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. These films are engineered to provide both efficient thermal management and the mechanical robustness required for practical food-packaging applications. By combining passive cooling with durable bio-based materials, this research aims to reduce reliance on conventional refrigeration and promote more sustainable cold-chain technologies for aquatic foods and other perishable products.
+My doctoral research focuses on developing bio-based composite films from naturally derived materials that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. Derived from renewable natural materials, these films combine efficient thermal management with the mechanical robustness required for practical food-packaging applications. By integrating sustainable biomaterials with passive cooling technologies, this research aims to reduce reliance on conventional refrigeration and promote environmentally friendly cold-chain solutions for aquatic foods and other perishable products.
 
 **Research topics:**
 
