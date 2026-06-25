@@ -11,7 +11,7 @@ My research addresses challenges across the aquatic food supply chain, from anim
 
 ## 1. Aquaculture Environment, Animal Health, and Seafood Quality
 
-My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and metabolomic approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism.
+My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and metabolomic approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism. These findings provide scientific guidance for optimizing aquaculture practices that improve animal health, product quality, and production sustainability.
 
 **Research topics:**
 
@@ -32,7 +32,7 @@ My earlier research examined how farming conditions and environmental stressors 
 
 ## 2. Aquaculture Health and Oral Delivery Systems
 
-An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. My work investigates PLGA-based microparticle systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated bioactive compounds during storage and enable controlled release in the digestive tract, with the ultimate goal of enhancing immune responses and improving disease prevention in aquatic species.
+An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. To address this challenge, I investigate PLGA-based microparticle systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated cargo during storage and enable controlled release in the digestive tract. By improving the effectiveness of oral therapeutics, this research aims to advance sustainable disease prevention strategies and reduce production losses in aquaculture.
 
 **Research topics:**
 
@@ -53,7 +53,9 @@ An important component of my doctoral research focuses on developing biodegradab
 
 ## 3. Sustainable Cold Chain and Thermal Management
 
-My doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling performance without any external energy input. In addition to their thermal performance, these films are engineered to exhibit high mechanical strength and durability, enabling practical use in demanding packaging applications. Ultimately, this research aims to translate laboratory materials into practical cooling packaging, including food preservation films and takeout or delivery containers, providing sustainable, energy-free solutions for cold-chain logistics.
+My doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. These films are engineered to provide both efficient thermal management and the mechanical robustness required for practical food-packaging applications. By combining passive cooling with durable bio-based materials, this research aims to reduce reliance on conventional refrigeration and promote more sustainable cold-chain technologies for aquatic foods and other perishable products.
+
+Research topics
 
 **Research topics:**
 
@@ -73,7 +75,7 @@ My doctoral research focuses on developing bio-based composite films that integr
 
 ## 4. Seafood Processing, Storage, and Flavor Quality (Post-harvest)
 
-Whereas Section 1 focuses on how farming conditions shape shellfish quality before harvest, this research examines the physiological and biochemical changes that occur after harvest during processing, live holding, and storage. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and inform more effective preservation strategies. By identifying the processing and storage conditions that best preserve flavor integrity and freshness, this research supports the development of practical, evidence-based post-harvest strategies that improve product quality, shelf life, and market value.
+Whereas Section 1 focuses on how farming conditions shape shellfish quality before harvest, this research examines the physiological and biochemical changes that occur after harvest during processing, live holding, and storage. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes that occur in oysters and mussels during post-harvest processing, live holding, and storage—to identify the mechanisms driving quality deterioration and inform more effective preservation strategies. By identifying the processing and storage conditions that best preserve flavor integrity and freshness, this research supports the development of practical, evidence-based post-harvest strategies that improve product quality, shelf life, and market value. Ultimately, this work contributes to reducing post-harvest losses and delivering higher-quality seafood products to consumers.
 
 **Research topics:**
 
