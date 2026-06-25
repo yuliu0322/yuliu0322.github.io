@@ -11,14 +11,12 @@ redirect_from:
 <style>
 @media (min-width: 1024px) {
   #main {
-    max-width: 1050px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    max-width: 1180px !important;
   }
 
   .archive {
-    width: 100% !important;
-    max-width: 760px !important;
+    margin-left: 0 !important;
+    max-width: 860px !important;
   }
 }
 </style>
