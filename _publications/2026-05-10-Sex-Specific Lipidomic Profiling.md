@@ -5,5 +5,5 @@ permalink: /publication/sex-specific/
 date: 2026-05-10
 venue: "Food Chemistry"
 status: "Under Review"
-authors: "L. Chen, <strong>Y. Liu</strong>, G. Yu, M. Pan, G. Xia, Z. Li"
+authors: "L. Chen, <strong>Y. Liu</strong>, G. Yu, M. Pan, G. Xia, Z. Li, H. Shi"
 ---
