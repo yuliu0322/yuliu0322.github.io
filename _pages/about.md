@@ -1,4 +1,15 @@
 ---
+<style>
+@media (min-width: 1024px) {
+  #main > .archive > p,
+  #main > .archive > h2,
+  #main > .archive > ul,
+  #main > .archive > ol {
+    max-width: 780px !important;
+  }
+}
+</style>
+
 layout: archive
 permalink: /
 title: "About Me"
