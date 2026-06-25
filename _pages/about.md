@@ -9,13 +9,12 @@ redirect_from:
 ---
 
 <style>
-@media (min-width: 1024px) {
-  #main > .archive {
-    width: 760px !important;
-    max-width: 760px !important;
-  }
+.home-content {
+    max-width: 780px;
 }
 </style>
+
+<div class="home-content">
 
 I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech and a member of the Sustainable & Intelligent Seafood Bioprocessing Laboratory and the Biopolymers and Bioinspiration Laboratory.
 
@@ -30,3 +29,5 @@ This perspective grew out of my earlier work on how aquatic organisms respond to
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography allows me to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
 
 These experiences help me maintain curiosity, creativity, and balance, qualities that I also value in scientific research and problem-solving.
+
+</div>
