@@ -23,7 +23,7 @@ My earlier research examined how farming conditions and environmental stressors 
 <br>
 
 <div style="text-align:center;">
-  <img src="/assets/images/Aqua Environment.png"
+  <img src="/assets/images/Aqua-Environment.png"
        alt="Aqua Environment"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
@@ -44,7 +44,7 @@ An important component of my doctoral research focuses on developing biodegradab
 <br>
 
 <div style="text-align:center;">
-  <img src="/assets/images/PLGA Delivery.png"
+  <img src="/assets/images/PLGA-Delivery.png"
        alt="Aquaculture Oral Delivery System"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
@@ -64,7 +64,7 @@ My doctoral research focuses on developing bio-based composite films from natura
 <br>
 
 <div style="text-align:center;">
-  <img src="/assets/images/PRC workflow.png"
+  <img src="/assets/images/PRC-workflow.png"
        alt="Passive Radiative Cooling System"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
@@ -85,7 +85,7 @@ Whereas Section 1 focuses on how farming conditions shape shellfish quality befo
 <br>
 
 <div style="text-align:center;">
-  <img src="/assets/images/Aqua Preservation.png"
+  <img src="/assets/images/Aqua-Preservation.png"
        alt="Aquaculture Preservation"
        style="max-width:1000px; width:100%; height:auto;">
 </div>
