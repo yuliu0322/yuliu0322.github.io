@@ -3,6 +3,7 @@ layout: archive
 title: "Research Overview"
 permalink: /research/
 author_profile: true
+description: "Research on PLGA-based probiotic delivery, passive radiative cooling, and seafood quality preservation."
 ---
 
 My research addresses challenges across the aquatic food supply chain, from animal production to post-harvest preservation. By integrating aquaculture, biomaterials, food engineering, and analytical science, I investigate how environmental factors affect aquatic animal health, develop biodegradable delivery systems for disease prevention, design sustainable cooling materials for post-harvest preservation, and uncover the mechanisms that underlie seafood quality deterioration during processing and storage. Together, these efforts aim to improve the sustainability, safety, and quality of aquatic foods from farm to plate.
