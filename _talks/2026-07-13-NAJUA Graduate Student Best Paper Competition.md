@@ -4,7 +4,7 @@ collection: talks
 type: "Competition"
 permalink: /talks/najua-best-paper-award
 venue: "Chicago, IL, USA"
-date: 2026-06-09
+date: 2026-07-13
 ---
 
 Paper Competition, Chicago, IL, USA
