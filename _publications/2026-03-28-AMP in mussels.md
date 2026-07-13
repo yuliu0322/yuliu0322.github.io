@@ -5,5 +5,5 @@ permalink: /publication/MAP-mussels/
 date: 2026-03-28
 venue: "Journal of Future Foods"
 status: "Under Review"
-authors: "<strong>Y. Liu</strong>, H. Shi, H. Xiang, H. Ma, S. Wu, Z. Li, C. Xue, L. Chen"
+authors: "L. Chen, <strong>Y. Liu</strong>, H. Xiang, H. Ma, S. Wu, Z. Li, C. Xue, H. Shi"
 ---
