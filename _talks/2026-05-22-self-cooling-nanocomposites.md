@@ -8,9 +8,7 @@ date: 2026-05-22
 location: "Blacksburg, VA, USA"
 ---
 
-header:
-  teaser: /images/isscs2025-poster.jpg
----
+![ISSCS 2026 Poster]({{ "/images/isscs2025-poster.jpg" | relative_url }})
   
 Poster presentation, Virginia Tech, Blacksburg, VA, USA.
 
