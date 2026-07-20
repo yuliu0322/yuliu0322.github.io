@@ -54,3 +54,14 @@
 .page__footer {
     display: none !important;
 }
+
+/* Remove the gray fade-in effect during page loading */
+.masthead,
+.initial-content,
+.sidebar,
+.page,
+.page__inner-wrap {
+  opacity: 1 !important;
+  animation: none !important;
+  transition: none !important;
+}
