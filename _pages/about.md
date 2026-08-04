@@ -22,9 +22,7 @@ I am a Ph.D. student in the Department of Biological Systems Engineering at Virg
 <a href="https://sites.google.com/view/yimingfeng" target="_blank" rel="noopener noreferrer">
 Sustainable &amp; Intelligent Seafood Bioprocessing Laboratory
 </a>
-and the
-<a href="https://www.bse.vt.edu/about/people/faculty/justin-barone.html" target="_blank" rel="noopener noreferrer">
-Biopolymers and Bioinspiration Laboratory
+and the Biopolymers and Bioinspiration Laboratory
 </a>.
 
 A single question runs through my research: how can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
