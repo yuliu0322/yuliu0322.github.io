@@ -65,10 +65,3 @@
   animation: none !important;
   transition: none !important;
 }
-
-/* Prevent oversized text on wide desktop screens */
-@media screen and (min-width: 1440px) {
-  html {
-    font-size: 16px !important;
-  }
-}
