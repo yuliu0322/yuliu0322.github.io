@@ -1,5 +1,5 @@
 ---
-title: "MII Technical Conference and Review 2026 2026"
+title: "MII Technical Conference and Review 2026"
 collection: talks
 type: "Poster Presentation"
 permalink: /talks/MII Technical Conference and Review/
