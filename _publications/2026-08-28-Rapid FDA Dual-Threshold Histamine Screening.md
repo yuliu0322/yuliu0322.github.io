@@ -4,6 +4,6 @@ collection: publications
 permalink: /publication/histamine-screening-bluefish/
 date: 2026-08-28
 venue: "Food Control"
-status: "Submitted to the journal"
+status: "Under Review"
 authors: "L. Yang, R. Yang, <strong>Y. Liu</strong>, O. Kahraman, C. Liu, Y. Feng"
 ---
