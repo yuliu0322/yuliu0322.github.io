@@ -1,7 +1,7 @@
 ---
 title: "Southern SARE Graduate Student Grant 2026"
 collection: talks
-type: "Research Grant ($22,000)"
+type: "Research Grant"
 permalink: /talks/2026-09-01-southern-sare-graduate-student-grant
 venue: "Southern SARE"
 date: 2026-09-01
