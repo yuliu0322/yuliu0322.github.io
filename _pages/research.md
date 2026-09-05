@@ -12,7 +12,7 @@ My research addresses challenges across the aquatic food supply chain, from anim
 
 ## 1. Aquaculture Environment, Animal Health, and Seafood Quality
 
-My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and metabolomic approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism. These findings provide scientific guidance for optimizing aquaculture practices that improve animal health, product quality, and production sustainability.
+My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and omics approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism. These findings provide scientific guidance for optimizing aquaculture practices that improve animal health, product quality, and production sustainability.
 
 **Research topics:**
 
@@ -33,12 +33,12 @@ My earlier research examined how farming conditions and environmental stressors 
 
 ## 2. Aquaculture Health and Oral Delivery Systems
 
-An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and inactivated pathogens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. To address this challenge, I investigate PLGA-based microparticle systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated cargo during storage and enable controlled release in the digestive tract. By improving the effectiveness of oral therapeutics, this research aims to advance sustainable disease prevention strategies and reduce production losses in aquaculture.
+An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and antigens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. To address this challenge, I investigate PLGA-based delivery systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated cargo during storage and enable controlled release in the digestive tract. By improving the effectiveness of oral therapeutics, this research aims to advance sustainable disease prevention strategies and reduce production losses in aquaculture.
 
 **Research topics:**
 
-- PLGA-based microparticle delivery
-- Oral vaccines and probiotics
+- PLGA-based delivery systems
+- Oral vaccines 
 - Controlled-release systems
 - Functional aquafeeds
 - Disease prevention
@@ -95,4 +95,4 @@ Whereas Section 1 focuses on how farming conditions shape shellfish quality befo
 
 ## Research Interests
 
-Sustainable Aquaculture • Seafood Quality and Preservation • Biomaterials and Delivery Systems • Passive Radiative Cooling • Food Biochemistry
+Sustainable Aquaculture • Seafood Science • Oral Delivery Systems • Passive Cooling • Food Biochemistry
