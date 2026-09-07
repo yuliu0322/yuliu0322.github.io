@@ -3,7 +3,7 @@ title: "Rapid FDA Dual-Threshold Histamine Screening in Bluefish (Pomatomus salt
 collection: publications
 permalink: /publication/histamine-screening-bluefish/
 date: 2026-08-28
-venue: "Food Control"
+venue: "Food Research International"
 status: "Under Review"
 authors: "L. Yang, R. Yang, <strong>Y. Liu</strong>, O. Kahraman, C. Liu, Y. Feng"
 published: false
