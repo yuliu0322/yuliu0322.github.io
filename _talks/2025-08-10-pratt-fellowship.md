@@ -1,5 +1,5 @@
 ---
-title: "Pratt Fellowship"
+title: "Pratt Fellowship 2025"
 collection: talks
 type: "Award"
 permalink: /talks/pratt-fellowship
