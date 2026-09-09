@@ -9,3 +9,5 @@ location: "Blacksburg, VA, USA"
 ---
 
 Awarded a $22,000 Southern Sustainable Agriculture Research and Education (SARE) Graduate Student Grant to field-test chitin nanofiber-based passive cooling liners as a sustainable and affordable solution for reducing postharvest heat accumulation and preserving strawberry quality on small-scale Southern farms.
+
+[View the official SARE project page](https://projects.sare.org/sare_project/gs26-342/)
