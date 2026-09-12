@@ -15,7 +15,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 {% include base_path %}
 
-<h2>Peer-Reviewed Journal Articles</h2>
+<h2>Peer-Reviewed Journal Articles:</h2>
 
 {% for post in site.publications reversed %}
   {% unless post.type == "book" or post.type == "patent" %}
@@ -23,7 +23,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   {% endunless %}
 {% endfor %}
 
-<h2>Book Chapters</h2>
+<h2>Book Chapters:</h2>
 
 {% for post in site.publications reversed %}
   {% if post.type == "book" %}
@@ -31,7 +31,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   {% endif %}
 {% endfor %}
 
-<h2>Patents</h2>
+<h2>Patents:</h2>
 
 {% for post in site.publications reversed %}
   {% if post.type == "patent" %}
