@@ -120,12 +120,14 @@ html {
     min-width: 0;
   }
 
- /* Align Home automatically with the right content column */
+/* Align Home with the right content column */
 .greedy-nav .visible-links > li:first-child {
-  flex: 0 0 calc(
-    var(--sidebar-width) + var(--column-gap) + var(--column-gap)
-  );
-  margin-right: 0;
+  width: calc(var(--sidebar-width) + var(--column-gap)) !important;
+  padding-right: 0 !important;
+}
+
+.greedy-nav .site-title {
+  margin-right: 0 !important;
 }
 
   /* Keep navigation items compact */
