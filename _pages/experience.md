@@ -17,7 +17,7 @@ author_profile: true
 
 ### Project Coordinator  
 **IVC Nutrition Corporation** · Suzhou, Jiangsu, China  
-*Jul 2024–Nov 2024*
+*Jul 2024–Sep 2024*
 
 - Coordinated cross-border product development projects in collaboration with clients and internal marketing and sales teams.
 - Conducted market research and literature reviews to evaluate industry trends, consumer preferences, and emerging ingredients in dietary supplements.
