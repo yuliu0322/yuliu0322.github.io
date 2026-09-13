@@ -19,7 +19,7 @@ author_profile: true
 **IVC Nutrition Corporation** · Suzhou, Jiangsu, China  
 *Jul 2024–Sep 2024*
 
-- Coordinated cross-border product development projects in collaboration with clients and internal marketing and sales teams.
-- Conducted market research and literature reviews to evaluate industry trends, consumer preferences, and emerging ingredients in dietary supplements.
-- Translated client requirements into product development and production plans and monitored project progress from concept development through order fulfillment.
-- Contributed to the commercialization of two dietary supplement products, including a multivitamin softgel, based on market demand and client requirements.
+- Coordinated cross-border product development projects with clients and internal marketing and sales teams.
+- Conducted market research and literature reviews to identify industry trends, consumer preferences, and emerging ingredients in dietary supplements.
+- Translated client requirements into actionable product specifications and monitored project progress from initial concept through order fulfillment.
+- Supported the commercialization of multiple dietary supplement products by aligning product concepts with market demand and client needs.
