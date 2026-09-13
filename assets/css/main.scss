@@ -1,3 +1,4 @@
+
 ---
 ---
 
@@ -46,12 +47,6 @@
     border-top: none !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
-}
-.layout--archive .page {
-  width: 850px !important;
-  max-width: 850px !important;
-}
-.page__footer {
     display: none !important;
 }
 
@@ -87,14 +82,39 @@ html {
     font-size: 16px;
   }
 }
-/* Widen and tighten the desktop navigation bar */
+/* Desktop layout adjustments */
 @media (min-width: 64em) {
-  .masthead__inner-wrap {
-    max-width: 1500px;
+
+  /* Use the same width for the navigation and page content */
+  .masthead__inner-wrap,
+  #main {
+    max-width: 1400px;
   }
 
+  /* Let the author profile scroll together with the page */
+  .sidebar.sticky {
+    position: static !important;
+    top: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Increase the space between the sidebar and main content */
+  .page,
+  .archive {
+    padding-left: 3rem;
+  }
+
+  /* Align Home with the beginning of the main content */
+  .greedy-nav .visible-links > li:first-child {
+    flex: 0 0 calc(25% + 3rem);
+    margin-right: 0;
+  }
+
+  /* Keep all navigation items visible */
   .greedy-nav .visible-links a {
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
