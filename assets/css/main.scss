@@ -2,9 +2,7 @@
 ---
 
 /*
- * This file controls what is imported from /_sass
- *
- * The files are processed in the order they are imported.
+ * This file controls what is imported from /_sass.
  * The first two lines are required by Jekyll.
  */
 
@@ -42,7 +40,7 @@
     "vendor/font-awesome/brands"
 ;
 
-/* Remove the page footer */
+/* Hide the footer */
 .page__footer {
   display: none !important;
   border-top: none !important;
@@ -50,7 +48,7 @@
   padding-top: 0 !important;
 }
 
-/* Remove the gray fade-in effect during page loading */
+/* Remove loading animations */
 .masthead,
 .initial-content,
 .sidebar,
@@ -62,7 +60,7 @@
   transition: none !important;
 }
 
-/* Maintain a comfortable size at 100% browser zoom */
+/* Website size at 100% browser zoom */
 html {
   font-size: 16px !important;
 }
@@ -70,17 +68,37 @@ html {
 /* Desktop layout */
 @media (min-width: 64em) {
 
-  /* Give the navigation and body the same overall width */
+  :root {
+    --sidebar-width: clamp(16rem, 22vw, 22rem);
+    --column-gap: 3rem;
+  }
+
+  /* Center the header and main section */
   .masthead__inner-wrap,
   #main {
     width: calc(100% - 8rem) !important;
-  max-width: 1600px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box;
+    max-width: 1600px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
   }
 
-  /* Make the complete author profile scroll with the page */
+  /* Create responsive left and right columns */
+  #main {
+    display: grid !important;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    column-gap: var(--column-gap);
+    align-items: start;
+  }
+
+  /* Left profile column */
+  .sidebar {
+    grid-column: 1;
+    width: 100% !important;
+    float: none !important;
+  }
+
+  /* Make the profile scroll with the page */
   .sidebar.sticky {
     position: relative !important;
     top: auto !important;
@@ -89,28 +107,31 @@ html {
     overflow: visible !important;
   }
 
-  /* Create more space between the profile and main content */
+  /* Right content column */
   .page,
   .archive {
-    padding-left: 3rem;
+    grid-column: 2;
+    width: 100% !important;
+    float: none !important;
+    padding-left: 0 !important;
+    min-width: 0;
   }
 
-  /* Make the name occupy the same column as the sidebar */
+  /* Align Home with the right content column */
   .greedy-nav .visible-links > li:first-child {
-    flex: 0 0 calc(25% + 3rem);
+    flex: 0 0 calc(var(--sidebar-width) + var(--column-gap));
     margin-right: 0;
   }
 
-  /* Reduce navigation spacing so every item remains visible */
+  /* Keep the navigation compact */
   .greedy-nav .visible-links a {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-}
-/* Keep archive pages at a readable width */
-@media (min-width: 64em) {
+
+  /* Keep archive pages at a readable width */
   .layout--archive .page {
-    width: 900px !important;
+    width: 100% !important;
     max-width: 900px !important;
   }
 }
