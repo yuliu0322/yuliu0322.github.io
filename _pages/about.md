@@ -18,7 +18,7 @@ redirect_from:
 }
 </style>
 
-Hi! My name is Yu Liu (Chinese name:刘宇). I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech, working across the
+Hi! My name is Yu Liu, and I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech, working across the
 <a href="https://sites.google.com/view/yimingfeng" target="_blank" rel="noopener noreferrer">
 Sustainable &amp; Intelligent Seafood Bioprocessing Laboratory
 </a>
