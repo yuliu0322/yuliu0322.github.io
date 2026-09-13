@@ -70,8 +70,8 @@ html {
 
   /* Shared responsive dimensions */
   :root {
-    --sidebar-width: clamp(16rem, 22vw, 22rem);
-    --column-gap: 3rem;
+    --sidebar-width: clamp(16rem, 20vw, 20rem);
+    --column-gap: 2rem;
   }
 
   /* Center the header and main section */
