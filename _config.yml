@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Yu Liu"
+title                    : "Yu's Academic Website"
 title_separator          : "-"
 name                     : &name "Yu Liu"
 description              : &description "Ph.D. Student at Virginia Tech"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -65,7 +65,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/yu-liu-aa5615392/"
+  linkedin         : "yu-liu-aa5615392""
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
