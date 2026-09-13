@@ -68,6 +68,7 @@ html {
 /* Desktop layout */
 @media (min-width: 64em) {
 
+  /* Shared responsive dimensions */
   :root {
     --sidebar-width: clamp(16rem, 22vw, 22rem);
     --column-gap: 3rem;
@@ -114,16 +115,18 @@ html {
     width: 100% !important;
     float: none !important;
     padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     min-width: 0;
   }
 
-  /* Align Home with the right content column */
+  /* Align Home automatically with the right content column */
   .greedy-nav .visible-links > li:first-child {
     flex: 0 0 calc(var(--sidebar-width) + var(--column-gap));
     margin-right: 0;
   }
 
-  /* Keep the navigation compact */
+  /* Keep navigation items compact */
   .greedy-nav .visible-links a {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
