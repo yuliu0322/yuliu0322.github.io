@@ -104,3 +104,10 @@ html {
     margin-right: 0.5rem;
   }
 }
+/* Keep archive pages at a readable width */
+@media (min-width: 64em) {
+  .layout--archive .page {
+    width: 900px !important;
+    max-width: 900px !important;
+  }
+}
