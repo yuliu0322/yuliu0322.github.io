@@ -12,15 +12,16 @@ main:
     url: /
 
   - title: "Research"
-    url: /research/       
-    
+    url: /research/
+
   - title: "News"
     url: /news/
 
   - title: "Publications"
-    url: /publications/ 
-        
-  - title: "CV"
-    url: /cv/
+    url: /publications/
 
- 
+  - title: "Education"
+    url: /education/
+
+  - title: "Experience"
+    url: /experience/
