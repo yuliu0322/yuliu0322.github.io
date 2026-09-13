@@ -65,13 +65,3 @@
   animation: none !important;
   transition: none !important;
 }
-/* Widen the top navigation bar */
-.masthead__inner-wrap {
-  max-width: 1400px !important;
-}
-
-/* Reduce spacing between navigation items */
-.greedy-nav .visible-links a {
-  margin-left: 0.5rem !important;
-  margin-right: 0.5rem !important;
-}
