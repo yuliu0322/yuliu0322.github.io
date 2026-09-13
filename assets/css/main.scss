@@ -73,8 +73,11 @@ html {
   /* Give the navigation and body the same overall width */
   .masthead__inner-wrap,
   #main {
-    width: 100%;
-    max-width: 1400px;
+    width: calc(100% - 8rem) !important;
+  max-width: 1600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
   }
 
   /* Make the complete author profile scroll with the page */
