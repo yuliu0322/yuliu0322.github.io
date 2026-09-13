@@ -6,7 +6,7 @@ author_profile: true
 
 ### Assistant Editor  
 **MDPI** · Wuhan, Hubei, China  
-*Nov 2024–Jul 2025*
+Nov 2024–Jul 2025
 
 - Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.
 - Communicated with authors, reviewers, and academic editors to support timely and transparent editorial decisions.
@@ -17,7 +17,7 @@ author_profile: true
 
 ### Project Coordinator  
 **IVC Nutrition Corporation** · Suzhou, Jiangsu, China  
-*Jul 2024–Sep 2024*
+Jul 2024–Sep 2024
 
 - Coordinated cross-border product development projects with clients and internal marketing and sales teams.
 - Conducted market research and literature reviews to identify industry trends, consumer preferences, and emerging ingredients in dietary supplements.
