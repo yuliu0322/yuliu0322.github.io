@@ -99,3 +99,8 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 [![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
 [![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
 </div>
+## Content Copyright
+
+© 2026 Yu Liu. All rights reserved.
+
+The MIT License applies only to the website template and source code derived from the original theme. Unless otherwise stated, all original photographs, research images, figures, text, publications, and other personal content are copyrighted by Yu Liu and may not be copied, reproduced, modified, or redistributed without prior written permission.
