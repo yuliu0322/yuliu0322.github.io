@@ -11,7 +11,7 @@ Blacksburg, Virginia, USA
 
 ### Ocean University of China  
 **M.Eng. in Food Science and Engineering** · Aug 2021–Jun 2024  
-Advisors: [Prof. Zhaojie Li](https://cfse.ouc.edu.cn/2014/0108/c19355a291400/page.htm) and [Dr. Lipin Chen](https://foodsci.hainanu.edu.cn/info/1232/11384.htm) 
+Advisors: [Prof. Zhaojie Li](https://cfse.ouc.edu.cn/2014/0108/c19355a291400/page.htm) and [Dr. Lipin Chen](https://foodsci.hainanu.edu.cn/info/1232/11384.htm)  
 Qingdao, Shandong, China  
 
 ### Henan University of Science and Technology  
