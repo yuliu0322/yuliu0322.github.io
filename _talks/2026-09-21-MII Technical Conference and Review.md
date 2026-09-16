@@ -4,9 +4,8 @@ collection: talks
 type: "Poster Presentation"
 permalink: /talks/MII Technical Conference and Review/
 venue: "Virginia Tech"
-date: 2026-09-21
+date: 2026-09-22
 location: "Blacksburg, VA, USA"
-published: false
 ---
   
 Poster presentation, Virginia Tech, Blacksburg, VA, USA.
