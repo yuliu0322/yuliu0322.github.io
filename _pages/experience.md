@@ -10,7 +10,7 @@ Nov 2024–Jul 2025
 
 - Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.
 - Communicated with authors, reviewers, and academic editors to support timely and transparent editorial decisions.
-- Evaluated manuscripts for journal scope, formatting requirements, research integrity, and adherence to editorial policies.
+- Assisted in evaluating manuscripts for journal scope, formatting requirements, research integrity, and adherence to editorial policies.
 - Developed practical experience in scholarly publishing, scientific communication, and publication ethics.
 
 ---
