@@ -10,5 +10,5 @@ location: "Blacksburg, VA, USA"
   
 Poster presentation, Virginia Tech, Blacksburg, VA, USA.
 
-**Conference website:** [MII Technical Conference & Review](https://mii.vt.edu/outreach/technical-conference-review.html){:target="_blank" rel="noopener noreferrer"}
+**Conference website:** [MII Technical Conference & Review 2026](https://mii.vt.edu/outreach/technical-conference-review.html){:target="_blank" rel="noopener noreferrer"}
 
