@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 ### Assistant Editor  
-[**MDPI**](https://mdpi.cn/about/wuhan) · Wuhan, Hubei, China 
+[**MDPI**](https://mdpi.cn/about/wuhan) · Wuhan, Hubei, China<br>
 Nov 2024–Jul 2025
 
 - Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.
@@ -16,7 +16,7 @@ Nov 2024–Jul 2025
 ---
 
 ### Project Coordinator  
-[**IVC Nutrition Corporation**](https://www.ivcinc.net/) · Suzhou, Jiangsu, China  
+[**IVC Nutrition Corporation**](https://www.ivcinc.net/) · Suzhou, Jiangsu, China<br>
 Jul 2024–Sep 2024
 
 - Coordinated cross-border product development projects with clients and internal marketing and sales teams.
