@@ -8,7 +8,7 @@ author_profile: true
 <style>
 .research-overview {
   width: 100%;
-  margin: 0 0 3.5rem;
+  margin: 0 0 2.5rem;
   color: #4f5967;
   font-size: 1rem;
   line-height: 1.8;
@@ -23,27 +23,37 @@ author_profile: true
 }
 
 .research-question {
-  position: relative;
-  padding-left: 20px;
   color: #4f5967;
   font-size: 1.08rem;
   line-height: 1.75;
 }
 
-.research-question::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  left: 0;
-  width: 3px;
-  border-radius: 999px;
-  background: #d9a557;
-}
-
 .research-question strong {
   color: #253248;
   font-weight: 700;
+}
+
+.research-areas-divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 3.5rem;
+}
+
+.research-areas-divider span {
+  flex: 0 0 auto;
+  color: #b17622;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.research-areas-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #dfe6eb;
 }
 
 .research-section {
@@ -178,7 +188,7 @@ author_profile: true
 
 @media (max-width: 768px) {
   .research-overview {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 1.7;
   }
 
@@ -187,8 +197,16 @@ author_profile: true
   }
 
   .research-question {
-    padding-left: 16px;
     font-size: 1rem;
+  }
+
+  .research-areas-divider {
+    gap: 12px;
+    margin-bottom: 3rem;
+  }
+
+  .research-areas-divider span {
+    font-size: 0.72rem;
   }
 
   .research-section {
@@ -250,13 +268,13 @@ author_profile: true
   </p>
 
   <p>
-    I approach this across the aquatic food value chain, from aquaculture production to post-harvest preservation. On the production side, I investigate how environmental and farming conditions influence the physiology, health, and quality of aquatic species. Building on this understanding, I develop PLGA-based oral vaccines engineered to protect antigens during digestive transit and deliver them to immune-responsive sites, thereby eliciting protective immune responses. Additionally, I incorporate probiotic-derived immunostimulants to enhance disease resistance and reduce production losses. On the post-harvest side, my research extends shelf life and preserves seafood quality through two complementary approaches. First, I develop bio-based passive cooling materials that provide electricity-free temperature reduction for sustainable cold-chain management. Second, I investigate the physiological, biochemical, and flavor dynamics during seafood processing and storage—particularly in shellfish—to elucidate the mechanisms driving quality deterioration and to support more effective preservation strategies.
+    I study the aquatic food value chain from production to post-harvest preservation. On the production side, I investigate how environmental and farming conditions shape aquatic animal physiology, health, and product quality, while developing PLGA-based oral delivery systems for vaccines and probiotic-derived immunostimulants. On the post-harvest side, I develop bio-based passive cooling materials for sustainable cold-chain management and investigate the physiological, biochemical, and flavor mechanisms underlying seafood quality deterioration during processing and storage. Building on my earlier research on environmental stressors in shellfish, these efforts aim to develop science-based strategies that improve aquatic animal health, reduce production and post-harvest losses, and enhance the sustainability, safety, and quality of aquatic foods.
   </p>
 
-  <p>
-    This perspective grew out of my earlier work on how aquatic organisms respond to environmental stressors. During my master’s research, I investigated the effects of microplastic contamination on the physiological and biochemical responses of oysters—work that grounds both my interest in how stressors shape physiology and my focus on the biochemical changes shellfish undergo during processing and storage. Together, these projects reflect my broader goal of developing science-based materials, technologies, and preservation strategies that improve the sustainability, safety, and quality of aquatic foods from farm to plate.
-  </p>
+</div>
 
+<div class="research-areas-divider">
+  <span>Research Areas</span>
 </div>
 
 <section class="research-section">
