@@ -7,7 +7,7 @@ year: 2023
 venue: "Food Chemistry"
 authors: "X. Teng, <strong>Y. Liu</strong>, L. Chen, C. Xue, Z. Li"
 paperurl: "https://doi.org/10.1016/j.foodchem.2023.136162"
-thumbnail: "/images/publications/liquid-nitrogen-oyster.jpg"
+thumbnail: "/assets/images/liquid-nitrogen-oyster.png"
 category: "Seafood Processing"
 excerpt: "This study investigated how different liquid nitrogen freezing temperatures affect the quality, flavor, and physicochemical properties of Pacific oysters."
 ---
