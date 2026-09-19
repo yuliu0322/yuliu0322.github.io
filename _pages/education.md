@@ -51,16 +51,6 @@ author_profile: true
   border-radius: 16px;
   background: #ffffff;
   box-shadow: 0 6px 20px rgba(35, 48, 68, 0.04);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-2px);
-  border-color: #c7dce5;
-  box-shadow: 0 12px 30px rgba(35, 48, 68, 0.09);
 }
 
 .education-logo-box {
@@ -201,7 +191,9 @@ author_profile: true
       <div class="education-content">
         <span class="education-date">Aug 2025 – Present</span>
 
-        <h2 class="education-school">Virginia Tech</h2>
+        <h2 class="education-school">
+          Virginia Tech
+        </h2>
 
         <p class="education-degree">
           Ph.D. in Biological Systems Engineering
@@ -261,7 +253,9 @@ author_profile: true
       <div class="education-content">
         <span class="education-date">Aug 2021 – Jun 2024</span>
 
-        <h2 class="education-school">Ocean University of China</h2>
+        <h2 class="education-school">
+          Ocean University of China
+        </h2>
 
         <p class="education-degree">
           M.Eng. in Food Science and Engineering
