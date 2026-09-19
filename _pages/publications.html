@@ -74,7 +74,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* 专利只显示文字，不显示图片 */
+/* Patent cards: text only */
 .patent-card {
   display: block;
   padding: 28px 32px;
@@ -143,7 +143,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 }
 
 /* ========================================
-   Text area
+   Publication text
    ======================================== */
 
 .publication-content {
@@ -153,18 +153,20 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 .publication-title {
   margin: 0 0 10px;
-  color: #233044;
   font-size: 1.25rem;
   line-height: 1.35;
 }
 
+/* Visible hyperlinks */
 .publication-title a {
-  color: #233044;
-  text-decoration: none;
+  color: #52adc8;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .publication-title a:hover {
-  color: #52adc8;
+  color: #2f8faa;
 }
 
 .publication-authors {
@@ -187,6 +189,21 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 .publication-number {
   font-weight: 500;
+}
+
+/* ========================================
+   Search highlighting
+   ======================================== */
+
+.publication-highlight {
+  padding: 0 2px;
+  border-radius: 3px;
+  background: #fff2a8;
+  color: inherit;
+}
+
+.publication-section-hidden {
+  display: none;
 }
 
 .publication-no-results {
@@ -259,7 +276,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </style>
 
 
-<!-- Introduction -->
+<!-- ======================================
+     Introduction
+     ====================================== -->
 
 <div class="publication-intro">
   {% if site.author.googlescholar %}
@@ -277,7 +296,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </div>
 
 
-<!-- Search box -->
+<!-- ======================================
+     Search box
+     ====================================== -->
 
 <input
   type="search"
@@ -306,6 +327,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
         <article class="publication-card">
 
           {% if post.thumbnail %}
+
             <div class="publication-image-box">
 
               <img
@@ -317,6 +339,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               >
 
             </div>
+
           {% endif %}
 
           <div class="publication-content">
@@ -336,12 +359,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </h3>
 
             {% if post.authors %}
+
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
+
             {% endif %}
 
             {% if post.venue %}
+
               <p class="publication-venue">
 
                 <strong>{{ post.venue }}</strong>,
@@ -353,12 +379,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
                 {% endif %}
 
               </p>
+
             {% endif %}
 
             {% if post.excerpt %}
+
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
+
             {% endif %}
 
           </div>
@@ -464,12 +493,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </h3>
 
             {% if post.authors %}
+
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
+
             {% endif %}
 
             {% if post.venue %}
+
               <p class="publication-venue">
 
                 <strong>{{ post.venue }}</strong>,
@@ -481,12 +513,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
                 {% endif %}
 
               </p>
+
             {% endif %}
 
             {% if post.excerpt %}
+
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
+
             {% endif %}
 
           </div>
@@ -502,7 +537,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 
 <!-- ======================================
-     Patents — text only
+     Patents: text only
      ====================================== -->
 
 <section class="publication-section">
@@ -535,9 +570,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </h3>
 
             {% if post.authors %}
+
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
+
             {% endif %}
 
             <p class="publication-venue">
@@ -547,9 +584,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               {% endif %}
 
               {% if post.patent_number %}
+
                 <span class="publication-number">
                   · {{ post.patent_number }}
                 </span>
+
               {% endif %}
 
               {% if post.year %}
@@ -561,9 +600,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </p>
 
             {% if post.excerpt %}
+
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
+
             {% endif %}
 
           </div>
@@ -578,7 +619,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </section>
 
 
-<!-- No search results -->
+<!-- ======================================
+     No search results
+     ====================================== -->
 
 <p
   id="publication-no-results"
@@ -588,80 +631,281 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </p>
 
 
-<!-- Search function -->
+<!-- ======================================
+     Ctrl + F search and highlighting
+     ====================================== -->
 
 <script>
 (function () {
 
-  function initializePublicationSearch() {
+  const searchInput =
+    document.getElementById("publication-search");
 
-    const searchInput =
-      document.getElementById("publication-search");
+  const sections = Array.from(
+    document.querySelectorAll(".publication-section")
+  );
 
-    const cards = Array.from(
-      document.querySelectorAll(".publication-card")
+  const cards = Array.from(
+    document.querySelectorAll(".publication-card")
+  );
+
+  const noResults =
+    document.getElementById("publication-no-results");
+
+  if (!searchInput || cards.length === 0) {
+    return;
+  }
+
+  /* Save the original contents of every card */
+  cards.forEach(function (card) {
+    card.dataset.originalHtml = card.innerHTML;
+  });
+
+  /* Escape special regular-expression characters */
+  function escapeRegExp(text) {
+    return text.replace(
+      /[.*+?^${}()|[\]\\]/g,
+      "\\$&"
     );
+  }
 
-    const noResults =
-      document.getElementById("publication-no-results");
+  /* Highlight matching text without breaking links */
+  function highlightText(card, query) {
 
-    if (!searchInput || cards.length === 0) {
+    if (!query) {
       return;
     }
 
-    searchInput.addEventListener("input", function () {
+    const pattern = new RegExp(
+      "(" + escapeRegExp(query) + ")",
+      "gi"
+    );
 
-      const query = searchInput.value
-        .toLowerCase()
-        .trim();
+    const walker = document.createTreeWalker(
+      card,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function (node) {
 
-      let visibleCards = 0;
+          const parent = node.parentElement;
 
-      cards.forEach(function (card) {
+          if (!parent) {
+            return NodeFilter.FILTER_REJECT;
+          }
 
-        const searchableText = card.textContent
-          .toLowerCase()
-          .replace(/\s+/g, " ");
+          if (
+            parent.closest("script") ||
+            parent.closest("style") ||
+            parent.closest(".publication-highlight")
+          ) {
+            return NodeFilter.FILTER_REJECT;
+          }
 
-        const matches =
-          searchableText.includes(query);
+          if (!node.nodeValue.trim()) {
+            return NodeFilter.FILTER_REJECT;
+          }
 
-        if (matches) {
-          card.style.removeProperty("display");
-          visibleCards += 1;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+
+    const textNodes = [];
+    let currentNode;
+
+    while ((currentNode = walker.nextNode())) {
+      textNodes.push(currentNode);
+    }
+
+    textNodes.forEach(function (textNode) {
+
+      const text = textNode.nodeValue;
+
+      pattern.lastIndex = 0;
+
+      if (!pattern.test(text)) {
+        pattern.lastIndex = 0;
+        return;
+      }
+
+      pattern.lastIndex = 0;
+
+      const fragment =
+        document.createDocumentFragment();
+
+      const parts = text.split(pattern);
+
+      parts.forEach(function (part) {
+
+        if (
+          part.toLowerCase() ===
+          query.toLowerCase()
+        ) {
+
+          const mark =
+            document.createElement("mark");
+
+          mark.className =
+            "publication-highlight";
+
+          mark.textContent = part;
+
+          fragment.appendChild(mark);
+
         } else {
-          card.style.setProperty(
-            "display",
-            "none",
-            "important"
+
+          fragment.appendChild(
+            document.createTextNode(part)
           );
+
         }
 
       });
 
-      if (noResults) {
-        noResults.style.display =
-          visibleCards === 0
-            ? "block"
-            : "none";
-      }
+      textNode.parentNode.replaceChild(
+        fragment,
+        textNode
+      );
 
     });
 
   }
 
-  if (document.readyState === "loading") {
+  /* Run the publication search */
+  function performSearch() {
 
-    document.addEventListener(
-      "DOMContentLoaded",
-      initializePublicationSearch
-    );
+    const query = searchInput.value
+      .trim()
+      .toLowerCase();
 
-  } else {
+    let totalVisibleCards = 0;
 
-    initializePublicationSearch();
+    cards.forEach(function (card) {
+
+      /* Restore original content before each search */
+      card.innerHTML =
+        card.dataset.originalHtml;
+
+      const searchableText = card.textContent
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+
+      const matches =
+        query === "" ||
+        searchableText.includes(query);
+
+      if (matches) {
+
+        card.style.removeProperty("display");
+        totalVisibleCards += 1;
+
+        if (query !== "") {
+          highlightText(card, query);
+        }
+
+      } else {
+
+        card.style.setProperty(
+          "display",
+          "none",
+          "important"
+        );
+
+      }
+
+    });
+
+    /* Hide sections that have no matching results */
+    sections.forEach(function (section) {
+
+      const sectionCards = Array.from(
+        section.querySelectorAll(
+          ".publication-card"
+        )
+      );
+
+      const hasVisibleCard =
+        sectionCards.some(function (card) {
+
+          return (
+            window.getComputedStyle(card)
+              .display !== "none"
+          );
+
+        });
+
+      if (
+        query !== "" &&
+        !hasVisibleCard
+      ) {
+
+        section.classList.add(
+          "publication-section-hidden"
+        );
+
+      } else {
+
+        section.classList.remove(
+          "publication-section-hidden"
+        );
+
+      }
+
+    });
+
+    if (noResults) {
+
+      noResults.style.display =
+        totalVisibleCards === 0
+          ? "block"
+          : "none";
+
+    }
 
   }
+
+  searchInput.addEventListener(
+    "input",
+    performSearch
+  );
+
+  /* Ctrl + F on Windows or Command + F on Mac */
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      const isSearchShortcut =
+        (event.ctrlKey || event.metaKey) &&
+        event.key.toLowerCase() === "f";
+
+      if (isSearchShortcut) {
+
+        event.preventDefault();
+
+        searchInput.focus();
+        searchInput.select();
+
+        searchInput.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      }
+
+      /* Escape clears the search */
+      if (
+        event.key === "Escape" &&
+        document.activeElement === searchInput
+      ) {
+
+        searchInput.value = "";
+        performSearch();
+        searchInput.blur();
+
+      }
+
+    }
+  );
 
 })();
 </script>
