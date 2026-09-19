@@ -133,6 +133,62 @@ author_profile: true
   stroke: currentColor;
 }
 
+/* =========================
+   Dark mode
+   ========================= */
+
+html[data-theme="dark"] .education-timeline::before {
+  background: #61727b;
+}
+
+html[data-theme="dark"] .education-entry {
+  border-bottom-color: #5f666e;
+}
+
+html[data-theme="dark"] .education-entry:last-child {
+  border-bottom-color: transparent;
+}
+
+html[data-theme="dark"] .education-entry::before {
+  border-color: #474a4e;
+  background: #65c2dd;
+  box-shadow: 0 0 0 3px #637c85;
+}
+
+html[data-theme="dark"] .education-date {
+  color: #e0ad60;
+}
+
+html[data-theme="dark"] .education-school {
+  color: #f2f5f8;
+}
+
+html[data-theme="dark"] .education-degree {
+  color: #d6dde5;
+}
+
+html[data-theme="dark"] .education-advisors {
+  color: #c8d0da;
+}
+
+html[data-theme="dark"] .education-advisors a {
+  color: #65c2dd;
+  border-bottom-color: rgba(101, 194, 221, 0.45);
+}
+
+html[data-theme="dark"] .education-advisors a:hover {
+  color: #e0ad60;
+  border-bottom-color: #e0ad60;
+}
+
+html[data-theme="dark"] .education-location {
+  color: #b9c2cd;
+}
+
+/* =========================
+   Mobile layout
+   ========================= */
+
 @media (max-width: 768px) {
   .education-timeline {
     margin-top: 1.5rem;
