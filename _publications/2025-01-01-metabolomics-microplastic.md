@@ -7,7 +7,7 @@ year: 2025
 venue: "Food Chemistry"
 authors: "<strong>Y. Liu</strong>, S. Wu, L. Chen, X. Teng, H. Shi, C. Xue, Z. Li"
 paperurl: "https://doi.org/10.1016/j.foodchem.2024.140961"
-thumbnail: "/assets/images/metabolomics-microplastic.jpg"
+thumbnail: "/assets/images/metabolomics-microplastic.png"
 category: "Seafood Safety"
 excerpt: "This study integrated metabolomic and proteomic analyses to characterize the metabolic and protein-expression responses of Pacific oysters exposed to polystyrene microplastics."
 ---
