@@ -8,11 +8,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 <style>
 /* ========================================
-   General page styles
+   General layout
    ======================================== */
 
 .publication-intro {
   margin-bottom: 1.5rem;
+}
+
+.publication-section {
+  margin-bottom: 2.5rem;
 }
 
 .publication-section-title {
@@ -70,8 +74,14 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* 专利只显示文字，不显示图片 */
+.patent-card {
+  display: block;
+  padding: 28px 32px;
+}
+
 /* ========================================
-   Image area
+   Publication images
    ======================================== */
 
 .publication-image-box {
@@ -98,10 +108,10 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 }
 
 /* ========================================
-   Placeholder for books and patents
+   Book chapter placeholder
    ======================================== */
 
-.publication-placeholder {
+.book-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,9 +122,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   box-sizing: border-box;
   border: 1px solid #dce7ec;
   border-radius: 10px;
-}
-
-.book-placeholder {
   background: linear-gradient(
     135deg,
     #f8fafc 0%,
@@ -123,22 +130,13 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   color: #64748b;
 }
 
-.patent-placeholder {
-  background: linear-gradient(
-    135deg,
-    #f7fbfc 0%,
-    #eaf5f8 100%
-  );
-  color: #52adc8;
-}
-
-.placeholder-svg {
+.book-placeholder-svg {
   width: 62px;
   height: 62px;
   margin-bottom: 14px;
 }
 
-.placeholder-label {
+.book-placeholder-label {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -209,6 +207,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     padding: 20px;
   }
 
+  .patent-card {
+    display: block;
+    padding: 22px;
+  }
+
   .publication-image-box {
     width: 100%;
     min-width: 0;
@@ -221,7 +224,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     object-fit: contain;
   }
 
-  .publication-placeholder {
+  .book-placeholder {
     width: 100%;
     min-width: 0;
     height: 190px;
@@ -237,11 +240,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     padding: 16px;
   }
 
+  .patent-card {
+    padding: 18px;
+  }
+
   .publication-image-box {
     height: 200px;
   }
 
-  .publication-placeholder {
+  .book-placeholder {
     height: 170px;
   }
 
@@ -252,9 +259,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </style>
 
 
-<!-- ======================================
-     Introduction
-     ====================================== -->
+<!-- Introduction -->
 
 <div class="publication-intro">
   {% if site.author.googlescholar %}
@@ -272,9 +277,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </div>
 
 
-<!-- ======================================
-     Search box
-     ====================================== -->
+<!-- Search box -->
 
 <input
   type="search"
@@ -286,15 +289,17 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 
 <!-- ======================================
-     Peer-reviewed journal articles
+     Peer-Reviewed Journal Articles
      ====================================== -->
 
 <section class="publication-section">
+
   <h2 class="publication-section-title">
     Peer-Reviewed Journal Articles
   </h2>
 
   <div class="publication-list">
+
     {% for post in site.publications reversed %}
       {% unless post.type == "book" or post.type == "patent" %}
 
@@ -302,6 +307,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
           {% if post.thumbnail %}
             <div class="publication-image-box">
+
               <img
                 class="publication-thumbnail"
                 src="{{ post.thumbnail | relative_url }}"
@@ -309,21 +315,24 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
                 loading="lazy"
                 style="transform: scale({{ post.thumbnail_scale | default: 1 }});"
               >
+
             </div>
           {% endif %}
 
           <div class="publication-content">
 
             <h3 class="publication-title">
+
               <a
-                href="{% if post.paperurl %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
-                {% if post.paperurl %}
+                href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
+                {% if post.paperurl and post.paperurl != "" %}
                   target="_blank"
                   rel="noopener noreferrer"
                 {% endif %}
               >
                 {{ post.title }}
               </a>
+
             </h3>
 
             {% if post.authors %}
@@ -334,12 +343,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
             {% if post.venue %}
               <p class="publication-venue">
+
                 <strong>{{ post.venue }}</strong>,
+
                 {% if post.year %}
                   {{ post.year }}
                 {% else %}
                   {{ post.date | date: "%Y" }}
                 {% endif %}
+
               </p>
             {% endif %}
 
@@ -350,31 +362,38 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
           </div>
+
         </article>
 
       {% endunless %}
     {% endfor %}
+
   </div>
+
 </section>
 
 
 <!-- ======================================
-     Book chapters
+     Book Chapters
      ====================================== -->
 
 <section class="publication-section">
+
   <h2 class="publication-section-title">
     Book Chapters
   </h2>
 
   <div class="publication-list">
+
     {% for post in site.publications reversed %}
       {% if post.type == "book" %}
 
         <article class="publication-card">
 
           {% if post.thumbnail %}
+
             <div class="publication-image-box">
+
               <img
                 class="publication-thumbnail"
                 src="{{ post.thumbnail | relative_url }}"
@@ -382,16 +401,19 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
                 loading="lazy"
                 style="transform: scale({{ post.thumbnail_scale | default: 1 }});"
               >
+
             </div>
 
           {% else %}
 
-            <div class="publication-placeholder book-placeholder">
+            <div class="book-placeholder">
+
               <svg
-                class="placeholder-svg"
+                class="book-placeholder-svg"
                 viewBox="0 0 64 64"
                 aria-hidden="true"
               >
+
                 <path
                   d="M9 12c8-3 15-2 23 3v40c-8-5-15-6-23-3V12z"
                   fill="none"
@@ -414,11 +436,13 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
                   stroke="currentColor"
                   stroke-width="3"
                 />
+
               </svg>
 
-              <span class="placeholder-label">
+              <span class="book-placeholder-label">
                 BOOK CHAPTER
               </span>
+
             </div>
 
           {% endif %}
@@ -426,15 +450,17 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
           <div class="publication-content">
 
             <h3 class="publication-title">
+
               <a
-                href="{% if post.paperurl %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
-                {% if post.paperurl %}
+                href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
+                {% if post.paperurl and post.paperurl != "" %}
                   target="_blank"
                   rel="noopener noreferrer"
                 {% endif %}
               >
                 {{ post.title }}
               </a>
+
             </h3>
 
             {% if post.authors %}
@@ -445,12 +471,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
             {% if post.venue %}
               <p class="publication-venue">
+
                 <strong>{{ post.venue }}</strong>,
+
                 {% if post.year %}
                   {{ post.year }}
                 {% else %}
                   {{ post.date | date: "%Y" }}
                 {% endif %}
+
               </p>
             {% endif %}
 
@@ -461,77 +490,48 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
           </div>
+
         </article>
 
       {% endif %}
     {% endfor %}
+
   </div>
+
 </section>
 
 
 <!-- ======================================
-     Patents
+     Patents — text only
      ====================================== -->
 
 <section class="publication-section">
+
   <h2 class="publication-section-title">
     Patents
   </h2>
 
   <div class="publication-list">
+
     {% for post in site.publications reversed %}
       {% if post.type == "patent" %}
 
-        <article class="publication-card">
-
-          <div class="publication-placeholder patent-placeholder">
-            <svg
-              class="placeholder-svg"
-              viewBox="0 0 64 64"
-              aria-hidden="true"
-            >
-              <path
-                d="M18 6h20l10 10v42H18z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linejoin="round"
-              />
-
-              <path
-                d="M38 6v12h10"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linejoin="round"
-              />
-
-              <path
-                d="M25 29h16M25 37h16M25 45h11"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
-            </svg>
-
-            <span class="placeholder-label">
-              PATENT
-            </span>
-          </div>
+        <article class="publication-card patent-card">
 
           <div class="publication-content">
 
             <h3 class="publication-title">
+
               <a
-                href="{% if post.paperurl %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
-                {% if post.paperurl %}
+                href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
+                {% if post.paperurl and post.paperurl != "" %}
                   target="_blank"
                   rel="noopener noreferrer"
                 {% endif %}
               >
                 {{ post.title }}
               </a>
+
             </h3>
 
             {% if post.authors %}
@@ -541,6 +541,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
             <p class="publication-venue">
+
               {% if post.venue %}
                 <strong>{{ post.venue }}</strong>
               {% endif %}
@@ -556,6 +557,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               {% else %}
                 · {{ post.date | date: "%Y" }}
               {% endif %}
+
             </p>
 
             {% if post.excerpt %}
@@ -565,17 +567,18 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
           </div>
+
         </article>
 
       {% endif %}
     {% endfor %}
+
   </div>
+
 </section>
 
 
-<!-- ======================================
-     No search results
-     ====================================== -->
+<!-- No search results -->
 
 <p
   id="publication-no-results"
@@ -585,13 +588,13 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </p>
 
 
-<!-- ======================================
-     Search function
-     ====================================== -->
+<!-- Search function -->
 
 <script>
 (function () {
+
   function initializePublicationSearch() {
+
     const searchInput =
       document.getElementById("publication-search");
 
@@ -607,6 +610,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     }
 
     searchInput.addEventListener("input", function () {
+
       const query = searchInput.value
         .toLowerCase()
         .trim();
@@ -614,6 +618,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
       let visibleCards = 0;
 
       cards.forEach(function (card) {
+
         const searchableText = card.textContent
           .toLowerCase()
           .replace(/\s+/g, " ");
@@ -631,22 +636,32 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             "important"
           );
         }
+
       });
 
       if (noResults) {
         noResults.style.display =
-          visibleCards === 0 ? "block" : "none";
+          visibleCards === 0
+            ? "block"
+            : "none";
       }
+
     });
+
   }
 
   if (document.readyState === "loading") {
+
     document.addEventListener(
       "DOMContentLoaded",
       initializePublicationSearch
     );
+
   } else {
+
     initializePublicationSearch();
+
   }
+
 })();
 </script>
