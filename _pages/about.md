@@ -915,9 +915,9 @@ html[data-theme="dark"] .home-research-card:hover {
         </p>
 
         <div class="home-card-tags">
-          <span class="home-card-tag">Biopolymers</span>
           <span class="home-card-tag">Passive Cooling</span>
-          <span class="home-card-tag">Cold Chain</span>
+          <span class="home-card-tag">Food Packaging</span>
+          <span class="home-card-tag">Food Preservation</span>
         </div>
 
       </article>
