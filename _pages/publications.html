@@ -16,9 +16,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   --pub-muted: #5b6470;
 }
 
-/* =========================
-   General layout
-   ========================= */
+/* General layout */
 
 .publication-intro {
   margin-bottom: 1.5rem;
@@ -32,13 +30,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   margin: 2.8rem 0 1.5rem;
 }
 
-/* =========================
-   Search and filter toolbar
-   ========================= */
+/* Search and filter toolbar */
 
 .publication-toolbar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-template-columns: minmax(0, 1fr) 140px;
   align-items: stretch;
   gap: 16px;
   width: 100%;
@@ -57,9 +53,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   position: absolute;
   z-index: 2;
   top: 50%;
-  left: 18px;
-  width: 24px;
-  height: 24px;
+  left: 17px;
+  width: 22px;
+  height: 22px;
   color: #8da0b7;
   pointer-events: none;
   transform: translateY(-50%);
@@ -73,12 +69,12 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   max-height: 50px !important;
   box-sizing: border-box !important;
   margin: 0 !important;
-  padding: 0 18px 0 58px !important;
+  padding: 0 16px 0 52px !important;
   border: 1px solid #d8dee6 !important;
-  border-radius: 12px !important;
+  border-radius: 10px !important;
   background: #ffffff !important;
   color: #333333 !important;
-  font-size: 17px !important;
+  font-size: 16px !important;
   line-height: normal !important;
   box-shadow: none !important;
   appearance: none;
@@ -95,21 +91,21 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 10px;
-  width: 150px !important;
-  min-width: 150px !important;
-  height: 62px !important;
-  min-height: 62px !important;
-  max-height: 62px !important;
+  gap: 9px;
+  width: 140px !important;
+  min-width: 140px !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
   box-sizing: border-box !important;
   margin: 0 !important;
-  padding: 0 22px !important;
+  padding: 0 18px !important;
   border: 0 !important;
-  border-radius: 12px !important;
+  border-radius: 10px !important;
   background: var(--pub-gold) !important;
   color: #ffffff !important;
   font: inherit;
-  font-size: 17px !important;
+  font-size: 16px !important;
   font-weight: 600 !important;
   line-height: 1 !important;
   cursor: pointer;
@@ -129,15 +125,13 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 #publication-filter-button.publication-filter-button svg {
   display: block !important;
-  width: 23px !important;
-  min-width: 23px !important;
-  height: 23px !important;
+  width: 21px !important;
+  min-width: 21px !important;
+  height: 21px !important;
   color: #ffffff !important;
 }
 
-/* =========================
-   Filter panel
-   ========================= */
+/* Filter panel */
 
 .publication-filter-panel {
   display: none;
@@ -181,11 +175,11 @@ button.publication-filter-option {
   justify-content: center;
   width: auto !important;
   min-width: 0 !important;
-  height: 38px !important;
-  min-height: 38px !important;
+  height: 36px !important;
+  min-height: 36px !important;
   box-sizing: border-box !important;
   margin: 0 !important;
-  padding: 0 18px !important;
+  padding: 0 17px !important;
   border: 1px solid transparent !important;
   border-radius: 999px !important;
   background: #ffffff !important;
@@ -206,9 +200,7 @@ button.publication-filter-option.is-active {
   color: #ffffff !important;
 }
 
-/* =========================
-   Publication cards
-   ========================= */
+/* Publication cards */
 
 .publication-card {
   display: flex;
@@ -232,15 +224,14 @@ button.publication-filter-option.is-active {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Patents are text-only */
+/* Patent: text only */
+
 .patent-card {
   display: block;
   padding: 28px 32px;
 }
 
-/* =========================
-   Publication images
-   ========================= */
+/* Publication images */
 
 .publication-image-box {
   display: flex;
@@ -264,9 +255,7 @@ button.publication-filter-option.is-active {
   background: transparent;
 }
 
-/* =========================
-   Book chapter placeholder
-   ========================= */
+/* Book chapter placeholder */
 
 .book-placeholder {
   display: flex;
@@ -299,9 +288,7 @@ button.publication-filter-option.is-active {
   letter-spacing: 0.14em;
 }
 
-/* =========================
-   Card text
-   ========================= */
+/* Card text */
 
 .publication-content {
   flex: 1;
@@ -361,9 +348,7 @@ button.publication-filter-option.is-active {
   text-align: center;
 }
 
-/* =========================
-   Mobile
-   ========================= */
+/* Mobile */
 
 @media (max-width: 768px) {
   .publication-toolbar {
@@ -424,7 +409,7 @@ button.publication-filter-option.is-active {
   }
 
   #publication-search.publication-search {
-    font-size: 16px !important;
+    font-size: 15px !important;
   }
 }
 </style>
@@ -448,7 +433,7 @@ button.publication-filter-option.is-active {
 </div>
 
 
-<!-- Search and filter toolbar -->
+<!-- Search and Filters -->
 
 <div class="publication-toolbar">
 
@@ -494,6 +479,7 @@ button.publication-filter-option.is-active {
     aria-expanded="false"
     aria-controls="publication-filter-panel"
   >
+
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -508,12 +494,13 @@ button.publication-filter-option.is-active {
     </svg>
 
     <span>Filters</span>
+
   </button>
 
 </div>
 
 
-<!-- Filter panel -->
+<!-- Filter Panel -->
 
 <div
   id="publication-filter-panel"
@@ -549,6 +536,7 @@ button.publication-filter-option.is-active {
       </svg>
 
       Year
+
     </p>
 
     <div
@@ -584,6 +572,7 @@ button.publication-filter-option.is-active {
       </svg>
 
       Type
+
     </p>
 
     <div
@@ -650,6 +639,7 @@ button.publication-filter-option.is-active {
         >
 
           {% if post.thumbnail %}
+
             <div class="publication-image-box">
 
               <img
@@ -661,11 +651,13 @@ button.publication-filter-option.is-active {
               >
 
             </div>
+
           {% endif %}
 
           <div class="publication-content">
 
             <h3 class="publication-title">
+
               <a
                 href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
                 {% if post.paperurl and post.paperurl != "" %}
@@ -675,29 +667,39 @@ button.publication-filter-option.is-active {
               >
                 {{ post.title }}
               </a>
+
             </h3>
 
             {% if post.authors %}
+
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
+
             {% endif %}
 
             {% if post.venue %}
+
               <p class="publication-venue">
+
                 <strong>{{ post.venue }}</strong>,
+
                 {% if post.year %}
                   {{ post.year }}
                 {% else %}
                   {{ post.date | date: "%Y" }}
                 {% endif %}
+
               </p>
+
             {% endif %}
 
             {% if post.excerpt %}
+
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
+
             {% endif %}
 
           </div>
@@ -786,6 +788,7 @@ button.publication-filter-option.is-active {
           <div class="publication-content">
 
             <h3 class="publication-title">
+
               <a
                 href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
                 {% if post.paperurl and post.paperurl != "" %}
@@ -795,29 +798,39 @@ button.publication-filter-option.is-active {
               >
                 {{ post.title }}
               </a>
+
             </h3>
 
             {% if post.authors %}
+
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
+
             {% endif %}
 
             {% if post.venue %}
+
               <p class="publication-venue">
+
                 <strong>{{ post.venue }}</strong>,
+
                 {% if post.year %}
                   {{ post.year }}
                 {% else %}
                   {{ post.date | date: "%Y" }}
                 {% endif %}
+
               </p>
+
             {% endif %}
 
             {% if post.excerpt %}
+
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
+
             {% endif %}
 
           </div>
@@ -832,7 +845,7 @@ button.publication-filter-option.is-active {
 </section>
 
 
-<!-- Patents: no image -->
+<!-- Patents: text only -->
 
 <section class="publication-section">
 
@@ -854,6 +867,7 @@ button.publication-filter-option.is-active {
           <div class="publication-content">
 
             <h3 class="publication-title">
+
               <a
                 href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
                 {% if post.paperurl and post.paperurl != "" %}
@@ -863,12 +877,15 @@ button.publication-filter-option.is-active {
               >
                 {{ post.title }}
               </a>
+
             </h3>
 
             {% if post.authors %}
+
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
+
             {% endif %}
 
             <p class="publication-venue">
@@ -878,9 +895,11 @@ button.publication-filter-option.is-active {
               {% endif %}
 
               {% if post.patent_number %}
+
                 <span class="publication-number">
                   · {{ post.patent_number }}
                 </span>
+
               {% endif %}
 
               {% if post.year %}
@@ -892,9 +911,11 @@ button.publication-filter-option.is-active {
             </p>
 
             {% if post.excerpt %}
+
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
+
             {% endif %}
 
           </div>
@@ -909,7 +930,7 @@ button.publication-filter-option.is-active {
 </section>
 
 
-<!-- No results message -->
+<!-- No Results -->
 
 <p
   id="publication-no-results"
@@ -919,7 +940,7 @@ button.publication-filter-option.is-active {
 </p>
 
 
-<!-- Search and filter functions -->
+<!-- Search and Filter Functions -->
 
 <script>
 (function () {
@@ -957,6 +978,7 @@ button.publication-filter-option.is-active {
   let selectedType = "all";
 
   /* Generate year buttons automatically */
+
   const years = Array.from(
     new Set(
       cards
@@ -998,6 +1020,7 @@ button.publication-filter-option.is-active {
   });
 
   /* Open and close filter panel */
+
   filterButton.addEventListener(
     "click",
     function () {
@@ -1012,6 +1035,7 @@ button.publication-filter-option.is-active {
   );
 
   /* Apply search and filters */
+
   function applyFilters() {
     const query = searchInput.value
       .trim()
@@ -1101,7 +1125,8 @@ button.publication-filter-option.is-active {
     applyFilters
   );
 
-  /* Year buttons */
+  /* Year filter */
+
   yearOptions.addEventListener(
     "click",
     function (event) {
@@ -1129,7 +1154,8 @@ button.publication-filter-option.is-active {
     }
   );
 
-  /* Type buttons */
+  /* Type filter */
+
   typeOptions.addEventListener(
     "click",
     function (event) {
