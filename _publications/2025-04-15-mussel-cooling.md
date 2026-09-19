@@ -10,7 +10,7 @@ doi: "10.1016/j.aquaculture.2024.742066"
 pdf: "/files/mussel-cooling.pdf"
 thumbnail: "/assets/images/mussel-cooling.png"
 category: "Seafood Preservation"
-abstract: >
+summary: >
   This study compared the physiological and flavor responses of thick-shell
   mussels subjected to different cooling rates during low-temperature
   semi-anhydrous living-preservation. Cooling rate influenced metabolic
