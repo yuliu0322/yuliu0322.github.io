@@ -1,512 +1,183 @@
-<style>
-:root {
-  --pub-blue: #52adc8;
-  --pub-dark: #233044;
-  --pub-gold: #d9a557;
-  --pub-gold-hover: #c89448;
-  --pub-border: #dfe5eb;
-  --pub-muted: #5b6470;
-}
-
-/* General layout */
-
-.publication-intro {
-  margin-bottom: 1.5rem;
-}
-
-.publication-section {
-  margin-bottom: 2.5rem;
-}
-
-.publication-section-title {
-  margin: 2.8rem 0 1.5rem;
-}
-
-/* Search and filter toolbar */
-
-.publication-toolbar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 140px;
-  align-items: stretch;
-  gap: 16px;
-  width: 100%;
-  margin: 1.5rem 0;
-}
-
-.publication-search-wrapper {
-  position: relative;
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.publication-search-icon {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 17px;
-  width: 22px;
-  height: 22px;
-  color: #8da0b7;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-
-#publication-search.publication-search {
-  display: block !important;
-  width: 100% !important;
-  height: 50px !important;
-  min-height: 50px !important;
-  max-height: 50px !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-  padding: 0 16px 0 52px !important;
-  border: 1px solid #d8dee6 !important;
-  border-radius: 10px !important;
-  background: #ffffff !important;
-  color: #333333 !important;
-  font-size: 16px !important;
-  line-height: normal !important;
-  box-shadow: none !important;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-#publication-search.publication-search:focus {
-  border-color: var(--pub-blue) !important;
-  outline: none !important;
-  box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12) !important;
-}
-
-#publication-filter-button.publication-filter-button {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 9px;
-  width: 140px !important;
-  min-width: 140px !important;
-  height: 50px !important;
-  min-height: 50px !important;
-  max-height: 50px !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-  padding: 0 18px !important;
-  border: 0 !important;
-  border-radius: 10px !important;
-  background: var(--pub-gold) !important;
-  color: #ffffff !important;
-  font: inherit;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  line-height: 1 !important;
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-#publication-filter-button.publication-filter-button:hover,
-#publication-filter-button.publication-filter-button[aria-expanded="true"] {
-  background: var(--pub-gold-hover) !important;
-}
-
-#publication-filter-button.publication-filter-button:hover {
-  transform: translateY(-1px);
-}
-
-#publication-filter-button.publication-filter-button svg {
-  display: block !important;
-  width: 21px !important;
-  min-width: 21px !important;
-  height: 21px !important;
-  color: #ffffff !important;
-}
-
-/* Filter panel */
-
-.publication-filter-panel {
-  display: none;
-  grid-template-columns: minmax(250px, 1fr) minmax(320px, 1.5fr);
-  gap: 32px;
-  margin-bottom: 2rem;
-  padding: 24px;
-  border: 1px solid #d8e0e8;
-  border-radius: 12px;
-  background: #f8fafc;
-}
-
-.publication-filter-panel.is-open {
-  display: grid;
-}
-
-.publication-filter-heading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 14px;
-  color: var(--pub-dark);
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.publication-filter-heading svg {
-  width: 21px;
-  height: 21px;
-}
-
-.publication-filter-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-button.publication-filter-option {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  width: auto !important;
-  min-width: 0 !important;
-  height: 36px !important;
-  min-height: 36px !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-  padding: 0 17px !important;
-  border: 1px solid transparent !important;
-  border-radius: 999px !important;
-  background: #ffffff !important;
-  color: #35435a !important;
-  font: inherit;
-  font-size: 15px !important;
-  line-height: 1 !important;
-  cursor: pointer;
-}
-
-button.publication-filter-option:hover {
-  border-color: var(--pub-gold) !important;
-}
-
-button.publication-filter-option.is-active {
-  border-color: var(--pub-gold) !important;
-  background: var(--pub-gold) !important;
-  color: #ffffff !important;
-}
-
-/* Publication cards */
-
-.publication-card {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 28px;
-  padding: 26px;
-  overflow: hidden;
-  border: 1px solid var(--pub-border);
-  border-radius: 14px;
-  background: #ffffff;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.publication-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-/* Patent: text only */
-
-.patent-card {
-  display: block;
-  padding: 28px 32px;
-}
-
-/* Publication images */
-
-.publication-image-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 320px;
-  min-width: 320px;
-  height: 220px;
-  overflow: hidden;
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.publication-thumbnail {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  border: 0;
-  background: transparent;
-}
-
-/* Book chapter placeholder */
-
-.book-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 320px;
-  min-width: 320px;
-  height: 220px;
-  box-sizing: border-box;
-  border: 1px solid #dce7ec;
-  border-radius: 10px;
-  background: linear-gradient(
-    135deg,
-    #f8fafc 0%,
-    #eef3f6 100%
-  );
-  color: #64748b;
-}
-
-.book-placeholder svg {
-  width: 62px;
-  height: 62px;
-  margin-bottom: 14px;
-}
-
-.book-placeholder span {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-}
-
-/* Card text */
-
-.publication-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.publication-title {
-  margin: 0 0 10px;
-  color: var(--pub-dark);
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.publication-authors {
-  margin: 0 0 8px;
-  color: #4f5865;
-  line-height: 1.55;
-}
-
-.publication-venue {
-  margin: 0 0 10px;
-  color: #202936;
-  line-height: 1.5;
-}
-
-.publication-description {
-  margin: 0;
-  color: var(--pub-muted);
-  line-height: 1.6;
-}
-
-/* Publication actions */
-
-.publication-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 1.1rem;
-}
-
-.publication-action-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-height: 35px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 7px 14px;
-  border: 1px solid #cbdce3;
-  border-radius: 7px;
-  background: #ffffff;
-  color: #3f8196;
-  font: inherit;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1;
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease;
-}
-
-.publication-action-button:hover,
-.publication-action-button:focus-visible,
-.summary-toggle[aria-expanded="true"] {
-  border-color: var(--pub-blue);
-  background: var(--pub-blue);
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.publication-action-button:focus-visible {
-  outline: 3px solid rgba(82, 173, 200, 0.2);
-  outline-offset: 2px;
-}
-
-.summary-toggle-icon {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1;
-}
-
-.publication-external-icon {
-  font-size: 0.85rem;
-  line-height: 1;
-}
-
-.publication-summary {
-  margin-top: 1rem;
-  padding: 14px 17px;
-  border-left: 3px solid var(--pub-gold);
-  border-radius: 0 7px 7px 0;
-  background: #f6f8f9;
-  color: #566170;
-  font-size: 0.91rem;
-  line-height: 1.7;
-}
-
-.publication-summary[hidden] {
-  display: none;
-}
-
-.publication-summary p {
-  margin: 0;
-}
-
-.publication-number {
-  font-weight: 500;
-}
-
-.publication-section-hidden {
-  display: none;
-}
-
-.publication-no-results {
-  display: none;
-  margin: 2rem 0;
-  padding: 20px;
-  border: 1px solid var(--pub-border);
-  border-radius: 10px;
-  color: var(--pub-muted);
-  text-align: center;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-  .publication-toolbar {
-    grid-template-columns: 1fr;
-  }
-
-  #publication-filter-button.publication-filter-button {
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-
-  .publication-filter-panel,
-  .publication-filter-panel.is-open {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .publication-card {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 18px;
-    padding: 20px;
-  }
-
-  .patent-card {
-    display: block;
-    padding: 22px;
-  }
-
-  .publication-image-box {
-    width: 100%;
-    min-width: 0;
-    height: 230px;
-  }
-
-  .book-placeholder {
-    width: 100%;
-    min-width: 0;
-    height: 190px;
-  }
-
-  .publication-title {
-    font-size: 1.1rem;
-  }
-
-  .publication-action-button {
-    padding: 7px 12px;
-    font-size: 0.78rem;
-  }
-
-  .publication-summary {
-    padding: 13px 14px;
-    font-size: 0.87rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .publication-card {
-    padding: 16px;
-  }
-
-  .patent-card {
-    padding: 18px;
-  }
-
-  .publication-image-box {
-    height: 200px;
-  }
-
-  #publication-search.publication-search {
-    font-size: 15px !important;
-  }
-}
-</style>
+可以，但 overview 更偏“概述”，不一定包含详细分析或结论。
+
+Overview of the paper：对整篇文献内容的简要概述
+Paper summary / Summary of the paper：文献总结，更强调提炼研究目的、方法、结果和结论
+Literature review：文献综述，通常指综合分析多篇文献，不是单篇总结
+
+如果是 PPT 中概括一篇论文，可以用：
+
+Paper Overview：简洁自然，适合介绍论文基本内容
+Study Overview：更正式，强调这项研究的总体设计
+Paper Summary：适合最后一页总结全文
+
+一般建议：开头用 Study Overview，结尾用 Summary / Key Takeaways。
+
+我这里叫什么合适
+
+你这里用 Overview 很合适，因为展开的内容是对单篇论文的研究目的、方法、主要结果和意义进行简要概述。
+
+不过按钮文字可以更明确一些，我最推荐：
+
+Summary ⌄
+
+因为读者一眼就能理解“点击查看论文总结”。相比之下，Overview 稍微更像“研究概览”，但并没有错。
+
+可选方案：
+
+Summary：最直观，最推荐
+Study Overview：更学术、更正式
+Overview：简洁，适合你现在的网页设计
+Key Findings：仅适合主要展示研究结果，不适合你现在包含方法和意义的这段文字
+
+如果你整个 Publications 页面中的每篇文献都采用这种可展开的简短总结，建议统一叫 Summary ⌄。
+
+Pasted text(4).txt
+Document
+我是哪改错了嘛 summary 不显示啊
+
+你改错的地方是：只把页面模板中的字段改成了 post.summary，但每篇论文 Markdown 文件里的字段很可能仍然叫 overview。
+
+所以这个判断不成立，按钮和内容都不会生成：
+
+{% if post.summary %}
+
+最简单的修复：保留论文文件中的 overview: 字段，只把按钮显示名称改成 Summary。
+
+把这几处改成：
+
+{% if post.overview %}
+  <button
+    class="publication-action-button summary-toggle"
+    type="button"
+    aria-expanded="false"
+  >
+    Summary
+    <span class="summary-toggle-icon" aria-hidden="true">+</span>
+  </button>
+{% endif %}
+
+下面的内容区域也改成：
+
+{% if post.overview %}
+  <div class="publication-summary" hidden>
+    <p>{{ post.overview }}</p>
+  </div>
+{% endif %}
+
+也就是说：
+
+按钮上显示的文字：Summary
+后台原有的数据字段：post.overview
+CSS 类名和 JavaScript：继续用现在的 summary-toggle、publication-summary
+
+你现在代码里的 CSS 和 JavaScript 没问题，问题就是 post.summary 找不到对应内容。你可以直接全局查找：
+
+post.summary
+
+全部替换成：
+
+post.overview
+
+但按钮里的文字 Summary 不要改。
+
+你发我完整版本
+
+完整修正版已经整理好了，可以直接复制替换原来的 Publications 页面：
+
+下载 
+publications_complete_fixed.md
+
+已修正：
+
+按钮显示为 Summary
+数据继续读取原来的 overview: 字段
+展开和收起功能保持不变
+其他布局、筛选和搜索代码均未改动
+publications_complete_fixed.md
+Document
+怎么不能复制啊
+
+因为我刚才发的是一个下载文件链接，不是直接展示的代码，所以不能在聊天里直接全选复制。
+
+你可以点击下面的文件，打开后按：
+
+Windows：Ctrl + A，然后 Ctrl + C
+Mac：Command + A，然后 Command + C
+
+打开完整代码文件
+
+如果你是在 GitHub 网页里修改，最简单的是下载该文件，然后把文件内容整体复制到原来的 publications.md 中。
+
+你其实也不用替换全部代码。只需在现有代码里查找：
+
+post.summary
+
+把出现的 3处全部替换为：
+
+post.overview
+
+按钮中间的这个文字保持不变：
+
+Summary
+publications_complete_fixed.md
+Document
+？？？？
+
+抱歉，我刚才让你“整体替换”的说法不够准确。现在这个问题不是 Summary，而是 Publications 页面文件的位置或文件名被改了，所以 /publications/ 整个页面变成了 404。
+
+先这样恢复：
+
+在 GitHub 仓库中找到原来的文件，通常是：
+_pages/publications.md
+不要删除或重命名这个文件，也不要把下载的文件名 publications_complete_fixed.md 直接替代它。
+恢复原来的 publications.md 后，只修改下面 3处：
+{% if post.summary %}
+
+两处都改成：
+
+{% if post.overview %}
+
+再把：
+
+<p>{{ post.summary }}</p>
+
+改成：
+
+<p>{{ post.overview }}</p>
+
+按钮文字继续保持：
+
+Summary
+检查 publications.md 最开头必须完整保留：
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+description: "Peer-reviewed journal articles, book chapters, and patents by Yu Liu."
+---
+
+最稳妥的处理方式是：先在 GitHub 历史记录中恢复原来的 _pages/publications.md，然后只改上述3处，不要整份替换。
+
+如果你只是把文件重命名成了 publications_complete_fixed.md，请直接将它重新命名为：
+
+publications.md
+
+并确保它仍然位于：
+
+_pages/
+
+<style> :root { --pub-blue: #52adc8; --pub-dark: #233044; --pub-gold: #d9a557; --pub-gold-hover: #c89448; --pub-border: #dfe5eb; --pub-muted: #5b6470; } /* General layout */ .publication-intro { margin-bottom: 1.5rem; } .publication-section { margin-bottom: 2.5rem; } .publication-section-title { margin: 2.8rem 0 1.5rem; } /* Search and filter toolbar */ .publication-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) 140px; align-items: stretch; gap: 16px; width: 100%; margin: 1.5rem 0; } .publication-search-wrapper { position: relative; width: 100%; min-width: 0; margin: 0; padding: 0; } .publication-search-icon { position: absolute; z-index: 2; top: 50%; left: 17px; width: 22px; height: 22px; color: #8da0b7; pointer-events: none; transform: translateY(-50%); } #publication-search.publication-search { display: block !important; width: 100% !important; height: 50px !important; min-height: 50px !important; max-height: 50px !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 16px 0 52px !important; border: 1px solid #d8dee6 !important; border-radius: 10px !important; background: #ffffff !important; color: #333333 !important; font-size: 16px !important; line-height: normal !important; box-shadow: none !important; appearance: none; -webkit-appearance: none; } #publication-search.publication-search:focus { border-color: var(--pub-blue) !important; outline: none !important; box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12) !important; } #publication-filter-button.publication-filter-button { display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 9px; width: 140px !important; min-width: 140px !important; height: 50px !important; min-height: 50px !important; max-height: 50px !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 18px !important; border: 0 !important; border-radius: 10px !important; background: var(--pub-gold) !important; color: #ffffff !important; font: inherit; font-size: 16px !important; font-weight: 600 !important; line-height: 1 !important; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; } #publication-filter-button.publication-filter-button:hover, #publication-filter-button.publication-filter-button[aria-expanded="true"] { background: var(--pub-gold-hover) !important; } #publication-filter-button.publication-filter-button:hover { transform: translateY(-1px); } #publication-filter-button.publication-filter-button svg { display: block !important; width: 21px !important; min-width: 21px !important; height: 21px !important; color: #ffffff !important; } /* Filter panel */ .publication-filter-panel { display: none; grid-template-columns: minmax(250px, 1fr) minmax(320px, 1.5fr); gap: 32px; margin-bottom: 2rem; padding: 24px; border: 1px solid #d8e0e8; border-radius: 12px; background: #f8fafc; } .publication-filter-panel.is-open { display: grid; } .publication-filter-heading { display: flex; align-items: center; gap: 8px; margin: 0 0 14px; color: var(--pub-dark); font-size: 16px; font-weight: 700; } .publication-filter-heading svg { width: 21px; height: 21px; } .publication-filter-options { display: flex; flex-wrap: wrap; gap: 10px; } button.publication-filter-option { display: inline-flex !important; align-items: center; justify-content: center; width: auto !important; min-width: 0 !important; height: 36px !important; min-height: 36px !important; box-sizing: border-box !important; margin: 0 !important; padding: 0 17px !important; border: 1px solid transparent !important; border-radius: 999px !important; background: #ffffff !important; color: #35435a !important; font: inherit; font-size: 15px !important; line-height: 1 !important; cursor: pointer; } button.publication-filter-option:hover { border-color: var(--pub-gold) !important; } button.publication-filter-option.is-active { border-color: var(--pub-gold) !important; background: var(--pub-gold) !important; color: #ffffff !important; } /* Publication cards */ .publication-card { display: flex; align-items: center; gap: 28px; width: 100%; box-sizing: border-box; margin-bottom: 28px; padding: 26px; overflow: hidden; border: 1px solid var(--pub-border); border-radius: 14px; background: #ffffff; transition: transform 0.2s ease, box-shadow 0.2s ease; } .publication-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); } /* Patent: text only */ .patent-card { display: block; padding: 28px 32px; } /* Publication images */ .publication-image-box { display: flex; align-items: center; justify-content: center; width: 320px; min-width: 320px; height: 220px; overflow: hidden; border-radius: 8px; background: #ffffff; } .publication-thumbnail { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; border: 0; background: transparent; } /* Book chapter placeholder */ .book-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 320px; min-width: 320px; height: 220px; box-sizing: border-box; border: 1px solid #dce7ec; border-radius: 10px; background: linear-gradient( 135deg, #f8fafc 0%, #eef3f6 100% ); color: #64748b; } .book-placeholder svg { width: 62px; height: 62px; margin-bottom: 14px; } .book-placeholder span { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; } /* Card text */ .publication-content { flex: 1; min-width: 0; } .publication-title { margin: 0 0 10px; color: var(--pub-dark); font-size: 1.25rem; font-weight: 700; line-height: 1.35; } .publication-authors { margin: 0 0 8px; color: #4f5865; line-height: 1.55; } .publication-venue { margin: 0 0 10px; color: #202936; line-height: 1.5; } .publication-description { margin: 0; color: var(--pub-muted); line-height: 1.6; } /* Publication actions */ .publication-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 1.1rem; } .publication-action-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 35px; box-sizing: border-box; margin: 0; padding: 7px 14px; border: 1px solid #cbdce3; border-radius: 7px; background: #ffffff; color: #3f8196; font: inherit; font-size: 0.8rem; font-weight: 700; line-height: 1; text-decoration: none; cursor: pointer; transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; } .publication-action-button:hover, .publication-action-button:focus-visible, .summary-toggle[aria-expanded="true"] { border-color: var(--pub-blue); background: var(--pub-blue); color: #ffffff; text-decoration: none; } .publication-action-button:focus-visible { outline: 3px solid rgba(82, 173, 200, 0.2); outline-offset: 2px; } .summary-toggle-icon { font-size: 1rem; font-weight: 500; line-height: 1; } .publication-external-icon { font-size: 0.85rem; line-height: 1; } .publication-summary { margin-top: 1rem; padding: 14px 17px; border-left: 3px solid var(--pub-gold); border-radius: 0 7px 7px 0; background: #f6f8f9; color: #566170; font-size: 0.91rem; line-height: 1.7; } .publication-summary[hidden] { display: none; } .publication-summary p { margin: 0; } .publication-number { font-weight: 500; } .publication-section-hidden { display: none; } .publication-no-results { display: none; margin: 2rem 0; padding: 20px; border: 1px solid var(--pub-border); border-radius: 10px; color: var(--pub-muted); text-align: center; } /* Mobile */ @media (max-width: 768px) { .publication-toolbar { grid-template-columns: 1fr; } #publication-filter-button.publication-filter-button { width: 100% !important; min-width: 0 !important; } .publication-filter-panel, .publication-filter-panel.is-open { grid-template-columns: 1fr; gap: 24px; } .publication-card { flex-direction: column; align-items: stretch; gap: 18px; padding: 20px; } .patent-card { display: block; padding: 22px; } .publication-image-box { width: 100%; min-width: 0; height: 230px; } .book-placeholder { width: 100%; min-width: 0; height: 190px; } .publication-title { font-size: 1.1rem; } .publication-action-button { padding: 7px 12px; font-size: 0.78rem; } .publication-summary { padding: 13px 14px; font-size: 0.87rem; } } @media (max-width: 480px) { .publication-card { padding: 16px; } .patent-card { padding: 18px; } .publication-image-box { height: 200px; } #publication-search.publication-search { font-size: 15px !important; } } </style>
 
 <!-- Introduction -->
 
-<div class="publication-intro">
-  {% if site.author.googlescholar %}
-    <div class="wordwrap">
-      You can also find my articles on
-      <a
-        href="{{ site.author.googlescholar }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        my Google Scholar profile
-      </a>.
-    </div>
-  {% endif %}
-</div>
+<div class="publication-intro"> {% if site.author.googlescholar %} <div class="wordwrap"> You can also find my articles on <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer" > my Google Scholar profile </a>. </div> {% endif %} </div>
 
 <!-- Search and Filters -->
 
 <div class="publication-toolbar">
 
-  <div class="publication-search-wrapper">
+<div class="publication-search-wrapper">
 
 <svg
   class="publication-search-icon"
@@ -539,7 +210,7 @@ button.publication-filter-option.is-active {
   aria-label="Search publications"
 >
 
-  </div>
+</div>
 
 <button
 type="button"
@@ -547,6 +218,7 @@ id="publication-filter-button"
 class="publication-filter-button"
 aria-expanded="false"
 aria-controls="publication-filter-panel"
+
 
 
 
@@ -565,18 +237,15 @@ aria-controls="publication-filter-panel"
 
 <span>Filters</span>
 
-  </button>
+</button>
 
 </div>
 
 <!-- Filter Panel -->
 
-<div
-  id="publication-filter-panel"
-  class="publication-filter-panel"
->
+<div id="publication-filter-panel" class="publication-filter-panel" >
 
-  <div class="publication-filter-group">
+<div class="publication-filter-group">
 
 <p class="publication-filter-heading">
 
@@ -613,9 +282,9 @@ aria-controls="publication-filter-panel"
   class="publication-filter-options"
 ></div>
 
-  </div>
+</div>
 
-  <div class="publication-filter-group">
+<div class="publication-filter-group">
 
 <p class="publication-filter-heading">
 
@@ -683,7 +352,7 @@ aria-controls="publication-filter-panel"
 
 </div>
 
-  </div>
+</div>
 
 </div>
 
@@ -691,11 +360,9 @@ aria-controls="publication-filter-panel"
 
 <section class="publication-section">
 
-  <h2 class="publication-section-title">
-    Peer-Reviewed Journal Articles
-  </h2>
+<h2 class="publication-section-title"> Peer-Reviewed Journal Articles </h2>
 
-  <div class="publication-list">
+<div class="publication-list">
 
 {% for post in site.publications reversed %}
   {% unless post.type == "book" or post.type == "patent" %}
@@ -754,7 +421,7 @@ aria-controls="publication-filter-panel"
 
         <div class="publication-actions">
 
-          {% if post.overview %}
+          {% if post.summary %}
             <button
               class="publication-action-button summary-toggle"
               type="button"
@@ -791,9 +458,9 @@ aria-controls="publication-filter-panel"
 
         </div>
 
-        {% if post.overview %}
+        {% if post.summary %}
           <div class="publication-summary" hidden>
-            <p>{{ post.overview }}</p>
+            <p>{{ post.summary }}</p>
           </div>
         {% endif %}
 
@@ -804,7 +471,7 @@ aria-controls="publication-filter-panel"
   {% endunless %}
 {% endfor %}
 
-  </div>
+</div>
 
 </section>
 
@@ -812,11 +479,9 @@ aria-controls="publication-filter-panel"
 
 <section class="publication-section">
 
-  <h2 class="publication-section-title">
-    Book Chapters
-  </h2>
+<h2 class="publication-section-title"> Book Chapters </h2>
 
-  <div class="publication-list">
+<div class="publication-list">
 
 {% for post in site.publications reversed %}
   {% if post.type == "book" %}
@@ -934,7 +599,7 @@ aria-controls="publication-filter-panel"
   {% endif %}
 {% endfor %}
 
-  </div>
+</div>
 
 </section>
 
@@ -942,11 +607,9 @@ aria-controls="publication-filter-panel"
 
 <section class="publication-section">
 
-  <h2 class="publication-section-title">
-    Patents
-  </h2>
+<h2 class="publication-section-title"> Patents </h2>
 
-  <div class="publication-list">
+<div class="publication-list">
 
 {% for post in site.publications reversed %}
   {% if post.type == "patent" %}
@@ -1018,302 +681,20 @@ aria-controls="publication-filter-panel"
   {% endif %}
 {% endfor %}
 
-  </div>
+</div>
 
 </section>
 
 <!-- No Results -->
 
-<p
-  id="publication-no-results"
-  class="publication-no-results"
->
-  No matching publications found.
-</p>
+<p id="publication-no-results" class="publication-no-results" > No matching publications found. </p>
 
 <!-- Search and Filter Functions -->
 
-<script>
-(function () {
-  const searchInput =
-    document.getElementById("publication-search");
-
-  const filterButton =
-    document.getElementById("publication-filter-button");
-
-  const filterPanel =
-    document.getElementById("publication-filter-panel");
-
-  const yearOptions =
-    document.getElementById("publication-year-options");
-
-  const typeOptions =
-    document.getElementById("publication-type-options");
-
-  const cards = Array.from(
-    document.querySelectorAll(".publication-card")
-  );
-
-  const sections = Array.from(
-    document.querySelectorAll(".publication-section")
-  );
-
-  const noResults =
-    document.getElementById("publication-no-results");
-
-  if (!searchInput || cards.length === 0) {
-    return;
-  }
-
-  let selectedYear = "all";
-  let selectedType = "all";
-
-  /* Generate year buttons automatically */
-
-  const years = Array.from(
-    new Set(
-      cards
-        .map(function (card) {
-          return card.dataset.publicationYear;
-        })
-        .filter(Boolean)
-    )
-  ).sort(function (a, b) {
-    return Number(b) - Number(a);
-  });
-
-  function createYearButton(label, value, active) {
-    const button =
-      document.createElement("button");
-
-    button.type = "button";
-    button.className =
-      "publication-filter-option";
-
-    if (active) {
-      button.classList.add("is-active");
-    }
-
-    button.dataset.filterYear = value;
-    button.textContent = label;
-
-    return button;
-  }
-
-  yearOptions.appendChild(
-    createYearButton("All", "all", true)
-  );
-
-  years.forEach(function (year) {
-    yearOptions.appendChild(
-      createYearButton(year, year, false)
-    );
-  });
-
-  /* Open and close filter panel */
-
-  filterButton.addEventListener(
-    "click",
-    function () {
-      const isOpen =
-        filterPanel.classList.toggle("is-open");
-
-      filterButton.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
-    }
-  );
-
-  /* Apply search and filters */
-
-  function applyFilters() {
-    const query = searchInput.value
-      .trim()
-      .toLowerCase();
-
-    let visibleCount = 0;
-
-    cards.forEach(function (card) {
-      const cardText = card.textContent
-        .toLowerCase()
-        .replace(/\s+/g, " ");
-
-      const cardYear =
-        card.dataset.publicationYear || "";
-
-      const cardType =
-        card.dataset.publicationType || "";
-
-      const matchesSearch =
-        query === "" ||
-        cardText.includes(query);
-
-      const matchesYear =
-        selectedYear === "all" ||
-        cardYear === selectedYear;
-
-      const matchesType =
-        selectedType === "all" ||
-        cardType === selectedType;
-
-      const shouldShow =
-        matchesSearch &&
-        matchesYear &&
-        matchesType;
-
-      if (shouldShow) {
-        card.style.removeProperty("display");
-        visibleCount += 1;
-      } else {
-        card.style.setProperty(
-          "display",
-          "none",
-          "important"
-        );
-      }
-    });
-
-    const filtersAreActive =
-      query !== "" ||
-      selectedYear !== "all" ||
-      selectedType !== "all";
-
-    sections.forEach(function (section) {
-      const sectionCards = Array.from(
-        section.querySelectorAll(
-          ".publication-card"
-        )
-      );
-
-      const hasVisibleCards =
-        sectionCards.some(function (card) {
-          return (
-            window.getComputedStyle(card)
-              .display !== "none"
-          );
-        });
-
-      if (filtersAreActive && !hasVisibleCards) {
-        section.classList.add(
-          "publication-section-hidden"
-        );
-      } else {
-        section.classList.remove(
-          "publication-section-hidden"
-        );
-      }
-    });
-
-    noResults.style.display =
-      visibleCount === 0
-        ? "block"
-        : "none";
-  }
-
-  searchInput.addEventListener(
-    "input",
-    applyFilters
-  );
-
-  /* Year filter */
-
-  yearOptions.addEventListener(
-    "click",
-    function (event) {
-      const button = event.target.closest(
-        "[data-filter-year]"
-      );
-
-      if (!button) {
-        return;
-      }
-
-      selectedYear =
-        button.dataset.filterYear;
-
-      yearOptions
-        .querySelectorAll(
-          ".publication-filter-option"
-        )
-        .forEach(function (option) {
-          option.classList.remove("is-active");
-        });
-
-      button.classList.add("is-active");
-      applyFilters();
-    }
-  );
-
-  /* Type filter */
-
-  typeOptions.addEventListener(
-    "click",
-    function (event) {
-      const button = event.target.closest(
-        "[data-filter-type]"
-      );
-
-      if (!button) {
-        return;
-      }
-
-      selectedType =
-        button.dataset.filterType;
-
-      typeOptions
-        .querySelectorAll(
-          ".publication-filter-option"
-        )
-        .forEach(function (option) {
-          option.classList.remove("is-active");
-        });
-
-      button.classList.add("is-active");
-      applyFilters();
-    }
-  );
-})();
-</script>
+<script> (function () { const searchInput = document.getElementById("publication-search"); const filterButton = document.getElementById("publication-filter-button"); const filterPanel = document.getElementById("publication-filter-panel"); const yearOptions = document.getElementById("publication-year-options"); const typeOptions = document.getElementById("publication-type-options"); const cards = Array.from( document.querySelectorAll(".publication-card") ); const sections = Array.from( document.querySelectorAll(".publication-section") ); const noResults = document.getElementById("publication-no-results"); if (!searchInput || cards.length === 0) { return; } let selectedYear = "all"; let selectedType = "all"; /* Generate year buttons automatically */ const years = Array.from( new Set( cards .map(function (card) { return card.dataset.publicationYear; }) .filter(Boolean) ) ).sort(function (a, b) { return Number(b) - Number(a); }); function createYearButton(label, value, active) { const button = document.createElement("button"); button.type = "button"; button.className = "publication-filter-option"; if (active) { button.classList.add("is-active"); } button.dataset.filterYear = value; button.textContent = label; return button; } yearOptions.appendChild( createYearButton("All", "all", true) ); years.forEach(function (year) { yearOptions.appendChild( createYearButton(year, year, false) ); }); /* Open and close filter panel */ filterButton.addEventListener( "click", function () { const isOpen = filterPanel.classList.toggle("is-open"); filterButton.setAttribute( "aria-expanded", String(isOpen) ); } ); /* Apply search and filters */ function applyFilters() { const query = searchInput.value .trim() .toLowerCase(); let visibleCount = 0; cards.forEach(function (card) { const cardText = card.textContent .toLowerCase() .replace(/\s+/g, " "); const cardYear = card.dataset.publicationYear || ""; const cardType = card.dataset.publicationType || ""; const matchesSearch = query === "" || cardText.includes(query); const matchesYear = selectedYear === "all" || cardYear === selectedYear; const matchesType = selectedType === "all" || cardType === selectedType; const shouldShow = matchesSearch && matchesYear && matchesType; if (shouldShow) { card.style.removeProperty("display"); visibleCount += 1; } else { card.style.setProperty( "display", "none", "important" ); } }); const filtersAreActive = query !== "" || selectedYear !== "all" || selectedType !== "all"; sections.forEach(function (section) { const sectionCards = Array.from( section.querySelectorAll( ".publication-card" ) ); const hasVisibleCards = sectionCards.some(function (card) { return ( window.getComputedStyle(card) .display !== "none" ); }); if (filtersAreActive && !hasVisibleCards) { section.classList.add( "publication-section-hidden" ); } else { section.classList.remove( "publication-section-hidden" ); } }); noResults.style.display = visibleCount === 0 ? "block" : "none"; } searchInput.addEventListener( "input", applyFilters ); /* Year filter */ yearOptions.addEventListener( "click", function (event) { const button = event.target.closest( "[data-filter-year]" ); if (!button) { return; } selectedYear = button.dataset.filterYear; yearOptions .querySelectorAll( ".publication-filter-option" ) .forEach(function (option) { option.classList.remove("is-active"); }); button.classList.add("is-active"); applyFilters(); } ); /* Type filter */ typeOptions.addEventListener( "click", function (event) { const button = event.target.closest( "[data-filter-type]" ); if (!button) { return; } selectedType = button.dataset.filterType; typeOptions .querySelectorAll( ".publication-filter-option" ) .forEach(function (option) { option.classList.remove("is-active"); }); button.classList.add("is-active"); applyFilters(); } ); })(); </script>
 
 <!-- summary Toggle -->
 
-<script>
-(function () {
-  document.addEventListener("click", function (event) {
-    const button = event.target.closest(".summary-toggle");
+<script> (function () { document.addEventListener("click", function (event) { const button = event.target.closest(".summary-toggle"); if (!button) { return; } const card = button.closest(".publication-card"); if (!card) { return; } const summary = card.querySelector(".publication-summary"); if (!summary) { return; } const isExpanded = button.getAttribute("aria-expanded") === "true"; button.setAttribute( "aria-expanded", String(!isExpanded) ); summary.hidden = isExpanded; const icon = button.querySelector(".summary-toggle-icon"); if (icon) { icon.textContent = isExpanded ? "+" : "−"; } }); })(); </script>
 
-    if (!button) {
-      return;
-    }
-
-    const card = button.closest(".publication-card");
-
-    if (!card) {
-      return;
-    }
-
-    const summary = card.querySelector(".publication-summary");
-
-    if (!summary) {
-      return;
-    }
-
-    const isExpanded =
-      button.getAttribute("aria-expanded") === "true";
-
-    button.setAttribute(
-      "aria-expanded",
-      String(!isExpanded)
-    );
-
-    summary.hidden = isExpanded;
-
-    const icon = button.querySelector(".summary-toggle-icon");
-
-    if (icon) {
-      icon.textContent = isExpanded ? "+" : "−";
-    }
-  });
-})();
-</script>
+Close
