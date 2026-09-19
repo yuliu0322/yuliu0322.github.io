@@ -153,17 +153,23 @@ redirect_from:
 
 <div class="home-welcome">
 
-  <section class="home-intro">
-    <h2 class="home-greeting">
-      Welcome, I’m <span class="home-greeting-highlight">Yu Liu</span>.
-    </h2>
+<section class="home-intro">
+  <h2 class="home-greeting">
+    Welcome, I’m <span class="home-greeting-highlight">Yu Liu</span>.
+  </h2>
 
-    <p>
-  I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
-  conducting interdisciplinary research in the Sustainable &amp; Intelligent
-  Seafood Bioprocessing Laboratory and the Biopolymer Laboratory.
-    </p>
-  </section>
+  <p>
+    I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
+    conducting interdisciplinary research in the Sustainable &amp; Intelligent
+    Seafood Bioprocessing Laboratory and the Biopolymer Laboratory.
+  </p>
+
+  <p>
+    My academic background brings together food science, aquaculture,
+    biomaterials, and food engineering, with a broad interest in developing
+    practical and sustainable solutions for aquatic food systems.
+  </p>
+</section>
 
   <section class="home-current">
     <h2 class="home-section-heading">What I Am Working On</h2>
