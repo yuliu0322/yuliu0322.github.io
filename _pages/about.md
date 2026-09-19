@@ -17,7 +17,7 @@ redirect_from:
 /* Opening section */
 .home-intro {
   max-width: 1080px;
-  margin: 0 0 3rem;
+  margin: 0 0 1.25rem;
 }
 
 .home-greeting {
@@ -41,16 +41,16 @@ redirect_from:
 
 /* Current work */
 .home-current {
-  margin: 0 0 3rem;
-  padding: 2rem 0;
+  margin: 0 0 2.25rem;
+  padding: 1.4rem 0 1.6rem;
   border-top: 1px solid #e3e8ec;
   border-bottom: 1px solid #e3e8ec;
 }
 
 .home-section-heading {
   position: relative;
-  margin: 0 0 1.25rem;
-  padding-bottom: 12px;
+  margin: 0 0 1rem;
+  padding-bottom: 10px;
   color: #253248;
   font-size: 1.3rem;
   line-height: 1.35;
