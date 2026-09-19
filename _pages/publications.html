@@ -297,19 +297,10 @@ button.publication-filter-option.is-active {
 
 .publication-title {
   margin: 0 0 10px;
+  color: var(--pub-dark);
   font-size: 1.25rem;
+  font-weight: 700;
   line-height: 1.35;
-}
-
-.publication-title a {
-  color: var(--pub-blue);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.publication-title a:hover {
-  color: #2f8faa;
 }
 
 .publication-authors {
@@ -328,6 +319,84 @@ button.publication-filter-option.is-active {
   margin: 0;
   color: var(--pub-muted);
   line-height: 1.6;
+}
+
+/* Publication actions */
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 1.1rem;
+}
+
+.publication-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 35px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px 14px;
+  border: 1px solid #cbdce3;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #3f8196;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.publication-action-button:hover,
+.publication-action-button:focus-visible,
+.abstract-toggle[aria-expanded="true"] {
+  border-color: var(--pub-blue);
+  background: var(--pub-blue);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.publication-action-button:focus-visible {
+  outline: 3px solid rgba(82, 173, 200, 0.2);
+  outline-offset: 2px;
+}
+
+.abstract-toggle-icon {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.publication-external-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.publication-abstract {
+  margin-top: 1rem;
+  padding: 14px 17px;
+  border-left: 3px solid var(--pub-gold);
+  border-radius: 0 7px 7px 0;
+  background: #f6f8f9;
+  color: #566170;
+  font-size: 0.91rem;
+  line-height: 1.7;
+}
+
+.publication-abstract[hidden] {
+  display: none;
+}
+
+.publication-abstract p {
+  margin: 0;
 }
 
 .publication-number {
@@ -392,6 +461,16 @@ button.publication-filter-option.is-active {
 
   .publication-title {
     font-size: 1.1rem;
+  }
+
+  .publication-action-button {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+
+  .publication-abstract {
+    padding: 13px 14px;
+    font-size: 0.87rem;
   }
 }
 
@@ -657,17 +736,7 @@ button.publication-filter-option.is-active {
           <div class="publication-content">
 
             <h3 class="publication-title">
-
-              <a
-                href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
-                {% if post.paperurl and post.paperurl != "" %}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                {% endif %}
-              >
-                {{ post.title }}
-              </a>
-
+              {{ post.title }}
             </h3>
 
             {% if post.authors %}
@@ -694,12 +763,49 @@ button.publication-filter-option.is-active {
 
             {% endif %}
 
-            {% if post.excerpt %}
+            <div class="publication-actions">
 
-              <p class="publication-description">
-                {{ post.excerpt | strip_html | strip }}
-              </p>
+              {% if post.abstract %}
+                <button
+                  class="publication-action-button abstract-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Abstract
+                  <span class="abstract-toggle-icon" aria-hidden="true">+</span>
+                </button>
+              {% endif %}
 
+              {% if post.doi %}
+                <a
+                  class="publication-action-button"
+                  href="{% if post.doi contains 'http' %}{{ post.doi }}{% else %}https://doi.org/{{ post.doi }}{% endif %}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DOI
+                  <span class="publication-external-icon" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if post.pdf %}
+                <a
+                  class="publication-action-button"
+                  href="{% if post.pdf contains 'http' %}{{ post.pdf }}{% else %}{{ post.pdf | relative_url }}{% endif %}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PDF
+                  <span class="publication-external-icon" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+            </div>
+
+            {% if post.abstract %}
+              <div class="publication-abstract" hidden>
+                <p>{{ post.abstract }}</p>
+              </div>
             {% endif %}
 
           </div>
@@ -1182,5 +1288,47 @@ button.publication-filter-option.is-active {
       applyFilters();
     }
   );
+})();
+</script>
+
+<!-- Abstract Toggle -->
+
+<script>
+(function () {
+  document.addEventListener("click", function (event) {
+    const button = event.target.closest(".abstract-toggle");
+
+    if (!button) {
+      return;
+    }
+
+    const card = button.closest(".publication-card");
+
+    if (!card) {
+      return;
+    }
+
+    const abstract = card.querySelector(".publication-abstract");
+
+    if (!abstract) {
+      return;
+    }
+
+    const isExpanded =
+      button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute(
+      "aria-expanded",
+      String(!isExpanded)
+    );
+
+    abstract.hidden = isExpanded;
+
+    const icon = button.querySelector(".abstract-toggle-icon");
+
+    if (icon) {
+      icon.textContent = isExpanded ? "+" : "−";
+    }
+  });
 })();
 </script>
