@@ -896,60 +896,6 @@ html[data-theme="dark"] .home-research-card:hover {
 
     <div class="home-research-grid">
 
-      <!-- Oral delivery -->
-      <article class="home-research-card home-research-card--delivery">
-
-<div class="home-card-header">
-
-  <div>
-    <span class="home-card-number">RESEARCH 01</span>
-    <h3 class="home-card-title">Oral Delivery Systems</h3>
-  </div>
-
-</div>
-
-        <p class="home-card-text">
-          Developing PLGA-based systems that protect vaccines and
-          immunostimulants during gastrointestinal transit and deliver them to
-          immune-responsive sites.
-        </p>
-
-        <div class="home-card-tags">
-          <span class="home-card-tag">PLGA</span>
-          <span class="home-card-tag">Oral Vaccines</span>
-          <span class="home-card-tag">Controlled Release</span>
-        </div>
-
-      </article>
-
-
-      <!-- Aquatic animal health -->
-      <article class="home-research-card home-research-card--health">
-
-        <div class="home-card-header">
-
-          <div>
-            <span class="home-card-number">RESEARCH 02</span>
-            <h3 class="home-card-title">Aquatic Animal Health</h3>
-          </div>
-
-        </div>
-
-        <p class="home-card-text">
-          Investigating nutritional and biomaterial-based strategies that
-          enhance disease resistance while reducing losses in sustainable
-          aquaculture.
-        </p>
-
-        <div class="home-card-tags">
-          <span class="home-card-tag">Immunity</span>
-          <span class="home-card-tag">Probiotics</span>
-          <span class="home-card-tag">Aquaculture</span>
-        </div>
-
-      </article>
-
-
       <!-- Passive cooling -->
       <article class="home-research-card home-research-card--cooling">
 
@@ -977,30 +923,28 @@ html[data-theme="dark"] .home-research-card:hover {
       </article>
 
 
-      <!-- Seafood quality -->
-      <article class="home-research-card home-research-card--quality">
+            <!-- Oral delivery -->
+      <article class="home-research-card home-research-card--delivery">
 
-        <div class="home-card-header">
+<div class="home-card-header">
 
-          <div>
-            <span class="home-card-number">RESEARCH 04</span>
-            <h3 class="home-card-title">
-              Seafood Quality &amp; Preservation
-            </h3>
-          </div>
+  <div>
+    <span class="home-card-number">RESEARCH 01</span>
+    <h3 class="home-card-title">Oral Delivery Systems</h3>
+  </div>
 
-        </div>
+</div>
 
         <p class="home-card-text">
-          Studying physiological, biochemical, and flavor changes during
-          seafood processing and storage to support effective preservation
-          strategies.
+          Developing PLGA-based systems that protect vaccines and
+          immunostimulants during gastrointestinal transit and deliver them to
+          immune-responsive sites.
         </p>
 
         <div class="home-card-tags">
-          <span class="home-card-tag">Quality</span>
-          <span class="home-card-tag">Flavor</span>
-          <span class="home-card-tag">Shelf Life</span>
+          <span class="home-card-tag">PLGA</span>
+          <span class="home-card-tag">Oral Vaccines</span>
+          <span class="home-card-tag">Controlled Release</span>
         </div>
 
       </article>
