@@ -10,7 +10,7 @@ doi: "10.1016/j.foodchem.2021.131779"
 pdf: "/files/lactoferrin-pickering.pdf"
 thumbnail: "/assets/images/lactoferrin-pickering.png"
 category: "Food Biochemistry"
-Summary: >
+summary: >
   This study optimized the preparation of transglutaminase-crosslinked
   lactoferrin particles and evaluated their use as stabilizers for
   oleogel-based Pickering emulsions. The particles exhibited suitable
