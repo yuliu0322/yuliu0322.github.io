@@ -10,7 +10,7 @@ doi: "10.1016/j.foodchem.2023.136162"
 thumbnail: "/assets/images/liquid-nitrogen-oyster.png"
 pdf: "/files/liquid-nitrogen-oyster.pdf"
 category: "Seafood Processing"
-Summary: >
+summary: >
   This study compared the effects of different liquid nitrogen freezing
   temperatures on the physicochemical quality and flavor characteristics of
   Pacific oysters. Changes in water distribution, texture, protein properties,
