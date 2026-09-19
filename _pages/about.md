@@ -21,12 +21,6 @@ redirect_from:
 Welcome to my website! My name is Yu Liu, and I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech, working across the
 Sustainable & Intelligent Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
 
-A single question runs through my research: **How can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?**
-
-I approach this across the aquatic food value chain, from aquaculture production to post-harvest preservation. On the production side, I investigate how environmental and farming conditions influence the physiology, health, and quality of aquatic species. Building on this understanding, I develop PLGA-based oral vaccines engineered to protect antigens during digestive transit and deliver them to immune-responsive sites, thereby eliciting protective immune responses. Additionally, I incorporate probiotic-derived immunostimulants to enhance disease resistance and reduce production losses. On the post-harvest side, my research extends shelf life and preserves seafood quality through two complementary approaches. First, I develop bio-based passive cooling materials that provide electricity-free temperature reduction for sustainable cold-chain management. Second, I investigate the physiological, biochemical, and flavor dynamics during seafood processing and storage—particularly in shellfish—to elucidate the mechanisms driving quality deterioration and to support more effective preservation strategies.
-
-This perspective grew out of my earlier work on how aquatic organisms respond to environmental stressors. During my master's research, I investigated the effects of microplastic contamination on the physiological and biochemical responses of oysters—work that grounds both my interest in how stressors shape physiology and my focus on the biochemical changes shellfish undergo during processing and storage. Together, these projects reflect my broader goal of developing science-based materials, technologies, and preservation strategies that improve the sustainability, safety, and quality of aquatic foods from farm to plate.
-
 ## Beyond Research
 
 Outside of the laboratory, I enjoy traveling, hiking, photography, watching movies, and exploring different genres of music. Photography allows me to document landscapes, cultures, and everyday moments while encouraging me to observe the world from different perspectives.
