@@ -15,9 +15,7 @@ author_profile: true
   --news-background: #ffffff;
 }
 
-/* =========================
-   Page introduction
-   ========================= */
+/* Page introduction */
 
 .news-intro {
   margin: -0.4rem 0 2.2rem;
@@ -26,9 +24,7 @@ author_profile: true
   line-height: 1.6;
 }
 
-/* =========================
-   Talk map link
-   ========================= */
+/* Talk map link */
 
 .news-map-link {
   display: inline-flex;
@@ -47,9 +43,7 @@ author_profile: true
   color: #2f8faa;
 }
 
-/* =========================
-   Year groups
-   ========================= */
+/* Year groups */
 
 .news-year-group {
   position: relative;
@@ -69,9 +63,7 @@ author_profile: true
   letter-spacing: 0.02em;
 }
 
-/* =========================
-   Timeline
-   ========================= */
+/* Timeline */
 
 .news-timeline {
   position: relative;
@@ -89,9 +81,7 @@ author_profile: true
   content: "";
 }
 
-/* =========================
-   News item
-   ========================= */
+/* News item */
 
 .news-item {
   position: relative;
@@ -116,9 +106,7 @@ author_profile: true
   box-shadow: 0 0 0 2px #b8dbe5;
 }
 
-/* =========================
-   News card
-   ========================= */
+/* News card */
 
 .news-card {
   display: flex;
@@ -147,9 +135,7 @@ author_profile: true
   min-width: 0;
 }
 
-/* =========================
-   Date and category
-   ========================= */
+/* Date and category */
 
 .news-card-meta {
   display: flex;
@@ -182,7 +168,8 @@ author_profile: true
 
 /* Category colors */
 
-.news-type-award {
+.news-type-award,
+.news-type-fellowship {
   background: #fff3d8;
   color: #a66b16;
 }
@@ -193,7 +180,8 @@ author_profile: true
 }
 
 .news-type-presentation,
-.news-type-poster {
+.news-type-poster,
+.news-type-poster-presentation {
   background: #e7f3fb;
   color: #347ca1;
 }
@@ -209,14 +197,12 @@ author_profile: true
   color: #5661a5;
 }
 
-.news-type-fellowship {
-  background: #fff3d8;
-  color: #a66b16;
+.news-type-competition {
+  background: #fdeaea;
+  color: #a14848;
 }
 
-/* =========================
-   Title and text
-   ========================= */
+/* Title and summary */
 
 .news-card-title {
   margin: 0 0 9px;
@@ -241,11 +227,13 @@ author_profile: true
   line-height: 1.65;
 }
 
+/* Venue and location */
+
 .news-details {
   display: flex;
   flex-wrap: wrap;
   gap: 7px 18px;
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--news-muted);
   font-size: 0.84rem;
 }
@@ -261,9 +249,7 @@ author_profile: true
   height: 16px;
 }
 
-/* =========================
-   Optional image
-   ========================= */
+/* Optional image */
 
 .news-image-wrapper {
   display: flex;
@@ -285,9 +271,7 @@ author_profile: true
   object-position: center;
 }
 
-/* =========================
-   Mobile
-   ========================= */
+/* Mobile */
 
 @media (max-width: 768px) {
   .news-timeline {
@@ -341,7 +325,7 @@ author_profile: true
 </style>
 
 
-<!-- Page introduction -->
+<!-- Introduction -->
 
 <p class="news-intro">
   Selected milestones, awards, research activities, and moments from my academic journey.
@@ -356,6 +340,7 @@ author_profile: true
     class="news-map-link"
     href="{{ '/talkmap.html' | relative_url }}"
   >
+
     <svg
       width="18"
       height="18"
@@ -380,6 +365,7 @@ author_profile: true
     </svg>
 
     See a map of my presentations
+
   </a>
 
 {% endif %}
@@ -424,6 +410,8 @@ author_profile: true
 
       <div class="news-card-content">
 
+        <!-- Date and type -->
+
         <div class="news-card-meta">
 
           <time
@@ -446,6 +434,8 @@ author_profile: true
         </div>
 
 
+        <!-- Title -->
+
         <h3 class="news-card-title">
 
           <a href="{{ post.url | relative_url }}">
@@ -455,20 +445,18 @@ author_profile: true
         </h3>
 
 
+        <!-- Summary: only displayed when explicitly provided -->
+
         {% if post.summary %}
 
           <p class="news-summary">
             {{ post.summary }}
           </p>
 
-        {% elsif post.excerpt %}
-
-          <p class="news-summary">
-            {{ post.excerpt | strip_html | truncatewords: 42 }}
-          </p>
-
         {% endif %}
 
+
+        <!-- Venue and location -->
 
         {% if post.venue or post.location %}
 
@@ -536,6 +524,8 @@ author_profile: true
 
       </div>
 
+
+      <!-- Optional image -->
 
       {% if post.thumbnail %}
 
