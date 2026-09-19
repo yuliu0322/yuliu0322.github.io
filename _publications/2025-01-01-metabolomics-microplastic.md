@@ -3,7 +3,11 @@ title: "Metabolic profiles and protein expression responses of Pacific oyster (C
 collection: publications
 permalink: /publication/metabolomics-microplastic/
 date: 2025-01-01
+year: 2025
 venue: "Food Chemistry"
 authors: "<strong>Y. Liu</strong>, S. Wu, L. Chen, X. Teng, H. Shi, C. Xue, Z. Li"
 paperurl: "https://doi.org/10.1016/j.foodchem.2024.140961"
+thumbnail: "/images/publications/metabolomics-microplastic.jpg"
+category: "Seafood Safety"
+excerpt: "This study integrated metabolomic and proteomic analyses to characterize the metabolic and protein-expression responses of Pacific oysters exposed to polystyrene microplastics."
 ---
