@@ -87,8 +87,8 @@ author_profile: true
 .education-school {
   margin: 0 0 8px;
   color: #253248;
-  font-size: 1.4rem;
-  line-height: 1.3;
+  font-size: 1.22rem;
+  line-height: 1.35;
 }
 
 .education-degree {
@@ -102,6 +102,7 @@ author_profile: true
 .education-advisors {
   margin: 0 0 14px;
   color: #5e6877;
+  font-size: 0.95rem;
   line-height: 1.75;
 }
 
@@ -170,7 +171,7 @@ author_profile: true
   }
 
   .education-school {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .education-degree {
