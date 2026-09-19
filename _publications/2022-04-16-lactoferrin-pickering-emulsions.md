@@ -8,7 +8,7 @@ venue: "Food Chemistry"
 authors: "T. Xia, Y. Gao, <strong>Y. Liu</strong>, Z. Wei, C. Xue"
 paperurl: "https://doi.org/10.1016/j.foodchem.2021.131779"
 thumbnail: "/assets/images/lactoferrin-pickering.png"
-thumbnail_scale: 1.35
+thumbnail_scale: 1.2
 category: "Food Biochemistry"
 excerpt: "Transglutaminase-crosslinked lactoferrin particles were developed as Pickering stabilizers for oleogel-based emulsions, improving the bioaccessibility of curcumin."
 ---
