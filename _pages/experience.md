@@ -13,8 +13,8 @@ author_profile: true
 
 .experience-entry {
   width: 100%;
-  margin-bottom: 3.5rem;
-  padding-bottom: 3.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
   border-bottom: 1px solid #dfe6eb;
 }
 
@@ -143,8 +143,8 @@ author_profile: true
   }
 
   .experience-entry {
-    margin-bottom: 2.75rem;
-    padding-bottom: 2.75rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   .experience-header {
