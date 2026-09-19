@@ -8,15 +8,16 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 <style>
 :root {
-  --publication-blue: #52adc8;
-  --publication-dark: #233044;
-  --publication-gold: #d9a557;
-  --publication-border: #dfe5eb;
-  --publication-muted: #5b6470;
+  --pub-blue: #52adc8;
+  --pub-dark: #233044;
+  --pub-gold: #d9a557;
+  --pub-gold-hover: #c89448;
+  --pub-border: #dfe5eb;
+  --pub-muted: #5b6470;
 }
 
 /* =========================
-   Introduction
+   General layout
    ========================= */
 
 .publication-intro {
@@ -32,24 +33,29 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 }
 
 /* =========================
-   Search and filter controls
+   Search and filter toolbar
    ========================= */
 
 .publication-toolbar {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
   align-items: stretch;
   gap: 16px;
+  width: 100%;
   margin: 1.5rem 0;
 }
 
 .publication-search-wrapper {
   position: relative;
-  flex: 1;
+  width: 100%;
   min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .publication-search-icon {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 18px;
   width: 24px;
@@ -59,59 +65,74 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   transform: translateY(-50%);
 }
 
-.publication-search {
-  display: block;
-  width: 100%;
-  height: 62px;
-  box-sizing: border-box;
-  padding: 14px 18px 14px 58px;
-  border: 1px solid #d8dee6;
-  border-radius: 12px;
-  background: #ffffff;
-  color: #333333;
-  font-size: 17px;
-  line-height: 1.5;
+#publication-search.publication-search {
+  display: block !important;
+  width: 100% !important;
+  height: 62px !important;
+  min-height: 62px !important;
+  max-height: 62px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 18px 0 58px !important;
+  border: 1px solid #d8dee6 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: #333333 !important;
+  font-size: 17px !important;
+  line-height: normal !important;
+  box-shadow: none !important;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-.publication-search:focus {
-  border-color: var(--publication-blue);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12);
+#publication-search.publication-search:focus {
+  border-color: var(--pub-blue) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12) !important;
 }
 
-.publication-filter-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+#publication-filter-button.publication-filter-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   gap: 10px;
-  min-width: 150px;
-  height: 62px;
-  padding: 0 24px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--publication-gold);
-  color: #ffffff;
+  width: 150px !important;
+  min-width: 150px !important;
+  height: 62px !important;
+  min-height: 62px !important;
+  max-height: 62px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 22px !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  background: var(--pub-gold) !important;
+  color: #ffffff !important;
   font: inherit;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
   cursor: pointer;
   transition:
     background 0.2s ease,
     transform 0.2s ease;
 }
 
-.publication-filter-button:hover {
-  background: #c89448;
+#publication-filter-button.publication-filter-button:hover,
+#publication-filter-button.publication-filter-button[aria-expanded="true"] {
+  background: var(--pub-gold-hover) !important;
+}
+
+#publication-filter-button.publication-filter-button:hover {
   transform: translateY(-1px);
 }
 
-.publication-filter-button svg {
-  width: 24px;
-  height: 24px;
-}
-
-.publication-filter-button[aria-expanded="true"] {
-  background: #c89448;
+#publication-filter-button.publication-filter-button svg {
+  display: block !important;
+  width: 23px !important;
+  min-width: 23px !important;
+  height: 23px !important;
+  color: #ffffff !important;
 }
 
 /* =========================
@@ -120,7 +141,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 .publication-filter-panel {
   display: none;
-  grid-template-columns: minmax(250px, 1fr) minmax(300px, 1.5fr);
+  grid-template-columns: minmax(250px, 1fr) minmax(320px, 1.5fr);
   gap: 32px;
   margin-bottom: 2rem;
   padding: 24px;
@@ -138,7 +159,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   align-items: center;
   gap: 8px;
   margin: 0 0 14px;
-  color: var(--publication-dark);
+  color: var(--pub-dark);
   font-size: 16px;
   font-weight: 700;
 }
@@ -154,33 +175,39 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   gap: 10px;
 }
 
-.publication-filter-option {
-  padding: 8px 18px;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #35435a;
+button.publication-filter-option {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 18px !important;
+  border: 1px solid transparent !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: #35435a !important;
   font: inherit;
-  font-size: 15px;
+  font-size: 15px !important;
+  line-height: 1 !important;
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
 }
 
-.publication-filter-option:hover {
-  border-color: var(--publication-gold);
+button.publication-filter-option:hover {
+  border-color: var(--pub-gold) !important;
 }
 
-.publication-filter-option.is-active {
-  border-color: var(--publication-gold);
-  background: var(--publication-gold);
-  color: #ffffff;
+button.publication-filter-option.is-active {
+  border-color: var(--pub-gold) !important;
+  background: var(--pub-gold) !important;
+  color: #ffffff !important;
 }
 
 /* =========================
-   Cards
+   Publication cards
    ========================= */
 
 .publication-card {
@@ -192,7 +219,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   margin-bottom: 28px;
   padding: 26px;
   overflow: hidden;
-  border: 1px solid var(--publication-border);
+  border: 1px solid var(--pub-border);
   border-radius: 14px;
   background: #ffffff;
   transition:
@@ -205,14 +232,14 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Patent: text only */
+/* Patents are text-only */
 .patent-card {
   display: block;
   padding: 28px 32px;
 }
 
 /* =========================
-   Images
+   Publication images
    ========================= */
 
 .publication-image-box {
@@ -238,7 +265,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 }
 
 /* =========================
-   Book placeholder
+   Book chapter placeholder
    ========================= */
 
 .book-placeholder {
@@ -288,7 +315,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 }
 
 .publication-title a {
-  color: var(--publication-blue);
+  color: var(--pub-blue);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -312,7 +339,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 .publication-description {
   margin: 0;
-  color: var(--publication-muted);
+  color: var(--pub-muted);
   line-height: 1.6;
 }
 
@@ -328,9 +355,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   display: none;
   margin: 2rem 0;
   padding: 20px;
-  border: 1px solid var(--publication-border);
+  border: 1px solid var(--pub-border);
   border-radius: 10px;
-  color: var(--publication-muted);
+  color: var(--pub-muted);
   text-align: center;
 }
 
@@ -340,14 +367,16 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 @media (max-width: 768px) {
   .publication-toolbar {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
-  .publication-filter-button {
-    width: 100%;
+  #publication-filter-button.publication-filter-button {
+    width: 100% !important;
+    min-width: 0 !important;
   }
 
-  .publication-filter-panel {
+  .publication-filter-panel,
+  .publication-filter-panel.is-open {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -394,8 +423,8 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     height: 200px;
   }
 
-  .publication-search {
-    font-size: 16px;
+  #publication-search.publication-search {
+    font-size: 16px !important;
   }
 }
 </style>
@@ -465,7 +494,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     aria-expanded="false"
     aria-controls="publication-filter-panel"
   >
-
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
@@ -480,7 +508,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     </svg>
 
     <span>Filters</span>
-
   </button>
 
 </div>
@@ -522,15 +549,12 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
       </svg>
 
       Year
-
     </p>
 
     <div
       id="publication-year-options"
       class="publication-filter-options"
-    >
-      <!-- Years are generated automatically -->
-    </div>
+    ></div>
 
   </div>
 
@@ -560,7 +584,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
       </svg>
 
       Type
-
     </p>
 
     <div
@@ -607,7 +630,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </div>
 
 
-<!-- Journal Articles -->
+<!-- Peer-Reviewed Journal Articles -->
 
 <section class="publication-section">
 
@@ -627,7 +650,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
         >
 
           {% if post.thumbnail %}
-
             <div class="publication-image-box">
 
               <img
@@ -639,13 +661,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               >
 
             </div>
-
           {% endif %}
 
           <div class="publication-content">
 
             <h3 class="publication-title">
-
               <a
                 href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
                 {% if post.paperurl and post.paperurl != "" %}
@@ -655,7 +675,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               >
                 {{ post.title }}
               </a>
-
             </h3>
 
             {% if post.authors %}
@@ -665,19 +684,14 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
             {% if post.venue %}
-
               <p class="publication-venue">
-
                 <strong>{{ post.venue }}</strong>,
-
                 {% if post.year %}
                   {{ post.year }}
                 {% else %}
                   {{ post.date | date: "%Y" }}
                 {% endif %}
-
               </p>
-
             {% endif %}
 
             {% if post.excerpt %}
@@ -772,7 +786,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
           <div class="publication-content">
 
             <h3 class="publication-title">
-
               <a
                 href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
                 {% if post.paperurl and post.paperurl != "" %}
@@ -782,7 +795,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               >
                 {{ post.title }}
               </a>
-
             </h3>
 
             {% if post.authors %}
@@ -792,19 +804,14 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
             {% if post.venue %}
-
               <p class="publication-venue">
-
                 <strong>{{ post.venue }}</strong>,
-
                 {% if post.year %}
                   {{ post.year }}
                 {% else %}
                   {{ post.date | date: "%Y" }}
                 {% endif %}
-
               </p>
-
             {% endif %}
 
             {% if post.excerpt %}
@@ -825,7 +832,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </section>
 
 
-<!-- Patents: text only -->
+<!-- Patents: no image -->
 
 <section class="publication-section">
 
@@ -847,7 +854,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
           <div class="publication-content">
 
             <h3 class="publication-title">
-
               <a
                 href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
                 {% if post.paperurl and post.paperurl != "" %}
@@ -857,7 +863,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               >
                 {{ post.title }}
               </a>
-
             </h3>
 
             {% if post.authors %}
@@ -904,6 +909,8 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </section>
 
 
+<!-- No results message -->
+
 <p
   id="publication-no-results"
   class="publication-no-results"
@@ -911,6 +918,8 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   No matching publications found.
 </p>
 
+
+<!-- Search and filter functions -->
 
 <script>
 (function () {
@@ -947,7 +956,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   let selectedYear = "all";
   let selectedType = "all";
 
-  /* Generate the year buttons automatically */
+  /* Generate year buttons automatically */
   const years = Array.from(
     new Set(
       cards
@@ -988,7 +997,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     );
   });
 
-  /* Open and close the filter panel */
+  /* Open and close filter panel */
   filterButton.addEventListener(
     "click",
     function () {
@@ -1002,7 +1011,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     }
   );
 
-  /* Apply search and filters together */
+  /* Apply search and filters */
   function applyFilters() {
     const query = searchInput.value
       .trim()
@@ -1070,10 +1079,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
           );
         });
 
-      if (
-        filtersAreActive &&
-        !hasVisibleCards
-      ) {
+      if (filtersAreActive && !hasVisibleCards) {
         section.classList.add(
           "publication-section-hidden"
         );
@@ -1095,7 +1101,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     applyFilters
   );
 
-  /* Year filter */
+  /* Year buttons */
   yearOptions.addEventListener(
     "click",
     function (event) {
@@ -1115,18 +1121,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
           ".publication-filter-option"
         )
         .forEach(function (option) {
-          option.classList.remove(
-            "is-active"
-          );
+          option.classList.remove("is-active");
         });
 
       button.classList.add("is-active");
-
       applyFilters();
     }
   );
 
-  /* Type filter */
+  /* Type buttons */
   typeOptions.addEventListener(
     "click",
     function (event) {
@@ -1146,13 +1149,10 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
           ".publication-filter-option"
         )
         .forEach(function (option) {
-          option.classList.remove(
-            "is-active"
-          );
+          option.classList.remove("is-active");
         });
 
       button.classList.add("is-active");
-
       applyFilters();
     }
   );
