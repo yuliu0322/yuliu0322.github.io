@@ -902,21 +902,21 @@ html[data-theme="dark"] .home-research-card:hover {
         <div class="home-card-header">
 
           <div>
-            <span class="home-card-number">RESEARCH 03</span>
+            <span class="home-card-number">RESEARCH 01</span>
             <h3 class="home-card-title">Passive Cooling Materials</h3>
           </div>
 
         </div>
 
         <p class="home-card-text">
-          Creating bio-based materials that provide electricity-free
+          Developing bio-based materials that provide electricity-free
           temperature reduction for sustainable food preservation and
           cold-chain management.
         </p>
 
         <div class="home-card-tags">
           <span class="home-card-tag">Biopolymers</span>
-          <span class="home-card-tag">Radiative Cooling</span>
+          <span class="home-card-tag">Passive Cooling</span>
           <span class="home-card-tag">Cold Chain</span>
         </div>
 
@@ -929,22 +929,22 @@ html[data-theme="dark"] .home-research-card:hover {
 <div class="home-card-header">
 
   <div>
-    <span class="home-card-number">RESEARCH 01</span>
+    <span class="home-card-number">RESEARCH 02</span>
     <h3 class="home-card-title">Oral Delivery Systems</h3>
   </div>
 
 </div>
 
         <p class="home-card-text">
-          Developing PLGA-based systems that protect vaccines and
-          immunostimulants during gastrointestinal transit and deliver them to
+          Developing PLGA-based delivery systems that protect vaccines and
+          immunostimulants during digestive transit and deliver them to
           immune-responsive sites.
         </p>
 
         <div class="home-card-tags">
-          <span class="home-card-tag">PLGA</span>
+          <span class="home-card-tag">PLGA-based delivery</span>
           <span class="home-card-tag">Oral Vaccines</span>
-          <span class="home-card-tag">Controlled Release</span>
+          <span class="home-card-tag">Functional aquafeeds</span>
         </div>
 
       </article>
