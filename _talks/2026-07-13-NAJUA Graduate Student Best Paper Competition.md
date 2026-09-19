@@ -7,8 +7,6 @@ location: "Chicago, IL, USA"
 date: 2026-07-13
 ---
 
-Paper Competition, Chicago, IL, USA
-
 Received the **3rd Place Award** in the North American Jiangnan University Alumni Association (NAJUA) Graduate Student Best Paper Competition 2026 in recognition of research quality, originality, and scholarly contribution.
 
 <p style="text-align: center; margin-top: 30px;">
