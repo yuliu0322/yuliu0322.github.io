@@ -161,7 +161,7 @@ redirect_from:
   <p>
     I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
     conducting interdisciplinary research in the Sustainable &amp; Intelligent
-    Seafood Bioprocessing Laboratory and the Biopolymer Laboratory.
+    Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
   </p>
 
   <p>
