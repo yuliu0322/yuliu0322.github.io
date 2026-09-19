@@ -21,9 +21,9 @@ author_profile: true
   border-bottom: 1px solid #e4e9ed;
 }
 
-.research-section:last-of-type {
-  margin-bottom: 3rem;
-  padding-bottom: 0;
+.research-section-last {
+  margin-bottom: 0;
+  padding-bottom: 2.5rem;
   border-bottom: none;
 }
 
@@ -55,7 +55,7 @@ author_profile: true
 .research-title::after {
   content: "";
   display: block;
-  width: 56px;
+  width: 110px;
   height: 3px;
   margin-top: 13px;
   border-radius: 999px;
@@ -111,20 +111,22 @@ author_profile: true
 
 .research-figure {
   width: 100%;
-  margin: 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .research-figure img {
   display: block;
   width: 100%;
+  max-width: 900px;
   height: auto;
-  margin: 0;
+  margin: 0 auto;
   object-fit: contain;
 }
 
 .research-interests {
-  margin-top: 1rem;
-  padding-top: 1.5rem;
+  margin-top: 0;
+  padding-top: 2rem;
   border-top: 1px solid #e4e9ed;
 }
 
@@ -151,9 +153,15 @@ author_profile: true
     padding-bottom: 3rem;
   }
 
+  .research-section-last {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    border-bottom: none;
+  }
+
   .research-heading {
-    padding-left: 0;
     padding-top: 55px;
+    padding-left: 0;
   }
 
   .research-number {
@@ -166,6 +174,11 @@ author_profile: true
     font-size: 1.22rem;
   }
 
+  .research-title::after {
+    width: 85px;
+    margin-top: 11px;
+  }
+
   .research-description {
     line-height: 1.7;
   }
@@ -176,6 +189,16 @@ author_profile: true
 
   .research-topics li {
     font-size: 0.82rem;
+  }
+
+  .research-figure,
+  .research-figure img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .research-interests {
+    padding-top: 1.5rem;
   }
 }
 </style>
@@ -288,7 +311,7 @@ author_profile: true
 
 </section>
 
-<section class="research-section">
+<section class="research-section research-section-last">
 
   <div class="research-heading">
     <span class="research-number" aria-hidden="true">04</span>
