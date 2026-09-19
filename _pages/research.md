@@ -80,7 +80,7 @@ author_profile: true
   position: absolute;
   top: -13px;
   left: 0;
-  color: #52ADC8;
+  color: #456A9A;
   font-size: 3.8rem;
   font-weight: 800;
   line-height: 1;
