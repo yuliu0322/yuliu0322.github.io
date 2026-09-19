@@ -14,6 +14,38 @@ author_profile: true
   line-height: 1.8;
 }
 
+.research-overview p {
+  margin: 0 0 1.5rem;
+}
+
+.research-overview p:last-child {
+  margin-bottom: 0;
+}
+
+.research-question {
+  position: relative;
+  padding-left: 20px;
+  color: #4f5967;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.research-question::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 0;
+  width: 3px;
+  border-radius: 999px;
+  background: #d9a557;
+}
+
+.research-question strong {
+  color: #253248;
+  font-weight: 700;
+}
+
 .research-section {
   position: relative;
   width: 100%;
@@ -150,6 +182,15 @@ author_profile: true
     line-height: 1.7;
   }
 
+  .research-overview p {
+    margin-bottom: 1.25rem;
+  }
+
+  .research-question {
+    padding-left: 16px;
+    font-size: 1rem;
+  }
+
   .research-section {
     margin-bottom: 3.5rem;
     padding-bottom: 3rem;
@@ -199,9 +240,24 @@ author_profile: true
 }
 </style>
 
-<p class="research-overview">
-  My research addresses challenges across the aquatic food supply chain, from animal production to post-harvest preservation. By integrating aquaculture, biomaterials, food engineering, and analytical science, I investigate how environmental factors affect aquatic animal health, develop biodegradable delivery systems for disease prevention, design sustainable cooling materials for post-harvest preservation, and uncover the mechanisms that underlie seafood quality deterioration during processing and storage. Together, these efforts aim to improve the sustainability, safety, and quality of aquatic foods from farm to plate.
-</p>
+<div class="research-overview">
+
+  <p class="research-question">
+    A single question runs through my research:
+    <strong>
+      How can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
+    </strong>
+  </p>
+
+  <p>
+    I approach this across the aquatic food value chain, from aquaculture production to post-harvest preservation. On the production side, I investigate how environmental and farming conditions influence the physiology, health, and quality of aquatic species. Building on this understanding, I develop PLGA-based oral vaccines engineered to protect antigens during digestive transit and deliver them to immune-responsive sites, thereby eliciting protective immune responses. Additionally, I incorporate probiotic-derived immunostimulants to enhance disease resistance and reduce production losses. On the post-harvest side, my research extends shelf life and preserves seafood quality through two complementary approaches. First, I develop bio-based passive cooling materials that provide electricity-free temperature reduction for sustainable cold-chain management. Second, I investigate the physiological, biochemical, and flavor dynamics during seafood processing and storage—particularly in shellfish—to elucidate the mechanisms driving quality deterioration and to support more effective preservation strategies.
+  </p>
+
+  <p>
+    This perspective grew out of my earlier work on how aquatic organisms respond to environmental stressors. During my master’s research, I investigated the effects of microplastic contamination on the physiological and biochemical responses of oysters—work that grounds both my interest in how stressors shape physiology and my focus on the biochemical changes shellfish undergo during processing and storage. Together, these projects reflect my broader goal of developing science-based materials, technologies, and preservation strategies that improve the sustainability, safety, and quality of aquatic foods from farm to plate.
+  </p>
+
+</div>
 
 <section class="research-section">
 
