@@ -192,12 +192,17 @@ redirect_from:
   <section class="home-beyond">
     <h2 class="home-section-heading">Beyond the Laboratory</h2>
 
-    <p>
-      Outside the laboratory, I enjoy traveling, hiking, photography, watching
-      movies, and exploring different genres of music. These interests allow me
-      to experience new places, document meaningful moments, and remain curious
-      about the world beyond my academic work.
-    </p>
+<p>
+  Outside of the laboratory, I enjoy traveling, hiking, photography,
+  watching movies, and exploring different genres of music. Photography
+  allows me to document landscapes, cultures, and everyday moments while
+  encouraging me to observe the world from different perspectives.
+</p>
+
+<p>
+  These experiences help me maintain curiosity, creativity, and balance,
+  qualities that I also value in scientific research and problem-solving.
+</p>
 
     <div class="home-interests">
       Travel&nbsp;&nbsp;·&nbsp;&nbsp;
