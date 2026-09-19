@@ -7,7 +7,7 @@ author_profile: true
 
 <style>
 .research-overview {
-  max-width: 900px;
+  width: 100%;
   margin: 0 0 3.5rem;
   color: #4f5967;
   font-size: 1rem;
@@ -16,6 +16,7 @@ author_profile: true
 
 .research-section {
   position: relative;
+  width: 100%;
   margin: 0 0 4.5rem;
   padding: 0 0 4rem;
   border-bottom: 1px solid #e4e9ed;
@@ -63,7 +64,7 @@ author_profile: true
 }
 
 .research-description {
-  max-width: 900px;
+  width: 100%;
   margin: 0 0 1.5rem;
   color: #4f5967;
   line-height: 1.8;
@@ -111,16 +112,17 @@ author_profile: true
 
 .research-figure {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 .research-figure img {
   display: block;
   width: 100%;
-  max-width: 900px;
+  max-width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   object-fit: contain;
 }
 
@@ -189,12 +191,6 @@ author_profile: true
 
   .research-topics li {
     font-size: 0.82rem;
-  }
-
-  .research-figure,
-  .research-figure img {
-    width: 100%;
-    max-width: 100%;
   }
 
   .research-interests {
