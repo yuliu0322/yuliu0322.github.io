@@ -110,6 +110,39 @@ redirect_from:
   margin: 0;
 }
 
+/* Dark mode */
+html[data-theme="dark"] .home-welcome {
+  color: #c8d0da;
+}
+
+html[data-theme="dark"] .home-greeting,
+html[data-theme="dark"] .home-section-heading {
+  color: #f2f5f8;
+}
+
+html[data-theme="dark"] .home-greeting-highlight {
+  color: #65c2dd;
+}
+
+html[data-theme="dark"] .home-intro p,
+html[data-theme="dark"] .home-current p,
+html[data-theme="dark"] .home-beyond p {
+  color: #c8d0da;
+}
+
+html[data-theme="dark"] .home-current {
+  border-color: #686e75;
+}
+
+html[data-theme="dark"] .home-focus,
+html[data-theme="dark"] .home-focus span {
+  color: #d4dbe3;
+}
+
+html[data-theme="dark"] .home-focus span::before {
+  background: #65c2dd;
+}
+
 /* Mobile layout */
 @media (max-width: 768px) {
   .home-intro {
@@ -145,23 +178,23 @@ redirect_from:
 
 <div class="home-welcome">
 
-<section class="home-intro">
-  <h2 class="home-greeting">
-    Welcome, I’m <span class="home-greeting-highlight">Yu Liu</span>.
-  </h2>
+  <section class="home-intro">
+    <h2 class="home-greeting">
+      Welcome, I’m <span class="home-greeting-highlight">Yu Liu</span>.
+    </h2>
 
-  <p>
-    I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
-    conducting interdisciplinary research in the Sustainable &amp; Intelligent
-    Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
-  </p>
+    <p>
+      I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
+      conducting interdisciplinary research in the Sustainable &amp; Intelligent
+      Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
+    </p>
 
-  <p>
-    My academic background brings together food science, aquaculture,
-    biomaterials, and food engineering, with a broad interest in developing
-    practical and sustainable solutions for aquatic food systems.
-  </p>
-</section>
+    <p>
+      My academic background brings together food science, aquaculture,
+      biomaterials, and food engineering, with a broad interest in developing
+      practical and sustainable solutions for aquatic food systems.
+    </p>
+  </section>
 
   <section class="home-current">
     <h2 class="home-section-heading">What I Am Working On</h2>
@@ -184,14 +217,17 @@ redirect_from:
   <section class="home-beyond">
     <h2 class="home-section-heading">Beyond the Laboratory</h2>
 
-<p>
-  Outside of the laboratory, I enjoy traveling, hiking, photography,
-  watching movies, and exploring different genres of music. Photography
-  allows me to document landscapes, cultures, and everyday moments while
-  encouraging me to observe the world from different perspectives.
-</p>
+    <p>
+      Outside of the laboratory, I enjoy traveling, hiking, photography,
+      watching movies, and exploring different genres of music. Photography
+      allows me to document landscapes, cultures, and everyday moments while
+      encouraging me to observe the world from different perspectives.
+    </p>
 
-<p>
-  These experiences help me maintain curiosity, creativity, and balance,
-  qualities that I also value in scientific research and problem-solving.
-</p>
+    <p>
+      These experiences help me maintain curiosity, creativity, and balance,
+      qualities that I also value in scientific research and problem-solving.
+    </p>
+  </section>
+
+</div>
