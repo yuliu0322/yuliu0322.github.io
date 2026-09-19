@@ -7,7 +7,7 @@ year: 2024
 venue: "Food Chemistry"
 authors: "L. Chen, X. Teng, <strong>Y. Liu</strong>, H. Shi, Z. Li, C. Xue"
 paperurl: "https://doi.org/10.1016/j.foodchem.2023.137277"
-thumbnail: "/assets/images/gcms-flavor.jpg"
+thumbnail: "/assets/images/gcms-flavor.png"
 category: "Seafood Flavor"
 excerpt: "This study combined mass spectrometry-based metabolomics with gas chromatography to characterize dynamic changes in the flavor profile of Pacific oysters during depuration."
 ---
