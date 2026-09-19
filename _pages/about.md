@@ -9,19 +9,25 @@ redirect_from:
 ---
 
 <style>
-/* ==============================
-   Homepage – General
-   ============================== */
+/* ==================================================
+   Homepage design system
+   ================================================== */
 
 .home-welcome {
-  --home-navy: #253248;
-  --home-text: #4f5967;
-  --home-blue: #52adc8;
-  --home-blue-dark: #318ba8;
-  --home-blue-soft: #eaf7fb;
-  --home-gold: #d9a557;
-  --home-border: #e3e8ec;
-  --home-card: #ffffff;
+  --home-navy: #24344d;
+  --home-text: #536174;
+  --home-muted: #738092;
+  --home-blue: #48a9c5;
+  --home-blue-dark: #267f9c;
+  --home-cyan: #7bcbd8;
+  --home-gold: #dba655;
+  --home-green: #65aa91;
+  --home-purple: #8986bd;
+  --home-surface: #ffffff;
+  --home-soft-blue: #eef8fb;
+  --home-soft-gold: #fff8ec;
+  --home-border: #dde8ed;
+  --home-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 
   width: 100%;
   color: var(--home-text);
@@ -34,156 +40,378 @@ redirect_from:
 }
 
 
-/* ==============================
-   Intro / Hero
-   ============================== */
+/* ==================================================
+   Hero section
+   ================================================== */
 
-.home-intro {
+.home-hero {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.72fr);
+  gap: 3rem;
+  align-items: center;
   max-width: 1080px;
-  margin: 0 0 2rem;
-  padding: 2rem 2.1rem;
+  min-height: 390px;
+  margin: 0 0 2.8rem;
+  padding: 2.7rem 2.5rem;
   overflow: hidden;
-  border: 1px solid #dcecf2;
-  border-radius: 18px;
+  border: 1px solid #d8e9ef;
+  border-radius: 22px;
   background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(72, 169, 197, 0.13),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 72% 92%,
+      rgba(219, 166, 85, 0.1),
+      transparent 25%
+    ),
     linear-gradient(
       135deg,
-      rgba(234, 247, 251, 0.96) 0%,
-      rgba(255, 255, 255, 0.98) 62%,
-      rgba(255, 248, 236, 0.92) 100%
+      #f5fbfd 0%,
+      #ffffff 54%,
+      #fffaf2 100%
     );
-  box-shadow: 0 10px 30px rgba(37, 50, 72, 0.07);
+  box-shadow: var(--home-shadow);
 }
 
-/* Decorative PLGA-like particles */
-.home-particle {
+.home-hero::before {
+  content: "";
   position: absolute;
-  z-index: 0;
-  display: block;
-  border: 2px solid rgba(82, 173, 200, 0.17);
+  top: -90px;
+  right: -90px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(72, 169, 197, 0.1);
   border-radius: 50%;
   pointer-events: none;
 }
 
-.home-particle--one {
-  top: -34px;
-  right: 76px;
-  width: 120px;
-  height: 120px;
-}
-
-.home-particle--two {
-  top: 34px;
-  right: 32px;
-  width: 48px;
-  height: 48px;
-  background: rgba(82, 173, 200, 0.07);
-}
-
-.home-particle--three {
-  right: 164px;
-  bottom: 28px;
-  width: 25px;
-  height: 25px;
-  background: rgba(217, 165, 87, 0.12);
-  border-color: rgba(217, 165, 87, 0.22);
-}
-
-.home-particle--four {
-  right: 112px;
-  bottom: -46px;
-  width: 92px;
-  height: 92px;
-  border-color: rgba(217, 165, 87, 0.16);
-}
-
-/* Subtle wave */
-.home-wave {
+.home-hero::after {
+  content: "";
   position: absolute;
-  right: -30px;
-  bottom: -2px;
-  z-index: 0;
-  width: 330px;
-  max-width: 45%;
-  opacity: 0.24;
+  right: 110px;
+  bottom: -165px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(219, 166, 85, 0.11);
+  border-radius: 50%;
   pointer-events: none;
 }
 
-.home-intro-content {
+.home-hero-copy {
   position: relative;
-  z-index: 1;
-  max-width: 850px;
+  z-index: 2;
 }
 
-.home-eyebrow {
+.home-status {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin: 0 0 0.85rem;
+  gap: 9px;
+  margin-bottom: 1.05rem;
+  padding: 7px 12px;
   color: var(--home-blue-dark);
-  font-size: 0.76rem;
+  border: 1px solid rgba(72, 169, 197, 0.24);
+  border-radius: 999px;
+  background: rgba(238, 248, 251, 0.8);
+  font-size: 0.73rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-status-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--home-green);
+  box-shadow: 0 0 0 4px rgba(101, 170, 145, 0.13);
+}
+
+.home-status-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(101, 170, 145, 0.4);
+  border-radius: 50%;
+  animation: home-status-pulse 2.8s ease-out infinite;
+}
+
+.home-greeting {
+  max-width: 680px;
+  margin: 0 0 0.85rem;
+  color: var(--home-navy);
+  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+  font-weight: 760;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.home-greeting-highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--home-blue-dark);
+}
+
+.home-greeting-highlight::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  left: 0;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(219, 166, 85, 0.38);
+  transform: rotate(-1.5deg);
+}
+
+.home-tagline {
+  max-width: 680px;
+  margin: 0 0 1.35rem;
+  color: var(--home-navy);
+  font-size: 1.08rem;
+  font-weight: 620;
+  line-height: 1.65;
+}
+
+.home-description {
+  max-width: 700px;
+  margin: 0;
+  color: var(--home-text);
+  font-size: 0.98rem;
+  line-height: 1.82;
+}
+
+.home-description + .home-description {
+  margin-top: 0.85rem;
+}
+
+.home-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.4rem;
+}
+
+.home-keyword {
+  padding: 6px 11px;
+  color: #466072;
+  border: 1px solid #dbe9ee;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+
+/* ==================================================
+   Hero scientific visualization
+   ================================================== */
+
+.home-visual {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 310px);
+  aspect-ratio: 1 / 1;
+  margin: auto;
+}
+
+.home-visual-orbit {
+  position: absolute;
+  inset: 6%;
+  border: 1px dashed rgba(72, 169, 197, 0.3);
+  border-radius: 50%;
+  animation: home-orbit-rotate 34s linear infinite;
+}
+
+.home-visual-orbit::before {
+  content: "";
+  position: absolute;
+  top: 13%;
+  right: 5%;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--home-blue);
+  border-radius: 50%;
+  background: #f7fcfd;
+}
+
+.home-visual-orbit-inner {
+  position: absolute;
+  inset: 20%;
+  border: 1px solid rgba(219, 166, 85, 0.25);
+  border-radius: 50%;
+  animation: home-orbit-rotate-reverse 24s linear infinite;
+}
+
+.home-visual-orbit-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--home-gold);
+  box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
+}
+
+.home-visual-core {
+  position: absolute;
+  inset: 31%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(72, 169, 197, 0.23);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 35% 28%,
+      #ffffff,
+      #e6f6fa 72%
+    );
+  box-shadow:
+    0 15px 35px rgba(49, 139, 168, 0.16),
+    inset 0 0 24px rgba(72, 169, 197, 0.07);
+}
+
+.home-visual-core svg {
+  width: 55%;
+  color: var(--home-blue-dark);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-visual-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  color: var(--home-navy);
+  border: 1px solid rgba(72, 169, 197, 0.19);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 16px rgba(35, 55, 75, 0.08);
+  font-size: 0.69rem;
   font-weight: 700;
+  white-space: nowrap;
+  animation: home-node-float 5s ease-in-out infinite;
+}
+
+.home-visual-node::before {
+  content: "";
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--node-color, var(--home-blue));
+}
+
+.home-visual-node--health {
+  top: 6%;
+  left: 3%;
+  --node-color: var(--home-green);
+}
+
+.home-visual-node--delivery {
+  top: 32%;
+  right: -2%;
+  --node-color: var(--home-blue);
+  animation-delay: -1.4s;
+}
+
+.home-visual-node--cooling {
+  right: 8%;
+  bottom: 7%;
+  --node-color: var(--home-purple);
+  animation-delay: -2.7s;
+}
+
+.home-visual-node--quality {
+  bottom: 18%;
+  left: -2%;
+  --node-color: var(--home-gold);
+  animation-delay: -3.8s;
+}
+
+.home-microsphere {
+  position: absolute;
+  border: 1px solid rgba(72, 169, 197, 0.26);
+  border-radius: 50%;
+  background: rgba(123, 203, 216, 0.11);
+  animation: home-particle-float 7s ease-in-out infinite;
+}
+
+.home-microsphere--one {
+  top: 20%;
+  left: 30%;
+  width: 16px;
+  height: 16px;
+}
+
+.home-microsphere--two {
+  top: 62%;
+  right: 28%;
+  width: 11px;
+  height: 11px;
+  animation-delay: -2s;
+}
+
+.home-microsphere--three {
+  right: 23%;
+  bottom: 22%;
+  width: 7px;
+  height: 7px;
+  background: rgba(219, 166, 85, 0.17);
+  border-color: rgba(219, 166, 85, 0.3);
+  animation-delay: -4s;
+}
+
+
+/* ==================================================
+   Shared section styling
+   ================================================== */
+
+.home-section {
+  max-width: 1080px;
+  margin: 0 0 2.9rem;
+}
+
+.home-section-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+}
+
+.home-section-title-wrap {
+  min-width: 210px;
+}
+
+.home-section-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--home-blue-dark);
+  font-size: 0.7rem;
+  font-weight: 750;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-.home-eyebrow::before {
-  content: "";
-  width: 24px;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--home-gold);
-}
-
-.home-greeting {
-  margin: 0 0 0.75rem;
-  color: var(--home-navy);
-  font-size: clamp(1.65rem, 3vw, 2.15rem);
-  font-weight: 750;
-  line-height: 1.3;
-}
-
-.home-greeting-highlight {
-  color: var(--home-blue-dark);
-}
-
-.home-tagline {
-  margin: 0 0 1.4rem !important;
-  color: var(--home-navy) !important;
-  font-size: 1.08rem !important;
-  font-weight: 600;
-  line-height: 1.6 !important;
-}
-
-.home-intro p {
-  max-width: 850px;
-  margin: 0 0 1rem;
-  color: var(--home-text);
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.home-intro p:last-child {
-  margin-bottom: 0;
-}
-
-
-/* ==============================
-   Section headings
-   ============================== */
-
-.home-section {
-  max-width: 1080px;
-  margin: 0 0 2.5rem;
-}
-
 .home-section-heading {
   position: relative;
-  margin: 0 0 1.2rem;
-  padding-bottom: 11px;
+  margin: 0;
+  padding-bottom: 10px;
   color: var(--home-navy);
-  font-size: 1.32rem;
+  font-size: 1.34rem;
   line-height: 1.35;
 }
 
@@ -192,28 +420,28 @@ redirect_from:
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 70px;
+  width: 68px;
   height: 3px;
   border-radius: 999px;
   background: linear-gradient(
     90deg,
     var(--home-gold),
-    #efc97f
+    #efc878
   );
 }
 
 .home-section-intro {
-  max-width: 920px;
-  margin: 0 0 1.35rem;
-  color: var(--home-text);
-  font-size: 1rem;
-  line-height: 1.8;
+  max-width: 650px;
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 0.94rem;
+  line-height: 1.72;
 }
 
 
-/* ==============================
-   Research cards
-   ============================== */
+/* ==================================================
+   Research grid
+   ================================================== */
 
 .home-research-grid {
   display: grid;
@@ -222,61 +450,103 @@ redirect_from:
 }
 
 .home-research-card {
+  --card-accent: var(--home-blue);
+
   position: relative;
-  min-height: 190px;
-  padding: 1.35rem 1.4rem 1.3rem;
+  min-height: 205px;
+  padding: 1.45rem 1.45rem 1.35rem;
   overflow: hidden;
   border: 1px solid var(--home-border);
-  border-radius: 15px;
-  background: var(--home-card);
-  box-shadow: 0 5px 18px rgba(37, 50, 72, 0.045);
+  border-radius: 17px;
+  background: var(--home-surface);
+  box-shadow: 0 6px 20px rgba(35, 55, 75, 0.045);
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.home-research-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 17px 0 0 17px;
+  background: var(--card-accent);
+  opacity: 0.78;
 }
 
 .home-research-card::after {
   content: "";
   position: absolute;
-  right: -30px;
-  bottom: -34px;
-  width: 105px;
-  height: 105px;
-  border: 2px solid rgba(82, 173, 200, 0.1);
+  right: -45px;
+  bottom: -52px;
+  width: 135px;
+  height: 135px;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--card-accent) 24%,
+    transparent
+  );
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
 }
 
 .home-research-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(82, 173, 200, 0.48);
-  box-shadow: 0 12px 26px rgba(37, 50, 72, 0.1);
+  transform: translateY(-5px);
+  border-color: color-mix(
+    in srgb,
+    var(--card-accent) 50%,
+    var(--home-border)
+  );
+  box-shadow: 0 15px 30px rgba(35, 55, 75, 0.1);
 }
 
 .home-research-card:hover::after {
-  transform: scale(1.12);
+  transform: scale(1.15);
 }
 
-.home-card-top {
+.home-research-card--delivery {
+  --card-accent: #48a9c5;
+}
+
+.home-research-card--health {
+  --card-accent: #65aa91;
+}
+
+.home-research-card--cooling {
+  --card-accent: #8986bd;
+}
+
+.home-research-card--quality {
+  --card-accent: #dba655;
+}
+
+.home-card-header {
   position: relative;
   z-index: 1;
   display: flex;
+  gap: 13px;
   align-items: center;
-  gap: 12px;
   margin-bottom: 0.9rem;
 }
 
 .home-card-icon {
   display: inline-flex;
-  flex: 0 0 44px;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  color: var(--home-blue-dark);
-  border-radius: 13px;
-  background: var(--home-blue-soft);
+  color: var(--card-accent);
+  border-radius: 14px;
+  background: color-mix(
+    in srgb,
+    var(--card-accent) 12%,
+    white
+  );
 }
 
 .home-card-icon svg {
@@ -284,16 +554,25 @@ redirect_from:
   height: 24px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.8;
+  stroke-width: 1.75;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.home-card-number {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--home-muted);
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
 }
 
 .home-card-title {
   margin: 0;
   color: var(--home-navy);
-  font-size: 1.03rem;
-  font-weight: 700;
+  font-size: 1.02rem;
+  font-weight: 720;
   line-height: 1.4;
 }
 
@@ -302,32 +581,98 @@ redirect_from:
   z-index: 1;
   margin: 0;
   color: var(--home-text);
-  font-size: 0.92rem;
-  line-height: 1.7;
+  font-size: 0.91rem;
+  line-height: 1.72;
+}
+
+.home-card-tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 1rem;
+}
+
+.home-card-tag {
+  padding: 4px 8px;
+  color: var(--home-muted);
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 650;
 }
 
 
-/* ==============================
-   Beyond the laboratory
-   ============================== */
+/* ==================================================
+   Research philosophy
+   ================================================== */
 
-.home-beyond {
+.home-philosophy {
+  position: relative;
   max-width: 1080px;
-  margin: 0;
-  padding-top: 0.2rem;
+  margin: 0 0 2.9rem;
+  padding: 1.7rem 2rem 1.7rem 2.25rem;
+  overflow: hidden;
+  border: 1px solid #dcebf0;
+  border-radius: 17px;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(238, 248, 251, 0.9),
+      rgba(255, 255, 255, 0.95)
+    );
 }
+
+.home-philosophy::before {
+  content: "“";
+  position: absolute;
+  top: -22px;
+  left: 16px;
+  color: rgba(72, 169, 197, 0.13);
+  font-family: Georgia, serif;
+  font-size: 9rem;
+  line-height: 1;
+}
+
+.home-philosophy-content {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--home-navy);
+  font-size: 1.05rem;
+  font-weight: 620;
+  line-height: 1.75;
+}
+
+.home-philosophy-source {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 0.7rem;
+  color: var(--home-blue-dark);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   Beyond the laboratory
+   ================================================== */
 
 .home-beyond-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 2.1rem;
   align-items: center;
 }
 
 .home-beyond-copy p {
   margin: 0 0 1rem;
   color: var(--home-text);
-  font-size: 1rem;
+  font-size: 0.97rem;
   line-height: 1.8;
 }
 
@@ -335,152 +680,270 @@ redirect_from:
   margin-bottom: 0;
 }
 
-.home-interests {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+.home-interest-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-content: center;
 }
 
 .home-interest {
-  display: flex;
-  min-height: 80px;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 7px;
-  padding: 0.75rem 0.45rem;
+  gap: 8px;
+  padding: 9px 13px;
   color: var(--home-navy);
-  border: 1px solid #dcecf2;
-  border-radius: 13px;
-  background: linear-gradient(
-    145deg,
-    rgba(234, 247, 251, 0.8),
-    rgba(255, 255, 255, 0.95)
-  );
-  font-size: 0.8rem;
-  font-weight: 650;
-  text-align: center;
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  background: var(--home-surface);
+  box-shadow: 0 4px 12px rgba(35, 55, 75, 0.04);
+  font-size: 0.78rem;
+  font-weight: 660;
   transition:
     transform 0.22s ease,
-    border-color 0.22s ease;
+    border-color 0.22s ease,
+    color 0.22s ease;
 }
 
 .home-interest:hover {
-  transform: translateY(-3px);
-  border-color: rgba(82, 173, 200, 0.55);
+  color: var(--home-blue-dark);
+  border-color: rgba(72, 169, 197, 0.48);
+  transform: translateY(-2px);
 }
 
 .home-interest svg {
-  width: 24px;
-  height: 24px;
+  width: 17px;
+  height: 17px;
   color: var(--home-blue-dark);
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.7;
+  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 
-/* ==============================
+/* ==================================================
+   Entrance animation
+   ================================================== */
+
+.home-hero,
+.home-section,
+.home-philosophy {
+  animation: home-reveal 0.7s ease both;
+}
+
+.home-section {
+  animation-delay: 0.08s;
+}
+
+.home-philosophy {
+  animation-delay: 0.14s;
+}
+
+.home-beyond-section {
+  animation-delay: 0.2s;
+}
+
+@keyframes home-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-status-pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.8);
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@keyframes home-orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-orbit-rotate-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes home-node-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes home-particle-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -8px);
+  }
+}
+
+
+/* ==================================================
    Dark mode
-   ============================== */
+   ================================================== */
 
 html[data-theme="dark"] .home-welcome {
   --home-navy: #f1f5f8;
-  --home-text: #c8d0da;
+  --home-text: #c7d0da;
+  --home-muted: #aeb9c4;
   --home-blue: #65c2dd;
-  --home-blue-dark: #65c2dd;
-  --home-blue-soft: rgba(101, 194, 221, 0.13);
-  --home-gold: #e3b66e;
-  --home-border: #4d5661;
-  --home-card: #343a40;
+  --home-blue-dark: #69c8e2;
+  --home-surface: #343a40;
+  --home-soft-blue: rgba(101, 194, 221, 0.13);
+  --home-border: #4c5661;
+  --home-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
 }
 
-html[data-theme="dark"] .home-intro {
-  border-color: #4d5962;
+html[data-theme="dark"] .home-hero {
+  border-color: #4b5962;
   background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(101, 194, 221, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 72% 92%,
+      rgba(219, 166, 85, 0.09),
+      transparent 25%
+    ),
     linear-gradient(
       135deg,
-      rgba(42, 57, 67, 0.97) 0%,
-      rgba(49, 54, 60, 0.98) 66%,
-      rgba(64, 56, 45, 0.92) 100%
+      #2d3940 0%,
+      #30363c 58%,
+      #3c3831 100%
     );
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
 }
 
-html[data-theme="dark"] .home-particle {
-  border-color: rgba(101, 194, 221, 0.2);
+html[data-theme="dark"] .home-status {
+  color: #7bd0e7;
+  border-color: rgba(101, 194, 221, 0.25);
+  background: rgba(101, 194, 221, 0.08);
 }
 
-html[data-theme="dark"] .home-research-card {
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+html[data-theme="dark"] .home-keyword,
+html[data-theme="dark"] .home-visual-node {
+  color: #d8e1e8;
+  border-color: #52606a;
+  background: rgba(52, 58, 64, 0.94);
 }
 
-html[data-theme="dark"] .home-research-card:hover {
-  border-color: rgba(101, 194, 221, 0.55);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+html[data-theme="dark"] .home-visual-core {
+  border-color: rgba(101, 194, 221, 0.25);
+  background:
+    radial-gradient(
+      circle at 35% 28%,
+      #44535c,
+      #2d414a 75%
+    );
 }
 
-html[data-theme="dark"] .home-interest {
-  color: #eef3f6;
-  border-color: #4d5962;
+html[data-theme="dark"] .home-card-icon {
+  background: color-mix(
+    in srgb,
+    var(--card-accent) 18%,
+    #343a40
+  );
+}
+
+html[data-theme="dark"] .home-philosophy {
+  border-color: #4c5962;
   background:
     linear-gradient(
-      145deg,
-      rgba(52, 70, 80, 0.92),
+      110deg,
+      rgba(48, 67, 77, 0.94),
       rgba(52, 58, 64, 0.98)
     );
 }
 
+html[data-theme="dark"] .home-philosophy::before {
+  color: rgba(101, 194, 221, 0.1);
+}
 
-/* ==============================
-   Mobile layout
-   ============================== */
+
+/* ==================================================
+   Responsive layout
+   ================================================== */
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-visual {
+    width: min(100%, 280px);
+  }
+
+  .home-section-header {
+    display: block;
+  }
+
+  .home-section-intro {
+    margin-top: 1rem;
+  }
+}
 
 @media (max-width: 768px) {
-  .home-intro {
-    margin-bottom: 2rem;
-    padding: 1.45rem 1.25rem;
-    border-radius: 15px;
-  }
-
-  .home-wave {
-    width: 210px;
-    max-width: 58%;
-  }
-
-  .home-particle--one {
-    right: -25px;
-    width: 90px;
-    height: 90px;
-  }
-
-  .home-particle--two {
-    display: none;
+  .home-hero {
+    min-height: auto;
+    margin-bottom: 2.3rem;
+    padding: 1.7rem 1.35rem 1.9rem;
+    border-radius: 17px;
   }
 
   .home-greeting {
-    font-size: 1.55rem;
+    font-size: 1.75rem;
   }
 
   .home-tagline {
-    font-size: 1rem !important;
+    font-size: 1rem;
   }
 
-  .home-intro p,
+  .home-description,
   .home-section-intro,
   .home-beyond-copy p {
-    font-size: 0.96rem;
-    line-height: 1.72;
+    font-size: 0.94rem;
+    line-height: 1.74;
+  }
+
+  .home-visual {
+    width: 250px;
   }
 
   .home-section {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.4rem;
   }
 
   .home-section-heading {
-    font-size: 1.2rem;
+    font-size: 1.22rem;
   }
 
   .home-research-grid {
@@ -493,22 +956,54 @@ html[data-theme="dark"] .home-interest {
 
   .home-beyond-layout {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1.4rem;
   }
 
-  .home-interests {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .home-philosophy {
+    padding: 1.5rem 1.3rem 1.5rem 1.5rem;
+  }
+
+  .home-philosophy-content {
+    font-size: 0.98rem;
   }
 }
 
 @media (max-width: 480px) {
-  .home-interests {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .home-visual {
+    width: 215px;
+  }
+
+  .home-visual-node {
+    padding: 6px 8px;
+    font-size: 0.61rem;
+  }
+
+  .home-keywords {
+    gap: 6px;
+  }
+
+  .home-keyword {
+    font-size: 0.68rem;
   }
 }
 
-/* Respect accessibility preferences */
+
+/* ==================================================
+   Accessibility
+   ================================================== */
+
 @media (prefers-reduced-motion: reduce) {
+  .home-hero,
+  .home-section,
+  .home-philosophy,
+  .home-status-dot::after,
+  .home-visual-orbit,
+  .home-visual-orbit-inner,
+  .home-visual-node,
+  .home-microsphere {
+    animation: none;
+  }
+
   .home-research-card,
   .home-research-card::after,
   .home-interest {
@@ -520,37 +1015,14 @@ html[data-theme="dark"] .home-interest {
 
 <div class="home-welcome">
 
-  <!-- Introduction -->
-  <section class="home-intro">
+  <!-- Hero -->
+  <section class="home-hero">
 
-    <span class="home-particle home-particle--one"></span>
-    <span class="home-particle home-particle--two"></span>
-    <span class="home-particle home-particle--three"></span>
-    <span class="home-particle home-particle--four"></span>
+    <div class="home-hero-copy">
 
-    <svg
-      class="home-wave"
-      viewBox="0 0 420 120"
-      aria-hidden="true"
-    >
-      <path
-        d="M0,76 C70,26 128,110 205,64 C282,18 332,93 420,38"
-        fill="none"
-        stroke="#52adc8"
-        stroke-width="3"
-      />
-      <path
-        d="M0,96 C78,47 142,124 221,82 C300,40 352,108 420,68"
-        fill="none"
-        stroke="#d9a557"
-        stroke-width="2"
-      />
-    </svg>
-
-    <div class="home-intro-content">
-
-      <div class="home-eyebrow">
-        Aquatic Food Systems
+      <div class="home-status">
+        <span class="home-status-dot"></span>
+        Biological Systems Engineering
       </div>
 
       <h1 class="home-greeting">
@@ -563,52 +1035,112 @@ html[data-theme="dark"] .home-interest {
         aquaculture production to post-harvest preservation.
       </p>
 
-      <p>
+      <p class="home-description">
         I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
         conducting interdisciplinary research in the Sustainable &amp; Intelligent
         Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
       </p>
 
-      <p>
-        My academic background brings together food science, aquaculture,
-        biomaterials, and food engineering, with a broad interest in developing
-        practical and sustainable solutions for aquatic food systems.
+      <p class="home-description">
+        My work connects food science, aquaculture, biomaterials, and food
+        engineering to develop practical solutions for aquatic animal health,
+        seafood quality, and sustainable food preservation.
       </p>
+
+      <div class="home-keywords" aria-label="Research keywords">
+        <span class="home-keyword">Aquaculture</span>
+        <span class="home-keyword">Biomaterials</span>
+        <span class="home-keyword">Oral Delivery</span>
+        <span class="home-keyword">Seafood Quality</span>
+      </div>
+
+    </div>
+
+
+    <!-- Scientific concept graphic -->
+    <div
+      class="home-visual"
+      role="img"
+      aria-label="Illustration connecting aquatic health, oral delivery, passive cooling, and seafood quality"
+    >
+
+      <div class="home-visual-orbit"></div>
+      <div class="home-visual-orbit-inner"></div>
+
+      <div class="home-visual-core">
+        <svg viewBox="0 0 80 80" aria-hidden="true">
+          <path d="M12 42c11-15 27-19 43-8l13-9v29l-13-9c-16 11-32 7-43-3Z"></path>
+          <circle cx="49" cy="38" r="2" fill="currentColor" stroke="none"></circle>
+          <path d="M12 42 5 34"></path>
+          <path d="M12 42 5 50"></path>
+          <path d="M24 34c5 5 5 12 0 17"></path>
+          <path d="M34 29c5 7 5 19 0 26"></path>
+        </svg>
+      </div>
+
+      <div class="home-visual-node home-visual-node--health">
+        Aquatic Health
+      </div>
+
+      <div class="home-visual-node home-visual-node--delivery">
+        Oral Delivery
+      </div>
+
+      <div class="home-visual-node home-visual-node--cooling">
+        Passive Cooling
+      </div>
+
+      <div class="home-visual-node home-visual-node--quality">
+        Seafood Quality
+      </div>
+
+      <span class="home-microsphere home-microsphere--one"></span>
+      <span class="home-microsphere home-microsphere--two"></span>
+      <span class="home-microsphere home-microsphere--three"></span>
 
     </div>
   </section>
 
 
-  <!-- Current research -->
+  <!-- Research -->
   <section class="home-section">
 
-    <h2 class="home-section-heading">What I Am Working On</h2>
+    <div class="home-section-header">
 
-    <p class="home-section-intro">
-      My research connects aquatic animal health, biomaterial-based delivery,
-      sustainable preservation, and post-harvest quality across the aquatic
-      food value chain.
-    </p>
+      <div class="home-section-title-wrap">
+        <span class="home-section-label">Current Research</span>
+        <h2 class="home-section-heading">What I Am Working On</h2>
+      </div>
+
+      <p class="home-section-intro">
+        My research follows the aquatic food value chain, linking animal
+        health and functional delivery with post-harvest preservation and
+        quality.
+      </p>
+
+    </div>
+
 
     <div class="home-research-grid">
 
       <!-- Oral delivery -->
-      <article class="home-research-card">
-        <div class="home-card-top">
+      <article class="home-research-card home-research-card--delivery">
 
+        <div class="home-card-header">
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
-              <circle cx="9" cy="12" r="5"></circle>
-              <circle cx="15.5" cy="8" r="2.5"></circle>
-              <circle cx="16.5" cy="15.5" r="3.5"></circle>
-              <path d="M5.5 8.5 3 6"></path>
-              <path d="M5 15.5 2.5 18"></path>
+              <circle cx="8.5" cy="12" r="4.8"></circle>
+              <circle cx="16" cy="8" r="2.4"></circle>
+              <circle cx="16.5" cy="16" r="3.1"></circle>
+              <path d="M5.3 8.5 3 6.5"></path>
+              <path d="M5 15.3 2.8 17.5"></path>
             </svg>
           </span>
 
-          <h3 class="home-card-title">
-            Oral Delivery Systems
-          </h3>
+          <div>
+            <span class="home-card-number">RESEARCH 01</span>
+            <h3 class="home-card-title">Oral Delivery Systems</h3>
+          </div>
         </div>
 
         <p class="home-card-text">
@@ -616,13 +1148,20 @@ html[data-theme="dark"] .home-interest {
           immunostimulants during gastrointestinal transit and deliver them to
           immune-responsive sites.
         </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">PLGA</span>
+          <span class="home-card-tag">Oral Vaccines</span>
+          <span class="home-card-tag">Controlled Release</span>
+        </div>
+
       </article>
 
 
-      <!-- Aquatic animal health -->
-      <article class="home-research-card">
-        <div class="home-card-top">
+      <!-- Aquatic health -->
+      <article class="home-research-card home-research-card--health">
 
+        <div class="home-card-header">
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M4 12c3.5-4.5 8-5.5 12-2l4-3v10l-4-3c-4 3.5-8.5 2.5-12-2Z"></path>
@@ -632,51 +1171,68 @@ html[data-theme="dark"] .home-interest {
             </svg>
           </span>
 
-          <h3 class="home-card-title">
-            Aquatic Animal Health
-          </h3>
+          <div>
+            <span class="home-card-number">RESEARCH 02</span>
+            <h3 class="home-card-title">Aquatic Animal Health</h3>
+          </div>
         </div>
 
         <p class="home-card-text">
-          Investigating strategies that strengthen disease resistance and
-          reduce production losses while supporting more sustainable
-          aquaculture practices.
+          Investigating nutritional and biomaterial-based strategies that
+          enhance disease resistance while reducing losses in sustainable
+          aquaculture.
         </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">Immunity</span>
+          <span class="home-card-tag">Probiotics</span>
+          <span class="home-card-tag">Aquaculture</span>
+        </div>
+
       </article>
 
 
       <!-- Passive cooling -->
-      <article class="home-research-card">
-        <div class="home-card-top">
+      <article class="home-research-card home-research-card--cooling">
 
+        <div class="home-card-header">
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M12 2v20"></path>
               <path d="m8 5 4 3 4-3"></path>
               <path d="m8 19 4-3 4 3"></path>
               <path d="M3.5 7 20.5 17"></path>
+              <path d="M3.5 17 20.5 7"></path>
               <path d="m4 11 4.5-.5L10 6.5"></path>
               <path d="m14 17.5 1.5-4 4.5-.5"></path>
-              <path d="M3.5 17 20.5 7"></path>
             </svg>
           </span>
 
-          <h3 class="home-card-title">
-            Passive Cooling Materials
-          </h3>
+          <div>
+            <span class="home-card-number">RESEARCH 03</span>
+            <h3 class="home-card-title">Passive Cooling Materials</h3>
+          </div>
         </div>
 
         <p class="home-card-text">
-          Creating bio-based materials that provide electricity-free cooling
-          for sustainable food preservation and cold-chain management.
+          Creating bio-based materials that provide electricity-free
+          temperature reduction for sustainable food preservation and
+          cold-chain management.
         </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">Biopolymers</span>
+          <span class="home-card-tag">Radiative Cooling</span>
+          <span class="home-card-tag">Cold Chain</span>
+        </div>
+
       </article>
 
 
       <!-- Seafood quality -->
-      <article class="home-research-card">
-        <div class="home-card-top">
+      <article class="home-research-card home-research-card--quality">
 
+        <div class="home-card-header">
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M4 18c3-1 5-1 8 0s5 1 8 0"></path>
@@ -686,35 +1242,68 @@ html[data-theme="dark"] .home-interest {
             </svg>
           </span>
 
-          <h3 class="home-card-title">
-            Sustainable Food Preservation
-          </h3>
+          <div>
+            <span class="home-card-number">RESEARCH 04</span>
+            <h3 class="home-card-title">Seafood Quality &amp; Preservation</h3>
+          </div>
         </div>
 
         <p class="home-card-text">
           Studying physiological, biochemical, and flavor changes during
-          seafood processing and storage to support better preservation
+          seafood processing and storage to support effective preservation
           strategies.
         </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">Quality</span>
+          <span class="home-card-tag">Flavor</span>
+          <span class="home-card-tag">Shelf Life</span>
+        </div>
+
       </article>
 
     </div>
   </section>
 
 
-  <!-- Beyond research -->
-  <section class="home-beyond">
+  <!-- Research philosophy -->
+  <section class="home-philosophy">
 
-    <h2 class="home-section-heading">Beyond the Laboratory</h2>
+    <p class="home-philosophy-content">
+      A single question connects my work: how can we improve aquatic animal
+      health, seafood quality, and sustainability without increasing
+      environmental cost?
+    </p>
+
+    <span class="home-philosophy-source">
+      From farm to plate
+    </span>
+
+  </section>
+
+
+  <!-- Beyond the laboratory -->
+  <section class="home-section home-beyond-section">
+
+    <div class="home-section-header">
+
+      <div class="home-section-title-wrap">
+        <span class="home-section-label">Beyond Research</span>
+        <h2 class="home-section-heading">Beyond the Laboratory</h2>
+      </div>
+
+    </div>
+
 
     <div class="home-beyond-layout">
 
       <div class="home-beyond-copy">
         <p>
           Outside of the laboratory, I enjoy traveling, hiking, photography,
-          watching movies, and exploring different genres of music. Photography
-          allows me to document landscapes, cultures, and everyday moments
-          while encouraging me to observe the world from different perspectives.
+          watching movies, and exploring different genres of music.
+          Photography allows me to document landscapes, cultures, and everyday
+          moments while encouraging me to observe the world from different
+          perspectives.
         </p>
 
         <p>
@@ -725,42 +1314,50 @@ html[data-theme="dark"] .home-interest {
       </div>
 
 
-      <div class="home-interests" aria-label="Personal interests">
+      <div class="home-interest-cloud" aria-label="Personal interests">
 
-        <div class="home-interest">
+        <span class="home-interest">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="9"></circle>
             <path d="M3 12h18"></path>
             <path d="M12 3c3 3.5 3 14 0 18"></path>
             <path d="M12 3c-3 3.5-3 14 0 18"></path>
           </svg>
-          <span>Travel</span>
-        </div>
+          Travel
+        </span>
 
-        <div class="home-interest">
+        <span class="home-interest">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
-            <path d="m7.5 12.5 1.5 1 1.5-1"></path>
           </svg>
-          <span>Hiking</span>
-        </div>
+          Hiking
+        </span>
 
-        <div class="home-interest">
+        <span class="home-interest">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="6" width="18" height="13" rx="2"></rect>
             <circle cx="12" cy="12.5" r="3.5"></circle>
             <path d="M8 6 9.2 4h5.6L16 6"></path>
           </svg>
-          <span>Photography</span>
-        </div>
+          Photography
+        </span>
 
-        <div class="home-interest">
+        <span class="home-interest">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2"></rect>
             <path d="m10 9 5 3-5 3Z"></path>
           </svg>
-          <span>Movies</span>
-        </div>
+          Movies
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18V6l10-2v12"></path>
+            <circle cx="6.5" cy="18" r="2.5"></circle>
+            <circle cx="16.5" cy="16" r="2.5"></circle>
+          </svg>
+          Music
+        </span>
 
       </div>
     </div>
