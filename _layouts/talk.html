@@ -2,6 +2,173 @@
 layout: default
 ---
 
+<style>
+.talk-header {
+  --talk-blue: #52adc8;
+  --talk-dark: #233044;
+  --talk-text: #4f5865;
+  --talk-muted: #7a8491;
+  --talk-border: #dfe5eb;
+}
+
+/* Back to News link */
+
+.talk-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 1.1rem;
+  color: var(--talk-blue);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.talk-back-link svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.18s ease;
+}
+
+.talk-back-link:hover {
+  color: #2f8faa;
+}
+
+.talk-back-link:hover svg {
+  transform: translateX(-3px);
+}
+
+/* Title */
+
+.talk-title {
+  margin-bottom: 0.9rem !important;
+}
+
+/* Meta row: category badge, date, venue, location */
+
+.talk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 16px;
+  margin: 0 0 1.6rem;
+}
+
+.talk-type {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: #eef2f5;
+  color: #596575;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.talk-type-award,
+.talk-type-fellowship {
+  background: #fff3d8;
+  color: #a66b16;
+}
+
+.talk-type-grant {
+  background: #e4f5eb;
+  color: #28764a;
+}
+
+.talk-type-presentation,
+.talk-type-poster,
+.talk-type-poster-presentation {
+  background: #e7f3fb;
+  color: #347ca1;
+}
+
+.talk-type-outreach {
+  background: #f3eafb;
+  color: #775095;
+}
+
+.talk-type-professional-development,
+.talk-type-training {
+  background: #eef0ff;
+  color: #5661a5;
+}
+
+.talk-type-competition {
+  background: #fdeaea;
+  color: #a14848;
+}
+
+.talk-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--talk-muted);
+  font-size: 0.88rem;
+}
+
+.talk-detail svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+/* Content card */
+
+.talk-card {
+  padding: 22px 26px;
+  border: 1px solid var(--talk-border);
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.talk-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Pagination (Previous / Next) restyle */
+
+.pagination {
+  margin-top: 1.8rem !important;
+}
+
+.pagination--pager {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--talk-border) !important;
+  border-radius: 10px !important;
+  color: var(--talk-dark) !important;
+  font-weight: 600 !important;
+  transition:
+    border-color 0.18s ease,
+    color 0.18s ease,
+    background 0.18s ease !important;
+}
+
+.pagination--pager:hover {
+  border-color: var(--talk-blue) !important;
+  background: #f3fafc !important;
+  color: var(--talk-blue) !important;
+}
+
+.pagination--pager.disabled {
+  color: #b9c1c9 !important;
+  background: #fafbfc !important;
+}
+
+@media (max-width: 480px) {
+  .talk-card {
+    padding: 17px;
+  }
+}
+</style>
+
 {% include base_path %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -25,24 +192,74 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+        <header class="talk-header">
+
+          <a class="talk-back-link" href="{{ '/news/' | relative_url }}">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 6l-6 6 6 6"/>
+            </svg>
+            Back to News
+          </a>
+
+          {% if page.title %}<h1 class="page__title talk-title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
+
+          <div class="talk-meta">
+
+            {% if page.type %}
+              <span class="talk-type talk-type-{{ page.type | slugify }}">{{ page.type }}</span>
+            {% endif %}
+
+            {% if page.modified %}
+              <span class="talk-detail">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="16" rx="2"/>
+                  <path d="M3 9h18M8 3v4M16 3v4"/>
+                </svg>
+                <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>
+              </span>
+            {% elsif page.date %}
+              <span class="talk-detail">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="16" rx="2"/>
+                  <path d="M3 9h18M8 3v4M16 3v4"/>
+                </svg>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+              </span>
+            {% endif %}
+
+            {% if page.venue %}
+              <span class="talk-detail">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 20h16M6 17h12M7 9v8M12 9v8M17 9v8M4 7l8-4 8 4v2H4V7z"/>
+                </svg>
+                {{ page.venue }}
+              </span>
+            {% endif %}
+
+            {% if page.location %}
+              <span class="talk-detail">
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                {{ page.location }}
+              </span>
+            {% endif %}
+
+          </div>
 
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-        {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        <div class="talk-card">
+          {{ content }}
+          {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        </div>
       </section>
 
       <footer class="page__meta">
