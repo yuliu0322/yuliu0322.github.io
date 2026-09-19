@@ -1291,45 +1291,30 @@ button.publication-filter-option.is-active {
 })();
 </script>
 
-
 <!-- Summary Toggle -->
-
 <script>
-(function () {
-  document.addEventListener("click", function (event) {
-    const button = event.target.closest(".summary-toggle");
+document.querySelectorAll(".summary-toggle").forEach(function (button) {
+  button.addEventListener("click", function () {
+    const content = button
+      .closest(".publication-content")
+      .querySelector(".publication-summary");
 
-    if (!button) {
-      return;
-    }
-
-    const card = button.closest(".publication-card");
-
-    if (!card) {
-      return;
-    }
-
-    const summary = card.querySelector(".publication-summary");
-
-    if (!summary) {
-      return;
-    }
-
+    const icon = button.querySelector(".summary-toggle-icon");
     const isExpanded =
       button.getAttribute("aria-expanded") === "true";
 
     button.setAttribute(
       "aria-expanded",
-      String(!isExpanded)
+      isExpanded ? "false" : "true"
     );
 
-    summary.hidden = isExpanded;
-
-    const icon = button.querySelector(".summary-toggle-icon");
-
-    if (icon) {
-      icon.textContent = isExpanded ? "+" : "−";
+    if (isExpanded) {
+      content.setAttribute("hidden", "");
+      if (icon) icon.textContent = "+";
+    } else {
+      content.removeAttribute("hidden");
+      if (icon) icon.textContent = "−";
     }
   });
-})();
+});
 </script>
