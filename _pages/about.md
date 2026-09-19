@@ -184,7 +184,7 @@ redirect_from:
     <div class="home-focus" aria-label="Current research areas">
       <span>Aquatic Animal Health</span>
       <span>Oral Delivery Systems</span>
-      <span>Bio-based Materials</span>
+      <span>Bio-based Passive Cooling Materials</span>
       <span>Sustainable Food Preservation</span>
     </div>
   </section>
