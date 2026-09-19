@@ -19,13 +19,10 @@ redirect_from:
   --home-muted: #738092;
   --home-blue: #48a9c5;
   --home-blue-dark: #267f9c;
-  --home-cyan: #7bcbd8;
   --home-gold: #dba655;
   --home-green: #65aa91;
   --home-purple: #8986bd;
   --home-surface: #ffffff;
-  --home-soft-blue: #eef8fb;
-  --home-soft-gold: #fff8ec;
   --home-border: #dde8ed;
   --home-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 
@@ -47,13 +44,13 @@ redirect_from:
 .home-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.72fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1.45fr) minmax(275px, 0.72fr);
+  gap: 2.7rem;
   align-items: center;
   max-width: 1080px;
-  min-height: 390px;
+  min-height: 380px;
   margin: 0 0 2.8rem;
-  padding: 2.7rem 2.5rem;
+  padding: 2.6rem 2.5rem;
   overflow: hidden;
   border: 1px solid #d8e9ef;
   border-radius: 22px;
@@ -64,7 +61,7 @@ redirect_from:
       transparent 27%
     ),
     radial-gradient(
-      circle at 72% 92%,
+      circle at 74% 92%,
       rgba(219, 166, 85, 0.1),
       transparent 25%
     ),
@@ -80,8 +77,8 @@ redirect_from:
 .home-hero::before {
   content: "";
   position: absolute;
-  top: -90px;
-  right: -90px;
+  top: -95px;
+  right: -85px;
   width: 260px;
   height: 260px;
   border: 1px solid rgba(72, 169, 197, 0.1);
@@ -92,10 +89,10 @@ redirect_from:
 .home-hero::after {
   content: "";
   position: absolute;
-  right: 110px;
-  bottom: -165px;
-  width: 300px;
-  height: 300px;
+  right: 105px;
+  bottom: -175px;
+  width: 310px;
+  height: 310px;
   border: 1px solid rgba(219, 166, 85, 0.11);
   border-radius: 50%;
   pointer-events: none;
@@ -106,43 +103,9 @@ redirect_from:
   z-index: 2;
 }
 
-.home-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  margin-bottom: 1.05rem;
-  padding: 7px 12px;
-  color: var(--home-blue-dark);
-  border: 1px solid rgba(72, 169, 197, 0.24);
-  border-radius: 999px;
-  background: rgba(238, 248, 251, 0.8);
-  font-size: 0.73rem;
-  font-weight: 750;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.home-status-dot {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--home-green);
-  box-shadow: 0 0 0 4px rgba(101, 170, 145, 0.13);
-}
-
-.home-status-dot::after {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border: 1px solid rgba(101, 170, 145, 0.4);
-  border-radius: 50%;
-  animation: home-status-pulse 2.8s ease-out infinite;
-}
-
 .home-greeting {
   max-width: 680px;
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.9rem;
   color: var(--home-navy);
   font-size: clamp(1.85rem, 3.4vw, 2.55rem);
   font-weight: 760;
@@ -169,8 +132,8 @@ redirect_from:
 }
 
 .home-tagline {
-  max-width: 680px;
-  margin: 0 0 1.35rem;
+  max-width: 690px;
+  margin: 0 0 1.4rem;
   color: var(--home-navy);
   font-size: 1.08rem;
   font-weight: 620;
@@ -201,14 +164,14 @@ redirect_from:
   color: #466072;
   border: 1px solid #dbe9ee;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   font-size: 0.75rem;
   font-weight: 650;
 }
 
 
 /* ==================================================
-   Hero scientific visualization
+   Abstract scientific visualization
    ================================================== */
 
 .home-visual {
@@ -219,12 +182,13 @@ redirect_from:
   margin: auto;
 }
 
+/* Outer rotating orbit */
 .home-visual-orbit {
   position: absolute;
   inset: 6%;
-  border: 1px dashed rgba(72, 169, 197, 0.3);
+  border: 1px dashed rgba(72, 169, 197, 0.31);
   border-radius: 50%;
-  animation: home-orbit-rotate 34s linear infinite;
+  animation: home-orbit-rotate 36s linear infinite;
 }
 
 .home-visual-orbit::before {
@@ -239,12 +203,13 @@ redirect_from:
   background: #f7fcfd;
 }
 
+/* Inner orbit */
 .home-visual-orbit-inner {
   position: absolute;
-  inset: 20%;
-  border: 1px solid rgba(219, 166, 85, 0.25);
+  inset: 21%;
+  border: 1px solid rgba(219, 166, 85, 0.31);
   border-radius: 50%;
-  animation: home-orbit-rotate-reverse 24s linear infinite;
+  animation: home-orbit-rotate-reverse 27s linear infinite;
 }
 
 .home-visual-orbit-inner::after {
@@ -259,35 +224,24 @@ redirect_from:
   box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
 }
 
+/* Empty center circle */
 .home-visual-core {
   position: absolute;
-  inset: 31%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(72, 169, 197, 0.23);
+  inset: 32%;
+  border: 1px solid rgba(72, 169, 197, 0.24);
   border-radius: 50%;
   background:
     radial-gradient(
       circle at 35% 28%,
-      #ffffff,
-      #e6f6fa 72%
+      rgba(255, 255, 255, 0.98),
+      rgba(227, 245, 250, 0.88) 72%
     );
   box-shadow:
-    0 15px 35px rgba(49, 139, 168, 0.16),
+    0 15px 35px rgba(49, 139, 168, 0.14),
     inset 0 0 24px rgba(72, 169, 197, 0.07);
 }
 
-.home-visual-core svg {
-  width: 55%;
-  color: var(--home-blue-dark);
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.45;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
+/* Research labels */
 .home-visual-node {
   position: absolute;
   display: flex;
@@ -297,12 +251,12 @@ redirect_from:
   color: var(--home-navy);
   border: 1px solid rgba(72, 169, 197, 0.19);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 6px 16px rgba(35, 55, 75, 0.08);
   font-size: 0.69rem;
   font-weight: 700;
   white-space: nowrap;
-  animation: home-node-float 5s ease-in-out infinite;
+  animation: home-node-float 5.5s ease-in-out infinite;
 }
 
 .home-visual-node::before {
@@ -341,11 +295,12 @@ redirect_from:
   animation-delay: -3.8s;
 }
 
+/* Small decorative particles */
 .home-microsphere {
   position: absolute;
-  border: 1px solid rgba(72, 169, 197, 0.26);
+  border: 1px solid rgba(72, 169, 197, 0.28);
   border-radius: 50%;
-  background: rgba(123, 203, 216, 0.11);
+  background: rgba(123, 203, 216, 0.12);
   animation: home-particle-float 7s ease-in-out infinite;
 }
 
@@ -357,26 +312,26 @@ redirect_from:
 }
 
 .home-microsphere--two {
-  top: 62%;
-  right: 28%;
+  top: 61%;
+  right: 27%;
   width: 11px;
   height: 11px;
   animation-delay: -2s;
 }
 
 .home-microsphere--three {
-  right: 23%;
+  right: 22%;
   bottom: 22%;
   width: 7px;
   height: 7px;
-  background: rgba(219, 166, 85, 0.17);
-  border-color: rgba(219, 166, 85, 0.3);
+  border-color: rgba(219, 166, 85, 0.31);
+  background: rgba(219, 166, 85, 0.18);
   animation-delay: -4s;
 }
 
 
 /* ==================================================
-   Shared section styling
+   Section styling
    ================================================== */
 
 .home-section {
@@ -385,31 +340,15 @@ redirect_from:
 }
 
 .home-section-header {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 1.35rem;
-}
-
-.home-section-title-wrap {
-  min-width: 210px;
-}
-
-.home-section-label {
   display: block;
-  margin-bottom: 0.35rem;
-  color: var(--home-blue-dark);
-  font-size: 0.7rem;
-  font-weight: 750;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
+  margin-bottom: 1.35rem;
 }
 
 .home-section-heading {
   position: relative;
+  display: inline-block;
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   color: var(--home-navy);
   font-size: 1.34rem;
   line-height: 1.35;
@@ -430,17 +369,9 @@ redirect_from:
   );
 }
 
-.home-section-intro {
-  max-width: 650px;
-  margin: 0;
-  color: var(--home-muted);
-  font-size: 0.94rem;
-  line-height: 1.72;
-}
-
 
 /* ==================================================
-   Research grid
+   Research cards
    ================================================== */
 
 .home-research-grid {
@@ -485,22 +416,14 @@ redirect_from:
   bottom: -52px;
   width: 135px;
   height: 135px;
-  border: 1px solid color-mix(
-    in srgb,
-    var(--card-accent) 24%,
-    transparent
-  );
+  border: 1px solid rgba(72, 169, 197, 0.12);
   border-radius: 50%;
   transition: transform 0.35s ease;
 }
 
 .home-research-card:hover {
   transform: translateY(-5px);
-  border-color: color-mix(
-    in srgb,
-    var(--card-accent) 50%,
-    var(--home-border)
-  );
+  border-color: var(--card-accent);
   box-shadow: 0 15px 30px rgba(35, 55, 75, 0.1);
 }
 
@@ -542,11 +465,19 @@ redirect_from:
   justify-content: center;
   color: var(--card-accent);
   border-radius: 14px;
-  background: color-mix(
-    in srgb,
-    var(--card-accent) 12%,
-    white
-  );
+  background: rgba(72, 169, 197, 0.1);
+}
+
+.home-research-card--health .home-card-icon {
+  background: rgba(101, 170, 145, 0.11);
+}
+
+.home-research-card--cooling .home-card-icon {
+  background: rgba(137, 134, 189, 0.11);
+}
+
+.home-research-card--quality .home-card-icon {
+  background: rgba(219, 166, 85, 0.12);
 }
 
 .home-card-icon svg {
@@ -601,60 +532,6 @@ redirect_from:
   border-radius: 999px;
   font-size: 0.66rem;
   font-weight: 650;
-}
-
-
-/* ==================================================
-   Research philosophy
-   ================================================== */
-
-.home-philosophy {
-  position: relative;
-  max-width: 1080px;
-  margin: 0 0 2.9rem;
-  padding: 1.7rem 2rem 1.7rem 2.25rem;
-  overflow: hidden;
-  border: 1px solid #dcebf0;
-  border-radius: 17px;
-  background:
-    linear-gradient(
-      110deg,
-      rgba(238, 248, 251, 0.9),
-      rgba(255, 255, 255, 0.95)
-    );
-}
-
-.home-philosophy::before {
-  content: "“";
-  position: absolute;
-  top: -22px;
-  left: 16px;
-  color: rgba(72, 169, 197, 0.13);
-  font-family: Georgia, serif;
-  font-size: 9rem;
-  line-height: 1;
-}
-
-.home-philosophy-content {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  color: var(--home-navy);
-  font-size: 1.05rem;
-  font-weight: 620;
-  line-height: 1.75;
-}
-
-.home-philosophy-source {
-  position: relative;
-  z-index: 1;
-  display: block;
-  margin-top: 0.7rem;
-  color: var(--home-blue-dark);
-  font-size: 0.76rem;
-  font-weight: 750;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 
@@ -724,12 +601,11 @@ redirect_from:
 
 
 /* ==================================================
-   Entrance animation
+   Animation
    ================================================== */
 
 .home-hero,
-.home-section,
-.home-philosophy {
+.home-section {
   animation: home-reveal 0.7s ease both;
 }
 
@@ -737,12 +613,8 @@ redirect_from:
   animation-delay: 0.08s;
 }
 
-.home-philosophy {
-  animation-delay: 0.14s;
-}
-
 .home-beyond-section {
-  animation-delay: 0.2s;
+  animation-delay: 0.14s;
 }
 
 @keyframes home-reveal {
@@ -754,19 +626,6 @@ redirect_from:
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes home-status-pulse {
-  0% {
-    opacity: 0.7;
-    transform: scale(0.8);
-  }
-
-  70%,
-  100% {
-    opacity: 0;
-    transform: scale(1.8);
   }
 }
 
@@ -816,7 +675,6 @@ html[data-theme="dark"] .home-welcome {
   --home-blue: #65c2dd;
   --home-blue-dark: #69c8e2;
   --home-surface: #343a40;
-  --home-soft-blue: rgba(101, 194, 221, 0.13);
   --home-border: #4c5661;
   --home-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
 }
@@ -842,12 +700,6 @@ html[data-theme="dark"] .home-hero {
     );
 }
 
-html[data-theme="dark"] .home-status {
-  color: #7bd0e7;
-  border-color: rgba(101, 194, 221, 0.25);
-  background: rgba(101, 194, 221, 0.08);
-}
-
 html[data-theme="dark"] .home-keyword,
 html[data-theme="dark"] .home-visual-node {
   color: #d8e1e8;
@@ -860,31 +712,20 @@ html[data-theme="dark"] .home-visual-core {
   background:
     radial-gradient(
       circle at 35% 28%,
-      #44535c,
-      #2d414a 75%
+      rgba(68, 83, 92, 0.96),
+      rgba(45, 65, 74, 0.94) 75%
     );
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18),
+    inset 0 0 24px rgba(101, 194, 221, 0.06);
 }
 
-html[data-theme="dark"] .home-card-icon {
-  background: color-mix(
-    in srgb,
-    var(--card-accent) 18%,
-    #343a40
-  );
+html[data-theme="dark"] .home-research-card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-html[data-theme="dark"] .home-philosophy {
-  border-color: #4c5962;
-  background:
-    linear-gradient(
-      110deg,
-      rgba(48, 67, 77, 0.94),
-      rgba(52, 58, 64, 0.98)
-    );
-}
-
-html[data-theme="dark"] .home-philosophy::before {
-  color: rgba(101, 194, 221, 0.1);
+html[data-theme="dark"] .home-research-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -895,19 +736,11 @@ html[data-theme="dark"] .home-philosophy::before {
 @media (max-width: 900px) {
   .home-hero {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.6rem;
   }
 
   .home-visual {
     width: min(100%, 280px);
-  }
-
-  .home-section-header {
-    display: block;
-  }
-
-  .home-section-intro {
-    margin-top: 1rem;
   }
 }
 
@@ -928,7 +761,6 @@ html[data-theme="dark"] .home-philosophy::before {
   }
 
   .home-description,
-  .home-section-intro,
   .home-beyond-copy p {
     font-size: 0.94rem;
     line-height: 1.74;
@@ -957,14 +789,6 @@ html[data-theme="dark"] .home-philosophy::before {
   .home-beyond-layout {
     grid-template-columns: 1fr;
     gap: 1.4rem;
-  }
-
-  .home-philosophy {
-    padding: 1.5rem 1.3rem 1.5rem 1.5rem;
-  }
-
-  .home-philosophy-content {
-    font-size: 0.98rem;
   }
 }
 
@@ -995,8 +819,6 @@ html[data-theme="dark"] .home-philosophy::before {
 @media (prefers-reduced-motion: reduce) {
   .home-hero,
   .home-section,
-  .home-philosophy,
-  .home-status-dot::after,
   .home-visual-orbit,
   .home-visual-orbit-inner,
   .home-visual-node,
@@ -1019,11 +841,6 @@ html[data-theme="dark"] .home-philosophy::before {
   <section class="home-hero">
 
     <div class="home-hero-copy">
-
-      <div class="home-status">
-        <span class="home-status-dot"></span>
-        Biological Systems Engineering
-      </div>
 
       <h1 class="home-greeting">
         Welcome, I’m
@@ -1057,26 +874,18 @@ html[data-theme="dark"] .home-philosophy::before {
     </div>
 
 
-    <!-- Scientific concept graphic -->
+    <!-- Abstract research visualization -->
     <div
       class="home-visual"
       role="img"
-      aria-label="Illustration connecting aquatic health, oral delivery, passive cooling, and seafood quality"
+      aria-label="Abstract visualization of four interconnected research areas"
     >
 
       <div class="home-visual-orbit"></div>
       <div class="home-visual-orbit-inner"></div>
 
-      <div class="home-visual-core">
-        <svg viewBox="0 0 80 80" aria-hidden="true">
-          <path d="M12 42c11-15 27-19 43-8l13-9v29l-13-9c-16 11-32 7-43-3Z"></path>
-          <circle cx="49" cy="38" r="2" fill="currentColor" stroke="none"></circle>
-          <path d="M12 42 5 34"></path>
-          <path d="M12 42 5 50"></path>
-          <path d="M24 34c5 5 5 12 0 17"></path>
-          <path d="M34 29c5 7 5 19 0 26"></path>
-        </svg>
-      </div>
+      <!-- Intentionally empty -->
+      <div class="home-visual-core"></div>
 
       <div class="home-visual-node home-visual-node--health">
         Aquatic Health
@@ -1102,24 +911,12 @@ html[data-theme="dark"] .home-philosophy::before {
   </section>
 
 
-  <!-- Research -->
+  <!-- Current research -->
   <section class="home-section">
 
     <div class="home-section-header">
-
-      <div class="home-section-title-wrap">
-        <span class="home-section-label">Current Research</span>
-        <h2 class="home-section-heading">What I Am Working On</h2>
-      </div>
-
-      <p class="home-section-intro">
-        My research follows the aquatic food value chain, linking animal
-        health and functional delivery with post-harvest preservation and
-        quality.
-      </p>
-
+      <h2 class="home-section-heading">What I Am Working On</h2>
     </div>
-
 
     <div class="home-research-grid">
 
@@ -1127,6 +924,7 @@ html[data-theme="dark"] .home-philosophy::before {
       <article class="home-research-card home-research-card--delivery">
 
         <div class="home-card-header">
+
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <circle cx="8.5" cy="12" r="4.8"></circle>
@@ -1141,6 +939,7 @@ html[data-theme="dark"] .home-philosophy::before {
             <span class="home-card-number">RESEARCH 01</span>
             <h3 class="home-card-title">Oral Delivery Systems</h3>
           </div>
+
         </div>
 
         <p class="home-card-text">
@@ -1158,10 +957,11 @@ html[data-theme="dark"] .home-philosophy::before {
       </article>
 
 
-      <!-- Aquatic health -->
+      <!-- Aquatic animal health -->
       <article class="home-research-card home-research-card--health">
 
         <div class="home-card-header">
+
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M4 12c3.5-4.5 8-5.5 12-2l4-3v10l-4-3c-4 3.5-8.5 2.5-12-2Z"></path>
@@ -1175,6 +975,7 @@ html[data-theme="dark"] .home-philosophy::before {
             <span class="home-card-number">RESEARCH 02</span>
             <h3 class="home-card-title">Aquatic Animal Health</h3>
           </div>
+
         </div>
 
         <p class="home-card-text">
@@ -1196,6 +997,7 @@ html[data-theme="dark"] .home-philosophy::before {
       <article class="home-research-card home-research-card--cooling">
 
         <div class="home-card-header">
+
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M12 2v20"></path>
@@ -1212,6 +1014,7 @@ html[data-theme="dark"] .home-philosophy::before {
             <span class="home-card-number">RESEARCH 03</span>
             <h3 class="home-card-title">Passive Cooling Materials</h3>
           </div>
+
         </div>
 
         <p class="home-card-text">
@@ -1233,6 +1036,7 @@ html[data-theme="dark"] .home-philosophy::before {
       <article class="home-research-card home-research-card--quality">
 
         <div class="home-card-header">
+
           <span class="home-card-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M4 18c3-1 5-1 8 0s5 1 8 0"></path>
@@ -1244,8 +1048,11 @@ html[data-theme="dark"] .home-philosophy::before {
 
           <div>
             <span class="home-card-number">RESEARCH 04</span>
-            <h3 class="home-card-title">Seafood Quality &amp; Preservation</h3>
+            <h3 class="home-card-title">
+              Seafood Quality &amp; Preservation
+            </h3>
           </div>
+
         </div>
 
         <p class="home-card-text">
@@ -1266,38 +1073,17 @@ html[data-theme="dark"] .home-philosophy::before {
   </section>
 
 
-  <!-- Research philosophy -->
-  <section class="home-philosophy">
-
-    <p class="home-philosophy-content">
-      A single question connects my work: how can we improve aquatic animal
-      health, seafood quality, and sustainability without increasing
-      environmental cost?
-    </p>
-
-    <span class="home-philosophy-source">
-      From farm to plate
-    </span>
-
-  </section>
-
-
   <!-- Beyond the laboratory -->
   <section class="home-section home-beyond-section">
 
     <div class="home-section-header">
-
-      <div class="home-section-title-wrap">
-        <span class="home-section-label">Beyond Research</span>
-        <h2 class="home-section-heading">Beyond the Laboratory</h2>
-      </div>
-
+      <h2 class="home-section-heading">Beyond the Laboratory</h2>
     </div>
-
 
     <div class="home-beyond-layout">
 
       <div class="home-beyond-copy">
+
         <p>
           Outside of the laboratory, I enjoy traveling, hiking, photography,
           watching movies, and exploring different genres of music.
@@ -1311,6 +1097,7 @@ html[data-theme="dark"] .home-philosophy::before {
           balance—qualities that I also value in scientific research and
           problem-solving.
         </p>
+
       </div>
 
 
