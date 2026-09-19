@@ -1,34 +1,11 @@
 ---
 layout: archive
-title: "Education"
+title: "Education Background"
 permalink: /education/
 author_profile: true
 ---
 
 <style>
-/* =========================
-   Education page
-   ========================= */
-
-.education-header {
-  margin-bottom: 2rem;
-}
-
-.education-header h1 {
-  margin: 0 0 0.5rem;
-  color: #2b3445;
-  font-size: 2rem;
-  line-height: 1.25;
-}
-
-.education-header p {
-  margin: 0;
-  color: #6b7480;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* 时间线 */
 .education-timeline {
   position: relative;
   margin-top: 2rem;
@@ -45,7 +22,6 @@ author_profile: true
   background: #dceaf0;
 }
 
-/* 单个教育经历 */
 .education-item {
   position: relative;
   margin-bottom: 26px;
@@ -65,10 +41,9 @@ author_profile: true
   box-shadow: 0 0 0 3px #b9deea;
 }
 
-/* 卡片 */
 .education-card {
   display: grid;
-  grid-template-columns: 145px minmax(0, 1fr);
+  grid-template-columns: 170px minmax(0, 1fr);
   gap: 28px;
   align-items: center;
   padding: 28px 30px;
@@ -88,17 +63,15 @@ author_profile: true
   box-shadow: 0 12px 30px rgba(35, 48, 68, 0.09);
 }
 
-/* Logo 区域 */
 .education-logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 145px;
-  height: 145px;
+  width: 170px;
+  height: 150px;
   box-sizing: border-box;
-  padding: 18px;
-  border-radius: 14px;
-  background: #f7f9fb;
+  padding: 12px;
+  background: #ffffff;
 }
 
 .education-logo {
@@ -108,7 +81,6 @@ author_profile: true
   object-fit: contain;
 }
 
-/* 右侧内容 */
 .education-content {
   min-width: 0;
 }
@@ -157,7 +129,6 @@ author_profile: true
   border-bottom-color: #d79a45;
 }
 
-/* 地点 */
 .education-location {
   display: flex;
   align-items: center;
@@ -174,12 +145,7 @@ author_profile: true
   stroke: currentColor;
 }
 
-/* 手机端 */
 @media (max-width: 768px) {
-  .education-header h1 {
-    font-size: 1.7rem;
-  }
-
   .education-timeline {
     padding-left: 24px;
   }
@@ -205,11 +171,12 @@ author_profile: true
   .education-logo-box {
     width: 100%;
     height: 130px;
-    padding: 16px;
+    padding: 8px;
   }
 
   .education-logo {
-    max-width: 150px;
+    max-width: 170px;
+    margin: 0 auto;
   }
 
   .education-school {
@@ -218,14 +185,8 @@ author_profile: true
 }
 </style>
 
-<header class="education-header">
-  <h1>Education Background</h1>
-  <p>My academic journey in biological systems engineering and food science.</p>
-</header>
-
 <div class="education-timeline">
 
-  <!-- Virginia Tech -->
   <section class="education-item">
     <div class="education-card">
 
@@ -240,9 +201,7 @@ author_profile: true
       <div class="education-content">
         <span class="education-date">Aug 2025 – Present</span>
 
-        <h2 class="education-school">
-          Virginia Tech
-        </h2>
+        <h2 class="education-school">Virginia Tech</h2>
 
         <p class="education-degree">
           Ph.D. in Biological Systems Engineering
@@ -288,7 +247,6 @@ author_profile: true
     </div>
   </section>
 
-  <!-- Ocean University of China -->
   <section class="education-item">
     <div class="education-card">
 
@@ -303,9 +261,7 @@ author_profile: true
       <div class="education-content">
         <span class="education-date">Aug 2021 – Jun 2024</span>
 
-        <h2 class="education-school">
-          Ocean University of China
-        </h2>
+        <h2 class="education-school">Ocean University of China</h2>
 
         <p class="education-degree">
           M.Eng. in Food Science and Engineering
@@ -351,7 +307,6 @@ author_profile: true
     </div>
   </section>
 
-  <!-- Henan University of Science and Technology -->
   <section class="education-item">
     <div class="education-card">
 
