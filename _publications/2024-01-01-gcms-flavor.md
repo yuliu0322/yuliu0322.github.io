@@ -10,7 +10,7 @@ doi: "10.1016/j.foodchem.2023.137277"
 pdf: "/files/gcms-flavor.pdf"
 thumbnail: "/assets/images/gcms-flavor.png"
 category: "Seafood Flavor"
-abstract: >
+summary: >
   This study investigated the dynamic evolution of Pacific oyster flavor
   during depuration by integrating mass spectrometry-based metabolomics with
   gas chromatography analysis. Temporal changes in nonvolatile metabolites and
