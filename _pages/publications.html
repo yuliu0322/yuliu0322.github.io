@@ -357,7 +357,7 @@ button.publication-filter-option.is-active {
 
 .publication-action-button:hover,
 .publication-action-button:focus-visible,
-.abstract-toggle[aria-expanded="true"] {
+.overview-toggle[aria-expanded="true"] {
   border-color: var(--pub-blue);
   background: var(--pub-blue);
   color: #ffffff;
@@ -369,7 +369,7 @@ button.publication-filter-option.is-active {
   outline-offset: 2px;
 }
 
-.abstract-toggle-icon {
+.overview-toggle-icon {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1;
@@ -380,7 +380,7 @@ button.publication-filter-option.is-active {
   line-height: 1;
 }
 
-.publication-abstract {
+.publication-overview {
   margin-top: 1rem;
   padding: 14px 17px;
   border-left: 3px solid var(--pub-gold);
@@ -391,11 +391,11 @@ button.publication-filter-option.is-active {
   line-height: 1.7;
 }
 
-.publication-abstract[hidden] {
+.publication-overview[hidden] {
   display: none;
 }
 
-.publication-abstract p {
+.publication-overview p {
   margin: 0;
 }
 
@@ -468,7 +468,7 @@ button.publication-filter-option.is-active {
     font-size: 0.78rem;
   }
 
-  .publication-abstract {
+  .publication-overview {
     padding: 13px 14px;
     font-size: 0.87rem;
   }
@@ -724,7 +724,7 @@ button.publication-filter-option.is-active {
               <img
                 class="publication-thumbnail"
                 src="{{ post.thumbnail | relative_url }}"
-                alt="Graphical abstract for {{ post.title | escape }}"
+                alt="Graphical overview for {{ post.title | escape }}"
                 loading="lazy"
                 style="transform: scale({{ post.thumbnail_scale | default: 1 }});"
               >
@@ -765,14 +765,14 @@ button.publication-filter-option.is-active {
 
             <div class="publication-actions">
 
-              {% if post.abstract %}
+              {% if post.overview %}
                 <button
-                  class="publication-action-button abstract-toggle"
+                  class="publication-action-button overview-toggle"
                   type="button"
                   aria-expanded="false"
                 >
-                  Abstract
-                  <span class="abstract-toggle-icon" aria-hidden="true">+</span>
+                  overview
+                  <span class="overview-toggle-icon" aria-hidden="true">+</span>
                 </button>
               {% endif %}
 
@@ -802,9 +802,9 @@ button.publication-filter-option.is-active {
 
             </div>
 
-            {% if post.abstract %}
-              <div class="publication-abstract" hidden>
-                <p>{{ post.abstract }}</p>
+            {% if post.overview %}
+              <div class="publication-overview" hidden>
+                <p>{{ post.overview }}</p>
               </div>
             {% endif %}
 
@@ -1291,12 +1291,12 @@ button.publication-filter-option.is-active {
 })();
 </script>
 
-<!-- Abstract Toggle -->
+<!-- overview Toggle -->
 
 <script>
 (function () {
   document.addEventListener("click", function (event) {
-    const button = event.target.closest(".abstract-toggle");
+    const button = event.target.closest(".overview-toggle");
 
     if (!button) {
       return;
@@ -1308,9 +1308,9 @@ button.publication-filter-option.is-active {
       return;
     }
 
-    const abstract = card.querySelector(".publication-abstract");
+    const overview = card.querySelector(".publication-overview");
 
-    if (!abstract) {
+    if (!overview) {
       return;
     }
 
@@ -1322,9 +1322,9 @@ button.publication-filter-option.is-active {
       String(!isExpanded)
     );
 
-    abstract.hidden = isExpanded;
+    overview.hidden = isExpanded;
 
-    const icon = button.querySelector(".abstract-toggle-icon");
+    const icon = button.querySelector(".overview-toggle-icon");
 
     if (icon) {
       icon.textContent = isExpanded ? "+" : "−";
