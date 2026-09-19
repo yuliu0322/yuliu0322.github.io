@@ -152,23 +152,6 @@ redirect_from:
   margin-top: 0.85rem;
 }
 
-.home-keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 1.4rem;
-}
-
-.home-keyword {
-  padding: 6px 11px;
-  color: #466072;
-  border: 1px solid #dbe9ee;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
-  font-size: 0.75rem;
-  font-weight: 650;
-}
-
 
 /* ==================================================
    Abstract scientific visualization
@@ -864,13 +847,6 @@ html[data-theme="dark"] .home-research-card:hover {
         seafood quality, and sustainable food preservation.
       </p>
 
-      <div class="home-keywords" aria-label="Research keywords">
-        <span class="home-keyword">Aquaculture</span>
-        <span class="home-keyword">Biomaterials</span>
-        <span class="home-keyword">Oral Delivery</span>
-        <span class="home-keyword">Seafood Quality</span>
-      </div>
-
     </div>
 
 
@@ -888,11 +864,11 @@ html[data-theme="dark"] .home-research-card:hover {
       <div class="home-visual-core"></div>
 
       <div class="home-visual-node home-visual-node--health">
-        Aquatic Health
+        Sustainable Aquaculture
       </div>
 
       <div class="home-visual-node home-visual-node--delivery">
-        Oral Delivery
+        Seadfood Science
       </div>
 
       <div class="home-visual-node home-visual-node--cooling">
@@ -900,7 +876,7 @@ html[data-theme="dark"] .home-research-card:hover {
       </div>
 
       <div class="home-visual-node home-visual-node--quality">
-        Seafood Quality
+        Oral Delivery
       </div>
 
       <span class="home-microsphere home-microsphere--one"></span>
