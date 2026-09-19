@@ -7,8 +7,6 @@ venue: "Virginia Tech"
 date: 2026-09-22
 location: "Blacksburg, VA, USA"
 ---
-  
-Poster presentation, Virginia Tech, Blacksburg, VA, USA.
 
 **Conference website:** [MII Technical Conference & Review 2026](https://mii.vt.edu/outreach/technical-conference-review.html){:target="_blank" rel="noopener noreferrer"}
 
