@@ -7,9 +7,17 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 ---
 
 <style>
-/* ========================================
-   General layout
-   ======================================== */
+:root {
+  --publication-blue: #52adc8;
+  --publication-dark: #233044;
+  --publication-gold: #d9a557;
+  --publication-border: #dfe5eb;
+  --publication-muted: #5b6470;
+}
+
+/* =========================
+   Introduction
+   ========================= */
 
 .publication-intro {
   margin-bottom: 1.5rem;
@@ -20,37 +28,160 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 }
 
 .publication-section-title {
-  margin-top: 2.8rem;
-  margin-bottom: 1.5rem;
+  margin: 2.8rem 0 1.5rem;
 }
 
-/* ========================================
-   Search box
-   ======================================== */
+/* =========================
+   Search and filter controls
+   ========================= */
+
+.publication-toolbar {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+
+.publication-search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.publication-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 24px;
+  height: 24px;
+  color: #8da0b7;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
 
 .publication-search {
   display: block;
   width: 100%;
+  height: 62px;
   box-sizing: border-box;
-  margin: 1.5rem 0 2rem;
-  padding: 14px 18px;
+  padding: 14px 18px 14px 58px;
   border: 1px solid #d8dee6;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #ffffff;
   color: #333333;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
 .publication-search:focus {
-  border-color: #52adc8;
+  border-color: var(--publication-blue);
   outline: none;
   box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12);
 }
 
-/* ========================================
-   Publication cards
-   ======================================== */
+.publication-filter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 150px;
+  height: 62px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--publication-gold);
+  color: #ffffff;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.publication-filter-button:hover {
+  background: #c89448;
+  transform: translateY(-1px);
+}
+
+.publication-filter-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.publication-filter-button[aria-expanded="true"] {
+  background: #c89448;
+}
+
+/* =========================
+   Filter panel
+   ========================= */
+
+.publication-filter-panel {
+  display: none;
+  grid-template-columns: minmax(250px, 1fr) minmax(300px, 1.5fr);
+  gap: 32px;
+  margin-bottom: 2rem;
+  padding: 24px;
+  border: 1px solid #d8e0e8;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.publication-filter-panel.is-open {
+  display: grid;
+}
+
+.publication-filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: var(--publication-dark);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.publication-filter-heading svg {
+  width: 21px;
+  height: 21px;
+}
+
+.publication-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.publication-filter-option {
+  padding: 8px 18px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #35435a;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.publication-filter-option:hover {
+  border-color: var(--publication-gold);
+}
+
+.publication-filter-option.is-active {
+  border-color: var(--publication-gold);
+  background: var(--publication-gold);
+  color: #ffffff;
+}
+
+/* =========================
+   Cards
+   ========================= */
 
 .publication-card {
   display: flex;
@@ -61,7 +192,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   margin-bottom: 28px;
   padding: 26px;
   overflow: hidden;
-  border: 1px solid #dfe5eb;
+  border: 1px solid var(--publication-border);
   border-radius: 14px;
   background: #ffffff;
   transition:
@@ -74,15 +205,15 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-/* Patent cards: text only */
+/* Patent: text only */
 .patent-card {
   display: block;
   padding: 28px 32px;
 }
 
-/* ========================================
-   Publication images
-   ======================================== */
+/* =========================
+   Images
+   ========================= */
 
 .publication-image-box {
   display: flex;
@@ -104,12 +235,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   object-position: center;
   border: 0;
   background: transparent;
-  transition: transform 0.2s ease;
 }
 
-/* ========================================
-   Book chapter placeholder
-   ======================================== */
+/* =========================
+   Book placeholder
+   ========================= */
 
 .book-placeholder {
   display: flex;
@@ -130,21 +260,21 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   color: #64748b;
 }
 
-.book-placeholder-svg {
+.book-placeholder svg {
   width: 62px;
   height: 62px;
   margin-bottom: 14px;
 }
 
-.book-placeholder-label {
+.book-placeholder span {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
 }
 
-/* ========================================
-   Publication text
-   ======================================== */
+/* =========================
+   Card text
+   ========================= */
 
 .publication-content {
   flex: 1;
@@ -157,9 +287,8 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   line-height: 1.35;
 }
 
-/* Visible hyperlinks */
 .publication-title a {
-  color: #52adc8;
+  color: var(--publication-blue);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -183,23 +312,12 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 .publication-description {
   margin: 0;
-  color: #5b6470;
+  color: var(--publication-muted);
   line-height: 1.6;
 }
 
 .publication-number {
   font-weight: 500;
-}
-
-/* ========================================
-   Search highlighting
-   ======================================== */
-
-.publication-highlight {
-  padding: 0 2px;
-  border-radius: 3px;
-  background: #fff2a8;
-  color: inherit;
 }
 
 .publication-section-hidden {
@@ -208,15 +326,32 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 
 .publication-no-results {
   display: none;
-  margin: 1rem 0 2rem;
-  color: #5b6470;
+  margin: 2rem 0;
+  padding: 20px;
+  border: 1px solid var(--publication-border);
+  border-radius: 10px;
+  color: var(--publication-muted);
+  text-align: center;
 }
 
-/* ========================================
-   Mobile layout
-   ======================================== */
+/* =========================
+   Mobile
+   ========================= */
 
 @media (max-width: 768px) {
+  .publication-toolbar {
+    flex-direction: column;
+  }
+
+  .publication-filter-button {
+    width: 100%;
+  }
+
+  .publication-filter-panel {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
   .publication-card {
     flex-direction: column;
     align-items: stretch;
@@ -233,12 +368,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     width: 100%;
     min-width: 0;
     height: 230px;
-  }
-
-  .publication-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
 
   .book-placeholder {
@@ -265,20 +394,14 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     height: 200px;
   }
 
-  .book-placeholder {
-    height: 170px;
-  }
-
   .publication-search {
-    padding: 12px 14px;
+    font-size: 16px;
   }
 }
 </style>
 
 
-<!-- ======================================
-     Introduction
-     ====================================== -->
+<!-- Introduction -->
 
 <div class="publication-intro">
   {% if site.author.googlescholar %}
@@ -296,22 +419,195 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </div>
 
 
-<!-- ======================================
-     Search box
-     ====================================== -->
+<!-- Search and filter toolbar -->
 
-<input
-  type="search"
-  id="publication-search"
-  class="publication-search"
-  placeholder="Search publications..."
-  aria-label="Search publications"
+<div class="publication-toolbar">
+
+  <div class="publication-search-wrapper">
+
+    <svg
+      class="publication-search-icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        cx="11"
+        cy="11"
+        r="7"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      />
+
+      <path
+        d="M16.5 16.5L21 21"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+
+    <input
+      type="search"
+      id="publication-search"
+      class="publication-search"
+      placeholder="Search publications..."
+      aria-label="Search publications"
+    >
+
+  </div>
+
+  <button
+    type="button"
+    id="publication-filter-button"
+    class="publication-filter-button"
+    aria-expanded="false"
+    aria-controls="publication-filter-panel"
+  >
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 5h18l-7 8v5l-4 2v-7L3 5z"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+      />
+    </svg>
+
+    <span>Filters</span>
+
+  </button>
+
+</div>
+
+
+<!-- Filter panel -->
+
+<div
+  id="publication-filter-panel"
+  class="publication-filter-panel"
 >
 
+  <div class="publication-filter-group">
 
-<!-- ======================================
-     Peer-Reviewed Journal Articles
-     ====================================== -->
+    <p class="publication-filter-heading">
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="16"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+
+        <path
+          d="M7 3v4M17 3v4M3 10h18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      Year
+
+    </p>
+
+    <div
+      id="publication-year-options"
+      class="publication-filter-options"
+    >
+      <!-- Years are generated automatically -->
+    </div>
+
+  </div>
+
+  <div class="publication-filter-group">
+
+    <p class="publication-filter-heading">
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M3 5.5c3-1.5 6-1.5 9 .5v14c-3-2-6-2-9-.5v-14z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+
+        <path
+          d="M21 5.5c-3-1.5-6-1.5-9 .5v14c3-2 6-2 9-.5v-14z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      Type
+
+    </p>
+
+    <div
+      id="publication-type-options"
+      class="publication-filter-options"
+    >
+
+      <button
+        type="button"
+        class="publication-filter-option is-active"
+        data-filter-type="all"
+      >
+        All
+      </button>
+
+      <button
+        type="button"
+        class="publication-filter-option"
+        data-filter-type="journal"
+      >
+        Journal
+      </button>
+
+      <button
+        type="button"
+        class="publication-filter-option"
+        data-filter-type="book"
+      >
+        Book Chapter
+      </button>
+
+      <button
+        type="button"
+        class="publication-filter-option"
+        data-filter-type="patent"
+      >
+        Patent
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Journal Articles -->
 
 <section class="publication-section">
 
@@ -324,7 +620,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     {% for post in site.publications reversed %}
       {% unless post.type == "book" or post.type == "patent" %}
 
-        <article class="publication-card">
+        <article
+          class="publication-card"
+          data-publication-type="journal"
+          data-publication-year="{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}"
+        >
 
           {% if post.thumbnail %}
 
@@ -359,11 +659,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </h3>
 
             {% if post.authors %}
-
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
-
             {% endif %}
 
             {% if post.venue %}
@@ -383,11 +681,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
             {% if post.excerpt %}
-
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
-
             {% endif %}
 
           </div>
@@ -402,9 +698,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </section>
 
 
-<!-- ======================================
-     Book Chapters
-     ====================================== -->
+<!-- Book Chapters -->
 
 <section class="publication-section">
 
@@ -417,7 +711,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     {% for post in site.publications reversed %}
       {% if post.type == "book" %}
 
-        <article class="publication-card">
+        <article
+          class="publication-card"
+          data-publication-type="book"
+          data-publication-year="{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}"
+        >
 
           {% if post.thumbnail %}
 
@@ -438,11 +736,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             <div class="book-placeholder">
 
               <svg
-                class="book-placeholder-svg"
                 viewBox="0 0 64 64"
                 aria-hidden="true"
               >
-
                 <path
                   d="M9 12c8-3 15-2 23 3v40c-8-5-15-6-23-3V12z"
                   fill="none"
@@ -465,12 +761,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
                   stroke="currentColor"
                   stroke-width="3"
                 />
-
               </svg>
 
-              <span class="book-placeholder-label">
-                BOOK CHAPTER
-              </span>
+              <span>BOOK CHAPTER</span>
 
             </div>
 
@@ -493,11 +786,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </h3>
 
             {% if post.authors %}
-
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
-
             {% endif %}
 
             {% if post.venue %}
@@ -517,11 +808,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             {% endif %}
 
             {% if post.excerpt %}
-
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
-
             {% endif %}
 
           </div>
@@ -536,9 +825,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </section>
 
 
-<!-- ======================================
-     Patents: text only
-     ====================================== -->
+<!-- Patents: text only -->
 
 <section class="publication-section">
 
@@ -551,7 +838,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     {% for post in site.publications reversed %}
       {% if post.type == "patent" %}
 
-        <article class="publication-card patent-card">
+        <article
+          class="publication-card patent-card"
+          data-publication-type="patent"
+          data-publication-year="{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}"
+        >
 
           <div class="publication-content">
 
@@ -570,11 +861,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </h3>
 
             {% if post.authors %}
-
               <p class="publication-authors">
                 {{ post.authors }}
               </p>
-
             {% endif %}
 
             <p class="publication-venue">
@@ -584,11 +873,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
               {% endif %}
 
               {% if post.patent_number %}
-
                 <span class="publication-number">
                   · {{ post.patent_number }}
                 </span>
-
               {% endif %}
 
               {% if post.year %}
@@ -600,11 +887,9 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
             </p>
 
             {% if post.excerpt %}
-
               <p class="publication-description">
                 {{ post.excerpt | strip_html | strip }}
               </p>
-
             {% endif %}
 
           </div>
@@ -619,10 +904,6 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </section>
 
 
-<!-- ======================================
-     No search results
-     ====================================== -->
-
 <p
   id="publication-no-results"
   class="publication-no-results"
@@ -631,22 +912,29 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 </p>
 
 
-<!-- ======================================
-     Ctrl + F search and highlighting
-     ====================================== -->
-
 <script>
 (function () {
-
   const searchInput =
     document.getElementById("publication-search");
 
-  const sections = Array.from(
-    document.querySelectorAll(".publication-section")
-  );
+  const filterButton =
+    document.getElementById("publication-filter-button");
+
+  const filterPanel =
+    document.getElementById("publication-filter-panel");
+
+  const yearOptions =
+    document.getElementById("publication-year-options");
+
+  const typeOptions =
+    document.getElementById("publication-type-options");
 
   const cards = Array.from(
     document.querySelectorAll(".publication-card")
+  );
+
+  const sections = Array.from(
+    document.querySelectorAll(".publication-section")
   );
 
   const noResults =
@@ -656,256 +944,217 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
     return;
   }
 
-  /* Save the original contents of every card */
-  cards.forEach(function (card) {
-    card.dataset.originalHtml = card.innerHTML;
+  let selectedYear = "all";
+  let selectedType = "all";
+
+  /* Generate the year buttons automatically */
+  const years = Array.from(
+    new Set(
+      cards
+        .map(function (card) {
+          return card.dataset.publicationYear;
+        })
+        .filter(Boolean)
+    )
+  ).sort(function (a, b) {
+    return Number(b) - Number(a);
   });
 
-  /* Escape special regular-expression characters */
-  function escapeRegExp(text) {
-    return text.replace(
-      /[.*+?^${}()|[\]\\]/g,
-      "\\$&"
-    );
+  function createYearButton(label, value, active) {
+    const button =
+      document.createElement("button");
+
+    button.type = "button";
+    button.className =
+      "publication-filter-option";
+
+    if (active) {
+      button.classList.add("is-active");
+    }
+
+    button.dataset.filterYear = value;
+    button.textContent = label;
+
+    return button;
   }
 
-  /* Highlight matching text without breaking links */
-  function highlightText(card, query) {
+  yearOptions.appendChild(
+    createYearButton("All", "all", true)
+  );
 
-    if (!query) {
-      return;
-    }
-
-    const pattern = new RegExp(
-      "(" + escapeRegExp(query) + ")",
-      "gi"
+  years.forEach(function (year) {
+    yearOptions.appendChild(
+      createYearButton(year, year, false)
     );
+  });
 
-    const walker = document.createTreeWalker(
-      card,
-      NodeFilter.SHOW_TEXT,
-      {
-        acceptNode: function (node) {
+  /* Open and close the filter panel */
+  filterButton.addEventListener(
+    "click",
+    function () {
+      const isOpen =
+        filterPanel.classList.toggle("is-open");
 
-          const parent = node.parentElement;
-
-          if (!parent) {
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          if (
-            parent.closest("script") ||
-            parent.closest("style") ||
-            parent.closest(".publication-highlight")
-          ) {
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          if (!node.nodeValue.trim()) {
-            return NodeFilter.FILTER_REJECT;
-          }
-
-          return NodeFilter.FILTER_ACCEPT;
-        }
-      }
-    );
-
-    const textNodes = [];
-    let currentNode;
-
-    while ((currentNode = walker.nextNode())) {
-      textNodes.push(currentNode);
-    }
-
-    textNodes.forEach(function (textNode) {
-
-      const text = textNode.nodeValue;
-
-      pattern.lastIndex = 0;
-
-      if (!pattern.test(text)) {
-        pattern.lastIndex = 0;
-        return;
-      }
-
-      pattern.lastIndex = 0;
-
-      const fragment =
-        document.createDocumentFragment();
-
-      const parts = text.split(pattern);
-
-      parts.forEach(function (part) {
-
-        if (
-          part.toLowerCase() ===
-          query.toLowerCase()
-        ) {
-
-          const mark =
-            document.createElement("mark");
-
-          mark.className =
-            "publication-highlight";
-
-          mark.textContent = part;
-
-          fragment.appendChild(mark);
-
-        } else {
-
-          fragment.appendChild(
-            document.createTextNode(part)
-          );
-
-        }
-
-      });
-
-      textNode.parentNode.replaceChild(
-        fragment,
-        textNode
+      filterButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
       );
+    }
+  );
 
-    });
-
-  }
-
-  /* Run the publication search */
-  function performSearch() {
-
+  /* Apply search and filters together */
+  function applyFilters() {
     const query = searchInput.value
       .trim()
       .toLowerCase();
 
-    let totalVisibleCards = 0;
+    let visibleCount = 0;
 
     cards.forEach(function (card) {
-
-      /* Restore original content before each search */
-      card.innerHTML =
-        card.dataset.originalHtml;
-
-      const searchableText = card.textContent
+      const cardText = card.textContent
         .toLowerCase()
         .replace(/\s+/g, " ");
 
-      const matches =
+      const cardYear =
+        card.dataset.publicationYear || "";
+
+      const cardType =
+        card.dataset.publicationType || "";
+
+      const matchesSearch =
         query === "" ||
-        searchableText.includes(query);
+        cardText.includes(query);
 
-      if (matches) {
+      const matchesYear =
+        selectedYear === "all" ||
+        cardYear === selectedYear;
 
+      const matchesType =
+        selectedType === "all" ||
+        cardType === selectedType;
+
+      const shouldShow =
+        matchesSearch &&
+        matchesYear &&
+        matchesType;
+
+      if (shouldShow) {
         card.style.removeProperty("display");
-        totalVisibleCards += 1;
-
-        if (query !== "") {
-          highlightText(card, query);
-        }
-
+        visibleCount += 1;
       } else {
-
         card.style.setProperty(
           "display",
           "none",
           "important"
         );
-
       }
-
     });
 
-    /* Hide sections that have no matching results */
-    sections.forEach(function (section) {
+    const filtersAreActive =
+      query !== "" ||
+      selectedYear !== "all" ||
+      selectedType !== "all";
 
+    sections.forEach(function (section) {
       const sectionCards = Array.from(
         section.querySelectorAll(
           ".publication-card"
         )
       );
 
-      const hasVisibleCard =
+      const hasVisibleCards =
         sectionCards.some(function (card) {
-
           return (
             window.getComputedStyle(card)
               .display !== "none"
           );
-
         });
 
       if (
-        query !== "" &&
-        !hasVisibleCard
+        filtersAreActive &&
+        !hasVisibleCards
       ) {
-
         section.classList.add(
           "publication-section-hidden"
         );
-
       } else {
-
         section.classList.remove(
           "publication-section-hidden"
         );
-
       }
-
     });
 
-    if (noResults) {
-
-      noResults.style.display =
-        totalVisibleCards === 0
-          ? "block"
-          : "none";
-
-    }
-
+    noResults.style.display =
+      visibleCount === 0
+        ? "block"
+        : "none";
   }
 
   searchInput.addEventListener(
     "input",
-    performSearch
+    applyFilters
   );
 
-  /* Ctrl + F on Windows or Command + F on Mac */
-  document.addEventListener(
-    "keydown",
+  /* Year filter */
+  yearOptions.addEventListener(
+    "click",
     function (event) {
+      const button = event.target.closest(
+        "[data-filter-year]"
+      );
 
-      const isSearchShortcut =
-        (event.ctrlKey || event.metaKey) &&
-        event.key.toLowerCase() === "f";
+      if (!button) {
+        return;
+      }
 
-      if (isSearchShortcut) {
+      selectedYear =
+        button.dataset.filterYear;
 
-        event.preventDefault();
-
-        searchInput.focus();
-        searchInput.select();
-
-        searchInput.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
+      yearOptions
+        .querySelectorAll(
+          ".publication-filter-option"
+        )
+        .forEach(function (option) {
+          option.classList.remove(
+            "is-active"
+          );
         });
 
-      }
+      button.classList.add("is-active");
 
-      /* Escape clears the search */
-      if (
-        event.key === "Escape" &&
-        document.activeElement === searchInput
-      ) {
-
-        searchInput.value = "";
-        performSearch();
-        searchInput.blur();
-
-      }
-
+      applyFilters();
     }
   );
 
+  /* Type filter */
+  typeOptions.addEventListener(
+    "click",
+    function (event) {
+      const button = event.target.closest(
+        "[data-filter-type]"
+      );
+
+      if (!button) {
+        return;
+      }
+
+      selectedType =
+        button.dataset.filterType;
+
+      typeOptions
+        .querySelectorAll(
+          ".publication-filter-option"
+        )
+        .forEach(function (option) {
+          option.classList.remove(
+            "is-active"
+          );
+        });
+
+      button.classList.add("is-active");
+
+      applyFilters();
+    }
+  );
 })();
 </script>
