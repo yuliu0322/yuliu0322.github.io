@@ -899,24 +899,14 @@ html[data-theme="dark"] .home-research-card:hover {
       <!-- Oral delivery -->
       <article class="home-research-card home-research-card--delivery">
 
-        <div class="home-card-header">
+<div class="home-card-header">
 
-          <span class="home-card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <circle cx="8.5" cy="12" r="4.8"></circle>
-              <circle cx="16" cy="8" r="2.4"></circle>
-              <circle cx="16.5" cy="16" r="3.1"></circle>
-              <path d="M5.3 8.5 3 6.5"></path>
-              <path d="M5 15.3 2.8 17.5"></path>
-            </svg>
-          </span>
+  <div>
+    <span class="home-card-number">RESEARCH 01</span>
+    <h3 class="home-card-title">Oral Delivery Systems</h3>
+  </div>
 
-          <div>
-            <span class="home-card-number">RESEARCH 01</span>
-            <h3 class="home-card-title">Oral Delivery Systems</h3>
-          </div>
-
-        </div>
+</div>
 
         <p class="home-card-text">
           Developing PLGA-based systems that protect vaccines and
