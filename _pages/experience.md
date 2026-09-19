@@ -35,8 +35,8 @@ author_profile: true
 .experience-position {
   margin: 0 0 10px;
   color: #253248;
-  font-size: 1.5rem;
-  line-height: 1.3;
+  font-size: 1.25rem;
+  line-height: 1.35;
 }
 
 .experience-organization {
@@ -152,7 +152,7 @@ author_profile: true
   }
 
   .experience-position {
-    font-size: 1.28rem;
+    font-size: 1.15rem;
   }
 
   .experience-organization {
