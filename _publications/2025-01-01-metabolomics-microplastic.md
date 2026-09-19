@@ -10,7 +10,7 @@ doi: "10.1016/j.foodchem.2024.140961"
 pdf: "/files/metabolomics-microplastic.pdf"
 thumbnail: "/assets/images/metabolomics-microplastic.png"
 category: "Seafood Safety"
-abstract: >
+summary: >
   This study investigated the molecular mechanisms underlying the response of
   Pacific oysters to polystyrene microplastic exposure by integrating
   metabolomic profiling with protein-expression analysis. Microplastic stress
