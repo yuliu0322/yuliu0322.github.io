@@ -10,8 +10,6 @@ location: "Blacksburg, VA, USA"
 
 ![ISSCS 2026 Poster]({{ "/images/isscs2025-poster.jpg" | relative_url }})
 
-Poster presentation, Virginia Tech, Blacksburg, VA, USA.
-
 At ISSCS 2026, I presented our latest research on bioinspired self-cooling nanocomposites based on chitin nanofibers and gelatin. The materials exhibited enhanced mechanical properties, including increased stiffness and strength, while retaining high flexibility. They also achieved effective passive radiative and evaporative cooling, demonstrating promise as sustainable materials for thermal management applications.
 
 **Conference website:** [International Symposium on Stochastic Complex Systems 2026](https://www.phys.vt.edu/Newsandevents/conferences/ISSCS.html){:target="_blank" rel="noopener noreferrer"}
