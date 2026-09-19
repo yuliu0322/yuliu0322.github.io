@@ -1,3 +1,11 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+description: "Peer-reviewed journal articles, book chapters, and patents by Yu Liu."
+---
+
 <style>
 :root {
   --pub-blue: #52adc8;
@@ -59,4 +67,1269 @@
   height: 50px !important;
   min-height: 50px !important;
   max-height: 50px !important;
-  box-sizing
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 16px 0 52px !important;
+  border: 1px solid #d8dee6 !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  color: #333333 !important;
+  font-size: 16px !important;
+  line-height: normal !important;
+  box-shadow: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#publication-search.publication-search:focus {
+  border-color: var(--pub-blue) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12) !important;
+}
+
+#publication-filter-button.publication-filter-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px;
+  width: 140px !important;
+  min-width: 140px !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 18px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: var(--pub-gold) !important;
+  color: #ffffff !important;
+  font: inherit;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+#publication-filter-button.publication-filter-button:hover,
+#publication-filter-button.publication-filter-button[aria-expanded="true"] {
+  background: var(--pub-gold-hover) !important;
+}
+
+#publication-filter-button.publication-filter-button:hover {
+  transform: translateY(-1px);
+}
+
+#publication-filter-button.publication-filter-button svg {
+  display: block !important;
+  width: 21px !important;
+  min-width: 21px !important;
+  height: 21px !important;
+  color: #ffffff !important;
+}
+
+/* Filter panel */
+
+.publication-filter-panel {
+  display: none;
+  grid-template-columns: minmax(250px, 1fr) minmax(320px, 1.5fr);
+  gap: 32px;
+  margin-bottom: 2rem;
+  padding: 24px;
+  border: 1px solid #d8e0e8;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.publication-filter-panel.is-open {
+  display: grid;
+}
+
+.publication-filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: var(--pub-dark);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.publication-filter-heading svg {
+  width: 21px;
+  height: 21px;
+}
+
+.publication-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button.publication-filter-option {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 17px !important;
+  border: 1px solid transparent !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: #35435a !important;
+  font: inherit;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  cursor: pointer;
+}
+
+button.publication-filter-option:hover {
+  border-color: var(--pub-gold) !important;
+}
+
+button.publication-filter-option.is-active {
+  border-color: var(--pub-gold) !important;
+  background: var(--pub-gold) !important;
+  color: #ffffff !important;
+}
+
+/* Publication cards */
+
+.publication-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid var(--pub-border);
+  border-radius: 14px;
+  background: #ffffff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Patent: text only */
+
+.patent-card {
+  display: block;
+  padding: 28px 32px;
+}
+
+/* Publication images */
+
+.publication-image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  min-width: 320px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.publication-thumbnail {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  background: transparent;
+}
+
+/* Book chapter placeholder */
+
+.book-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  min-width: 320px;
+  height: 220px;
+  box-sizing: border-box;
+  border: 1px solid #dce7ec;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef3f6 100%
+  );
+  color: #64748b;
+}
+
+.book-placeholder svg {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 14px;
+}
+
+.book-placeholder span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+/* Card text */
+
+.publication-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.publication-title {
+  margin: 0 0 10px;
+  color: var(--pub-dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.publication-authors {
+  margin: 0 0 8px;
+  color: #4f5865;
+  line-height: 1.55;
+}
+
+.publication-venue {
+  margin: 0 0 10px;
+  color: #202936;
+  line-height: 1.5;
+}
+
+.publication-description {
+  margin: 0;
+  color: var(--pub-muted);
+  line-height: 1.6;
+}
+
+/* Publication actions */
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 1.1rem;
+}
+
+.publication-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 35px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px 14px;
+  border: 1px solid #cbdce3;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #3f8196;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.publication-action-button:hover,
+.publication-action-button:focus-visible,
+.summary-toggle[aria-expanded="true"] {
+  border-color: var(--pub-blue);
+  background: var(--pub-blue);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.publication-action-button:focus-visible {
+  outline: 3px solid rgba(82, 173, 200, 0.2);
+  outline-offset: 2px;
+}
+
+.summary-toggle-icon {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.publication-external-icon {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.publication-summary {
+  margin-top: 1rem;
+  padding: 14px 17px;
+  border-left: 3px solid var(--pub-gold);
+  border-radius: 0 7px 7px 0;
+  background: #f6f8f9;
+  color: #566170;
+  font-size: 0.91rem;
+  line-height: 1.7;
+}
+
+.publication-summary[hidden] {
+  display: none;
+}
+
+.publication-summary p {
+  margin: 0;
+}
+
+.publication-number {
+  font-weight: 500;
+}
+
+.publication-section-hidden {
+  display: none;
+}
+
+.publication-no-results {
+  display: none;
+  margin: 2rem 0;
+  padding: 20px;
+  border: 1px solid var(--pub-border);
+  border-radius: 10px;
+  color: var(--pub-muted);
+  text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .publication-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  #publication-filter-button.publication-filter-button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .publication-filter-panel,
+  .publication-filter-panel.is-open {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .publication-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .patent-card {
+    display: block;
+    padding: 22px;
+  }
+
+  .publication-image-box {
+    width: 100%;
+    min-width: 0;
+    height: 230px;
+  }
+
+  .book-placeholder {
+    width: 100%;
+    min-width: 0;
+    height: 190px;
+  }
+
+  .publication-title {
+    font-size: 1.1rem;
+  }
+
+  .publication-action-button {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+
+  .publication-summary {
+    padding: 13px 14px;
+    font-size: 0.87rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .publication-card {
+    padding: 16px;
+  }
+
+  .patent-card {
+    padding: 18px;
+  }
+
+  .publication-image-box {
+    height: 200px;
+  }
+
+  #publication-search.publication-search {
+    font-size: 15px !important;
+  }
+}
+</style>
+
+
+<!-- Introduction -->
+
+<div class="publication-intro">
+  {% if site.author.googlescholar %}
+    <div class="wordwrap">
+      You can also find my articles on
+      <a
+        href="{{ site.author.googlescholar }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        my Google Scholar profile
+      </a>.
+    </div>
+  {% endif %}
+</div>
+
+
+<!-- Search and Filters -->
+
+<div class="publication-toolbar">
+
+  <div class="publication-search-wrapper">
+
+    <svg
+      class="publication-search-icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        cx="11"
+        cy="11"
+        r="7"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      />
+
+      <path
+        d="M16.5 16.5L21 21"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+
+    <input
+      type="search"
+      id="publication-search"
+      class="publication-search"
+      placeholder="Search publications..."
+      aria-label="Search publications"
+    >
+
+  </div>
+
+  <button
+    type="button"
+    id="publication-filter-button"
+    class="publication-filter-button"
+    aria-expanded="false"
+    aria-controls="publication-filter-panel"
+  >
+
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        d="M3 5h18l-7 8v5l-4 2v-7L3 5z"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linejoin="round"
+      />
+    </svg>
+
+    <span>Filters</span>
+
+  </button>
+
+</div>
+
+
+<!-- Filter Panel -->
+
+<div
+  id="publication-filter-panel"
+  class="publication-filter-panel"
+>
+
+  <div class="publication-filter-group">
+
+    <p class="publication-filter-heading">
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="16"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+
+        <path
+          d="M7 3v4M17 3v4M3 10h18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </svg>
+
+      Year
+
+    </p>
+
+    <div
+      id="publication-year-options"
+      class="publication-filter-options"
+    ></div>
+
+  </div>
+
+  <div class="publication-filter-group">
+
+    <p class="publication-filter-heading">
+
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M3 5.5c3-1.5 6-1.5 9 .5v14c-3-2-6-2-9-.5v-14z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+
+        <path
+          d="M21 5.5c-3-1.5-6-1.5-9 .5v14c3-2 6-2 9-.5v-14z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      Type
+
+    </p>
+
+    <div
+      id="publication-type-options"
+      class="publication-filter-options"
+    >
+
+      <button
+        type="button"
+        class="publication-filter-option is-active"
+        data-filter-type="all"
+      >
+        All
+      </button>
+
+      <button
+        type="button"
+        class="publication-filter-option"
+        data-filter-type="journal"
+      >
+        Journal
+      </button>
+
+      <button
+        type="button"
+        class="publication-filter-option"
+        data-filter-type="book"
+      >
+        Book Chapter
+      </button>
+
+      <button
+        type="button"
+        class="publication-filter-option"
+        data-filter-type="patent"
+      >
+        Patent
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- Peer-Reviewed Journal Articles -->
+
+<section class="publication-section">
+
+  <h2 class="publication-section-title">
+    Peer-Reviewed Journal Articles
+  </h2>
+
+  <div class="publication-list">
+
+    {% for post in site.publications reversed %}
+      {% unless post.type == "book" or post.type == "patent" %}
+
+        <article
+          class="publication-card"
+          data-publication-type="journal"
+          data-publication-year="{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}"
+        >
+
+          {% if post.thumbnail %}
+
+            <div class="publication-image-box">
+
+              <img
+                class="publication-thumbnail"
+                src="{{ post.thumbnail | relative_url }}"
+                alt="Graphical summary for {{ post.title | escape }}"
+                loading="lazy"
+                style="transform: scale({{ post.thumbnail_scale | default: 1 }});"
+              >
+
+            </div>
+
+          {% endif %}
+
+          <div class="publication-content">
+
+            <h3 class="publication-title">
+              {{ post.title }}
+            </h3>
+
+            {% if post.authors %}
+
+              <p class="publication-authors">
+                {{ post.authors }}
+              </p>
+
+            {% endif %}
+
+            {% if post.venue %}
+
+              <p class="publication-venue">
+
+                <strong>{{ post.venue }}</strong>,
+
+                {% if post.year %}
+                  {{ post.year }}
+                {% else %}
+                  {{ post.date | date: "%Y" }}
+                {% endif %}
+
+              </p>
+
+            {% endif %}
+
+            <div class="publication-actions">
+
+              {% if post.overview %}
+                <button
+                  class="publication-action-button summary-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  Summary
+                  <span class="summary-toggle-icon" aria-hidden="true">+</span>
+                </button>
+              {% endif %}
+
+              {% if post.doi %}
+                <a
+                  class="publication-action-button"
+                  href="{% if post.doi contains 'http' %}{{ post.doi }}{% else %}https://doi.org/{{ post.doi }}{% endif %}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DOI
+                  <span class="publication-external-icon" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if post.pdf %}
+                <a
+                  class="publication-action-button"
+                  href="{% if post.pdf contains 'http' %}{{ post.pdf }}{% else %}{{ post.pdf | relative_url }}{% endif %}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PDF
+                  <span class="publication-external-icon" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+            </div>
+
+            {% if post.overview %}
+              <div class="publication-summary" hidden>
+                <p>{{ post.overview }}</p>
+              </div>
+            {% endif %}
+
+          </div>
+
+        </article>
+
+      {% endunless %}
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<!-- Book Chapters -->
+
+<section class="publication-section">
+
+  <h2 class="publication-section-title">
+    Book Chapters
+  </h2>
+
+  <div class="publication-list">
+
+    {% for post in site.publications reversed %}
+      {% if post.type == "book" %}
+
+        <article
+          class="publication-card"
+          data-publication-type="book"
+          data-publication-year="{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}"
+        >
+
+          {% if post.thumbnail %}
+
+            <div class="publication-image-box">
+
+              <img
+                class="publication-thumbnail"
+                src="{{ post.thumbnail | relative_url }}"
+                alt="Cover image for {{ post.title | escape }}"
+                loading="lazy"
+                style="transform: scale({{ post.thumbnail_scale | default: 1 }});"
+              >
+
+            </div>
+
+          {% else %}
+
+            <div class="book-placeholder">
+
+              <svg
+                viewBox="0 0 64 64"
+                aria-hidden="true"
+              >
+                <path
+                  d="M9 12c8-3 15-2 23 3v40c-8-5-15-6-23-3V12z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M55 12c-8-3-15-2-23 3v40c8-5 15-6 23-3V12z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M32 15v40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+              </svg>
+
+              <span>BOOK CHAPTER</span>
+
+            </div>
+
+          {% endif %}
+
+          <div class="publication-content">
+
+            <h3 class="publication-title">
+
+              <a
+                href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
+                {% if post.paperurl and post.paperurl != "" %}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                {% endif %}
+              >
+                {{ post.title }}
+              </a>
+
+            </h3>
+
+            {% if post.authors %}
+
+              <p class="publication-authors">
+                {{ post.authors }}
+              </p>
+
+            {% endif %}
+
+            {% if post.venue %}
+
+              <p class="publication-venue">
+
+                <strong>{{ post.venue }}</strong>,
+
+                {% if post.year %}
+                  {{ post.year }}
+                {% else %}
+                  {{ post.date | date: "%Y" }}
+                {% endif %}
+
+              </p>
+
+            {% endif %}
+
+            {% if post.excerpt %}
+
+              <p class="publication-description">
+                {{ post.excerpt | strip_html | strip }}
+              </p>
+
+            {% endif %}
+
+          </div>
+
+        </article>
+
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<!-- Patents: text only -->
+
+<section class="publication-section">
+
+  <h2 class="publication-section-title">
+    Patents
+  </h2>
+
+  <div class="publication-list">
+
+    {% for post in site.publications reversed %}
+      {% if post.type == "patent" %}
+
+        <article
+          class="publication-card patent-card"
+          data-publication-type="patent"
+          data-publication-year="{% if post.year %}{{ post.year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}"
+        >
+
+          <div class="publication-content">
+
+            <h3 class="publication-title">
+
+              <a
+                href="{% if post.paperurl and post.paperurl != '' %}{{ post.paperurl }}{% else %}{{ post.url | relative_url }}{% endif %}"
+                {% if post.paperurl and post.paperurl != "" %}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                {% endif %}
+              >
+                {{ post.title }}
+              </a>
+
+            </h3>
+
+            {% if post.authors %}
+
+              <p class="publication-authors">
+                {{ post.authors }}
+              </p>
+
+            {% endif %}
+
+            <p class="publication-venue">
+
+              {% if post.venue %}
+                <strong>{{ post.venue }}</strong>
+              {% endif %}
+
+              {% if post.patent_number %}
+
+                <span class="publication-number">
+                  · {{ post.patent_number }}
+                </span>
+
+              {% endif %}
+
+              {% if post.year %}
+                · {{ post.year }}
+              {% else %}
+                · {{ post.date | date: "%Y" }}
+              {% endif %}
+
+            </p>
+
+            {% if post.excerpt %}
+
+              <p class="publication-description">
+                {{ post.excerpt | strip_html | strip }}
+              </p>
+
+            {% endif %}
+
+          </div>
+
+        </article>
+
+      {% endif %}
+    {% endfor %}
+
+  </div>
+
+</section>
+
+
+<!-- No Results -->
+
+<p
+  id="publication-no-results"
+  class="publication-no-results"
+>
+  No matching publications found.
+</p>
+
+
+<!-- Search and Filter Functions -->
+
+<script>
+(function () {
+  const searchInput =
+    document.getElementById("publication-search");
+
+  const filterButton =
+    document.getElementById("publication-filter-button");
+
+  const filterPanel =
+    document.getElementById("publication-filter-panel");
+
+  const yearOptions =
+    document.getElementById("publication-year-options");
+
+  const typeOptions =
+    document.getElementById("publication-type-options");
+
+  const cards = Array.from(
+    document.querySelectorAll(".publication-card")
+  );
+
+  const sections = Array.from(
+    document.querySelectorAll(".publication-section")
+  );
+
+  const noResults =
+    document.getElementById("publication-no-results");
+
+  if (!searchInput || cards.length === 0) {
+    return;
+  }
+
+  let selectedYear = "all";
+  let selectedType = "all";
+
+  /* Generate year buttons automatically */
+
+  const years = Array.from(
+    new Set(
+      cards
+        .map(function (card) {
+          return card.dataset.publicationYear;
+        })
+        .filter(Boolean)
+    )
+  ).sort(function (a, b) {
+    return Number(b) - Number(a);
+  });
+
+  function createYearButton(label, value, active) {
+    const button =
+      document.createElement("button");
+
+    button.type = "button";
+    button.className =
+      "publication-filter-option";
+
+    if (active) {
+      button.classList.add("is-active");
+    }
+
+    button.dataset.filterYear = value;
+    button.textContent = label;
+
+    return button;
+  }
+
+  yearOptions.appendChild(
+    createYearButton("All", "all", true)
+  );
+
+  years.forEach(function (year) {
+    yearOptions.appendChild(
+      createYearButton(year, year, false)
+    );
+  });
+
+  /* Open and close filter panel */
+
+  filterButton.addEventListener(
+    "click",
+    function () {
+      const isOpen =
+        filterPanel.classList.toggle("is-open");
+
+      filterButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+    }
+  );
+
+  /* Apply search and filters */
+
+  function applyFilters() {
+    const query = searchInput.value
+      .trim()
+      .toLowerCase();
+
+    let visibleCount = 0;
+
+    cards.forEach(function (card) {
+      const cardText = card.textContent
+        .toLowerCase()
+        .replace(/\s+/g, " ");
+
+      const cardYear =
+        card.dataset.publicationYear || "";
+
+      const cardType =
+        card.dataset.publicationType || "";
+
+      const matchesSearch =
+        query === "" ||
+        cardText.includes(query);
+
+      const matchesYear =
+        selectedYear === "all" ||
+        cardYear === selectedYear;
+
+      const matchesType =
+        selectedType === "all" ||
+        cardType === selectedType;
+
+      const shouldShow =
+        matchesSearch &&
+        matchesYear &&
+        matchesType;
+
+      if (shouldShow) {
+        card.style.removeProperty("display");
+        visibleCount += 1;
+      } else {
+        card.style.setProperty(
+          "display",
+          "none",
+          "important"
+        );
+      }
+    });
+
+    const filtersAreActive =
+      query !== "" ||
+      selectedYear !== "all" ||
+      selectedType !== "all";
+
+    sections.forEach(function (section) {
+      const sectionCards = Array.from(
+        section.querySelectorAll(
+          ".publication-card"
+        )
+      );
+
+      const hasVisibleCards =
+        sectionCards.some(function (card) {
+          return (
+            window.getComputedStyle(card)
+              .display !== "none"
+          );
+        });
+
+      if (filtersAreActive && !hasVisibleCards) {
+        section.classList.add(
+          "publication-section-hidden"
+        );
+      } else {
+        section.classList.remove(
+          "publication-section-hidden"
+        );
+      }
+    });
+
+    noResults.style.display =
+      visibleCount === 0
+        ? "block"
+        : "none";
+  }
+
+  searchInput.addEventListener(
+    "input",
+    applyFilters
+  );
+
+  /* Year filter */
+
+  yearOptions.addEventListener(
+    "click",
+    function (event) {
+      const button = event.target.closest(
+        "[data-filter-year]"
+      );
+
+      if (!button) {
+        return;
+      }
+
+      selectedYear =
+        button.dataset.filterYear;
+
+      yearOptions
+        .querySelectorAll(
+          ".publication-filter-option"
+        )
+        .forEach(function (option) {
+          option.classList.remove("is-active");
+        });
+
+      button.classList.add("is-active");
+      applyFilters();
+    }
+  );
+
+  /* Type filter */
+
+  typeOptions.addEventListener(
+    "click",
+    function (event) {
+      const button = event.target.closest(
+        "[data-filter-type]"
+      );
+
+      if (!button) {
+        return;
+      }
+
+      selectedType =
+        button.dataset.filterType;
+
+      typeOptions
+        .querySelectorAll(
+          ".publication-filter-option"
+        )
+        .forEach(function (option) {
+          option.classList.remove("is-active");
+        });
+
+      button.classList.add("is-active");
+      applyFilters();
+    }
+  );
+})();
+</script>
+
+
+<!-- Summary Toggle -->
+
+<script>
+(function () {
+  document.addEventListener("click", function (event) {
+    const button = event.target.closest(".summary-toggle");
+
+    if (!button) {
+      return;
+    }
+
+    const card = button.closest(".publication-card");
+
+    if (!card) {
+      return;
+    }
+
+    const summary = card.querySelector(".publication-summary");
+
+    if (!summary) {
+      return;
+    }
+
+    const isExpanded =
+      button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute(
+      "aria-expanded",
+      String(!isExpanded)
+    );
+
+    summary.hidden = isExpanded;
+
+    const icon = button.querySelector(".summary-toggle-icon");
+
+    if (icon) {
+      icon.textContent = isExpanded ? "+" : "−";
+    }
+  });
+})();
+</script>
