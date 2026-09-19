@@ -182,10 +182,10 @@ redirect_from:
     </p>
 
     <div class="home-focus" aria-label="Current research areas">
-      <span>Aquatic Animal Health</span>
-      <span>Oral Delivery Systems</span>
       <span>Passive Cooling Materials</span>
       <span>Sustainable Food Preservation</span>
+      <span>Oral Delivery Systems</span>
+      <span>Aquatic Animal Health</span>
     </div>
   </section>
 
