@@ -159,15 +159,9 @@ redirect_from:
     </h2>
 
     <p>
-      I am a Ph.D. student in Biological Systems Engineering at Virginia Tech.
-      I conduct my research across the Sustainable &amp; Intelligent Seafood
-      Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
-    </p>
-
-    <p>
-      My academic background brings together food science, aquaculture,
-      biomaterials, and food engineering, with a broad interest in developing
-      practical and sustainable solutions for aquatic food systems.
+  I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
+  conducting interdisciplinary research in the Sustainable &amp; Intelligent
+  Seafood Bioprocessing Laboratory and the Biopolymer Laboratory.
     </p>
   </section>
 
