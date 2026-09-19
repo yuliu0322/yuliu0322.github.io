@@ -10,7 +10,7 @@ doi: "10.1016/j.foodchem.2023.136153"
 thumbnail: "/assets/images/oyster-microplastics-review.png"
 pdf: "/files/oyster-microplastics-review.pdf"
 category: "Seafood Safety"
-abstract: >
+summary: >
   This review examines microplastic contamination in oysters from the
   perspectives of detection, biological effects, food safety, and mitigation.
   It compares commonly used extraction, identification, and quantification
