@@ -186,6 +186,64 @@ author_profile: true
   line-height: 1.8;
 }
 
+/* =========================
+   Dark mode
+   ========================= */
+
+html[data-theme="dark"] .research-overview,
+html[data-theme="dark"] .research-question,
+html[data-theme="dark"] .research-description,
+html[data-theme="dark"] .research-interests p {
+  color: #c8d0da;
+}
+
+html[data-theme="dark"] .research-question strong,
+html[data-theme="dark"] .research-title,
+html[data-theme="dark"] .research-topics-label,
+html[data-theme="dark"] .research-interests h2 {
+  color: #f2f5f8;
+}
+
+html[data-theme="dark"] .research-areas-divider span {
+  color: #e0ad60;
+}
+
+html[data-theme="dark"] .research-areas-divider::after,
+html[data-theme="dark"] .research-section,
+html[data-theme="dark"] .research-interests {
+  border-color: #5f666e;
+}
+
+html[data-theme="dark"] .research-areas-divider::after {
+  background: #5f666e;
+}
+
+html[data-theme="dark"] .research-section-last {
+  border-bottom: none;
+}
+
+html[data-theme="dark"] .research-number {
+  color: #667984;
+}
+
+html[data-theme="dark"] .research-title::after {
+  background: #e0ad60;
+}
+
+html[data-theme="dark"] .research-topics li {
+  color: #d1d8e0;
+  background: #3d4146;
+  border-color: #666d75;
+}
+
+html[data-theme="dark"] .research-topics li::before {
+  background: #65c2dd;
+}
+
+/* =========================
+   Mobile layout
+   ========================= */
+
 @media (max-width: 768px) {
   .research-overview {
     margin-bottom: 2rem;
