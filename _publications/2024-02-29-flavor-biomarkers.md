@@ -10,7 +10,7 @@ doi: "10.3390/foods13050765"
 pdf: "/files/flavor-biomarkers.pdf"
 thumbnail: "/assets/images/flavor-biomarkers.png"
 category: "Seafood Quality"
-abstract: >
+summary: >
   This study investigated how microplastic exposure influences flavor-related
   characteristics in Pacific oysters by integrating metabolite, fatty acid,
   and volatile-compound analyses. Microplastic exposure altered the oysters'
