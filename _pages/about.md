@@ -110,14 +110,6 @@ redirect_from:
   margin: 0;
 }
 
-.home-interests {
-  margin-top: 1.4rem;
-  color: #7a8491;
-  font-size: 0.94rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
 /* Mobile layout */
 @media (max-width: 768px) {
   .home-intro {
@@ -203,14 +195,3 @@ redirect_from:
   These experiences help me maintain curiosity, creativity, and balance,
   qualities that I also value in scientific research and problem-solving.
 </p>
-
-    <div class="home-interests">
-      Travel&nbsp;&nbsp;·&nbsp;&nbsp;
-      Hiking&nbsp;&nbsp;·&nbsp;&nbsp;
-      Photography&nbsp;&nbsp;·&nbsp;&nbsp;
-      Movies&nbsp;&nbsp;·&nbsp;&nbsp;
-      Music
-    </div>
-  </section>
-
-</div>
