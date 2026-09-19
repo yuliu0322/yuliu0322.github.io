@@ -59,8 +59,8 @@ author_profile: true
 .research-section {
   position: relative;
   width: 100%;
-  margin: 0 0 4.5rem;
-  padding: 0 0 4rem;
+  margin: 0 0 2.75rem;
+  padding: 0 0 2.25rem;
   border-bottom: 1px solid #e4e9ed;
 }
 
@@ -210,8 +210,8 @@ author_profile: true
   }
 
   .research-section {
-    margin-bottom: 3.5rem;
-    padding-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
   }
 
   .research-section-last {
