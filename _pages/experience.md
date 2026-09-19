@@ -134,6 +134,53 @@ author_profile: true
 }
 
 /* =========================
+   Dark mode
+   ========================= */
+
+html[data-theme="dark"] .experience-entry {
+  border-bottom-color: #5f666e;
+}
+
+html[data-theme="dark"] .experience-entry:last-child {
+  border-bottom-color: transparent;
+}
+
+html[data-theme="dark"] .experience-position {
+  color: #f2f5f8;
+}
+
+html[data-theme="dark"] .experience-organization,
+html[data-theme="dark"] .experience-location {
+  color: #c4ccd6;
+}
+
+html[data-theme="dark"] .experience-company {
+  color: #65c2dd;
+  border-bottom-color: rgba(101, 194, 221, 0.45);
+}
+
+html[data-theme="dark"] .experience-company:hover {
+  color: #e0ad60;
+  border-bottom-color: #e0ad60;
+}
+
+html[data-theme="dark"] .experience-divider {
+  color: #7d858e;
+}
+
+html[data-theme="dark"] .experience-date {
+  color: #e0ad60;
+}
+
+html[data-theme="dark"] .experience-detail-number {
+  color: #71c4dc;
+}
+
+html[data-theme="dark"] .experience-detail p {
+  color: #c8d0da;
+}
+
+/* =========================
    Mobile layout
    ========================= */
 
