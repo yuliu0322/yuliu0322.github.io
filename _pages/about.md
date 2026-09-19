@@ -496,3 +496,594 @@ redirect_from:
   margin: 0;
   color: var(--home-text);
   font-size: 0.91rem;
+  line-height: 1.72;
+}
+
+.home-card-tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 1rem;
+}
+
+.home-card-tag {
+  padding: 4px 8px;
+  color: var(--home-muted);
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 650;
+}
+
+
+/* ==================================================
+   Beyond the laboratory
+   ================================================== */
+
+.home-beyond-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 2.1rem;
+  align-items: center;
+}
+
+.home-beyond-copy p {
+  margin: 0 0 1rem;
+  color: var(--home-text);
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+.home-beyond-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.home-interest-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-content: center;
+}
+
+.home-interest {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  color: var(--home-navy);
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  background: var(--home-surface);
+  box-shadow: 0 4px 12px rgba(35, 55, 75, 0.04);
+  font-size: 0.78rem;
+  font-weight: 660;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease;
+}
+
+.home-interest:hover {
+  color: var(--home-blue-dark);
+  border-color: rgba(72, 169, 197, 0.48);
+  transform: translateY(-2px);
+}
+
+.home-interest svg {
+  width: 17px;
+  height: 17px;
+  color: var(--home-blue-dark);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==================================================
+   Animation
+   ================================================== */
+
+.home-hero,
+.home-section {
+  animation: home-reveal 0.7s ease both;
+}
+
+.home-section {
+  animation-delay: 0.08s;
+}
+
+.home-beyond-section {
+  animation-delay: 0.14s;
+}
+
+@keyframes home-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-orbit-rotate-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes home-node-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes home-particle-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -8px);
+  }
+}
+
+
+/* ==================================================
+   Dark mode
+   ================================================== */
+
+html[data-theme="dark"] .home-welcome {
+  --home-navy: #f1f5f8;
+  --home-text: #c7d0da;
+  --home-muted: #aeb9c4;
+  --home-blue: #65c2dd;
+  --home-blue-dark: #69c8e2;
+  --home-surface: #343a40;
+  --home-border: #4c5661;
+  --home-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="dark"] .home-hero {
+  border-color: #4b5962;
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(101, 194, 221, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 72% 92%,
+      rgba(219, 166, 85, 0.09),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #2d3940 0%,
+      #30363c 58%,
+      #3c3831 100%
+    );
+}
+
+html[data-theme="dark"] .home-keyword,
+html[data-theme="dark"] .home-visual-node {
+  color: #d8e1e8;
+  border-color: #52606a;
+  background: rgba(52, 58, 64, 0.94);
+}
+
+html[data-theme="dark"] .home-visual-core {
+  border-color: rgba(101, 194, 221, 0.25);
+  background:
+    radial-gradient(
+      circle at 35% 28%,
+      rgba(68, 83, 92, 0.96),
+      rgba(45, 65, 74, 0.94) 75%
+    );
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18),
+    inset 0 0 24px rgba(101, 194, 221, 0.06);
+}
+
+html[data-theme="dark"] .home-research-card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .home-research-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ==================================================
+   Responsive layout
+   ================================================== */
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .home-visual {
+    width: min(100%, 280px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: auto;
+    margin-bottom: 2.3rem;
+    padding: 1.7rem 1.35rem 1.9rem;
+    border-radius: 17px;
+  }
+
+  .home-greeting {
+    font-size: 1.75rem;
+  }
+
+  .home-tagline {
+    font-size: 1rem;
+  }
+
+  .home-description,
+  .home-beyond-copy p {
+    font-size: 0.94rem;
+    line-height: 1.74;
+  }
+
+  .home-visual {
+    width: 250px;
+  }
+
+  .home-section {
+    margin-bottom: 2.4rem;
+  }
+
+  .home-section-heading {
+    font-size: 1.22rem;
+  }
+
+  .home-research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-research-card {
+    min-height: auto;
+  }
+
+  .home-beyond-layout {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-visual {
+    width: 215px;
+  }
+
+  .home-visual-node {
+    padding: 6px 8px;
+    font-size: 0.61rem;
+  }
+
+  .home-keywords {
+    gap: 6px;
+  }
+
+  .home-keyword {
+    font-size: 0.68rem;
+  }
+}
+
+
+/* ==================================================
+   Accessibility
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero,
+  .home-section,
+  .home-visual-orbit,
+  .home-visual-orbit-inner,
+  .home-visual-node,
+  .home-microsphere {
+    animation: none;
+  }
+
+  .home-research-card,
+  .home-research-card::after,
+  .home-interest {
+    transition: none;
+  }
+}
+</style>
+
+
+<div class="home-welcome">
+
+  <!-- Hero -->
+  <section class="home-hero">
+
+    <div class="home-hero-copy">
+
+      <h1 class="home-greeting">
+        Welcome, I’m
+        <span class="home-greeting-highlight">Yu Liu</span>.
+      </h1>
+
+      <p class="home-tagline">
+        Engineering healthier and more sustainable aquatic food systems—from
+        aquaculture production to post-harvest preservation.
+      </p>
+
+      <p class="home-description">
+        I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
+        conducting interdisciplinary research in the Sustainable &amp; Intelligent
+        Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
+      </p>
+
+      <p class="home-description">
+        My work connects food science, aquaculture, biomaterials, and food
+        engineering to develop practical solutions for aquatic animal health,
+        seafood quality, and sustainable food preservation.
+      </p>
+
+    </div>
+
+
+    <!-- Abstract research visualization -->
+    <div
+      class="home-visual"
+      role="img"
+      aria-label="Abstract visualization of four interconnected research areas"
+    >
+
+      <div class="home-visual-orbit"></div>
+      <div class="home-visual-orbit-inner"></div>
+
+      <!-- Intentionally empty -->
+      <div class="home-visual-core"></div>
+
+      <div class="home-visual-node home-visual-node--health">
+        Sustainable Aquaculture
+      </div>
+
+      <div class="home-visual-node home-visual-node--delivery">
+        Seadfood Science
+      </div>
+
+      <div class="home-visual-node home-visual-node--cooling">
+        Passive Cooling
+      </div>
+
+      <div class="home-visual-node home-visual-node--quality">
+        Oral Delivery
+      </div>
+
+      <span class="home-microsphere home-microsphere--one"></span>
+      <span class="home-microsphere home-microsphere--two"></span>
+      <span class="home-microsphere home-microsphere--three"></span>
+
+    </div>
+  </section>
+
+
+  <!-- Current research -->
+  <section class="home-section">
+
+    <div class="home-section-header">
+      <h2 class="home-section-heading">What I Am Working On</h2>
+    </div>
+
+    <div class="home-research-grid">
+
+      <!-- Oral delivery -->
+      <article class="home-research-card home-research-card--delivery">
+
+<div class="home-card-header">
+
+  <div>
+    <span class="home-card-number">RESEARCH 01</span>
+    <h3 class="home-card-title">Oral Delivery Systems</h3>
+  </div>
+
+</div>
+
+        <p class="home-card-text">
+          Developing PLGA-based systems that protect vaccines and
+          immunostimulants during gastrointestinal transit and deliver them to
+          immune-responsive sites.
+        </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">PLGA</span>
+          <span class="home-card-tag">Oral Vaccines</span>
+          <span class="home-card-tag">Controlled Release</span>
+        </div>
+
+      </article>
+
+
+      <!-- Aquatic animal health -->
+      <article class="home-research-card home-research-card--health">
+
+        <div class="home-card-header">
+
+          <div>
+            <span class="home-card-number">RESEARCH 02</span>
+            <h3 class="home-card-title">Aquatic Animal Health</h3>
+          </div>
+
+        </div>
+
+        <p class="home-card-text">
+          Investigating nutritional and biomaterial-based strategies that
+          enhance disease resistance while reducing losses in sustainable
+          aquaculture.
+        </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">Immunity</span>
+          <span class="home-card-tag">Probiotics</span>
+          <span class="home-card-tag">Aquaculture</span>
+        </div>
+
+      </article>
+
+
+      <!-- Passive cooling -->
+      <article class="home-research-card home-research-card--cooling">
+
+        <div class="home-card-header">
+
+          <div>
+            <span class="home-card-number">RESEARCH 03</span>
+            <h3 class="home-card-title">Passive Cooling Materials</h3>
+          </div>
+
+        </div>
+
+        <p class="home-card-text">
+          Creating bio-based materials that provide electricity-free
+          temperature reduction for sustainable food preservation and
+          cold-chain management.
+        </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">Biopolymers</span>
+          <span class="home-card-tag">Radiative Cooling</span>
+          <span class="home-card-tag">Cold Chain</span>
+        </div>
+
+      </article>
+
+
+      <!-- Seafood quality -->
+      <article class="home-research-card home-research-card--quality">
+
+        <div class="home-card-header">
+
+          <div>
+            <span class="home-card-number">RESEARCH 04</span>
+            <h3 class="home-card-title">
+              Seafood Quality &amp; Preservation
+            </h3>
+          </div>
+
+        </div>
+
+        <p class="home-card-text">
+          Studying physiological, biochemical, and flavor changes during
+          seafood processing and storage to support effective preservation
+          strategies.
+        </p>
+
+        <div class="home-card-tags">
+          <span class="home-card-tag">Quality</span>
+          <span class="home-card-tag">Flavor</span>
+          <span class="home-card-tag">Shelf Life</span>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- Beyond the laboratory -->
+  <section class="home-section home-beyond-section">
+
+    <div class="home-section-header">
+      <h2 class="home-section-heading">Beyond the Laboratory</h2>
+    </div>
+
+    <div class="home-beyond-layout">
+
+      <div class="home-beyond-copy">
+
+        <p>
+          Outside of the laboratory, I enjoy traveling, hiking, photography,
+          watching movies, and exploring different genres of music.
+          Photography allows me to document landscapes, cultures, and everyday
+          moments while encouraging me to observe the world from different
+          perspectives.
+        </p>
+
+        <p>
+          These experiences help me maintain curiosity, creativity, and
+          balance—qualities that I also value in scientific research and
+          problem-solving.
+        </p>
+
+      </div>
+
+
+      <div class="home-interest-cloud" aria-label="Personal interests">
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3c3 3.5 3 14 0 18"></path>
+            <path d="M12 3c-3 3.5-3 14 0 18"></path>
+          </svg>
+          Travel
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
+          </svg>
+          Hiking
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="6" width="18" height="13" rx="2"></rect>
+            <circle cx="12" cy="12.5" r="3.5"></circle>
+            <path d="M8 6 9.2 4h5.6L16 6"></path>
+          </svg>
+          Photography
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m10 9 5 3-5 3Z"></path>
+          </svg>
+          Movies
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18V6l10-2v12"></path>
+            <circle cx="6.5" cy="18" r="2.5"></circle>
+            <circle cx="16.5" cy="16" r="2.5"></circle>
+          </svg>
+          Music
+        </span>
+
+      </div>
+    </div>
+  </section>
+
+</div>
