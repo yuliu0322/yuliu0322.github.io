@@ -5,32 +5,52 @@ author_profile: true
 ---
 
 <style>
-.edu-list {
+.edu-timeline {
+  position: relative;
   margin: 1.5em 0;
+  padding-left: 90px;
+}
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: #dcdcdc;
 }
 .edu-item {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  padding: 20px 0;
-  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  margin-bottom: 2.4em;
 }
 .edu-item:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 .edu-logo {
-  flex: 0 0 72px;
-  width: 72px;
-  height: 72px;
+  position: absolute;
+  top: 0;
+  left: -90px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: #fff;
 }
 .edu-logo img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+.edu-dot {
+  position: absolute;
+  top: 33px;
+  left: -55px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #bbb;
 }
 .edu-info h3 {
   margin: 0 0 4px 0;
@@ -48,12 +68,13 @@ author_profile: true
 }
 </style>
 
-<div class="edu-list">
+<div class="edu-timeline">
 
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/images/logos/vt.png" alt="Virginia Tech logo" onerror="this.style.display='none';">
+      <img src="/assets/images/vt.png" alt="Virginia Tech logo" onerror="this.style.display='none';">
     </div>
+    <div class="edu-dot"></div>
     <div class="edu-info">
       <h3>Virginia Tech</h3>
       <div class="edu-degree">Ph.D. in Biological Systems Engineering · Aug 2025–Present</div>
@@ -65,8 +86,9 @@ author_profile: true
 
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/images/logos/ouc.png" alt="Ocean University of China logo" onerror="this.style.display='none';">
+      <img src="/assets/images/ouc.png" alt="Ocean University of China logo" onerror="this.style.display='none';">
     </div>
+    <div class="edu-dot"></div>
     <div class="edu-info">
       <h3>Ocean University of China</h3>
       <div class="edu-degree">M.Eng. in Food Science and Engineering · Aug 2021–Jun 2024</div>
@@ -78,8 +100,9 @@ author_profile: true
 
   <div class="edu-item">
     <div class="edu-logo">
-      <img src="/images/logos/haust.png" alt="Henan University of Science and Technology logo" onerror="this.style.display='none';">
+      <img src="/assets/images/haust.png" alt="Henan University of Science and Technology logo" onerror="this.style.display='none';">
     </div>
+    <div class="edu-dot"></div>
     <div class="edu-info">
       <h3>Henan University of Science and Technology</h3>
       <div class="edu-degree">B.Eng. in Food Science and Engineering · Aug 2017–Jun 2021</div>
