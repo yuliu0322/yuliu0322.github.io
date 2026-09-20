@@ -872,11 +872,11 @@ html[data-theme="dark"] .home-research-card:hover {
       </div>
 
       <div class="home-visual-node home-visual-node--cooling">
-        Passive Cooling
+        Passive Cooling Materials
       </div>
 
       <div class="home-visual-node home-visual-node--quality">
-        Oral Delivery
+        Oral Delivery Systems
       </div>
 
       <span class="home-microsphere home-microsphere--one"></span>
