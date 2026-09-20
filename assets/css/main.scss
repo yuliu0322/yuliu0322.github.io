@@ -40,6 +40,11 @@
     "vendor/font-awesome/brands"
 ;
 
+
+/* ==========================================================================
+   GENERAL SETTINGS
+   ========================================================================== */
+
 /* Hide the footer */
 .page__footer {
   display: none !important;
@@ -65,7 +70,11 @@ html {
   font-size: 16px !important;
 }
 
-/* Desktop layout */
+
+/* ==========================================================================
+   DESKTOP LAYOUT
+   ========================================================================== */
+
 @media (min-width: 64em) {
 
   :root {
@@ -91,13 +100,22 @@ html {
     align-items: start;
   }
 
-  /* Left profile column */
+
+  /* --------------------------------------------------------------------------
+     LEFT PROFILE COLUMN
+     -------------------------------------------------------------------------- */
+
   .sidebar {
     grid-column: 1;
     width: 100% !important;
     float: none !important;
     padding-top: 0 !important;
-    margin-top: -2.5rem !important;
+
+    /*
+     * Move the profile card upward so that its top aligns
+     * with the heading in the right content column.
+     */
+    margin-top: -3.5rem !important;
   }
 
   /* Keep the left profile visible while scrolling */
@@ -114,13 +132,159 @@ html {
     display: none;
   }
 
-  /* Remove extra space above the profile photo */
+
+  /* --------------------------------------------------------------------------
+     PROFILE CARD
+     -------------------------------------------------------------------------- */
+
+  .sidebar > div[itemscope] {
+    position: relative;
+    isolation: isolate;
+    box-sizing: border-box;
+    width: 100%;
+
+    /*
+     * Keep profile cards visually consistent between pages,
+     * while allowing the card to expand if necessary.
+     */
+    min-height: min(620px, calc(100vh - 8rem));
+
+    padding: 1.4rem 1.3rem;
+    overflow: hidden;
+
+    background:
+      linear-gradient(
+        145deg,
+        var(--global-bg-color) 0%,
+        rgba(236, 248, 251, 0.55) 100%
+      );
+
+    border: 1px solid var(--global-border-color);
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(32, 72, 92, 0.07);
+  }
+
+  /* Blue animated glow in the upper-right corner */
+  .sidebar > div[itemscope]::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -90px;
+    right: -90px;
+    width: 210px;
+    height: 210px;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(71, 177, 203, 0.16) 0%,
+        rgba(71, 177, 203, 0.06) 45%,
+        transparent 72%
+      );
+
+    border-radius: 50%;
+    pointer-events: none;
+    animation: profileGlow 8s ease-in-out infinite alternate;
+  }
+
+  /* Warm animated glow in the lower-left corner */
+  .sidebar > div[itemscope]::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -75px;
+    bottom: -95px;
+    width: 190px;
+    height: 190px;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(232, 178, 82, 0.13) 0%,
+        rgba(232, 178, 82, 0.04) 48%,
+        transparent 72%
+      );
+
+    border-radius: 50%;
+    pointer-events: none;
+    animation: profileGlowWarm 10s ease-in-out infinite alternate;
+  }
+
+  /* Keep all profile content above the decorative glows */
+  .sidebar > div[itemscope] > * {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     PROFILE PHOTO
+     -------------------------------------------------------------------------- */
+
   .author__avatar {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
 
-  /* Right content column */
+  .author__avatar img {
+    display: block;
+    width: 100%;
+    max-width: 165px;
+    margin: 0 auto;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     PROFILE TEXT
+     -------------------------------------------------------------------------- */
+
+  .author__name {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--global-text-color);
+  }
+
+  .author__pronouns {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     PROFILE LINKS
+     -------------------------------------------------------------------------- */
+
+  .author__urls {
+    margin-top: 0;
+  }
+
+  .author__urls li,
+  .author__urls a {
+    line-height: 1.45;
+  }
+
+  .author__urls li {
+    margin-bottom: 2px;
+  }
+
+  .author__urls a {
+    margin-bottom: 3px;
+  }
+
+  /* Keep all profile icons visually consistent */
+  .author__urls i {
+    color: #4d6473;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     RIGHT CONTENT COLUMN
+     -------------------------------------------------------------------------- */
+
   .page,
   .archive {
     grid-column: 2;
@@ -131,6 +295,17 @@ html {
     margin-right: 0 !important;
     min-width: 0;
   }
+
+  /* Keep archive pages at a readable width */
+  .layout--archive .page {
+    width: 100% !important;
+    max-width: 900px !important;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     NAVIGATION
+     -------------------------------------------------------------------------- */
 
   /* Align Home with the right content column */
   .greedy-nav .visible-links > li:first-child {
@@ -147,49 +322,46 @@ html {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+}
 
-  /* Keep archive pages at a readable width */
-  .layout--archive .page {
-    width: 100% !important;
-    max-width: 900px !important;
+
+/* ==========================================================================
+   PROFILE BACKGROUND ANIMATIONS
+   ========================================================================== */
+
+@keyframes profileGlow {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.7;
+  }
+
+  to {
+    transform: translate3d(-24px, 28px, 0) scale(1.12);
+    opacity: 1;
   }
 }
 
-@media (min-width: 64em) {
-  .sidebar > div {
-    padding: 1.4rem 1.3rem;
-    background: rgba(248, 252, 253, 0.8);
-    border: 1px solid #dbeaf0;
-    border-radius: 22px;
-    box-shadow: 0 12px 32px rgba(32, 72, 92, 0.07);
+@keyframes profileGlowWarm {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.65;
   }
 
-  .author__avatar img {
-    max-width: 165px;
+  to {
+    transform: translate3d(25px, -22px, 0) scale(1.1);
+    opacity: 0.95;
   }
+}
 
-  .author__name {
-    margin-top: 14px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #243653;
-  }
 
-  .author__pronouns {
-    color: #7a8796;
-    font-size: 0.9rem;
-  }
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
 
-  .author__urls li,
-  .author__urls a {
-    line-height: 1.45;
-  }
-
-  .author__urls a {
-    margin-bottom: 3px;
-  }
-
-  .author__urls i {
-    color: #4d6473;
+/* Disable decorative animations when reduced motion is requested */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar > div[itemscope]::before,
+  .sidebar > div[itemscope]::after {
+    animation: none;
   }
 }
