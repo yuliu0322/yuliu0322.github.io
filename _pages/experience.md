@@ -53,7 +53,8 @@ author_profile: true
   color: #45a6c4;
   font-weight: 700;
   text-decoration: none !important;
-  border-bottom: 0.5px solid rgba(69, 166, 196, 0.35);
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(69, 166, 196, 0.35);
 }
 
 .experience-company:hover {
