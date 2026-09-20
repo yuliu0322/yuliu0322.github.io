@@ -154,3 +154,42 @@ html {
     max-width: 900px !important;
   }
 }
+
+@media (min-width: 64em) {
+  .sidebar > div {
+    padding: 1.4rem 1.3rem;
+    background: rgba(248, 252, 253, 0.8);
+    border: 1px solid #dbeaf0;
+    border-radius: 22px;
+    box-shadow: 0 12px 32px rgba(32, 72, 92, 0.07);
+  }
+
+  .author__avatar img {
+    max-width: 165px;
+  }
+
+  .author__name {
+    margin-top: 14px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #243653;
+  }
+
+  .author__pronouns {
+    color: #7a8796;
+    font-size: 0.9rem;
+  }
+
+  .author__urls li,
+  .author__urls a {
+    line-height: 1.45;
+  }
+
+  .author__urls a {
+    margin-bottom: 3px;
+  }
+
+  .author__urls i {
+    color: #4d6473;
+  }
+}
