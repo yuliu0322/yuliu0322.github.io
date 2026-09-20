@@ -107,14 +107,16 @@ author_profile: true
 }
 
 .education-advisors a {
-  color: #45a6c4;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(69, 166, 196, 0.35);
+  color: inherit;
+  text-decoration: none !important;
+  border-bottom: none;
 }
 
 .education-advisors a:hover {
-  color: #d79a45;
-  border-bottom-color: #d79a45;
+  color: #45a6c4;
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .education-location {
@@ -172,13 +174,12 @@ html[data-theme="dark"] .education-advisors {
 }
 
 html[data-theme="dark"] .education-advisors a {
-  color: #65c2dd;
-  border-bottom-color: rgba(101, 194, 221, 0.45);
+  color: inherit;
+  border-bottom: none;
 }
 
 html[data-theme="dark"] .education-advisors a:hover {
-  color: #e0ad60;
-  border-bottom-color: #e0ad60;
+  color: #65c2dd;
 }
 
 html[data-theme="dark"] .education-location {
