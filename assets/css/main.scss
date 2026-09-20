@@ -180,7 +180,7 @@ html {
   .author__name {
     margin-top: 14px;
     margin-bottom: 8px;
-    font-size: 1.25rem;
+    font-size: clamp(1.05rem, 1.2vw, 1.25rem);
     font-weight: 700;
     color: var(--global-text-color);
   }
