@@ -418,73 +418,6 @@ html[data-theme="dark"] .sidebar > div[itemscope] {
    VISIBLE PROFILE ANIMATION
    ========================================================================== */
 
-.profile-animation {
-  position: absolute !important;
-  z-index: 1 !important;
-  inset: 0;
-  overflow: hidden;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.profile-ring {
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-  border: 1px solid rgba(44, 157, 187, 0.18);
-}
-
-.profile-ring--one {
-  top: 36px;
-  right: -42px;
-  width: 150px;
-  height: 150px;
-  animation: profileRingOne 9s ease-in-out infinite alternate;
-}
-
-.profile-ring--two {
-  right: 24px;
-  bottom: 32px;
-  width: 90px;
-  height: 90px;
-  border-color: rgba(225, 165, 67, 0.20);
-  animation: profileRingTwo 7s ease-in-out infinite alternate;
-}
-
-.profile-dot {
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(35, 125, 151, 0.16);
-}
-
-.profile-dot--one {
-  top: 105px;
-  right: 32px;
-  width: 10px;
-  height: 10px;
-  background: rgba(53, 174, 204, 0.60);
-  animation: profileDotOne 5s ease-in-out infinite alternate;
-}
-
-.profile-dot--two {
-  right: 90px;
-  bottom: 76px;
-  width: 8px;
-  height: 8px;
-  background: rgba(229, 172, 72, 0.70);
-  animation: profileDotTwo 6.5s ease-in-out infinite alternate;
-}
-
-.profile-dot--three {
-  left: 28px;
-  bottom: 42px;
-  width: 6px;
-  height: 6px;
-  background: rgba(128, 130, 193, 0.65);
-  animation: profileDotThree 5.5s ease-in-out infinite alternate;
-}
-
 @keyframes profileRingOne {
   from {
     transform: translate3d(0, 0, 0) scale(1);
@@ -497,62 +430,65 @@ html[data-theme="dark"] .sidebar > div[itemscope] {
   }
 }
 
-@keyframes profileRingTwo {
-  from {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-    opacity: 0.4;
+@media (min-width: 64em) {
+
+  .sidebar {
+    grid-column: 1;
+    width: 100% !important;
+    float: none !important;
+    padding-top: 0 !important;
+    margin-top: -3.5rem !important;
   }
 
-  to {
-    transform: translate3d(-18px, -18px, 0) rotate(20deg);
-    opacity: 0.85;
-  }
-}
-
-@keyframes profileDotOne {
-  from {
-    transform: translate3d(0, 0, 0);
+  .sidebar.sticky {
+    position: sticky !important;
+    top: 5.5rem !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
-  to {
-    transform: translate3d(-18px, 24px, 0);
-  }
-}
-
-@keyframes profileDotTwo {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
+  .author__avatar {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 
-  to {
-    transform: translate3d(24px, -20px, 0) scale(1.35);
-  }
-}
-
-@keyframes profileDotThree {
-  from {
-    transform: translate3d(0, 0, 0);
-    opacity: 0.45;
+  .author__avatar img {
+    display: block;
+    width: 100%;
+    max-width: 175px;
+    margin: 0 auto;
   }
 
-  to {
-    transform: translate3d(18px, -24px, 0);
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .sidebar > div[itemscope]::before,
-  .sidebar > div[itemscope]::after,
-  .profile-ring,
-  .profile-dot {
-    animation: none !important;
+  .author__name {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--global-text-color);
   }
 
-  .author__avatar img,
-  .author__urls a,
-  .author__urls i {
-    transition: none !important;
+  .author__pronouns {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .author__urls {
+    margin-top: 0;
+  }
+
+  .author__urls li,
+  .author__urls a {
+    line-height: 1.45;
+  }
+
+  .author__urls li {
+    margin-bottom: 2px;
+  }
+
+  .author__urls a {
+    margin-bottom: 3px;
   }
 }
