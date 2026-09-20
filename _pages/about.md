@@ -868,11 +868,11 @@ html[data-theme="dark"] .home-research-card:hover {
       </div>
 
       <div class="home-visual-node home-visual-node--delivery">
-        Seadfood Science
+        Passive Cooling Materials
       </div>
 
       <div class="home-visual-node home-visual-node--cooling">
-        Passive Cooling Materials
+        Seadfood Science
       </div>
 
       <div class="home-visual-node home-visual-node--quality">
@@ -953,7 +953,7 @@ html[data-theme="dark"] .home-research-card:hover {
   </section>
 
 
-  <!-- Beyond the laboratory 🏃‍ -->
+  <!-- Beyond the laboratory 🏃 -->
   <section class="home-section home-beyond-section">
 
     <div class="home-section-header">
