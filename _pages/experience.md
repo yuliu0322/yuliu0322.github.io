@@ -52,9 +52,10 @@ author_profile: true
 .experience-company {
   color: #45a6c4;
   font-weight: 700;
-  text-decoration: none !important;
-  padding-bottom: 2px;
-  border-bottom: 1px solid rgba(69, 166, 196, 0.35);
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  border-bottom: none;
 }
 
 .experience-company:hover {
