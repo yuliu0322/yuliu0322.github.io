@@ -274,24 +274,20 @@ html {
 
 @media (min-width: 64em) {
 
-  /* Center the complete profile */
+  /* Center the profile as one unit */
   .sidebar > div[itemscope] {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-
-    width: 100% !important;
+    display: block !important;
+    width: min(100%, 220px) !important;
     margin: 0 auto !important;
     padding: 0 !important;
   }
 
-  /* Center the profile photo */
+  /* Center the photo inside the profile */
   .author__avatar {
     display: block !important;
     width: 100% !important;
     margin: 0 auto !important;
     padding: 0 !important;
-    text-align: center !important;
   }
 
   .author__avatar img {
@@ -302,31 +298,32 @@ html {
     margin: 0 auto !important;
   }
 
-  /* Center name and pronouns below the photo */
+  /* Restore left-aligned name and pronouns */
   .author__content {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .author__name {
-    margin: 14px 0 8px !important;
-    text-align: center !important;
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
+    text-align: left !important;
   }
 
   .author__pronouns {
-    margin: 0 0 14px !important;
-    text-align: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
+    text-align: left !important;
   }
 
-  /* Center the contact-list block */
+  /* Restore the original left-aligned contact list */
   .author__urls-wrapper {
     display: block !important;
-    width: max-content !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
     padding: 0 !important;
   }
 
@@ -335,10 +332,8 @@ html {
     position: relative !important;
     right: auto !important;
 
-    width: max-content !important;
-    max-width: 100% !important;
-
-    margin: 0 auto !important;
+    width: 100% !important;
+    margin: 0 !important;
     padding: 0 !important;
 
     background: transparent !important;
@@ -348,15 +343,14 @@ html {
 
   .author__urls li {
     width: 100% !important;
-    margin: 0 0 4px !important;
+    margin-bottom: 2px !important;
     padding: 0 !important;
     text-align: left !important;
   }
 
   .author__urls a {
     width: 100% !important;
-    margin: 0 !important;
-    padding: 2px 0 !important;
+    margin-bottom: 3px !important;
     text-align: left !important;
   }
 }
