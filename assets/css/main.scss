@@ -275,12 +275,13 @@ html {
 @media (min-width: 64em) {
 
   /* Center the profile as one unit */
-  .sidebar > div[itemscope] {
-    display: block !important;
-    width: min(100%, 220px) !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-  }
+.sidebar > div[itemscope] {
+  display: block !important;
+  width: clamp(190px, 16vw, 240px) !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
 
   /* Center the photo inside the profile */
   .author__avatar {
