@@ -207,11 +207,11 @@ html {
   }
 
   .author__urls li {
-    margin-bottom: 2px;
+    margin-bottom: 5px;
   }
 
   .author__urls a {
-    margin-bottom: 3px;
+    margin-bottom: 0;
     transform: none !important;
   }
 
@@ -350,7 +350,7 @@ html {
 
   .author__urls a {
     width: 100% !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 0 !important;
     text-align: left !important;
   }
 }
