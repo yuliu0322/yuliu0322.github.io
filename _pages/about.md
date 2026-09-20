@@ -886,7 +886,7 @@ html[data-theme="dark"] .home-research-card:hover {
   <section class="home-section">
 
     <div class="home-section-header">
-      <h2 class="home-section-heading">What I Am Working On 🧑‍🔬</h2>
+      <h2 class="home-section-heading">What I Am Working On? 🧑‍🔬</h2>
     </div>
 
     <div class="home-research-grid">
@@ -937,9 +937,9 @@ html[data-theme="dark"] .home-research-card:hover {
         </p>
 
         <div class="home-card-tags">
-          <span class="home-card-tag">PLGA-based delivery</span>
+          <span class="home-card-tag">PLGA-based Delivery</span>
           <span class="home-card-tag">Oral Vaccines</span>
-          <span class="home-card-tag">Functional aquafeeds</span>
+          <span class="home-card-tag">Functional Aquafeeds</span>
         </div>
 
       </article>
