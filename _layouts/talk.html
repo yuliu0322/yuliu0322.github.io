@@ -120,10 +120,9 @@ layout: default
 /* Content card */
 
 .talk-card {
-  padding: 22px 26px;
-  border: 1px solid var(--talk-border);
-  border-radius: 13px;
-  background: #ffffff;
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 .talk-card p:last-child {
@@ -162,11 +161,6 @@ layout: default
   background: #fafbfc !important;
 }
 
-@media (max-width: 480px) {
-  .talk-card {
-    padding: 17px;
-  }
-}
 </style>
 
 {% include base_path %}
@@ -195,7 +189,7 @@ layout: default
         <header class="talk-header">
 
           <a class="talk-back-link" href="{{ '/news/' | relative_url }}">
-            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="8 5 8 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M15 6l-6 6 6 6"/>
             </svg>
             Back to News
