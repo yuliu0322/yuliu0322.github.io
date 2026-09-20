@@ -180,7 +180,7 @@ html {
   .author__name {
     margin-top: 14px;
     margin-bottom: 8px;
-    font-size: clamp(1.05rem, 1.2vw, 1.25rem);
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--global-text-color);
   }
@@ -277,8 +277,7 @@ html {
   /* Center the profile as one unit */
 .sidebar > div[itemscope] {
   display: block !important;
-  width: clamp(190px, 16vw, 240px) !important;
-  max-width: 100% !important;
+  width: min(100%, 220px) !important;
   margin: 0 auto !important;
   padding: 0 !important;
 }
@@ -293,7 +292,7 @@ html {
 
 .author__avatar img {
   display: block !important;
-  width: clamp(150px, 13vw, 190px) !important;
+  width: 175px !important;
   max-width: 100% !important;
   height: auto !important;
   margin: 0 auto !important;
