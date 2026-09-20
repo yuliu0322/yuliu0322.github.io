@@ -8,4 +8,4 @@ date: 2025-08-10
 location: "Blacksburg, VA, USA"
 ---
 
-Recipient of the 2025 Pratt Fellowship, awarded by the Department of Biological Systems Engineering at Virginia Tech for outstanding academic achievement and demonstrated potential for academic and professional success.
+🎉Excited to share that I've been awarded the 2025 Pratt Fellowship from the Department of Biological Systems Engineering at Virginia Tech! Grateful for this recognition and looking forward to putting it toward my research.
