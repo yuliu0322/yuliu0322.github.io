@@ -948,11 +948,11 @@ html[data-theme="dark"] .home-research-card:hover {
   </section>
 
 
-  <!-- Beyond the laboratory 🏃 --!>
+  <!-- Beyond the laboratory -->
   <section class="home-section home-beyond-section">
 
     <div class="home-section-header">
-      <h2 class="home-section-heading">Beyond the Laboratory</h2>
+      <h2 class="home-section-heading">Beyond the Laboratory 🏃</h2>
     </div>
 
     <div class="home-beyond-layout">
