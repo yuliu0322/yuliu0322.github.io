@@ -1,12 +1,12 @@
----
 layout: archive
 title: ""
 permalink: /
 author_profile: true
 redirect_from:
-  - /about/
-  - /about.html
----
+
+/about/
+
+/about.html
 
 <style>
 /* ==================================================
@@ -99,6 +99,26 @@ redirect_from:
   pointer-events: none;
 }
 
+/* A very soft light sweep across the hero card */
+.home-hero-shimmer {
+  position: absolute;
+  z-index: 1;
+  top: -65%;
+  left: -42%;
+  width: 28%;
+  height: 230%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.42),
+    transparent
+  );
+  filter: blur(5px);
+  transform: rotate(18deg) translateX(-260%);
+  animation: home-hero-shimmer 12s ease-in-out infinite;
+}
+
 .home-hero-copy {
   position: relative;
   z-index: 2;
@@ -164,6 +184,31 @@ redirect_from:
   width: min(100%, 310px);
   aspect-ratio: 1 / 1;
   margin: auto;
+  transform: perspective(900px)
+    rotateX(var(--home-tilt-x, 0deg))
+    rotateY(var(--home-tilt-y, 0deg))
+    translate3d(var(--home-shift-x, 0px), var(--home-shift-y, 0px), 0);
+  transform-style: preserve-3d;
+  transition: transform 180ms ease-out;
+  will-change: transform;
+}
+
+/* Slowly moving energy haze behind the orbit */
+.home-visual::before {
+  content: "";
+  position: absolute;
+  inset: 15%;
+  z-index: -1;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg,
+    rgba(72, 169, 197, 0),
+    rgba(72, 169, 197, 0.14),
+    rgba(219, 166, 85, 0.1),
+    rgba(72, 169, 197, 0)
+  );
+  filter: blur(17px);
+  animation: home-energy-spin 18s linear infinite;
 }
 
 /* Outer rotating orbit */
@@ -223,6 +268,7 @@ redirect_from:
   box-shadow:
     0 15px 35px rgba(49, 139, 168, 0.14),
     inset 0 0 24px rgba(72, 169, 197, 0.07);
+  animation: home-core-breathe 4.8s ease-in-out infinite;
 }
 
 /* Research labels */
@@ -240,7 +286,16 @@ redirect_from:
   font-size: 0.69rem;
   font-weight: 700;
   white-space: nowrap;
-  animation: home-node-float 5.5s ease-in-out infinite;
+  animation: home-node-float var(--float-time, 6.4s) ease-in-out infinite;
+  transition: box-shadow 180ms ease, background-color 180ms ease;
+  will-change: transform;
+}
+
+.home-visual-node:hover {
+  animation-play-state: paused;
+  background: #ffffff;
+  box-shadow: 0 11px 24px rgba(35, 55, 75, 0.14);
+  transform: translate3d(0, -6px, 18px) scale(1.025);
 }
 
 .home-visual-node::before {
@@ -256,12 +311,14 @@ redirect_from:
   top: 6%;
   left: 3%;
   --node-color: var(--home-green);
+  --float-time: 6.8s;
 }
 
 .home-visual-node--delivery {
   top: 32%;
   right: -2%;
   --node-color: var(--home-blue);
+  --float-time: 7.6s;
   animation-delay: -1.4s;
 }
 
@@ -269,6 +326,7 @@ redirect_from:
   right: 8%;
   bottom: 7%;
   --node-color: var(--home-purple);
+  --float-time: 6.1s;
   animation-delay: -2.7s;
 }
 
@@ -276,6 +334,7 @@ redirect_from:
   bottom: 18%;
   left: -2%;
   --node-color: var(--home-gold);
+  --float-time: 7.1s;
   animation-delay: -3.8s;
 }
 
@@ -628,11 +687,48 @@ redirect_from:
 @keyframes home-node-float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 10px);
   }
 
   50% {
-    transform: translateY(-5px);
+    transform: translate3d(0, -7px, 18px);
+  }
+}
+
+@keyframes home-core-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: saturate(1);
+  }
+
+  50% {
+    transform: scale(1.055);
+    filter: saturate(1.12);
+  }
+}
+
+@keyframes home-energy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-hero-shimmer {
+  0%,
+  58% {
+    opacity: 0;
+    transform: rotate(18deg) translateX(-260%);
+  }
+
+  64% {
+    opacity: 0.72;
+  }
+
+  78%,
+  100% {
+    opacity: 0;
+    transform: rotate(18deg) translateX(720%);
   }
 }
 
@@ -702,6 +798,11 @@ html[data-theme="dark"] .home-visual-core {
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.18),
     inset 0 0 24px rgba(101, 194, 221, 0.06);
+}
+
+html[data-theme="dark"] .home-hero-shimmer {
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
 }
 
 html[data-theme="dark"] .home-research-card {
@@ -804,9 +905,17 @@ html[data-theme="dark"] .home-research-card:hover {
   .home-section,
   .home-visual-orbit,
   .home-visual-orbit-inner,
+  .home-visual-core,
+  .home-visual::before,
   .home-visual-node,
-  .home-microsphere {
+  .home-microsphere,
+  .home-hero-shimmer {
     animation: none;
+  }
+
+  .home-visual {
+    transform: none !important;
+    transition: none;
   }
 
   .home-research-card,
@@ -817,109 +926,112 @@ html[data-theme="dark"] .home-research-card:hover {
 }
 </style>
 
-
 <div class="home-welcome">
 
   <!-- Hero -->
+
   <section class="home-hero">
 
-    <div class="home-hero-copy">
+<span class="home-hero-shimmer" aria-hidden="true"></span>
 
-      <h1 class="home-greeting">
-        Welcome, I’m
-        <span class="home-greeting-highlight">Yu Liu</span>.
-      </h1>
+<div class="home-hero-copy">
 
-      <p class="home-description">
-        I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
-        conducting interdisciplinary research in the Sustainable &amp; Intelligent
-        Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
-      </p>
+  <h1 class="home-greeting">
+    Welcome, I’m
+    <span class="home-greeting-highlight">Yu Liu</span>.
+  </h1>
 
-      <p class="home-description">
-        My work connects food science, aquaculture, biomaterials, and food
-        engineering to develop practical solutions for aquatic animal health,
-        seafood quality, and sustainable food preservation.
-      </p>
+  <p class="home-description">
+    I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
+    conducting interdisciplinary research in the Sustainable &amp; Intelligent
+    Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
+  </p>
 
-    </div>
+  <p class="home-description">
+    My work connects food science, aquaculture, biomaterials, and food
+    engineering to develop practical solutions for aquatic animal health,
+    seafood quality, and sustainable food preservation.
+  </p>
+
+</div>
 
 
-    <!-- Abstract research visualization -->
-    <div
-      class="home-visual"
-      role="img"
-      aria-label="Abstract visualization of four interconnected research areas"
-    >
+<!-- Abstract research visualization -->
+<div
+  class="home-visual"
+  role="img"
+  aria-label="Abstract visualization of four interconnected research areas"
+>
 
-      <div class="home-visual-orbit"></div>
-      <div class="home-visual-orbit-inner"></div>
+  <div class="home-visual-orbit"></div>
+  <div class="home-visual-orbit-inner"></div>
 
-      <!-- Intentionally empty -->
-      <div class="home-visual-core"></div>
+  <!-- Intentionally empty -->
+  <div class="home-visual-core"></div>
 
-      <div class="home-visual-node home-visual-node--health">
-        Sustainable Aquaculture
-      </div>
+  <div class="home-visual-node home-visual-node--health">
+    Sustainable Aquaculture
+  </div>
 
-      <div class="home-visual-node home-visual-node--delivery">
-        Passive Cooling Materials
-      </div>
+  <div class="home-visual-node home-visual-node--delivery">
+    Passive Cooling Materials
+  </div>
 
-      <div class="home-visual-node home-visual-node--cooling">
-        Seadfood Science
-      </div>
+  <div class="home-visual-node home-visual-node--cooling">
+    Seafood Science
+  </div>
 
-      <div class="home-visual-node home-visual-node--quality">
-        Oral Delivery Systems
-      </div>
+  <div class="home-visual-node home-visual-node--quality">
+    Oral Delivery Systems
+  </div>
 
-      <span class="home-microsphere home-microsphere--one"></span>
-      <span class="home-microsphere home-microsphere--two"></span>
-      <span class="home-microsphere home-microsphere--three"></span>
+  <span class="home-microsphere home-microsphere--one"></span>
+  <span class="home-microsphere home-microsphere--two"></span>
+  <span class="home-microsphere home-microsphere--three"></span>
 
-    </div>
+</div>
+
   </section>
 
-
   <!-- Current research -->
+
   <section class="home-section">
 
-    <div class="home-section-header">
-      <h2 class="home-section-heading">What I Am Working On 🧑‍🔬</h2>
+<div class="home-section-header">
+  <h2 class="home-section-heading">What I Am Working On 🧑‍🔬</h2>
+</div>
+
+<div class="home-research-grid">
+
+  <!-- Passive cooling -->
+  <article class="home-research-card home-research-card--cooling">
+
+    <div class="home-card-header">
+
+      <div>
+        <span class="home-card-number">RESEARCH 01</span>
+        <h3 class="home-card-title">Passive Cooling Materials</h3>
+      </div>
+
     </div>
 
-    <div class="home-research-grid">
+    <p class="home-card-text">
+      Developing bio-based materials that provide electricity-free
+      temperature reduction for sustainable food preservation and
+      cold-chain management.
+    </p>
 
-      <!-- Passive cooling -->
-      <article class="home-research-card home-research-card--cooling">
+    <div class="home-card-tags">
+      <span class="home-card-tag">Passive Cooling</span>
+      <span class="home-card-tag">Food Packaging</span>
+      <span class="home-card-tag">Food Preservation</span>
+    </div>
 
-        <div class="home-card-header">
-
-          <div>
-            <span class="home-card-number">RESEARCH 01</span>
-            <h3 class="home-card-title">Passive Cooling Materials</h3>
-          </div>
-
-        </div>
-
-        <p class="home-card-text">
-          Developing bio-based materials that provide electricity-free
-          temperature reduction for sustainable food preservation and
-          cold-chain management.
-        </p>
-
-        <div class="home-card-tags">
-          <span class="home-card-tag">Passive Cooling</span>
-          <span class="home-card-tag">Food Packaging</span>
-          <span class="home-card-tag">Food Preservation</span>
-        </div>
-
-      </article>
+  </article>
 
 
-            <!-- Oral delivery -->
-      <article class="home-research-card home-research-card--delivery">
+        <!-- Oral delivery -->
+  <article class="home-research-card home-research-card--delivery">
 
 <div class="home-card-header">
 
@@ -930,99 +1042,142 @@ html[data-theme="dark"] .home-research-card:hover {
 
 </div>
 
-        <p class="home-card-text">
-          Developing PLGA-based delivery systems that protect vaccines and
-          immunostimulants during digestive transit and deliver them to
-          immune-responsive sites.
-        </p>
+    <p class="home-card-text">
+      Developing PLGA-based delivery systems that protect vaccines and
+      immunostimulants during digestive transit and deliver them to
+      immune-responsive sites.
+    </p>
 
-        <div class="home-card-tags">
-          <span class="home-card-tag">PLGA-based Delivery</span>
-          <span class="home-card-tag">Oral Vaccines</span>
-          <span class="home-card-tag">Functional Aquafeeds</span>
-        </div>
-
-      </article>
-
+    <div class="home-card-tags">
+      <span class="home-card-tag">PLGA-based Delivery</span>
+      <span class="home-card-tag">Oral Vaccines</span>
+      <span class="home-card-tag">Functional Aquafeeds</span>
     </div>
+
+  </article>
+
+</div>
+
   </section>
 
-
   <!-- Beyond the laboratory -->
+
   <section class="home-section home-beyond-section">
 
-    <div class="home-section-header">
-      <h2 class="home-section-heading">Beyond the Laboratory 🏃</h2>
-    </div>
+<div class="home-section-header">
+  <h2 class="home-section-heading">Beyond the Laboratory 🏃</h2>
+</div>
 
-    <div class="home-beyond-layout">
+<div class="home-beyond-layout">
 
-      <div class="home-beyond-copy">
+  <div class="home-beyond-copy">
 
-        <p>
-          Outside of the laboratory, I enjoy traveling, hiking, photography,
-          watching movies, and exploring different genres of music.
-          Photography allows me to document landscapes, cultures, and everyday
-          moments while encouraging me to observe the world from different
-          perspectives.
-        </p>
+    <p>
+      Outside of the laboratory, I enjoy traveling, hiking, photography,
+      watching movies, and exploring different genres of music.
+      Photography allows me to document landscapes, cultures, and everyday
+      moments while encouraging me to observe the world from different
+      perspectives.
+    </p>
 
-        <p>
-          These experiences help me maintain curiosity, creativity, and
-          balance—qualities that I also value in scientific research and
-          problem-solving.
-        </p>
+    <p>
+      These experiences help me maintain curiosity, creativity, and
+      balance—qualities that I also value in scientific research and
+      problem-solving.
+    </p>
 
-      </div>
+  </div>
 
 
-      <div class="home-interest-cloud" aria-label="Personal interests">
+  <div class="home-interest-cloud" aria-label="Personal interests">
 
-        <span class="home-interest">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M3 12h18"></path>
-            <path d="M12 3c3 3.5 3 14 0 18"></path>
-            <path d="M12 3c-3 3.5-3 14 0 18"></path>
-          </svg>
-          Travel
-        </span>
+    <span class="home-interest">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M3 12h18"></path>
+        <path d="M12 3c3 3.5 3 14 0 18"></path>
+        <path d="M12 3c-3 3.5-3 14 0 18"></path>
+      </svg>
+      Travel
+    </span>
 
-        <span class="home-interest">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
-          </svg>
-          Hiking
-        </span>
+    <span class="home-interest">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
+      </svg>
+      Hiking
+    </span>
 
-        <span class="home-interest">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="6" width="18" height="13" rx="2"></rect>
-            <circle cx="12" cy="12.5" r="3.5"></circle>
-            <path d="M8 6 9.2 4h5.6L16 6"></path>
-          </svg>
-          Photography
-        </span>
+    <span class="home-interest">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="6" width="18" height="13" rx="2"></rect>
+        <circle cx="12" cy="12.5" r="3.5"></circle>
+        <path d="M8 6 9.2 4h5.6L16 6"></path>
+      </svg>
+      Photography
+    </span>
 
-        <span class="home-interest">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-            <path d="m10 9 5 3-5 3Z"></path>
-          </svg>
-          Movies
-        </span>
+    <span class="home-interest">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="m10 9 5 3-5 3Z"></path>
+      </svg>
+      Movies
+    </span>
 
-        <span class="home-interest">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 18V6l10-2v12"></path>
-            <circle cx="6.5" cy="18" r="2.5"></circle>
-            <circle cx="16.5" cy="16" r="2.5"></circle>
-          </svg>
-          Music
-        </span>
+    <span class="home-interest">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 18V6l10-2v12"></path>
+        <circle cx="6.5" cy="18" r="2.5"></circle>
+        <circle cx="16.5" cy="16" r="2.5"></circle>
+      </svg>
+      Music
+    </span>
 
-      </div>
-    </div>
+  </div>
+</div>
+
   </section>
 
 </div>
+
+<script>
+(function () {
+  const hero = document.querySelector(".home-hero");
+  const visual = hero && hero.querySelector(".home-visual");
+  const allowMotion = window.matchMedia(
+    "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
+  );
+
+  if (!hero || !visual) return;
+
+  let frame = null;
+
+  function resetVisual() {
+    visual.style.setProperty("--home-tilt-x", "0deg");
+    visual.style.setProperty("--home-tilt-y", "0deg");
+    visual.style.setProperty("--home-shift-x", "0px");
+    visual.style.setProperty("--home-shift-y", "0px");
+  }
+
+  hero.addEventListener("pointermove", function (event) {
+    if (!allowMotion.matches) return;
+
+    const rect = hero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    if (frame) cancelAnimationFrame(frame);
+
+    frame = requestAnimationFrame(function () {
+      visual.style.setProperty("--home-tilt-x", (-y * 5).toFixed(2) + "deg");
+      visual.style.setProperty("--home-tilt-y", (x * 6).toFixed(2) + "deg");
+      visual.style.setProperty("--home-shift-x", (x * 7).toFixed(1) + "px");
+      visual.style.setProperty("--home-shift-y", (y * 5).toFixed(1) + "px");
+    });
+  });
+
+  hero.addEventListener("pointerleave", resetVisual);
+  allowMotion.addEventListener && allowMotion.addEventListener("change", resetVisual);
+})();
+</script>
