@@ -10,15 +10,15 @@ author_profile: true
   position: relative;
   width: 100%;
   margin-top: 2rem;
+  padding-left: 38px;
 }
 
-/* Vertical timeline */
 .experience-list::before {
   content: "";
   position: absolute;
   top: 12px;
   bottom: 12px;
-  left: -30px;
+  left: 8px;
   width: 2px;
   background: #d7e8ee;
 }
@@ -224,14 +224,15 @@ html[data-theme="dark"] .experience-detail p {
    ========================= */
 
 @media (max-width: 768px) {
-  .experience-list {
-    margin-top: 1.5rem;
-  }
+.experience-list {
+  margin-top: 1.5rem;
+  padding-left: 26px;
+}
 
-  .experience-list::before {
-    left: -21px;
-  }
-
+.experience-list::before {
+  left: 5px;
+}
+  
   .experience-entry {
     margin-bottom: 1.75rem;
     padding-bottom: 1.75rem;
