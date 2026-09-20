@@ -267,3 +267,59 @@ html {
 .profile-animation {
   display: none !important;
 }
+
+/* ==========================================================================
+   RESPONSIVE PROFILE ALIGNMENT
+   ========================================================================== */
+
+@media (min-width: 64em) {
+
+  /* Center the entire profile as one unit */
+  .sidebar > div[itemscope] {
+    width: min(100%, 220px) !important;
+    margin: 0 auto !important;
+  }
+
+  /* Center the profile photo */
+  .author__avatar {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .author__avatar img {
+    display: block !important;
+    width: 175px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Keep the name directly below the photo */
+  .author__content {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .author__name {
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Keep all contact information aligned with the name */
+  .author__urls-wrapper {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .author__urls {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
