@@ -50,17 +50,17 @@ author_profile: true
 }
 
 .experience-company {
-  color: #45a6c4;
+  color: #253248;
   font-weight: 700;
-  text-decoration-line: underline !important;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none !important;
   border-bottom: none;
 }
 
 .experience-company:hover {
-  color: #d79a45;
-  border-bottom-color: #d79a45;
+  color: #45a6c4;
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .experience-divider {
@@ -157,13 +157,12 @@ html[data-theme="dark"] .experience-location {
 }
 
 html[data-theme="dark"] .experience-company {
-  color: #65c2dd;
-  border-bottom-color: rgba(101, 194, 221, 0.45);
+  color: #f2f5f8;
+  border-bottom: none;
 }
 
 html[data-theme="dark"] .experience-company:hover {
-  color: #e0ad60;
-  border-bottom-color: #e0ad60;
+  color: #65c2dd;
 }
 
 html[data-theme="dark"] .experience-divider {
