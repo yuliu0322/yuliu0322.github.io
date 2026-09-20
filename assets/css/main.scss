@@ -291,13 +291,13 @@ html {
     padding: 0 !important;
   }
 
-  .author__avatar img {
-    display: block !important;
-    width: 175px !important;
-    max-width: 100% !important;
-    height: auto !important;
-    margin: 0 auto !important;
-  }
+.author__avatar img {
+  display: block !important;
+  width: clamp(150px, 13vw, 190px) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+}
 
   /* Restore left-aligned name and pronouns */
   .author__content {
