@@ -27,7 +27,7 @@ redirect_from:
   --home-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 
   width: 100%;
-  margin-top: -1.4rem;
+  margin-top: -0.7rem;
   color: var(--home-text);
 }
 
