@@ -7,8 +7,19 @@ author_profile: true
 
 <style>
 .experience-list {
+  position: relative;
   width: 100%;
   margin-top: 2rem;
+}
+
+.experience-list::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: -22px;
+  width: 2px;
+  background: #d7e8ee;
 }
 
 .experience-entry {
@@ -138,6 +149,10 @@ author_profile: true
 /* =========================
    Dark mode
    ========================= */
+
+html[data-theme="dark"] .experience-list::before {
+  background: #61727b;
+}
 
 html[data-theme="dark"] .experience-entry {
   border-bottom-color: #5f666e;
