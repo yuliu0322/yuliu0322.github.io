@@ -324,7 +324,7 @@ redirect_from:
 }
 
 .home-visual-node--cooling {
-  right: 8%;
+  right: 4%;
   bottom: 7%;
   --node-color: var(--home-purple);
   --float-time: 6.1s;
@@ -333,12 +333,12 @@ redirect_from:
 
 .home-visual-node--quality {
   bottom: 18%;
-  left: -2%;
+  left: -6%;
   --node-color: var(--home-gold);
   --float-time: 7.1s;
   animation-delay: -3.8s;
 }
-
+  
 /* Small decorative particles */
 .home-microsphere {
   position: absolute;
