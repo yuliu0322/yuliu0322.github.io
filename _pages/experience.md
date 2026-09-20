@@ -52,7 +52,7 @@ author_profile: true
 .experience-company {
   color: #45a6c4;
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: none !important;
   border-bottom: 1px solid rgba(69, 166, 196, 0.35);
 }
 
