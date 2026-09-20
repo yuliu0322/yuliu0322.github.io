@@ -1,12 +1,12 @@
----
 layout: archive
 title: ""
 permalink: /
 author_profile: true
 redirect_from:
-  - /about/
-  - /about.html
----
+
+/about/
+
+/about.html
 
 <style>
    
@@ -308,14 +308,14 @@ redirect_from:
   background: var(--node-color, var(--home-blue));
 }
 
-.home-visual-node--health {
+.home-visual-node--aquaculture {
   top: 6%;
   left: 3%;
   --node-color: var(--home-green);
   --float-time: 6.8s;
 }
 
-.home-visual-node--delivery {
+.home-visual-node--passive-cooling {
   top: 32%;
   right: -2%;
   --node-color: var(--home-blue);
@@ -323,7 +323,7 @@ redirect_from:
   animation-delay: -1.4s;
 }
 
-.home-visual-node--cooling {
+.home-visual-node--seafood-science {
   right: 4%;
   bottom: 7%;
   --node-color: var(--home-purple);
@@ -331,7 +331,7 @@ redirect_from:
   animation-delay: -2.7s;
 }
 
-.home-visual-node--quality {
+.home-visual-node--oral-delivery {
   bottom: 18%;
   left: -6%;
   --node-color: var(--home-gold);
@@ -475,20 +475,12 @@ redirect_from:
   transform: scale(1.15);
 }
 
-.home-research-card--delivery {
-  --card-accent: #48a9c5;
+.home-research-card--passive-cooling {
+  --card-accent: var(--home-blue);
 }
 
-.home-research-card--health {
-  --card-accent: #65aa91;
-}
-
-.home-research-card--cooling {
-  --card-accent: #8986bd;
-}
-
-.home-research-card--quality {
-  --card-accent: #dba655;
+.home-research-card--oral-delivery {
+  --card-accent: var(--home-gold);
 }
 
 .home-card-header {
@@ -512,15 +504,7 @@ redirect_from:
   background: rgba(72, 169, 197, 0.1);
 }
 
-.home-research-card--health .home-card-icon {
-  background: rgba(101, 170, 145, 0.11);
-}
-
-.home-research-card--cooling .home-card-icon {
-  background: rgba(137, 134, 189, 0.11);
-}
-
-.home-research-card--quality .home-card-icon {
+.home-research-card--oral-delivery .home-card-icon {
   background: rgba(219, 166, 85, 0.12);
 }
 
@@ -956,8 +940,8 @@ html[data-theme="dark"] .home-research-card:hover {
 
 </div>
 
-
 <!-- Abstract research visualization -->
+
 <div
   class="home-visual"
   role="img"
@@ -968,27 +952,28 @@ html[data-theme="dark"] .home-research-card:hover {
   <div class="home-visual-orbit-inner"></div>
 
   <!-- Intentionally empty -->
+
   <div class="home-visual-core"></div>
 
-  <div class="home-visual-node home-visual-node--health">
+  <div class="home-visual-node home-visual-node--aquaculture">
     Sustainable Aquaculture
   </div>
 
-  <div class="home-visual-node home-visual-node--delivery">
+  <div class="home-visual-node home-visual-node--passive-cooling">
     Passive Cooling Materials
   </div>
 
-  <div class="home-visual-node home-visual-node--cooling">
+  <div class="home-visual-node home-visual-node--seafood-science">
     Seafood Science
   </div>
 
-  <div class="home-visual-node home-visual-node--quality">
+  <div class="home-visual-node home-visual-node--oral-delivery">
     Oral Delivery Systems
   </div>
 
-  <span class="home-microsphere home-microsphere--one"></span>
-  <span class="home-microsphere home-microsphere--two"></span>
-  <span class="home-microsphere home-microsphere--three"></span>
+<span class="home-microsphere home-microsphere--one"></span>
+<span class="home-microsphere home-microsphere--two"></span>
+<span class="home-microsphere home-microsphere--three"></span>
 
 </div>
 
@@ -1005,34 +990,35 @@ html[data-theme="dark"] .home-research-card:hover {
 <div class="home-research-grid">
 
   <!-- Passive cooling -->
-  <article class="home-research-card home-research-card--cooling">
 
-    <div class="home-card-header">
+  <article class="home-research-card home-research-card--passive-cooling">
 
-      <div>
-        <span class="home-card-number">RESEARCH 01</span>
-        <h3 class="home-card-title">Passive Cooling Materials</h3>
-      </div>
+<div class="home-card-header">
 
-    </div>
+  <div>
+    <span class="home-card-number">RESEARCH 01</span>
+    <h3 class="home-card-title">Passive Cooling Materials</h3>
+  </div>
 
-    <p class="home-card-text">
-      Developing bio-based materials that provide electricity-free
-      temperature reduction for sustainable food preservation and
-      cold-chain management.
-    </p>
+</div>
 
-    <div class="home-card-tags">
-      <span class="home-card-tag">Passive Cooling</span>
-      <span class="home-card-tag">Food Packaging</span>
-      <span class="home-card-tag">Food Preservation</span>
-    </div>
+<p class="home-card-text">
+  Developing bio-based materials that provide electricity-free
+  temperature reduction for sustainable food preservation and
+  cold-chain management.
+</p>
+
+<div class="home-card-tags">
+  <span class="home-card-tag">Passive Cooling</span>
+  <span class="home-card-tag">Food Packaging</span>
+  <span class="home-card-tag">Food Preservation</span>
+</div>
 
   </article>
 
+    <!-- Oral delivery -->
 
-        <!-- Oral delivery -->
-  <article class="home-research-card home-research-card--delivery">
+  <article class="home-research-card home-research-card--oral-delivery">
 
 <div class="home-card-header">
 
@@ -1043,17 +1029,17 @@ html[data-theme="dark"] .home-research-card:hover {
 
 </div>
 
-    <p class="home-card-text">
-      Developing PLGA-based delivery systems that protect vaccines and
-      immunostimulants during digestive transit and deliver them to
-      immune-responsive sites.
-    </p>
+<p class="home-card-text">
+  Developing PLGA-based delivery systems that protect vaccines and
+  immunostimulants during digestive transit and deliver them to
+  immune-responsive sites.
+</p>
 
-    <div class="home-card-tags">
-      <span class="home-card-tag">PLGA-based Delivery</span>
-      <span class="home-card-tag">Oral Vaccines</span>
-      <span class="home-card-tag">Functional Aquafeeds</span>
-    </div>
+<div class="home-card-tags">
+  <span class="home-card-tag">PLGA-based Delivery</span>
+  <span class="home-card-tag">Oral Vaccines</span>
+  <span class="home-card-tag">Functional Aquafeeds</span>
+</div>
 
   </article>
 
@@ -1073,67 +1059,66 @@ html[data-theme="dark"] .home-research-card:hover {
 
   <div class="home-beyond-copy">
 
-    <p>
-      Outside of the laboratory, I enjoy traveling, hiking, photography,
-      watching movies, and exploring different genres of music.
-      Photography allows me to document landscapes, cultures, and everyday
-      moments while encouraging me to observe the world from different
-      perspectives.
-    </p>
+<p>
+  Outside of the laboratory, I enjoy traveling, hiking, photography,
+  watching movies, and exploring different genres of music.
+  Photography allows me to document landscapes, cultures, and everyday
+  moments while encouraging me to observe the world from different
+  perspectives.
+</p>
 
-    <p>
-      These experiences help me maintain curiosity, creativity, and
-      balance—qualities that I also value in scientific research and
-      problem-solving.
-    </p>
+<p>
+  These experiences help me maintain curiosity, creativity, and
+  balance—qualities that I also value in scientific research and
+  problem-solving.
+</p>
 
   </div>
 
-
   <div class="home-interest-cloud" aria-label="Personal interests">
 
-    <span class="home-interest">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="9"></circle>
-        <path d="M3 12h18"></path>
-        <path d="M12 3c3 3.5 3 14 0 18"></path>
-        <path d="M12 3c-3 3.5-3 14 0 18"></path>
-      </svg>
-      Travel
-    </span>
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M3 12h18"></path>
+    <path d="M12 3c3 3.5 3 14 0 18"></path>
+    <path d="M12 3c-3 3.5-3 14 0 18"></path>
+  </svg>
+  Travel
+</span>
 
-    <span class="home-interest">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
-      </svg>
-      Hiking
-    </span>
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
+  </svg>
+  Hiking
+</span>
 
-    <span class="home-interest">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="3" y="6" width="18" height="13" rx="2"></rect>
-        <circle cx="12" cy="12.5" r="3.5"></circle>
-        <path d="M8 6 9.2 4h5.6L16 6"></path>
-      </svg>
-      Photography
-    </span>
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="6" width="18" height="13" rx="2"></rect>
+    <circle cx="12" cy="12.5" r="3.5"></circle>
+    <path d="M8 6 9.2 4h5.6L16 6"></path>
+  </svg>
+  Photography
+</span>
 
-    <span class="home-interest">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-        <path d="m10 9 5 3-5 3Z"></path>
-      </svg>
-      Movies
-    </span>
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+    <path d="m10 9 5 3-5 3Z"></path>
+  </svg>
+  Movies
+</span>
 
-    <span class="home-interest">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M9 18V6l10-2v12"></path>
-        <circle cx="6.5" cy="18" r="2.5"></circle>
-        <circle cx="16.5" cy="16" r="2.5"></circle>
-      </svg>
-      Music
-    </span>
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 18V6l10-2v12"></path>
+    <circle cx="6.5" cy="18" r="2.5"></circle>
+    <circle cx="16.5" cy="16" r="2.5"></circle>
+  </svg>
+  Music
+</span>
 
   </div>
 </div>
