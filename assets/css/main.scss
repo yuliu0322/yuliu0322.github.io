@@ -274,10 +274,15 @@ html {
 
 @media (min-width: 64em) {
 
-  /* Center the entire profile as one unit */
+  /* Center the complete profile */
   .sidebar > div[itemscope] {
-    width: min(100%, 220px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: 100% !important;
     margin: 0 auto !important;
+    padding: 0 !important;
   }
 
   /* Center the profile photo */
@@ -286,6 +291,7 @@ html {
     width: 100% !important;
     margin: 0 auto !important;
     padding: 0 !important;
+    text-align: center !important;
   }
 
   .author__avatar img {
@@ -296,30 +302,61 @@ html {
     margin: 0 auto !important;
   }
 
-  /* Keep the name directly below the photo */
+  /* Center name and pronouns below the photo */
   .author__content {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    text-align: center !important;
   }
 
   .author__name {
-    margin-top: 14px !important;
-    margin-bottom: 8px !important;
+    margin: 14px 0 8px !important;
+    text-align: center !important;
   }
 
-  /* Keep all contact information aligned with the name */
+  .author__pronouns {
+    margin: 0 0 14px !important;
+    text-align: center !important;
+  }
+
+  /* Center the contact-list block */
   .author__urls-wrapper {
     display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
     padding: 0 !important;
   }
 
   .author__urls {
+    display: block !important;
+    position: relative !important;
+    right: auto !important;
+
+    width: max-content !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .author__urls li {
+    width: 100% !important;
+    margin: 0 0 4px !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .author__urls a {
     width: 100% !important;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 2px 0 !important;
+    text-align: left !important;
   }
 }
