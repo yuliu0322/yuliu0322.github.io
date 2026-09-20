@@ -8,5 +8,5 @@ date: 2026-09-01
 location: "Blacksburg, VA, USA"
 ---
 
-Awarded a $22,000 Southern Sustainable Agriculture Research and Education (SARE) Graduate Student Grant to field-test chitin nanofiber-based passive cooling liners as a sustainable and affordable solution for reducing postharvest heat accumulation and preserving strawberry quality on small-scale Southern farms.
+Excited to share that I've been awarded a $22,000 Southern SARE Graduate Student Grant to field-test chitin nanofiber-based passive cooling liners — a sustainable, affordable way to reduce postharvest heat buildup and preserve strawberry quality on small-scale Southern farms🍓🍓🍓. Huge thanks to Dr. Yiming Feng and Dr. Ran Yang for their help with the proposal and application process!🙏🙏🙏
 
