@@ -753,21 +753,6 @@ html[data-theme="dark"] .home-research-card:hover {
     font-size: 0.94rem;
     line-height: 1.74;
   }
-}
-
-  .home-greeting {
-    font-size: 1.75rem;
-  }
-
-  .home-tagline {
-    font-size: 1rem;
-  }
-
-  .home-description,
-  .home-beyond-copy p {
-    font-size: 0.94rem;
-    line-height: 1.74;
-  }
 
   .home-visual {
     width: 250px;
@@ -813,11 +798,6 @@ html[data-theme="dark"] .home-research-card:hover {
     font-size: 0.68rem;
   }
 }
-
-
-/* ==================================================
-   Accessibility
-   ================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .home-hero,
