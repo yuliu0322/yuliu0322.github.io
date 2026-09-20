@@ -830,11 +830,6 @@ html[data-theme="dark"] .home-research-card:hover {
         <span class="home-greeting-highlight">Yu Liu</span>.
       </h1>
 
-      <p class="home-tagline">
-        Engineering healthier and more sustainable aquatic food systems—from
-        aquaculture production to post-harvest preservation.
-      </p>
-
       <p class="home-description">
         I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
         conducting interdisciplinary research in the Sustainable &amp; Intelligent
