@@ -27,6 +27,7 @@ redirect_from:
   --home-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 
   width: 100%;
+  margin-top: -1.4rem;
   color: var(--home-text);
 }
 
@@ -728,12 +729,31 @@ html[data-theme="dark"] .home-research-card:hover {
 }
 
 @media (max-width: 768px) {
+  .home-welcome {
+    margin-top: 0;
+  }
+
   .home-hero {
     min-height: auto;
     margin-bottom: 2.3rem;
     padding: 1.7rem 1.35rem 1.9rem;
     border-radius: 17px;
   }
+
+  .home-greeting {
+    font-size: 1.75rem;
+  }
+
+  .home-tagline {
+    font-size: 1rem;
+  }
+
+  .home-description,
+  .home-beyond-copy p {
+    font-size: 0.94rem;
+    line-height: 1.74;
+  }
+}
 
   .home-greeting {
     font-size: 1.75rem;
