@@ -6,15 +6,6 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-    <div class="profile-animation" aria-hidden="true">
-    <span class="profile-ring profile-ring--one"></span>
-    <span class="profile-ring profile-ring--two"></span>
-
-    <span class="profile-dot profile-dot--one"></span>
-    <span class="profile-dot profile-dot--two"></span>
-    <span class="profile-dot profile-dot--three"></span>
-  </div>
-
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
