@@ -927,8 +927,8 @@ html[data-theme="dark"] .home-research-card:hover {
   </h1>
 
   <p class="home-description">
-    I am a Ph.D. student in Biological Systems Engineering at Virginia Tech,
-    conducting interdisciplinary research in the Sustainable &amp; Intelligent
+    I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
+    and a member of both the Sustainable &amp; Intelligent
     Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
   </p>
 
