@@ -221,11 +221,28 @@ author_profile: true
   color: var(--news-blue);
 }
 
-.news-summary {
-  margin: 0 0 11px;
+.news-content {
+  margin: 0 0 12px;
   color: var(--news-text);
   font-size: 0.96rem;
   line-height: 1.65;
+}
+
+.news-content p {
+  margin: 0 0 12px;
+}
+
+.news-content p:last-child {
+  margin-bottom: 0;
+}
+
+.news-content img {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  margin: 18px auto 0;
+  border-radius: 9px;
 }
 
 /* Venue and location */
@@ -458,15 +475,15 @@ author_profile: true
 </h3>
 
 
-        <!-- Summary: only displayed when explicitly provided -->
+<!-- Full news content -->
 
-        {% if post.summary %}
+{% if post.content != "" %}
 
-          <p class="news-summary">
-            {{ post.summary }}
-          </p>
+  <div class="news-content">
+    {{ post.content }}
+  </div>
 
-        {% endif %}
+{% endif %}
 
 
         <!-- Venue and location -->
