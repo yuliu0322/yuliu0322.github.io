@@ -254,24 +254,28 @@ redirect_from:
   box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
 }
 
-/* Empty center circle */
+/* Diffuse nebula — no solid central sphere */
 .home-visual-core {
   position: absolute;
-  inset: 32%;
-  border: 1px solid rgba(72, 169, 197, 0.24);
+  inset: 23%;
+  border: 0;
   border-radius: 50%;
+
   background:
     radial-gradient(
-      circle at 35% 28%,
-      rgba(255, 255, 255, 0.98),
-      rgba(227, 245, 250, 0.88) 72%
+      circle at center,
+      rgba(120, 211, 232, 0.16) 0%,
+      rgba(120, 211, 232, 0.08) 30%,
+      rgba(72, 169, 197, 0.035) 50%,
+      transparent 72%
     );
-  box-shadow:
-    0 15px 35px rgba(49, 139, 168, 0.14),
-    inset 0 0 24px rgba(72, 169, 197, 0.07);
-  animation: home-core-breathe 4.8s ease-in-out infinite;
-}
 
+  filter: blur(10px);
+  box-shadow: none;
+  animation: home-core-breathe 6s ease-in-out infinite;
+  pointer-events: none;
+}
+  
 /* Research labels */
 .home-visual-node {
   position: absolute;
