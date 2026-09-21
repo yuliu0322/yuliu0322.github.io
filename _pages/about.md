@@ -255,146 +255,63 @@ redirect_from:
 }
 
 /* ==================================================
-   Flowing ocean center
+   Soft flowing ocean currents
    ================================================== */
 
-.home-visual-core {
+.home-ocean-current {
   position: absolute;
-  inset: 36%;
+  inset: 27% 17%;
   z-index: 1;
 
-  overflow: hidden;
+  width: 66%;
+  height: 46%;
 
-  border: 1px solid rgba(72, 169, 197, 0.22);
-  border-radius: 48% 52% 46% 54% / 55% 45% 55% 45%;
-
-  background:
-    radial-gradient(
-      circle at 30% 20%,
-      rgba(255, 255, 255, 0.9),
-      transparent 28%
-    ),
-    linear-gradient(
-      155deg,
-      rgba(194, 238, 245, 0.95) 0%,
-      rgba(107, 201, 219, 0.82) 42%,
-      rgba(61, 159, 190, 0.78) 72%,
-      rgba(38, 119, 160, 0.82) 100%
-    );
-
-  box-shadow:
-    0 10px 28px rgba(46, 137, 169, 0.16),
-    0 0 38px rgba(72, 169, 197, 0.1),
-    inset 0 0 16px rgba(255, 255, 255, 0.22);
-
-  animation:
-    home-ocean-float 7s ease-in-out infinite,
-    home-ocean-shape 11s ease-in-out infinite;
-
+  overflow: visible;
   pointer-events: none;
+
+  filter: drop-shadow(0 5px 10px rgba(72, 169, 197, 0.05));
 }
 
-/* Upper moving wave */
-.home-visual-core::before {
-  content: "";
-  position: absolute;
-
-  left: -45%;
-  bottom: 31%;
-
-  width: 190%;
-  height: 48%;
-
-  border-radius: 46% 54% 0 0 / 30% 32% 0 0;
-
-  background:
-    radial-gradient(
-      ellipse at 50% 100%,
-      rgba(255, 255, 255, 0.32) 0%,
-      rgba(215, 246, 250, 0.2) 44%,
-      transparent 70%
-    );
-
-  transform: rotate(-5deg);
-  animation: home-wave-drift-one 6.5s ease-in-out infinite;
+.home-ocean-wave {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-/* Lower moving current */
-.home-visual-core::after {
-  content: "";
-  position: absolute;
-
-  left: -50%;
-  bottom: -4%;
-
-  width: 205%;
-  height: 61%;
-
-  border-radius: 50% 45% 0 0 / 32% 38% 0 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(152, 225, 236, 0.08) 0%,
-      rgba(42, 145, 178, 0.38) 50%,
-      rgba(27, 100, 147, 0.52) 100%
-    );
-
-  transform: rotate(4deg);
-  animation: home-wave-drift-two 8.5s ease-in-out infinite;
+.home-ocean-wave--one {
+  stroke: rgba(112, 202, 221, 0.45);
+  stroke-width: 2;
+  stroke-dasharray: 14 6;
+  animation: home-ocean-flow-one 9s linear infinite;
 }
 
-
-/* ==================================================
-   Ocean animations
-   ================================================== */
-
-@keyframes home-ocean-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-4px);
-  }
+.home-ocean-wave--two {
+  stroke: rgba(157, 221, 233, 0.38);
+  stroke-width: 1.45;
+  stroke-dasharray: 9 7;
+  animation: home-ocean-flow-two 12s linear infinite;
 }
 
-@keyframes home-ocean-shape {
-  0%,
-  100% {
-    border-radius: 48% 52% 46% 54% / 55% 45% 55% 45%;
-  }
-
-  33% {
-    border-radius: 54% 46% 52% 48% / 47% 53% 46% 54%;
-  }
-
-  66% {
-    border-radius: 45% 55% 48% 52% / 52% 48% 56% 44%;
-  }
+.home-ocean-wave--three {
+  stroke: rgba(190, 232, 240, 0.58);
+  stroke-width: 1.05;
+  stroke-dasharray: 6 8;
+  animation: home-ocean-flow-three 15s linear infinite;
 }
 
-@keyframes home-wave-drift-one {
-  0%,
-  100% {
-    transform: translateX(-4%) rotate(-5deg);
-  }
-
-  50% {
-    transform: translateX(10%) rotate(2deg);
-  }
+@keyframes home-ocean-flow-one {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -80; }
 }
 
-@keyframes home-wave-drift-two {
-  0%,
-  100% {
-    transform: translateX(7%) rotate(4deg);
-  }
+@keyframes home-ocean-flow-two {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 64; }
+}
 
-  50% {
-    transform: translateX(-9%) rotate(-2deg);
-  }
+@keyframes home-ocean-flow-three {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -58; }
 }
   
 /* Research labels */
@@ -993,7 +910,7 @@ html[data-theme="dark"] .home-research-card:hover {
   .home-section,
   .home-visual-orbit,
   .home-visual-orbit-inner,
-  .home-visual-core,
+  .home-ocean-current,
   .home-visual::before,
   .home-visual-node,
   .home-microsphere,
@@ -1054,9 +971,32 @@ html[data-theme="dark"] .home-research-card:hover {
   <div class="home-visual-orbit"></div>
   <div class="home-visual-orbit-inner"></div>
 
-  <!-- Intentionally empty -->
+  <!-- Soft flowing ocean currents -->
 
-  <div class="home-visual-core"></div>
+<svg
+class="home-ocean-current"
+viewBox="0 0 200 100"
+aria-hidden="true"
+
+
+
+<path
+
+  class="home-ocean-wave home-ocean-wave--three"
+  d="M4 30 C34 8, 62 52, 96 30 S157 8, 196 30"
+/>
+
+<path
+  class="home-ocean-wave home-ocean-wave--one"
+  d="M4 50 C36 25, 64 75, 100 50 S159 25, 196 50"
+/>
+
+<path
+  class="home-ocean-wave home-ocean-wave--two"
+  d="M4 70 C38 47, 68 91, 104 70 S161 47, 196 70"
+/>
+
+  </svg>
 
   <div class="home-visual-node home-visual-node--aquaculture">
     Sustainable Aquaculture
@@ -1119,7 +1059,7 @@ html[data-theme="dark"] .home-research-card:hover {
 
   </article>
 
-    <!-- Oral delivery -->
+<!-- Oral delivery -->
 
   <article class="home-research-card home-research-card--oral-delivery">
 
