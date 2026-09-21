@@ -216,7 +216,7 @@ redirect_from:
 .home-visual-orbit {
   position: absolute;
   inset: 6%;
-  border: 1px dashed rgba(72, 169, 197, 0.31);
+  border: 1.5px dashed rgba(72, 169, 197, 0.31);
   border-radius: 50%;
   animation: home-orbit-rotate 36s linear infinite;
 }
@@ -237,7 +237,7 @@ redirect_from:
 .home-visual-orbit-inner {
   position: absolute;
   inset: 21%;
-  border: 1px solid rgba(219, 166, 85, 0.31);
+  border: 1.5px solid rgba(219, 166, 85, 0.31);
   border-radius: 50%;
   animation: home-orbit-rotate-reverse 27s linear infinite;
 }
