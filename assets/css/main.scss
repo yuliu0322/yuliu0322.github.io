@@ -70,22 +70,28 @@ html {
   font-size: 16px !important;
 }
 
+/* Remove the old profile animation element */
+.profile-animation {
+  display: none !important;
+}
+
 
 /* ==========================================================================
-   DESKTOP LAYOUT
+   TABLET AND DESKTOP
+   Profile on the left and page content on the right
    ========================================================================== */
 
-@media (min-width: 75em) {
+@media (min-width: 48em) {
 
   :root {
-    --sidebar-width: clamp(16rem, 20vw, 20rem);
-    --column-gap: 2rem;
+    --sidebar-width: clamp(11.5rem, 22vw, 16rem);
+    --column-gap: clamp(1.25rem, 3vw, 2.5rem);
   }
 
-  /* Center the header and main content */
+  /* Center header and main content */
   .masthead__inner-wrap,
   #main {
-    width: calc(100% - 8rem) !important;
+    width: calc(100% - 2rem) !important;
     max-width: 1600px;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -108,34 +114,35 @@ html {
   .sidebar {
     grid-column: 1;
     width: 100% !important;
+    max-width: none !important;
     float: none !important;
-    padding-top: 0 !important;
-    margin-top: -3.5rem !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
-  /* Keep the profile visible while scrolling */
+  /* Keep profile visible while scrolling */
   .sidebar.sticky {
     position: sticky !important;
     top: 5.5rem !important;
     height: auto !important;
-    max-height: none !important;
-    overflow: visible !important;
+    max-height: calc(100vh - 6rem) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
   }
 
-  /*
-   * Remove all profile-card styling.
-   * The profile remains transparent with no border or fixed height.
-   */
+  /* Remove profile-card background and border */
   .sidebar > div[itemscope] {
+    display: block !important;
     position: static !important;
     isolation: auto !important;
     box-sizing: border-box;
 
-    width: 100% !important;
+    width: min(100%, 220px) !important;
     height: auto !important;
     min-height: 0 !important;
 
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
     overflow: visible !important;
 
@@ -146,7 +153,6 @@ html {
     box-shadow: none !important;
   }
 
-  /* Remove the previous decorative glow layers */
   .sidebar > div[itemscope]::before,
   .sidebar > div[itemscope]::after {
     content: none !important;
@@ -159,17 +165,21 @@ html {
      -------------------------------------------------------------------------- */
 
   .author__avatar {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
 
   .author__avatar img {
-    display: block;
-    width: 100%;
-    max-width: 175px;
-    margin: 0 auto;
+    display: block !important;
+    width: min(100%, 175px) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     transform: none !important;
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
 
@@ -177,19 +187,29 @@ html {
      PROFILE TEXT
      -------------------------------------------------------------------------- */
 
+  .author__content {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
   .author__name {
-    margin-top: 14px;
-    margin-bottom: 8px;
+    margin-top: 14px !important;
+    margin-bottom: 8px !important;
     font-size: 1.25rem;
     font-weight: 700;
+    text-align: left !important;
     color: var(--global-text-color);
   }
 
   .author__pronouns {
-    margin-top: 0;
-    margin-bottom: 14px;
-    color: var(--global-text-color-light);
+    margin-top: 0 !important;
+    margin-bottom: 14px !important;
     font-size: 0.9rem;
+    text-align: left !important;
+    color: var(--global-text-color-light);
   }
 
 
@@ -197,21 +217,54 @@ html {
      PROFILE LINKS
      -------------------------------------------------------------------------- */
 
-  .author__urls {
-    margin-top: 0;
+  .author__urls-wrapper {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .author__urls li,
-  .author__urls a {
-    line-height: 1.45;
+  /* Do not show Follow button on tablet and desktop */
+  .author__urls-wrapper button {
+    display: none !important;
+  }
+
+  .author__urls {
+    display: block !important;
+    position: relative !important;
+    inset: auto !important;
+
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    list-style: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .author__urls::before,
+  .author__urls::after {
+    display: none !important;
   }
 
   .author__urls li {
-    margin-bottom: 5px;
+    width: 100% !important;
+    margin-bottom: 5px !important;
+    padding: 0 !important;
+    line-height: 1.45;
+    text-align: left !important;
   }
 
   .author__urls a {
-    margin-bottom: 0;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.45;
+    text-align: left !important;
     transform: none !important;
   }
 
@@ -224,11 +277,12 @@ html {
   .archive {
     grid-column: 2;
     width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
     float: none !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   /* Keep archive pages at a readable width */
@@ -236,11 +290,28 @@ html {
     width: 100% !important;
     max-width: 900px !important;
   }
+}
 
 
-  /* --------------------------------------------------------------------------
-     NAVIGATION
-     -------------------------------------------------------------------------- */
+/* ==========================================================================
+   LARGE DESKTOP
+   ========================================================================== */
+
+@media (min-width: 75em) {
+
+  :root {
+    --sidebar-width: clamp(16rem, 20vw, 20rem);
+    --column-gap: 2rem;
+  }
+
+  .masthead__inner-wrap,
+  #main {
+    width: calc(100% - 8rem) !important;
+  }
+
+  .sidebar {
+    margin-top: -3.5rem !important;
+  }
 
   /* Align Home with the right content column */
   .greedy-nav .visible-links > li:first-child {
@@ -252,7 +323,6 @@ html {
     margin-right: 0 !important;
   }
 
-  /* Keep navigation links compact */
   .greedy-nav .visible-links a {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -261,97 +331,210 @@ html {
 
 
 /* ==========================================================================
-   REMOVE OLD PROFILE ANIMATION ELEMENT
+   PHONE
+   Profile above content; Follow menu floats above page content
    ========================================================================== */
 
-.profile-animation {
-  display: none !important;
-}
+@media (max-width: 47.99em) {
 
-/* ==========================================================================
-   RESPONSIVE PROFILE ALIGNMENT
-   ========================================================================== */
-
-@media (min-width: 64em) {
-
-  /* Center the profile as one unit */
-.sidebar > div[itemscope] {
-  display: block !important;
-  width: min(100%, 220px) !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-}
-
-  /* Center the photo inside the profile */
-  .author__avatar {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-  }
-
-.author__avatar img {
-  display: block !important;
-  width: 175px !important;
-  max-width: 100% !important;
-  height: auto !important;
-  margin: 0 auto !important;
-}
-
-  /* Restore left-aligned name and pronouns */
-  .author__content {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-  }
-
-  .author__name {
-    margin-top: 14px !important;
-    margin-bottom: 8px !important;
-    text-align: left !important;
-  }
-
-  .author__pronouns {
-    margin-top: 0 !important;
-    margin-bottom: 14px !important;
-    text-align: left !important;
-  }
-
-  /* Restore the original left-aligned contact list */
-  .author__urls-wrapper {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .author__urls {
+  #main {
     display: block !important;
     position: relative !important;
-    right: auto !important;
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    overflow: visible !important;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     MOBILE PROFILE ROW
+     -------------------------------------------------------------------------- */
+
+  .sidebar {
+    position: relative !important;
+    z-index: 100 !important;
+
+    display: block !important;
+    width: 100% !important;
+    min-height: 4.5rem;
+
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+  }
+
+  .sidebar.sticky {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .sidebar > div[itemscope] {
+    position: relative !important;
+    z-index: 101 !important;
+
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 0.75rem;
 
     width: 100% !important;
+    height: auto !important;
+
     margin: 0 !important;
     padding: 0 !important;
 
+    overflow: visible !important;
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
   }
 
-.author__urls li {
-  width: 100% !important;
-  margin-bottom: 5px !important;
-  padding: 0 !important;
-  text-align: left !important;
-}
+  .sidebar > div[itemscope]::before,
+  .sidebar > div[itemscope]::after {
+    content: none !important;
+    display: none !important;
+  }
 
-.author__urls a {
-  width: 100% !important;
-  margin-bottom: 0 !important;
-  padding: 0 !important;
-  text-align: left !important;
-}
+
+  /* --------------------------------------------------------------------------
+     MOBILE PHOTO
+     -------------------------------------------------------------------------- */
+
+  .author__avatar {
+    display: block !important;
+    width: 54px !important;
+    height: 54px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .author__avatar img {
+    display: block !important;
+    width: 54px !important;
+    height: 54px !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: cover;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     MOBILE NAME AND PRONOUNS
+     -------------------------------------------------------------------------- */
+
+  .author__content {
+    display: block !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .author__name {
+    margin: 0 0 3px !important;
+    font-size: 1.15rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .author__pronouns {
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.2 !important;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     MOBILE FOLLOW BUTTON AND MENU
+     -------------------------------------------------------------------------- */
+
+  .author__urls-wrapper {
+    position: relative !important;
+    z-index: 1000 !important;
+
+    display: block !important;
+    width: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .author__urls-wrapper button {
+    display: block !important;
+    position: relative !important;
+    z-index: 1002 !important;
+
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+
+  .author__urls {
+    position: absolute !important;
+    z-index: 1001 !important;
+
+    top: calc(100% + 12px) !important;
+    right: 0 !important;
+    left: auto !important;
+
+    width: max-content !important;
+    min-width: 190px !important;
+    max-width: calc(100vw - 2rem) !important;
+
+    margin: 0 !important;
+    padding: 0.75rem !important;
+
+    list-style: none !important;
+    background: var(--global-bg-color) !important;
+    border: 1px solid var(--global-border-color) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  .author__urls li {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+  }
+
+  .author__urls a {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.35rem 0.25rem !important;
+    white-space: nowrap;
+  }
+
+
+  /* --------------------------------------------------------------------------
+     MOBILE PAGE CONTENT
+     -------------------------------------------------------------------------- */
+
+  .page,
+  .archive {
+    position: relative !important;
+    z-index: 1 !important;
+
+    clear: both !important;
+    width: 100% !important;
+    min-width: 0 !important;
+
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .page__title,
+  .archive__subtitle {
+    clear: both;
+  }
 }
