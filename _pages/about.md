@@ -8,7 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-
 <style>
    
 /* ==================================================
@@ -267,52 +266,57 @@ redirect_from:
   width: 66%;
   height: 46%;
 
-  overflow: visible;
+  overflow: hidden;
   pointer-events: none;
-
-  filter: drop-shadow(0 5px 10px rgba(72, 169, 197, 0.05));
+  opacity: 0.9;
 }
 
 .home-ocean-wave {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 58%;
+  border-style: solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
 }
 
 .home-ocean-wave--one {
-  stroke: rgba(112, 202, 221, 0.45);
-  stroke-width: 2;
-  stroke-dasharray: 14 6;
-  animation: home-ocean-flow-one 9s linear infinite;
+  top: 16%;
+  border-top-color: rgba(112, 202, 221, 0.46);
+  border-width: 2px;
+  animation: home-ocean-flow-one 7s ease-in-out infinite;
 }
 
 .home-ocean-wave--two {
-  stroke: rgba(157, 221, 233, 0.38);
-  stroke-width: 1.45;
-  stroke-dasharray: 9 7;
-  animation: home-ocean-flow-two 12s linear infinite;
+  top: 39%;
+  border-top-color: rgba(154, 219, 232, 0.4);
+  border-width: 1.5px;
+  animation: home-ocean-flow-two 9s ease-in-out infinite;
 }
 
 .home-ocean-wave--three {
-  stroke: rgba(190, 232, 240, 0.58);
-  stroke-width: 1.05;
-  stroke-dasharray: 6 8;
-  animation: home-ocean-flow-three 15s linear infinite;
+  top: 62%;
+  border-top-color: rgba(188, 231, 239, 0.65);
+  border-width: 1px;
+  animation: home-ocean-flow-three 11s ease-in-out infinite;
 }
 
 @keyframes home-ocean-flow-one {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -80; }
+  0%, 100% { transform: translateX(-5%) translateY(0) rotate(-2deg); }
+  50% { transform: translateX(5%) translateY(-4px) rotate(2deg); }
 }
 
 @keyframes home-ocean-flow-two {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: 64; }
+  0%, 100% { transform: translateX(5%) translateY(0) rotate(2deg); }
+  50% { transform: translateX(-5%) translateY(4px) rotate(-2deg); }
 }
 
 @keyframes home-ocean-flow-three {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -58; }
+  0%, 100% { transform: translateX(-3%) translateY(1px) rotate(-1deg); }
+  50% { transform: translateX(4%) translateY(-3px) rotate(1deg); }
 }
   
 /* Research labels */
@@ -974,30 +978,7 @@ html[data-theme="dark"] .home-research-card:hover {
 
   <!-- Soft flowing ocean currents -->
 
-<svg
-class="home-ocean-current"
-viewBox="0 0 200 100"
-aria-hidden="true"
-
-
-
-<path
-
-  class="home-ocean-wave home-ocean-wave--three"
-  d="M4 30 C34 8, 62 52, 96 30 S157 8, 196 30"
-/>
-
-<path
-  class="home-ocean-wave home-ocean-wave--one"
-  d="M4 50 C36 25, 64 75, 100 50 S159 25, 196 50"
-/>
-
-<path
-  class="home-ocean-wave home-ocean-wave--two"
-  d="M4 70 C38 47, 68 91, 104 70 S161 47, 196 70"
-/>
-
-  </svg>
+  <div class="home-ocean-current" aria-hidden="true"><span class="home-ocean-wave home-ocean-wave--one"></span><span class="home-ocean-wave home-ocean-wave--two"></span><span class="home-ocean-wave home-ocean-wave--three"></span></div>
 
   <div class="home-visual-node home-visual-node--aquaculture">
     Sustainable Aquaculture
