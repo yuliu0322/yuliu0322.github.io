@@ -254,26 +254,147 @@ redirect_from:
   box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
 }
 
-/* Diffuse nebula — no solid central sphere */
+/* ==================================================
+   Flowing ocean center
+   ================================================== */
+
 .home-visual-core {
   position: absolute;
-  inset: 23%;
-  border: 0;
-  border-radius: 50%;
+  inset: 36%;
+  z-index: 1;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(72, 169, 197, 0.22);
+  border-radius: 48% 52% 46% 54% / 55% 45% 55% 45%;
 
   background:
     radial-gradient(
-      circle at center,
-      rgba(120, 211, 232, 0.16) 0%,
-      rgba(120, 211, 232, 0.08) 30%,
-      rgba(72, 169, 197, 0.035) 50%,
-      transparent 72%
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.9),
+      transparent 28%
+    ),
+    linear-gradient(
+      155deg,
+      rgba(194, 238, 245, 0.95) 0%,
+      rgba(107, 201, 219, 0.82) 42%,
+      rgba(61, 159, 190, 0.78) 72%,
+      rgba(38, 119, 160, 0.82) 100%
     );
 
-  filter: blur(10px);
-  box-shadow: none;
-  animation: home-core-breathe 6s ease-in-out infinite;
+  box-shadow:
+    0 10px 28px rgba(46, 137, 169, 0.16),
+    0 0 38px rgba(72, 169, 197, 0.1),
+    inset 0 0 16px rgba(255, 255, 255, 0.22);
+
+  animation:
+    home-ocean-float 7s ease-in-out infinite,
+    home-ocean-shape 11s ease-in-out infinite;
+
   pointer-events: none;
+}
+
+/* Upper moving wave */
+.home-visual-core::before {
+  content: "";
+  position: absolute;
+
+  left: -45%;
+  bottom: 31%;
+
+  width: 190%;
+  height: 48%;
+
+  border-radius: 46% 54% 0 0 / 30% 32% 0 0;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(215, 246, 250, 0.2) 44%,
+      transparent 70%
+    );
+
+  transform: rotate(-5deg);
+  animation: home-wave-drift-one 6.5s ease-in-out infinite;
+}
+
+/* Lower moving current */
+.home-visual-core::after {
+  content: "";
+  position: absolute;
+
+  left: -50%;
+  bottom: -4%;
+
+  width: 205%;
+  height: 61%;
+
+  border-radius: 50% 45% 0 0 / 32% 38% 0 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(152, 225, 236, 0.08) 0%,
+      rgba(42, 145, 178, 0.38) 50%,
+      rgba(27, 100, 147, 0.52) 100%
+    );
+
+  transform: rotate(4deg);
+  animation: home-wave-drift-two 8.5s ease-in-out infinite;
+}
+
+
+/* ==================================================
+   Ocean animations
+   ================================================== */
+
+@keyframes home-ocean-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes home-ocean-shape {
+  0%,
+  100% {
+    border-radius: 48% 52% 46% 54% / 55% 45% 55% 45%;
+  }
+
+  33% {
+    border-radius: 54% 46% 52% 48% / 47% 53% 46% 54%;
+  }
+
+  66% {
+    border-radius: 45% 55% 48% 52% / 52% 48% 56% 44%;
+  }
+}
+
+@keyframes home-wave-drift-one {
+  0%,
+  100% {
+    transform: translateX(-4%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(10%) rotate(2deg);
+  }
+}
+
+@keyframes home-wave-drift-two {
+  0%,
+  100% {
+    transform: translateX(7%) rotate(4deg);
+  }
+
+  50% {
+    transform: translateX(-9%) rotate(-2deg);
+  }
 }
   
 /* Research labels */
@@ -688,19 +809,6 @@ redirect_from:
   }
 }
 
-@keyframes home-core-breathe {
-  0%,
-  100% {
-    transform: scale(1);
-    filter: saturate(1);
-  }
-
-  50% {
-    transform: scale(1.055);
-    filter: saturate(1.12);
-  }
-}
-
 @keyframes home-energy-spin {
   to {
     transform: rotate(360deg);
@@ -778,19 +886,6 @@ html[data-theme="dark"] .home-visual-node {
   color: #d8e1e8;
   border-color: #52606a;
   background: rgba(52, 58, 64, 0.94);
-}
-
-html[data-theme="dark"] .home-visual-core {
-  border-color: rgba(101, 194, 221, 0.25);
-  background:
-    radial-gradient(
-      circle at 35% 28%,
-      rgba(68, 83, 92, 0.96),
-      rgba(45, 65, 74, 0.94) 75%
-    );
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.18),
-    inset 0 0 24px rgba(101, 194, 221, 0.06);
 }
 
 html[data-theme="dark"] .home-hero-shimmer {
