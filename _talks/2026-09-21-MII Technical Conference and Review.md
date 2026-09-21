@@ -6,7 +6,6 @@ permalink: /talks/MII Technical Conference and Review/
 venue: "Virginia Tech"
 date: 2026-09-22
 location: "Blacksburg, VA, USA"
+event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
 ---
-
-**Conference website:** [MII Technical Conference & Review 2026](https://mii.vt.edu/outreach/technical-conference-review.html){:target="_blank" rel="noopener noreferrer"}
 
