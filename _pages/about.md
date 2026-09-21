@@ -316,7 +316,7 @@ redirect_from:
 }
 
 .home-visual-node--passive-cooling {
-  bottom: 18%;
+  bottom: 28%;
   left: -6%;
   --node-color: var(--home-blue);
   --float-time: 7.6s;
@@ -476,11 +476,11 @@ redirect_from:
 }
 
 .home-research-card--passive-cooling {
-  --card-accent: var(--home-gold);
+  --card-accent: var(--home-blue);
 }
 
 .home-research-card--oral-delivery {
-  --card-accent: var(--home-blue);
+  --card-accent: var(--home-gold);
 }
 
 .home-card-header {
@@ -505,11 +505,11 @@ redirect_from:
 }
 
 .home-research-card--passive-cooling .home-card-icon {
-  background: rgba(219, 166, 85, 0.12);
+  background: rgba(72, 169, 197, 0.1);
 }
 
 .home-research-card--oral-delivery .home-card-icon {
-  background: rgba(72, 169, 197, 0.1);
+  background: rgba(219, 166, 85, 0.12);
 }
 
 .home-card-icon svg {
