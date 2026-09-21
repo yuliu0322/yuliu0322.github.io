@@ -238,15 +238,16 @@ author_profile: true
 
 .news-content img {
   display: block;
-  width: auto;
-  max-width: 260px;
-  max-height: 320px;
-  height: auto;
-  margin: 18px auto 4px;
+  width: auto !important;
+  max-width: 260px !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 18px auto 4px !important;
   border: 1px solid var(--news-border);
   border-radius: 8px;
   box-shadow: 0 3px 12px rgba(35, 48, 68, 0.12);
   cursor: zoom-in;
+  object-fit: contain;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
