@@ -149,9 +149,9 @@ author_profile: true
 
 .research-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 1fr);
   gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: center;
+  align-items: start;
 }
 
 .research-section--reverse .research-copy {
@@ -205,7 +205,7 @@ author_profile: true
 
 .research-figure {
   position: relative;
-  margin: 0;
+  margin: 0.15rem 0 0;
   padding: 1.15rem;
   border: 1px solid var(--research-line);
   border-radius: 16px;
@@ -496,7 +496,7 @@ html[data-theme="dark"] .research-topics li {
 
   <section class="research-interests">
     <h2>Research Interests</h2>
-    <p>Sustainable Aquaculture • Seafood Science • Oral Delivery Systems • Passive Cooling Materials • Food Biochemistry</p>
+    <p>Sustainable Aquaculture • Seafood Science • Oral Delivery Systems • Passive Cooling • Food Biochemistry</p>
   </section>
 
 </div>
