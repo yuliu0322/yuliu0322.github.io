@@ -1145,6 +1145,15 @@ html[data-theme="dark"] .home-research-card:hover {
   Music
 </span>
 
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6 10a4 4 0 0 1 6-4 4 4 0 0 1 6 4"></path>
+    <path d="M5 10h14l-2 10H7L5 10Z"></path>
+    <path d="M10 13v4M14 13v4"></path>
+  </svg>
+  Baking
+</span>
+
   </div>
 </div>
 
