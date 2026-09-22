@@ -78,7 +78,7 @@ author_profile: true
 
 .research-section {
   scroll-margin-top: 5rem;
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
 }
 
 .research-section:last-of-type {
@@ -252,29 +252,6 @@ author_profile: true
   cursor: pointer;
 }
 
-.research-interests {
-  display: grid;
-  grid-template-columns: minmax(150px, 0.3fr) 1fr;
-  gap: 1.5rem;
-  align-items: center;
-  margin-top: 0;
-  padding: 1.5rem 1.7rem;
-  border-top: 1px solid var(--research-line);
-  border-bottom: 1px solid var(--research-line);
-}
-
-.research-interests h2 {
-  margin: 0;
-  color: var(--research-ink);
-  font-size: 1.18rem;
-}
-
-.research-interests p {
-  margin: 0;
-  color: var(--research-muted);
-  line-height: 1.7;
-}
-
 /* Dark mode */
 html[data-theme="dark"] .research-page {
   --research-ink: #f2f5f8;
@@ -349,12 +326,6 @@ html[data-theme="dark"] .research-topics li {
 
   .research-lightbox {
     padding: 0.75rem;
-  }
-
-  .research-interests {
-    grid-template-columns: 1fr;
-    gap: 0.65rem;
-    padding: 1.25rem 0;
   }
 }
 </style>
@@ -484,11 +455,6 @@ html[data-theme="dark"] .research-topics li {
         </div>
       </div>
     </div>
-  </section>
-
-  <section class="research-interests">
-    <h2>Research Interests</h2>
-    <p>Sustainable Aquaculture • Seafood Science • Oral Delivery Systems • Passive Cooling • Food Biochemistry</p>
   </section>
 
 </div>
