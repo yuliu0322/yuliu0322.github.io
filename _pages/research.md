@@ -110,19 +110,14 @@ author_profile: true
 .research-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
-  grid-template-areas:
-    "description figure"
-    ". topics";
+  grid-template-areas: "description visual";
   gap: clamp(2rem, 4vw, 3.5rem);
-  row-gap: 1rem;
   align-items: start;
 }
 
 .research-section--reverse .research-grid {
   grid-template-columns: minmax(360px, 1.08fr) minmax(0, 0.92fr);
-  grid-template-areas:
-    "figure description"
-    "topics .";
+  grid-template-areas: "visual description";
 }
 
 .research-title {
@@ -139,9 +134,13 @@ author_profile: true
   color: var(--research-text);
 }
 
+.research-visual {
+  grid-area: visual;
+  min-width: 0;
+}
+
 .research-topics-block {
-  grid-area: topics;
-  padding-top: 0.15rem;
+  margin-top: 0.75rem;
 }
 
 .research-topics-label {
@@ -174,9 +173,21 @@ author_profile: true
 }
 
 .research-figure {
-  grid-area: figure;
   margin: 0;
   padding: 0;
+}
+
+.research-image-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: zoom-in;
 }
 
 .research-figure img {
@@ -186,6 +197,58 @@ author_profile: true
   height: auto;
   margin: 0;
   object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.research-image-button:hover img,
+.research-image-button:focus-visible img {
+  opacity: 0.88;
+}
+
+.research-image-button:focus-visible {
+  outline: 2px solid var(--research-blue);
+  outline-offset: 4px;
+}
+
+.research-lightbox[hidden] {
+  display: none;
+}
+
+.research-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(13, 22, 34, 0.92);
+  backdrop-filter: blur(4px);
+}
+
+.research-lightbox img {
+  display: block;
+  max-width: min(96vw, 1500px);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.research-lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .research-interests {
@@ -246,16 +309,14 @@ html[data-theme="dark"] .research-topics li {
     grid-template-columns: 1fr;
     grid-template-areas:
       "description"
-      "figure"
-      "topics";
+      "visual";
     gap: 1.8rem;
   }
 
   .research-section--reverse .research-grid {
     grid-template-areas:
       "description"
-      "figure"
-      "topics";
+      "visual";
   }
 
   .research-figure {
@@ -285,9 +346,8 @@ html[data-theme="dark"] .research-topics li {
     font-size: 1.3rem;
   }
 
-  .research-figure {
+  .research-lightbox {
     padding: 0.75rem;
-    border-radius: 12px;
   }
 
   .research-interests {
@@ -319,18 +379,22 @@ html[data-theme="dark"] .research-topics li {
       <p class="research-description">
         My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and omics approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism. These findings provide scientific guidance for optimizing aquaculture practices that improve animal health, product quality, and production sustainability.
       </p>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}" alt="Aqua Environment">
-      </figure>
-      <div class="research-topics-block">
-        <p class="research-topics-label">Research topics</p>
-        <ul class="research-topics">
-          <li>Aquaculture environmental stressors</li>
-          <li>Shellfish physiology and metabolism</li>
-          <li>Flavor biochemistry</li>
-          <li>Microplastic ecotoxicology</li>
-          <li>Metabolomics</li>
-        </ul>
+      <div class="research-visual">
+        <figure class="research-figure">
+          <button class="research-image-button" type="button" aria-label="Enlarge Aqua Environment figure">
+            <img src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}" alt="Aqua Environment">
+          </button>
+        </figure>
+        <div class="research-topics-block">
+          <p class="research-topics-label">Research topics</p>
+          <ul class="research-topics">
+            <li>Aquaculture environmental stressors</li>
+            <li>Shellfish physiology and metabolism</li>
+            <li>Flavor biochemistry</li>
+            <li>Microplastic ecotoxicology</li>
+            <li>Metabolomics</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -344,18 +408,22 @@ html[data-theme="dark"] .research-topics li {
       <p class="research-description">
         An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and antigens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. To address this challenge, I investigate PLGA-based delivery systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated cargo during storage and enable controlled release in the digestive tract. By improving the effectiveness of oral therapeutics, this research aims to advance sustainable disease prevention strategies and reduce production losses in aquaculture.
       </p>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}" alt="Aquaculture Oral Delivery System">
-      </figure>
-      <div class="research-topics-block">
-        <p class="research-topics-label">Research topics</p>
-        <ul class="research-topics">
-          <li>PLGA-based delivery systems</li>
-          <li>Oral vaccines</li>
-          <li>Controlled-release systems</li>
-          <li>Functional aquafeeds</li>
-          <li>Disease prevention</li>
-        </ul>
+      <div class="research-visual">
+        <figure class="research-figure">
+          <button class="research-image-button" type="button" aria-label="Enlarge Aquaculture Oral Delivery System figure">
+            <img src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}" alt="Aquaculture Oral Delivery System">
+          </button>
+        </figure>
+        <div class="research-topics-block">
+          <p class="research-topics-label">Research topics</p>
+          <ul class="research-topics">
+            <li>PLGA-based delivery systems</li>
+            <li>Oral vaccines</li>
+            <li>Controlled-release systems</li>
+            <li>Functional aquafeeds</li>
+            <li>Disease prevention</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -369,17 +437,21 @@ html[data-theme="dark"] .research-topics li {
       <p class="research-description">
         My doctoral research focuses on developing bio-based composite films from naturally derived materials that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. Derived from renewable natural materials, these films combine efficient thermal management with the mechanical robustness required for practical food-packaging applications. By integrating sustainable biomaterials with passive cooling technologies, this research aims to reduce reliance on conventional refrigeration and promote environmentally friendly cold-chain solutions for aquatic foods and other perishable products.
       </p>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/PRC-workflow.png' | relative_url }}" alt="Passive Radiative Cooling System">
-      </figure>
-      <div class="research-topics-block">
-        <p class="research-topics-label">Research topics</p>
-        <ul class="research-topics">
-          <li>Passive radiative cooling</li>
-          <li>Evaporative cooling</li>
-          <li>Bio-based composite films</li>
-          <li>Food cold-chain technologies</li>
-        </ul>
+      <div class="research-visual">
+        <figure class="research-figure">
+          <button class="research-image-button" type="button" aria-label="Enlarge Passive Radiative Cooling System figure">
+            <img src="{{ '/assets/images/PRC-workflow.png' | relative_url }}" alt="Passive Radiative Cooling System">
+          </button>
+        </figure>
+        <div class="research-topics-block">
+          <p class="research-topics-label">Research topics</p>
+          <ul class="research-topics">
+            <li>Passive radiative cooling</li>
+            <li>Evaporative cooling</li>
+            <li>Bio-based composite films</li>
+            <li>Food cold-chain technologies</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -393,18 +465,22 @@ html[data-theme="dark"] .research-topics li {
       <p class="research-description">
         Whereas Section 1 focuses on how farming conditions shape shellfish quality before harvest, this research examines the mechanisms underlying seafood quality deterioration after harvest. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes in oysters and mussels during post-harvest processing, live holding, and storage to identify the factors driving quality deterioration and inform more effective preservation strategies. These findings provide scientific guidance for optimizing post-harvest processing and storage conditions to preserve flavor and freshness, reduce post-harvest losses, and deliver higher-quality seafood products to consumers.
       </p>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}" alt="Aquaculture Preservation">
-      </figure>
-      <div class="research-topics-block">
-        <p class="research-topics-label">Research topics</p>
-        <ul class="research-topics">
-          <li>Seafood preservation</li>
-          <li>Shellfish flavor chemistry</li>
-          <li>Live storage</li>
-          <li>Shelf-life extension</li>
-          <li>Quality evaluation</li>
-        </ul>
+      <div class="research-visual">
+        <figure class="research-figure">
+          <button class="research-image-button" type="button" aria-label="Enlarge Aquaculture Preservation figure">
+            <img src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}" alt="Aquaculture Preservation">
+          </button>
+        </figure>
+        <div class="research-topics-block">
+          <p class="research-topics-label">Research topics</p>
+          <ul class="research-topics">
+            <li>Seafood preservation</li>
+            <li>Shellfish flavor chemistry</li>
+            <li>Live storage</li>
+            <li>Shelf-life extension</li>
+            <li>Quality evaluation</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -415,3 +491,55 @@ html[data-theme="dark"] .research-topics li {
   </section>
 
 </div>
+
+<div class="research-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged research figure" hidden>
+  <button class="research-lightbox-close" type="button" aria-label="Close enlarged figure">&times;</button>
+  <img class="research-lightbox-image" src="" alt="">
+</div>
+
+<script>
+(function () {
+  const lightbox = document.querySelector(".research-lightbox");
+  const lightboxImage = lightbox && lightbox.querySelector(".research-lightbox-image");
+  const closeButton = lightbox && lightbox.querySelector(".research-lightbox-close");
+  const imageButtons = document.querySelectorAll(".research-image-button");
+  let previousFocus = null;
+
+  if (!lightbox || !lightboxImage || !closeButton) return;
+
+  function openLightbox(button) {
+    const image = button.querySelector("img");
+    if (!image) return;
+
+    previousFocus = button;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
+    if (previousFocus) previousFocus.focus();
+  }
+
+  imageButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      openLightbox(button);
+    });
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+  });
+})();
+</script>
