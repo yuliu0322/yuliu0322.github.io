@@ -75,47 +75,6 @@ author_profile: true
   margin: 0;
 }
 
-.research-nav {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  margin: 0 0 3.8rem;
-  border: 1px solid var(--research-line);
-  border-radius: 14px;
-  background: var(--research-line);
-}
-
-.research-nav a {
-  min-width: 0;
-  padding: 1rem 0.9rem;
-  color: var(--research-ink);
-  text-decoration: none;
-  background: #ffffff;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-
-.research-nav a:hover {
-  color: var(--research-blue-dark);
-  background: #f3fafc;
-}
-
-.research-nav-number {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--research-blue);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.research-nav-label {
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
 .research-section {
   scroll-margin-top: 5rem;
   margin: 0 0 4.8rem;
@@ -150,28 +109,38 @@ author_profile: true
 .research-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 1fr);
+  grid-template-areas:
+    "description figure"
+    ". topics";
   gap: clamp(2rem, 4vw, 3.5rem);
-  align-items: start;
+  row-gap: 1rem;
+  align-items: stretch;
 }
 
-.research-section--reverse .research-copy {
-  order: 2;
-}
-
-.research-section--reverse .research-figure {
-  order: 1;
+.research-section--reverse .research-grid {
+  grid-template-areas:
+    "figure description"
+    "topics .";
 }
 
 .research-title {
-  margin: 0 0 1rem;
+  width: 100%;
+  margin: 0 0 1.45rem;
   color: var(--research-ink);
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-size: clamp(1.35rem, 2.15vw, 1.75rem);
   line-height: 1.3;
 }
 
 .research-description {
-  margin: 0 0 1.35rem;
+  grid-area: description;
+  height: 100%;
+  margin: 0;
   color: var(--research-text);
+}
+
+.research-topics-block {
+  grid-area: topics;
+  padding-top: 0.15rem;
 }
 
 .research-topics-label {
@@ -204,7 +173,13 @@ author_profile: true
 }
 
 .research-figure {
+  grid-area: figure;
   position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
   margin: 0.15rem 0 0;
   padding: 1.15rem;
   border: 1px solid var(--research-line);
@@ -228,6 +203,7 @@ author_profile: true
   display: block;
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
   height: auto;
   margin: 0;
   object-fit: contain;
@@ -279,19 +255,8 @@ html[data-theme="dark"] .research-intro::after {
   border-color: rgba(106, 193, 220, 0.1);
 }
 
-html[data-theme="dark"] .research-nav,
 html[data-theme="dark"] .research-figure {
   border-color: #59636c;
-}
-
-html[data-theme="dark"] .research-nav a {
-  color: var(--research-ink);
-  background: #353a3f;
-}
-
-html[data-theme="dark"] .research-nav a:hover {
-  color: #8bd4e9;
-  background: #3b444a;
 }
 
 html[data-theme="dark"] .research-topics li {
@@ -302,18 +267,20 @@ html[data-theme="dark"] .research-topics li {
 
 /* Tablet and mobile */
 @media (max-width: 900px) {
-  .research-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .research-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "description"
+      "figure"
+      "topics";
     gap: 1.8rem;
   }
 
-  .research-section--reverse .research-copy,
-  .research-section--reverse .research-figure {
-    order: initial;
+  .research-section--reverse .research-grid {
+    grid-template-areas:
+      "description"
+      "figure"
+      "topics";
   }
 
   .research-figure {
@@ -333,14 +300,6 @@ html[data-theme="dark"] .research-topics li {
 
   .research-question {
     font-size: 1.08rem;
-  }
-
-  .research-nav {
-    margin-bottom: 3rem;
-  }
-
-  .research-nav a {
-    padding: 0.85rem 0.75rem;
   }
 
   .research-section {
@@ -376,35 +335,19 @@ html[data-theme="dark"] .research-topics li {
     </p>
   </section>
 
-  <nav class="research-nav" aria-label="Research areas">
-    <a href="#environment">
-      <span class="research-nav-number">01</span>
-      <span class="research-nav-label">Environment &amp; Health</span>
-    </a>
-    <a href="#oral-delivery">
-      <span class="research-nav-number">02</span>
-      <span class="research-nav-label">Oral Delivery</span>
-    </a>
-    <a href="#thermal-management">
-      <span class="research-nav-number">03</span>
-      <span class="research-nav-label">Thermal Management</span>
-    </a>
-    <a href="#post-harvest">
-      <span class="research-nav-number">04</span>
-      <span class="research-nav-label">Post-harvest Quality</span>
-    </a>
-  </nav>
-
   <section class="research-section" id="environment">
     <div class="research-section-heading">
       <span class="research-number">01 · RESEARCH AREA</span>
     </div>
+    <h2 class="research-title">Aquaculture Environment, Animal Health, and Seafood Quality</h2>
     <div class="research-grid">
-      <div class="research-copy">
-        <h2 class="research-title">Aquaculture Environment, Animal Health, and Seafood Quality</h2>
-        <p class="research-description">
-          My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and omics approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism. These findings provide scientific guidance for optimizing aquaculture practices that improve animal health, product quality, and production sustainability.
-        </p>
+      <p class="research-description">
+        My earlier research examined how farming conditions and environmental stressors influence the physiology, biochemical composition, and flavor-related quality of shellfish. Working primarily with oysters and mussels, I investigated how parameters such as temperature, salinity, and microplastic exposure influence physiological responses, metabolic status, and the accumulation of flavor compounds. Using physiological, biochemical, and omics approaches, this work demonstrates how aquaculture environments ultimately shape seafood quality at harvest by affecting animal physiology and metabolism. These findings provide scientific guidance for optimizing aquaculture practices that improve animal health, product quality, and production sustainability.
+      </p>
+      <figure class="research-figure">
+        <img src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}" alt="Aqua Environment">
+      </figure>
+      <div class="research-topics-block">
         <p class="research-topics-label">Research topics</p>
         <ul class="research-topics">
           <li>Aquaculture environmental stressors</li>
@@ -414,9 +357,6 @@ html[data-theme="dark"] .research-topics li {
           <li>Metabolomics</li>
         </ul>
       </div>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}" alt="Aqua Environment">
-      </figure>
     </div>
   </section>
 
@@ -424,12 +364,15 @@ html[data-theme="dark"] .research-topics li {
     <div class="research-section-heading">
       <span class="research-number">02 · RESEARCH AREA</span>
     </div>
+    <h2 class="research-title">Aquaculture Health and Oral Delivery Systems</h2>
     <div class="research-grid">
-      <div class="research-copy">
-        <h2 class="research-title">Aquaculture Health and Oral Delivery Systems</h2>
-        <p class="research-description">
-          An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and antigens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. To address this challenge, I investigate PLGA-based delivery systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated cargo during storage and enable controlled release in the digestive tract. By improving the effectiveness of oral therapeutics, this research aims to advance sustainable disease prevention strategies and reduce production losses in aquaculture.
-        </p>
+      <p class="research-description">
+        An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and antigens in aquaculture. Oral delivery represents the most scalable strategy for disease prevention in fish and shrimp, yet maintaining the stability and bioavailability of bioactive compounds during feed storage and gastrointestinal transit remains challenging. To address this challenge, I investigate PLGA-based delivery systems that are spray-coated onto extruded feed pellets as a post-processing step. These systems are designed to protect encapsulated cargo during storage and enable controlled release in the digestive tract. By improving the effectiveness of oral therapeutics, this research aims to advance sustainable disease prevention strategies and reduce production losses in aquaculture.
+      </p>
+      <figure class="research-figure">
+        <img src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}" alt="Aquaculture Oral Delivery System">
+      </figure>
+      <div class="research-topics-block">
         <p class="research-topics-label">Research topics</p>
         <ul class="research-topics">
           <li>PLGA-based delivery systems</li>
@@ -439,9 +382,6 @@ html[data-theme="dark"] .research-topics li {
           <li>Disease prevention</li>
         </ul>
       </div>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}" alt="Aquaculture Oral Delivery System">
-      </figure>
     </div>
   </section>
 
@@ -449,12 +389,15 @@ html[data-theme="dark"] .research-topics li {
     <div class="research-section-heading">
       <span class="research-number">03 · RESEARCH AREA</span>
     </div>
+    <h2 class="research-title">Sustainable Cold Chain and Thermal Management</h2>
     <div class="research-grid">
-      <div class="research-copy">
-        <h2 class="research-title">Sustainable Cold Chain and Thermal Management</h2>
-        <p class="research-description">
-          My doctoral research focuses on developing bio-based composite films from naturally derived materials that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. Derived from renewable natural materials, these films combine efficient thermal management with the mechanical robustness required for practical food-packaging applications. By integrating sustainable biomaterials with passive cooling technologies, this research aims to reduce reliance on conventional refrigeration and promote environmentally friendly cold-chain solutions for aquatic foods and other perishable products.
-        </p>
+      <p class="research-description">
+        My doctoral research focuses on developing bio-based composite films from naturally derived materials that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. Derived from renewable natural materials, these films combine efficient thermal management with the mechanical robustness required for practical food-packaging applications. By integrating sustainable biomaterials with passive cooling technologies, this research aims to reduce reliance on conventional refrigeration and promote environmentally friendly cold-chain solutions for aquatic foods and other perishable products.
+      </p>
+      <figure class="research-figure">
+        <img src="{{ '/assets/images/PRC-workflow.png' | relative_url }}" alt="Passive Radiative Cooling System">
+      </figure>
+      <div class="research-topics-block">
         <p class="research-topics-label">Research topics</p>
         <ul class="research-topics">
           <li>Passive radiative cooling</li>
@@ -463,9 +406,6 @@ html[data-theme="dark"] .research-topics li {
           <li>Food cold-chain technologies</li>
         </ul>
       </div>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/PRC-workflow.png' | relative_url }}" alt="Passive Radiative Cooling System">
-      </figure>
     </div>
   </section>
 
@@ -473,12 +413,15 @@ html[data-theme="dark"] .research-topics li {
     <div class="research-section-heading">
       <span class="research-number">04 · RESEARCH AREA</span>
     </div>
+    <h2 class="research-title">Seafood Processing, Storage, and Flavor Quality (Post-harvest)</h2>
     <div class="research-grid">
-      <div class="research-copy">
-        <h2 class="research-title">Seafood Processing, Storage, and Flavor Quality (Post-harvest)</h2>
-        <p class="research-description">
-          Whereas Section 1 focuses on how farming conditions shape shellfish quality before harvest, this research examines the mechanisms underlying seafood quality deterioration after harvest. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes in oysters and mussels during post-harvest processing, live holding, and storage to identify the factors driving quality deterioration and inform more effective preservation strategies. These findings provide scientific guidance for optimizing post-harvest processing and storage conditions to preserve flavor and freshness, reduce post-harvest losses, and deliver higher-quality seafood products to consumers.
-        </p>
+      <p class="research-description">
+        Whereas Section 1 focuses on how farming conditions shape shellfish quality before harvest, this research examines the mechanisms underlying seafood quality deterioration after harvest. During my earlier training, I investigated the physiological, biochemical, and flavor-related changes in oysters and mussels during post-harvest processing, live holding, and storage to identify the factors driving quality deterioration and inform more effective preservation strategies. These findings provide scientific guidance for optimizing post-harvest processing and storage conditions to preserve flavor and freshness, reduce post-harvest losses, and deliver higher-quality seafood products to consumers.
+      </p>
+      <figure class="research-figure">
+        <img src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}" alt="Aquaculture Preservation">
+      </figure>
+      <div class="research-topics-block">
         <p class="research-topics-label">Research topics</p>
         <ul class="research-topics">
           <li>Seafood preservation</li>
@@ -488,15 +431,12 @@ html[data-theme="dark"] .research-topics li {
           <li>Quality evaluation</li>
         </ul>
       </div>
-      <figure class="research-figure">
-        <img src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}" alt="Aquaculture Preservation">
-      </figure>
     </div>
   </section>
 
   <section class="research-interests">
     <h2>Research Interests</h2>
-    <p>Sustainable Aquaculture • Seafood Science • Oral Delivery Systems • Passive Cooling • Food Biochemistry</p>
+    <p>Sustainable Aquaculture • Seafood Science • Oral Delivery Systems • Passive Cooling Materials• Food Biochemistry</p>
   </section>
 
 </div>
