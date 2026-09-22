@@ -78,7 +78,7 @@ author_profile: true
 
 .research-section {
   scroll-margin-top: 5rem;
-  margin: 0 0 4.8rem;
+  margin: 0 0 3rem;
 }
 
 .research-section:last-of-type {
@@ -340,7 +340,7 @@ html[data-theme="dark"] .research-topics li {
   }
 
   .research-section {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .research-title {
