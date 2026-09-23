@@ -430,6 +430,87 @@ button.publication-filter-option.is-active {
   text-align: center;
 }
 
+/* Dark mode */
+
+html[data-theme="dark"] {
+  --pub-blue: #65c2dd;
+  --pub-dark: #f1f5f8;
+  --pub-gold: #65c2dd;
+  --pub-gold-hover: #49a8c4;
+  --pub-muted: #aeb9c4;
+  --pub-border: #4c5661;
+}
+
+html[data-theme="dark"] #publication-search.publication-search,
+html[data-theme="dark"] button.publication-filter-option,
+html[data-theme="dark"] .publication-action-button {
+  border-color: var(--pub-border) !important;
+  background: #343a40 !important;
+  color: #d6dde5 !important;
+}
+
+html[data-theme="dark"] #publication-search.publication-search:focus,
+html[data-theme="dark"] button.publication-filter-option:hover {
+  border-color: var(--pub-blue) !important;
+}
+
+html[data-theme="dark"] .publication-search-icon {
+  color: #aeb9c4;
+}
+
+html[data-theme="dark"] .publication-filter-panel {
+  border-color: var(--pub-border);
+  background: #30363c;
+}
+
+html[data-theme="dark"] button.publication-filter-option.is-active,
+html[data-theme="dark"] .publication-action-button:hover,
+html[data-theme="dark"] .publication-action-button:focus-visible,
+html[data-theme="dark"] .summary-toggle[aria-expanded="true"] {
+  border-color: var(--pub-blue) !important;
+  background: var(--pub-blue) !important;
+  color: #172b34 !important;
+}
+
+html[data-theme="dark"] .publication-card {
+  border-color: var(--pub-border);
+  background: #343a40;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="dark"] .publication-card:hover {
+  border-color: var(--pub-blue);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="dark"] .publication-image-box {
+  background: #343a40;
+}
+
+html[data-theme="dark"] .book-placeholder {
+  border-color: var(--pub-border);
+  background: linear-gradient(135deg, #30363c, #3c454b);
+  color: #c7d0da;
+}
+
+html[data-theme="dark"] .publication-authors,
+html[data-theme="dark"] .publication-description,
+html[data-theme="dark"] .publication-summary {
+  color: #c7d0da;
+}
+
+html[data-theme="dark"] .publication-venue {
+  color: #d6dde5;
+}
+
+html[data-theme="dark"] .publication-summary {
+  background: #30363c;
+}
+
+html[data-theme="dark"] .publication-no-results {
+  background: #343a40;
+}
+
 /* Mobile */
 
 @media (max-width: 768px) {
