@@ -137,8 +137,6 @@ author_profile: true
 .experience-details {
   max-width: 650px;
   margin: 0;
-  padding-left: 20px;
-  border-left: 2px solid #c8d9de;
 }
 
 .experience-details p {
@@ -199,10 +197,6 @@ html[data-theme="dark"] .experience-date {
   color: #e0ad60;
 }
 
-html[data-theme="dark"] .experience-details {
-  border-left-color: #68848e;
-}
-
 html[data-theme="dark"] .experience-details p {
   color: #c8d0da;
 }
@@ -251,9 +245,6 @@ html[data-theme="dark"] .experience-details p {
     font-size: 0.84rem;
   }
 
-  .experience-details {
-    padding-left: 15px;
-  }
 }
 </style>
 
@@ -320,13 +311,21 @@ html[data-theme="dark"] .experience-details p {
 
 <div class="experience-details">
   <p>
-    Managed manuscripts from initial screening through peer review and
-    publication, communicating with authors, reviewers, and academic editors
-    throughout the process.
+    Managed the peer-review and editorial workflow of submitted
+    manuscripts from initial screening through final publication.
   </p>
   <p>
-    Assessed journal scope, formatting, and research integrity requirements
-    while developing experience in scientific communication and publication ethics.
+    Communicated with authors, reviewers, and academic editors to support
+    timely and transparent editorial decisions.
+  </p>
+  <p>
+    Assisted in evaluating manuscripts for journal scope, formatting
+    requirements, research integrity, and adherence to editorial
+    policies.
+  </p>
+  <p>
+    Developed practical experience in scholarly publishing, scientific
+    communication, and publication ethics.
   </p>
 </div>
 
@@ -393,12 +392,23 @@ html[data-theme="dark"] .experience-details p {
 
 <div class="experience-details">
   <p>
-    Coordinated cross-border dietary supplement projects with clients and
-    internal marketing and sales teams, translating client needs into product specifications.
+    Coordinated cross-border product development projects with clients
+    and internal marketing and sales teams.
   </p>
   <p>
-    Used market research and scientific literature to inform ingredient
-    selection and product concepts, then tracked progress through commercialization.
+    Conducted market research and literature reviews to identify industry
+    trends, consumer preferences, and emerging ingredients in dietary
+    supplements.
+  </p>
+  <p>
+    Translated client requirements into actionable product specifications
+    and monitored project progress from initial concept through order
+    fulfillment.
+  </p>
+  <p>
+    Supported the commercialization of multiple dietary supplement
+    products by aligning product concepts with market demand and client
+    needs.
   </p>
 </div>
 
