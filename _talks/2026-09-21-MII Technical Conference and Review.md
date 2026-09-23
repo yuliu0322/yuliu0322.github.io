@@ -11,7 +11,7 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
 
 Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, and film mechanical properties. Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
 
-<div class="news-gallery news-gallery-compact">
+<div class="news-gallery news-gallery-compact" style="max-width: 60%; margin: 0 auto;">
   <img src="{{ '/images/mii-photo-1.jpg' | relative_url }}" alt="Discussion during MII Technical Conference and Review 2026" loading="lazy">
   <img src="{{ '/images/mii-photo-2.jpg' | relative_url }}" alt="MII Technical Conference and Review 2026 poster session" loading="lazy">
 </div>
