@@ -13,12 +13,6 @@ At ISSCS 2026, I presented our recent research on bioinspired self-cooling nanoc
 
 <div class="news-gallery">
   <img
-    src="{{ '/images/isscs-photo-1.jpg' | relative_url }}"
-    alt="Presenting the ISSCS 2026 poster"
-    loading="lazy"
-  >
-
-  <img
     src="{{ '/images/isscs-photo-2.jpg' | relative_url }}"
     alt="Discussion during ISSCS 2026"
     loading="lazy"
@@ -29,7 +23,7 @@ At ISSCS 2026, I presented our recent research on bioinspired self-cooling nanoc
     alt="Discussion during ISSCS 2026"
     loading="lazy"
   >
-    
+
   <img
     src="{{ '/images/isscs-photo-4.jpg' | relative_url }}"
     alt="ISSCS 2026 conference photo"
