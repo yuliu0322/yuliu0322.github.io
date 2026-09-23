@@ -9,7 +9,7 @@ location: "Blacksburg, VA, USA"
 event_url: "https://www.phys.vt.edu/Newsandevents/conferences/ISSCS.html"
 ---
 
-At ISSCS 2026, I presented our recent research on bioinspired self-cooling nanocomposites based on chitin nanofibers and gelatin. The materials exhibited enhanced mechanical properties, including increased stiffness and strength, while retaining high flexibility. They also achieved effective passive radiative and evaporative cooling, demonstrating promise as sustainable materials for thermal management applications.
+At ISSCS 2026, I presented our recent research on bioinspired self-cooling nanocomposites based on ChNF and gelatin. The materials exhibited enhanced mechanical properties, including increased stiffness and strength, while retaining high flexibility. They also achieved effective passive radiative and evaporative cooling, demonstrating promise as sustainable materials for thermal management applications.
 
 <div class="news-gallery">
   <img
