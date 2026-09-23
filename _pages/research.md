@@ -333,7 +333,7 @@ html[data-theme="dark"] .research-topics li {
 <div class="research-page">
 
   <section class="research-intro" aria-labelledby="research-question-heading">
-    <p class="research-kicker">A single question runs through my research</p>
+    <p class="research-kicker">A question runs through my research</p>
     <p class="research-question" id="research-question-heading">
       How can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
     </p>
