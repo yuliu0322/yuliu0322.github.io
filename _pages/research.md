@@ -349,7 +349,7 @@ html[data-theme="dark"] .research-topics li {
     <h2 class="research-title">Aquaculture Environment, Animal Health, and Seafood Quality</h2>
     <div class="research-grid">
       <p class="research-description">
-        My earlier research examined how farming conditions and environmental stressors influence shellfish physiology, biochemical composition, and quality. Working primarily with oysters and mussels, we investigated the effects of temperature, salinity, and microplastic exposure on physiological responses, metabolism, and flavor compound accumulation. Using physiological, biochemical, and omics approaches, this work shows how aquaculture environments shape seafood quality at harvest. These findings provide scientific guidance for optimizing farming practices to improve animal health, product quality, and production sustainability.
+        My earlier research examined how farming conditions and environmental stressors influence shellfish physiology, biochemical composition, and quality. Working primarily with oysters and mussels, we investigated the effects of temperature, salinity, and microplastic exposure on physiological responses, metabolism, and flavor compound accumulation. Using physiological, biochemical, and omics approaches, this work shows how aquaculture environments shape seafood quality at harvest. These findings aim to provide scientific guidance for optimizing farming practices to improve animal health, product quality, and production sustainability.
       </p>
       <div class="research-visual">
         <figure class="research-figure">
@@ -435,7 +435,7 @@ html[data-theme="dark"] .research-topics li {
     <h2 class="research-title">Seafood Processing, Storage, and Flavor Quality (Post-harvest)</h2>
     <div class="research-grid">
       <p class="research-description">
-        Complementing my pre-harvest research, this work examines how different post-harvest preservation methods affect seafood quality. During my earlier training, I investigated physiological, biochemical, and flavor-related changes in oysters and mussels under different processing, live-holding, and storage conditions. These findings support the optimization of preservation strategies to maintain flavor and freshness, extend shelf life, reduce post-harvest losses, and deliver higher-quality seafood products.
+        Complementing my pre-harvest research, this work examines how post-harvest preservation methods affect seafood quality. During my earlier training, we investigated physiological, biochemical, and flavor-related changes in oysters and mussels subjected to depuration, liquid nitrogen quick freezing, semi-anhydrous living-preservation, and modified atmosphere packaging. These findings help optimize preservation strategies to maintain flavor and freshness, extend shelf life, reduce post-harvest losses, and deliver higher-quality seafood products.
       </p>
       <div class="research-visual">
         <figure class="research-figure">
