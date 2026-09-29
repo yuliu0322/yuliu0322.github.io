@@ -554,3 +554,24 @@ html {
     margin-left: 0 !important;
   }
 }
+
+/* Align the mobile navigation with the page content */
+@media (max-width: 47.99em) {
+  #site-nav .visible-links {
+    display: flex !important;
+    align-items: center;
+    width: calc(100% - 4.5rem);
+  }
+
+  #site-nav .visible-links > li:first-child {
+    display: none !important;
+  }
+
+  #site-nav .visible-links > li:nth-child(2) > a {
+    margin-left: 0 !important;
+  }
+
+  #site-nav .visible-links > #theme-toggle {
+    margin-left: auto;
+  }
+}
