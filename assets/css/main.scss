@@ -555,17 +555,9 @@ html {
   }
 }
 
-/* Align the visible Home link on mobile */
+/* Use the available width before collapsing navigation links */
 @media (max-width: 47.99em) {
-  #site-nav .visible-links li:has(> a[href="https://yuliu0322.com/"]) {
-    min-width: 4rem;
-  }
-
-  #site-nav .visible-links a[href="https://yuliu0322.com/"] {
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    margin-left: 0 !important;
-    transform: none !important;
+  #site-nav .masthead__menu-item--lg {
+    display: none !important;
   }
 }
