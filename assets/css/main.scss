@@ -539,9 +539,18 @@ html {
   }
 }
 
-/* Align the entire navigation menu on iPad without changing desktop layout */
-@media (min-width: 768px) and (max-width: 1400px) and (any-pointer: coarse) {
-  #site-nav .visible-links {
-    transform: translateX(80px);
+/* Align tablet navigation with the main content column */
+@media (min-width: 48em) and (max-width: 74.99em) {
+  #site-nav .visible-links > li:first-child {
+    width: calc(var(--sidebar-width) + var(--column-gap)) !important;
+    padding-right: 0 !important;
+  }
+
+  #site-nav .site-title {
+    margin-right: 0 !important;
+  }
+
+  #site-nav .visible-links > li:nth-child(2) > a {
+    margin-left: 0 !important;
   }
 }
