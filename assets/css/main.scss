@@ -542,7 +542,7 @@ html {
 /* Align tablet navigation with the main content column */
 @media (min-width: 48em) and (max-width: 74.99em) {
   #site-nav .visible-links > li:first-child {
-    width: calc(var(--sidebar-width) + var(--column-gap) + 1rem) !important;
+    width: calc(var(--sidebar-width) + var(--column-gap)) !important;
     padding-right: 0 !important;
   }
 
