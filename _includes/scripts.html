@@ -1,5 +1,45 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const nav = document.getElementById('site-nav');
+    if (!nav) return;
+    const button = nav.querySelector('button');
+    const visible = nav.querySelector('.visible-links');
+    const hidden = nav.querySelector('.hidden-links');
+    const theme = nav.querySelector('#theme-toggle');
+
+    function fitNavigation() {
+      while (hidden.firstElementChild) {
+        visible.insertBefore(hidden.firstElementChild, theme);
+      }
+      button.classList.add('hidden');
+
+      if (visible.getBoundingClientRect().width > nav.clientWidth) {
+        button.classList.remove('hidden');
+        const limit = nav.clientWidth - button.getBoundingClientRect().width - 8;
+        while (visible.getBoundingClientRect().width > limit) {
+          const links = [...visible.children].filter(item => !item.classList.contains('persist'));
+          if (!links.length) break;
+          hidden.insertBefore(links[links.length - 1], hidden.firstChild);
+        }
+      }
+
+      const count = hidden.children.length;
+      button.classList.toggle('hidden', count === 0);
+      button.setAttribute('count', count);
+      if (count === 0) {
+        button.classList.remove('close');
+        hidden.classList.add('hidden');
+      }
+    }
+
+    window.addEventListener('resize', fitNavigation);
+    screen.orientation?.addEventListener?.('change', fitNavigation);
+    fitNavigation();
+  });
+</script>
+
 {% include analytics.html %}
 
 {% include comments-providers/scripts.html %}
