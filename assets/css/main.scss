@@ -555,16 +555,17 @@ html {
   }
 }
 
-/* Keep the original mobile menu behavior and align Home to the left */
+/* Align the visible Home link on mobile */
 @media (max-width: 47.99em) {
-  #site-nav .visible-links > li:nth-child(2) {
+  #site-nav .visible-links li:has(> a[href="https://yuliu0322.com/"]) {
     min-width: 4rem;
   }
 
-  #site-nav .visible-links > li:nth-child(2) > a {
+  #site-nav .visible-links a[href="https://yuliu0322.com/"] {
     position: absolute !important;
-    left: 0;
-    top: 0;
+    left: 0 !important;
+    top: 0 !important;
     margin-left: 0 !important;
+    transform: none !important;
   }
 }
