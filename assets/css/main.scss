@@ -542,6 +542,6 @@ html {
 /* Align the entire navigation menu on iPad without changing desktop layout */
 @media (min-width: 768px) and (max-width: 1400px) and (any-pointer: coarse) {
   #site-nav .visible-links {
-    transform: translateX(70px);
+    transform: translateX(80px);
   }
 }
