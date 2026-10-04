@@ -21,12 +21,12 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
     </p>
   </div>
 
-  <div style="flex: 0 0 30%; display: flex;">
+  <div style="flex: 0 0 34%; position: relative; min-height: 0;">
     <img
       src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
       alt="Poster presented at MII Technical Conference and Review 2026"
       loading="eager"
-      style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;"
+      style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
     >
   </div>
 
