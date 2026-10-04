@@ -43,10 +43,15 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
   border-radius: 8px;
 }
 
-/* Mobile layout */
+
+/* =========================
+   Mobile
+   ========================= */
 @media (max-width: 768px) {
+
   .mii-content {
     display: block;
+    width: 100%;
     margin-top: 10px;
   }
 
@@ -55,29 +60,34 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
   }
 
   .mii-poster {
-    width: 80%;
-    max-width: 420px;
+    width: 70%;
+    max-width: 380px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
     margin-top: 24px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    transform: none;
+    margin-bottom: 0;
+
     float: none !important;
-    display: block;
   }
 
   .mii-poster img {
     display: block;
     width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
   }
 }
+
 </style>
+
 
 <div class="mii-content">
 
   <div class="mii-text">
+
     <p>
       Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, film mechanical properties, and their relationship with cooling performance. It was a great chance to discuss the work with researchers outside our group and get feedback from different perspectives.
     </p>
@@ -85,14 +95,18 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
     <p>
       Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
     </p>
+
   </div>
 
+
   <div class="mii-poster">
+
     <img
       src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
       alt="Poster presented at MII Technical Conference and Review 2026"
       loading="eager"
     >
+
   </div>
 
 </div>
