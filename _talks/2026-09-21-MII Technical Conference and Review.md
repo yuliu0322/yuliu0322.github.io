@@ -9,24 +9,81 @@ location: "Blacksburg, VA, USA"
 event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
 ---
 
-<div style="display: flex; align-items: flex-start; gap: 32px; margin-top: 10px;">
+<style>
+.mii-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 10px;
+}
 
-  <div style="flex: 1; min-width: 0;">
-    <p style="margin-top: 0;">
+.mii-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.mii-text p:first-child {
+  margin-top: 0;
+}
+
+.mii-text p:last-child {
+  margin-bottom: 0;
+}
+
+.mii-poster {
+  flex: 0 0 31%;
+  transform: translateY(-12px);
+}
+
+.mii-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 8px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .mii-content {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .mii-text {
+    width: 100%;
+  }
+
+  .mii-poster {
+    width: min(80%, 420px);
+    margin: 24px auto 0;
+    transform: none;
+  }
+
+  .mii-poster img {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+
+<div class="mii-content">
+
+  <div class="mii-text">
+    <p>
       Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, film mechanical properties, and their relationship with cooling performance. It was a great chance to discuss the work with researchers outside our group and get feedback from different perspectives.
     </p>
 
-    <p style="margin-bottom: 0;">
+    <p>
       Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
     </p>
   </div>
 
-  <div style="flex: 0 0 31%; transform: translateY(-12px);">
+  <div class="mii-poster">
     <img
       src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
       alt="Poster presented at MII Technical Conference and Review 2026"
       loading="eager"
-      style="width: 100%; height: auto; display: block; margin: 0; border-radius: 8px;"
     >
   </div>
 
