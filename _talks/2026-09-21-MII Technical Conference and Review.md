@@ -15,7 +15,7 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
     src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
     alt="Poster presented at MII Technical Conference and Review 2026"
     loading="eager"
-    style="float: right; width: 31%; max-width: 310px; height: auto; margin: 5px 0 15px 30px; border-radius: 8px;"
+    style="float: right; width: 28%; max-width: 290px; height: auto; margin: 5px 0 12px 30px; border-radius: 8px;"
   >
 
   <p style="margin-top: 0;">
@@ -25,7 +25,5 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
   <p>
     Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
   </p>
-
-  <div style="clear: both;"></div>
 
 </div>
