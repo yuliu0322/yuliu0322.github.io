@@ -9,21 +9,29 @@ location: "Blacksburg, VA, USA"
 event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
 ---
 
-<div style="margin-top: 10px;">
+<div style="display: flex; align-items: flex-start; gap: 32px; margin-top: 10px;">
 
-  <img
-    src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
-    alt="Poster presented at MII Technical Conference and Review 2026"
-    loading="eager"
-    style="float: right; width: 28%; max-width: 290px; height: auto; margin: 5px 0 12px 30px; border-radius: 8px;"
-  >
+  <div style="flex: 1; min-width: 0;">
+    <p style="margin-top: 0;">
+      Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, film mechanical properties, and how these factors may contribute to the cooling performance of the materials.
+    </p>
 
-  <p style="margin-top: 0;">
-    Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, and film mechanical properties.
-  </p>
+    <p>
+      It was also a great opportunity to discuss the work with researchers from different backgrounds and hear their thoughts on potential applications of passive radiative cooling materials. These conversations gave me some new perspectives on how the material design could be further improved and where this technology might be useful beyond our current research.
+    </p>
 
-  <p>
-    Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
-  </p>
+    <p>
+      Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
+    </p>
+  </div>
+
+  <div style="flex: 0 0 34%;">
+    <img
+      src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
+      alt="Poster presented at MII Technical Conference and Review 2026"
+      loading="eager"
+      style="width: 100%; height: auto; display: block; border-radius: 8px;"
+    >
+  </div>
 
 </div>
