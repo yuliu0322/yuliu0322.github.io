@@ -9,25 +9,23 @@ location: "Blacksburg, VA, USA"
 event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
 ---
 
-<div style="display: flex; align-items: flex-start; gap: 28px; margin-top: 10px;">
+<div style="margin-top: 10px;">
 
-  <div style="flex: 1.25; min-width: 0;">
-    <p style="margin-top: 0;">
-      Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, and film mechanical properties.
-    </p>
+  <img
+    src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
+    alt="Poster presented at MII Technical Conference and Review 2026"
+    loading="eager"
+    style="float: right; width: 31%; max-width: 310px; height: auto; margin: 5px 0 15px 30px; border-radius: 8px;"
+  >
 
-    <p>
-      Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
-    </p>
-  </div>
+  <p style="margin-top: 0;">
+    Building on the work I previously presented at ISSCS 2026, I got to share our latest results on bioinspired self-cooling nanocomposites made from ChNF and gelatin. The poster covered additional findings on ChNF structure and charge, and film mechanical properties.
+  </p>
 
-  <div style="flex: 0 0 38%; text-align: center;">
-    <img
-      src="{{ '/images/mii-photo-1.jpg' | relative_url }}"
-      alt="Poster presented at MII Technical Conference and Review 2026"
-      loading="eager"
-      style="width: 100%; height: auto; border-radius: 8px; display: block;"
-    >
-  </div>
+  <p>
+    Honestly, I was pretty surprised by how much interest it got! So many people stopped by to chat about how these materials work and where they could actually be used. I ended up talking through the results with people for most of the session, and nearly lost my voice by the end! 🤣
+  </p>
+
+  <div style="clear: both;"></div>
 
 </div>
