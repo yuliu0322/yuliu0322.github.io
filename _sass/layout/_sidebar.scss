@@ -150,6 +150,8 @@
     display: block;
     width: auto;
     height: auto;
+    position: relative;
+    left: -33px;
   }
 
   img {
@@ -161,7 +163,6 @@
       width: 175px;
       max-width: 175px;
       height: auto;
-      transform: translateX(-33px);
       padding: 0;
       border: 0;
     }
