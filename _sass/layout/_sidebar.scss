@@ -148,23 +148,17 @@
 
   @include breakpoint($large) {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
-    margin-left: -32px;
   }
 
   img {
+    max-width: 175px;
     border-radius: 8px;
 
     @include breakpoint($large) {
-      display: block;
-      width: 175px;
-      max-width: 175px;
-      height: auto;
-      margin: 0;
       padding: 0;
       border: 0;
-      transform: none;
     }
   }
 }
@@ -328,5 +322,12 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar .author__avatar {
+    position: relative !important;
+    left: -32px !important;
   }
 }
