@@ -148,19 +148,20 @@
 
   @include breakpoint($large) {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
   }
 
   img {
-    width: 175px;
     max-width: 175px;
-    height: auto;
     border-radius: 8px;
 
     @include breakpoint($large) {
       display: block;
-      margin: 0;
+      width: 175px;
+      max-width: 175px;
+      height: auto;
+      transform: translateX(-33px);
       padding: 0;
       border: 0;
     }
