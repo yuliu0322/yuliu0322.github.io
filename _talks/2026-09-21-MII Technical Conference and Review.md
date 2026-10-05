@@ -59,20 +59,19 @@ event_url: "https://mii.vt.edu/outreach/technical-conference-review.html"
     width: 100%;
   }
 
-  .mii-poster {
-    width: 70%;
-    max-width: 380px;
+.mii-poster {
+  width: 70%;
+  max-width: 380px;
 
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+  position: static;
+  left: auto;
+  transform: none;
 
-    margin-top: 24px;
-    margin-bottom: 0;
+  margin: 24px auto 0;
 
-    float: none !important;
-  }
-
+  float: none !important;
+}
+  
   .mii-poster img {
     display: block;
     width: 100%;
