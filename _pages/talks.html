@@ -73,6 +73,20 @@ html[data-theme="dark"] .news-type-poster-presentation {
   color: #a9d9f1;
 }
 
+/* Oral presentation */
+
+html[data-theme="dark"] .news-type-oral-presentation {
+  background: #5a3d27;
+  color: #f4c18d;
+}
+
+/* Publication */
+
+html[data-theme="dark"] .news-type-publication {
+  background: #244c4b;
+  color: #9fdddd;
+}
+
 html[data-theme="dark"] .news-type-outreach {
   background: #463453;
   color: #dfb9f3;
@@ -93,6 +107,7 @@ html[data-theme="dark"] .news-image-wrapper {
   background: #343a40;
 }
 
+
 /* Page introduction */
 
 .news-intro {
@@ -101,6 +116,7 @@ html[data-theme="dark"] .news-image-wrapper {
   font-size: 0.98rem;
   line-height: 1.6;
 }
+
 
 /* Talk map link */
 
@@ -120,6 +136,7 @@ html[data-theme="dark"] .news-image-wrapper {
   border-color: var(--news-blue);
   color: #2f8faa;
 }
+
 
 /* Year groups */
 
@@ -141,6 +158,7 @@ html[data-theme="dark"] .news-image-wrapper {
   letter-spacing: 0.02em;
 }
 
+
 /* Timeline */
 
 .news-timeline {
@@ -158,6 +176,7 @@ html[data-theme="dark"] .news-image-wrapper {
   background: #dce8ec;
   content: "";
 }
+
 
 /* News item */
 
@@ -183,6 +202,7 @@ html[data-theme="dark"] .news-image-wrapper {
   background: var(--news-blue);
   box-shadow: 0 0 0 2px #b8dbe5;
 }
+
 
 /* News card */
 
@@ -213,6 +233,7 @@ html[data-theme="dark"] .news-image-wrapper {
   flex: 1;
   min-width: 0;
 }
+
 
 /* Date and category */
 
@@ -245,6 +266,7 @@ html[data-theme="dark"] .news-image-wrapper {
   text-transform: uppercase;
 }
 
+
 /* Category colors */
 
 .news-type-award,
@@ -265,6 +287,20 @@ html[data-theme="dark"] .news-image-wrapper {
   color: #347ca1;
 }
 
+/* Oral presentation */
+
+.news-type-oral-presentation {
+  background: #fff0e2;
+  color: #b76420;
+}
+
+/* Publication */
+
+.news-type-publication {
+  background: #e3f5f3;
+  color: #287a76;
+}
+
 .news-type-outreach {
   background: #f3eafb;
   color: #775095;
@@ -280,6 +316,7 @@ html[data-theme="dark"] .news-image-wrapper {
   background: #fdeaea;
   color: #a14848;
 }
+
 
 /* Title and summary */
 
@@ -335,6 +372,7 @@ html[data-theme="dark"] .news-image-wrapper {
   box-shadow: 0 7px 20px rgba(35, 48, 68, 0.18);
 }
 
+
 /* Multiple-image gallery */
 
 .news-gallery-compact {
@@ -363,6 +401,7 @@ html[data-theme="dark"] .news-image-wrapper {
   object-fit: initial;
 }
 
+
 /* Two-image layout */
 
 .news-gallery:has(img:nth-child(2):last-child) {
@@ -370,11 +409,13 @@ html[data-theme="dark"] .news-image-wrapper {
   justify-content: center;
 }
 
+
 /* Three or more images */
 
 .news-gallery:has(img:nth-child(3)) {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
 
 /* Tablet */
 
@@ -386,6 +427,7 @@ html[data-theme="dark"] .news-image-wrapper {
   }
 }
 
+
 /* Mobile */
 
 @media (max-width: 560px) {
@@ -396,6 +438,7 @@ html[data-theme="dark"] .news-image-wrapper {
   }
 }
   
+
 /* Venue and location */
 
 .news-details {
@@ -418,6 +461,7 @@ html[data-theme="dark"] .news-image-wrapper {
   height: 16px;
 }
 
+
 /* Optional image */
 
 .news-image-wrapper {
@@ -439,6 +483,7 @@ html[data-theme="dark"] .news-image-wrapper {
   object-fit: cover;
   object-position: center;
 }
+
 
 /* Mobile */
 
@@ -605,103 +650,108 @@ html[data-theme="dark"] .news-image-wrapper {
 
         <!-- Title -->
 
-<h3 class="news-card-title">
+        <h3 class="news-card-title">
 
-  {% if post.event_url %}
+          {% if post.event_url %}
 
-    <a
-      href="{{ post.event_url }}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {{ post.title }}
-    </a>
+            <a
+              href="{{ post.event_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ post.title }}
+            </a>
 
-  {% else %}
+          {% else %}
 
-    {{ post.title }}
+            {{ post.title }}
 
-  {% endif %}
+          {% endif %}
 
-</h3>
-
-
-<!-- Full news content -->
-
-{% if post.content != "" %}
-
-  <div class="news-content">
-    {{ post.content }}
-  </div>
-
-{% endif %}
+        </h3>
 
 
-        <!-- Venue and location -->
+        <!-- Full news content -->
 
-        {% if post.venue or post.location %}
+        {% if post.content != "" %}
 
-          <div class="news-details">
-
-            {% if post.venue %}
-
-              <span class="news-detail">
-
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 20h16M6 17h12M7 9v8M12 9v8M17 9v8M4 7l8-4 8 4v2H4V7z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-
-                {{ post.venue }}
-
-              </span>
-
-            {% endif %}
-
-
-            {% if post.location %}
-
-              <span class="news-detail">
-
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                  />
-
-                  <circle
-                    cx="12"
-                    cy="9"
-                    r="2.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                  />
-                </svg>
-
-                {{ post.location }}
-
-              </span>
-
-            {% endif %}
-
+          <div class="news-content">
+            {{ post.content }}
           </div>
 
         {% endif %}
+
+
+        <!-- Venue and location -->
+        <!-- Publications intentionally do not display venue/location -->
+
+        {% unless post.type == "Publication" %}
+
+          {% if post.venue or post.location %}
+
+            <div class="news-details">
+
+              {% if post.venue %}
+
+                <span class="news-detail">
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 20h16M6 17h12M7 9v8M12 9v8M17 9v8M4 7l8-4 8 4v2H4V7z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  {{ post.venue }}
+
+                </span>
+
+              {% endif %}
+
+
+              {% if post.location %}
+
+                <span class="news-detail">
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+
+                    <circle
+                      cx="12"
+                      cy="9"
+                      r="2.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                  </svg>
+
+                  {{ post.location }}
+
+                </span>
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+        {% endunless %}
 
       </div>
 
