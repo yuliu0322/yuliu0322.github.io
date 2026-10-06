@@ -22,8 +22,8 @@ author_profile: true
   column-gap: 36px;
 
   width: 100%;
-  margin: 0 0 2.5rem;
-  padding: 0 0 2.5rem;
+  margin: 0 0 2.4rem;
+  padding: 0 0 2.4rem;
 
   border-bottom: 1px solid #e3e8ec;
 }
@@ -122,12 +122,12 @@ author_profile: true
 
 
 /* =========================
-   Content sections
+   Section labels
    ========================= */
 
 .experience-section {
   max-width: 690px;
-  margin-top: 1.15rem;
+  margin-top: 1.1rem;
 }
 
 .experience-section:first-of-type {
@@ -137,11 +137,10 @@ author_profile: true
 .experience-label {
   margin: 0 0 0.45rem;
 
-  color: #566274;
-  font-size: 0.82rem;
+  color: #344258;
+  font-size: 0.88rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.01em;
 }
 
 
@@ -157,8 +156,8 @@ author_profile: true
 }
 
 .experience-responsibilities li {
-  margin-bottom: 0.4rem;
-  padding-left: 0.08rem;
+  margin-bottom: 0.38rem;
+  padding-left: 0.1rem;
 
   line-height: 1.6;
 }
@@ -214,7 +213,7 @@ html[data-theme="dark"] .experience-divider {
 }
 
 html[data-theme="dark"] .experience-label {
-  color: #aeb8c4;
+  color: #e3e8ee;
 }
 
 html[data-theme="dark"] .experience-responsibilities,
@@ -263,7 +262,7 @@ html[data-theme="dark"] .experience-gained {
   }
 
   .experience-label {
-    font-size: 0.8rem;
+    font-size: 0.86rem;
   }
 
   .experience-responsibilities li,
@@ -369,8 +368,8 @@ html[data-theme="dark"] .experience-gained {
 
         <p class="experience-gained">
           Developed a deeper understanding of scholarly publishing and the
-          peer-review process while strengthening my scientific communication,
-          critical evaluation, and editorial judgment.
+          peer-review process, while strengthening my scientific communication,
+          critical evaluation, and professional coordination skills.
         </p>
 
       </div>
@@ -441,7 +440,7 @@ html[data-theme="dark"] .experience-gained {
         <ul class="experience-responsibilities">
 
           <li>
-            Managed cross-border dietary supplement product development
+            Coordinated cross-border dietary supplement product development
             projects with clients and internal marketing and sales teams.
           </li>
 
@@ -471,8 +470,8 @@ html[data-theme="dark"] .experience-gained {
 
         <p class="experience-gained">
           Gained practical experience in translating scientific and market
-          information into product development decisions while strengthening
-          my project management, cross-functional communication, and
+          information into product development decisions, while strengthening
+          my project coordination, cross-functional communication, and
           understanding of dietary supplement commercialization.
         </p>
 
