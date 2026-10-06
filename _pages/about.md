@@ -1174,19 +1174,6 @@ html[data-theme="dark"] .home-research-card:hover {
   }
 }
 
-  @media (min-width: 901px) {
-  .home-science-label--03 {
-    left: 43% !important;
-    bottom: 34% !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .home-science-label--03 {
-    left: 39% !important;
-    bottom: 29% !important;
-  }
-}
   
 </style>
 
@@ -1380,181 +1367,161 @@ html[data-theme="dark"] .home-research-card:hover {
     }
 
 
-    /* ==================================================
-       Scientific field
-       ================================================== */
+/* ==================================================
+   Scientific orbit
+   ================================================== */
 
-    .home-science-visual {
-      --pointer-x: 0px;
-      --pointer-y: 0px;
-      --pointer-rx: 0deg;
-      --pointer-ry: 0deg;
+.home-science-visual {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 2.5%;
+  width: 52%;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
 
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 69%;
-      pointer-events: none;
+.home-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 82%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(56, 180, 215, 0.26);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: home-orbit-spin 28s linear infinite;
+}
 
-      transform:
-        perspective(1200px)
-        translate3d(
-          var(--pointer-x),
-          var(--pointer-y),
-          0
-        )
-        rotateX(var(--pointer-rx))
-        rotateY(var(--pointer-ry));
+.home-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border: 1px solid rgba(56, 180, 215, 0.18);
+  border-radius: 50%;
+}
 
-      transform-origin: 65% 50%;
-      transform-style: preserve-3d;
-      transition: transform 220ms ease-out;
-      will-change: transform;
-    }
+.home-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 29%;
+  border: 1px solid rgba(222, 168, 77, 0.2);
+  border-radius: 50%;
+}
 
-    .home-science-svg {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-      transform-origin: center;
-      animation:
-        home-science-breathe
-        8s
-        ease-in-out
-        infinite;
-    }
+.home-orbit-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(56, 180, 215, 0.3);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(56, 180, 215, 0.14),
+      rgba(56, 180, 215, 0.03) 55%,
+      transparent 70%
+    );
+  transform: translate(-50%, -50%);
+}
 
+.home-orbit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 9px currentColor;
+}
 
-    /* ==================================================
-       Wireframe
-       ================================================== */
+.home-orbit-dot--01 {
+  top: 8%;
+  left: 47%;
+  color: #16aacd;
+}
 
-    .home-terrain-row {
-      fill: none;
-      stroke: #50badb;
-      stroke-width: 0.7;
-      opacity: 0.19;
-      vector-effect: non-scaling-stroke;
-    }
+.home-orbit-dot--02 {
+  top: 43%;
+  right: -4px;
+  color: #dea84d;
+}
 
-    .home-terrain-row--strong {
-      stroke: #25add4;
-      stroke-width: 0.95;
-      opacity: 0.34;
-    }
+.home-orbit-dot--03 {
+  bottom: 7%;
+  left: 38%;
+  color: #16aacd;
+}
 
-    .home-terrain-column {
-      fill: none;
-      stroke: #57bddb;
-      stroke-width: 0.55;
-      opacity: 0.115;
-      vector-effect: non-scaling-stroke;
-    }
+.home-orbit-dot--04 {
+  top: 54%;
+  left: -4px;
+  color: #7f7cc7;
+}
 
-    .home-terrain-gold {
-      fill: none;
-      stroke: #e4ad4e;
-      stroke-width: 0.68;
-      opacity: 0.18;
-      vector-effect: non-scaling-stroke;
-    }
+.home-science-label {
+  position: absolute;
+  z-index: 4;
+  display: block;
+  line-height: 1.15;
+  animation: home-label-float 6.5s ease-in-out infinite;
+}
 
-    .home-terrain-soft {
-      fill: none;
-      stroke: #71cae1;
-      stroke-width: 0.48;
-      opacity: 0.09;
-      vector-effect: non-scaling-stroke;
-    }
+.home-science-label-title {
+  display: block;
+  color: var(--home-navy);
+  font-size: 0.59rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
 
+.home-science-label-meta {
+  display: block;
+  margin-top: 3px;
+  color: var(--home-muted);
+  font-size: 0.48rem;
+  font-weight: 520;
+  white-space: nowrap;
+}
 
-    /* ==================================================
-       Technical network
-       ================================================== */
+.home-science-label--01 {
+  top: 8%;
+  left: 8%;
+}
 
-    .home-tech-line {
-      fill: none;
-      stroke: #31afd3;
-      stroke-width: 0.85;
-      stroke-dasharray: 3 5;
-      opacity: 0.44;
-      vector-effect: non-scaling-stroke;
-    }
+.home-science-label--02 {
+  top: 27%;
+  right: 0;
+}
 
-    .home-tech-line--gold {
-      stroke: #dea54a;
-    }
+.home-science-label--03 {
+  left: 4%;
+  bottom: 20%;
+}
 
-    .home-tech-line--purple {
-      stroke: #827bc6;
-    }
+.home-science-label--04 {
+  right: 3%;
+  bottom: 7%;
+}
 
-    .home-tech-dot {
-      fill: #25b2d7;
-      transform-box: fill-box;
-      transform-origin: center;
-      animation:
-        home-tech-pulse
-        3.7s
-        ease-in-out
-        infinite;
-    }
+.home-explore-label {
+  position: absolute;
+  left: 5%;
+  bottom: 4%;
+  color: var(--home-muted);
+  font-size: 0.48rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-    .home-tech-dot--gold {
-      fill: #e1a548;
-      animation-delay: -1.2s;
-    }
-
-    .home-tech-dot--purple {
-      fill: #8079c8;
-      animation-delay: -2.1s;
-    }
-
-    .home-particle {
-      fill: #37b7da;
-      opacity: 0.43;
-      transform-box: fill-box;
-      transform-origin: center;
-      animation:
-        home-particle-drift
-        5.8s
-        ease-in-out
-        infinite;
-    }
-
-    .home-particle--small {
-      opacity: 0.28;
-    }
-
-    .home-particle--gold {
-      fill: #e2aa4e;
-      opacity: 0.34;
-    }
-
-    .home-particle--purple {
-      fill: #827bc8;
-      opacity: 0.36;
-    }
-
-    .home-ring {
-      fill: rgba(255, 255, 255, 0.32);
-      stroke: #55c0de;
-      stroke-width: 1;
-      opacity: 0.35;
-      transform-box: fill-box;
-      transform-origin: center;
-      animation:
-        home-ring-drift
-        6.7s
-        ease-in-out
-        infinite;
-    }
-
+@keyframes home-orbit-spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 
     /* ==================================================
        Topic labels
@@ -1807,178 +1774,62 @@ html[data-theme="dark"] .home-research-card:hover {
 
   </div>
 
+<div
+  class="home-science-visual"
+  role="img"
+  aria-label="Research areas connected through an orbital scientific visualization"
+>
 
-  <div
-    class="home-science-visual"
-    role="img"
-    aria-label="Scientific wireframe visualization connecting four research areas"
-  >
+  <div class="home-orbit">
+    <span class="home-orbit-dot home-orbit-dot--01"></span>
+    <span class="home-orbit-dot home-orbit-dot--02"></span>
+    <span class="home-orbit-dot home-orbit-dot--03"></span>
+    <span class="home-orbit-dot home-orbit-dot--04"></span>
+  </div>
 
-    <svg
-      class="home-science-svg"
-      viewBox="0 0 760 400"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-    >
+  <div class="home-orbit-core"></div>
 
-      <defs>
-
-        <linearGradient id="terrainFade" x1="0" x2="1">
-          <stop offset="0%" stop-color="white" stop-opacity="0"/>
-          <stop offset="13%" stop-color="white" stop-opacity="0.06"/>
-          <stop offset="27%" stop-color="white" stop-opacity="0.42"/>
-          <stop offset="43%" stop-color="white" stop-opacity="0.92"/>
-          <stop offset="100%" stop-color="white" stop-opacity="1"/>
-        </linearGradient>
-
-        <linearGradient id="terrainVerticalFade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="white" stop-opacity="0.72"/>
-          <stop offset="18%" stop-color="white" stop-opacity="1"/>
-          <stop offset="83%" stop-color="white" stop-opacity="1"/>
-          <stop offset="100%" stop-color="white" stop-opacity="0.22"/>
-        </linearGradient>
-
-        <mask id="terrainMask">
-          <rect
-            width="760"
-            height="400"
-            fill="url(#terrainFade)"
-          />
-        </mask>
-
-        <mask id="terrainVerticalMask">
-          <rect
-            width="760"
-            height="400"
-            fill="url(#terrainVerticalFade)"
-          />
-        </mask>
-
-      </defs>
-
-
-      <g
-        id="home-terrain"
-        mask="url(#terrainMask)"
-      ></g>
-
-
-      <g mask="url(#terrainVerticalMask)">
-
-        <path
-          class="home-tech-line"
-          d="M336 46 V144"
-        />
-
-        <path
-          class="home-tech-line home-tech-line--gold"
-          d="M606 111 V205"
-        />
-
-        <path
-          class="home-tech-line"
-          d="M291 267 V348"
-        />
-
-        <path
-          class="home-tech-line home-tech-line--purple"
-          d="M625 300 V374"
-        />
-
-        <circle class="home-particle" cx="74" cy="185" r="3"/>
-        <circle class="home-particle home-particle--small" cx="98" cy="137" r="2"/>
-        <circle class="home-particle" cx="118" cy="240" r="3"/>
-        <circle class="home-particle home-particle--small" cx="151" cy="170" r="2"/>
-        <circle class="home-particle" cx="174" cy="119" r="3"/>
-        <circle class="home-particle home-particle--small" cx="202" cy="208" r="2"/>
-        <circle class="home-particle" cx="225" cy="149" r="3"/>
-        <circle class="home-particle home-particle--small" cx="251" cy="107" r="2"/>
-        <circle class="home-particle" cx="276" cy="217" r="3"/>
-        <circle class="home-particle home-particle--small" cx="310" cy="184" r="2"/>
-        <circle class="home-particle" cx="356" cy="225" r="3"/>
-        <circle class="home-particle home-particle--small" cx="383" cy="157" r="2"/>
-        <circle class="home-particle" cx="408" cy="253" r="3"/>
-        <circle class="home-particle home-particle--small" cx="437" cy="192" r="2"/>
-        <circle class="home-particle" cx="466" cy="137" r="3"/>
-        <circle class="home-particle home-particle--small" cx="489" cy="231" r="2"/>
-        <circle class="home-particle" cx="518" cy="166" r="3"/>
-        <circle class="home-particle home-particle--small" cx="547" cy="270" r="2"/>
-        <circle class="home-particle home-particle--gold" cx="575" cy="176" r="2.5"/>
-        <circle class="home-particle" cx="649" cy="226" r="3"/>
-        <circle class="home-particle home-particle--purple" cx="680" cy="165" r="2.5"/>
-        <circle class="home-particle" cx="704" cy="245" r="3"/>
-        <circle class="home-particle home-particle--small" cx="730" cy="193" r="2"/>
-
-
-        <circle class="home-ring" cx="145" cy="288" r="4"/>
-        <circle class="home-ring" cx="245" cy="238" r="4"/>
-        <circle class="home-ring" cx="395" cy="111" r="4"/>
-        <circle class="home-ring" cx="474" cy="285" r="4"/>
-        <circle class="home-ring" cx="565" cy="131" r="4"/>
-        <circle class="home-ring" cx="713" cy="287" r="4"/>
-
-      </g>
-
-    </svg>
-
-
-<div class="home-science-label home-science-label--01">
-  <span class="home-topic-sphere home-topic-sphere--cyan"></span>
-
-  <span class="home-topic-content">
+  <div class="home-science-label home-science-label--01">
     <span class="home-science-label-title">
       SUSTAINABLE AQUACULTURE
     </span>
     <span class="home-science-label-meta">
       Health · Quality · Sustainability
     </span>
-  </span>
-</div>
+  </div>
 
-
-<div class="home-science-label home-science-label--02">
-  <span class="home-topic-sphere home-topic-sphere--gold"></span>
-
-  <span class="home-topic-content">
+  <div class="home-science-label home-science-label--02">
     <span class="home-science-label-title">
       ORAL DELIVERY SYSTEMS
     </span>
     <span class="home-science-label-meta">
       Vaccines · Probiotics · Bioactives
     </span>
-  </span>
-</div>
+  </div>
 
-
-<div class="home-science-label home-science-label--03">
-  <span class="home-topic-sphere home-topic-sphere--cyan"></span>
-
-  <span class="home-topic-content">
+  <div class="home-science-label home-science-label--03">
     <span class="home-science-label-title">
       PASSIVE COOLING MATERIALS
     </span>
     <span class="home-science-label-meta">
       Biopolymers · Radiative Cooling
     </span>
-  </span>
-</div>
+  </div>
 
-
-<div class="home-science-label home-science-label--04">
-  <span class="home-topic-sphere home-topic-sphere--purple"></span>
-
-  <span class="home-topic-content">
+  <div class="home-science-label home-science-label--04">
     <span class="home-science-label-title">
       SEAFOOD SCIENCE
     </span>
     <span class="home-science-label-meta">
       Quality · Flavor · Preservation
     </span>
-  </span>
-</div>
-
   </div>
 
+  <div class="home-explore-label">
+    Explore the connections
+  </div>
+
+</div>
 
   <script>
     (function () {
