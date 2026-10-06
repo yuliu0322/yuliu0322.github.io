@@ -1001,69 +1001,208 @@ html[data-theme="dark"] .home-research-card:hover {
 
   <!-- Hero -->
 
-  <section class="home-hero">
+<section class="home-hero">
 
-<span class="home-hero-shimmer" aria-hidden="true"></span>
+  <div class="home-hero-copy">
 
-<div class="home-hero-copy">
+    <h1 class="home-greeting">
+      Welcome, I’m
+      <span class="home-greeting-highlight">Yu Liu</span>.
+    </h1>
 
-  <h1 class="home-greeting">
-    Welcome, I’m
-    <span class="home-greeting-highlight">Yu Liu</span>.
-  </h1>
+    <p class="home-description">
+      I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
+      and a member of both the Sustainable &amp; Intelligent
+      Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
+    </p>
 
-  <p class="home-description">
-    I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
-    and a member of both the Sustainable &amp; Intelligent
-    Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
-  </p>
+    <p class="home-description">
+      My work connects food science, aquaculture, biomaterials, and food
+      engineering to develop practical solutions for aquatic animal health,
+      seafood quality, and sustainable food preservation.
+    </p>
 
-  <p class="home-description">
-    My work connects food science, aquaculture, biomaterials, and food
-    engineering to develop practical solutions for aquatic animal health,
-    seafood quality, and sustainable food preservation.
-  </p>
+    <a class="home-research-link" href="/research/">
+      <span>Learn more about my research</span>
+      <span class="home-research-link-arrow">→</span>
+    </a>
 
-</div>
-
-<!-- Abstract research visualization -->
-
-<div
-  class="home-visual"
-  role="img"
-  aria-label="Abstract visualization of four interconnected research areas"
->
-
-  <div class="home-visual-orbit"></div>
-  <div class="home-visual-orbit-inner"></div>
-
-  <!-- Soft flowing ocean currents -->
-
-  <div class="home-ocean-current" aria-hidden="true"><span class="home-ocean-wave home-ocean-wave--one"></span><span class="home-ocean-wave home-ocean-wave--two"></span><span class="home-ocean-wave home-ocean-wave--three"></span></div>
-
-  <div class="home-visual-node home-visual-node--aquaculture">
-    Sustainable Aquaculture
   </div>
 
-  <div class="home-visual-node home-visual-node--passive-cooling">
-    Passive Cooling Materials
+
+  <div
+    class="home-science-visual"
+    role="img"
+    aria-label="Scientific visualization of interconnected research areas"
+  >
+
+    <svg
+      class="home-science-svg"
+      viewBox="0 0 700 400"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+
+      <defs>
+
+        <linearGradient id="meshFade" x1="0" x2="1">
+          <stop offset="0%" stop-color="white" stop-opacity="0"/>
+          <stop offset="18%" stop-color="white" stop-opacity="0.35"/>
+          <stop offset="42%" stop-color="white" stop-opacity="1"/>
+          <stop offset="100%" stop-color="white" stop-opacity="1"/>
+        </linearGradient>
+
+        <mask id="meshMask">
+          <rect width="700" height="400" fill="url(#meshFade)"/>
+        </mask>
+
+        <filter id="nodeGlow" x="-300%" y="-300%" width="600%" height="600%">
+          <feGaussianBlur stdDeviation="5" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+
+      </defs>
+
+
+      <g mask="url(#meshMask)">
+
+        <path class="home-mesh-line" d="M-170 385 C20 360 78 192 188 199 S336 305 438 250 S566 177 760 250"/>
+        <path class="home-mesh-line" d="M-160 378 C10 350 75 184 186 192 S337 297 440 243 S570 171 760 244"/>
+        <path class="home-mesh-line" d="M-150 371 C5 340 72 176 184 185 S338 289 442 236 S574 165 760 238"/>
+        <path class="home-mesh-line" d="M-140 364 C0 330 69 168 182 178 S339 281 444 229 S578 159 760 232"/>
+        <path class="home-mesh-line" d="M-130 357 C-5 320 66 160 180 171 S340 273 446 222 S582 153 760 226"/>
+        <path class="home-mesh-line" d="M-120 350 C-10 310 63 152 178 164 S341 265 448 215 S586 147 760 220"/>
+        <path class="home-mesh-line" d="M-110 343 C-15 300 60 144 176 157 S342 257 450 208 S590 141 760 214"/>
+        <path class="home-mesh-line" d="M-100 336 C-20 290 57 136 174 150 S343 249 452 201 S594 135 760 208"/>
+        <path class="home-mesh-line" d="M-90 329 C-25 280 54 128 172 143 S344 241 454 194 S598 129 760 202"/>
+        <path class="home-mesh-line" d="M-80 322 C-30 270 51 120 170 136 S345 233 456 187 S602 123 760 196"/>
+        <path class="home-mesh-line" d="M-70 315 C-35 260 48 112 168 129 S346 225 458 180 S606 117 760 190"/>
+        <path class="home-mesh-line" d="M-60 308 C-40 250 45 104 166 122 S347 217 460 173 S610 111 760 184"/>
+        <path class="home-mesh-line" d="M-50 301 C-45 240 42 96 164 115 S348 209 462 166 S614 105 760 178"/>
+        <path class="home-mesh-line" d="M-40 294 C-50 230 39 88 162 108 S349 201 464 159 S618 99 760 172"/>
+        <path class="home-mesh-line" d="M-30 287 C-55 220 36 80 160 101 S350 193 466 152 S622 93 760 166"/>
+        <path class="home-mesh-line" d="M-20 280 C-60 210 33 72 158 94 S351 185 468 145 S626 87 760 160"/>
+
+        <path class="home-mesh-line--strong home-mesh-line" d="M-120 345 C20 305 84 150 180 162 S330 266 448 208 S580 132 760 207"/>
+        <path class="home-mesh-line--strong home-mesh-line" d="M-95 325 C20 282 85 126 172 142 S337 245 456 192 S590 115 760 195"/>
+
+
+        <path class="home-mesh-line home-mesh-line--gold" d="M40 338 C178 295 230 232 334 238 S485 292 585 231 S681 195 760 221"/>
+        <path class="home-mesh-line home-mesh-line--gold" d="M20 349 C175 308 232 244 336 250 S487 304 587 243 S684 207 760 233"/>
+        <path class="home-mesh-line home-mesh-line--gold" d="M0 360 C172 321 234 256 338 262 S489 316 589 255 S687 219 760 245"/>
+        <path class="home-mesh-line home-mesh-line--gold" d="M-20 371 C169 334 236 268 340 274 S491 328 591 267 S690 231 760 257"/>
+
+
+        <path class="home-mesh-cross" d="M70 390 C128 316 124 235 160 101"/>
+        <path class="home-mesh-cross" d="M95 394 C150 320 145 226 177 112"/>
+        <path class="home-mesh-cross" d="M120 397 C170 326 169 220 195 124"/>
+        <path class="home-mesh-cross" d="M145 400 C192 330 191 220 214 139"/>
+        <path class="home-mesh-cross" d="M170 400 C214 336 215 224 235 156"/>
+        <path class="home-mesh-cross" d="M195 400 C236 340 239 230 256 174"/>
+        <path class="home-mesh-cross" d="M220 400 C258 344 263 237 278 191"/>
+        <path class="home-mesh-cross" d="M245 400 C281 348 286 245 300 207"/>
+        <path class="home-mesh-cross" d="M270 400 C303 352 310 253 322 219"/>
+        <path class="home-mesh-cross" d="M295 400 C325 356 333 260 345 229"/>
+        <path class="home-mesh-cross" d="M320 400 C347 360 357 267 368 235"/>
+        <path class="home-mesh-cross" d="M345 400 C369 364 381 273 391 239"/>
+        <path class="home-mesh-cross" d="M370 400 C392 368 405 278 414 241"/>
+        <path class="home-mesh-cross" d="M395 400 C414 372 429 282 437 242"/>
+        <path class="home-mesh-cross" d="M420 400 C436 376 453 286 460 240"/>
+        <path class="home-mesh-cross" d="M445 400 C458 380 477 288 483 237"/>
+        <path class="home-mesh-cross" d="M470 400 C480 384 501 289 506 233"/>
+        <path class="home-mesh-cross" d="M495 400 C502 388 525 289 529 228"/>
+        <path class="home-mesh-cross" d="M520 400 C524 390 549 288 552 222"/>
+        <path class="home-mesh-cross" d="M545 400 C546 392 573 285 575 215"/>
+        <path class="home-mesh-cross" d="M570 400 C568 394 597 281 598 207"/>
+        <path class="home-mesh-cross" d="M595 400 C590 396 621 276 621 199"/>
+
+
+        <path class="home-network-line" d="M205 47 V150"/>
+        <path class="home-network-line home-network-line--gold" d="M487 112 V213"/>
+        <path class="home-network-line" d="M162 273 V355"/>
+        <path class="home-network-line home-network-line--purple" d="M505 305 V374"/>
+
+
+        <circle class="home-network-dot" cx="205" cy="150" r="6"/>
+        <circle class="home-network-dot--gold" cx="487" cy="213" r="6"/>
+        <circle class="home-network-dot" cx="162" cy="273" r="5"/>
+        <circle class="home-network-dot--purple" cx="505" cy="305" r="6"/>
+
+
+        <circle class="home-particle" cx="84" cy="192" r="3"/>
+        <circle class="home-particle" cx="122" cy="224" r="2"/>
+        <circle class="home-particle" cx="144" cy="159" r="3"/>
+        <circle class="home-particle" cx="259" cy="232" r="3"/>
+        <circle class="home-particle" cx="295" cy="162" r="2"/>
+        <circle class="home-particle" cx="329" cy="258" r="3"/>
+        <circle class="home-particle" cx="371" cy="210" r="3"/>
+        <circle class="home-particle" cx="420" cy="282" r="2"/>
+        <circle class="home-particle" cx="454" cy="164" r="3"/>
+        <circle class="home-particle" cx="538" cy="251" r="3"/>
+        <circle class="home-particle" cx="579" cy="173" r="2"/>
+        <circle class="home-particle" cx="623" cy="266" r="3"/>
+        <circle class="home-particle" cx="664" cy="198" r="2"/>
+
+        <circle class="home-particle-ring" cx="103" cy="276" r="4"/>
+        <circle class="home-particle-ring" cx="281" cy="301" r="4"/>
+        <circle class="home-particle-ring" cx="399" cy="151" r="4"/>
+        <circle class="home-particle-ring" cx="551" cy="116" r="4"/>
+        <circle class="home-particle-ring" cx="650" cy="303" r="4"/>
+
+      </g>
+
+    </svg>
+
+
+    <div class="home-science-label home-science-label--01">
+      <span class="home-science-label-number">01</span>
+      <span class="home-science-label-title">
+        SUSTAINABLE AQUACULTURE
+      </span>
+      <span class="home-science-label-meta">
+        Health · Quality · Sustainability
+      </span>
+    </div>
+
+
+    <div class="home-science-label home-science-label--02">
+      <span class="home-science-label-number">02</span>
+      <span class="home-science-label-title">
+        ORAL DELIVERY SYSTEMS
+      </span>
+      <span class="home-science-label-meta">
+        Vaccines · Probiotics · Bioactives
+      </span>
+    </div>
+
+
+    <div class="home-science-label home-science-label--03">
+      <span class="home-science-label-number">03</span>
+      <span class="home-science-label-title">
+        PASSIVE COOLING MATERIALS
+      </span>
+      <span class="home-science-label-meta">
+        Biopolymers · Radiative Cooling
+      </span>
+    </div>
+
+
+    <div class="home-science-label home-science-label--04">
+      <span class="home-science-label-number">04</span>
+      <span class="home-science-label-title">
+        SEAFOOD SCIENCE
+      </span>
+      <span class="home-science-label-meta">
+        Quality · Flavor · Preservation
+      </span>
+    </div>
+
   </div>
 
-  <div class="home-visual-node home-visual-node--seafood-science">
-    Seafood Science
-  </div>
-
-  <div class="home-visual-node home-visual-node--oral-delivery">
-    Oral Delivery Systems
-  </div>
-
-<span class="home-microsphere home-microsphere--one"></span>
-<span class="home-microsphere home-microsphere--two"></span>
-<span class="home-microsphere home-microsphere--three"></span>
-
-</div>
-
-  </section>
+</section>
 
   <!-- Current research -->
 
@@ -1218,47 +1357,5 @@ html[data-theme="dark"] .home-research-card:hover {
   </div>
 </div>
 
-  </section>
-
 </div>
 
-<script>
-(function () {
-  const hero = document.querySelector(".home-hero");
-  const visual = hero && hero.querySelector(".home-visual");
-  const allowMotion = window.matchMedia(
-    "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
-  );
-
-  if (!hero || !visual) return;
-
-  let frame = null;
-
-  function resetVisual() {
-    visual.style.setProperty("--home-tilt-x", "0deg");
-    visual.style.setProperty("--home-tilt-y", "0deg");
-    visual.style.setProperty("--home-shift-x", "0px");
-    visual.style.setProperty("--home-shift-y", "0px");
-  }
-
-  hero.addEventListener("pointermove", function (event) {
-    if (!allowMotion.matches) return;
-
-    const rect = hero.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-
-    if (frame) cancelAnimationFrame(frame);
-
-    frame = requestAnimationFrame(function () {
-      visual.style.setProperty("--home-tilt-x", (-y * 5).toFixed(2) + "deg");
-      visual.style.setProperty("--home-tilt-y", (x * 6).toFixed(2) + "deg");
-      visual.style.setProperty("--home-shift-x", (x * 7).toFixed(1) + "px");
-      visual.style.setProperty("--home-shift-y", (y * 5).toFixed(1) + "px");
-    });
-  });
-
-  hero.addEventListener("pointerleave", resetVisual);
-  allowMotion.addEventListener && allowMotion.addEventListener("change", resetVisual);
-})();
-</script>
