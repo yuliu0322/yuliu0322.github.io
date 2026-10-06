@@ -423,16 +423,17 @@ redirect_from:
     max-width: 100%;
   }
 
-  .home-science-visual {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 50%;
-    width: 125%;
-    height: 390px;
-    margin: 1rem 0 0;
-    transform: translateX(-50%) !important;
+.home-science-visual {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 760 / 400;
+  margin: 1rem 0 0;
+  transform: none !important;
   }
 }
   
@@ -1691,16 +1692,17 @@ html[data-theme="dark"] .home-research-card:hover {
         max-width: 100%;
       }
 
-      .home-science-visual {
-        position: relative;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        width: calc(100% + 1rem);
-        height: 310px;
-        margin: 1.3rem -0.5rem -0.4rem;
-        transform: none !important;
-      }
+.home-science-visual {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: 390px;
+  margin: 1rem 0 0;
+  transform: none !important;
+}
 
       .home-science-label--01 {
         left: 34%;
