@@ -629,9 +629,7 @@ html[data-theme="dark"] .home-keyword,
   </p>
 
   <p class="home-description">
-    My work connects food science, aquaculture, biomaterials, and food
-    engineering to develop practical solutions for aquatic animal health,
-    seafood quality, and sustainable food preservation.
+    My research integrates food science, aquaculture, biomaterials, and food engineering to address challenges in aquatic animal health, seafood quality, and sustainable food preservation.
   </p>
 
 </div>
