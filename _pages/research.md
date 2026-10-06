@@ -5,7 +5,6 @@ permalink: /research/
 author_profile: true
 ---
 
-
 <style>
 :root {
   --research-ink: #24344d;
@@ -15,9 +14,10 @@ author_profile: true
   --research-blue-dark: #267f9c;
   --research-blue-soft: #eef8fb;
   --research-gold: #dba655;
+  --research-green: #65aa91;
+  --research-purple: #8986bd;
   --research-line: #dde8ed;
   --research-surface: #ffffff;
-  --research-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 }
 
 .research-page {
@@ -27,14 +27,33 @@ author_profile: true
   line-height: 1.78;
 }
 
+.research-page *,
+.research-page *::before,
+.research-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ==================================================
+   Research introduction
+   ================================================== */
+
 .research-intro {
-  position: relative;
-  margin: 0 0 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.65fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+
+  margin: 0 0 4rem;
   padding: 0;
   border: none;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.research-intro-content {
+  min-width: 0;
 }
 
 .research-kicker {
@@ -47,8 +66,6 @@ author_profile: true
 }
 
 .research-question {
-  position: relative;
-  z-index: 1;
   max-width: 46rem;
   margin: 0 0 1.2rem;
   color: var(--research-ink);
@@ -58,10 +75,277 @@ author_profile: true
 }
 
 .research-intro-text {
-  position: relative;
-  z-index: 1;
   margin: 0;
 }
+
+
+/* ==================================================
+   Abstract research visualization
+   ================================================== */
+
+.research-overview-visual {
+  position: relative;
+  width: min(100%, 310px);
+  aspect-ratio: 1 / 1;
+  margin: auto;
+
+  transform:
+    perspective(900px)
+    rotateX(var(--research-tilt-x, 0deg))
+    rotateY(var(--research-tilt-y, 0deg))
+    translate3d(
+      var(--research-shift-x, 0px),
+      var(--research-shift-y, 0px),
+      0
+    );
+
+  transform-style: preserve-3d;
+  transition: transform 180ms ease-out;
+  will-change: transform;
+}
+
+
+/* Energy haze */
+
+.research-overview-visual::before {
+  content: "";
+  position: absolute;
+  inset: 15%;
+  z-index: -1;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from 90deg,
+    rgba(72, 169, 197, 0),
+    rgba(72, 169, 197, 0.14),
+    rgba(219, 166, 85, 0.10),
+    rgba(72, 169, 197, 0)
+  );
+
+  filter: blur(17px);
+  animation: research-energy-spin 18s linear infinite;
+}
+
+
+/* Outer orbit */
+
+.research-overview-orbit {
+  position: absolute;
+  inset: 6%;
+  border: 1.5px dashed rgba(72, 169, 197, 0.31);
+  border-radius: 50%;
+  animation: research-orbit-rotate 36s linear infinite;
+}
+
+.research-overview-orbit::before {
+  content: "";
+  position: absolute;
+  top: 13%;
+  right: 5%;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--research-blue);
+  border-radius: 50%;
+  background: #f7fcfd;
+}
+
+
+/* Inner orbit */
+
+.research-overview-orbit-inner {
+  position: absolute;
+  inset: 21%;
+  border: 1.5px solid rgba(219, 166, 85, 0.31);
+  border-radius: 50%;
+  animation: research-orbit-rotate-reverse 27s linear infinite;
+}
+
+.research-overview-orbit-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--research-gold);
+  box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
+}
+
+
+/* ==================================================
+   Flowing ocean currents
+   ================================================== */
+
+.research-ocean-current {
+  position: absolute;
+  inset: 27% 17%;
+  z-index: 1;
+  width: 66%;
+  height: 46%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.research-ocean-wave {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 58%;
+  border-style: solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.research-ocean-wave--one {
+  top: 16%;
+  border-top-color: rgba(112, 202, 221, 0.46);
+  border-width: 2px;
+  animation: research-ocean-flow-one 7s ease-in-out infinite;
+}
+
+.research-ocean-wave--two {
+  top: 39%;
+  border-top-color: rgba(154, 219, 232, 0.4);
+  border-width: 1.5px;
+  animation: research-ocean-flow-two 9s ease-in-out infinite;
+}
+
+.research-ocean-wave--three {
+  top: 62%;
+  border-top-color: rgba(188, 231, 239, 0.65);
+  border-width: 1px;
+  animation: research-ocean-flow-three 11s ease-in-out infinite;
+}
+
+
+/* ==================================================
+   Research labels
+   ================================================== */
+
+.research-overview-node {
+  position: absolute;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  color: var(--research-ink);
+  border: 1px solid rgba(72, 169, 197, 0.19);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 16px rgba(35, 55, 75, 0.08);
+
+  font-size: 0.69rem;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+
+  animation:
+    research-node-float var(--float-time, 6.4s)
+    ease-in-out infinite;
+
+  transition:
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+
+  will-change: transform;
+}
+
+.research-overview-node:hover {
+  animation-play-state: paused;
+  background: #ffffff;
+  box-shadow: 0 11px 24px rgba(35, 55, 75, 0.14);
+  transform: translate3d(0, -6px, 18px) scale(1.025);
+}
+
+.research-overview-node::before {
+  content: "";
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--node-color, var(--research-blue));
+}
+
+.research-overview-node--aquaculture {
+  top: 6%;
+  left: 3%;
+  --node-color: var(--research-green);
+  --float-time: 6.8s;
+}
+
+.research-overview-node--passive-cooling {
+  bottom: 28%;
+  left: -6%;
+  --node-color: var(--research-blue);
+  --float-time: 7.6s;
+  animation-delay: -1.4s;
+}
+
+.research-overview-node--seafood-science {
+  right: 4%;
+  bottom: 7%;
+  --node-color: var(--research-purple);
+  --float-time: 6.1s;
+  animation-delay: -2.7s;
+}
+
+.research-overview-node--oral-delivery {
+  top: 32%;
+  right: -2%;
+  --node-color: var(--research-gold);
+  --float-time: 7.1s;
+  animation-delay: -3.8s;
+}
+
+
+/* Decorative microspheres */
+
+.research-microsphere {
+  position: absolute;
+  border: 1px solid rgba(72, 169, 197, 0.28);
+  border-radius: 50%;
+  background: rgba(123, 203, 216, 0.12);
+  animation: research-particle-float 7s ease-in-out infinite;
+}
+
+.research-microsphere--one {
+  top: 20%;
+  left: 30%;
+  width: 16px;
+  height: 16px;
+}
+
+.research-microsphere--two {
+  top: 61%;
+  right: 27%;
+  width: 11px;
+  height: 11px;
+  animation-delay: -2s;
+}
+
+.research-microsphere--three {
+  right: 22%;
+  bottom: 22%;
+  width: 7px;
+  height: 7px;
+  border-color: rgba(219, 166, 85, 0.31);
+  background: rgba(219, 166, 85, 0.18);
+  animation-delay: -4s;
+}
+
+
+/* ==================================================
+   Research sections
+   ================================================== */
 
 .research-section {
   scroll-margin-top: 5rem;
@@ -96,14 +380,21 @@ author_profile: true
 
 .research-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(360px, 1.08fr);
+
   grid-template-areas: "description visual";
+
   gap: clamp(2rem, 4vw, 3.5rem);
   align-items: start;
 }
 
 .research-section--reverse .research-grid {
-  grid-template-columns: minmax(360px, 1.08fr) minmax(0, 0.92fr);
+  grid-template-columns:
+    minmax(360px, 1.08fr)
+    minmax(0, 0.92fr);
+
   grid-template-areas: "visual description";
 }
 
@@ -159,6 +450,11 @@ author_profile: true
   background: #ffffff;
 }
 
+
+/* ==================================================
+   Research figures
+   ================================================== */
+
 .research-figure {
   margin: 0;
   padding: 0;
@@ -197,6 +493,11 @@ author_profile: true
   outline-offset: 4px;
 }
 
+
+/* ==================================================
+   Lightbox
+   ================================================== */
+
 .research-lightbox[hidden] {
   display: none;
 }
@@ -205,11 +506,14 @@ author_profile: true
   position: fixed;
   inset: 0;
   z-index: 2147483647;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   box-sizing: border-box;
   padding: 1.5rem;
+
   background: rgba(13, 22, 34, 0.92);
   backdrop-filter: blur(4px);
 }
@@ -227,19 +531,105 @@ author_profile: true
   position: fixed;
   top: 1rem;
   right: 1.25rem;
+
   width: 44px;
   height: 44px;
   padding: 0;
+
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 50%;
+
   color: #ffffff;
   background: rgba(0, 0, 0, 0.35);
+
   font-size: 1.8rem;
   line-height: 1;
   cursor: pointer;
 }
 
-/* Dark mode */
+
+/* ==================================================
+   Animations
+   ================================================== */
+
+@keyframes research-orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes research-orbit-rotate-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes research-node-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 10px);
+  }
+
+  50% {
+    transform: translate3d(0, -7px, 18px);
+  }
+}
+
+@keyframes research-energy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes research-particle-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -8px);
+  }
+}
+
+@keyframes research-ocean-flow-one {
+  0%,
+  100% {
+    transform: translateX(-5%) translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateX(5%) translateY(-4px) rotate(2deg);
+  }
+}
+
+@keyframes research-ocean-flow-two {
+  0%,
+  100% {
+    transform: translateX(5%) translateY(0) rotate(2deg);
+  }
+
+  50% {
+    transform: translateX(-5%) translateY(4px) rotate(-2deg);
+  }
+}
+
+@keyframes research-ocean-flow-three {
+  0%,
+  100% {
+    transform: translateX(-3%) translateY(1px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateX(4%) translateY(-3px) rotate(1deg);
+  }
+}
+
+
+/* ==================================================
+   Dark mode
+   ================================================== */
+
 html[data-theme="dark"] .research-page {
   --research-ink: #f2f5f8;
   --research-text: #c8d0da;
@@ -248,9 +638,24 @@ html[data-theme="dark"] .research-page {
   --research-blue-dark: #69c8e2;
   --research-blue-soft: #243a43;
   --research-gold: #e0ad60;
+  --research-green: #78bea6;
+  --research-purple: #aaa7d7;
   --research-line: #58616a;
   --research-surface: #343a40;
-  --research-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="dark"] .research-overview-node {
+  color: #d8e1e8;
+  border-color: #52606a;
+  background: rgba(52, 58, 64, 0.94);
+}
+
+html[data-theme="dark"] .research-overview-node:hover {
+  background: #3a4046;
+}
+
+html[data-theme="dark"] .research-overview-orbit::before {
+  background: #30363c;
 }
 
 html[data-theme="dark"] .research-topics li {
@@ -259,8 +664,23 @@ html[data-theme="dark"] .research-topics li {
   background: #3d4247;
 }
 
-/* Tablet and mobile */
+
+/* ==================================================
+   Tablet
+   ================================================== */
+
 @media (max-width: 900px) {
+
+  .research-intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .research-overview-visual {
+    width: min(100%, 280px);
+  }
+
   .research-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -270,6 +690,7 @@ html[data-theme="dark"] .research-topics li {
   }
 
   .research-section--reverse .research-grid {
+    grid-template-columns: 1fr;
     grid-template-areas:
       "description"
       "visual";
@@ -280,13 +701,33 @@ html[data-theme="dark"] .research-topics li {
   }
 }
 
+
+/* ==================================================
+   Mobile
+   ================================================== */
+
 @media (max-width: 600px) {
+
   .research-page {
     line-height: 1.7;
   }
 
+  .research-intro {
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+  }
+
   .research-question {
     font-size: 1.08rem;
+  }
+
+  .research-overview-visual {
+    width: 250px;
+  }
+
+  .research-overview-node {
+    padding: 6px 8px;
+    font-size: 0.61rem;
   }
 
   .research-section {
@@ -301,37 +742,218 @@ html[data-theme="dark"] .research-topics li {
     padding: 0.75rem;
   }
 }
+
+@media (max-width: 480px) {
+
+  .research-overview-visual {
+    width: 215px;
+  }
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .research-overview-orbit,
+  .research-overview-orbit-inner,
+  .research-ocean-current,
+  .research-overview-visual::before,
+  .research-overview-node,
+  .research-microsphere {
+    animation: none;
+  }
+
+  .research-overview-visual {
+    transform: none !important;
+    transition: none;
+  }
+}
+
 </style>
+
 
 <div class="research-page">
 
-  <section class="research-intro" aria-labelledby="research-question-heading">
-    <p class="research-kicker">A question runs through my research</p>
-    <p class="research-question" id="research-question-heading">
-      How can we improve aquatic animal health, seafood quality, and sustainability without increasing environmental cost?
-    </p>
-    <p class="research-intro-text">
-      To address this, I study the aquatic food value chain from production to post-harvest preservation. On the production side, I investigate how environmental and farming conditions shape aquatic animal physiology, health, and product quality, while developing PLGA-based oral delivery systems for vaccines and probiotic-derived immunostimulants. On the post-harvest side, I develop bio-based passive cooling materials for sustainable cold-chain management and investigate the physiological, biochemical, and flavor mechanisms underlying seafood quality deterioration during processing and storage. Building on my earlier research on environmental stressors in shellfish, these efforts aim to develop science-based strategies that improve aquatic animal health, reduce production and post-harvest losses, and enhance the sustainability, safety, and quality of aquatic foods.
-    </p>
+
+  <!-- ==================================================
+       Research overview
+       ================================================== -->
+
+  <section
+    class="research-intro"
+    aria-labelledby="research-question-heading"
+  >
+
+    <div class="research-intro-content">
+
+      <p class="research-kicker">
+        A question runs through my research
+      </p>
+
+      <p
+        class="research-question"
+        id="research-question-heading"
+      >
+        How can we improve aquatic animal health, seafood quality,
+        and sustainability without increasing environmental cost?
+      </p>
+
+      <p class="research-intro-text">
+        To address this, I study the aquatic food value chain from production
+        to post-harvest preservation. On the production side, I investigate how
+        environmental and farming conditions shape aquatic animal physiology,
+        health, and product quality, while developing PLGA-based oral delivery
+        systems for vaccines and probiotic-derived immunostimulants. On the
+        post-harvest side, I develop bio-based passive cooling materials for
+        sustainable cold-chain management and investigate the physiological,
+        biochemical, and flavor mechanisms underlying seafood quality
+        deterioration during processing and storage. Building on my earlier
+        research on environmental stressors in shellfish, these efforts aim to
+        develop science-based strategies that improve aquatic animal health,
+        reduce production and post-harvest losses, and enhance the
+        sustainability, safety, and quality of aquatic foods.
+      </p>
+
+    </div>
+
+
+    <!-- Abstract visualization copied from Home -->
+
+    <div
+      class="research-overview-visual"
+      role="img"
+      aria-label="Abstract visualization of four interconnected research areas"
+    >
+
+      <div class="research-overview-orbit"></div>
+      <div class="research-overview-orbit-inner"></div>
+
+      <div
+        class="research-ocean-current"
+        aria-hidden="true"
+      >
+        <span
+          class="research-ocean-wave
+                 research-ocean-wave--one"
+        ></span>
+
+        <span
+          class="research-ocean-wave
+                 research-ocean-wave--two"
+        ></span>
+
+        <span
+          class="research-ocean-wave
+                 research-ocean-wave--three"
+        ></span>
+      </div>
+
+
+      <div
+        class="research-overview-node
+               research-overview-node--aquaculture"
+      >
+        Sustainable Aquaculture
+      </div>
+
+      <div
+        class="research-overview-node
+               research-overview-node--passive-cooling"
+      >
+        Passive Cooling Materials
+      </div>
+
+      <div
+        class="research-overview-node
+               research-overview-node--seafood-science"
+      >
+        Seafood Science
+      </div>
+
+      <div
+        class="research-overview-node
+               research-overview-node--oral-delivery"
+      >
+        Oral Delivery Systems
+      </div>
+
+
+      <span
+        class="research-microsphere
+               research-microsphere--one"
+      ></span>
+
+      <span
+        class="research-microsphere
+               research-microsphere--two"
+      ></span>
+
+      <span
+        class="research-microsphere
+               research-microsphere--three"
+      ></span>
+
+    </div>
+
   </section>
 
-  <section class="research-section" id="environment">
+
+  <!-- ==================================================
+       01
+       ================================================== -->
+
+  <section
+    class="research-section"
+    id="environment"
+  >
+
     <div class="research-section-heading">
-      <span class="research-number">01 · RESEARCH AREA</span>
+      <span class="research-number">
+        01 · RESEARCH AREA
+      </span>
     </div>
-    <h2 class="research-title">Aquaculture Environment, Animal Health, and Seafood Quality</h2>
+
+    <h2 class="research-title">
+      Aquaculture Environment, Animal Health, and Seafood Quality
+    </h2>
+
     <div class="research-grid">
+
       <p class="research-description">
-        My earlier research examined how farming conditions and environmental stressors influence shellfish physiology, biochemical composition, and quality. Working primarily with oysters and mussels, we investigated the effects of temperature, salinity, and microplastic exposure on physiological responses, metabolism, and flavor compound accumulation. Using physiological, biochemical, and omics approaches, this work shows how aquaculture environments shape seafood quality at harvest. These findings aim to provide scientific guidance for optimizing farming practices to improve animal health, product quality, and production sustainability.
+        My earlier research examined how farming conditions and environmental
+        stressors influence shellfish physiology, biochemical composition, and
+        quality. Working primarily with oysters and mussels, we investigated
+        the effects of temperature, salinity, and microplastic exposure on
+        physiological responses, metabolism, and flavor compound accumulation.
+        Using physiological, biochemical, and omics approaches, this work shows
+        how aquaculture environments shape seafood quality at harvest. These
+        findings aim to provide scientific guidance for optimizing farming
+        practices to improve animal health, product quality, and production
+        sustainability.
       </p>
+
       <div class="research-visual">
+
         <figure class="research-figure">
-          <button class="research-image-button" type="button" aria-label="Enlarge Aqua Environment figure">
-            <img src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}" alt="Aqua Environment">
+          <button
+            class="research-image-button"
+            type="button"
+            aria-label="Enlarge Aqua Environment figure"
+          >
+            <img
+              src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}"
+              alt="Aqua Environment"
+            >
           </button>
         </figure>
+
         <div class="research-topics-block">
-          <p class="research-topics-label">Research topics</p>
+
+          <p class="research-topics-label">
+            Research topics
+          </p>
+
           <ul class="research-topics">
             <li>Aquaculture environmental stressors</li>
             <li>Shellfish physiology and metabolism</li>
@@ -339,28 +961,71 @@ html[data-theme="dark"] .research-topics li {
             <li>Microplastic ecotoxicology</li>
             <li>Metabolomics</li>
           </ul>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="research-section research-section--reverse" id="oral-delivery">
+
+  <!-- ==================================================
+       02
+       ================================================== -->
+
+  <section
+    class="research-section research-section--reverse"
+    id="oral-delivery"
+  >
+
     <div class="research-section-heading">
-      <span class="research-number">02 · RESEARCH AREA</span>
+      <span class="research-number">
+        02 · RESEARCH AREA
+      </span>
     </div>
-    <h2 class="research-title">Aquaculture Health and Oral Delivery Systems</h2>
+
+    <h2 class="research-title">
+      Aquaculture Health and Oral Delivery Systems
+    </h2>
+
     <div class="research-grid">
+
       <p class="research-description">
-        An important component of my doctoral research focuses on developing biodegradable delivery platforms for probiotics and antigens in aquaculture. Although oral delivery is a scalable strategy for disease prevention in fish and shrimp, maintaining bioactive stability during feed storage and digestive transit remains challenging. I therefore investigate PLGA-based systems that are spray-coated onto extruded feed pellets to protect encapsulated cargo and enable controlled release in the digestive tract. This research aims to improve oral therapeutics, advance sustainable disease prevention, and reduce aquaculture production losses.
+        An important component of my doctoral research focuses on developing
+        biodegradable delivery platforms for probiotics and antigens in
+        aquaculture. Although oral delivery is a scalable strategy for disease
+        prevention in fish and shrimp, maintaining bioactive stability during
+        feed storage and digestive transit remains challenging. I therefore
+        investigate PLGA-based systems that are spray-coated onto extruded feed
+        pellets to protect encapsulated cargo and enable controlled release in
+        the digestive tract. This research aims to improve oral therapeutics,
+        advance sustainable disease prevention, and reduce aquaculture
+        production losses.
       </p>
+
       <div class="research-visual">
+
         <figure class="research-figure">
-          <button class="research-image-button" type="button" aria-label="Enlarge Aquaculture Oral Delivery System figure">
-            <img src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}" alt="Aquaculture Oral Delivery System">
+          <button
+            class="research-image-button"
+            type="button"
+            aria-label="Enlarge Aquaculture Oral Delivery System figure"
+          >
+            <img
+              src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}"
+              alt="Aquaculture Oral Delivery System"
+            >
           </button>
         </figure>
+
         <div class="research-topics-block">
-          <p class="research-topics-label">Research topics</p>
+
+          <p class="research-topics-label">
+            Research topics
+          </p>
+
           <ul class="research-topics">
             <li>PLGA-based delivery systems</li>
             <li>Oral vaccines</li>
@@ -368,56 +1033,140 @@ html[data-theme="dark"] .research-topics li {
             <li>Functional aquafeeds</li>
             <li>Disease prevention</li>
           </ul>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="research-section" id="thermal-management">
+
+  <!-- ==================================================
+       03
+       ================================================== -->
+
+  <section
+    class="research-section"
+    id="thermal-management"
+  >
+
     <div class="research-section-heading">
-      <span class="research-number">03 · RESEARCH AREA</span>
+      <span class="research-number">
+        03 · RESEARCH AREA
+      </span>
     </div>
-    <h2 class="research-title">Sustainable Cold Chain and Thermal Management</h2>
+
+    <h2 class="research-title">
+      Sustainable Cold Chain and Thermal Management
+    </h2>
+
     <div class="research-grid">
+
       <p class="research-description">
-        My doctoral research focuses on developing bio-based composite films from naturally derived materials that integrate passive radiative cooling with evaporative cooling, enabling sub-ambient cooling without external energy input. Derived from renewable natural materials, these films combine efficient thermal management with the mechanical robustness required for practical food-packaging applications. This research aims to reduce reliance on conventional refrigeration and promote environmentally friendly cold-chain solutions for agricultural/aquatic foods and other perishable products.
+        My doctoral research focuses on developing bio-based composite films
+        from naturally derived materials that integrate passive radiative
+        cooling with evaporative cooling, enabling sub-ambient cooling without
+        external energy input. Derived from renewable natural materials, these
+        films combine efficient thermal management with the mechanical
+        robustness required for practical food-packaging applications. This
+        research aims to reduce reliance on conventional refrigeration and
+        promote environmentally friendly cold-chain solutions for
+        agricultural/aquatic foods and other perishable products.
       </p>
+
       <div class="research-visual">
+
         <figure class="research-figure">
-          <button class="research-image-button" type="button" aria-label="Enlarge Passive Radiative Cooling System figure">
-            <img src="{{ '/assets/images/PRC-workflow.png' | relative_url }}" alt="Passive Radiative Cooling System">
+          <button
+            class="research-image-button"
+            type="button"
+            aria-label="Enlarge Passive Radiative Cooling System figure"
+          >
+            <img
+              src="{{ '/assets/images/PRC-workflow.png' | relative_url }}"
+              alt="Passive Radiative Cooling System"
+            >
           </button>
         </figure>
+
         <div class="research-topics-block">
-          <p class="research-topics-label">Research topics</p>
+
+          <p class="research-topics-label">
+            Research topics
+          </p>
+
           <ul class="research-topics">
             <li>Passive radiative cooling</li>
             <li>Evaporative cooling</li>
             <li>Bio-based composite films</li>
             <li>Food cold-chain technologies</li>
           </ul>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="research-section research-section--reverse" id="post-harvest">
+
+  <!-- ==================================================
+       04
+       ================================================== -->
+
+  <section
+    class="research-section research-section--reverse"
+    id="post-harvest"
+  >
+
     <div class="research-section-heading">
-      <span class="research-number">04 · RESEARCH AREA</span>
+      <span class="research-number">
+        04 · RESEARCH AREA
+      </span>
     </div>
-    <h2 class="research-title">Seafood Processing, Storage, and Flavor Quality (Post-harvest)</h2>
+
+    <h2 class="research-title">
+      Seafood Processing, Storage, and Flavor Quality (Post-harvest)
+    </h2>
+
     <div class="research-grid">
+
       <p class="research-description">
-        Complementing my pre-harvest research, this work examines how post-harvest preservation methods affect seafood quality. During my earlier training, we investigated physiological, biochemical, and flavor-related changes in oysters and mussels subjected to depuration, liquid nitrogen quick freezing, semi-anhydrous living-preservation, and modified atmosphere packaging. These findings help optimize preservation strategies to maintain flavor and freshness, extend shelf life, reduce post-harvest losses, and deliver higher-quality seafood products.
+        Complementing my pre-harvest research, this work examines how
+        post-harvest preservation methods affect seafood quality. During my
+        earlier training, we investigated physiological, biochemical, and
+        flavor-related changes in oysters and mussels subjected to depuration,
+        liquid nitrogen quick freezing, semi-anhydrous living-preservation,
+        and modified atmosphere packaging. These findings help optimize
+        preservation strategies to maintain flavor and freshness, extend shelf
+        life, reduce post-harvest losses, and deliver higher-quality seafood
+        products.
       </p>
+
       <div class="research-visual">
+
         <figure class="research-figure">
-          <button class="research-image-button" type="button" aria-label="Enlarge Aquaculture Preservation figure">
-            <img src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}" alt="Aquaculture Preservation">
+          <button
+            class="research-image-button"
+            type="button"
+            aria-label="Enlarge Aquaculture Preservation figure"
+          >
+            <img
+              src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}"
+              alt="Aquaculture Preservation"
+            >
           </button>
         </figure>
+
         <div class="research-topics-block">
-          <p class="research-topics-label">Research topics</p>
+
+          <p class="research-topics-label">
+            Research topics
+          </p>
+
           <ul class="research-topics">
             <li>Seafood preservation</li>
             <li>Shellfish flavor chemistry</li>
@@ -425,63 +1174,277 @@ html[data-theme="dark"] .research-topics li {
             <li>Shelf-life extension</li>
             <li>Quality evaluation</li>
           </ul>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
 </div>
 
-<div class="research-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged research figure" hidden>
-  <button class="research-lightbox-close" type="button" aria-label="Close enlarged figure">&times;</button>
-  <img class="research-lightbox-image" src="" alt="">
+
+<!-- ==================================================
+     Lightbox
+     ================================================== -->
+
+<div
+  class="research-lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Enlarged research figure"
+  hidden
+>
+
+  <button
+    class="research-lightbox-close"
+    type="button"
+    aria-label="Close enlarged figure"
+  >
+    &times;
+  </button>
+
+  <img
+    class="research-lightbox-image"
+    src=""
+    alt=""
+  >
+
 </div>
+
 
 <script>
 (function () {
-  const lightbox = document.querySelector(".research-lightbox");
-  const lightboxImage = lightbox && lightbox.querySelector(".research-lightbox-image");
-  const closeButton = lightbox && lightbox.querySelector(".research-lightbox-close");
-  const imageButtons = document.querySelectorAll(".research-image-button");
+
+  /* ==================================================
+     Figure lightbox
+     ================================================== */
+
+  const lightbox =
+    document.querySelector(".research-lightbox");
+
+  const lightboxImage =
+    lightbox &&
+    lightbox.querySelector(".research-lightbox-image");
+
+  const closeButton =
+    lightbox &&
+    lightbox.querySelector(".research-lightbox-close");
+
+  const imageButtons =
+    document.querySelectorAll(".research-image-button");
+
   let previousFocus = null;
 
-  if (!lightbox || !lightboxImage || !closeButton) return;
 
-  document.body.appendChild(lightbox);
+  if (lightbox && lightboxImage && closeButton) {
 
-  function openLightbox(button) {
-    const image = button.querySelector("img");
-    if (!image) return;
+    document.body.appendChild(lightbox);
 
-    previousFocus = button;
-    lightboxImage.src = image.currentSrc || image.src;
-    lightboxImage.alt = image.alt;
-    lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-    closeButton.focus();
-  }
+    function openLightbox(button) {
 
-  function closeLightbox() {
-    lightbox.hidden = true;
-    lightboxImage.src = "";
-    document.body.style.overflow = "";
-    if (previousFocus) previousFocus.focus();
-  }
+      const image = button.querySelector("img");
 
-  imageButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      openLightbox(button);
+      if (!image) return;
+
+      previousFocus = button;
+
+      lightboxImage.src =
+        image.currentSrc || image.src;
+
+      lightboxImage.alt =
+        image.alt;
+
+      lightbox.hidden = false;
+
+      document.body.style.overflow =
+        "hidden";
+
+      closeButton.focus();
+    }
+
+
+    function closeLightbox() {
+
+      lightbox.hidden = true;
+
+      lightboxImage.src = "";
+
+      document.body.style.overflow = "";
+
+      if (previousFocus) {
+        previousFocus.focus();
+      }
+    }
+
+
+    imageButtons.forEach(function (button) {
+
+      button.addEventListener(
+        "click",
+        function () {
+          openLightbox(button);
+        }
+      );
+
     });
-  });
 
-  closeButton.addEventListener("click", closeLightbox);
 
-  lightbox.addEventListener("click", function (event) {
-    if (event.target === lightbox) closeLightbox();
-  });
+    closeButton.addEventListener(
+      "click",
+      closeLightbox
+    );
 
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
-  });
+
+    lightbox.addEventListener(
+      "click",
+      function (event) {
+
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape" &&
+          !lightbox.hidden
+        ) {
+          closeLightbox();
+        }
+
+      }
+    );
+
+  }
+
+
+  /* ==================================================
+     Research visualization pointer movement
+     ================================================== */
+
+  const intro =
+    document.querySelector(".research-intro");
+
+  const overviewVisual =
+    intro &&
+    intro.querySelector(".research-overview-visual");
+
+  const allowMotion =
+    window.matchMedia(
+      "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
+    );
+
+
+  if (intro && overviewVisual) {
+
+    let frame = null;
+
+
+    function resetOverviewVisual() {
+
+      overviewVisual.style.setProperty(
+        "--research-tilt-x",
+        "0deg"
+      );
+
+      overviewVisual.style.setProperty(
+        "--research-tilt-y",
+        "0deg"
+      );
+
+      overviewVisual.style.setProperty(
+        "--research-shift-x",
+        "0px"
+      );
+
+      overviewVisual.style.setProperty(
+        "--research-shift-y",
+        "0px"
+      );
+    }
+
+
+    intro.addEventListener(
+      "pointermove",
+      function (event) {
+
+        if (!allowMotion.matches) return;
+
+        const rect =
+          intro.getBoundingClientRect();
+
+        const x =
+          (event.clientX - rect.left) /
+          rect.width -
+          0.5;
+
+        const y =
+          (event.clientY - rect.top) /
+          rect.height -
+          0.5;
+
+
+        if (frame) {
+          cancelAnimationFrame(frame);
+        }
+
+
+        frame =
+          requestAnimationFrame(
+            function () {
+
+              overviewVisual.style.setProperty(
+                "--research-tilt-x",
+                (-y * 5).toFixed(2) + "deg"
+              );
+
+              overviewVisual.style.setProperty(
+                "--research-tilt-y",
+                (x * 6).toFixed(2) + "deg"
+              );
+
+              overviewVisual.style.setProperty(
+                "--research-shift-x",
+                (x * 7).toFixed(1) + "px"
+              );
+
+              overviewVisual.style.setProperty(
+                "--research-shift-y",
+                (y * 5).toFixed(1) + "px"
+              );
+
+            }
+          );
+
+      }
+    );
+
+
+    intro.addEventListener(
+      "pointerleave",
+      resetOverviewVisual
+    );
+
+
+    if (allowMotion.addEventListener) {
+
+      allowMotion.addEventListener(
+        "change",
+        resetOverviewVisual
+      );
+
+    }
+
+  }
+
 })();
 </script>
