@@ -1536,81 +1536,10 @@ html[data-theme="dark"] .home-research-card:hover {
        Topic labels
        ================================================== */
 
-    .home-science-label {
-      position: absolute;
-      z-index: 7;
-      color: var(--home-navy);
-      line-height: 1.15;
-      animation:
-        home-label-float
-        6.8s
-        ease-in-out
-        infinite;
-      will-change: transform;
-    }
-
-    .home-science-label-number {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--label-color);
-      font-size: 1.35rem;
-      font-weight: 820;
-      letter-spacing: -0.04em;
-    }
-
-    .home-science-label-title {
-      display: block;
-      color: var(--home-navy);
-      font-size: 0.59rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .home-science-label-meta {
-      display: block;
-      margin-top: 3px;
-      color: var(--home-muted);
-      font-size: 0.48rem;
-      font-weight: 520;
-      white-space: nowrap;
-    }
-
-    .home-science-label--01 {
-      top: 8%;
-      left: 39%;
-      --label-color: #16aacd;
-      animation-duration: 7.1s;
-      animation-delay: -0.7s;
-    }
-
-    .home-science-label--02 {
-      top: 23%;
-      right: 5%;
-      --label-color: #dea84d;
-      animation-duration: 7.7s;
-      animation-delay: -2.4s;
-    }
-
-    .home-science-label--03 {
-      left: 33%;
-      bottom: 12%;
-      --label-color: #16a6ca;
-      animation-duration: 6.6s;
-      animation-delay: -3.3s;
-    }
-
-    .home-science-label--04 {
-      right: 4%;
-      bottom: 6%;
-      --label-color: #7f7cc7;
-      animation-duration: 7.3s;
-      animation-delay: -1.6s;
-    }
-
 .home-science-label {
   display: flex;
-  align-items: center;
-  gap: 9px;
+  align-items: flex-start;
+  gap: 7px;
 }
 
 .home-topic-content {
@@ -1619,86 +1548,26 @@ html[data-theme="dark"] .home-research-card:hover {
 }
 
 .home-topic-sphere {
-  position: relative;
   display: block;
   flex: 0 0 auto;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  box-shadow:
-    inset -3px -4px 6px rgba(0, 0, 0, 0.10),
-    inset 3px 3px 5px rgba(255, 255, 255, 0.62),
-    0 3px 8px rgba(45, 90, 110, 0.16);
-  animation: home-topic-sphere-pulse 4.2s ease-in-out infinite;
-}
-
-.home-topic-sphere::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  width: 5px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.72);
-  filter: blur(0.3px);
-}
-
-.home-topic-sphere::after {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  z-index: -1;
+  width: 7px;
+  height: 7px;
+  margin-top: 2px;
   border-radius: 50%;
   background: currentColor;
-  opacity: 0.10;
-  filter: blur(5px);
+  box-shadow: 0 0 7px currentColor;
 }
 
 .home-topic-sphere--cyan {
   color: #16aacd;
-  background:
-    radial-gradient(
-      circle at 32% 28%,
-      #9be7f3 0%,
-      #35bddb 38%,
-      #159bbb 100%
-    );
 }
 
 .home-topic-sphere--gold {
   color: #dea84d;
-  background:
-    radial-gradient(
-      circle at 32% 28%,
-      #f6d996 0%,
-      #e5b453 40%,
-      #cc8f2e 100%
-    );
-  animation-delay: -1.2s;
 }
 
 .home-topic-sphere--purple {
   color: #7f7cc7;
-  background:
-    radial-gradient(
-      circle at 32% 28%,
-      #c7c5ed 0%,
-      #918dd4 40%,
-      #706cba 100%
-    );
-  animation-delay: -2.2s;
-}
-
-@keyframes home-topic-sphere-pulse {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-
-  50% {
-    transform: translateY(-2px) scale(1.06);
-  }
 }
 
     /* ==================================================
@@ -1976,52 +1845,20 @@ html[data-theme="dark"] .home-research-card:hover {
           d="M336 46 V144"
         />
 
-        <circle
-          class="home-tech-dot"
-          cx="336"
-          cy="144"
-          r="6"
-        />
-
-
         <path
           class="home-tech-line home-tech-line--gold"
           d="M606 111 V205"
         />
-
-        <circle
-          class="home-tech-dot home-tech-dot--gold"
-          cx="606"
-          cy="205"
-          r="6"
-        />
-
 
         <path
           class="home-tech-line"
           d="M291 267 V348"
         />
 
-        <circle
-          class="home-tech-dot"
-          cx="291"
-          cy="267"
-          r="5"
-        />
-
-
         <path
           class="home-tech-line home-tech-line--purple"
           d="M625 300 V374"
         />
-
-        <circle
-          class="home-tech-dot home-tech-dot--purple"
-          cx="625"
-          cy="300"
-          r="6"
-        />
-
 
         <circle class="home-particle" cx="74" cy="185" r="3"/>
         <circle class="home-particle home-particle--small" cx="98" cy="137" r="2"/>
