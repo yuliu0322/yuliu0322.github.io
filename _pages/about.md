@@ -9,19 +9,26 @@ redirect_from:
 ---
 
 <style>
+   
+/* ==================================================
+   Homepage design system
+   ================================================== */
+
 .home-welcome {
-  --home-navy: #203653;
-  --home-text: #52657e;
-  --home-muted: #7f91a3;
+  --home-navy: #24344d;
+  --home-text: #536174;
+  --home-muted: #738092;
   --home-blue: #48a9c5;
-  --home-blue-dark: #188fb4;
-  --home-blue-soft: #eaf8fc;
+  --home-blue-dark: #267f9c;
   --home-gold: #dba655;
-  --home-purple: #7777c9;
-  --home-border: #d8e9ef;
-  --home-shadow: 0 12px 34px rgba(38, 70, 92, 0.07);
+  --home-green: #65aa91;
+  --home-purple: #8986bd;
+  --home-surface: #ffffff;
+  --home-border: #dde8ed;
+  --home-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 
   width: 100%;
+  margin-top: -0.7rem;
   color: var(--home-text);
 }
 
@@ -480,6 +487,516 @@ html[data-theme="dark"] .home-mesh-cross {
   opacity: 0.22;
 }
 
+.home-section {
+  max-width: 1080px;
+  margin: 0 0 2.9rem;
+}
+
+.home-section-header {
+  display: block;
+  margin-bottom: 1.35rem;
+}
+
+.home-section-heading {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 11px;
+  color: var(--home-navy);
+  font-size: 1.34rem;
+  line-height: 1.35;
+}
+
+.home-section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 68px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--home-gold),
+    #efc878
+  );
+}
+
+
+/* ==================================================
+   Research cards
+   ================================================== */
+
+.home-research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home-research-card {
+  --card-accent: var(--home-blue);
+
+  position: relative;
+  min-height: 205px;
+  padding: 1.45rem 1.45rem 1.35rem;
+  overflow: hidden;
+  border: 1px solid var(--home-border);
+  border-radius: 17px;
+  background: var(--home-surface);
+  box-shadow: 0 6px 20px rgba(35, 55, 75, 0.045);
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.home-research-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 17px 0 0 17px;
+  background: var(--card-accent);
+  opacity: 0.78;
+}
+
+.home-research-card::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  bottom: -52px;
+  width: 135px;
+  height: 135px;
+  border: 1px solid rgba(72, 169, 197, 0.12);
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+.home-research-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--card-accent);
+  box-shadow: 0 15px 30px rgba(35, 55, 75, 0.1);
+}
+
+.home-research-card:hover::after {
+  transform: scale(1.15);
+}
+
+.home-research-card--passive-cooling {
+  --card-accent: var(--home-blue);
+}
+
+.home-research-card--oral-delivery {
+  --card-accent: var(--home-gold);
+}
+
+.home-card-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.home-card-icon {
+  display: inline-flex;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  color: var(--card-accent);
+  border-radius: 14px;
+  background: rgba(72, 169, 197, 0.1);
+}
+
+.home-research-card--passive-cooling .home-card-icon {
+  background: rgba(72, 169, 197, 0.1);
+}
+
+.home-research-card--oral-delivery .home-card-icon {
+  background: rgba(219, 166, 85, 0.12);
+}
+
+.home-card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-card-number {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--home-muted);
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+
+.home-card-title {
+  margin: 0;
+  color: var(--home-navy);
+  font-size: 1.02rem;
+  font-weight: 720;
+  line-height: 1.4;
+}
+
+.home-card-text {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--home-text);
+  font-size: 0.91rem;
+  line-height: 1.72;
+}
+
+.home-card-tags {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 1rem;
+}
+
+.home-card-tag {
+  padding: 4px 8px;
+  color: var(--home-muted);
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  font-size: 0.66rem;
+  font-weight: 650;
+}
+
+
+/* ==================================================
+   Beyond the laboratory
+   ================================================== */
+
+.home-beyond-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 2.1rem;
+  align-items: center;
+}
+
+.home-beyond-copy p {
+  margin: 0 0 1rem;
+  color: var(--home-text);
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+.home-beyond-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.home-interest-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-content: center;
+}
+
+.home-interest {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  color: var(--home-navy);
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  background: var(--home-surface);
+  box-shadow: 0 4px 12px rgba(35, 55, 75, 0.04);
+  font-size: 0.78rem;
+  font-weight: 660;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease;
+}
+
+.home-interest:hover {
+  color: var(--home-blue-dark);
+  border-color: rgba(72, 169, 197, 0.48);
+  transform: translateY(-2px);
+}
+
+.home-interest svg {
+  width: 17px;
+  height: 17px;
+  color: var(--home-blue-dark);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==================================================
+   Animation
+   ================================================== */
+
+.home-hero,
+.home-section {
+  animation: home-reveal 0.7s ease both;
+}
+
+.home-section {
+  animation-delay: 0.08s;
+}
+
+.home-beyond-section {
+  animation-delay: 0.14s;
+}
+
+@keyframes home-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-orbit-rotate-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes home-node-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 10px);
+  }
+
+  50% {
+    transform: translate3d(0, -7px, 18px);
+  }
+}
+
+@keyframes home-energy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-hero-shimmer {
+  0%,
+  58% {
+    opacity: 0;
+    transform: rotate(18deg) translateX(-260%);
+  }
+
+  64% {
+    opacity: 0.72;
+  }
+
+  78%,
+  100% {
+    opacity: 0;
+    transform: rotate(18deg) translateX(720%);
+  }
+}
+
+@keyframes home-particle-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -8px);
+  }
+}
+
+
+/* ==================================================
+   Dark mode
+   ================================================== */
+
+html[data-theme="dark"] .home-welcome {
+  --home-navy: #f1f5f8;
+  --home-text: #c7d0da;
+  --home-muted: #aeb9c4;
+  --home-blue: #65c2dd;
+  --home-blue-dark: #69c8e2;
+  --home-surface: #343a40;
+  --home-border: #4c5661;
+  --home-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="dark"] .home-hero {
+  border-color: #4b5962;
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(101, 194, 221, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 72% 92%,
+      rgba(219, 166, 85, 0.09),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #2d3940 0%,
+      #30363c 58%,
+      #3c3831 100%
+    );
+}
+
+html[data-theme="dark"] .home-keyword,
+html[data-theme="dark"] .home-visual-node {
+  color: #d8e1e8;
+  border-color: #52606a;
+  background: rgba(52, 58, 64, 0.94);
+}
+
+html[data-theme="dark"] .home-hero-shimmer {
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
+}
+
+html[data-theme="dark"] .home-research-card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .home-research-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ==================================================
+   Responsive layout
+   ================================================== */
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .home-visual {
+    width: min(100%, 280px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-welcome {
+    margin-top: 0;
+  }
+
+  .home-hero {
+    min-height: auto;
+    margin-bottom: 2.3rem;
+    padding: 1.7rem 1.35rem 1.9rem;
+    border-radius: 17px;
+  }
+
+  .home-greeting {
+    font-size: 1.75rem;
+  }
+
+  .home-tagline {
+    font-size: 1rem;
+  }
+
+  .home-description,
+  .home-beyond-copy p {
+    font-size: 0.94rem;
+    line-height: 1.74;
+  }
+
+  .home-visual {
+    width: 250px;
+  }
+
+  .home-section {
+    margin-bottom: 2.4rem;
+  }
+
+  .home-section-heading {
+    font-size: 1.22rem;
+  }
+
+  .home-research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-research-card {
+    min-height: auto;
+  }
+
+  .home-beyond-layout {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-visual {
+    width: 215px;
+  }
+
+  .home-visual-node {
+    padding: 6px 8px;
+    font-size: 0.61rem;
+  }
+
+  .home-keywords {
+    gap: 6px;
+  }
+
+  .home-keyword {
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero,
+  .home-section,
+  .home-visual-orbit,
+  .home-visual-orbit-inner,
+  .home-ocean-current,
+  .home-visual::before,
+  .home-visual-node,
+  .home-microsphere,
+  .home-hero-shimmer {
+    animation: none;
+  }
+
+  .home-visual {
+    transform: none !important;
+    transition: none;
+  }
+
+  .home-research-card,
+  .home-research-card::after,
+  .home-interest {
+    transition: none;
+  }
+}
+
 
 /* ==================================================
    Hero floating motion
@@ -538,43 +1055,31 @@ html[data-theme="dark"] .home-mesh-cross {
   animation: home-science-particle-float 5.5s ease-in-out infinite;
 }
 
-.home-particle:nth-of-type(2n) {
-  animation-delay: -1.6s;
-}
-
-.home-particle:nth-of-type(3n) {
-  animation-delay: -3.2s;
-}
-
 .home-particle-ring {
   transform-box: fill-box;
   transform-origin: center;
   animation: home-ring-float 6.8s ease-in-out infinite;
 }
 
-.home-particle-ring:nth-of-type(2n) {
-  animation-delay: -2.4s;
-}
-
 @keyframes home-visual-float {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 
   50% {
-    transform: translate3d(0, -6px, 0);
+    transform: translateY(-6px);
   }
 }
 
 @keyframes home-topic-float {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 
   50% {
-    transform: translate3d(0, -8px, 0);
+    transform: translateY(-8px);
   }
 }
 
@@ -594,12 +1099,12 @@ html[data-theme="dark"] .home-mesh-cross {
 @keyframes home-science-particle-float {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
     opacity: 0.25;
   }
 
   50% {
-    transform: translate3d(2px, -7px, 0);
+    transform: translate(2px, -7px);
     opacity: 0.55;
   }
 }
@@ -607,164 +1112,21 @@ html[data-theme="dark"] .home-mesh-cross {
 @keyframes home-ring-float {
   0%,
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translate(0, 0);
     opacity: 0.18;
   }
 
   50% {
-    transform: translate3d(-2px, -5px, 0);
+    transform: translate(-2px, -5px);
     opacity: 0.35;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-science-visual,
-  .home-science-label,
-  .home-network-dot,
-  .home-network-dot--gold,
-  .home-network-dot--purple,
-  .home-particle,
-  .home-particle-ring {
-    animation: none !important;
-  }
-}
-
-
-/* ==================================================
-   Existing section styles
-   ================================================== */
-
-.home-section {
-  margin-bottom: 2.7rem;
-}
-
-.home-section-title {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 1.35rem;
-  padding-bottom: 10px;
-  color: var(--home-navy);
-  font-size: 1.35rem;
-  font-weight: 770;
-  letter-spacing: -0.025em;
-}
-
-.home-section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 62px;
-  height: 3px;
-  border-radius: 999px;
-  background:
-    linear-gradient(
-      90deg,
-      var(--home-blue),
-      rgba(72, 169, 197, 0.14)
-    );
-}
-
-.home-research-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.home-research-card {
-  position: relative;
-  min-height: 220px;
-  padding: 1.35rem 1.4rem;
-  overflow: hidden;
-  border: 1px solid var(--home-border);
-  border-radius: 17px;
-  background: #ffffff;
-  box-shadow:
-    0 7px 24px rgba(40, 70, 90, 0.045);
-}
-
-.home-research-card-number {
-  color: rgba(72, 169, 197, 0.62);
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.home-research-card h3 {
-  margin: 0.55rem 0;
-  color: var(--home-navy);
-  font-size: 1rem;
-}
-
-.home-research-card p {
-  color: var(--home-text);
-  font-size: 0.82rem;
-  line-height: 1.6;
-}
-
-.home-tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.home-tag {
-  padding: 4px 10px;
-  color: var(--home-text);
-  border: 1px solid #dce7ec;
-  border-radius: 999px;
-  background: #ffffff;
-  font-size: 0.6rem;
-  font-weight: 650;
-}
-
-.home-beyond-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.home-beyond-copy p {
-  color: var(--home-text);
-  font-size: 0.82rem;
-  line-height: 1.65;
-}
-
-.home-interest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.home-interest-card {
-  padding: 1rem 0.7rem;
-  text-align: center;
-  border: 1px solid var(--home-border);
-  border-radius: 12px;
-  background: #ffffff;
-  color: var(--home-navy);
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-@media (max-width: 900px) {
-  .home-research-grid,
-  .home-beyond-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .home-interest-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 </style>
 
-
 <div class="home-welcome">
+
+  <!-- Hero -->
 
   <section class="home-hero">
 
@@ -777,8 +1139,8 @@ html[data-theme="dark"] .home-mesh-cross {
 
       <p class="home-description">
         I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
-        and a member of both the Sustainable &amp; Intelligent Seafood Bioprocessing Laboratory
-        and the Biopolymer Engineering Laboratory.
+        and a member of both the Sustainable &amp; Intelligent
+        Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
       </p>
 
       <p class="home-description">
@@ -821,7 +1183,16 @@ html[data-theme="dark"] .home-mesh-cross {
             <rect width="700" height="400" fill="url(#meshFade)"/>
           </mask>
 
+          <filter id="nodeGlow" x="-300%" y="-300%" width="600%" height="600%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+
         </defs>
+
 
         <g mask="url(#meshMask)">
 
@@ -842,13 +1213,37 @@ html[data-theme="dark"] .home-mesh-cross {
           <path class="home-mesh-line" d="M-30 287 C-55 220 36 80 160 101 S350 193 466 152 S622 93 760 166"/>
           <path class="home-mesh-line" d="M-20 280 C-60 210 33 72 158 94 S351 185 468 145 S626 87 760 160"/>
 
-          <path class="home-mesh-line home-mesh-line--strong" d="M-120 345 C20 305 84 150 180 162 S330 266 448 208 S580 132 760 207"/>
-          <path class="home-mesh-line home-mesh-line--strong" d="M-95 325 C20 282 85 126 172 142 S337 245 456 192 S590 115 760 195"/>
+          <path
+            class="home-mesh-line home-mesh-line--strong"
+            d="M-120 345 C20 305 84 150 180 162 S330 266 448 208 S580 132 760 207"
+          />
 
-          <path class="home-mesh-line home-mesh-line--gold" d="M40 338 C178 295 230 232 334 238 S485 292 585 231 S681 195 760 221"/>
-          <path class="home-mesh-line home-mesh-line--gold" d="M20 349 C175 308 232 244 336 250 S487 304 587 243 S684 207 760 233"/>
-          <path class="home-mesh-line home-mesh-line--gold" d="M0 360 C172 321 234 256 338 262 S489 316 589 255 S687 219 760 245"/>
-          <path class="home-mesh-line home-mesh-line--gold" d="M-20 371 C169 334 236 268 340 274 S491 328 591 267 S690 231 760 257"/>
+          <path
+            class="home-mesh-line home-mesh-line--strong"
+            d="M-95 325 C20 282 85 126 172 142 S337 245 456 192 S590 115 760 195"
+          />
+
+
+          <path
+            class="home-mesh-line home-mesh-line--gold"
+            d="M40 338 C178 295 230 232 334 238 S485 292 585 231 S681 195 760 221"
+          />
+
+          <path
+            class="home-mesh-line home-mesh-line--gold"
+            d="M20 349 C175 308 232 244 336 250 S487 304 587 243 S684 207 760 233"
+          />
+
+          <path
+            class="home-mesh-line home-mesh-line--gold"
+            d="M0 360 C172 321 234 256 338 262 S489 316 589 255 S687 219 760 245"
+          />
+
+          <path
+            class="home-mesh-line home-mesh-line--gold"
+            d="M-20 371 C169 334 236 268 340 274 S491 328 591 267 S690 231 760 257"
+          />
+
 
           <path class="home-mesh-cross" d="M70 390 C128 316 124 235 160 101"/>
           <path class="home-mesh-cross" d="M95 394 C150 320 145 226 177 112"/>
@@ -873,15 +1268,18 @@ html[data-theme="dark"] .home-mesh-cross {
           <path class="home-mesh-cross" d="M570 400 C568 394 597 281 598 207"/>
           <path class="home-mesh-cross" d="M595 400 C590 396 621 276 621 199"/>
 
+
           <path class="home-network-line" d="M205 47 V150"/>
           <path class="home-network-line home-network-line--gold" d="M487 112 V213"/>
           <path class="home-network-line" d="M162 273 V355"/>
           <path class="home-network-line home-network-line--purple" d="M505 305 V374"/>
 
+
           <circle class="home-network-dot" cx="205" cy="150" r="6"/>
-          <circle class="home-network-dot home-network-dot--gold" cx="487" cy="213" r="6"/>
+          <circle class="home-network-dot--gold" cx="487" cy="213" r="6"/>
           <circle class="home-network-dot" cx="162" cy="273" r="5"/>
-          <circle class="home-network-dot home-network-dot--purple" cx="505" cy="305" r="6"/>
+          <circle class="home-network-dot--purple" cx="505" cy="305" r="6"/>
+
 
           <circle class="home-particle" cx="84" cy="192" r="3"/>
           <circle class="home-particle" cx="122" cy="224" r="2"/>
@@ -907,186 +1305,211 @@ html[data-theme="dark"] .home-mesh-cross {
 
       </svg>
 
+
       <div class="home-science-label home-science-label--01">
         <span class="home-science-label-number">01</span>
-        <span class="home-science-label-title">SUSTAINABLE AQUACULTURE</span>
-        <span class="home-science-label-meta">Health · Quality · Sustainability</span>
+        <span class="home-science-label-title">
+          SUSTAINABLE AQUACULTURE
+        </span>
+        <span class="home-science-label-meta">
+          Health · Quality · Sustainability
+        </span>
       </div>
+
 
       <div class="home-science-label home-science-label--02">
         <span class="home-science-label-number">02</span>
-        <span class="home-science-label-title">ORAL DELIVERY SYSTEMS</span>
-        <span class="home-science-label-meta">Vaccines · Probiotics · Bioactives</span>
+        <span class="home-science-label-title">
+          ORAL DELIVERY SYSTEMS
+        </span>
+        <span class="home-science-label-meta">
+          Vaccines · Probiotics · Bioactives
+        </span>
       </div>
+
 
       <div class="home-science-label home-science-label--03">
         <span class="home-science-label-number">03</span>
-        <span class="home-science-label-title">PASSIVE COOLING MATERIALS</span>
-        <span class="home-science-label-meta">Biopolymers · Radiative Cooling</span>
+        <span class="home-science-label-title">
+          PASSIVE COOLING MATERIALS
+        </span>
+        <span class="home-science-label-meta">
+          Biopolymers · Radiative Cooling
+        </span>
       </div>
+
 
       <div class="home-science-label home-science-label--04">
         <span class="home-science-label-number">04</span>
-        <span class="home-science-label-title">SEAFOOD SCIENCE</span>
-        <span class="home-science-label-meta">Quality · Flavor · Preservation</span>
+        <span class="home-science-label-title">
+          SEAFOOD SCIENCE
+        </span>
+        <span class="home-science-label-meta">
+          Quality · Flavor · Preservation
+        </span>
       </div>
 
     </div>
 
   </section>
 
+
   <!-- Current research -->
 
   <section class="home-section">
 
-<div class="home-section-header">
-  <h2 class="home-section-heading">What I Am Working On 🧑‍🔬</h2>
-</div>
+    <div class="home-section-header">
+      <h2 class="home-section-heading">What I Am Working On 🧑‍🔬</h2>
+    </div>
 
-<div class="home-research-grid">
+    <div class="home-research-grid">
 
-  <!-- Passive cooling -->
+      <!-- Passive cooling -->
 
-  <article class="home-research-card home-research-card--passive-cooling">
+      <article class="home-research-card home-research-card--passive-cooling">
 
-<div class="home-card-header">
+        <div class="home-card-header">
 
-  <div>
-    <span class="home-card-number">RESEARCH 01</span>
-    <h3 class="home-card-title">Passive Cooling Materials</h3>
-  </div>
+          <div>
+            <span class="home-card-number">RESEARCH 01</span>
+            <h3 class="home-card-title">Passive Cooling Materials</h3>
+          </div>
 
-</div>
+        </div>
 
-<p class="home-card-text">
-  Developing bio-based materials that provide electricity-free
-  temperature reduction for sustainable food preservation and
-  cold-chain management.
-</p>
+        <p class="home-card-text">
+          Developing bio-based materials that provide electricity-free
+          temperature reduction for sustainable food preservation and
+          cold-chain management.
+        </p>
 
-<div class="home-card-tags">
-  <span class="home-card-tag">Passive Cooling</span>
-  <span class="home-card-tag">Food Packaging</span>
-  <span class="home-card-tag">Food Preservation</span>
-</div>
+        <div class="home-card-tags">
+          <span class="home-card-tag">Passive Cooling</span>
+          <span class="home-card-tag">Food Packaging</span>
+          <span class="home-card-tag">Food Preservation</span>
+        </div>
 
-  </article>
+      </article>
 
-<!-- Oral delivery -->
 
-  <article class="home-research-card home-research-card--oral-delivery">
+      <!-- Oral delivery -->
 
-<div class="home-card-header">
+      <article class="home-research-card home-research-card--oral-delivery">
 
-  <div>
-    <span class="home-card-number">RESEARCH 02</span>
-    <h3 class="home-card-title">Oral Delivery Systems</h3>
-  </div>
+        <div class="home-card-header">
 
-</div>
+          <div>
+            <span class="home-card-number">RESEARCH 02</span>
+            <h3 class="home-card-title">Oral Delivery Systems</h3>
+          </div>
 
-<p class="home-card-text">
-  Developing PLGA-based delivery systems that protect vaccines and
-  immunostimulants during digestive transit and deliver them to
-  immune-responsive sites.
-</p>
+        </div>
 
-<div class="home-card-tags">
-  <span class="home-card-tag">PLGA-based Delivery</span>
-  <span class="home-card-tag">Oral Vaccines</span>
-  <span class="home-card-tag">Functional Aquafeeds</span>
-</div>
+        <p class="home-card-text">
+          Developing PLGA-based delivery systems that protect vaccines and
+          immunostimulants during digestive transit and deliver them to
+          immune-responsive sites.
+        </p>
 
-  </article>
+        <div class="home-card-tags">
+          <span class="home-card-tag">PLGA-based Delivery</span>
+          <span class="home-card-tag">Oral Vaccines</span>
+          <span class="home-card-tag">Functional Aquafeeds</span>
+        </div>
 
-</div>
+      </article>
+
+    </div>
 
   </section>
 
-  <!-- Beyond the laboratory -->
+    <!-- Beyond the laboratory -->
 
   <section class="home-section home-beyond-section">
 
-<div class="home-section-header">
-  <h2 class="home-section-heading">Beyond the Laboratory 🏃‍♂️‍➡️</h2>
+    <div class="home-section-header">
+      <h2 class="home-section-heading">Beyond the Laboratory 🏃‍♂️‍➡️</h2>
+    </div>
+
+    <div class="home-beyond-layout">
+
+      <div class="home-beyond-copy">
+
+        <p>
+          Outside of the laboratory, I enjoy traveling, hiking, photography,
+          watching movies, and exploring different genres of music.
+          Photography allows me to document landscapes, cultures, and everyday
+          moments while encouraging me to observe the world from different
+          perspectives.
+        </p>
+
+        <p>
+          These experiences help me maintain curiosity, creativity, and
+          balance—qualities that I also value in scientific research and
+          problem-solving.
+        </p>
+
+      </div>
+
+
+      <div class="home-interest-cloud" aria-label="Personal interests">
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M3 12h18"></path>
+            <path d="M12 3c3 3.5 3 14 0 18"></path>
+            <path d="M12 3c-3 3.5-3 14 0 18"></path>
+          </svg>
+          Travel
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
+          </svg>
+          Hiking
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="6" width="18" height="13" rx="2"></rect>
+            <circle cx="12" cy="12.5" r="3.5"></circle>
+            <path d="M8 6 9.2 4h5.6L16 6"></path>
+          </svg>
+          Photography
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m10 9 5 3-5 3Z"></path>
+          </svg>
+          Movies
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18V6l10-2v12"></path>
+            <circle cx="6.5" cy="18" r="2.5"></circle>
+            <circle cx="16.5" cy="16" r="2.5"></circle>
+          </svg>
+          Music
+        </span>
+
+        <span class="home-interest">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 10a4 4 0 0 1 6-4 4 4 0 0 1 6 4"></path>
+            <path d="M5 10h14l-2 10H7L5 10Z"></path>
+            <path d="M10 13v4M14 13v4"></path>
+          </svg>
+          Baking
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
 </div>
-
-<div class="home-beyond-layout">
-
-  <div class="home-beyond-copy">
-
-<p>
-  Outside of the laboratory, I enjoy traveling, hiking, photography,
-  watching movies, and exploring different genres of music.
-  Photography allows me to document landscapes, cultures, and everyday
-  moments while encouraging me to observe the world from different
-  perspectives.
-</p>
-
-<p>
-  These experiences help me maintain curiosity, creativity, and
-  balance—qualities that I also value in scientific research and
-  problem-solving.
-</p>
-
-  </div>
-
-  <div class="home-interest-cloud" aria-label="Personal interests">
-
-<span class="home-interest">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <circle cx="12" cy="12" r="9"></circle>
-    <path d="M3 12h18"></path>
-    <path d="M12 3c3 3.5 3 14 0 18"></path>
-    <path d="M12 3c-3 3.5-3 14 0 18"></path>
-  </svg>
-  Travel
-</span>
-
-<span class="home-interest">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
-  </svg>
-  Hiking
-</span>
-
-<span class="home-interest">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <rect x="3" y="6" width="18" height="13" rx="2"></rect>
-    <circle cx="12" cy="12.5" r="3.5"></circle>
-    <path d="M8 6 9.2 4h5.6L16 6"></path>
-  </svg>
-  Photography
-</span>
-
-<span class="home-interest">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-    <path d="m10 9 5 3-5 3Z"></path>
-  </svg>
-  Movies
-</span>
-
-<span class="home-interest">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M9 18V6l10-2v12"></path>
-    <circle cx="6.5" cy="18" r="2.5"></circle>
-    <circle cx="16.5" cy="16" r="2.5"></circle>
-  </svg>
-  Music
-</span>
-
-<span class="home-interest">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M6 10a4 4 0 0 1 6-4 4 4 0 0 1 6 4"></path>
-    <path d="M5 10h14l-2 10H7L5 10Z"></path>
-    <path d="M10 13v4M14 13v4"></path>
-  </svg>
-  Baking
-</span>
-
-  </div>
-</div>
-
-</div>
-
