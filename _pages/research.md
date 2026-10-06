@@ -39,12 +39,7 @@ author_profile: true
    ================================================== */
 
 .research-intro {
-  margin: 0 0 4rem;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
+  margin: 0 0 2rem;
 }
 
 
@@ -962,7 +957,7 @@ html[data-theme="dark"]
 @media (max-width: 900px) {
 
   .research-intro {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
   }
 
   .research-intro-heading {
@@ -1019,7 +1014,7 @@ html[data-theme="dark"]
   }
 
   .research-intro {
-    margin-bottom: 3rem;
+    margin-bottom: 1.75rem;
   }
 
   .research-intro-heading {
