@@ -17,14 +17,9 @@ author_profile: true
 }
 
 .experience-entry {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  column-gap: 36px;
-
   width: 100%;
-  margin: 0 0 2.4rem;
-  padding: 0 0 2.4rem;
-
+  margin: 0 0 2.5rem;
+  padding: 0 0 2.5rem;
   border-bottom: 1px solid #e3e8ec;
 }
 
@@ -36,31 +31,11 @@ author_profile: true
 
 
 /* =========================
-   Date
+   Position
    ========================= */
-
-.experience-date {
-  margin: 4px 0 0;
-
-  color: #b17622;
-  font-size: 0.84rem;
-  font-weight: 700;
-  line-height: 1.5;
-
-  white-space: nowrap;
-}
-
-
-/* =========================
-   Main content
-   ========================= */
-
-.experience-content {
-  min-width: 0;
-}
 
 .experience-position {
-  margin: 0 0 5px;
+  margin: 0 0 6px;
 
   color: #253248;
   font-size: 1.2rem;
@@ -70,16 +45,16 @@ author_profile: true
 
 
 /* =========================
-   Organization
+   Metadata
    ========================= */
 
-.experience-organization {
+.experience-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 5px 9px;
 
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.3rem;
 
   color: #7a8491;
   font-size: 0.9rem;
@@ -116,18 +91,22 @@ author_profile: true
   width: 14px;
   height: 14px;
   flex: 0 0 auto;
-
   stroke: currentColor;
+}
+
+.experience-date {
+  color: #b17622;
+  font-weight: 700;
 }
 
 
 /* =========================
-   Section labels
+   Content sections
    ========================= */
 
 .experience-section {
-  max-width: 690px;
-  margin-top: 1.1rem;
+  max-width: 760px;
+  margin-top: 1.15rem;
 }
 
 .experience-section:first-of-type {
@@ -137,8 +116,8 @@ author_profile: true
 .experience-label {
   margin: 0 0 0.45rem;
 
-  color: #344258;
-  font-size: 0.88rem;
+  color: #566274;
+  font-size: 0.82rem;
   font-weight: 700;
   line-height: 1.4;
 }
@@ -156,9 +135,8 @@ author_profile: true
 }
 
 .experience-responsibilities li {
-  margin-bottom: 0.38rem;
-  padding-left: 0.1rem;
-
+  margin-bottom: 0.4rem;
+  padding-left: 0.08rem;
   line-height: 1.6;
 }
 
@@ -191,11 +169,7 @@ html[data-theme="dark"] .experience-position {
   color: #f2f5f8;
 }
 
-html[data-theme="dark"] .experience-date {
-  color: #e0ad60;
-}
-
-html[data-theme="dark"] .experience-organization,
+html[data-theme="dark"] .experience-meta,
 html[data-theme="dark"] .experience-location {
   color: #b9c2cc;
 }
@@ -212,8 +186,12 @@ html[data-theme="dark"] .experience-divider {
   color: #747d87;
 }
 
+html[data-theme="dark"] .experience-date {
+  color: #e0ad60;
+}
+
 html[data-theme="dark"] .experience-label {
-  color: #e3e8ee;
+  color: #aeb8c4;
 }
 
 html[data-theme="dark"] .experience-responsibilities,
@@ -233,28 +211,19 @@ html[data-theme="dark"] .experience-gained {
   }
 
   .experience-entry {
-    display: block;
-
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
 
-  .experience-date {
-    margin: 0 0 7px;
-
-    font-size: 0.8rem;
-  }
-
   .experience-position {
-    margin-bottom: 5px;
-
+    margin-bottom: 6px;
     font-size: 1.12rem;
   }
 
-  .experience-organization {
+  .experience-meta {
+    gap: 4px 7px;
     margin-bottom: 1.05rem;
-
-    font-size: 0.86rem;
+    font-size: 0.84rem;
   }
 
   .experience-section {
@@ -262,7 +231,7 @@ html[data-theme="dark"] .experience-gained {
   }
 
   .experience-label {
-    font-size: 0.86rem;
+    font-size: 0.8rem;
   }
 
   .experience-responsibilities li,
@@ -284,95 +253,93 @@ html[data-theme="dark"] .experience-gained {
 
   <section class="experience-entry">
 
-    <div class="experience-date">
-      Nov 2024 – Jul 2025
+    <h2 class="experience-position">
+      Assistant Editor
+    </h2>
+
+    <p class="experience-meta">
+
+      <a
+        class="experience-company"
+        href="https://mdpi.cn/about/wuhan"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        MDPI
+      </a>
+
+      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span class="experience-location">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="2.5"></circle>
+        </svg>
+
+        Wuhan, Hubei, China
+
+      </span>
+
+      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span class="experience-date">
+        Nov 2024 – Jul 2025
+      </span>
+
+    </p>
+
+
+    <!-- Responsibilities -->
+
+    <div class="experience-section">
+
+      <h3 class="experience-label">
+        Responsibilities
+      </h3>
+
+      <ul class="experience-responsibilities">
+
+        <li>
+          Managed the peer-review and editorial workflow of submitted
+          manuscripts from initial screening through final publication.
+        </li>
+
+        <li>
+          Communicated with authors, reviewers, and academic editors to
+          facilitate timely and transparent editorial decisions.
+        </li>
+
+        <li>
+          Evaluated manuscripts for journal scope, formatting requirements,
+          research integrity, and adherence to editorial policies.
+        </li>
+
+      </ul>
+
     </div>
 
-    <div class="experience-content">
 
-      <h2 class="experience-position">
-        Assistant Editor
-      </h2>
+    <!-- What I Gained -->
 
-      <p class="experience-organization">
+    <div class="experience-section">
 
-        <a
-          class="experience-company"
-          href="https://mdpi.cn/about/wuhan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          MDPI
-        </a>
+      <h3 class="experience-label">
+        What I Gained
+      </h3>
 
-        <span class="experience-divider" aria-hidden="true">·</span>
-
-        <span class="experience-location">
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-            <circle cx="12" cy="10" r="2.5"></circle>
-          </svg>
-
-          Wuhan, Hubei, China
-
-        </span>
-
+      <p class="experience-gained">
+        Developed a deeper understanding of scholarly publishing and the
+        peer-review process while strengthening my scientific communication,
+        critical evaluation, and editorial judgment.
       </p>
-
-
-      <!-- Responsibilities -->
-
-      <div class="experience-section">
-
-        <h3 class="experience-label">
-          Responsibilities
-        </h3>
-
-        <ul class="experience-responsibilities">
-
-          <li>
-            Managed the peer-review and editorial workflow of submitted
-            manuscripts from initial screening through final publication.
-          </li>
-
-          <li>
-            Communicated with authors, reviewers, and academic editors to
-            facilitate timely and transparent editorial decisions.
-          </li>
-
-          <li>
-            Evaluated manuscripts for journal scope, formatting requirements,
-            research integrity, and adherence to editorial policies.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- What I Gained -->
-
-      <div class="experience-section">
-
-        <h3 class="experience-label">
-          What I Gained
-        </h3>
-
-        <p class="experience-gained">
-          Developed a deeper understanding of scholarly publishing and the
-          peer-review process, while strengthening my scientific communication,
-          critical evaluation, and professional coordination skills.
-        </p>
-
-      </div>
 
     </div>
 
@@ -385,97 +352,95 @@ html[data-theme="dark"] .experience-gained {
 
   <section class="experience-entry">
 
-    <div class="experience-date">
-      Jul 2024 – Sep 2024
+    <h2 class="experience-position">
+      Project Manager
+    </h2>
+
+    <p class="experience-meta">
+
+      <a
+        class="experience-company"
+        href="https://www.ivcinc.net/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        IVC Nutrition Corporation
+      </a>
+
+      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span class="experience-location">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="2.5"></circle>
+        </svg>
+
+        Suzhou, Jiangsu, China
+
+      </span>
+
+      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span class="experience-date">
+        Jul 2024 – Sep 2024
+      </span>
+
+    </p>
+
+
+    <!-- Responsibilities -->
+
+    <div class="experience-section">
+
+      <h3 class="experience-label">
+        Responsibilities
+      </h3>
+
+      <ul class="experience-responsibilities">
+
+        <li>
+          Managed cross-border dietary supplement product development
+          projects with clients and internal marketing and sales teams.
+        </li>
+
+        <li>
+          Conducted market research and literature reviews to identify
+          industry trends, consumer preferences, and emerging ingredients.
+        </li>
+
+        <li>
+          Translated client requirements into product specifications and
+          monitored project progress from initial concept through order
+          fulfillment.
+        </li>
+
+      </ul>
+
     </div>
 
-    <div class="experience-content">
 
-      <h2 class="experience-position">
-        Project Manager
-      </h2>
+    <!-- What I Gained -->
 
-      <p class="experience-organization">
+    <div class="experience-section">
 
-        <a
-          class="experience-company"
-          href="https://www.ivcinc.net/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          IVC Nutrition Corporation
-        </a>
+      <h3 class="experience-label">
+        What I Gained
+      </h3>
 
-        <span class="experience-divider" aria-hidden="true">·</span>
-
-        <span class="experience-location">
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-            <circle cx="12" cy="10" r="2.5"></circle>
-          </svg>
-
-          Suzhou, Jiangsu, China
-
-        </span>
-
+      <p class="experience-gained">
+        Gained practical experience in translating scientific and market
+        information into product development decisions while strengthening
+        my project management, cross-functional communication, and
+        understanding of dietary supplement commercialization.
       </p>
-
-
-      <!-- Responsibilities -->
-
-      <div class="experience-section">
-
-        <h3 class="experience-label">
-          Responsibilities
-        </h3>
-
-        <ul class="experience-responsibilities">
-
-          <li>
-            Coordinated cross-border dietary supplement product development
-            projects with clients and internal marketing and sales teams.
-          </li>
-
-          <li>
-            Conducted market research and literature reviews to identify
-            industry trends, consumer preferences, and emerging ingredients.
-          </li>
-
-          <li>
-            Translated client requirements into product specifications and
-            monitored project progress from initial concept through order
-            fulfillment.
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- What I Gained -->
-
-      <div class="experience-section">
-
-        <h3 class="experience-label">
-          What I Gained
-        </h3>
-
-        <p class="experience-gained">
-          Gained practical experience in translating scientific and market
-          information into product development decisions, while strengthening
-          my project coordination, cross-functional communication, and
-          understanding of dietary supplement commercialization.
-        </p>
-
-      </div>
 
     </div>
 
