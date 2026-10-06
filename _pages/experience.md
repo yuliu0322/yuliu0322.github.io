@@ -392,7 +392,7 @@ html[data-theme="dark"] .experience-gained {
     <div class="experience-content">
 
       <h2 class="experience-position">
-        Project Coordinator
+        Project Manager
       </h2>
 
       <p class="experience-organization">
