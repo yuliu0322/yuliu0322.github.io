@@ -1312,7 +1312,7 @@ html[data-theme="dark"] .home-research-card:hover {
           SUSTAINABLE AQUACULTURE
         </span>
         <span class="home-science-label-meta">
-          Health · Quality · Sustainability
+          Environment · Health · Sustainability
         </span>
       </div>
 
@@ -1334,7 +1334,7 @@ html[data-theme="dark"] .home-research-card:hover {
           PASSIVE COOLING MATERIALS
         </span>
         <span class="home-science-label-meta">
-          Biopolymers · Radiative Cooling
+          Passive Radiative and Evaporative Cooling
         </span>
       </div>
 
