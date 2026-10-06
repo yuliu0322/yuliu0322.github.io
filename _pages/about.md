@@ -1170,230 +1170,1012 @@ html[data-theme="dark"] .home-research-card:hover {
 
   <!-- Hero -->
 
-  <section class="home-hero">
+<section class="home-hero">
 
-    <div class="home-hero-copy">
+  <style>
+    .home-hero {
+      position: relative;
+      max-width: 1080px;
+      min-height: 390px;
+      margin: 0 0 2.8rem;
+      padding: 2.7rem 2.6rem 2.4rem;
+      overflow: hidden;
+      border: 1px solid #d8e9ef;
+      border-radius: 22px;
+      background:
+        radial-gradient(
+          circle at 82% 18%,
+          rgba(72, 169, 197, 0.09),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 91% 87%,
+          rgba(219, 166, 85, 0.07),
+          transparent 24%
+        ),
+        linear-gradient(
+          135deg,
+          #f8fcfd 0%,
+          #ffffff 48%,
+          #fffdf9 100%
+        );
+      box-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
+    }
 
-      <h1 class="home-greeting">
-        Welcome, I’m
-        <span class="home-greeting-highlight">Yu Liu</span>.
-      </h1>
+    .home-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(
+          rgba(72, 169, 197, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(72, 169, 197, 0.035) 1px,
+          transparent 1px
+        );
+      background-size: 42px 42px;
+      -webkit-mask-image:
+        linear-gradient(
+          90deg,
+          transparent 32%,
+          rgba(0, 0, 0, 0.25) 50%,
+          #000 100%
+        );
+      mask-image:
+        linear-gradient(
+          90deg,
+          transparent 32%,
+          rgba(0, 0, 0, 0.25) 50%,
+          #000 100%
+        );
+    }
 
-      <p class="home-description">
-        I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
-        and a member of both the Sustainable &amp; Intelligent
-        Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
-      </p>
+    .home-hero::after {
+      content: "";
+      position: absolute;
+      right: -8%;
+      bottom: -35%;
+      z-index: 0;
+      width: 70%;
+      height: 75%;
+      pointer-events: none;
+      background:
+        radial-gradient(
+          ellipse,
+          rgba(72, 169, 197, 0.08),
+          transparent 67%
+        );
+      filter: blur(18px);
+    }
 
-      <p class="home-description">
-        My work connects food science, aquaculture, biomaterials, and food
-        engineering to develop practical solutions for aquatic animal health,
-        seafood quality, and sustainable food preservation.
-      </p>
 
-      <a class="home-research-link" href="/research/">
-        <span>Learn more about my research</span>
-        <span class="home-research-link-arrow">→</span>
-      </a>
+    /* Hero copy */
 
-    </div>
+    .home-hero-copy {
+      position: relative;
+      z-index: 5;
+      width: 49%;
+      min-width: 0;
+    }
+
+    .home-greeting {
+      max-width: none;
+      margin: 0 0 1.15rem;
+      color: var(--home-navy);
+      font-size: clamp(2rem, 3.1vw, 2.7rem);
+      font-weight: 760;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .home-greeting-highlight {
+      position: relative;
+      display: inline-block;
+      color: var(--home-blue-dark);
+    }
+
+    .home-greeting-highlight::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      height: 4px;
+      border-radius: 999px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(219, 166, 85, 0.62),
+          rgba(219, 166, 85, 0.24)
+        );
+      transform: rotate(-1deg);
+    }
+
+    .home-description {
+      max-width: 570px;
+      margin: 0;
+      color: var(--home-text);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .home-description + .home-description {
+      margin-top: 1rem;
+    }
+
+    .home-research-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 1.25rem;
+      padding: 10px 18px;
+      color: var(--home-blue-dark) !important;
+      border: 1px solid rgba(72, 169, 197, 0.28);
+      border-radius: 999px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(235, 249, 252, 0.9)
+        );
+      box-shadow:
+        0 7px 20px rgba(43, 107, 126, 0.06);
+      font-size: 0.72rem;
+      font-weight: 720;
+      text-decoration: none !important;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+    }
+
+    .home-research-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(72, 169, 197, 0.48);
+      box-shadow:
+        0 11px 25px rgba(43, 107, 126, 0.11);
+    }
+
+    .home-research-link-arrow {
+      font-size: 1rem;
+      line-height: 1;
+    }
 
 
-    <div
-      class="home-science-visual"
-      role="img"
-      aria-label="Scientific visualization of interconnected research areas"
+    /* Scientific visual */
+
+    .home-science-visual {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 35%;
+      width: 65%;
+      pointer-events: none;
+
+      --pointer-x: 0px;
+      --pointer-y: 0px;
+      --pointer-rotate-x: 0deg;
+      --pointer-rotate-y: 0deg;
+
+      transform:
+        perspective(1000px)
+        translate3d(
+          var(--pointer-x),
+          var(--pointer-y),
+          0
+        )
+        rotateX(var(--pointer-rotate-x))
+        rotateY(var(--pointer-rotate-y));
+
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transition: transform 180ms ease-out;
+      will-change: transform;
+    }
+
+    .home-science-svg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      animation: home-mesh-float 7s ease-in-out infinite;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+
+    /* Mesh */
+
+    .home-mesh-line {
+      fill: none;
+      stroke: #63c6e2;
+      stroke-width: 0.72;
+      opacity: 0.19;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .home-mesh-line--strong {
+      stroke: #34b4da;
+      stroke-width: 1.05;
+      opacity: 0.42;
+    }
+
+    .home-mesh-line--gold {
+      stroke: #e4ae55;
+      stroke-width: 0.8;
+      opacity: 0.17;
+    }
+
+    .home-mesh-cross {
+      fill: none;
+      stroke: #63c6e2;
+      stroke-width: 0.65;
+      opacity: 0.12;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .home-network-line {
+      fill: none;
+      stroke: #59bad7;
+      stroke-width: 0.85;
+      stroke-dasharray: 3 5;
+      opacity: 0.38;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .home-network-line--gold {
+      stroke: #dfaa50;
+    }
+
+    .home-network-line--purple {
+      stroke: #8583c9;
+    }
+
+    .home-network-dot {
+      fill: #38b6da;
+      opacity: 0.9;
+    }
+
+    .home-network-dot--gold {
+      fill: #e0a94d;
+    }
+
+    .home-network-dot--purple {
+      fill: #8583c9;
+    }
+
+    .home-particle {
+      fill: #4ebbd9;
+      opacity: 0.34;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation:
+        home-science-particle-float
+        5.5s
+        ease-in-out
+        infinite;
+    }
+
+    .home-particle-ring {
+      fill: none;
+      stroke: #4ebbd9;
+      stroke-width: 1;
+      opacity: 0.23;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation:
+        home-ring-float
+        6.8s
+        ease-in-out
+        infinite;
+    }
+
+
+    /* Topic labels */
+
+    .home-science-label {
+      position: absolute;
+      z-index: 4;
+      color: var(--home-navy);
+      line-height: 1.15;
+      animation:
+        home-topic-float
+        6.5s
+        ease-in-out
+        infinite;
+      will-change: transform;
+    }
+
+    .home-science-label-number {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--label-color);
+      font-size: 1.35rem;
+      font-weight: 820;
+      letter-spacing: -0.04em;
+    }
+
+    .home-science-label-title {
+      display: block;
+      color: var(--home-navy);
+      font-size: 0.59rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .home-science-label-meta {
+      display: block;
+      margin-top: 3px;
+      color: var(--home-muted);
+      font-size: 0.48rem;
+      font-weight: 520;
+      white-space: nowrap;
+    }
+
+    .home-science-label--01 {
+      top: 7.5%;
+      left: 31%;
+      --label-color: #16aacd;
+      animation-duration: 6.8s;
+      animation-delay: -0.5s;
+    }
+
+    .home-science-label--02 {
+      top: 24%;
+      right: 5.5%;
+      --label-color: #dea84d;
+      animation-duration: 7.4s;
+      animation-delay: -2.1s;
+    }
+
+    .home-science-label--03 {
+      left: 25%;
+      bottom: 13%;
+      --label-color: #16a6ca;
+      animation-duration: 6.2s;
+      animation-delay: -3.6s;
+    }
+
+    .home-science-label--04 {
+      right: 4.5%;
+      bottom: 6.5%;
+      --label-color: #7f7cc7;
+      animation-duration: 7s;
+      animation-delay: -1.4s;
+    }
+
+
+    /* Node animation */
+
+    .home-network-dot,
+    .home-network-dot--gold,
+    .home-network-dot--purple {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation:
+        home-node-pulse
+        3.6s
+        ease-in-out
+        infinite;
+    }
+
+    .home-network-dot--gold {
+      animation-delay: -1.1s;
+    }
+
+    .home-network-dot--purple {
+      animation-delay: -2.2s;
+    }
+
+
+    /* Motion */
+
+    @keyframes home-mesh-float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    @keyframes home-topic-float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    @keyframes home-node-pulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.82;
+      }
+
+      50% {
+        transform: scale(1.35);
+        opacity: 1;
+      }
+    }
+
+    @keyframes home-science-particle-float {
+      0%,
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.25;
+      }
+
+      50% {
+        transform: translate(2px, -7px);
+        opacity: 0.55;
+      }
+    }
+
+    @keyframes home-ring-float {
+      0%,
+      100% {
+        transform: translate(0, 0);
+        opacity: 0.18;
+      }
+
+      50% {
+        transform: translate(-2px, -5px);
+        opacity: 0.35;
+      }
+    }
+
+
+    /* Responsive */
+
+    @media (max-width: 1050px) {
+      .home-hero-copy {
+        width: 52%;
+      }
+
+      .home-science-visual {
+        left: 41%;
+        width: 59%;
+      }
+
+      .home-greeting {
+        font-size: clamp(1.9rem, 3vw, 2.45rem);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .home-hero {
+        min-height: auto;
+        padding: 2rem 1.7rem 1.5rem;
+      }
+
+      .home-hero-copy {
+        width: 100%;
+      }
+
+      .home-greeting {
+        white-space: normal;
+      }
+
+      .home-description {
+        max-width: 100%;
+      }
+
+      .home-science-visual {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        width: calc(100% + 1rem);
+        height: 300px;
+        margin: 1.2rem -0.5rem -0.4rem;
+        transform: none !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .home-hero {
+        padding: 1.6rem 1.25rem 1.25rem;
+        border-radius: 17px;
+      }
+
+      .home-greeting {
+        font-size: 1.75rem;
+      }
+
+      .home-description {
+        font-size: 0.9rem;
+        line-height: 1.7;
+      }
+
+      .home-science-visual {
+        height: 275px;
+      }
+
+      .home-science-label-title {
+        font-size: 0.5rem;
+      }
+
+      .home-science-label-meta {
+        font-size: 0.43rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .home-science-visual {
+        transform: none !important;
+        transition: none !important;
+      }
+
+      .home-science-svg,
+      .home-science-label,
+      .home-network-dot,
+      .home-network-dot--gold,
+      .home-network-dot--purple,
+      .home-particle,
+      .home-particle-ring {
+        animation: none !important;
+      }
+    }
+
+    html[data-theme="dark"] .home-hero {
+      border-color: #4b5962;
+      background:
+        radial-gradient(
+          circle at 82% 18%,
+          rgba(101, 194, 221, 0.1),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #2d3940,
+          #30363c
+        );
+    }
+
+    html[data-theme="dark"] .home-research-link {
+      background: rgba(52, 58, 64, 0.92);
+    }
+  </style>
+
+
+  <div class="home-hero-copy">
+
+    <h1 class="home-greeting">
+      Welcome, I’m
+      <span class="home-greeting-highlight">Yu Liu</span>.
+    </h1>
+
+    <p class="home-description">
+      I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
+      and a member of both the Sustainable &amp; Intelligent
+      Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
+    </p>
+
+    <p class="home-description">
+      My work connects food science, aquaculture, biomaterials, and food
+      engineering to develop practical solutions for aquatic animal health,
+      seafood quality, and sustainable food preservation.
+    </p>
+
+    <a class="home-research-link" href="/research/">
+      <span>Learn more about my research</span>
+      <span class="home-research-link-arrow">→</span>
+    </a>
+
+  </div>
+
+
+  <div
+    class="home-science-visual"
+    role="img"
+    aria-label="Scientific visualization of interconnected research areas"
+  >
+
+    <svg
+      class="home-science-svg"
+      viewBox="0 0 700 400"
+      preserveAspectRatio="none"
+      aria-hidden="true"
     >
 
-      <svg
-        class="home-science-svg"
-        viewBox="0 0 700 400"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
+      <defs>
 
-        <defs>
+        <linearGradient id="meshFade" x1="0" x2="1">
+          <stop offset="0%" stop-color="white" stop-opacity="0"/>
+          <stop offset="18%" stop-color="white" stop-opacity="0.35"/>
+          <stop offset="42%" stop-color="white" stop-opacity="1"/>
+          <stop offset="100%" stop-color="white" stop-opacity="1"/>
+        </linearGradient>
 
-          <linearGradient id="meshFade" x1="0" x2="1">
-            <stop offset="0%" stop-color="white" stop-opacity="0"/>
-            <stop offset="18%" stop-color="white" stop-opacity="0.35"/>
-            <stop offset="42%" stop-color="white" stop-opacity="1"/>
-            <stop offset="100%" stop-color="white" stop-opacity="1"/>
-          </linearGradient>
-
-          <mask id="meshMask">
-            <rect width="700" height="400" fill="url(#meshFade)"/>
-          </mask>
-
-          <filter id="nodeGlow" x="-300%" y="-300%" width="600%" height="600%">
-            <feGaussianBlur stdDeviation="5" result="blur"/>
-            <feMerge>
-              <feMergeNode in="blur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-
-        </defs>
-
-
-        <g mask="url(#meshMask)">
-
-          <path class="home-mesh-line" d="M-170 385 C20 360 78 192 188 199 S336 305 438 250 S566 177 760 250"/>
-          <path class="home-mesh-line" d="M-160 378 C10 350 75 184 186 192 S337 297 440 243 S570 171 760 244"/>
-          <path class="home-mesh-line" d="M-150 371 C5 340 72 176 184 185 S338 289 442 236 S574 165 760 238"/>
-          <path class="home-mesh-line" d="M-140 364 C0 330 69 168 182 178 S339 281 444 229 S578 159 760 232"/>
-          <path class="home-mesh-line" d="M-130 357 C-5 320 66 160 180 171 S340 273 446 222 S582 153 760 226"/>
-          <path class="home-mesh-line" d="M-120 350 C-10 310 63 152 178 164 S341 265 448 215 S586 147 760 220"/>
-          <path class="home-mesh-line" d="M-110 343 C-15 300 60 144 176 157 S342 257 450 208 S590 141 760 214"/>
-          <path class="home-mesh-line" d="M-100 336 C-20 290 57 136 174 150 S343 249 452 201 S594 135 760 208"/>
-          <path class="home-mesh-line" d="M-90 329 C-25 280 54 128 172 143 S344 241 454 194 S598 129 760 202"/>
-          <path class="home-mesh-line" d="M-80 322 C-30 270 51 120 170 136 S345 233 456 187 S602 123 760 196"/>
-          <path class="home-mesh-line" d="M-70 315 C-35 260 48 112 168 129 S346 225 458 180 S606 117 760 190"/>
-          <path class="home-mesh-line" d="M-60 308 C-40 250 45 104 166 122 S347 217 460 173 S610 111 760 184"/>
-          <path class="home-mesh-line" d="M-50 301 C-45 240 42 96 164 115 S348 209 462 166 S614 105 760 178"/>
-          <path class="home-mesh-line" d="M-40 294 C-50 230 39 88 162 108 S349 201 464 159 S618 99 760 172"/>
-          <path class="home-mesh-line" d="M-30 287 C-55 220 36 80 160 101 S350 193 466 152 S622 93 760 166"/>
-          <path class="home-mesh-line" d="M-20 280 C-60 210 33 72 158 94 S351 185 468 145 S626 87 760 160"/>
-
-          <path
-            class="home-mesh-line home-mesh-line--strong"
-            d="M-120 345 C20 305 84 150 180 162 S330 266 448 208 S580 132 760 207"
+        <mask id="meshMask">
+          <rect
+            width="700"
+            height="400"
+            fill="url(#meshFade)"
           />
+        </mask>
 
-          <path
-            class="home-mesh-line home-mesh-line--strong"
-            d="M-95 325 C20 282 85 126 172 142 S337 245 456 192 S590 115 760 195"
-          />
+      </defs>
 
 
-          <path
-            class="home-mesh-line home-mesh-line--gold"
-            d="M40 338 C178 295 230 232 334 238 S485 292 585 231 S681 195 760 221"
-          />
+      <g mask="url(#meshMask)">
 
-          <path
-            class="home-mesh-line home-mesh-line--gold"
-            d="M20 349 C175 308 232 244 336 250 S487 304 587 243 S684 207 760 233"
-          />
+        <path
+          class="home-mesh-line"
+          d="M-170 385 C20 360 78 192 188 199 S336 305 438 250 S566 177 760 250"
+        />
 
-          <path
-            class="home-mesh-line home-mesh-line--gold"
-            d="M0 360 C172 321 234 256 338 262 S489 316 589 255 S687 219 760 245"
-          />
+        <path
+          class="home-mesh-line"
+          d="M-160 378 C10 350 75 184 186 192 S337 297 440 243 S570 171 760 244"
+        />
 
-          <path
-            class="home-mesh-line home-mesh-line--gold"
-            d="M-20 371 C169 334 236 268 340 274 S491 328 591 267 S690 231 760 257"
-          />
+        <path
+          class="home-mesh-line"
+          d="M-150 371 C5 340 72 176 184 185 S338 289 442 236 S574 165 760 238"
+        />
 
+        <path
+          class="home-mesh-line"
+          d="M-140 364 C0 330 69 168 182 178 S339 281 444 229 S578 159 760 232"
+        />
 
-          <path class="home-mesh-cross" d="M70 390 C128 316 124 235 160 101"/>
-          <path class="home-mesh-cross" d="M95 394 C150 320 145 226 177 112"/>
-          <path class="home-mesh-cross" d="M120 397 C170 326 169 220 195 124"/>
-          <path class="home-mesh-cross" d="M145 400 C192 330 191 220 214 139"/>
-          <path class="home-mesh-cross" d="M170 400 C214 336 215 224 235 156"/>
-          <path class="home-mesh-cross" d="M195 400 C236 340 239 230 256 174"/>
-          <path class="home-mesh-cross" d="M220 400 C258 344 263 237 278 191"/>
-          <path class="home-mesh-cross" d="M245 400 C281 348 286 245 300 207"/>
-          <path class="home-mesh-cross" d="M270 400 C303 352 310 253 322 219"/>
-          <path class="home-mesh-cross" d="M295 400 C325 356 333 260 345 229"/>
-          <path class="home-mesh-cross" d="M320 400 C347 360 357 267 368 235"/>
-          <path class="home-mesh-cross" d="M345 400 C369 364 381 273 391 239"/>
-          <path class="home-mesh-cross" d="M370 400 C392 368 405 278 414 241"/>
-          <path class="home-mesh-cross" d="M395 400 C414 372 429 282 437 242"/>
-          <path class="home-mesh-cross" d="M420 400 C436 376 453 286 460 240"/>
-          <path class="home-mesh-cross" d="M445 400 C458 380 477 288 483 237"/>
-          <path class="home-mesh-cross" d="M470 400 C480 384 501 289 506 233"/>
-          <path class="home-mesh-cross" d="M495 400 C502 388 525 289 529 228"/>
-          <path class="home-mesh-cross" d="M520 400 C524 390 549 288 552 222"/>
-          <path class="home-mesh-cross" d="M545 400 C546 392 573 285 575 215"/>
-          <path class="home-mesh-cross" d="M570 400 C568 394 597 281 598 207"/>
-          <path class="home-mesh-cross" d="M595 400 C590 396 621 276 621 199"/>
+        <path
+          class="home-mesh-line"
+          d="M-130 357 C-5 320 66 160 180 171 S340 273 446 222 S582 153 760 226"
+        />
 
+        <path
+          class="home-mesh-line"
+          d="M-120 350 C-10 310 63 152 178 164 S341 265 448 215 S586 147 760 220"
+        />
 
-          <path class="home-network-line" d="M205 47 V150"/>
-          <path class="home-network-line home-network-line--gold" d="M487 112 V213"/>
-          <path class="home-network-line" d="M162 273 V355"/>
-          <path class="home-network-line home-network-line--purple" d="M505 305 V374"/>
+        <path
+          class="home-mesh-line"
+          d="M-110 343 C-15 300 60 144 176 157 S342 257 450 208 S590 141 760 214"
+        />
 
+        <path
+          class="home-mesh-line"
+          d="M-100 336 C-20 290 57 136 174 150 S343 249 452 201 S594 135 760 208"
+        />
 
-          <circle class="home-network-dot" cx="205" cy="150" r="6"/>
-          <circle class="home-network-dot--gold" cx="487" cy="213" r="6"/>
-          <circle class="home-network-dot" cx="162" cy="273" r="5"/>
-          <circle class="home-network-dot--purple" cx="505" cy="305" r="6"/>
+        <path
+          class="home-mesh-line"
+          d="M-90 329 C-25 280 54 128 172 143 S344 241 454 194 S598 129 760 202"
+        />
 
+        <path
+          class="home-mesh-line"
+          d="M-80 322 C-30 270 51 120 170 136 S345 233 456 187 S602 123 760 196"
+        />
 
-          <circle class="home-particle" cx="84" cy="192" r="3"/>
-          <circle class="home-particle" cx="122" cy="224" r="2"/>
-          <circle class="home-particle" cx="144" cy="159" r="3"/>
-          <circle class="home-particle" cx="259" cy="232" r="3"/>
-          <circle class="home-particle" cx="295" cy="162" r="2"/>
-          <circle class="home-particle" cx="329" cy="258" r="3"/>
-          <circle class="home-particle" cx="371" cy="210" r="3"/>
-          <circle class="home-particle" cx="420" cy="282" r="2"/>
-          <circle class="home-particle" cx="454" cy="164" r="3"/>
-          <circle class="home-particle" cx="538" cy="251" r="3"/>
-          <circle class="home-particle" cx="579" cy="173" r="2"/>
-          <circle class="home-particle" cx="623" cy="266" r="3"/>
-          <circle class="home-particle" cx="664" cy="198" r="2"/>
+        <path
+          class="home-mesh-line"
+          d="M-70 315 C-35 260 48 112 168 129 S346 225 458 180 S606 117 760 190"
+        />
 
-          <circle class="home-particle-ring" cx="103" cy="276" r="4"/>
-          <circle class="home-particle-ring" cx="281" cy="301" r="4"/>
-          <circle class="home-particle-ring" cx="399" cy="151" r="4"/>
-          <circle class="home-particle-ring" cx="551" cy="116" r="4"/>
-          <circle class="home-particle-ring" cx="650" cy="303" r="4"/>
+        <path
+          class="home-mesh-line"
+          d="M-60 308 C-40 250 45 104 166 122 S347 217 460 173 S610 111 760 184"
+        />
 
-        </g>
+        <path
+          class="home-mesh-line"
+          d="M-50 301 C-45 240 42 96 164 115 S348 209 462 166 S614 105 760 178"
+        />
 
-      </svg>
+        <path
+          class="home-mesh-line"
+          d="M-40 294 C-50 230 39 88 162 108 S349 201 464 159 S618 99 760 172"
+        />
 
+        <path
+          class="home-mesh-line"
+          d="M-30 287 C-55 220 36 80 160 101 S350 193 466 152 S622 93 760 166"
+        />
 
-      <div class="home-science-label home-science-label--01">
-        <span class="home-science-label-number">01</span>
-        <span class="home-science-label-title">
-          SUSTAINABLE AQUACULTURE
-        </span>
-        <span class="home-science-label-meta">
-          Environment · Health · Sustainability
-        </span>
-      </div>
+        <path
+          class="home-mesh-line"
+          d="M-20 280 C-60 210 33 72 158 94 S351 185 468 145 S626 87 760 160"
+        />
 
 
-      <div class="home-science-label home-science-label--02">
-        <span class="home-science-label-number">02</span>
-        <span class="home-science-label-title">
-          ORAL DELIVERY SYSTEMS
-        </span>
-        <span class="home-science-label-meta">
-          Vaccines · Probiotics · Bioactives
-        </span>
-      </div>
+        <path
+          class="home-mesh-line home-mesh-line--strong"
+          d="M-120 345 C20 305 84 150 180 162 S330 266 448 208 S580 132 760 207"
+        />
+
+        <path
+          class="home-mesh-line home-mesh-line--strong"
+          d="M-95 325 C20 282 85 126 172 142 S337 245 456 192 S590 115 760 195"
+        />
 
 
-      <div class="home-science-label home-science-label--03">
-        <span class="home-science-label-number">03</span>
-        <span class="home-science-label-title">
-          PASSIVE COOLING MATERIALS
-        </span>
-        <span class="home-science-label-meta">
-          Passive Radiative and Evaporative Cooling
-        </span>
-      </div>
+        <path
+          class="home-mesh-line home-mesh-line--gold"
+          d="M40 338 C178 295 230 232 334 238 S485 292 585 231 S681 195 760 221"
+        />
+
+        <path
+          class="home-mesh-line home-mesh-line--gold"
+          d="M20 349 C175 308 232 244 336 250 S487 304 587 243 S684 207 760 233"
+        />
+
+        <path
+          class="home-mesh-line home-mesh-line--gold"
+          d="M0 360 C172 321 234 256 338 262 S489 316 589 255 S687 219 760 245"
+        />
+
+        <path
+          class="home-mesh-line home-mesh-line--gold"
+          d="M-20 371 C169 334 236 268 340 274 S491 328 591 267 S690 231 760 257"
+        />
 
 
-      <div class="home-science-label home-science-label--04">
-        <span class="home-science-label-number">04</span>
-        <span class="home-science-label-title">
-          SEAFOOD SCIENCE
-        </span>
-        <span class="home-science-label-meta">
-          Quality · Flavor · Preservation
-        </span>
-      </div>
+        <path class="home-mesh-cross" d="M70 390 C128 316 124 235 160 101"/>
+        <path class="home-mesh-cross" d="M95 394 C150 320 145 226 177 112"/>
+        <path class="home-mesh-cross" d="M120 397 C170 326 169 220 195 124"/>
+        <path class="home-mesh-cross" d="M145 400 C192 330 191 220 214 139"/>
+        <path class="home-mesh-cross" d="M170 400 C214 336 215 224 235 156"/>
+        <path class="home-mesh-cross" d="M195 400 C236 340 239 230 256 174"/>
+        <path class="home-mesh-cross" d="M220 400 C258 344 263 237 278 191"/>
+        <path class="home-mesh-cross" d="M245 400 C281 348 286 245 300 207"/>
+        <path class="home-mesh-cross" d="M270 400 C303 352 310 253 322 219"/>
+        <path class="home-mesh-cross" d="M295 400 C325 356 333 260 345 229"/>
+        <path class="home-mesh-cross" d="M320 400 C347 360 357 267 368 235"/>
+        <path class="home-mesh-cross" d="M345 400 C369 364 381 273 391 239"/>
+        <path class="home-mesh-cross" d="M370 400 C392 368 405 278 414 241"/>
+        <path class="home-mesh-cross" d="M395 400 C414 372 429 282 437 242"/>
+        <path class="home-mesh-cross" d="M420 400 C436 376 453 286 460 240"/>
+        <path class="home-mesh-cross" d="M445 400 C458 380 477 288 483 237"/>
+        <path class="home-mesh-cross" d="M470 400 C480 384 501 289 506 233"/>
+        <path class="home-mesh-cross" d="M495 400 C502 388 525 289 529 228"/>
+        <path class="home-mesh-cross" d="M520 400 C524 390 549 288 552 222"/>
+        <path class="home-mesh-cross" d="M545 400 C546 392 573 285 575 215"/>
+        <path class="home-mesh-cross" d="M570 400 C568 394 597 281 598 207"/>
+        <path class="home-mesh-cross" d="M595 400 C590 396 621 276 621 199"/>
 
+
+        <path
+          class="home-network-line"
+          d="M205 47 V150"
+        />
+
+        <path
+          class="home-network-line home-network-line--gold"
+          d="M487 112 V213"
+        />
+
+        <path
+          class="home-network-line"
+          d="M162 273 V355"
+        />
+
+        <path
+          class="home-network-line home-network-line--purple"
+          d="M505 305 V374"
+        />
+
+
+        <circle
+          class="home-network-dot"
+          cx="205"
+          cy="150"
+          r="6"
+        />
+
+        <circle
+          class="home-network-dot--gold"
+          cx="487"
+          cy="213"
+          r="6"
+        />
+
+        <circle
+          class="home-network-dot"
+          cx="162"
+          cy="273"
+          r="5"
+        />
+
+        <circle
+          class="home-network-dot--purple"
+          cx="505"
+          cy="305"
+          r="6"
+        />
+
+
+        <circle class="home-particle" cx="84" cy="192" r="3"/>
+        <circle class="home-particle" cx="122" cy="224" r="2"/>
+        <circle class="home-particle" cx="144" cy="159" r="3"/>
+        <circle class="home-particle" cx="259" cy="232" r="3"/>
+        <circle class="home-particle" cx="295" cy="162" r="2"/>
+        <circle class="home-particle" cx="329" cy="258" r="3"/>
+        <circle class="home-particle" cx="371" cy="210" r="3"/>
+        <circle class="home-particle" cx="420" cy="282" r="2"/>
+        <circle class="home-particle" cx="454" cy="164" r="3"/>
+        <circle class="home-particle" cx="538" cy="251" r="3"/>
+        <circle class="home-particle" cx="579" cy="173" r="2"/>
+        <circle class="home-particle" cx="623" cy="266" r="3"/>
+        <circle class="home-particle" cx="664" cy="198" r="2"/>
+
+
+        <circle
+          class="home-particle-ring"
+          cx="103"
+          cy="276"
+          r="4"
+        />
+
+        <circle
+          class="home-particle-ring"
+          cx="281"
+          cy="301"
+          r="4"
+        />
+
+        <circle
+          class="home-particle-ring"
+          cx="399"
+          cy="151"
+          r="4"
+        />
+
+        <circle
+          class="home-particle-ring"
+          cx="551"
+          cy="116"
+          r="4"
+        />
+
+        <circle
+          class="home-particle-ring"
+          cx="650"
+          cy="303"
+          r="4"
+        />
+
+      </g>
+
+    </svg>
+
+
+    <div class="home-science-label home-science-label--01">
+      <span class="home-science-label-number">01</span>
+      <span class="home-science-label-title">
+        SUSTAINABLE AQUACULTURE
+      </span>
+      <span class="home-science-label-meta">
+        Environment · Health · Sustainability
+      </span>
     </div>
 
-  </section>
+
+    <div class="home-science-label home-science-label--02">
+      <span class="home-science-label-number">02</span>
+      <span class="home-science-label-title">
+        ORAL DELIVERY SYSTEMS
+      </span>
+      <span class="home-science-label-meta">
+        Vaccines · Probiotics · Bioactives
+      </span>
+    </div>
+
+
+    <div class="home-science-label home-science-label--03">
+      <span class="home-science-label-number">03</span>
+      <span class="home-science-label-title">
+        PASSIVE COOLING MATERIALS
+      </span>
+      <span class="home-science-label-meta">
+        Passive Radiative and Evaporative Cooling
+      </span>
+    </div>
+
+
+    <div class="home-science-label home-science-label--04">
+      <span class="home-science-label-number">04</span>
+      <span class="home-science-label-title">
+        SEAFOOD SCIENCE
+      </span>
+      <span class="home-science-label-meta">
+        Quality · Flavor · Preservation
+      </span>
+    </div>
+
+  </div>
+
+
+  <script>
+    (function () {
+      const hero = document.currentScript.closest(".home-hero");
+      const visual = hero.querySelector(".home-science-visual");
+
+      if (!hero || !visual) return;
+
+      const motionQuery = window.matchMedia(
+        "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
+      );
+
+      let frame = null;
+
+      function resetVisual() {
+        visual.style.setProperty("--pointer-x", "0px");
+        visual.style.setProperty("--pointer-y", "0px");
+        visual.style.setProperty("--pointer-rotate-x", "0deg");
+        visual.style.setProperty("--pointer-rotate-y", "0deg");
+      }
+
+      hero.addEventListener("pointermove", function (event) {
+        if (!motionQuery.matches) return;
+
+        const rect = hero.getBoundingClientRect();
+
+        const x =
+          (event.clientX - rect.left) / rect.width - 0.5;
+
+        const y =
+          (event.clientY - rect.top) / rect.height - 0.5;
+
+        if (frame) {
+          cancelAnimationFrame(frame);
+        }
+
+        frame = requestAnimationFrame(function () {
+          visual.style.setProperty(
+            "--pointer-x",
+            (x * 6).toFixed(1) + "px"
+          );
+
+          visual.style.setProperty(
+            "--pointer-y",
+            (y * 4).toFixed(1) + "px"
+          );
+
+          visual.style.setProperty(
+            "--pointer-rotate-x",
+            (-y * 1.8).toFixed(2) + "deg"
+          );
+
+          visual.style.setProperty(
+            "--pointer-rotate-y",
+            (x * 2.4).toFixed(2) + "deg"
+          );
+        });
+      });
+
+      hero.addEventListener("pointerleave", resetVisual);
+
+      if (motionQuery.addEventListener) {
+        motionQuery.addEventListener(
+          "change",
+          resetVisual
+        );
+      }
+    })();
+  </script>
+
+</section>
 
 
   <!-- Current research -->
