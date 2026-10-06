@@ -1607,6 +1607,99 @@ html[data-theme="dark"] .home-research-card:hover {
       animation-delay: -1.6s;
     }
 
+.home-science-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.home-topic-content {
+  display: block;
+  min-width: 0;
+}
+
+.home-topic-sphere {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  box-shadow:
+    inset -3px -4px 6px rgba(0, 0, 0, 0.10),
+    inset 3px 3px 5px rgba(255, 255, 255, 0.62),
+    0 3px 8px rgba(45, 90, 110, 0.16);
+  animation: home-topic-sphere-pulse 4.2s ease-in-out infinite;
+}
+
+.home-topic-sphere::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 5px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  filter: blur(0.3px);
+}
+
+.home-topic-sphere::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: -1;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.10;
+  filter: blur(5px);
+}
+
+.home-topic-sphere--cyan {
+  color: #16aacd;
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      #9be7f3 0%,
+      #35bddb 38%,
+      #159bbb 100%
+    );
+}
+
+.home-topic-sphere--gold {
+  color: #dea84d;
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      #f6d996 0%,
+      #e5b453 40%,
+      #cc8f2e 100%
+    );
+  animation-delay: -1.2s;
+}
+
+.home-topic-sphere--purple {
+  color: #7f7cc7;
+  background:
+    radial-gradient(
+      circle at 32% 28%,
+      #c7c5ed 0%,
+      #918dd4 40%,
+      #706cba 100%
+    );
+  animation-delay: -2.2s;
+}
+
+@keyframes home-topic-sphere-pulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.06);
+  }
+}
 
     /* ==================================================
        Motion
@@ -1967,48 +2060,60 @@ html[data-theme="dark"] .home-research-card:hover {
     </svg>
 
 
-    <div class="home-science-label home-science-label--01">
-      <span class="home-science-label-number">01</span>
-      <span class="home-science-label-title">
-        SUSTAINABLE AQUACULTURE
-      </span>
-      <span class="home-science-label-meta">
-        Health · Quality · Sustainability
-      </span>
-    </div>
+<div class="home-science-label home-science-label--01">
+  <span class="home-topic-sphere home-topic-sphere--cyan"></span>
+
+  <span class="home-topic-content">
+    <span class="home-science-label-title">
+      SUSTAINABLE AQUACULTURE
+    </span>
+    <span class="home-science-label-meta">
+      Health · Quality · Sustainability
+    </span>
+  </span>
+</div>
 
 
-    <div class="home-science-label home-science-label--02">
-      <span class="home-science-label-number">02</span>
-      <span class="home-science-label-title">
-        ORAL DELIVERY SYSTEMS
-      </span>
-      <span class="home-science-label-meta">
-        Vaccines · Probiotics · Bioactives
-      </span>
-    </div>
+<div class="home-science-label home-science-label--02">
+  <span class="home-topic-sphere home-topic-sphere--gold"></span>
+
+  <span class="home-topic-content">
+    <span class="home-science-label-title">
+      ORAL DELIVERY SYSTEMS
+    </span>
+    <span class="home-science-label-meta">
+      Vaccines · Probiotics · Bioactives
+    </span>
+  </span>
+</div>
 
 
-    <div class="home-science-label home-science-label--03">
-      <span class="home-science-label-number">03</span>
-      <span class="home-science-label-title">
-        PASSIVE COOLING MATERIALS
-      </span>
-      <span class="home-science-label-meta">
-        Biopolymers · Radiative Cooling
-      </span>
-    </div>
+<div class="home-science-label home-science-label--03">
+  <span class="home-topic-sphere home-topic-sphere--cyan"></span>
+
+  <span class="home-topic-content">
+    <span class="home-science-label-title">
+      PASSIVE COOLING MATERIALS
+    </span>
+    <span class="home-science-label-meta">
+      Biopolymers · Radiative Cooling
+    </span>
+  </span>
+</div>
 
 
-    <div class="home-science-label home-science-label--04">
-      <span class="home-science-label-number">04</span>
-      <span class="home-science-label-title">
-        SEAFOOD SCIENCE
-      </span>
-      <span class="home-science-label-meta">
-        Quality · Flavor · Preservation
-      </span>
-    </div>
+<div class="home-science-label home-science-label--04">
+  <span class="home-topic-sphere home-topic-sphere--purple"></span>
+
+  <span class="home-topic-content">
+    <span class="home-science-label-title">
+      SEAFOOD SCIENCE
+    </span>
+    <span class="home-science-label-meta">
+      Quality · Flavor · Preservation
+    </span>
+  </span>
+</div>
 
   </div>
 
