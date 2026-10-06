@@ -38,40 +38,35 @@ redirect_from:
   box-sizing: border-box;
 }
 
-
 /* ==================================================
    Hero section
    ================================================== */
 
 .home-hero {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(275px, 0.72fr);
-  gap: 2.7rem;
-  align-items: center;
   max-width: 1080px;
-  min-height: 380px;
+  min-height: 390px;
   margin: 0 0 2.8rem;
-  padding: 2.6rem 2.5rem;
+  padding: 2.7rem 2.6rem 2.4rem;
   overflow: hidden;
   border: 1px solid #d8e9ef;
   border-radius: 22px;
   background:
     radial-gradient(
-      circle at 88% 18%,
-      rgba(72, 169, 197, 0.13),
-      transparent 27%
+      circle at 82% 18%,
+      rgba(72, 169, 197, 0.09),
+      transparent 28%
     ),
     radial-gradient(
-      circle at 74% 92%,
-      rgba(219, 166, 85, 0.1),
-      transparent 25%
+      circle at 91% 87%,
+      rgba(219, 166, 85, 0.07),
+      transparent 24%
     ),
     linear-gradient(
       135deg,
-      #f5fbfd 0%,
-      #ffffff 54%,
-      #fffaf2 100%
+      #f8fcfd 0%,
+      #ffffff 48%,
+      #fffdf9 100%
     );
   box-shadow: var(--home-shadow);
 }
@@ -79,60 +74,79 @@ redirect_from:
 .home-hero::before {
   content: "";
   position: absolute;
-  top: -95px;
-  right: -85px;
-  width: 260px;
-  height: 260px;
-  border: 1px solid rgba(72, 169, 197, 0.1);
-  border-radius: 50%;
+  inset: 0;
+  z-index: 0;
   pointer-events: none;
+  background-image:
+    linear-gradient(
+      rgba(72, 169, 197, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(72, 169, 197, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 42px 42px;
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent 32%,
+      rgba(0, 0, 0, 0.25) 50%,
+      #000 100%
+    );
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 32%,
+      rgba(0, 0, 0, 0.25) 50%,
+      #000 100%
+    );
 }
 
 .home-hero::after {
   content: "";
   position: absolute;
-  right: 105px;
-  bottom: -175px;
-  width: 310px;
-  height: 310px;
-  border: 1px solid rgba(219, 166, 85, 0.11);
-  border-radius: 50%;
+  right: -8%;
+  bottom: -35%;
+  z-index: 0;
+  width: 70%;
+  height: 75%;
   pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(72, 169, 197, 0.08),
+      transparent 67%
+    );
+  filter: blur(18px);
 }
 
-/* A very soft light sweep across the hero card */
 .home-hero-shimmer {
-  position: absolute;
-  z-index: 1;
-  top: -65%;
-  left: -42%;
-  width: 28%;
-  height: 230%;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.42),
-    transparent
-  );
-  filter: blur(5px);
-  transform: rotate(18deg) translateX(-260%);
-  animation: home-hero-shimmer 12s ease-in-out infinite;
+  display: none;
 }
+
+
+/* ==================================================
+   Hero copy
+   ================================================== */
 
 .home-hero-copy {
   position: relative;
-  z-index: 2;
+  z-index: 5;
+  width: 49%;
+  min-width: 0;
 }
 
 .home-greeting {
-  max-width: 680px;
-  margin: 0 0 0.9rem;
+  max-width: none;
+  margin: 0 0 1.15rem;
   color: var(--home-navy);
-  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+  font-size: clamp(2rem, 3.1vw, 2.7rem);
   font-weight: 760;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 .home-greeting-highlight {
@@ -145,285 +159,332 @@ redirect_from:
   content: "";
   position: absolute;
   right: 0;
-  bottom: -3px;
+  bottom: -8px;
   left: 0;
-  height: 5px;
+  height: 4px;
   border-radius: 999px;
-  background: rgba(219, 166, 85, 0.38);
-  transform: rotate(-1.5deg);
-}
-
-.home-tagline {
-  max-width: 690px;
-  margin: 0 0 1.4rem;
-  color: var(--home-navy);
-  font-size: 1.08rem;
-  font-weight: 620;
-  line-height: 1.65;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(219, 166, 85, 0.62),
+      rgba(219, 166, 85, 0.24)
+    );
+  transform: rotate(-1deg);
 }
 
 .home-description {
-  max-width: 700px;
+  max-width: 570px;
   margin: 0;
   color: var(--home-text);
-  font-size: 0.98rem;
-  line-height: 1.82;
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 
 .home-description + .home-description {
-  margin-top: 0.85rem;
+  margin-top: 1rem;
+}
+
+.home-research-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1.25rem;
+  padding: 10px 18px;
+  color: var(--home-blue-dark) !important;
+  border: 1px solid rgba(72, 169, 197, 0.28);
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.96),
+      rgba(235, 249, 252, 0.9)
+    );
+  box-shadow:
+    0 7px 20px rgba(43, 107, 126, 0.06);
+  font-size: 0.72rem;
+  font-weight: 720;
+  text-decoration: none !important;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.home-research-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(72, 169, 197, 0.48);
+  box-shadow:
+    0 11px 25px rgba(43, 107, 126, 0.11);
+}
+
+.home-research-link-arrow {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 
 /* ==================================================
-   Abstract scientific visualization
+   Scientific mesh
    ================================================== */
 
-.home-visual {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 310px);
-  aspect-ratio: 1 / 1;
-  margin: auto;
-  transform: perspective(900px)
-    rotateX(var(--home-tilt-x, 0deg))
-    rotateY(var(--home-tilt-y, 0deg))
-    translate3d(var(--home-shift-x, 0px), var(--home-shift-y, 0px), 0);
-  transform-style: preserve-3d;
-  transition: transform 180ms ease-out;
-  will-change: transform;
-}
-
-/* Slowly moving energy haze behind the orbit */
-.home-visual::before {
-  content: "";
+.home-science-visual {
   position: absolute;
-  inset: 15%;
-  z-index: -1;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 90deg,
-    rgba(72, 169, 197, 0),
-    rgba(72, 169, 197, 0.14),
-    rgba(219, 166, 85, 0.1),
-    rgba(72, 169, 197, 0)
-  );
-  filter: blur(17px);
-  animation: home-energy-spin 18s linear infinite;
-}
-
-/* Outer rotating orbit */
-.home-visual-orbit {
-  position: absolute;
-  inset: 6%;
-  border: 1.5px dashed rgba(72, 169, 197, 0.31);
-  border-radius: 50%;
-  animation: home-orbit-rotate 36s linear infinite;
-}
-
-.home-visual-orbit::before {
-  content: "";
-  position: absolute;
-  top: 13%;
-  right: 5%;
-  width: 11px;
-  height: 11px;
-  border: 2px solid var(--home-blue);
-  border-radius: 50%;
-  background: #f7fcfd;
-}
-
-/* Inner orbit */
-.home-visual-orbit-inner {
-  position: absolute;
-  inset: 21%;
-  border: 1.5px solid rgba(219, 166, 85, 0.31);
-  border-radius: 50%;
-  animation: home-orbit-rotate-reverse 27s linear infinite;
-}
-
-.home-visual-orbit-inner::after {
-  content: "";
-  position: absolute;
-  bottom: 8%;
-  left: 8%;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--home-gold);
-  box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
-}
-
-/* ==================================================
-   Soft flowing ocean currents
-   ================================================== */
-
-.home-ocean-current {
-  position: absolute;
-  inset: 27% 17%;
   z-index: 1;
-
-  width: 66%;
-  height: 46%;
-
-  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
   pointer-events: none;
+}
+
+.home-science-svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.home-mesh-line {
+  fill: none;
+  stroke: #63c6e2;
+  stroke-width: 0.72;
+  opacity: 0.19;
+  vector-effect: non-scaling-stroke;
+}
+
+.home-mesh-line--strong {
+  stroke: #34b4da;
+  stroke-width: 1.05;
+  opacity: 0.42;
+}
+
+.home-mesh-line--gold {
+  stroke: #e4ae55;
+  stroke-width: 0.8;
+  opacity: 0.17;
+}
+
+.home-mesh-cross {
+  fill: none;
+  stroke: #63c6e2;
+  stroke-width: 0.65;
+  opacity: 0.12;
+  vector-effect: non-scaling-stroke;
+}
+
+.home-network-line {
+  fill: none;
+  stroke: #59bad7;
+  stroke-width: 0.85;
+  stroke-dasharray: 3 5;
+  opacity: 0.38;
+  vector-effect: non-scaling-stroke;
+}
+
+.home-network-line--gold {
+  stroke: #dfaa50;
+}
+
+.home-network-line--purple {
+  stroke: #8583c9;
+}
+
+.home-network-dot {
+  fill: #38b6da;
   opacity: 0.9;
 }
 
-.home-ocean-wave {
-  position: absolute;
-  left: -15%;
-  width: 130%;
-  height: 58%;
-  border-style: solid;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-radius: 50%;
+.home-network-dot--gold {
+  fill: #e0a94d;
 }
 
-.home-ocean-wave--one {
-  top: 16%;
-  border-top-color: rgba(112, 202, 221, 0.46);
-  border-width: 2px;
-  animation: home-ocean-flow-one 7s ease-in-out infinite;
+.home-network-dot--purple {
+  fill: #8583c9;
 }
 
-.home-ocean-wave--two {
-  top: 39%;
-  border-top-color: rgba(154, 219, 232, 0.4);
-  border-width: 1.5px;
-  animation: home-ocean-flow-two 9s ease-in-out infinite;
+.home-particle {
+  fill: #4ebbd9;
+  opacity: 0.34;
 }
 
-.home-ocean-wave--three {
-  top: 62%;
-  border-top-color: rgba(188, 231, 239, 0.65);
-  border-width: 1px;
-  animation: home-ocean-flow-three 11s ease-in-out infinite;
-}
-
-@keyframes home-ocean-flow-one {
-  0%, 100% { transform: translateX(-5%) translateY(0) rotate(-2deg); }
-  50% { transform: translateX(5%) translateY(-4px) rotate(2deg); }
-}
-
-@keyframes home-ocean-flow-two {
-  0%, 100% { transform: translateX(5%) translateY(0) rotate(2deg); }
-  50% { transform: translateX(-5%) translateY(4px) rotate(-2deg); }
-}
-
-@keyframes home-ocean-flow-three {
-  0%, 100% { transform: translateX(-3%) translateY(1px) rotate(-1deg); }
-  50% { transform: translateX(4%) translateY(-3px) rotate(1deg); }
-}
-  
-/* Research labels */
-.home-visual-node {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 7px 10px;
-  color: var(--home-navy);
-  border: 1px solid rgba(72, 169, 197, 0.19);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 6px 16px rgba(35, 55, 75, 0.08);
-  font-size: 0.69rem;
-  font-weight: 700;
-  white-space: nowrap;
-  animation: home-node-float var(--float-time, 6.4s) ease-in-out infinite;
-  transition: box-shadow 180ms ease, background-color 180ms ease;
-  will-change: transform;
-}
-
-.home-visual-node:hover {
-  animation-play-state: paused;
-  background: #ffffff;
-  box-shadow: 0 11px 24px rgba(35, 55, 75, 0.14);
-  transform: translate3d(0, -6px, 18px) scale(1.025);
-}
-
-.home-visual-node::before {
-  content: "";
-  flex: 0 0 7px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--node-color, var(--home-blue));
-}
-
-.home-visual-node--aquaculture {
-  top: 6%;
-  left: 3%;
-  --node-color: var(--home-green);
-  --float-time: 6.8s;
-}
-
-.home-visual-node--passive-cooling {
-  bottom: 28%;
-  left: -6%;
-  --node-color: var(--home-blue);
-  --float-time: 7.6s;
-  animation-delay: -1.4s;
-}
-
-.home-visual-node--seafood-science {
-  right: 4%;
-  bottom: 7%;
-  --node-color: var(--home-purple);
-  --float-time: 6.1s;
-  animation-delay: -2.7s;
-}
-
-.home-visual-node--oral-delivery {
-  top: 32%;
-  right: -2%;
-  --node-color: var(--home-gold);
-  --float-time: 7.1s;
-  animation-delay: -3.8s;
-}
-  
-/* Small decorative particles */
-.home-microsphere {
-  position: absolute;
-  border: 1px solid rgba(72, 169, 197, 0.28);
-  border-radius: 50%;
-  background: rgba(123, 203, 216, 0.12);
-  animation: home-particle-float 7s ease-in-out infinite;
-}
-
-.home-microsphere--one {
-  top: 20%;
-  left: 30%;
-  width: 16px;
-  height: 16px;
-}
-
-.home-microsphere--two {
-  top: 61%;
-  right: 27%;
-  width: 11px;
-  height: 11px;
-  animation-delay: -2s;
-}
-
-.home-microsphere--three {
-  right: 22%;
-  bottom: 22%;
-  width: 7px;
-  height: 7px;
-  border-color: rgba(219, 166, 85, 0.31);
-  background: rgba(219, 166, 85, 0.18);
-  animation-delay: -4s;
+.home-particle-ring {
+  fill: none;
+  stroke: #4ebbd9;
+  stroke-width: 1;
+  opacity: 0.23;
 }
 
 
 /* ==================================================
-   Section styling
+   Research labels
    ================================================== */
+
+.home-science-label {
+  position: absolute;
+  z-index: 4;
+  color: var(--home-navy);
+  line-height: 1.15;
+}
+
+.home-science-label-number {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--label-color);
+  font-size: 1.35rem;
+  font-weight: 820;
+  letter-spacing: -0.04em;
+}
+
+.home-science-label-title {
+  display: block;
+  color: var(--home-navy);
+  font-size: 0.59rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.home-science-label-meta {
+  display: block;
+  margin-top: 3px;
+  color: var(--home-muted);
+  font-size: 0.48rem;
+  font-weight: 520;
+  white-space: nowrap;
+}
+
+.home-science-label--01 {
+  top: 8%;
+  left: 34%;
+  --label-color: #16aacd;
+}
+
+.home-science-label--02 {
+  top: 24%;
+  right: 5%;
+  --label-color: #dea84d;
+}
+
+.home-science-label--03 {
+  left: 27%;
+  bottom: 14%;
+  --label-color: #16a6ca;
+}
+
+.home-science-label--04 {
+  right: 4%;
+  bottom: 7%;
+  --label-color: #7f7cc7;
+}
+
+
+/* ==================================================
+   Hero responsive
+   ================================================== */
+
+@media (max-width: 1050px) {
+  .home-hero-copy {
+    width: 52%;
+  }
+
+  .home-science-visual {
+    width: 59%;
+  }
+
+  .home-greeting {
+    font-size: clamp(1.9rem, 3vw, 2.45rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: auto;
+    padding: 2rem 1.7rem 1.5rem;
+  }
+
+  .home-hero-copy {
+    width: 100%;
+  }
+
+  .home-greeting {
+    white-space: normal;
+  }
+
+  .home-description {
+    max-width: 100%;
+  }
+
+  .home-science-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: calc(100% + 1rem);
+    height: 300px;
+    margin: 1.2rem -0.5rem -0.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-hero {
+    padding: 1.6rem 1.25rem 1.25rem;
+    border-radius: 17px;
+  }
+
+  .home-greeting {
+    font-size: 1.75rem;
+  }
+
+  .home-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .home-science-visual {
+    height: 275px;
+  }
+
+  .home-science-label-title {
+    font-size: 0.5rem;
+  }
+
+  .home-science-label-meta {
+    font-size: 0.43rem;
+  }
+
+  .home-science-label--01 {
+    left: 27%;
+  }
+
+  .home-science-label--03 {
+    left: 19%;
+  }
+}
+
+html[data-theme="dark"] .home-hero {
+  border-color: #4b5962;
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(101, 194, 221, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #2d3940,
+      #30363c
+    );
+}
+
+html[data-theme="dark"] .home-research-link {
+  background: rgba(52, 58, 64, 0.92);
+}
+
+html[data-theme="dark"] .home-mesh-line,
+html[data-theme="dark"] .home-mesh-cross {
+  opacity: 0.22;
+}
 
 .home-section {
   max-width: 1080px;
@@ -459,7 +520,7 @@ redirect_from:
     #efc878
   );
 }
-
+  
 
 /* ==================================================
    Research cards
