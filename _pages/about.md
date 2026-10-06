@@ -320,19 +320,9 @@ redirect_from:
   --card-accent: var(--home-blue);
 
   position: relative;
-  min-height: 205px;
-  padding: 1.45rem 1.45rem 1.35rem;
-  overflow: hidden;
-  border: 1px solid var(--home-border);
-  border-radius: 17px;
-  background: var(--home-surface);
-  box-shadow: 0 6px 20px rgba(35, 55, 75, 0.045);
-  transition:
-    transform 0.28s ease,
-    border-color 0.28s ease,
-    box-shadow 0.28s ease;
+  padding: 0 1.6rem 0 1.25rem;
 }
-
+  
 .home-research-card::before {
   content: "";
   position: absolute;
@@ -343,28 +333,6 @@ redirect_from:
   border-radius: 17px 0 0 17px;
   background: var(--card-accent);
   opacity: 0.78;
-}
-
-.home-research-card::after {
-  content: "";
-  position: absolute;
-  right: -45px;
-  bottom: -52px;
-  width: 135px;
-  height: 135px;
-  border: 1px solid rgba(72, 169, 197, 0.12);
-  border-radius: 50%;
-  transition: transform 0.35s ease;
-}
-
-.home-research-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--card-accent);
-  box-shadow: 0 15px 30px rgba(35, 55, 75, 0.1);
-}
-
-.home-research-card:hover::after {
-  transform: scale(1.15);
 }
 
 .home-research-card--passive-cooling {
