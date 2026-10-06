@@ -997,13 +997,30 @@ html[data-theme="dark"] .home-research-card:hover {
   }
 }
 
-
 /* ==================================================
-   Hero floating motion
+   Hero scientific visual motion
    ================================================== */
 
 .home-science-visual {
-  animation: home-visual-float 7s ease-in-out infinite;
+  --pointer-x: 0px;
+  --pointer-y: 0px;
+  --pointer-rotate-x: 0deg;
+  --pointer-rotate-y: 0deg;
+
+  transform:
+    perspective(1000px)
+    translate3d(var(--pointer-x), var(--pointer-y), 0)
+    rotateX(var(--pointer-rotate-x))
+    rotateY(var(--pointer-rotate-y));
+
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: transform 180ms ease-out;
+  will-change: transform;
+}
+
+.home-science-svg {
+  animation: home-mesh-float 7s ease-in-out infinite;
   transform-origin: center;
   will-change: transform;
 }
@@ -1014,21 +1031,29 @@ html[data-theme="dark"] .home-research-card:hover {
 }
 
 .home-science-label--01 {
+  top: 13%;
+  left: 39%;
   animation-duration: 6.8s;
   animation-delay: -0.5s;
 }
 
 .home-science-label--02 {
+  top: 29%;
+  right: 9%;
   animation-duration: 7.4s;
   animation-delay: -2.1s;
 }
 
 .home-science-label--03 {
+  left: 34%;
+  bottom: 20%;
   animation-duration: 6.2s;
   animation-delay: -3.6s;
 }
 
 .home-science-label--04 {
+  right: 10%;
+  bottom: 13%;
   animation-duration: 7s;
   animation-delay: -1.4s;
 }
@@ -1061,7 +1086,7 @@ html[data-theme="dark"] .home-research-card:hover {
   animation: home-ring-float 6.8s ease-in-out infinite;
 }
 
-@keyframes home-visual-float {
+@keyframes home-mesh-float {
   0%,
   100% {
     transform: translateY(0);
@@ -1119,6 +1144,23 @@ html[data-theme="dark"] .home-research-card:hover {
   50% {
     transform: translate(-2px, -5px);
     opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-science-visual {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .home-science-svg,
+  .home-science-label,
+  .home-network-dot,
+  .home-network-dot--gold,
+  .home-network-dot--purple,
+  .home-particle,
+  .home-particle-ring {
+    animation: none !important;
   }
 }
 
@@ -1513,3 +1555,69 @@ html[data-theme="dark"] .home-research-card:hover {
   </section>
 
 </div>
+
+<script>
+(function () {
+  const hero = document.querySelector(".home-hero");
+  const visual = document.querySelector(".home-science-visual");
+
+  if (!hero || !visual) return;
+
+  const motionQuery = window.matchMedia(
+    "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
+  );
+
+  let frame = null;
+
+  function resetVisual() {
+    visual.style.setProperty("--pointer-x", "0px");
+    visual.style.setProperty("--pointer-y", "0px");
+    visual.style.setProperty("--pointer-rotate-x", "0deg");
+    visual.style.setProperty("--pointer-rotate-y", "0deg");
+  }
+
+  hero.addEventListener("pointermove", function (event) {
+    if (!motionQuery.matches) return;
+
+    const rect = hero.getBoundingClientRect();
+
+    const x =
+      (event.clientX - rect.left) / rect.width - 0.5;
+
+    const y =
+      (event.clientY - rect.top) / rect.height - 0.5;
+
+    if (frame) {
+      cancelAnimationFrame(frame);
+    }
+
+    frame = requestAnimationFrame(function () {
+      visual.style.setProperty(
+        "--pointer-x",
+        (x * 10).toFixed(1) + "px"
+      );
+
+      visual.style.setProperty(
+        "--pointer-y",
+        (y * 7).toFixed(1) + "px"
+      );
+
+      visual.style.setProperty(
+        "--pointer-rotate-x",
+        (-y * 3.5).toFixed(2) + "deg"
+      );
+
+      visual.style.setProperty(
+        "--pointer-rotate-y",
+        (x * 4.5).toFixed(2) + "deg"
+      );
+    });
+  });
+
+  hero.addEventListener("pointerleave", resetVisual);
+
+  if (motionQuery.addEventListener) {
+    motionQuery.addEventListener("change", resetVisual);
+  }
+})();
+</script>
