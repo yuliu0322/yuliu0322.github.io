@@ -29,25 +29,12 @@ author_profile: true
 
 .research-intro {
   position: relative;
-  overflow: hidden;
-  margin: 0 0 2rem;
-  padding: 2rem 2.15rem;
-  border: 1px solid #d8e9ef;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #f5fbfd 0%, #ffffff 54%, #fffaf2 100%);
-  box-shadow: var(--research-shadow);
-}
-
-.research-intro::after {
-  content: "";
-  position: absolute;
-  right: -70px;
-  bottom: -90px;
-  width: 230px;
-  height: 230px;
-  border: 34px solid rgba(72, 169, 197, 0.08);
-  border-radius: 50%;
-  pointer-events: none;
+  margin: 0 0 3rem;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .research-kicker {
@@ -305,11 +292,6 @@ html[data-theme="dark"] .research-topics li {
 @media (max-width: 600px) {
   .research-page {
     line-height: 1.7;
-  }
-
-  .research-intro {
-    padding: 1.45rem 1.25rem;
-    border-radius: 14px;
   }
 
   .research-question {
