@@ -253,15 +253,6 @@ html[data-theme="dark"] .research-page {
   --research-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
 }
 
-html[data-theme="dark"] .research-intro {
-  border-color: #53616a;
-  background: linear-gradient(135deg, #303b42 0%, #363b40 62%, #403a31 100%);
-}
-
-html[data-theme="dark"] .research-intro::after {
-  border-color: rgba(106, 193, 220, 0.1);
-}
-
 html[data-theme="dark"] .research-topics li {
   color: #d1d8e0;
   border-color: #646d75;
