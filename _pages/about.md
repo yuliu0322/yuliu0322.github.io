@@ -423,19 +423,19 @@ redirect_from:
     max-width: 100%;
   }
 
-.home-science-visual {
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  width: 100%;
-  height: 390px;
-  margin: 1rem 0 0;
-  transform: none !important;
+  .home-science-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: 125%;
+    height: 390px;
+    margin: 1rem 0 0;
+    transform: translateX(-50%) !important;
   }
 }
-
+  
 @media (max-width: 600px) {
   .home-hero {
     padding: 1.6rem 1.25rem 1.25rem;
