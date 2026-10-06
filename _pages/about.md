@@ -372,8 +372,8 @@ redirect_from:
 }
 
 .home-science-label--03 {
-  left: 27%;
-  bottom: 19%;
+  left: 40%;
+  bottom: 31%;
   --label-color: #16a6ca;
   animation-duration: 6.6s;
   animation-delay: -3.3s;
