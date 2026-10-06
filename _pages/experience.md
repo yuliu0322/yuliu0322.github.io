@@ -18,12 +18,12 @@ author_profile: true
 
 .experience-entry {
   display: grid;
-  grid-template-columns: 155px minmax(0, 1fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   column-gap: 36px;
 
   width: 100%;
-  padding: 0 0 2.2rem;
-  margin: 0 0 2.2rem;
+  margin: 0 0 2.4rem;
+  padding: 0 0 2.4rem;
 
   border-bottom: 1px solid #e3e8ec;
 }
@@ -42,8 +42,8 @@ author_profile: true
 .experience-date {
   margin: 4px 0 0;
 
-  color: #a96c1d;
-  font-size: 0.82rem;
+  color: #b17622;
+  font-size: 0.84rem;
   font-weight: 700;
   line-height: 1.5;
 
@@ -63,7 +63,7 @@ author_profile: true
   margin: 0 0 5px;
 
   color: #253248;
-  font-size: 1.18rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.35;
 }
@@ -79,7 +79,7 @@ author_profile: true
   align-items: center;
   gap: 5px 9px;
 
-  margin: 0 0 1.1rem;
+  margin: 0 0 1.25rem;
 
   color: #7a8491;
   font-size: 0.9rem;
@@ -122,36 +122,60 @@ author_profile: true
 
 
 /* =========================
-   Description
+   Section labels
    ========================= */
 
-.experience-summary {
-  max-width: 680px;
-
-  margin: 0 0 0.7rem;
-
-  color: #4f5967;
-  line-height: 1.65;
+.experience-section {
+  max-width: 690px;
+  margin-top: 1.1rem;
 }
 
-.experience-details {
-  max-width: 680px;
+.experience-section:first-of-type {
+  margin-top: 0;
+}
 
+.experience-label {
+  margin: 0 0 0.45rem;
+
+  color: #344258;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+
+/* =========================
+   Responsibilities
+   ========================= */
+
+.experience-responsibilities {
   margin: 0;
   padding-left: 1.15rem;
 
   color: #4f5967;
 }
 
-.experience-details li {
-  margin-bottom: 0.35rem;
+.experience-responsibilities li {
+  margin-bottom: 0.38rem;
   padding-left: 0.1rem;
 
   line-height: 1.6;
 }
 
-.experience-details li:last-child {
+.experience-responsibilities li:last-child {
   margin-bottom: 0;
+}
+
+
+/* =========================
+   What I Gained
+   ========================= */
+
+.experience-gained {
+  margin: 0;
+
+  color: #4f5967;
+  line-height: 1.65;
 }
 
 
@@ -188,8 +212,12 @@ html[data-theme="dark"] .experience-divider {
   color: #747d87;
 }
 
-html[data-theme="dark"] .experience-summary,
-html[data-theme="dark"] .experience-details {
+html[data-theme="dark"] .experience-label {
+  color: #e3e8ee;
+}
+
+html[data-theme="dark"] .experience-responsibilities,
+html[data-theme="dark"] .experience-gained {
   color: #c8d0da;
 }
 
@@ -207,8 +235,8 @@ html[data-theme="dark"] .experience-details {
   .experience-entry {
     display: block;
 
-    margin-bottom: 1.8rem;
-    padding-bottom: 1.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .experience-date {
@@ -224,16 +252,21 @@ html[data-theme="dark"] .experience-details {
   }
 
   .experience-organization {
-    margin-bottom: 0.9rem;
+    margin-bottom: 1.05rem;
 
     font-size: 0.86rem;
   }
 
-  .experience-summary {
-    line-height: 1.6;
+  .experience-section {
+    margin-top: 1rem;
   }
 
-  .experience-details li {
+  .experience-label {
+    font-size: 0.86rem;
+  }
+
+  .experience-responsibilities li,
+  .experience-gained {
     line-height: 1.55;
   }
 
@@ -294,29 +327,52 @@ html[data-theme="dark"] .experience-details {
 
       </p>
 
-      <p class="experience-summary">
-        Managed the peer-review and editorial workflow of submitted
-        manuscripts from initial screening through final publication.
-      </p>
 
-      <ul class="experience-details">
+      <!-- Responsibilities -->
 
-        <li>
-          Communicated with authors, reviewers, and academic editors to
-          support timely and transparent editorial decisions.
-        </li>
+      <div class="experience-section">
 
-        <li>
-          Evaluated manuscripts for journal scope, formatting requirements,
-          research integrity, and adherence to editorial policies.
-        </li>
+        <h3 class="experience-label">
+          Responsibilities
+        </h3>
 
-        <li>
-          Developed practical experience in scholarly publishing,
-          scientific communication, and publication ethics.
-        </li>
+        <ul class="experience-responsibilities">
 
-      </ul>
+          <li>
+            Managed the peer-review and editorial workflow of submitted
+            manuscripts from initial screening through final publication.
+          </li>
+
+          <li>
+            Communicated with authors, reviewers, and academic editors to
+            facilitate timely and transparent editorial decisions.
+          </li>
+
+          <li>
+            Evaluated manuscripts for journal scope, formatting requirements,
+            research integrity, and adherence to editorial policies.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- What I Gained -->
+
+      <div class="experience-section">
+
+        <h3 class="experience-label">
+          What I Gained
+        </h3>
+
+        <p class="experience-gained">
+          Developed a deeper understanding of scholarly publishing and the
+          peer-review process, while strengthening my scientific communication,
+          critical evaluation, and professional coordination skills.
+        </p>
+
+      </div>
 
     </div>
 
@@ -372,31 +428,54 @@ html[data-theme="dark"] .experience-details {
 
       </p>
 
-      <p class="experience-summary">
-        Coordinated cross-border product development projects with clients
-        and internal marketing and sales teams.
-      </p>
 
-      <ul class="experience-details">
+      <!-- Responsibilities -->
 
-        <li>
-          Conducted market research and literature reviews to identify
-          industry trends, consumer preferences, and emerging ingredients
-          in dietary supplements.
-        </li>
+      <div class="experience-section">
 
-        <li>
-          Translated client requirements into actionable product
-          specifications and monitored project progress from initial
-          concept through order fulfillment.
-        </li>
+        <h3 class="experience-label">
+          Responsibilities
+        </h3>
 
-        <li>
-          Supported the commercialization of dietary supplement products
-          by aligning product concepts with market demand and client needs.
-        </li>
+        <ul class="experience-responsibilities">
 
-      </ul>
+          <li>
+            Coordinated cross-border dietary supplement product development
+            projects with clients and internal marketing and sales teams.
+          </li>
+
+          <li>
+            Conducted market research and literature reviews to identify
+            industry trends, consumer preferences, and emerging ingredients.
+          </li>
+
+          <li>
+            Translated client requirements into product specifications and
+            monitored project progress from initial concept through order
+            fulfillment.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- What I Gained -->
+
+      <div class="experience-section">
+
+        <h3 class="experience-label">
+          What I Gained
+        </h3>
+
+        <p class="experience-gained">
+          Gained practical experience in translating scientific and market
+          information into product development decisions, while strengthening
+          my project coordination, cross-functional communication, and
+          understanding of dietary supplement commercialization.
+        </p>
+
+      </div>
 
     </div>
 
