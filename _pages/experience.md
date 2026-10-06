@@ -380,7 +380,7 @@ html[data-theme="dark"] .experience-gained {
 
 
   <!-- =========================
-       Project Coordinator
+       Project Manager
        ========================= -->
 
   <section class="experience-entry">
