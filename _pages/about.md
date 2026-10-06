@@ -1173,6 +1173,20 @@ html[data-theme="dark"] .home-research-card:hover {
   }
 }
 
+  @media (min-width: 901px) {
+  .home-science-label--03 {
+    left: 43% !important;
+    bottom: 34% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-science-label--03 {
+    left: 39% !important;
+    bottom: 29% !important;
+  }
+}
+  
 </style>
 
 <div class="home-welcome">
