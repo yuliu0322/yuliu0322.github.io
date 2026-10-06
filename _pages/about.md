@@ -322,18 +322,6 @@ redirect_from:
   position: relative;
   padding: 0 1.6rem 0 1.25rem;
 }
-  
-.home-research-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  border-radius: 17px 0 0 17px;
-  background: var(--card-accent);
-  opacity: 0.78;
-}
 
 .home-research-card--passive-cooling {
   --card-accent: var(--home-blue);
