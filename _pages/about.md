@@ -356,29 +356,36 @@ redirect_from:
 }
 
 .home-science-label--01 {
-  top: 8%;
-  left: 34%;
+  top: 11%;
+  left: 31%;
   --label-color: #16aacd;
+  animation-duration: 7.1s;
+  animation-delay: -0.7s;
 }
 
 .home-science-label--02 {
-  top: 24%;
-  right: 5%;
+  top: 27%;
+  right: 12%;
   --label-color: #dea84d;
+  animation-duration: 7.7s;
+  animation-delay: -2.4s;
 }
 
 .home-science-label--03 {
   left: 27%;
-  bottom: 14%;
+  bottom: 19%;
   --label-color: #16a6ca;
+  animation-duration: 6.6s;
+  animation-delay: -3.3s;
 }
 
 .home-science-label--04 {
-  right: 4%;
-  bottom: 7%;
+  right: 14%;
+  bottom: 13%;
   --label-color: #7f7cc7;
+  animation-duration: 7.3s;
+  animation-delay: -1.6s;
 }
-
 
 /* ==================================================
    Hero responsive
