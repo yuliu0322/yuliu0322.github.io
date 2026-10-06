@@ -44,89 +44,13 @@ redirect_from:
    ================================================== */
 
 .home-hero {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(275px, 0.72fr);
-  gap: 2.7rem;
-  align-items: center;
   max-width: 1080px;
-  min-height: 380px;
   margin: 0 0 2.8rem;
-  padding: 2.6rem 2.5rem;
-  overflow: hidden;
-  border: 1px solid #d8e9ef;
-  border-radius: 22px;
-  background:
-    radial-gradient(
-      circle at 88% 18%,
-      rgba(72, 169, 197, 0.13),
-      transparent 27%
-    ),
-    radial-gradient(
-      circle at 74% 92%,
-      rgba(219, 166, 85, 0.1),
-      transparent 25%
-    ),
-    linear-gradient(
-      135deg,
-      #f5fbfd 0%,
-      #ffffff 54%,
-      #fffaf2 100%
-    );
-  box-shadow: var(--home-shadow);
-}
-
-.home-hero::before {
-  content: "";
-  position: absolute;
-  top: -95px;
-  right: -85px;
-  width: 260px;
-  height: 260px;
-  border: 1px solid rgba(72, 169, 197, 0.1);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.home-hero::after {
-  content: "";
-  position: absolute;
-  right: 105px;
-  bottom: -175px;
-  width: 310px;
-  height: 310px;
-  border: 1px solid rgba(219, 166, 85, 0.11);
-  border-radius: 50%;
-  pointer-events: none;
 }
 
 /* A very soft light sweep across the hero card */
-.home-hero-shimmer {
-  position: absolute;
-  z-index: 1;
-  top: -65%;
-  left: -42%;
-  width: 28%;
-  height: 230%;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.42),
-    transparent
-  );
-  filter: blur(5px);
-  transform: rotate(18deg) translateX(-260%);
-  animation: home-hero-shimmer 12s ease-in-out infinite;
-}
-
-.home-hero-copy {
-  position: relative;
-  z-index: 2;
-}
-
 .home-greeting {
-  max-width: 680px;
+  max-width: 900px;
   margin: 0 0 0.9rem;
   color: var(--home-navy);
   font-size: clamp(1.85rem, 3.4vw, 2.55rem);
@@ -163,7 +87,7 @@ redirect_from:
 }
 
 .home-description {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0;
   color: var(--home-text);
   font-size: 0.98rem;
@@ -174,85 +98,6 @@ redirect_from:
   margin-top: 0.85rem;
 }
 
-
-/* ==================================================
-   Abstract scientific visualization
-   ================================================== */
-
-.home-visual {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 310px);
-  aspect-ratio: 1 / 1;
-  margin: auto;
-  transform: perspective(900px)
-    rotateX(var(--home-tilt-x, 0deg))
-    rotateY(var(--home-tilt-y, 0deg))
-    translate3d(var(--home-shift-x, 0px), var(--home-shift-y, 0px), 0);
-  transform-style: preserve-3d;
-  transition: transform 180ms ease-out;
-  will-change: transform;
-}
-
-/* Slowly moving energy haze behind the orbit */
-.home-visual::before {
-  content: "";
-  position: absolute;
-  inset: 15%;
-  z-index: -1;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 90deg,
-    rgba(72, 169, 197, 0),
-    rgba(72, 169, 197, 0.14),
-    rgba(219, 166, 85, 0.1),
-    rgba(72, 169, 197, 0)
-  );
-  filter: blur(17px);
-  animation: home-energy-spin 18s linear infinite;
-}
-
-/* Outer rotating orbit */
-.home-visual-orbit {
-  position: absolute;
-  inset: 6%;
-  border: 1.5px dashed rgba(72, 169, 197, 0.31);
-  border-radius: 50%;
-  animation: home-orbit-rotate 36s linear infinite;
-}
-
-.home-visual-orbit::before {
-  content: "";
-  position: absolute;
-  top: 13%;
-  right: 5%;
-  width: 11px;
-  height: 11px;
-  border: 2px solid var(--home-blue);
-  border-radius: 50%;
-  background: #f7fcfd;
-}
-
-/* Inner orbit */
-.home-visual-orbit-inner {
-  position: absolute;
-  inset: 21%;
-  border: 1.5px solid rgba(219, 166, 85, 0.31);
-  border-radius: 50%;
-  animation: home-orbit-rotate-reverse 27s linear infinite;
-}
-
-.home-visual-orbit-inner::after {
-  content: "";
-  position: absolute;
-  bottom: 8%;
-  left: 8%;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--home-gold);
-  box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
-}
 
 /* ==================================================
    Soft flowing ocean currents
@@ -680,94 +525,6 @@ redirect_from:
 
 
 /* ==================================================
-   Animation
-   ================================================== */
-
-.home-hero,
-.home-section {
-  animation: home-reveal 0.7s ease both;
-}
-
-.home-section {
-  animation-delay: 0.08s;
-}
-
-.home-beyond-section {
-  animation-delay: 0.14s;
-}
-
-@keyframes home-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(13px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes home-orbit-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes home-orbit-rotate-reverse {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes home-node-float {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 10px);
-  }
-
-  50% {
-    transform: translate3d(0, -7px, 18px);
-  }
-}
-
-@keyframes home-energy-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes home-hero-shimmer {
-  0%,
-  58% {
-    opacity: 0;
-    transform: rotate(18deg) translateX(-260%);
-  }
-
-  64% {
-    opacity: 0.72;
-  }
-
-  78%,
-  100% {
-    opacity: 0;
-    transform: rotate(18deg) translateX(720%);
-  }
-}
-
-@keyframes home-particle-float {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(5px, -8px);
-  }
-}
-
-
-/* ==================================================
    Dark mode
    ================================================== */
 
@@ -782,45 +539,10 @@ html[data-theme="dark"] .home-welcome {
   --home-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
 }
 
-html[data-theme="dark"] .home-hero {
-  border-color: #4b5962;
-  background:
-    radial-gradient(
-      circle at 88% 18%,
-      rgba(101, 194, 221, 0.12),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 72% 92%,
-      rgba(219, 166, 85, 0.09),
-      transparent 25%
-    ),
-    linear-gradient(
-      135deg,
-      #2d3940 0%,
-      #30363c 58%,
-      #3c3831 100%
-    );
-}
-
 html[data-theme="dark"] .home-keyword,
-html[data-theme="dark"] .home-visual-node {
   color: #d8e1e8;
   border-color: #52606a;
   background: rgba(52, 58, 64, 0.94);
-}
-
-html[data-theme="dark"] .home-hero-shimmer {
-  opacity: 0.25;
-  mix-blend-mode: soft-light;
-}
-
-html[data-theme="dark"] .home-research-card {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-}
-
-html[data-theme="dark"] .home-research-card:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -828,28 +550,14 @@ html[data-theme="dark"] .home-research-card:hover {
    Responsive layout
    ================================================== */
 
-@media (max-width: 900px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 1.6rem;
-  }
-
-  .home-visual {
-    width: min(100%, 280px);
-  }
-}
-
 @media (max-width: 768px) {
   .home-welcome {
     margin-top: 0;
   }
 
-  .home-hero {
-    min-height: auto;
-    margin-bottom: 2.3rem;
-    padding: 1.7rem 1.35rem 1.9rem;
-    border-radius: 17px;
-  }
+.home-hero {
+  margin-bottom: 2.3rem;
+}
 
   .home-greeting {
     font-size: 1.75rem;
@@ -863,10 +571,6 @@ html[data-theme="dark"] .home-research-card:hover {
   .home-beyond-copy p {
     font-size: 0.94rem;
     line-height: 1.74;
-  }
-
-  .home-visual {
-    width: 250px;
   }
 
   .home-section {
@@ -892,15 +596,6 @@ html[data-theme="dark"] .home-research-card:hover {
 }
 
 @media (max-width: 480px) {
-  .home-visual {
-    width: 215px;
-  }
-
-  .home-visual-node {
-    padding: 6px 8px;
-    font-size: 0.61rem;
-  }
-
   .home-keywords {
     gap: 6px;
   }
@@ -910,30 +605,6 @@ html[data-theme="dark"] .home-research-card:hover {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .home-hero,
-  .home-section,
-  .home-visual-orbit,
-  .home-visual-orbit-inner,
-  .home-ocean-current,
-  .home-visual::before,
-  .home-visual-node,
-  .home-microsphere,
-  .home-hero-shimmer {
-    animation: none;
-  }
-
-  .home-visual {
-    transform: none !important;
-    transition: none;
-  }
-
-  .home-research-card,
-  .home-research-card::after,
-  .home-interest {
-    transition: none;
-  }
-}
 </style>
 
 <div class="home-welcome">
@@ -962,43 +633,6 @@ html[data-theme="dark"] .home-research-card:hover {
     engineering to develop practical solutions for aquatic animal health,
     seafood quality, and sustainable food preservation.
   </p>
-
-</div>
-
-<!-- Abstract research visualization -->
-
-<div
-  class="home-visual"
-  role="img"
-  aria-label="Abstract visualization of four interconnected research areas"
->
-
-  <div class="home-visual-orbit"></div>
-  <div class="home-visual-orbit-inner"></div>
-
-  <!-- Soft flowing ocean currents -->
-
-  <div class="home-ocean-current" aria-hidden="true"><span class="home-ocean-wave home-ocean-wave--one"></span><span class="home-ocean-wave home-ocean-wave--two"></span><span class="home-ocean-wave home-ocean-wave--three"></span></div>
-
-  <div class="home-visual-node home-visual-node--aquaculture">
-    Sustainable Aquaculture
-  </div>
-
-  <div class="home-visual-node home-visual-node--passive-cooling">
-    Passive Cooling Materials
-  </div>
-
-  <div class="home-visual-node home-visual-node--seafood-science">
-    Seafood Science
-  </div>
-
-  <div class="home-visual-node home-visual-node--oral-delivery">
-    Oral Delivery Systems
-  </div>
-
-<span class="home-microsphere home-microsphere--one"></span>
-<span class="home-microsphere home-microsphere--two"></span>
-<span class="home-microsphere home-microsphere--three"></span>
 
 </div>
 
@@ -1160,44 +794,3 @@ html[data-theme="dark"] .home-research-card:hover {
   </section>
 
 </div>
-
-<script>
-(function () {
-  const hero = document.querySelector(".home-hero");
-  const visual = hero && hero.querySelector(".home-visual");
-  const allowMotion = window.matchMedia(
-    "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
-  );
-
-  if (!hero || !visual) return;
-
-  let frame = null;
-
-  function resetVisual() {
-    visual.style.setProperty("--home-tilt-x", "0deg");
-    visual.style.setProperty("--home-tilt-y", "0deg");
-    visual.style.setProperty("--home-shift-x", "0px");
-    visual.style.setProperty("--home-shift-y", "0px");
-  }
-
-  hero.addEventListener("pointermove", function (event) {
-    if (!allowMotion.matches) return;
-
-    const rect = hero.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-
-    if (frame) cancelAnimationFrame(frame);
-
-    frame = requestAnimationFrame(function () {
-      visual.style.setProperty("--home-tilt-x", (-y * 5).toFixed(2) + "deg");
-      visual.style.setProperty("--home-tilt-y", (x * 6).toFixed(2) + "deg");
-      visual.style.setProperty("--home-shift-x", (x * 7).toFixed(1) + "px");
-      visual.style.setProperty("--home-shift-y", (y * 5).toFixed(1) + "px");
-    });
-  });
-
-  hero.addEventListener("pointerleave", resetVisual);
-  allowMotion.addEventListener && allowMotion.addEventListener("change", resetVisual);
-})();
-</script>
