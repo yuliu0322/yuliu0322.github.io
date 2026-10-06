@@ -82,7 +82,7 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
 #publication-search.publication-search:focus {
   border-color: var(--pub-blue) !important;
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(82, 173, 200, 0.12) !important;
+  box-shadow: none !important;
 }
 
 #publication-filter-button.publication-filter-button {
@@ -107,18 +107,11 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   font-weight: 600 !important;
   line-height: 1 !important;
   cursor: pointer;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
 }
 
 #publication-filter-button.publication-filter-button:hover,
 #publication-filter-button.publication-filter-button[aria-expanded="true"] {
   background: var(--pub-gold-hover) !important;
-}
-
-#publication-filter-button.publication-filter-button:hover {
-  transform: translateY(-1px);
 }
 
 #publication-filter-button.publication-filter-button svg {
@@ -212,17 +205,6 @@ button.publication-filter-option.is-active {
   border: 1px solid #d8e2e8;
   border-radius: 14px;
   background: #ffffff;
-  box-shadow: 0 3px 14px rgba(35, 48, 68, 0.08);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.publication-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--pub-blue);
-  box-shadow: 0 8px 24px rgba(35, 48, 68, 0.14);
 }
 
 /* Patent: text only */
@@ -362,10 +344,6 @@ button.publication-filter-option.is-active {
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
-  transition:
-    color 0.2s ease,
-    border-color 0.2s ease,
-    background-color 0.2s ease;
 }
 
 .publication-action-button:hover,
@@ -475,12 +453,6 @@ html[data-theme="dark"] .summary-toggle[aria-expanded="true"] {
 html[data-theme="dark"] .publication-card {
   border-color: var(--pub-border);
   background: #343a40;
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
-}
-
-html[data-theme="dark"] .publication-card:hover {
-  border-color: var(--pub-blue);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 }
 
 html[data-theme="dark"] .publication-image-box {
