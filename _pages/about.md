@@ -9,1242 +9,1195 @@ redirect_from:
 ---
 
 <style>
-.home-page {
-  --navy: #203653;
-  --text: #52657e;
-  --muted: #7f91a3;
-  --cyan: #19add2;
-  --cyan-soft: #eaf8fc;
-  --gold: #eab35c;
-  --purple: #7777c9;
-  --border: #d5e9ef;
-  --shadow: 0 12px 34px rgba(38, 70, 92, 0.07);
+   
+/* ==================================================
+   Homepage design system
+   ================================================== */
+
+.home-welcome {
+  --home-navy: #24344d;
+  --home-text: #536174;
+  --home-muted: #738092;
+  --home-blue: #48a9c5;
+  --home-blue-dark: #267f9c;
+  --home-gold: #dba655;
+  --home-green: #65aa91;
+  --home-purple: #8986bd;
+  --home-surface: #ffffff;
+  --home-border: #dde8ed;
+  --home-shadow: 0 14px 36px rgba(35, 55, 75, 0.08);
 
   width: 100%;
-  color: var(--text);
+  margin-top: -0.7rem;
+  color: var(--home-text);
 }
 
-.home-page *,
-.home-page *::before,
-.home-page *::after {
+.home-welcome *,
+.home-welcome *::before,
+.home-welcome *::after {
   box-sizing: border-box;
 }
 
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* ==================================================
+   Hero section
+   ================================================== */
 
 .home-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(275px, 0.72fr);
+  gap: 2.7rem;
   align-items: center;
-  gap: 1rem;
-
-  min-height: 390px;
-  margin-bottom: 2.5rem;
-  padding: 2.7rem 2.5rem;
-
+  max-width: 1080px;
+  min-height: 380px;
+  margin: 0 0 2.8rem;
+  padding: 2.6rem 2.5rem;
   overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 21px;
-
+  border: 1px solid #d8e9ef;
+  border-radius: 22px;
   background:
     radial-gradient(
-      circle at 88% 15%,
-      rgba(25, 173, 210, 0.10),
-      transparent 30%
+      circle at 88% 18%,
+      rgba(72, 169, 197, 0.13),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 74% 92%,
+      rgba(219, 166, 85, 0.1),
+      transparent 25%
     ),
     linear-gradient(
       135deg,
-      #ffffff 0%,
-      #fbfeff 58%,
-      #f6fbfd 100%
+      #f5fbfd 0%,
+      #ffffff 54%,
+      #fffaf2 100%
     );
-
-  box-shadow: var(--shadow);
+  box-shadow: var(--home-shadow);
 }
 
 .home-hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: -95px;
+  right: -85px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(72, 169, 197, 0.1);
+  border-radius: 50%;
   pointer-events: none;
-
-  background-image:
-    linear-gradient(
-      rgba(25, 173, 210, 0.028) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(25, 173, 210, 0.028) 1px,
-      transparent 1px
-    );
-
-  background-size: 38px 38px;
-
-  -webkit-mask-image:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      transparent 45%,
-      #000 70%,
-      #000 100%
-    );
-
-  mask-image:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      transparent 45%,
-      #000 70%,
-      #000 100%
-    );
 }
 
+.home-hero::after {
+  content: "";
+  position: absolute;
+  right: 105px;
+  bottom: -175px;
+  width: 310px;
+  height: 310px;
+  border: 1px solid rgba(219, 166, 85, 0.11);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-/* =========================================================
-   HERO TEXT
-   ========================================================= */
+/* A very soft light sweep across the hero card */
+.home-hero-shimmer {
+  position: absolute;
+  z-index: 1;
+  top: -65%;
+  left: -42%;
+  width: 28%;
+  height: 230%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.42),
+    transparent
+  );
+  filter: blur(5px);
+  transform: rotate(18deg) translateX(-260%);
+  animation: home-hero-shimmer 12s ease-in-out infinite;
+}
 
 .home-hero-copy {
   position: relative;
-  z-index: 5;
-  min-width: 0;
+  z-index: 2;
 }
 
-.home-title {
-  margin: 0 0 1.35rem;
-
-  color: var(--navy);
-
-  font-size: clamp(2rem, 3vw, 2.75rem);
-  font-weight: 780;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-
-  white-space: nowrap;
+.home-greeting {
+  max-width: 680px;
+  margin: 0 0 0.9rem;
+  color: var(--home-navy);
+  font-size: clamp(1.85rem, 3.4vw, 2.55rem);
+  font-weight: 760;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
-.home-title-name {
+.home-greeting-highlight {
   position: relative;
   display: inline-block;
-  color: #188fb4;
+  color: var(--home-blue-dark);
 }
 
-.home-title-name::after {
+.home-greeting-highlight::after {
   content: "";
   position: absolute;
   right: 0;
-  bottom: -8px;
+  bottom: -3px;
   left: 0;
-
-  height: 4px;
+  height: 5px;
   border-radius: 999px;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(234, 179, 92, 0.65),
-      rgba(234, 179, 92, 0.22)
-    );
-
-  transform: rotate(-1deg);
+  background: rgba(219, 166, 85, 0.38);
+  transform: rotate(-1.5deg);
 }
 
-.home-intro {
-  max-width: 610px;
+.home-tagline {
+  max-width: 690px;
+  margin: 0 0 1.4rem;
+  color: var(--home-navy);
+  font-size: 1.08rem;
+  font-weight: 620;
+  line-height: 1.65;
+}
+
+.home-description {
+  max-width: 700px;
   margin: 0;
-
-  color: var(--text);
-
-  font-size: 0.92rem;
-  line-height: 1.72;
+  color: var(--home-text);
+  font-size: 0.98rem;
+  line-height: 1.82;
 }
 
-.home-intro + .home-intro {
+.home-description + .home-description {
   margin-top: 0.85rem;
 }
 
-.home-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
 
-  margin-top: 1.35rem;
-  padding: 9px 17px;
+/* ==================================================
+   Abstract scientific visualization
+   ================================================== */
 
-  color: #168caf !important;
-
-  border: 1px solid rgba(25, 173, 210, 0.28);
-  border-radius: 999px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff,
-      #eefafd
-    );
-
-  box-shadow:
-    0 6px 18px rgba(37, 89, 108, 0.06);
-
-  font-size: 0.73rem;
-  font-weight: 720;
-
-  text-decoration: none !important;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.home-more:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 22px rgba(37, 89, 108, 0.11);
-}
-
-.home-more-arrow {
-  font-size: 1rem;
-}
-
-
-/* =========================================================
-   SCIENTIFIC NETWORK
-   ========================================================= */
-
-.research-network {
+.home-visual {
   position: relative;
-  z-index: 3;
-
-  width: 100%;
-  height: 310px;
+  z-index: 2;
+  width: min(100%, 310px);
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  transform: perspective(900px)
+    rotateX(var(--home-tilt-x, 0deg))
+    rotateY(var(--home-tilt-y, 0deg))
+    translate3d(var(--home-shift-x, 0px), var(--home-shift-y, 0px), 0);
+  transform-style: preserve-3d;
+  transition: transform 180ms ease-out;
+  will-change: transform;
 }
 
-.research-wave {
-  position: absolute;
-  inset: 15px -20px 0 -30px;
-  width: calc(100% + 50px);
-  height: calc(100% - 15px);
-
-  overflow: visible;
-  opacity: 0.85;
-}
-
-.research-wave .wave-main {
-  fill: none;
-  stroke: rgba(25, 173, 210, 0.45);
-  stroke-width: 1.2;
-}
-
-.research-wave .wave-soft {
-  fill: none;
-  stroke: rgba(25, 173, 210, 0.16);
-  stroke-width: 0.7;
-}
-
-.research-wave .wave-gold {
-  fill: none;
-  stroke: rgba(234, 179, 92, 0.28);
-  stroke-width: 0.8;
-}
-
-.research-wave .connector {
-  fill: none;
-  stroke: rgba(25, 173, 210, 0.22);
-  stroke-width: 0.8;
-  stroke-dasharray: 3 5;
-}
-
-.research-wave .dot {
-  fill: rgba(25, 173, 210, 0.72);
-}
-
-.research-wave .dot-soft {
-  fill: rgba(25, 173, 210, 0.24);
-}
-
-
-/* =========================================================
-   TOPICS
-   ========================================================= */
-
-.research-topic {
-  position: absolute;
-  z-index: 6;
-
-  min-width: 155px;
-
-  color: var(--navy);
-
-  transition:
-    transform 0.22s ease;
-}
-
-.research-topic:hover {
-  transform: translateY(-3px);
-}
-
-.research-topic::before {
+/* Slowly moving energy haze behind the orbit */
+.home-visual::before {
   content: "";
   position: absolute;
-
-  top: -26px;
-  left: 0;
-
-  width: 1px;
-  height: 21px;
-
-  background:
-    linear-gradient(
-      to bottom,
-      transparent,
-      var(--topic-color)
-    );
-
-  opacity: 0.65;
+  inset: 15%;
+  z-index: -1;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg,
+    rgba(72, 169, 197, 0),
+    rgba(72, 169, 197, 0.14),
+    rgba(219, 166, 85, 0.1),
+    rgba(72, 169, 197, 0)
+  );
+  filter: blur(17px);
+  animation: home-energy-spin 18s linear infinite;
 }
 
-.research-topic::after {
+/* Outer rotating orbit */
+.home-visual-orbit {
+  position: absolute;
+  inset: 6%;
+  border: 1.5px dashed rgba(72, 169, 197, 0.31);
+  border-radius: 50%;
+  animation: home-orbit-rotate 36s linear infinite;
+}
+
+.home-visual-orbit::before {
   content: "";
   position: absolute;
+  top: 13%;
+  right: 5%;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--home-blue);
+  border-radius: 50%;
+  background: #f7fcfd;
+}
 
-  top: -31px;
-  left: -4px;
+/* Inner orbit */
+.home-visual-orbit-inner {
+  position: absolute;
+  inset: 21%;
+  border: 1.5px solid rgba(219, 166, 85, 0.31);
+  border-radius: 50%;
+  animation: home-orbit-rotate-reverse 27s linear infinite;
+}
 
+.home-visual-orbit-inner::after {
+  content: "";
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
   width: 9px;
   height: 9px;
-
   border-radius: 50%;
-
-  background: var(--topic-color);
-
-  box-shadow:
-    0 0 0 5px
-    color-mix(
-      in srgb,
-      var(--topic-color) 12%,
-      transparent
-    );
+  background: var(--home-gold);
+  box-shadow: 0 0 0 5px rgba(219, 166, 85, 0.12);
 }
 
-.research-topic-number {
-  display: block;
+/* ==================================================
+   Soft flowing ocean currents
+   ================================================== */
 
-  margin-bottom: 2px;
+.home-ocean-current {
+  position: absolute;
+  inset: 27% 17%;
+  z-index: 1;
 
-  color: var(--topic-color);
+  width: 66%;
+  height: 46%;
 
-  font-size: 1.25rem;
-  font-weight: 800;
-  line-height: 1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.9;
 }
 
-.research-topic-title {
-  display: block;
+.home-ocean-wave {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 58%;
+  border-style: solid;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+}
 
-  color: var(--navy);
+.home-ocean-wave--one {
+  top: 16%;
+  border-top-color: rgba(112, 202, 221, 0.46);
+  border-width: 2px;
+  animation: home-ocean-flow-one 7s ease-in-out infinite;
+}
 
-  font-size: 0.61rem;
-  font-weight: 800;
-  line-height: 1.2;
+.home-ocean-wave--two {
+  top: 39%;
+  border-top-color: rgba(154, 219, 232, 0.4);
+  border-width: 1.5px;
+  animation: home-ocean-flow-two 9s ease-in-out infinite;
+}
 
+.home-ocean-wave--three {
+  top: 62%;
+  border-top-color: rgba(188, 231, 239, 0.65);
+  border-width: 1px;
+  animation: home-ocean-flow-three 11s ease-in-out infinite;
+}
+
+@keyframes home-ocean-flow-one {
+  0%, 100% { transform: translateX(-5%) translateY(0) rotate(-2deg); }
+  50% { transform: translateX(5%) translateY(-4px) rotate(2deg); }
+}
+
+@keyframes home-ocean-flow-two {
+  0%, 100% { transform: translateX(5%) translateY(0) rotate(2deg); }
+  50% { transform: translateX(-5%) translateY(4px) rotate(-2deg); }
+}
+
+@keyframes home-ocean-flow-three {
+  0%, 100% { transform: translateX(-3%) translateY(1px) rotate(-1deg); }
+  50% { transform: translateX(4%) translateY(-3px) rotate(1deg); }
+}
+  
+/* Research labels */
+.home-visual-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  color: var(--home-navy);
+  border: 1px solid rgba(72, 169, 197, 0.19);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 16px rgba(35, 55, 75, 0.08);
+  font-size: 0.69rem;
+  font-weight: 700;
   white-space: nowrap;
+  animation: home-node-float var(--float-time, 6.4s) ease-in-out infinite;
+  transition: box-shadow 180ms ease, background-color 180ms ease;
+  will-change: transform;
 }
 
-.research-topic-meta {
-  display: block;
-
-  margin-top: 3px;
-
-  color: var(--muted);
-
-  font-size: 0.46rem;
-  font-weight: 550;
-
-  white-space: nowrap;
+.home-visual-node:hover {
+  animation-play-state: paused;
+  background: #ffffff;
+  box-shadow: 0 11px 24px rgba(35, 55, 75, 0.14);
+  transform: translate3d(0, -6px, 18px) scale(1.025);
 }
 
-.topic-aquaculture {
-  top: 18px;
-  left: 43%;
-
-  --topic-color: #18acd0;
+.home-visual-node::before {
+  content: "";
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--node-color, var(--home-blue));
 }
 
-.topic-delivery {
-  top: 80px;
+.home-visual-node--aquaculture {
+  top: 6%;
+  left: 3%;
+  --node-color: var(--home-green);
+  --float-time: 6.8s;
+}
+
+.home-visual-node--passive-cooling {
+  bottom: 28%;
+  left: -6%;
+  --node-color: var(--home-blue);
+  --float-time: 7.6s;
+  animation-delay: -1.4s;
+}
+
+.home-visual-node--seafood-science {
+  right: 4%;
+  bottom: 7%;
+  --node-color: var(--home-purple);
+  --float-time: 6.1s;
+  animation-delay: -2.7s;
+}
+
+.home-visual-node--oral-delivery {
+  top: 32%;
   right: -2%;
-
-  --topic-color: #e2a646;
+  --node-color: var(--home-gold);
+  --float-time: 7.1s;
+  animation-delay: -3.8s;
+}
+  
+/* Small decorative particles */
+.home-microsphere {
+  position: absolute;
+  border: 1px solid rgba(72, 169, 197, 0.28);
+  border-radius: 50%;
+  background: rgba(123, 203, 216, 0.12);
+  animation: home-particle-float 7s ease-in-out infinite;
 }
 
-.topic-cooling {
-  bottom: 35px;
-  left: 34%;
-
-  --topic-color: #169fc2;
+.home-microsphere--one {
+  top: 20%;
+  left: 30%;
+  width: 16px;
+  height: 16px;
 }
 
-.topic-seafood {
-  right: 2%;
-  bottom: 5px;
+.home-microsphere--two {
+  top: 61%;
+  right: 27%;
+  width: 11px;
+  height: 11px;
+  animation-delay: -2s;
+}
 
-  --topic-color: #7877c9;
+.home-microsphere--three {
+  right: 22%;
+  bottom: 22%;
+  width: 7px;
+  height: 7px;
+  border-color: rgba(219, 166, 85, 0.31);
+  background: rgba(219, 166, 85, 0.18);
+  animation-delay: -4s;
 }
 
 
-/* =========================================================
-   SECTION
-   ========================================================= */
+/* ==================================================
+   Section styling
+   ================================================== */
 
 .home-section {
-  margin-bottom: 2.7rem;
+  max-width: 1080px;
+  margin: 0 0 2.9rem;
 }
 
-.home-section-title {
+.home-section-header {
+  display: block;
+  margin-bottom: 1.35rem;
+}
+
+.home-section-heading {
   position: relative;
   display: inline-block;
-
-  margin: 0 0 1.35rem;
-  padding-bottom: 10px;
-
-  color: var(--navy);
-
-  font-size: 1.35rem;
-  font-weight: 770;
-  letter-spacing: -0.025em;
+  margin: 0;
+  padding-bottom: 11px;
+  color: var(--home-navy);
+  font-size: 1.34rem;
+  line-height: 1.35;
 }
 
-.home-section-title::after {
+.home-section-heading::after {
   content: "";
-
   position: absolute;
   bottom: 0;
   left: 0;
-
-  width: 62px;
+  width: 68px;
   height: 3px;
-
   border-radius: 999px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--cyan),
-      rgba(25, 173, 210, 0.14)
-    );
+  background: linear-gradient(
+    90deg,
+    var(--home-gold),
+    #efc878
+  );
 }
 
 
-/* =========================================================
-   PROJECT GRID
-   ========================================================= */
+/* ==================================================
+   Research cards
+   ================================================== */
 
-.project-grid {
+.home-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
-.project-card {
-  --accent: var(--cyan);
-  --accent-rgb: 25, 173, 210;
+.home-research-card {
+  --card-accent: var(--home-blue);
 
   position: relative;
-
-  min-height: 225px;
-  padding: 1.35rem 1.45rem 1.25rem 6.6rem;
-
+  min-height: 205px;
+  padding: 1.45rem 1.45rem 1.35rem;
   overflow: hidden;
-
-  border: 1px solid var(--border);
+  border: 1px solid var(--home-border);
   border-radius: 17px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffffff 0%,
-      #ffffff 64%,
-      rgba(var(--accent-rgb), 0.035) 100%
-    );
-
-  box-shadow:
-    0 7px 24px rgba(40, 70, 90, 0.045);
-
+  background: var(--home-surface);
+  box-shadow: 0 6px 20px rgba(35, 55, 75, 0.045);
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 15px 32px rgba(40, 70, 90, 0.09);
-}
-
-.project-card--delivery {
-  --accent: #eab35c;
-  --accent-rgb: 234, 179, 92;
-}
-
-.project-card::before {
+.home-research-card::before {
   content: "";
-
   position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-
-  background-image:
-    repeating-radial-gradient(
-      ellipse at 102% 115%,
-      transparent 0,
-      transparent 13px,
-      rgba(var(--accent-rgb), 0.075) 14px,
-      transparent 15px
-    );
-
-  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 17px 0 0 17px;
+  background: var(--card-accent);
+  opacity: 0.78;
 }
 
-.project-number {
+.home-research-card::after {
+  content: "";
   position: absolute;
-  z-index: 2;
-
-  top: 1.1rem;
-  left: 1.45rem;
-
-  color: rgba(var(--accent-rgb), 0.64);
-
-  font-size: 3.15rem;
-  font-weight: 800;
-  line-height: 1;
-
-  letter-spacing: -0.06em;
+  right: -45px;
+  bottom: -52px;
+  width: 135px;
+  height: 135px;
+  border: 1px solid rgba(72, 169, 197, 0.12);
+  border-radius: 50%;
+  transition: transform 0.35s ease;
 }
 
-.project-content {
+.home-research-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--card-accent);
+  box-shadow: 0 15px 30px rgba(35, 55, 75, 0.1);
+}
+
+.home-research-card:hover::after {
+  transform: scale(1.15);
+}
+
+.home-research-card--passive-cooling {
+  --card-accent: var(--home-blue);
+}
+
+.home-research-card--oral-delivery {
+  --card-accent: var(--home-gold);
+}
+
+.home-card-header {
   position: relative;
-  z-index: 3;
+  z-index: 1;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-bottom: 0.9rem;
 }
 
-.project-meta {
-  margin-bottom: 0.75rem;
+.home-card-icon {
+  display: inline-flex;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  color: var(--card-accent);
+  border-radius: 14px;
+  background: rgba(72, 169, 197, 0.1);
+}
 
-  color: #8a9aad;
+.home-research-card--passive-cooling .home-card-icon {
+  background: rgba(72, 169, 197, 0.1);
+}
 
-  font-size: 0.53rem;
+.home-research-card--oral-delivery .home-card-icon {
+  background: rgba(219, 166, 85, 0.12);
+}
+
+.home-card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-card-number {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--home-muted);
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+}
+
+.home-card-title {
+  margin: 0;
+  color: var(--home-navy);
+  font-size: 1.02rem;
   font-weight: 720;
-  letter-spacing: 0.22em;
-  line-height: 1.3;
-  text-transform: uppercase;
+  line-height: 1.4;
 }
 
-.project-title {
-  margin: 0 0 0.55rem;
-
-  color: var(--navy);
-
-  font-size: 1rem;
-  font-weight: 760;
-  line-height: 1.3;
+.home-card-text {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--home-text);
+  font-size: 0.91rem;
+  line-height: 1.72;
 }
 
-.project-description {
-  max-width: 480px;
-  margin: 0 0 1rem;
-
-  color: var(--text);
-
-  font-size: 0.82rem;
-  line-height: 1.6;
-}
-
-.project-tags {
+.home-card-tags {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 6px;
+  margin-top: 1rem;
 }
 
-.project-tag {
-  padding: 4px 10px;
-
-  color: var(--text);
-
-  border: 1px solid #dce7ec;
+.home-card-tag {
+  padding: 4px 8px;
+  color: var(--home-muted);
+  border: 1px solid var(--home-border);
   border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.86);
-
-  font-size: 0.6rem;
+  font-size: 0.66rem;
   font-weight: 650;
 }
 
 
-/* =========================================================
-   BEYOND
-   ========================================================= */
+/* ==================================================
+   Beyond the laboratory
+   ================================================== */
 
-.beyond-layout {
+.home-beyond-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(380px, 1.05fr);
-  gap: 2.2rem;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 2.1rem;
   align-items: center;
 }
 
-.beyond-copy {
-  min-width: 0;
+.home-beyond-copy p {
+  margin: 0 0 1rem;
+  color: var(--home-text);
+  font-size: 0.97rem;
+  line-height: 1.8;
 }
 
-.beyond-lead {
-  margin: 0 0 0.7rem;
-
-  color: var(--navy);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
+.home-beyond-copy p:last-child {
+  margin-bottom: 0;
 }
 
-.beyond-lead span {
-  color: #168fb7;
-}
-
-.beyond-text {
-  margin: 0 0 0.65rem;
-
-  color: var(--text);
-
-  font-size: 0.78rem;
-  line-height: 1.62;
-}
-
-
-/* =========================================================
-   INTERESTS
-   ========================================================= */
-
-.interest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 9px;
-}
-
-.interest-card {
-  position: relative;
-
+.home-interest-cloud {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-content: center;
+}
 
-  height: 92px;
-  padding: 0.7rem;
-
-  overflow: hidden;
-
-  border-radius: 10px;
-
-  color: #ffffff;
-
-  background-size: cover;
-  background-position: center;
-
-  box-shadow:
-    0 5px 16px rgba(30, 50, 70, 0.09);
-
-  isolation: isolate;
-
+.home-interest {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  color: var(--home-navy);
+  border: 1px solid var(--home-border);
+  border-radius: 999px;
+  background: var(--home-surface);
+  box-shadow: 0 4px 12px rgba(35, 55, 75, 0.04);
+  font-size: 0.78rem;
+  font-weight: 660;
   transition:
     transform 0.22s ease,
-    box-shadow 0.22s ease;
+    border-color 0.22s ease,
+    color 0.22s ease;
 }
 
-.interest-card::before {
-  content: "";
-
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(12, 27, 42, 0.64),
-      rgba(12, 27, 42, 0.03) 72%
-    );
+.home-interest:hover {
+  color: var(--home-blue-dark);
+  border-color: rgba(72, 169, 197, 0.48);
+  transform: translateY(-2px);
 }
 
-.interest-card:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 10px 22px rgba(30, 50, 70, 0.15);
-}
-
-.interest-card span {
-  font-size: 0.67rem;
-  font-weight: 700;
-
-  text-shadow:
-    0 1px 4px rgba(0, 0, 0, 0.38);
+.home-interest svg {
+  width: 17px;
+  height: 17px;
+  color: var(--home-blue-dark);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 
-/* Temporary visual backgrounds */
+/* ==================================================
+   Animation
+   ================================================== */
 
-.interest-travel {
-  background:
-    linear-gradient(
-      150deg,
-      rgba(20, 105, 130, 0.25),
-      rgba(15, 50, 75, 0.18)
-    ),
-    linear-gradient(
-      165deg,
-      #86c7dd 0%,
-      #c5e6e8 42%,
-      #4f8877 43%,
-      #294f4e 100%
-    );
+.home-hero,
+.home-section {
+  animation: home-reveal 0.7s ease both;
 }
 
-.interest-hiking {
-  background:
-    linear-gradient(
-      150deg,
-      rgba(20, 105, 130, 0.15),
-      rgba(15, 50, 75, 0.15)
-    ),
-    linear-gradient(
-      165deg,
-      #a7d3e5 0%,
-      #d9ebec 42%,
-      #688c68 43%,
-      #3c654d 100%
-    );
+.home-section {
+  animation-delay: 0.08s;
 }
 
-.interest-photo {
-  background:
-    linear-gradient(
-      150deg,
-      rgba(40, 45, 70, 0.10),
-      rgba(15, 25, 45, 0.28)
-    ),
-    linear-gradient(
-      165deg,
-      #f4b263 0%,
-      #df815d 40%,
-      #6f5366 41%,
-      #293746 100%
-    );
+.home-beyond-section {
+  animation-delay: 0.14s;
 }
 
-.interest-movies {
+@keyframes home-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(13px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-orbit-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-orbit-rotate-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes home-node-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 10px);
+  }
+
+  50% {
+    transform: translate3d(0, -7px, 18px);
+  }
+}
+
+@keyframes home-energy-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes home-hero-shimmer {
+  0%,
+  58% {
+    opacity: 0;
+    transform: rotate(18deg) translateX(-260%);
+  }
+
+  64% {
+    opacity: 0.72;
+  }
+
+  78%,
+  100% {
+    opacity: 0;
+    transform: rotate(18deg) translateX(720%);
+  }
+}
+
+@keyframes home-particle-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, -8px);
+  }
+}
+
+
+/* ==================================================
+   Dark mode
+   ================================================== */
+
+html[data-theme="dark"] .home-welcome {
+  --home-navy: #f1f5f8;
+  --home-text: #c7d0da;
+  --home-muted: #aeb9c4;
+  --home-blue: #65c2dd;
+  --home-blue-dark: #69c8e2;
+  --home-surface: #343a40;
+  --home-border: #4c5661;
+  --home-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+html[data-theme="dark"] .home-hero {
+  border-color: #4b5962;
   background:
     radial-gradient(
-      circle at 50% 22%,
-      #9b2937,
-      #401824 46%,
-      #171b26 100%
-    );
-}
-
-.interest-music {
-  background:
+      circle at 88% 18%,
+      rgba(101, 194, 221, 0.12),
+      transparent 28%
+    ),
     radial-gradient(
-      circle at 70% 28%,
-      #796e58,
-      #393933 42%,
-      #171d20 100%
-    );
-}
-
-.interest-baking {
-  background:
-    linear-gradient(
-      145deg,
-      #d8b488,
-      #a56e42 55%,
-      #5c3d2b
-    );
-}
-
-
-/* =========================================================
-   DARK MODE
-   ========================================================= */
-
-html[data-theme="dark"] .home-page {
-  --navy: #edf4f7;
-  --text: #c7d2dc;
-  --muted: #a4b2bd;
-  --border: #4c5a64;
-}
-
-html[data-theme="dark"] .home-hero,
-html[data-theme="dark"] .project-card {
-  background:
+      circle at 72% 92%,
+      rgba(219, 166, 85, 0.09),
+      transparent 25%
+    ),
     linear-gradient(
       135deg,
-      #30383e,
-      #343a40
+      #2d3940 0%,
+      #30363c 58%,
+      #3c3831 100%
     );
-
-  border-color: #4d5b65;
 }
 
-html[data-theme="dark"] .project-tag {
-  color: #c7d2dc;
-  border-color: #53616b;
-  background: #353d43;
+html[data-theme="dark"] .home-keyword,
+html[data-theme="dark"] .home-visual-node {
+  color: #d8e1e8;
+  border-color: #52606a;
+  background: rgba(52, 58, 64, 0.94);
+}
+
+html[data-theme="dark"] .home-hero-shimmer {
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
+}
+
+html[data-theme="dark"] .home-research-card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+html[data-theme="dark"] .home-research-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
 }
 
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+/* ==================================================
+   Responsive layout
+   ================================================== */
 
-@media screen and (max-width: 1180px) {
+@media (max-width: 900px) {
   .home-hero {
-    grid-template-columns:
-      minmax(0, 1.1fr)
-      minmax(320px, 0.9fr);
-
-    padding: 2.4rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
   }
 
-  .home-title {
-    font-size: clamp(1.9rem, 2.8vw, 2.45rem);
-  }
-
-  .research-topic-title {
-    font-size: 0.56rem;
+  .home-visual {
+    width: min(100%, 280px);
   }
 }
 
+@media (max-width: 768px) {
+  .home-welcome {
+    margin-top: 0;
+  }
 
-@media screen and (max-width: 900px) {
   .home-hero {
+    min-height: auto;
+    margin-bottom: 2.3rem;
+    padding: 1.7rem 1.35rem 1.9rem;
+    border-radius: 17px;
+  }
+
+  .home-greeting {
+    font-size: 1.75rem;
+  }
+
+  .home-tagline {
+    font-size: 1rem;
+  }
+
+  .home-description,
+  .home-beyond-copy p {
+    font-size: 0.94rem;
+    line-height: 1.74;
+  }
+
+  .home-visual {
+    width: 250px;
+  }
+
+  .home-section {
+    margin-bottom: 2.4rem;
+  }
+
+  .home-section-heading {
+    font-size: 1.22rem;
+  }
+
+  .home-research-grid {
     grid-template-columns: 1fr;
   }
 
-  .home-title {
-    white-space: normal;
+  .home-research-card {
+    min-height: auto;
   }
 
-  .research-network {
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
-  .project-grid {
+  .home-beyond-layout {
     grid-template-columns: 1fr;
-  }
-
-  .beyond-layout {
-    grid-template-columns: 1fr;
+    gap: 1.4rem;
   }
 }
 
-
-@media screen and (max-width: 650px) {
-  .home-hero {
-    padding: 1.6rem 1.2rem;
-    border-radius: 16px;
+@media (max-width: 480px) {
+  .home-visual {
+    width: 215px;
   }
 
-  .home-title {
-    font-size: 1.8rem;
+  .home-visual-node {
+    padding: 6px 8px;
+    font-size: 0.61rem;
   }
 
-  .home-intro {
-    font-size: 0.9rem;
+  .home-keywords {
+    gap: 6px;
   }
 
-  .research-network {
-    height: 285px;
-  }
-
-  .topic-aquaculture {
-    left: 30%;
-  }
-
-  .topic-cooling {
-    left: 24%;
-  }
-
-  .project-card {
-    padding:
-      5rem
-      1.2rem
-      1.25rem;
-  }
-
-  .project-number {
-    top: 1.2rem;
-    left: 1.2rem;
-  }
-
-  .interest-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .interest-card {
-    height: 100px;
+  .home-keyword {
+    font-size: 0.68rem;
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .home-hero,
+  .home-section,
+  .home-visual-orbit,
+  .home-visual-orbit-inner,
+  .home-ocean-current,
+  .home-visual::before,
+  .home-visual-node,
+  .home-microsphere,
+  .home-hero-shimmer {
+    animation: none;
+  }
+
+  .home-visual {
+    transform: none !important;
+    transition: none;
+  }
+
+  .home-research-card,
+  .home-research-card::after,
+  .home-interest {
+    transition: none;
+  }
+}
 </style>
 
+<div class="home-welcome">
 
-<div class="home-page">
-
-
-  <!-- HERO -->
+  <!-- Hero -->
 
   <section class="home-hero">
 
-    <div class="home-hero-copy">
-
-      <h1 class="home-title">
-        Welcome, I’m <span class="home-title-name">Yu Liu</span>.
-      </h1>
-
-      <p class="home-intro">
-        I am a Ph.D. student in the Department of Biological Systems Engineering
-        at Virginia Tech, and a member of both the Sustainable &amp; Intelligent
-        Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
-      </p>
-
-      <p class="home-intro">
-        My work connects food science, aquaculture, biomaterials, and food
-        engineering to develop practical solutions for aquatic animal health,
-        seafood quality, and sustainable food preservation.
-      </p>
-
-      <a class="home-more" href="/research/">
-        Learn more about my research
-        <span class="home-more-arrow">→</span>
-      </a>
-
-    </div>
-
-
-    <div class="research-network">
-
-
-      <svg
-        class="research-wave"
-        viewBox="0 0 620 320"
-        preserveAspectRatio="none"
-        aria-hidden="true">
-
-        <path
-          class="wave-main"
-          d="M0 220
-             C55 210 80 120 125 132
-             C170 144 185 225 225 214
-             C270 202 272 82 325 86
-             C378 90 370 215 423 211
-             C472 207 490 130 530 145
-             C570 160 580 205 620 195" />
-
-        <path
-          class="wave-main"
-          d="M0 235
-             C50 220 78 150 125 154
-             C175 158 185 245 230 232
-             C270 220 280 108 327 111
-             C375 114 386 230 430 228
-             C475 226 495 153 535 166
-             C575 179 590 215 620 211" />
-
-        <path
-          class="wave-soft"
-          d="M0 205
-             C65 180 80 92 128 105
-             C180 119 185 206 230 194
-             C280 181 283 61 330 64
-             C380 68 385 190 430 190
-             C480 189 498 106 540 120
-             C580 133 595 180 620 175" />
-
-        <path
-          class="wave-soft"
-          d="M0 250
-             C60 240 78 175 128 176
-             C180 178 190 258 235 248
-             C280 238 288 136 330 137
-             C380 139 390 246 435 244
-             C480 242 505 180 545 188
-             C585 196 600 228 620 226" />
-
-        <path
-          class="wave-gold"
-          d="M0 225
-             C75 190 110 170 160 180
-             C220 192 240 235 295 220
-             C350 205 375 145 425 151
-             C480 157 500 205 550 200
-             C580 197 600 182 620 176" />
-
-        <path
-          class="connector"
-          d="M125 40 V280" />
-
-        <path
-          class="connector"
-          d="M325 35 V286" />
-
-        <path
-          class="connector"
-          d="M505 65 V290" />
-
-        <circle class="dot" cx="125" cy="132" r="5" />
-        <circle class="dot" cx="225" cy="214" r="4" />
-        <circle class="dot" cx="325" cy="86" r="5" />
-        <circle class="dot" cx="423" cy="211" r="4" />
-        <circle class="dot" cx="530" cy="145" r="5" />
-
-        <circle class="dot-soft" cx="78" cy="182" r="3" />
-        <circle class="dot-soft" cx="170" cy="185" r="3" />
-        <circle class="dot-soft" cx="280" cy="156" r="3" />
-        <circle class="dot-soft" cx="382" cy="167" r="3" />
-        <circle class="dot-soft" cx="475" cy="184" r="3" />
-        <circle class="dot-soft" cx="575" cy="184" r="3" />
-
-      </svg>
-
-
-      <div class="research-topic topic-aquaculture">
-        <span class="research-topic-number">01</span>
-        <span class="research-topic-title">
-          SUSTAINABLE AQUACULTURE
-        </span>
-        <span class="research-topic-meta">
-          Health · Quality · Sustainability
-        </span>
-      </div>
-
-
-      <div class="research-topic topic-delivery">
-        <span class="research-topic-number">02</span>
-        <span class="research-topic-title">
-          ORAL DELIVERY SYSTEMS
-        </span>
-        <span class="research-topic-meta">
-          Vaccines · Probiotics · Bioactives
-        </span>
-      </div>
-
-
-      <div class="research-topic topic-cooling">
-        <span class="research-topic-number">03</span>
-        <span class="research-topic-title">
-          PASSIVE COOLING MATERIALS
-        </span>
-        <span class="research-topic-meta">
-          Biopolymers · Radiative Cooling
-        </span>
-      </div>
-
-
-      <div class="research-topic topic-seafood">
-        <span class="research-topic-number">04</span>
-        <span class="research-topic-title">
-          SEAFOOD SCIENCE
-        </span>
-        <span class="research-topic-meta">
-          Quality · Flavor · Preservation
-        </span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- WHAT I AM WORKING ON -->
-
-  <section class="home-section">
-
-    <h2 class="home-section-title">
-      What I Am Working On 🧑‍🔬
-    </h2>
-
-
-    <div class="project-grid">
-
-
-      <article class="project-card">
-
-        <span class="project-number">
-          01
-        </span>
-
-        <div class="project-content">
-
-          <div class="project-meta">
-            Biopolymers · Thermal Management
-          </div>
-
-          <h3 class="project-title">
-            Passive Cooling Materials
-          </h3>
-
-          <p class="project-description">
-            Developing bio-based materials that provide electricity-free
-            temperature reduction for sustainable food preservation and
-            cold-chain management.
-          </p>
-
-          <div class="project-tags">
-
-            <span class="project-tag">
-              Passive Cooling
-            </span>
-
-            <span class="project-tag">
-              Food Packaging
-            </span>
-
-            <span class="project-tag">
-              Food Preservation
-            </span>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-
-      <article class="project-card project-card--delivery">
-
-        <span class="project-number">
-          02
-        </span>
-
-        <div class="project-content">
-
-          <div class="project-meta">
-            Drug Delivery · Aquatic Health
-          </div>
-
-          <h3 class="project-title">
-            Oral Delivery Systems
-          </h3>
-
-          <p class="project-description">
-            Developing PLGA-based delivery systems that protect vaccines and
-            immunostimulants during digestive transit and deliver them to
-            immune-responsive sites.
-          </p>
-
-          <div class="project-tags">
-
-            <span class="project-tag">
-              PLGA-based Delivery
-            </span>
-
-            <span class="project-tag">
-              Oral Vaccines
-            </span>
-
-            <span class="project-tag">
-              Functional Aquafeeds
-            </span>
-
-          </div>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- BEYOND THE LABORATORY -->
-
-  <section class="home-section">
-
-    <h2 class="home-section-title">
-      Beyond the Laboratory 🏃‍♂️
-    </h2>
-
-
-    <div class="beyond-layout">
-
-
-      <div class="beyond-copy">
-
-        <h3 class="beyond-lead">
-          Curiosity <span>beyond research.</span>
-        </h3>
-
-        <p class="beyond-text">
-          Outside of the laboratory, I enjoy traveling, hiking, photography,
-          watching movies, and exploring different genres of music.
-          Photography allows me to document landscapes, cultures, and everyday
-          moments while encouraging me to observe the world from different
-          perspectives.
-        </p>
-
-        <p class="beyond-text">
-          These experiences help me maintain curiosity, creativity, and
-          balance—qualities that I also value in scientific research and
-          problem-solving.
-        </p>
-
-      </div>
-
-
-      <div class="interest-grid">
-
-        <div class="interest-card interest-travel">
-          <span>Travel</span>
-        </div>
-
-        <div class="interest-card interest-hiking">
-          <span>Hiking</span>
-        </div>
-
-        <div class="interest-card interest-photo">
-          <span>Photography</span>
-        </div>
-
-        <div class="interest-card interest-movies">
-          <span>Movies</span>
-        </div>
-
-        <div class="interest-card interest-music">
-          <span>Music</span>
-        </div>
-
-        <div class="interest-card interest-baking">
-          <span>Baking</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
+<span class="home-hero-shimmer" aria-hidden="true"></span>
+
+<div class="home-hero-copy">
+
+  <h1 class="home-greeting">
+    Welcome, I’m
+    <span class="home-greeting-highlight">Yu Liu</span>.
+  </h1>
+
+  <p class="home-description">
+    I am a Ph.D. student in the Department of Biological Systems Engineering at Virginia Tech,
+    and a member of both the Sustainable &amp; Intelligent
+    Seafood Bioprocessing Laboratory and the Biopolymer Engineering Laboratory.
+  </p>
+
+  <p class="home-description">
+    My work connects food science, aquaculture, biomaterials, and food
+    engineering to develop practical solutions for aquatic animal health,
+    seafood quality, and sustainable food preservation.
+  </p>
 
 </div>
+
+<!-- Abstract research visualization -->
+
+<div
+  class="home-visual"
+  role="img"
+  aria-label="Abstract visualization of four interconnected research areas"
+>
+
+  <div class="home-visual-orbit"></div>
+  <div class="home-visual-orbit-inner"></div>
+
+  <!-- Soft flowing ocean currents -->
+
+  <div class="home-ocean-current" aria-hidden="true"><span class="home-ocean-wave home-ocean-wave--one"></span><span class="home-ocean-wave home-ocean-wave--two"></span><span class="home-ocean-wave home-ocean-wave--three"></span></div>
+
+  <div class="home-visual-node home-visual-node--aquaculture">
+    Sustainable Aquaculture
+  </div>
+
+  <div class="home-visual-node home-visual-node--passive-cooling">
+    Passive Cooling Materials
+  </div>
+
+  <div class="home-visual-node home-visual-node--seafood-science">
+    Seafood Science
+  </div>
+
+  <div class="home-visual-node home-visual-node--oral-delivery">
+    Oral Delivery Systems
+  </div>
+
+<span class="home-microsphere home-microsphere--one"></span>
+<span class="home-microsphere home-microsphere--two"></span>
+<span class="home-microsphere home-microsphere--three"></span>
+
+</div>
+
+  </section>
+
+  <!-- Current research -->
+
+  <section class="home-section">
+
+<div class="home-section-header">
+  <h2 class="home-section-heading">What I Am Working On 🧑‍🔬</h2>
+</div>
+
+<div class="home-research-grid">
+
+  <!-- Passive cooling -->
+
+  <article class="home-research-card home-research-card--passive-cooling">
+
+<div class="home-card-header">
+
+  <div>
+    <span class="home-card-number">RESEARCH 01</span>
+    <h3 class="home-card-title">Passive Cooling Materials</h3>
+  </div>
+
+</div>
+
+<p class="home-card-text">
+  Developing bio-based materials that provide electricity-free
+  temperature reduction for sustainable food preservation and
+  cold-chain management.
+</p>
+
+<div class="home-card-tags">
+  <span class="home-card-tag">Passive Cooling</span>
+  <span class="home-card-tag">Food Packaging</span>
+  <span class="home-card-tag">Food Preservation</span>
+</div>
+
+  </article>
+
+<!-- Oral delivery -->
+
+  <article class="home-research-card home-research-card--oral-delivery">
+
+<div class="home-card-header">
+
+  <div>
+    <span class="home-card-number">RESEARCH 02</span>
+    <h3 class="home-card-title">Oral Delivery Systems</h3>
+  </div>
+
+</div>
+
+<p class="home-card-text">
+  Developing PLGA-based delivery systems that protect vaccines and
+  immunostimulants during digestive transit and deliver them to
+  immune-responsive sites.
+</p>
+
+<div class="home-card-tags">
+  <span class="home-card-tag">PLGA-based Delivery</span>
+  <span class="home-card-tag">Oral Vaccines</span>
+  <span class="home-card-tag">Functional Aquafeeds</span>
+</div>
+
+  </article>
+
+</div>
+
+  </section>
+
+  <!-- Beyond the laboratory -->
+
+  <section class="home-section home-beyond-section">
+
+<div class="home-section-header">
+  <h2 class="home-section-heading">Beyond the Laboratory 🏃‍♂️‍➡️</h2>
+</div>
+
+<div class="home-beyond-layout">
+
+  <div class="home-beyond-copy">
+
+<p>
+  Outside of the laboratory, I enjoy traveling, hiking, photography,
+  watching movies, and exploring different genres of music.
+  Photography allows me to document landscapes, cultures, and everyday
+  moments while encouraging me to observe the world from different
+  perspectives.
+</p>
+
+<p>
+  These experiences help me maintain curiosity, creativity, and
+  balance—qualities that I also value in scientific research and
+  problem-solving.
+</p>
+
+  </div>
+
+  <div class="home-interest-cloud" aria-label="Personal interests">
+
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M3 12h18"></path>
+    <path d="M12 3c3 3.5 3 14 0 18"></path>
+    <path d="M12 3c-3 3.5-3 14 0 18"></path>
+  </svg>
+  Travel
+</span>
+
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="m3 19 6-9 3 4 3-5 6 10Z"></path>
+  </svg>
+  Hiking
+</span>
+
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="6" width="18" height="13" rx="2"></rect>
+    <circle cx="12" cy="12.5" r="3.5"></circle>
+    <path d="M8 6 9.2 4h5.6L16 6"></path>
+  </svg>
+  Photography
+</span>
+
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+    <path d="m10 9 5 3-5 3Z"></path>
+  </svg>
+  Movies
+</span>
+
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M9 18V6l10-2v12"></path>
+    <circle cx="6.5" cy="18" r="2.5"></circle>
+    <circle cx="16.5" cy="16" r="2.5"></circle>
+  </svg>
+  Music
+</span>
+
+<span class="home-interest">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M6 10a4 4 0 0 1 6-4 4 4 0 0 1 6 4"></path>
+    <path d="M5 10h14l-2 10H7L5 10Z"></path>
+    <path d="M10 13v4M14 13v4"></path>
+  </svg>
+  Baking
+</span>
+
+  </div>
+</div>
+
+  </section>
+
+</div>
+
+<script>
+(function () {
+  const hero = document.querySelector(".home-hero");
+  const visual = hero && hero.querySelector(".home-visual");
+  const allowMotion = window.matchMedia(
+    "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
+  );
+
+  if (!hero || !visual) return;
+
+  let frame = null;
+
+  function resetVisual() {
+    visual.style.setProperty("--home-tilt-x", "0deg");
+    visual.style.setProperty("--home-tilt-y", "0deg");
+    visual.style.setProperty("--home-shift-x", "0px");
+    visual.style.setProperty("--home-shift-y", "0px");
+  }
+
+  hero.addEventListener("pointermove", function (event) {
+    if (!allowMotion.matches) return;
+
+    const rect = hero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    if (frame) cancelAnimationFrame(frame);
+
+    frame = requestAnimationFrame(function () {
+      visual.style.setProperty("--home-tilt-x", (-y * 5).toFixed(2) + "deg");
+      visual.style.setProperty("--home-tilt-y", (x * 6).toFixed(2) + "deg");
+      visual.style.setProperty("--home-shift-x", (x * 7).toFixed(1) + "px");
+      visual.style.setProperty("--home-shift-y", (y * 5).toFixed(1) + "px");
+    });
+  });
+
+  hero.addEventListener("pointerleave", resetVisual);
+  allowMotion.addEventListener && allowMotion.addEventListener("change", resetVisual);
+})();
+</script>
