@@ -8,19 +8,61 @@ author_profile: true
 <style>
 
 /* =========================
-   Experience layout
+   Experience timeline
    ========================= */
 
 .experience-list {
+  position: relative;
   width: 100%;
   margin-top: 1.8rem;
+  padding-left: 38px;
 }
 
+/* Timeline vertical line */
+.experience-list::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 8px;
+
+  width: 2px;
+  background: #d7e8ee;
+}
+
+
+/* =========================
+   Experience entry
+   ========================= */
+
 .experience-entry {
+  position: relative;
   width: 100%;
+
   margin: 0 0 2.5rem;
   padding: 0 0 2.5rem;
+
   border-bottom: 1px solid #e3e8ec;
+}
+
+/* Timeline point */
+.experience-entry::before {
+  content: "";
+  position: absolute;
+
+  top: 7px;
+  left: -37px;
+
+  width: 14px;
+  height: 14px;
+
+  box-sizing: border-box;
+
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+
+  background: #52adc8;
+  box-shadow: 0 0 0 3px #b9deea;
 }
 
 .experience-entry:last-child {
@@ -45,13 +87,14 @@ author_profile: true
 
 
 /* =========================
-   Metadata
+   Company / Location / Date
    ========================= */
 
 .experience-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   gap: 5px 9px;
 
   margin: 0 0 1.3rem;
@@ -60,6 +103,9 @@ author_profile: true
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+
+/* Company */
 
 .experience-company {
   color: #445268;
@@ -77,9 +123,15 @@ author_profile: true
   text-underline-offset: 2px;
 }
 
+
+/* Separator */
+
 .experience-divider {
   color: #c0c7ce;
 }
+
+
+/* Location */
 
 .experience-location {
   display: inline-flex;
@@ -90,9 +142,14 @@ author_profile: true
 .experience-location svg {
   width: 14px;
   height: 14px;
+
   flex: 0 0 auto;
+
   stroke: currentColor;
 }
+
+
+/* Date */
 
 .experience-date {
   color: #b17622;
@@ -113,10 +170,14 @@ author_profile: true
   margin-top: 0;
 }
 
+
+/* Section heading */
+
 .experience-label {
   margin: 0 0 0.45rem;
 
   color: #566274;
+
   font-size: 0.82rem;
   font-weight: 700;
   line-height: 1.4;
@@ -137,6 +198,7 @@ author_profile: true
 .experience-responsibilities li {
   margin-bottom: 0.4rem;
   padding-left: 0.08rem;
+
   line-height: 1.6;
 }
 
@@ -161,8 +223,20 @@ author_profile: true
    Dark mode
    ========================= */
 
+html[data-theme="dark"] .experience-list::before {
+  background: #61727b;
+}
+
 html[data-theme="dark"] .experience-entry {
   border-bottom-color: #5f666e;
+}
+
+html[data-theme="dark"] .experience-entry::before {
+  border-color: #474a4e;
+
+  background: #65c2dd;
+
+  box-shadow: 0 0 0 3px #637c85;
 }
 
 html[data-theme="dark"] .experience-position {
@@ -208,6 +282,11 @@ html[data-theme="dark"] .experience-gained {
 
   .experience-list {
     margin-top: 1.4rem;
+    padding-left: 27px;
+  }
+
+  .experience-list::before {
+    left: 5px;
   }
 
   .experience-entry {
@@ -215,14 +294,27 @@ html[data-theme="dark"] .experience-gained {
     padding-bottom: 2rem;
   }
 
+  .experience-entry::before {
+    top: 6px;
+    left: -27px;
+
+    width: 12px;
+    height: 12px;
+
+    border-width: 3px;
+  }
+
   .experience-position {
     margin-bottom: 6px;
+
     font-size: 1.12rem;
   }
 
   .experience-meta {
     gap: 4px 7px;
+
     margin-bottom: 1.05rem;
+
     font-size: 0.84rem;
   }
 
@@ -232,6 +324,10 @@ html[data-theme="dark"] .experience-gained {
 
   .experience-label {
     font-size: 0.8rem;
+  }
+
+  .experience-responsibilities {
+    padding-left: 1.05rem;
   }
 
   .experience-responsibilities li,
@@ -247,15 +343,18 @@ html[data-theme="dark"] .experience-gained {
 <div class="experience-list">
 
 
-  <!-- =========================
+  <!-- ==================================================
        Assistant Editor
-       ========================= -->
+       ================================================== -->
 
   <section class="experience-entry">
 
     <h2 class="experience-position">
       Assistant Editor
     </h2>
+
+
+    <!-- Company / Location / Date -->
 
     <p class="experience-meta">
 
@@ -268,7 +367,14 @@ html[data-theme="dark"] .experience-gained {
         MDPI
       </a>
 
-      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span
+        class="experience-divider"
+        aria-hidden="true"
+      >
+        ·
+      </span>
+
 
       <span class="experience-location">
 
@@ -280,15 +386,29 @@ html[data-theme="dark"] .experience-gained {
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-          <circle cx="12" cy="10" r="2.5"></circle>
+          <path
+            d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+          ></path>
+
+          <circle
+            cx="12"
+            cy="10"
+            r="2.5"
+          ></circle>
         </svg>
 
         Wuhan, Hubei, China
 
       </span>
 
-      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span
+        class="experience-divider"
+        aria-hidden="true"
+      >
+        ·
+      </span>
+
 
       <span class="experience-date">
         Nov 2024 – Jul 2025
@@ -346,15 +466,18 @@ html[data-theme="dark"] .experience-gained {
   </section>
 
 
-  <!-- =========================
+  <!-- ==================================================
        Project Manager
-       ========================= -->
+       ================================================== -->
 
   <section class="experience-entry">
 
     <h2 class="experience-position">
       Project Manager
     </h2>
+
+
+    <!-- Company / Location / Date -->
 
     <p class="experience-meta">
 
@@ -367,7 +490,14 @@ html[data-theme="dark"] .experience-gained {
         IVC Nutrition Corporation
       </a>
 
-      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span
+        class="experience-divider"
+        aria-hidden="true"
+      >
+        ·
+      </span>
+
 
       <span class="experience-location">
 
@@ -379,15 +509,29 @@ html[data-theme="dark"] .experience-gained {
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-          <circle cx="12" cy="10" r="2.5"></circle>
+          <path
+            d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+          ></path>
+
+          <circle
+            cx="12"
+            cy="10"
+            r="2.5"
+          ></circle>
         </svg>
 
         Suzhou, Jiangsu, China
 
       </span>
 
-      <span class="experience-divider" aria-hidden="true">·</span>
+
+      <span
+        class="experience-divider"
+        aria-hidden="true"
+      >
+        ·
+      </span>
+
 
       <span class="experience-date">
         Jul 2024 – Sep 2024
