@@ -423,14 +423,16 @@ redirect_from:
     max-width: 100%;
   }
 
-  .home-science-visual {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    width: calc(100% + 1rem);
-    height: 300px;
-    margin: 1.2rem -0.5rem -0.4rem;
+.home-science-visual {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: 390px;
+  margin: 1rem 0 0;
+  transform: none !important;
   }
 }
 
