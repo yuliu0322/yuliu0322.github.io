@@ -664,19 +664,11 @@ html[data-theme="dark"] .research-topics li {
     </div>
 
     <div class="research-intro-body">
-      <div class="research-intro-content">
-<p class="research-intro-text">
-  To address this, I study the aquatic food value chain from production to post-harvest
-  preservation. My research examines how environmental and farming conditions
-  shape aquatic animal health and product quality, while developing PLGA-based
-  oral delivery systems for vaccines and probiotic-derived immunostimulants.
-  I also develop bio-based passive cooling materials for sustainable cold-chain
-  management and investigate how processing and storage affect seafood quality
-  and flavor. Together, these efforts aim to improve aquatic animal health,
-  reduce production and post-harvest losses, and enhance the sustainability
-  and quality of aquatic foods.
-</p>
-      </div>
+<div class="research-intro-content">
+    <p class="research-intro-text">
+        My research follows the aquatic food value chain from farm to market. I study how culture conditions shape animal health and product quality, develop PLGA-based oral delivery systems for vaccines and probiotic-derived immunostimulants, design bio-based passive cooling materials for low-energy cold chains, and identify how processing and storage change seafood quality and flavor. Together, these efforts aim to reduce production and post-harvest losses while improving the quality and sustainability of aquatic foods.
+    </p>
+</div>
 
       <div
         class="research-overview-visual"
@@ -718,38 +710,29 @@ html[data-theme="dark"] .research-topics li {
   <section class="research-section" id="environment">
     <div class="research-section-heading">
       <span class="research-number">
-        01 · Aquaculture Environment, Animal Health &amp; Seafood Quality
+        01 · Aquaculture Environment, Animal Health & Seafood Quality
       </span>
     </div>
 
     <div class="research-grid">
       <div class="research-lead">
         <h2 class="research-focus">
-          Understanding how the culture environment shapes animal health and seafood quality
+          Linking the culture environment to shellfish health and seafood quality
         </h2>
         <p>
-          Aquatic animals experience environmental changes throughout production,
-          which can affect both their physiological health and the biochemical and
-          sensory quality of the final product. My earlier research examined these
-          connections using oysters and mussels as model aquaculture species.
+Shellfish are exposed to fluctuating temperature, salinity, and anthropogenic contaminants throughout culture, and these exposures can carry through to the biochemical composition, flavor, and safety profile of the harvested product. We use the Pacific oyster (Crassostrea gigas) and the thick-shell mussel (Mytilus coruscus) as model species to trace this pathway from environmental exposure to product quality.
         </p>
       </div>
 
       <div class="research-details">
         <h3 class="research-subheading">What I work on</h3>
         <p>
-          We investigated how temperature, salinity, and microplastic exposure alter
-          shellfish physiology, metabolism, biochemical composition, and
-          flavor-related compounds. We combine physiological measurements,
-          biochemical analyses, and omics to connect environmental exposure
-          with biological responses and seafood quality at harvest.
+We study how temperature, salinity, and microplastic exposure, including polystyrene particles, alter shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. Our approach integrates physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, which allows us to identify the metabolic pathways and biomarkers that connect environmental exposure to changes in product quality. 
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 <p>
-  This work helps clarify how environmental conditions translate into
-  biological and quality changes, providing insights for optimizing
-  shellfish culture and maintaining product quality.
+Shellfish quality is determined well before harvest. Pinpointing which stressors, and which metabolic pathways, drive changes in flavor and composition provides a scientific basis for site selection, culture management, and quality grading by growers and processors, and for assessing microplastic contamination in seafood by inspectors and regulators.
 </p>
       </div>
 
@@ -778,37 +761,29 @@ html[data-theme="dark"] .research-topics li {
   <section class="research-section research-section--reverse" id="oral-delivery">
     <div class="research-section-heading">
       <span class="research-number">
-        02 · Aquaculture Health &amp; Oral Delivery Systems
+        02 · Aquaculture Health & Oral Delivery Systems
       </span>
     </div>
 
     <div class="research-grid">
       <div class="research-lead">
         <h2 class="research-focus">
-          Developing feed-based delivery systems to support aquatic animal health
+          Feed-based delivery systems for aquatic animal health
         </h2>
 <p>
-  Improving bioactive stability and controlled release can enhance the
-  effectiveness of oral delivery, supporting practical feed-based strategies
-  for disease prevention in aquaculture.
+Disease is a persistent constraint on aquaculture production, and feed is one of the few practical routes for immunizing or supplementing animals at farm scale. Yet probiotics and antigens are fragile: they can be damaged by the heat, pressure, and shear of feed extrusion, by storage, and by the harsh gastrointestinal environment before reaching the intestine.
 </p>
       </div>
 
       <div class="research-details">
         <h3 class="research-subheading">What I work on</h3>
         <p>
-          We are developing PLGA-based oral delivery systems for probiotics,
-          probiotic-derived immunostimulants, and antigens. These systems are
-          incorporated into extruded aquafeeds to protect bioactive compounds
-          during storage and enable controlled release during gastrointestinal
-          transit.
+We are developing PLGA-based oral delivery systems to encapsulate probiotics, probiotic-derived immunostimulants, and antigens. These systems are incorporated into extruded aquafeeds, with the goal of protecting bioactive compounds during feed processing and storage and releasing them in a controlled manner during gastrointestinal transit. Our work combines formulation design, stability evaluation, and release characterization toward feed-compatible oral vaccine and functional feed products.
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 <p>
-  Improving bioactive stability and controlled release can enhance the
-  effectiveness of oral delivery, supporting practical feed-based strategies
-  for disease prevention in aquaculture.
+An oral delivery platform that is stable in feed and effective in the gut could make vaccination and immunostimulation practical in situations where injection is difficult, reduce handling stress and labor, and support disease prevention strategies that depend less on therapeutic treatment. For feed manufacturers, it points to a route toward value-added functional feeds.
 </p>
       </div>
 
@@ -844,31 +819,22 @@ html[data-theme="dark"] .research-topics li {
     <div class="research-grid">
       <div class="research-lead">
         <h2 class="research-focus">
-          Designing bio-based materials for energy-efficient cooling and food preservation
+          Bio-based passive cooling materials for energy-efficient cold chains
         </h2>
 <p>
-  Conventional refrigeration is effective but energy-intensive. In my current
-  research, we are developing bio-based materials that integrate passive cooling
-  mechanisms for more sustainable thermal management of agricultural and aquatic
-  foods, as well as other perishable products.
+Refrigeration is the backbone of the cold chain, but it is energy-intensive and not always available at harvest sites, during short-distance transport, or in resource-limited settings. We are developing bio-based materials that use passive cooling mechanisms to support more sustainable thermal management of agricultural and aquatic foods and other perishable products.
 </p>
       </div>
 
       <div class="research-details">
         <h3 class="research-subheading">What I work on</h3>
         <p>
-          We are developing bio-based composite films that integrate passive radiative
-          cooling with evaporative cooling to achieve sub-ambient thermal
-          management without external energy input. Our work considers cooling
-          performance together with water management and the mechanical robustness
-          required for practical food-preservation applications.
+We are developing bio-based composite films that combine passive radiative cooling with evaporative cooling to reach sub-ambient temperatures without external energy input. Our design considers cooling performance together with water retention and release, and with the mechanical robustness required for handling and packaging in real food-preservation settings. Using renewable, bio-based components also aligns the materials with sustainability goals for packaging and cold-chain systems.
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 <p>
-  This work explores how bio-based passive cooling can reduce dependence on
-  energy-intensive refrigeration and enable more sustainable thermal management
-  for agricultural and aquatic foods, as well as other perishable products.
+Passive cooling could complement conventional refrigeration by lowering energy demand and providing cooling where power is limited, helping reduce spoilage and post-harvest loss of perishables. For cold-chain operators, packaging companies, and food producers, it points to a low-energy, bio-based option for temperature control.
 </p>
       </div>
 
@@ -896,7 +862,7 @@ html[data-theme="dark"] .research-topics li {
   <section class="research-section research-section--reverse" id="post-harvest">
     <div class="research-section-heading">
       <span class="research-number">
-        04 · Seafood Processing, Storage &amp; Flavor Quality
+        04 · Seafood Processing, Storage & Flavor Quality
       </span>
     </div>
 
@@ -906,28 +872,19 @@ html[data-theme="dark"] .research-topics li {
           Evaluating how post-harvest preservation affects seafood freshness and flavor quality
         </h2>
         <p>
-          Processing and storage conditions can substantially alter seafood
-          physiology, biochemical composition, sensory quality, and shelf life.
-          My earlier research examined how different preservation strategies drive these
-          changes after harvest.
+Between harvest and consumption, seafood is purified, frozen, stored, transported, and often kept alive. Each step can change physiology, biochemical composition, sensory quality, and shelf life, and the molecular basis of these changes determines how well freshness and flavor can be preserved.
         </p>
       </div>
 
       <div class="research-details">
         <h3 class="research-subheading">What I work on</h3>
 <p>
-  We investigated how different post-harvest treatments and preservation
-  methods—including depuration, liquid-nitrogen quick freezing,
-  semi-anhydrous living preservation, and modified-atmosphere
-  packaging—affected the physiological, biochemical, and flavor
-  characteristics of oysters and mussels.
+We compared post-harvest strategies for oysters and mussels, including depuration, liquid-nitrogen quick freezing at different temperatures, low-temperature semi-anhydrous living preservation at different cooling rates, and modified-atmosphere packaging. Using omics techniques combined with gas chromatography, we tracked how physiological status, biochemical composition, and flavor compounds change under each treatment, and identified the conditions that best retain quality.
 </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 <p>
-  Understanding how seafood responds to different preservation methods helps
-  identify the mechanisms underlying quality changes and guides strategies to
-  better preserve freshness, flavor, and shelf life.
+Live and frozen shellfish depend on freshness, flavor, and survival through the supply chain. Linking each preservation method to its biochemical consequences gives processors and distributors evidence for choosing treatment conditions, extending shelf life, and reducing post-harvest losses.
 </p>
       </div>
 
