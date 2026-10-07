@@ -499,37 +499,46 @@ author_profile: true
 
 .research-section {
   scroll-margin-top: 5rem;
-  margin: 0 0 2rem;
+  margin: 0;
+  padding: 2.4rem 0;
+
+  border-bottom:
+    1px solid
+    var(--research-line);
 }
 
 .research-section:last-of-type {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  border-bottom: 0;
 }
 
 .research-section-heading {
   display: flex;
   align-items: center;
 
-  gap: 0.8rem;
+  gap: 0.9rem;
 
-  margin: 0 0 1.65rem;
+  margin: 0 0 1.15rem;
 }
 
 .research-number {
-  flex: 0 0 auto;
+  flex: 0 1 auto;
 
   color: var(--research-blue);
 
   font-size: 0.78rem;
   font-weight: 800;
+  line-height: 1.35;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
 }
 
 .research-section-heading::after {
   content: "";
 
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: 2rem;
 
   height: 1px;
 
@@ -546,14 +555,14 @@ author_profile: true
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.92fr)
-    minmax(360px, 1.08fr);
+    minmax(0, 1.05fr)
+    minmax(340px, 0.95fr);
 
   grid-template-areas:
     "description visual";
 
   gap:
-    clamp(2rem, 4vw, 3.5rem);
+    clamp(2rem, 4vw, 4rem);
 
   align-items: start;
 }
@@ -565,31 +574,15 @@ author_profile: true
 .research-section--reverse
 .research-grid {
   grid-template-columns:
-    minmax(360px, 1.08fr)
-    minmax(0, 0.92fr);
+    minmax(340px, 0.95fr)
+    minmax(0, 1.05fr);
 
   grid-template-areas:
     "visual description";
 }
 
-.research-title {
-  width: 100%;
 
-  margin:
-    0 0 1.45rem;
-
-  color:
-    var(--research-ink);
-
-  font-size:
-    clamp(
-      1.35rem,
-      2.15vw,
-      1.75rem
-    );
-
-  line-height: 1.3;
-}
+/* Old large title is intentionally no longer used. */
 
 .research-description {
   grid-area: description;
@@ -601,17 +594,24 @@ author_profile: true
 }
 
 .research-focus {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.8rem;
 
-  color: var(--research-ink);
+  color:
+    var(--research-ink);
 
-  font-size: 1.08rem;
-  font-weight: 700;
-  line-height: 1.5;
+  font-size:
+    clamp(1.3rem, 2vw, 1.65rem);
+
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 .research-description p {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.75rem;
+
+  font-size: 0.94rem;
+  line-height: 1.62;
 }
 
 .research-description p:last-child {
@@ -619,19 +619,22 @@ author_profile: true
 }
 
 .research-subheading {
-  margin: 1rem 0 0.45rem;
+  margin: 0.9rem 0 0.28rem;
 
-  color: var(--research-ink);
+  color:
+    var(--research-ink);
 
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  line-height: 1.35;
 }
 
 .research-visual {
   grid-area: visual;
 
   min-width: 0;
+
+  align-self: start;
 }
 
 
@@ -1068,11 +1071,31 @@ html[data-theme="dark"]
   }
 
   .research-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
+    padding: 2rem 0;
   }
 
-  .research-title {
+  .research-grid,
+  .research-section--reverse .research-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "description"
+      "visual";
+
+    gap: 1.4rem;
+  }
+
+  .research-focus {
     font-size: 1.3rem;
+  }
+
+  .research-section-heading {
+    align-items: flex-start;
+  }
+
+  .research-section-heading::after {
+    margin-top: 0.5rem;
   }
 
   .research-lightbox {
@@ -1307,35 +1330,33 @@ html[data-theme="dark"]
 
       <div class="research-description">
 
-        <p class="research-focus">
+        <h2 class="research-focus">
           Understanding how the culture environment shapes animal health and
           seafood quality
-        </p>
+        </h2>
 
         <p>
           Aquatic animals experience environmental changes throughout production,
-          and these conditions can influence both physiological health and the
-          quality of the final product. My research examines these connections
-          using oysters and mussels as model aquaculture species.
+          which can affect both their physiological health and the biochemical and
+          sensory quality of the final product. My research examines these
+          connections using oysters and mussels as model aquaculture species.
         </p>
 
         <h3 class="research-subheading">What I study</h3>
 
         <p>
-          I investigate how temperature, salinity, and environmental contaminants
-          such as microplastics alter shellfish physiology, metabolism,
-          biochemical composition, and flavor-related compounds. I combine
-          physiological measurements, biochemical analyses, and metabolomics to
-          connect environmental exposure with biological responses and seafood
-          quality at harvest.
+          I investigate how temperature, salinity, and microplastic exposure alter
+          shellfish physiology, metabolism, biochemical composition, and
+          flavor-related compounds using physiological, biochemical, and
+          metabolomic approaches.
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 
         <p>
-          These environment–organism–quality relationships provide a scientific
-          basis for culture practices that support shellfish health, product
-          quality, and resilience to environmental change.
+          This work connects culture conditions with animal health and seafood
+          quality, providing a scientific basis for more resilient aquaculture
+          practices.
         </p>
 
       </div>
@@ -1426,32 +1447,30 @@ html[data-theme="dark"]
 
       <div class="research-description">
 
-        <p class="research-focus">
+        <h2 class="research-focus">
           Developing feed-based delivery systems to support aquatic animal health
-        </p>
+        </h2>
 
         <p>
-          Oral delivery through aquafeeds offers a scalable approach to disease
-          prevention, but bioactive compounds must remain stable during feed
-          storage and reach the appropriate site in the digestive tract.
+          Improving disease resistance in aquaculture requires practical and
+          scalable strategies. My research focuses on delivering bioactive
+          compounds through aquafeeds to support aquatic animal health.
         </p>
 
         <h3 class="research-subheading">What I study</h3>
 
         <p>
-          I develop biodegradable PLGA-based systems for probiotics,
-          probiotic-derived immunostimulants, and antigens. These delivery
-          systems are incorporated into extruded feed pellets to protect
-          encapsulated bioactives during storage and enable controlled release
-          during gastrointestinal transit.
+          I develop PLGA-based oral delivery systems for probiotics,
+          probiotic-derived immunostimulants, and antigens, with emphasis on
+          maintaining stability during storage and enabling controlled release
+          in the gastrointestinal tract.
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 
         <p>
-          Improving oral delivery can make preventive health strategies more
-          practical and scalable while supporting effective disease management
-          and reducing production losses in aquaculture.
+          This work advances practical feed-based strategies for disease
+          prevention and more resilient aquaculture production.
         </p>
 
       </div>
@@ -1539,33 +1558,30 @@ html[data-theme="dark"]
 
       <div class="research-description">
 
-        <p class="research-focus">
-          Engineering bio-based materials for sustainable post-harvest thermal
-          management
-        </p>
+        <h2 class="research-focus">
+          Designing bio-based materials for energy-efficient cooling and food
+          preservation
+        </h2>
 
         <p>
-          Maintaining low temperatures is essential for perishable foods, yet
-          conventional cold chains depend heavily on continuous refrigeration
-          and energy input.
+          Conventional refrigeration is effective but energy-intensive. My
+          research explores bio-based materials for more sustainable thermal
+          management of seafood and other perishable foods.
         </p>
 
         <h3 class="research-subheading">What I study</h3>
 
         <p>
           I develop bio-based composite films that integrate passive radiative
-          cooling with evaporative cooling to achieve sub-ambient thermal
-          management without external energy input. My work examines material
-          design, cooling performance, water management, and mechanical
-          robustness for practical food-preservation applications.
+          and evaporative cooling while maintaining the mechanical properties
+          required for practical food-preservation applications.
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 
         <p>
-          These materials offer a pathway to reduce refrigeration demand and
-          post-harvest energy use while maintaining suitable conditions for
-          seafood and other perishable foods.
+          This approach can reduce refrigeration demand and post-harvest energy
+          use while supporting a more sustainable cold chain.
         </p>
 
       </div>
@@ -1652,33 +1668,30 @@ html[data-theme="dark"]
 
       <div class="research-description">
 
-        <p class="research-focus">
-          Understanding how post-harvest preservation shapes seafood freshness,
-          flavor, and quality
-        </p>
+        <h2 class="research-focus">
+          Evaluating how post-harvest preservation affects seafood freshness and
+          flavor quality
+        </h2>
 
         <p>
-          After harvest, preservation conditions continue to drive physiological
-          and biochemical changes that determine how seafood quality develops
-          during storage.
+          Processing and storage conditions can substantially alter seafood
+          biochemistry, sensory quality, and shelf life.
         </p>
 
         <h3 class="research-subheading">What I study</h3>
 
         <p>
-          I examine oysters and mussels subjected to depuration, liquid-nitrogen
-          quick freezing, semi-anhydrous living preservation, and
-          modified-atmosphere packaging. I evaluate physiological, biochemical,
-          and flavor-related changes to understand how different preservation
-          strategies influence seafood quality.
+          I investigate physiological, biochemical, and flavor-related changes in
+          oysters and mussels during depuration, liquid-nitrogen quick freezing,
+          semi-anhydrous preservation, and modified-atmosphere packaging.
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
 
         <p>
-          Understanding these post-harvest changes helps optimize preservation
-          strategies to maintain freshness and flavor, extend shelf life, and
-          reduce seafood losses.
+          This work helps explain post-harvest quality changes and supports
+          preservation strategies that maintain freshness and flavor while
+          extending shelf life.
         </p>
 
       </div>
