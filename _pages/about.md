@@ -333,38 +333,12 @@ html[data-theme="dark"] .home-welcome {
 
     <div class="home-research-grid">
 
-      <!-- Passive cooling -->
-
-      <article class="home-research-item">
-
-        <div class="home-research-header">
-          <span class="home-research-number">RESEARCH 01</span>
-          <h3 class="home-research-title">
-            Passive Cooling Materials
-          </h3>
-        </div>
-
-        <p class="home-research-text">
-          Developing bio-based materials that provide electricity-free
-          temperature reduction for sustainable food preservation and
-          cold-chain management.
-        </p>
-
-        <div class="home-research-tags">
-          <span class="home-research-tag">Passive Cooling</span>
-          <span class="home-research-tag">Food Packaging</span>
-          <span class="home-research-tag">Food Preservation</span>
-        </div>
-
-      </article>
-
-
       <!-- Oral delivery -->
 
       <article class="home-research-item">
 
         <div class="home-research-header">
-          <span class="home-research-number">RESEARCH 02</span>
+          <span class="home-research-number">RESEARCH 01</span>
           <h3 class="home-research-title">
             Oral Delivery Systems
           </h3>
@@ -380,6 +354,31 @@ html[data-theme="dark"] .home-welcome {
           <span class="home-research-tag">PLGA-based Delivery</span>
           <span class="home-research-tag">Oral Vaccines</span>
           <span class="home-research-tag">Functional Aquafeeds</span>
+        </div>
+
+      </article>
+
+            <!-- Passive cooling -->
+
+      <article class="home-research-item">
+
+        <div class="home-research-header">
+          <span class="home-research-number">RESEARCH 02</span>
+          <h3 class="home-research-title">
+            Passive Cooling Materials
+          </h3>
+        </div>
+
+        <p class="home-research-text">
+          Developing bio-based materials that provide electricity-free
+          temperature reduction for sustainable food preservation and
+          cold-chain management.
+        </p>
+
+        <div class="home-research-tags">
+          <span class="home-research-tag">Passive Cooling</span>
+          <span class="home-research-tag">Food Packaging</span>
+          <span class="home-research-tag">Food Preservation</span>
         </div>
 
       </article>
