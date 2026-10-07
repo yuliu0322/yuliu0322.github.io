@@ -846,11 +846,12 @@ html[data-theme="dark"] .research-topics li {
         <h2 class="research-focus">
           Designing bio-based materials for energy-efficient cooling and food preservation
         </h2>
-        <p>
-          Conventional refrigeration is effective but energy-intensive. My research
-          explores bio-based materials that combine passive cooling mechanisms for
-          more sustainable thermal management of seafood and other perishable foods.
-        </p>
+<p>
+  Conventional refrigeration is effective but energy-intensive. In my current
+  research, we are developing bio-based materials that integrate passive cooling
+  mechanisms for more sustainable thermal management of agricultural and aquatic
+  foods, as well as other perishable products.
+</p>
       </div>
 
       <div class="research-details">
@@ -907,7 +908,7 @@ html[data-theme="dark"] .research-topics li {
         <p>
           Processing and storage conditions can substantially alter seafood
           physiology, biochemical composition, sensory quality, and shelf life.
-          My research examines how different preservation strategies drive these
+          My earlier research examined how different preservation strategies drive these
           changes after harvest.
         </p>
       </div>
