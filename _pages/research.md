@@ -965,6 +965,10 @@ html[data-theme="dark"] .research-publications a:focus-visible {
     </li>
 
   </ul>
+  
+      </div>
+
+    </div>
 
 </div>
   </section>
