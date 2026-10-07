@@ -746,11 +746,11 @@ html[data-theme="dark"] .research-topics li {
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
-        <p>
-          This work connects culture conditions with animal health and seafood
-          quality, providing a scientific basis for more resilient aquaculture
-          practices.
-        </p>
+<p>
+  This work helps clarify how environmental conditions translate into
+  biological and quality changes, providing insights for optimizing
+  shellfish culture and maintaining product quality.
+</p>
       </div>
 
       <figure class="research-figure">
@@ -787,11 +787,11 @@ html[data-theme="dark"] .research-topics li {
         <h2 class="research-focus">
           Developing feed-based delivery systems to support aquatic animal health
         </h2>
-        <p>
-          Oral delivery through aquafeeds offers a practical and scalable approach
-          to disease prevention, but bioactive compounds must remain stable during
-          feed storage and reach the appropriate site in the digestive tract.
-        </p>
+<p>
+  Improving bioactive stability and controlled release can enhance the
+  effectiveness of oral delivery, supporting practical feed-based strategies
+  for disease prevention in aquaculture.
+</p>
       </div>
 
       <div class="research-details">
@@ -805,11 +805,11 @@ html[data-theme="dark"] .research-topics li {
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
-        <p>
-          Improving oral delivery can make preventive health strategies more
-          practical and scalable while supporting disease management and reducing
-          production losses in aquaculture.
-        </p>
+<p>
+  Improving bioactive stability and controlled release can enhance the
+  effectiveness of oral delivery, supporting practical feed-based strategies
+  for disease prevention in aquaculture.
+</p>
       </div>
 
       <figure class="research-figure">
@@ -864,11 +864,11 @@ html[data-theme="dark"] .research-topics li {
         </p>
 
         <h3 class="research-subheading">Why it matters</h3>
-        <p>
-          These materials offer a pathway to reduce refrigeration demand and
-          post-harvest energy use while maintaining suitable conditions for
-          seafood and other perishable foods.
-        </p>
+<p>
+  This work explores how bio-based passive cooling can reduce dependence on
+  energy-intensive refrigeration and enable more sustainable thermal management
+  for agricultural and aquatic foods, as well as other perishable products.
+</p>
       </div>
 
       <figure class="research-figure">
@@ -923,11 +923,11 @@ html[data-theme="dark"] .research-topics li {
 </p>
 
         <h3 class="research-subheading">Why it matters</h3>
-        <p>
-          This work helps explain post-harvest quality changes and supports
-          preservation strategies that maintain freshness and flavor, extend shelf
-          life, and reduce seafood losses.
-        </p>
+<p>
+  Understanding how seafood responds to different preservation methods helps
+  identify the mechanisms underlying quality changes and guides strategies to
+  better preserve freshness, flavor, and shelf life.
+</p>
       </div>
 
       <figure class="research-figure">
