@@ -740,7 +740,7 @@ html[data-theme="dark"] .research-topics li {
         <p>
           We investigated how temperature, salinity, and microplastic exposure alter
           shellfish physiology, metabolism, biochemical composition, and
-          flavor-related compounds. I combine physiological measurements,
+          flavor-related compounds. We combine physiological measurements,
           biochemical analyses, and omics to connect environmental exposure
           with biological responses and seafood quality at harvest.
         </p>
