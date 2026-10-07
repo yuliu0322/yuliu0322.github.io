@@ -140,18 +140,7 @@ author_profile: true
 }
 
 .research-section-heading {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
   margin: 0 0 1.15rem;
-}
-
-.research-section-heading::after {
-  content: "";
-  flex: 1;
-  min-width: 2rem;
-  height: 1px;
-  background: var(--research-line);
 }
 
 .research-number {
@@ -164,25 +153,26 @@ author_profile: true
 }
 
 /*
-  Two rows:
-  row 1 = title + intro aligned with figure
-  row 2 = study/importance aligned with research topics
+  Full-width introduction.
+  The figure starts on the same row as "What I study".
 */
 .research-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(380px, 0.82fr);
   grid-template-areas:
-    "lead figure"
+    "lead lead"
+    "details figure"
     "details topics";
   column-gap: clamp(2rem, 3vw, 3rem);
-  row-gap: 0.9rem;
+  row-gap: 1rem;
   align-items: start;
 }
 
 .research-section--reverse .research-grid {
   grid-template-columns: minmax(380px, 0.82fr) minmax(0, 1.18fr);
   grid-template-areas:
-    "figure lead"
+    "lead lead"
+    "figure details"
     "topics details";
 }
 
@@ -191,10 +181,14 @@ author_profile: true
   min-width: 0;
 }
 
+.research-lead > p {
+  max-width: 1050px;
+}
+
 .research-focus {
   margin: 0 0 0.75rem;
   color: var(--research-ink);
-  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
   font-weight: 750;
   line-height: 1.22;
   letter-spacing: -0.025em;
@@ -350,8 +344,8 @@ html[data-theme="dark"] .research-page {
     grid-template-columns: 1fr;
     grid-template-areas:
       "lead"
-      "figure"
       "details"
+      "figure"
       "topics";
     gap: 1rem;
   }
@@ -368,14 +362,6 @@ html[data-theme="dark"] .research-page {
 
   .research-section {
     padding: 2rem 0;
-  }
-
-  .research-section-heading {
-    align-items: flex-start;
-  }
-
-  .research-section-heading::after {
-    margin-top: 0.5rem;
   }
 
   .research-focus {
