@@ -665,17 +665,17 @@ html[data-theme="dark"] .research-topics li {
 
     <div class="research-intro-body">
       <div class="research-intro-content">
-        <p class="research-intro-text">
-          My research follows aquatic foods from production to post-harvest
-          preservation. I first examine how culture conditions and environmental
-          contaminants affect shellfish physiology and quality, then develop
-          feed-based oral delivery systems to support aquatic animal health.
-          After harvest, I engineer bio-based cooling materials for sustainable
-          thermal management and investigate how processing and storage affect
-          seafood freshness, flavor, and quality. Together, these studies connect
-          biological understanding with practical interventions across the
-          aquatic food system.
-        </p>
+<p class="research-intro-text">
+  To address this, I study the aquatic food value chain from production to post-harvest
+  preservation. My research examines how environmental and farming conditions
+  shape aquatic animal health and product quality, while developing PLGA-based
+  oral delivery systems for vaccines and probiotic-derived immunostimulants.
+  I also develop bio-based passive cooling materials for sustainable cold-chain
+  management and investigate how processing and storage affect seafood quality
+  and flavor. Together, these efforts aim to improve aquatic animal health,
+  reduce production and post-harvest losses, and enhance the sustainability
+  and quality of aquatic foods.
+</p>
       </div>
 
       <div
