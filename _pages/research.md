@@ -667,7 +667,7 @@ html[data-theme="dark"] .research-topics li {
     <div class="research-intro-body">
 <div class="research-intro-content">
     <p class="research-intro-text">
-        My research follows the aquatic food value chain from farm to market. I study how culture conditions shape animal health and product quality, develop PLGA-based oral delivery systems for vaccines and probiotic-derived immunostimulants, design bio-based passive cooling materials for low-energy cold chains, and identify how processing and storage change seafood quality and flavor. Together, these efforts aim to reduce production and post-harvest losses while improving the quality and sustainability of aquatic foods.
+My research addresses this question across the aquatic food value chain, from production to post-harvest handling. I investigate how culture conditions and environmental stressors shape aquatic animal health, metabolism, and the quality of the food ultimately produced. I then develop practical interventions, including PLGA-based oral delivery systems for vaccines and probiotic-derived immunostimulants to support disease prevention, and bio-based passive cooling materials to reduce energy use and product loss along the cold chain. At the post-harvest stage, I examine how processing and storage alter seafood freshness, biochemical composition, and flavor. By connecting biological mechanisms with engineering and food-quality solutions, my goal is to reduce losses at both production and post-harvest stages while delivering healthier animals, higher-quality seafood, and more sustainable aquatic food systems.
     </p>
 </div>
 
