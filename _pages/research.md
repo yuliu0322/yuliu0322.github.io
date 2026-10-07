@@ -398,7 +398,7 @@ author_profile: true
 
 .research-figure {
   width: 100%;
-  margin: 2.1rem 0 0;
+  margin: 0;
 }
 
 .research-image-button {
