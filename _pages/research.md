@@ -927,50 +927,46 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         </div>
 
 
-        <div class="research-publications-block">
+<div class="research-publications-block">
 
-          <p class="research-side-label">
-            Selected publications
-          </p>
+  <p class="research-side-label">
+    Selected publications
+  </p>
 
-          <ul class="research-publications">
+  <ul class="research-publications">
 
-            <li>
-              <a
-                href="https://doi.org/10.1016/j.foodchem.2023.136153"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                An overview of microplastics in oysters: Analysis, hazards, and depuration
-              </a>
+    <li>
+      <a
+        href="https://doi.org/10.1016/j.foodchem.2024.140961"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Metabolic profiles and protein expression responses of Pacific oyster
+        (<i>Crassostrea gigas</i>) to polystyrene microplastic stress
+      </a>
 
-              <span class="research-publication-meta">
-                Food Chemistry, 2023
-              </span>
-            </li>
+      <span class="research-publication-meta">
+        Food Chemistry, 2025
+      </span>
+    </li>
 
-            <li>
-              <a
-                href="https://doi.org/10.1016/j.foodchem.2024.140961"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Metabolic profiles and protein expression responses of Pacific oyster
-                (Crassostrea gigas) to polystyrene microplastic stress
-              </a>
+    <li>
+      <a
+        href="https://doi.org/10.3390/foods13050765"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Changes in Flavor-Related Biomarkers in Pacific Oysters (Crassostrea gigas) Following Microplastic Exposure
+      </a>
 
-              <span class="research-publication-meta">
-                Food Chemistry, 2025
-              </span>
-            </li>
+      <span class="research-publication-meta">
+        Foods, 2024
+      </span>
+    </li>
 
-          </ul>
+  </ul>
 
-        </div>
-
-      </div>
-
-    </div>
+</div>
   </section>
 
 
