@@ -316,7 +316,7 @@ author_profile: true
 
 /*
   Row 1: full-width focus + introduction.
-  Row 2: What I study / Why it matters alongside the figure.
+  Row 2: What I work on / Why it matters alongside the figure.
   Row 3: topics remain below the figure.
 */
 .research-grid {
@@ -730,18 +730,18 @@ html[data-theme="dark"] .research-topics li {
         <p>
           Aquatic animals experience environmental changes throughout production,
           which can affect both their physiological health and the biochemical and
-          sensory quality of the final product. My research examines these
+          sensory quality of the final product. My earlier research examined these
           connections using oysters and mussels as model aquaculture species.
         </p>
       </div>
 
       <div class="research-details">
-        <h3 class="research-subheading">What I study</h3>
+        <h3 class="research-subheading">What I work on</h3>
         <p>
-          I investigate how temperature, salinity, and microplastic exposure alter
+          We investigated how temperature, salinity, and microplastic exposure alter
           shellfish physiology, metabolism, biochemical composition, and
           flavor-related compounds. I combine physiological measurements,
-          biochemical analyses, and metabolomics to connect environmental exposure
+          biochemical analyses, and omics to connect environmental exposure
           with biological responses and seafood quality at harvest.
         </p>
 
@@ -795,9 +795,9 @@ html[data-theme="dark"] .research-topics li {
       </div>
 
       <div class="research-details">
-        <h3 class="research-subheading">What I study</h3>
+        <h3 class="research-subheading">What I work on</h3>
         <p>
-          I develop PLGA-based oral delivery systems for probiotics,
+          We are developing PLGA-based oral delivery systems for probiotics,
           probiotic-derived immunostimulants, and antigens. These systems are
           incorporated into extruded aquafeeds to protect bioactive compounds
           during storage and enable controlled release during gastrointestinal
@@ -854,11 +854,11 @@ html[data-theme="dark"] .research-topics li {
       </div>
 
       <div class="research-details">
-        <h3 class="research-subheading">What I study</h3>
+        <h3 class="research-subheading">What I work on</h3>
         <p>
-          I develop bio-based composite films that integrate passive radiative
+          We are developing bio-based composite films that integrate passive radiative
           cooling with evaporative cooling to achieve sub-ambient thermal
-          management without external energy input. My work considers cooling
+          management without external energy input. Our work considers cooling
           performance together with water management and the mechanical robustness
           required for practical food-preservation applications.
         </p>
@@ -913,12 +913,14 @@ html[data-theme="dark"] .research-topics li {
       </div>
 
       <div class="research-details">
-        <h3 class="research-subheading">What I study</h3>
-        <p>
-          I investigate physiological, biochemical, and flavor-related changes in
-          oysters and mussels during depuration, liquid-nitrogen quick freezing,
-          semi-anhydrous living preservation, and modified-atmosphere packaging.
-        </p>
+        <h3 class="research-subheading">What I work on</h3>
+<p>
+  We investigated how different post-harvest treatments and preservation
+  methods—including depuration, liquid-nitrogen quick freezing,
+  semi-anhydrous living preservation, and modified-atmosphere
+  packaging—affected the physiological, biochemical, and flavor
+  characteristics of oysters and mussels.
+</p>
 
         <h3 class="research-subheading">Why it matters</h3>
         <p>
