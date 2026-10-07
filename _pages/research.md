@@ -494,15 +494,9 @@ author_profile: true
 .research-publications a {
   color: var(--research-ink);
   font-weight: 400;
+  font-style: normal;
   text-decoration: none;
   transition: color 0.15s ease;
-}
-
-.research-publications a:hover,
-.research-publications a:focus-visible {
-  color: var(--research-blue);
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 
 .research-publication-meta {
@@ -510,6 +504,7 @@ author_profile: true
   margin-top: 0.08rem;
   color: var(--research-muted);
   font-size: 0.73rem;
+  font-style: normal;
   line-height: 1.4;
 }
 
@@ -950,7 +945,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
               </a>
 
               <span class="research-publication-meta">
-                <i>Food Chemistry</i>, 2023
+                Food Chemistry, 2023
               </span>
             </li>
 
@@ -961,11 +956,11 @@ html[data-theme="dark"] .research-publications a:focus-visible {
                 rel="noopener noreferrer"
               >
                 Metabolic profiles and protein expression responses of Pacific oyster
-                (<i>Crassostrea gigas</i>) to polystyrene microplastic stress
+                (Crassostrea gigas) to polystyrene microplastic stress
               </a>
 
               <span class="research-publication-meta">
-                <i>Food Chemistry</i>, 2025
+                Food Chemistry, 2025
               </span>
             </li>
 
@@ -1303,12 +1298,12 @@ html[data-theme="dark"] .research-publications a:focus-visible {
                 rel="noopener noreferrer"
               >
                 Effects of cooling rate on the physiological metabolism and flavor
-                of thick-shell mussel (<i>Mytilus coruscus</i>) during
+                of thick-shell mussel (Mytilus coruscus) during
                 low-temperature semi-anhydrous living-preservation
               </a>
 
               <span class="research-publication-meta">
-                <i>Aquaculture</i>, 2025
+                Aquaculture, 2025
               </span>
             </li>
 
@@ -1320,11 +1315,11 @@ html[data-theme="dark"] .research-publications a:focus-visible {
               >
                 Effects of liquid nitrogen freezing at different temperatures
                 on the quality and flavor of Pacific oyster
-                (<i>Crassostrea gigas</i>)
+                (Crassostrea gigas)
               </a>
 
               <span class="research-publication-meta">
-                <i>Food Chemistry</i>, 2023
+                Food Chemistry, 2023
               </span>
             </li>
 
