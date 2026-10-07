@@ -493,7 +493,7 @@ author_profile: true
 
 .research-publications a {
   color: var(--research-ink);
-  font-weight: 650;
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.15s ease;
 }
