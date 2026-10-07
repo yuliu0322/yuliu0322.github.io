@@ -296,13 +296,13 @@ author_profile: true
 /* ==================== RESEARCH SECTIONS ==================== */
 
 .research-section {
-  padding: 2.5rem 0;
+  padding: 1.6rem 0 1.8rem;
   border-top: 1px solid var(--research-line);
   scroll-margin-top: 5rem;
 }
-
+  
 .research-section-heading {
-  margin: 0 0 1.05rem;
+  margin: 0 0 0.75rem;
 }
 
 .research-number {
@@ -327,7 +327,7 @@ author_profile: true
     "details figure"
     "details topics";
   column-gap: clamp(2rem, 3vw, 3rem);
-  row-gap: 1rem;
+  row-gap: 0.7rem;
   align-items: start;
 }
 
