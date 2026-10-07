@@ -383,7 +383,7 @@ author_profile: true
 .research-figure {
   grid-area: figure;
   width: 100%;
-  margin: 0;
+margin: 1.55rem 0 0;
 }
 
 .research-image-button {
@@ -591,6 +591,7 @@ html[data-theme="dark"] .research-topics li {
 
   .research-figure {
     max-width: 680px;
+    margin-top: 0;
   }
 }
 
