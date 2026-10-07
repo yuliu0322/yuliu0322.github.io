@@ -942,7 +942,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         rel="noopener noreferrer"
       >
         Metabolic profiles and protein expression responses of Pacific oyster
-        (<i>Crassostrea gigas</i>) to polystyrene microplastic stress
+        (Crassostrea gigas) to polystyrene microplastic stress
       </a>
 
       <span class="research-publication-meta">
