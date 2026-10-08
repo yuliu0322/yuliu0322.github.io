@@ -741,6 +741,44 @@ html[data-theme="dark"] .research-publications a:focus-visible {
     transition: none;
   }
 }
+
+/* Adaptive research layout: preserve the alternating column order. */
+@media (min-width: 901px) {
+  .research-grid {
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+    column-gap: clamp(1.5rem, 3vw, 2.7rem);
+  }
+  .research-section--reverse .research-grid {
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  }
+  .research-section--no-publications .research-grid {
+    grid-template-areas: "lead lead" "details visual" "why why";
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    row-gap: 0.85rem;
+  }
+  .research-section--no-publications.research-section--reverse .research-grid {
+    grid-template-areas: "lead lead" "visual details" "why why";
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+  .research-section--no-publications .research-visual-column { gap: 0.65rem; }
+  .research-section--no-publications .research-figure img { max-height: 360px; object-fit: contain; }
+}
+.research-why-wide { grid-area: why; min-width: 0; }
+.research-why-wide .research-subheading { margin-top: 0; }
+.research-why-wide p { margin: 0; }
+/* Publications: understated academic typography, consistent with the page. */
+.research-publications { gap: 1rem; }
+.research-publications li { font-size: 0.9rem; line-height: 1.55; }
+.research-publications a { font-weight: 400; font-style: normal; }
+.research-publication-meta { margin-top: 0.18rem; font-size: 0.78rem; line-height: 1.45; }
+@media (max-width: 900px) {
+  .research-section--no-publications .research-grid,
+  .research-section--no-publications.research-section--reverse .research-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "lead" "details" "visual" "why";
+  }
+}
+
 </style>
 
 
@@ -979,7 +1017,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
        ===================================================== -->
 
   <section
-    class="research-section research-section--reverse"
+    class="research-section research-section--reverse research-section--no-publications"
     id="oral-delivery"
   >
 
@@ -1025,7 +1063,9 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           and release characterization toward feed-compatible oral vaccine
           and functional feed products.
         </p>
+      </div>
 
+      <div class="research-why-wide">
         <h3 class="research-subheading">
           Why it matters
         </h3>
@@ -1038,7 +1078,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           on therapeutic treatment. For feed manufacturers, it points to a
           route toward value-added functional feeds.
         </p>
-
       </div>
 
 
@@ -1085,7 +1124,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
        ===================================================== -->
 
   <section
-    class="research-section"
+    class="research-section research-section--no-publications"
     id="thermal-management"
   >
 
@@ -1131,7 +1170,9 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           components also aligns the materials with sustainability goals for
           packaging and cold-chain systems.
         </p>
+      </div>
 
+      <div class="research-why-wide">
         <h3 class="research-subheading">
           Why it matters
         </h3>
@@ -1143,7 +1184,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           cold-chain operators, packaging companies, and food producers, it
           points to a low-energy, bio-based option for temperature control.
         </p>
-
       </div>
 
 
