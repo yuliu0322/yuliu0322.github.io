@@ -778,7 +778,16 @@ html[data-theme="dark"] .research-publications a:focus-visible {
     grid-template-areas: "lead" "details" "visual" "why";
   }
 }
+  
+/* Align the top of the research figure with the first line
+   of text below the "What I work on" heading. */
 
+@media (min-width: 901px) {
+  .research-visual-column {
+    padding-top: 2.4rem;
+  }
+}
+  
 </style>
 
 
