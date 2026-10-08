@@ -302,7 +302,7 @@ author_profile: true
    ========================================================= */
 
 .research-section {
-  padding: 1.6rem 0 1.8rem;
+  padding: 1rem 0 1.2rem;
   border-top: 1px solid var(--research-line);
   scroll-margin-top: 5rem;
 }
