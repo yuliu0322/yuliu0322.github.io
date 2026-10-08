@@ -445,7 +445,7 @@ author_profile: true
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .research-topics {
