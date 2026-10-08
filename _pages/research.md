@@ -1288,6 +1288,35 @@ html[data-theme="dark"] .research-topics li {
 
   }
 
+  /* ALIGN WHY IT MATTERS AND RESEARCH TOPICS */
+
+  const alignResearchTitles = () => {
+    document.querySelectorAll(".research-section").forEach((section) => {
+      const headings = [...section.querySelectorAll(".research-subheading")];
+      const whyHeading = headings.find((heading) =>
+        heading.textContent.trim() === "Why it matters"
+      );
+      const topicsBlock = section.querySelector(".research-topics-block");
+      const topicsHeading = topicsBlock?.querySelector(".research-side-label");
+
+      if (!whyHeading || !topicsBlock || !topicsHeading) return;
+
+      topicsBlock.style.transform = "";
+      if (window.matchMedia("(max-width: 900px)").matches) return;
+
+      const difference = whyHeading.getBoundingClientRect().top -
+        topicsHeading.getBoundingClientRect().top;
+      topicsBlock.style.transform = `translateY(${difference.toFixed(1)}px)`;
+    });
+  };
+
+  window.addEventListener("load", alignResearchTitles);
+  window.addEventListener("resize", alignResearchTitles);
+  document.querySelectorAll(".research-figure img").forEach((img) => {
+    img.addEventListener("load", alignResearchTitles);
+  });
+  alignResearchTitles();
+
   /* OVERVIEW POINTER MOVEMENT */
 
   const introBody =
