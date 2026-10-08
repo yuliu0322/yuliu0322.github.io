@@ -1,3 +1,4 @@
+
 ---
 layout: archive
 title: "Research Overview"
@@ -32,9 +33,7 @@ author_profile: true
   line-height: 1.72;
 }
 
-/* =========================================================
-   INTRO
-   ========================================================= */
+/* INTRO */
 
 .research-intro {
   margin: 0 0 2.4rem;
@@ -72,9 +71,7 @@ author_profile: true
   margin: 0;
 }
 
-/* =========================================================
-   ANIMATED OVERVIEW
-   ========================================================= */
+/* ANIMATED OVERVIEW */
 
 .research-overview-visual {
   position: relative;
@@ -221,7 +218,6 @@ author_profile: true
   animation-play-state: paused;
   background: #fff;
   box-shadow: 0 11px 24px rgba(35, 55, 75, 0.14);
-  transform: translate3d(0, -6px, 18px) scale(1.025);
 }
 
 .research-overview-node::before {
@@ -297,9 +293,7 @@ author_profile: true
   animation-delay: -4s;
 }
 
-/* =========================================================
-   RESEARCH SECTIONS
-   ========================================================= */
+/* RESEARCH SECTIONS */
 
 .research-section {
   padding: 1rem 0 1.2rem;
@@ -320,27 +314,19 @@ author_profile: true
   text-transform: uppercase;
 }
 
-/*
-   Row 1: full-width research title + introduction
-   Row 2: details + visual column
-
-   The visual column contains:
-   figure → research topics → selected publications
-*/
-
 .research-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(380px, 0.82fr);
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
   grid-template-areas:
     "lead lead"
     "details visual";
-  column-gap: clamp(2rem, 3vw, 3rem);
+  column-gap: clamp(1.5rem, 3vw, 2.7rem);
   row-gap: 0.7rem;
   align-items: start;
 }
 
 .research-section--reverse .research-grid {
-  grid-template-columns: minmax(380px, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
   grid-template-areas:
     "lead lead"
     "visual details";
@@ -387,7 +373,8 @@ author_profile: true
   margin-top: 0;
 }
 
-/* Figure, topics, and publications now stay together */
+/* RESEARCH FIGURES */
+
 .research-visual-column {
   grid-area: visual;
   min-width: 0;
@@ -431,9 +418,7 @@ author_profile: true
   outline-offset: 4px;
 }
 
-/* =========================================================
-   Research Topics
-   ========================================================= */
+/* RESEARCH TOPICS */
 
 .research-topics-block {
   margin: 0;
@@ -442,9 +427,10 @@ author_profile: true
 .research-side-label {
   margin: 0 0 0.55rem;
   color: var(--research-ink);
-  font-size: 0.78rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  line-height: 1.35;
+  letter-spacing: normal;
   text-transform: none;
 }
 
@@ -468,49 +454,7 @@ author_profile: true
   line-height: 1.3;
 }
 
-/* =========================================================
-   Selected publications
-   ========================================================= */
-
-.research-publications-block {
-  margin: 0.15rem 0 0;
-}
-
-.research-publications {
-  display: grid;
-  gap: 0.65rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.research-publications li {
-  margin: 0;
-  padding: 0;
-  font-size: 0.78rem;
-  line-height: 1.45;
-}
-
-.research-publications a {
-  color: var(--research-ink);
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-
-.research-publication-meta {
-  display: block;
-  margin-top: 0.08rem;
-  color: var(--research-muted);
-  font-size: 0.73rem;
-  font-style: normal;
-  line-height: 1.4;
-}
-
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
+/* IMAGE LIGHTBOX */
 
 .research-lightbox[hidden] {
   display: none;
@@ -553,9 +497,7 @@ author_profile: true
   cursor: pointer;
 }
 
-/* =========================================================
-   ANIMATIONS
-   ========================================================= */
+/* ANIMATIONS */
 
 @keyframes research-orbit-rotate {
   to { transform: rotate(360deg); }
@@ -606,9 +548,7 @@ author_profile: true
   }
 }
 
-/* =========================================================
-   DARK MODE
-   ========================================================= */
+/* DARK MODE */
 
 html[data-theme="dark"] .research-page {
   --research-ink: #f2f5f8;
@@ -642,18 +582,18 @@ html[data-theme="dark"] .research-topics li {
   background: #3d4247;
 }
 
-html[data-theme="dark"] .research-publications a {
-  color: #e3e9ee;
-}
+/* RESPONSIVE */
 
-html[data-theme="dark"] .research-publications a:hover,
-html[data-theme="dark"] .research-publications a:focus-visible {
-  color: var(--research-blue);
-}
+@media (min-width: 901px) {
+  .research-visual-column {
+    padding-top: 2.4rem;
+  }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+  .research-figure img {
+    max-height: 420px;
+    object-fit: contain;
+  }
+}
 
 @media (max-width: 900px) {
   .research-intro-body {
@@ -677,6 +617,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
   .research-visual-column {
     gap: 0.9rem;
+    padding-top: 0;
   }
 
   .research-figure {
@@ -708,7 +649,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
   }
 
   .research-section {
-    padding: 2rem 0;
+    padding: 1.2rem 0;
   }
 
   .research-focus {
@@ -741,61 +682,11 @@ html[data-theme="dark"] .research-publications a:focus-visible {
     transition: none;
   }
 }
-
-/* Adaptive research layout: preserve the alternating column order. */
-@media (min-width: 901px) {
-  .research-grid {
-    grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-    column-gap: clamp(1.5rem, 3vw, 2.7rem);
-  }
-  .research-section--reverse .research-grid {
-    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
-  }
-  .research-section--no-publications .research-grid {
-    grid-template-areas: "lead lead" "details visual" "why why";
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-    row-gap: 0.85rem;
-  }
-  .research-section--no-publications.research-section--reverse .research-grid {
-    grid-template-areas: "lead lead" "visual details" "why why";
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  }
-  .research-section--no-publications .research-visual-column { gap: 0.65rem; }
-  .research-section--no-publications .research-figure img { max-height: 360px; object-fit: contain; }
-}
-.research-why-wide { grid-area: why; min-width: 0; }
-.research-why-wide .research-subheading { margin-top: 0; }
-.research-why-wide p { margin: 0; }
-/* Publications: understated academic typography, consistent with the page. */
-.research-publications { gap: 1rem; }
-.research-publications li { font-size: 0.9rem; line-height: 1.55; }
-.research-publications a { font-weight: 400; font-style: normal; }
-.research-publication-meta { margin-top: 0.18rem; font-size: 0.78rem; line-height: 1.45; }
-@media (max-width: 900px) {
-  .research-section--no-publications .research-grid,
-  .research-section--no-publications.research-section--reverse .research-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "lead" "details" "visual" "why";
-  }
-}
-  
-/* Align the top of the research figure with the first line
-   of text below the "What I work on" heading. */
-
-@media (min-width: 901px) {
-  .research-visual-column {
-    padding-top: 2.2rem;
-  }
-}
-  
 </style>
-
 
 <div class="research-page">
 
-  <!-- =====================================================
-       INTRO
-       ===================================================== -->
+  <!-- INTRO -->
 
   <section
     class="research-intro"
@@ -803,6 +694,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
   >
 
     <div class="research-intro-heading">
+
       <p class="research-kicker">
         A question runs through my research
       </p>
@@ -814,11 +706,13 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         How can we improve aquatic animal health, seafood quality,
         and sustainability without increasing environmental cost?
       </p>
+
     </div>
 
     <div class="research-intro-body">
 
       <div class="research-intro-content">
+
         <p class="research-intro-text">
           My research addresses this question across the aquatic food value
           chain, from production to post-harvest handling. I investigate how
@@ -835,6 +729,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           while delivering healthier animals, higher-quality seafood, and more
           sustainable aquatic food systems.
         </p>
+
       </div>
 
       <div
@@ -842,6 +737,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         role="img"
         aria-label="Abstract visualization of four interconnected research areas"
       >
+
         <div class="research-overview-orbit"></div>
         <div class="research-overview-orbit-inner"></div>
 
@@ -870,15 +766,14 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         <span class="research-microsphere research-microsphere--one"></span>
         <span class="research-microsphere research-microsphere--two"></span>
         <span class="research-microsphere research-microsphere--three"></span>
+
       </div>
 
     </div>
   </section>
 
 
-  <!-- =====================================================
-       01 AQUACULTURE ENVIRONMENT
-       ===================================================== -->
+  <!-- 01 AQUACULTURE ENVIRONMENT -->
 
   <section class="research-section" id="environment">
 
@@ -907,7 +802,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         </p>
 
       </div>
-
 
       <div class="research-details">
 
@@ -940,7 +834,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
       </div>
 
-
       <div class="research-visual-column">
 
         <figure class="research-figure">
@@ -955,7 +848,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
             >
           </button>
         </figure>
-
 
         <div class="research-topics-block">
 
@@ -973,60 +865,16 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
         </div>
 
-
-<div class="research-publications-block">
-
-  <p class="research-side-label">
-    Selected publications
-  </p>
-
-  <ul class="research-publications">
-
-    <li>
-      <a
-        href="https://doi.org/10.1016/j.foodchem.2024.140961"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Metabolic profiles and protein expression responses of Pacific oyster
-        (Crassostrea gigas) to polystyrene microplastic stress
-      </a>
-
-      <span class="research-publication-meta">
-        Food Chemistry, 2025
-      </span>
-    </li>
-
-    <li>
-      <a
-        href="https://doi.org/10.3390/foods13050765"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Changes in Flavor-Related Biomarkers in Pacific Oysters (Crassostrea gigas) Following Microplastic Exposure
-      </a>
-
-      <span class="research-publication-meta">
-        Foods, 2024
-      </span>
-    </li>
-
-  </ul>
-  
       </div>
 
     </div>
-
-</div>
   </section>
 
 
-  <!-- =====================================================
-       02 ORAL DELIVERY
-       ===================================================== -->
+  <!-- 02 ORAL DELIVERY -->
 
   <section
-    class="research-section research-section--reverse research-section--no-publications"
+    class="research-section research-section--reverse"
     id="oral-delivery"
   >
 
@@ -1055,7 +903,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
       </div>
 
-
       <div class="research-details">
 
         <h3 class="research-subheading">
@@ -1072,9 +919,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           and release characterization toward feed-compatible oral vaccine
           and functional feed products.
         </p>
-      </div>
 
-      <div class="research-why-wide">
         <h3 class="research-subheading">
           Why it matters
         </h3>
@@ -1087,8 +932,8 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           on therapeutic treatment. For feed manufacturers, it points to a
           route toward value-added functional feeds.
         </p>
-      </div>
 
+      </div>
 
       <div class="research-visual-column">
 
@@ -1104,7 +949,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
             >
           </button>
         </figure>
-
 
         <div class="research-topics-block">
 
@@ -1127,12 +971,10 @@ html[data-theme="dark"] .research-publications a:focus-visible {
   </section>
 
 
-  <!-- =====================================================
-       03 PASSIVE COOLING
-       ===================================================== -->
+  <!-- 03 PASSIVE COOLING -->
 
   <section
-    class="research-section research-section--no-publications"
+    class="research-section"
     id="thermal-management"
   >
 
@@ -1161,7 +1003,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
       </div>
 
-
       <div class="research-details">
 
         <h3 class="research-subheading">
@@ -1178,9 +1019,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           components also aligns the materials with sustainability goals for
           packaging and cold-chain systems.
         </p>
-      </div>
 
-      <div class="research-why-wide">
         <h3 class="research-subheading">
           Why it matters
         </h3>
@@ -1192,8 +1031,8 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           cold-chain operators, packaging companies, and food producers, it
           points to a low-energy, bio-based option for temperature control.
         </p>
-      </div>
 
+      </div>
 
       <div class="research-visual-column">
 
@@ -1209,7 +1048,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
             >
           </button>
         </figure>
-
 
         <div class="research-topics-block">
 
@@ -1232,9 +1070,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
   </section>
 
 
-  <!-- =====================================================
-       04 POST-HARVEST
-       ===================================================== -->
+  <!-- 04 POST-HARVEST -->
 
   <section
     class="research-section research-section--reverse"
@@ -1264,7 +1100,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         </p>
 
       </div>
-
 
       <div class="research-details">
 
@@ -1297,7 +1132,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
       </div>
 
-
       <div class="research-visual-column">
 
         <figure class="research-figure">
@@ -1312,7 +1146,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
             >
           </button>
         </figure>
-
 
         <div class="research-topics-block">
 
@@ -1330,51 +1163,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
         </div>
 
-
-        <div class="research-publications-block">
-
-          <p class="research-side-label">
-            Selected publications
-          </p>
-
-          <ul class="research-publications">
-
-            <li>
-              <a
-                href="https://doi.org/10.1016/j.aquaculture.2024.742066"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Effects of cooling rate on the physiological metabolism and flavor
-                of thick-shell mussel (Mytilus coruscus) during
-                low-temperature semi-anhydrous living-preservation
-              </a>
-
-              <span class="research-publication-meta">
-                Aquaculture, 2025
-              </span>
-            </li>
-
-            <li>
-              <a
-                href="https://doi.org/10.1016/j.foodchem.2023.136162"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Effects of liquid nitrogen freezing at different temperatures
-                on the quality and flavor of Pacific oyster
-                (Crassostrea gigas)
-              </a>
-
-              <span class="research-publication-meta">
-                Food Chemistry, 2023
-              </span>
-            </li>
-
-          </ul>
-
-        </div>
-
       </div>
 
     </div>
@@ -1383,9 +1171,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 </div>
 
 
-<!-- =======================================================
-     LIGHTBOX
-     ======================================================= -->
+<!-- LIGHTBOX -->
 
 <div
   class="research-lightbox"
@@ -1394,6 +1180,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
   aria-label="Enlarged research figure"
   hidden
 >
+
   <button
     class="research-lightbox-close"
     type="button"
@@ -1407,15 +1194,14 @@ html[data-theme="dark"] .research-publications a:focus-visible {
     src=""
     alt=""
   >
+
 </div>
 
 
 <script>
 (() => {
 
-  /* =====================================================
-     FIGURE LIGHTBOX
-     ===================================================== */
+  /* FIGURE LIGHTBOX */
 
   const lightbox =
     document.querySelector(".research-lightbox");
@@ -1427,7 +1213,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
     lightbox?.querySelector(".research-lightbox-close");
 
   let previousFocus = null;
-
 
   if (lightbox && lightboxImage && closeButton) {
 
@@ -1442,7 +1227,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
         previousFocus.focus();
       }
     };
-
 
     document
       .querySelectorAll(".research-image-button")
@@ -1473,12 +1257,10 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
       });
 
-
     closeButton.addEventListener(
       "click",
       closeLightbox
     );
-
 
     lightbox.addEventListener(
       "click",
@@ -1490,7 +1272,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
       }
     );
-
 
     document.addEventListener(
       "keydown",
@@ -1508,10 +1289,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
   }
 
-
-  /* =====================================================
-     OVERVIEW POINTER MOVEMENT
-     ===================================================== */
+  /* OVERVIEW POINTER MOVEMENT */
 
   const introBody =
     document.querySelector(".research-intro-body");
@@ -1524,11 +1302,9 @@ html[data-theme="dark"] .research-publications a:focus-visible {
       "(min-width: 901px) and (prefers-reduced-motion: no-preference)"
     );
 
-
   if (introBody && overviewVisual) {
 
     let frame = null;
-
 
     const resetOverviewVisual = () => {
 
@@ -1554,7 +1330,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
     };
 
-
     introBody.addEventListener(
       "pointermove",
       (event) => {
@@ -1574,11 +1349,9 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           rect.height -
           0.5;
 
-
         if (frame) {
           cancelAnimationFrame(frame);
         }
-
 
         frame = requestAnimationFrame(() => {
 
@@ -1607,12 +1380,10 @@ html[data-theme="dark"] .research-publications a:focus-visible {
       }
     );
 
-
     introBody.addEventListener(
       "pointerleave",
       resetOverviewVisual
     );
-
 
     allowMotion.addEventListener?.(
       "change",
