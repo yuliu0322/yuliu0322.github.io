@@ -892,8 +892,8 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           anthropogenic contaminants throughout culture, and these exposures
           can carry through to the biochemical composition, flavor, and safety
           profile of the harvested product. We use the Pacific oyster
-          (<i>Crassostrea gigas</i>) and the thick-shell mussel
-          (<i>Mytilus coruscus</i>) as model species to trace this pathway
+          (Crassostrea gigas) and the thick-shell mussel
+          (Mytilus coruscus) as model species to trace this pathway
           from environmental exposure to product quality.
         </p>
 
@@ -1104,7 +1104,6 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           </p>
 
           <ul class="research-topics">
-            <li>PLGA-based delivery systems</li>
             <li>Oral vaccines</li>
             <li>Controlled-release systems</li>
             <li>Functional aquafeeds</li>
@@ -1210,9 +1209,9 @@ html[data-theme="dark"] .research-publications a:focus-visible {
           </p>
 
           <ul class="research-topics">
-            <li>Passive radiative cooling</li>
-            <li>Evaporative cooling</li>
+            <li>Passive cooling</li>
             <li>Bio-based composite films</li>
+            <li>Food packages</li>
             <li>Food cold-chain technologies</li>
           </ul>
 
