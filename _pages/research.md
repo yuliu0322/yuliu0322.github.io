@@ -432,7 +432,7 @@ author_profile: true
 }
 
 /* =========================================================
-   RESEARCH TOPICS
+   Research Topics
    ========================================================= */
 
 .research-topics-block {
@@ -469,7 +469,7 @@ author_profile: true
 }
 
 /* =========================================================
-   SELECTED PUBLICATIONS
+   Selected publications
    ========================================================= */
 
 .research-publications-block {
