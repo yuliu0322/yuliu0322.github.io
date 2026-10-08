@@ -784,7 +784,7 @@ html[data-theme="dark"] .research-publications a:focus-visible {
 
 @media (min-width: 901px) {
   .research-visual-column {
-    padding-top: 2.4rem;
+    padding-top: 2.2rem;
   }
 }
   
