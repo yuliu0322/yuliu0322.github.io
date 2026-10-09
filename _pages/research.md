@@ -932,7 +932,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
             <li>Oral vaccines</li>
             <li>Controlled-release</li>
             <li>Functional aquafeeds</li>
-            <li>Disease prevention</li>
+            <li>Sustainable aquaculture disease control</li>
           </ul>
 
         </div>
