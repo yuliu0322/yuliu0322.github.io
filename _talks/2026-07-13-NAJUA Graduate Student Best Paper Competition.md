@@ -7,4 +7,4 @@ location: "Chicago, IL, USA"
 date: 2026-07-13
 ---
 
-🏆 Thrilled to have received 3rd Place in the NAJUA Graduate Student Best Paper Competition 2026 — a great recognition of the research quality and originality behind this work.
+🏆 Thrilled to have won 3rd Place in the NAJUA Graduate Student Best Paper Competition 2026 for our research on bioinspired passive cooling materials! It's great to see our work recognized for its quality and originality! 🎉
