@@ -208,7 +208,7 @@ redirect_from:
 .home-interest-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 16px 14px;
   align-content: center;
 }
 
