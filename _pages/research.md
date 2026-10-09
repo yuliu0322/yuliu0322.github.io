@@ -809,13 +809,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-          We study how temperature, salinity, and microplastic exposure,
-          including polystyrene particles, alter shellfish physiology,
-          metabolism, biochemical composition, and flavor-related compounds.
-          Our approach integrates physiological measurements and biochemical
-          assays with metabolomics, lipidomics, and protein expression analysis,
-          which allows us to identify the metabolic pathways and biomarkers
-          that connect environmental exposure to changes in product quality.
+We studied how temperature, salinity, and microplastic exposure affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. We integrated physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis to identify the metabolic pathways and biomarkers linking environmental exposure to changes in product quality.
         </p>
 
         <h3 class="research-subheading">
@@ -823,12 +817,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-          Shellfish quality is determined well before harvest. Pinpointing
-          which stressors, and which metabolic pathways, drive changes in
-          flavor and composition provides a scientific basis for site selection,
-          culture management, and quality grading by growers and processors,
-          and for assessing microplastic contamination in seafood by inspectors
-          and regulators.
+          Shellfish quality is shaped by environmental conditions long before harvest. Identifying the environmental stressors and metabolic pathways associated with changes in shellfish health and flavor can provide valuable insights for aquaculture site selection and culture management, while also informing efforts by inspectors and regulators to assess microplastic contamination in seafood.
         </p>
 
       </div>
@@ -892,12 +881,7 @@ html[data-theme="dark"] .research-topics li {
         </h2>
 
         <p>
-          Disease is a persistent constraint on aquaculture production, and
-          feed is one of the few practical routes for immunizing or
-          supplementing animals at farm scale. Yet probiotics and antigens are
-          fragile: they can be damaged by the heat, pressure, and shear of feed
-          extrusion, by storage, and by the harsh gastrointestinal environment
-          before reaching the intestine.
+Disease remains a major challenge in aquaculture, and feed-based delivery offers a practical approach to administering vaccines and functional supplements at farm scale. However, probiotics, immunostimulants, and antigens may lose their stability or biological activity during storage and passage through the digestive tract, limiting their effectiveness.
         </p>
 
       </div>
@@ -909,14 +893,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-          We are developing PLGA-based oral delivery systems to encapsulate
-          probiotics, probiotic-derived immunostimulants, and antigens. These
-          systems are incorporated into extruded aquafeeds, with the goal of
-          protecting bioactive compounds during feed processing and storage
-          and releasing them in a controlled manner during gastrointestinal
-          transit. Our work combines formulation design, stability evaluation,
-          and release characterization toward feed-compatible oral vaccine
-          and functional feed products.
+We are developing PLGA-based oral delivery systems to encapsulate probiotics, probiotic-derived immunostimulants, and antigens for application as coatings on extruded aquafeeds. Our goal is to protect these bioactive components during storage while enabling controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
         </p>
 
         <h3 class="research-subheading">
@@ -924,12 +901,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-          An oral delivery platform that is stable in feed and effective in
-          the gut could make vaccination and immunostimulation practical in
-          situations where injection is difficult, reduce handling stress and
-          labor, and support disease prevention strategies that depend less
-          on therapeutic treatment. For feed manufacturers, it points to a
-          route toward value-added functional feeds.
+A feed-based oral delivery platform that protects bioactive cargo during feed storage and passage through the digestive tract could make vaccination and immunostimulation more practical at farm scale, particularly where injection is difficult. Such an approach could reduce handling stress and labor, support disease prevention with less reliance on therapeutic treatments, and create opportunities for feed manufacturers to develop value-added functional aquafeeds.
         </p>
 
       </div>
@@ -1091,11 +1063,7 @@ html[data-theme="dark"] .research-topics li {
         </h2>
 
         <p>
-          Between harvest and consumption, seafood is purified, frozen,
-          stored, transported, and often kept alive. Each step can change
-          physiology, biochemical composition, sensory quality, and shelf life,
-          and the molecular basis of these changes determines how well
-          freshness and flavor can be preserved.
+Between harvest and consumption, seafood may undergo depuration, live holding, freezing, storage, and transportation. These processes can affect physiological condition, biochemical composition, sensory quality, and shelf life. Understanding the underlying molecular mechanisms can help inform strategies to preserve seafood freshness, flavor, and overall quality.
         </p>
 
       </div>
@@ -1107,14 +1075,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-          We compared post-harvest strategies for oysters and mussels,
-          including depuration, liquid-nitrogen quick freezing at different
-          temperatures, low-temperature semi-anhydrous living preservation at
-          different cooling rates, and modified-atmosphere packaging. Using
-          omics techniques combined with gas chromatography, we tracked how
-          physiological status, biochemical composition, and flavor compounds
-          change under each treatment, and identified the conditions that best
-          retain quality.
+We investigated various post-harvest preservation approaches for oysters and mussels, including depuration, liquid-nitrogen quick freezing at different temperatures, low-temperature semi-anhydrous live preservation at different cooling rates, and modified-atmosphere packaging. By combining omics techniques with gas chromatography, we examined changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying seafood quality changes.
         </p>
 
         <h3 class="research-subheading">
@@ -1122,11 +1083,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-          Live and frozen shellfish depend on freshness, flavor, and survival
-          through the supply chain. Linking each preservation method to its
-          biochemical consequences gives processors and distributors evidence
-          for choosing treatment conditions, extending shelf life, and reducing
-          post-harvest losses.
+Maintaining freshness, flavor, and overall quality throughout the supply chain is essential for both live and frozen shellfish. Understanding how different preservation methods affect physiological and biochemical changes can provide valuable insights for seafood processors and distributors to optimize preservation conditions, extend shelf life, and reduce post-harvest losses.
         </p>
 
       </div>
