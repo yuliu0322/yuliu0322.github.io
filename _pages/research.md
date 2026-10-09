@@ -929,10 +929,10 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
 
           <ul class="research-topics">
             <li>Feed-based oral delivery systems</li>
+            <li>Functional aquafeeds</li>
             <li>Oral vaccines</li>
             <li>Controlled-release</li>
-            <li>Functional aquafeeds</li>
-            <li>Sustainable aquaculture disease control</li>
+            <li>Disease control</li>
           </ul>
 
         </div>
