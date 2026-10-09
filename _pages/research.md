@@ -702,8 +702,7 @@ html[data-theme="dark"] .research-topics li {
         class="research-question"
         id="research-question-heading"
       >
-        How can we improve aquatic animal health, seafood quality,
-        and sustainability without increasing environmental cost?
+        How can we improve aquatic animal health and seafood quality while making aquatic food systems more sustainable?
       </p>
 
     </div>
@@ -713,20 +712,7 @@ html[data-theme="dark"] .research-topics li {
       <div class="research-intro-content">
 
         <p class="research-intro-text">
-          My research addresses this question across the aquatic food value
-          chain, from production to post-harvest handling. I investigate how
-          culture conditions and environmental stressors shape aquatic animal
-          health, metabolism, and the quality of the food ultimately produced.
-          I then develop practical interventions, including PLGA-based oral
-          delivery systems for vaccines and probiotic-derived immunostimulants
-          to support disease prevention, and bio-based passive cooling
-          materials to reduce energy use and product loss along the cold chain.
-          At the post-harvest stage, I examine how processing and storage alter
-          seafood freshness, biochemical composition, and flavor. By connecting
-          biological mechanisms with engineering and food-quality solutions,
-          my goal is to reduce losses at both production and post-harvest stages
-          while delivering healthier animals, higher-quality seafood, and more
-          sustainable aquatic food systems.
+To address this question, my research focuses on understanding and improving aquatic food quality, from aquaculture production to post-harvest preservation. I first examined how environmental conditions shape the health, metabolism, and product quality of aquatic animals. Building on these findings, I am now developing disease prevention strategies, including PLGA-based oral delivery systems for vaccines and immunostimulants derived from probiotics. On the post-harvest side, I characterized how processing and storage affect seafood freshness, biochemical composition, and flavor, and I am developing bio-based passive cooling materials to extend shelf life without energy-intensive refrigeration. Together, this work seeks to deliver safer, fresher, and more sustainably produced seafood from farm to table.
         </p>
 
       </div>
