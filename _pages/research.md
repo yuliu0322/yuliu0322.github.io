@@ -315,20 +315,23 @@ author_profile: true
 
 .research-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas:
     "lead lead"
-    "details visual";
+    "work matters"
+    "figure topics";
   column-gap: clamp(1.5rem, 3vw, 2.7rem);
-  row-gap: 0.7rem;
+  row-gap: 1.3rem;
   align-items: start;
 }
 
+/* All four sections use the same left-to-right layout. */
 .research-section--reverse .research-grid {
-  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-areas:
     "lead lead"
-    "visual details";
+    "work matters"
+    "figure topics";
 }
 
 .research-lead {
@@ -352,13 +355,12 @@ author_profile: true
 }
 
 .research-details {
-  grid-area: details;
-  min-width: 0;
+  display: contents;
 }
 
-.research-details p {
-  margin: 0;
-}
+.research-work { grid-area: work; min-width: 0; }
+.research-matters { grid-area: matters; min-width: 0; }
+.research-work p, .research-matters p { margin: 0; }
 
 .research-subheading {
   margin: 0.9rem 0 0.28rem;
@@ -375,14 +377,12 @@ author_profile: true
 /* RESEARCH FIGURES */
 
 .research-visual-column {
-  grid-area: visual;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+  display: contents;
 }
 
 .research-figure {
+  grid-area: figure;
+  min-width: 0;
   width: 100%;
   margin: 0;
 }
@@ -420,6 +420,8 @@ author_profile: true
 /* RESEARCH TOPICS */
 
 .research-topics-block {
+  grid-area: topics;
+  min-width: 0;
   margin: 0;
 }
 
@@ -584,10 +586,6 @@ html[data-theme="dark"] .research-topics li {
 /* RESPONSIVE */
 
 @media (min-width: 901px) {
-  .research-visual-column {
-    padding-top: 2.4rem;
-  }
-
   .research-figure img {
     max-height: 420px;
     object-fit: contain;
@@ -606,23 +604,17 @@ html[data-theme="dark"] .research-topics li {
 
   .research-grid,
   .research-section--reverse .research-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "lead"
-      "details"
-      "visual";
+      "work"
+      "matters"
+      "figure"
+      "topics";
     gap: 1rem;
   }
 
-  .research-visual-column {
-    gap: 0.9rem;
-    padding-top: 0;
-  }
-
-  .research-figure {
-    max-width: 680px;
-    margin-top: 0;
-  }
+  .research-figure { max-width: 680px; }
 }
 
 @media (max-width: 600px) {
@@ -803,23 +795,24 @@ html[data-theme="dark"] .research-topics li {
       </div>
 
       <div class="research-details">
-
-        <h3 class="research-subheading">
+        <div class="research-work">
+<h3 class="research-subheading">
           What I work on
         </h3>
 
         <p>
 We studied how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds under different environmental conditions. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, we investigated the underlying metabolic responses and identified pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
         </p>
-
-        <h3 class="research-subheading">
+        </div>
+        <div class="research-matters">
+<h3 class="research-subheading">
           Why it matters
         </h3>
 
         <p>
           Shellfish quality is shaped by environmental conditions long before harvest. Identifying the environmental stressors and metabolic pathways associated with changes in shellfish health and flavor can provide valuable insights for aquaculture site selection and culture management, while also informing efforts by inspectors and regulators to assess microplastic contamination in seafood.
         </p>
-
+        </div>
       </div>
 
       <div class="research-visual-column">
@@ -887,23 +880,24 @@ Disease remains a major challenge in aquaculture, and feed-based delivery offers
       </div>
 
       <div class="research-details">
-
-        <h3 class="research-subheading">
+        <div class="research-work">
+<h3 class="research-subheading">
           What I work on
         </h3>
 
         <p>
 We are developing PLGA-based oral delivery systems to encapsulate probiotics, probiotic-derived immunostimulants, and antigens for application as coatings on extruded aquafeeds. Our goal is to protect these bioactive components during storage while enabling controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
         </p>
-
-        <h3 class="research-subheading">
+        </div>
+        <div class="research-matters">
+<h3 class="research-subheading">
           Why it matters
         </h3>
 
         <p>
 A feed-based oral delivery platform that protects bioactive cargo during feed storage and passage through the digestive tract could make vaccination and immunostimulation more practical at farm scale, particularly where injection is difficult. Such an approach could reduce handling stress and labor, support disease prevention with less reliance on therapeutic treatments, and create opportunities for feed manufacturers to develop value-added functional aquafeeds.
         </p>
-
+        </div>
       </div>
 
       <div class="research-visual-column">
@@ -975,8 +969,8 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
       </div>
 
       <div class="research-details">
-
-        <h3 class="research-subheading">
+        <div class="research-work">
+<h3 class="research-subheading">
           What I work on
         </h3>
 
@@ -990,8 +984,9 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
           components also aligns the materials with sustainability goals for
           packaging and cold-chain systems.
         </p>
-
-        <h3 class="research-subheading">
+        </div>
+        <div class="research-matters">
+<h3 class="research-subheading">
           Why it matters
         </h3>
 
@@ -1002,7 +997,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
           cold-chain operators, packaging companies, and food producers, it
           points to a low-energy, bio-based option for temperature control.
         </p>
-
+        </div>
       </div>
 
       <div class="research-visual-column">
@@ -1069,23 +1064,24 @@ Between harvest and consumption, seafood may undergo depuration, live holding, f
       </div>
 
       <div class="research-details">
-
-        <h3 class="research-subheading">
+        <div class="research-work">
+<h3 class="research-subheading">
           What I work on
         </h3>
 
         <p>
 We investigated various post-harvest preservation approaches for oysters and mussels, including depuration, liquid-nitrogen quick freezing at different temperatures, low-temperature semi-anhydrous live preservation at different cooling rates, and modified-atmosphere packaging. By combining omics techniques with gas chromatography, we examined changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying seafood quality changes.
         </p>
-
-        <h3 class="research-subheading">
+        </div>
+        <div class="research-matters">
+<h3 class="research-subheading">
           Why it matters
         </h3>
 
         <p>
 Maintaining freshness, flavor, and overall quality throughout the supply chain is essential for both live and frozen shellfish. Understanding how different preservation methods affect physiological and biochemical changes can provide valuable insights for seafood processors and distributors to optimize preservation conditions, extend shelf life, and reduce post-harvest losses.
         </p>
-
+        </div>
       </div>
 
       <div class="research-visual-column">
@@ -1244,35 +1240,6 @@ Maintaining freshness, flavor, and overall quality throughout the supply chain i
     );
 
   }
-
-  /* ALIGN WHY IT MATTERS AND RESEARCH TOPICS */
-
-  const alignResearchTitles = () => {
-    document.querySelectorAll(".research-section").forEach((section) => {
-      const headings = [...section.querySelectorAll(".research-subheading")];
-      const whyHeading = headings.find((heading) =>
-        heading.textContent.trim() === "Why it matters"
-      );
-      const topicsBlock = section.querySelector(".research-topics-block");
-      const topicsHeading = topicsBlock?.querySelector(".research-side-label");
-
-      if (!whyHeading || !topicsBlock || !topicsHeading) return;
-
-      topicsBlock.style.transform = "";
-      if (window.matchMedia("(max-width: 900px)").matches) return;
-
-      const difference = whyHeading.getBoundingClientRect().top -
-        topicsHeading.getBoundingClientRect().top;
-      topicsBlock.style.transform = `translateY(${difference.toFixed(1)}px)`;
-    });
-  };
-
-  window.addEventListener("load", alignResearchTitles);
-  window.addEventListener("resize", alignResearchTitles);
-  document.querySelectorAll(".research-figure img").forEach((img) => {
-    img.addEventListener("load", alignResearchTitles);
-  });
-  alignResearchTitles();
 
   /* OVERVIEW POINTER MOVEMENT */
 
