@@ -9,5 +9,5 @@ location: "Blacksburg, VA, USA"
 event_url: "https://southern.sare.org/grants/apply-for-a-grant/graduate-student-grants/"
 ---
 
-🎉Excited to share that I've been awarded the 2026 Southern SARE Graduate Student Grant to field-test chitin-based passive cooling liners — a sustainable, affordable way to reduce postharvest heat buildup and preserve strawberry quality on small-scale Southern farms. Huge thanks to Dr. Feng and Dr. Yang for their help with the proposal and application process!🙏
+🎉 I'm so excited to share that I've received the 2026 Southern SARE Graduate Student Grant! My project will focus on testing chitin-based passive cooling liners in the field to help reduce postharvest heat buildup and keep strawberries fresh longer. The goal is to develop a sustainable and affordable solution for small-scale farms in the South. Huge thanks to Dr. Feng and Dr. Yang for all their help with the proposal and application process! 🙏
 
