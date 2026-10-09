@@ -809,7 +809,7 @@ html[data-theme="dark"] .research-topics li {
         </h3>
 
         <p>
-We studied how temperature, salinity, and microplastic exposure affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. We integrated physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis to identify the metabolic pathways and biomarkers linking environmental exposure to changes in product quality.
+We studied how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds under different environmental conditions. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, we investigated the underlying metabolic responses and identified pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
         </p>
 
         <h3 class="research-subheading">
