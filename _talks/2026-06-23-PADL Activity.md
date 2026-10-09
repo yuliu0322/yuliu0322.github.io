@@ -9,4 +9,4 @@ location: "Blacksburg, VA, USA"
 event_url: "https://www.alce.vt.edu/signature-programs/engaging-secondary-teachers.html"
 ---
 
-Served as a Graduate Student Facilitator for PDAL 2026, a teacher immersion program at Virginia Tech. I helped Prof. Justin Barone run a hands-on workshop where secondary school teachers made gummy bears from scratch using everyday kitchen ingredients — a fun way to explore how ingredients and processing affect texture and flavor in food science.
+I had a great time helping Prof. Justin Barone with a hands-on workshop at PDAL 2026, a teacher immersion program at Virginia Tech! We showed secondary school teachers how to make gummy bears from scratch using simple kitchen ingredients. It was a fun way to explore some food science and see how different ingredients and processing methods can change the texture and flavor of food! 😄
