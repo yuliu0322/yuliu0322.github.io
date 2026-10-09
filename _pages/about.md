@@ -403,17 +403,11 @@ html[data-theme="dark"] .home-welcome {
       <div class="home-beyond-copy">
 
         <p>
-          Outside of the laboratory, I enjoy traveling, hiking, photography,
-          watching movies, and exploring different genres of music.
-          Photography allows me to document landscapes, cultures, and everyday
-          moments while encouraging me to observe the world from different
-          perspectives.
+Outside the lab, I enjoy traveling, hiking, photography, and watching movies. I especially enjoy exploring new places, experiencing different cultures, and capturing landscapes and everyday moments through photography.
         </p>
 
         <p>
-          These experiences help me maintain curiosity, creativity, and
-          balance—qualities that I also value in scientific research and
-          problem-solving.
+These activities give me opportunities to unwind, discover new perspectives, and appreciate the world beyond my research. They also help me stay curious, creative, and open to new experiences, both in my personal life and scientific work.
         </p>
 
       </div>
