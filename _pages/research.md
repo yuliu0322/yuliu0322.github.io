@@ -436,7 +436,7 @@ author_profile: true
 .research-topics {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.8rem 0.7rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -444,13 +444,13 @@ author_profile: true
 
 .research-topics li {
   margin: 0;
-  padding: 0.32rem 0.68rem;
+  padding: 0.42rem 0.85rem;
   border: 1px solid var(--research-line);
   border-radius: 999px;
   color: #596675;
   background: #fff;
   font-size: 0.76rem;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 /* IMAGE LIGHTBOX */
