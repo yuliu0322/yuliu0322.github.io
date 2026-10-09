@@ -732,21 +732,22 @@ To address this question, my research focuses on understanding and improving aqu
           <span class="research-ocean-wave research-ocean-wave--three"></span>
         </div>
 
-        <div class="research-overview-node research-overview-node--aquaculture">
-          Sustainable Aquaculture
-        </div>
 
-        <div class="research-overview-node research-overview-node--passive-cooling">
-          Passive Cooling Materials
-        </div>
+<div class="research-overview-node research-overview-node--aquaculture">
+  Sustainable Aquaculture
+</div>
 
-        <div class="research-overview-node research-overview-node--seafood-science">
-          Seafood Science
-        </div>
+<div class="research-overview-node research-overview-node--oral-delivery">
+  Oral Delivery Systems
+</div>
 
-        <div class="research-overview-node research-overview-node--oral-delivery">
-          Oral Delivery Systems
-        </div>
+<div class="research-overview-node research-overview-node--passive-cooling">
+  Passive Cooling Materials
+</div>
+
+<div class="research-overview-node research-overview-node--seafood-science">
+  Seafood Quality
+</div>
 
         <span class="research-microsphere research-microsphere--one"></span>
         <span class="research-microsphere research-microsphere--two"></span>
