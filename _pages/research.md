@@ -928,8 +928,9 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
           </p>
 
           <ul class="research-topics">
+            <li>Feed-based oral delivery systems</li>
             <li>Oral vaccines</li>
-            <li>Controlled-release systems</li>
+            <li>Controlled-release</li>
             <li>Functional aquafeeds</li>
             <li>Disease prevention</li>
           </ul>
@@ -1027,9 +1028,10 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
           </p>
 
           <ul class="research-topics">
-            <li>Passive cooling</li>
+            <li>Passive radiative and evaporative cooling</li>
             <li>Bio-based composite films</li>
             <li>Food packages</li>
+            <li>Food preservation</li>
             <li>Food cold-chain technologies</li>
           </ul>
 
@@ -1110,11 +1112,11 @@ Maintaining freshness, flavor, and overall quality throughout the supply chain i
           </p>
 
           <ul class="research-topics">
-            <li>Seafood preservation</li>
+            <li>Seafood processing and preservation</li>
             <li>Shellfish flavor chemistry</li>
             <li>Live storage</li>
             <li>Shelf-life extension</li>
-            <li>Quality evaluation</li>
+            <li>Seafood sensory evaluation</li>
           </ul>
 
         </div>
