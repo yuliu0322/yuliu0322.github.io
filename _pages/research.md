@@ -1049,7 +1049,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
       <div class="research-lead">
 
         <h2 class="research-focus">
-          Evaluating how post-harvest preservation affects seafood freshness and flavor quality
+          Evaluating the effects of postharvest preservation on seafood freshness and flavor quality
         </h2>
 
         <p>
@@ -1065,7 +1065,7 @@ Between harvest and consumption, seafood may undergo depuration, live holding, f
         </h3>
 
         <p>
-We investigated various post-harvest preservation approaches for oysters and mussels, including depuration, liquid-nitrogen quick freezing at different temperatures, low-temperature semi-anhydrous live preservation at different cooling rates, and modified-atmosphere packaging. By combining omics techniques with gas chromatography, we examined changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying seafood quality changes.
+We investigated various postharvest preservation strategies for oysters and mussels, including depuration, liquid nitrogen quick-freezing under different temperature conditions, low-temperature semi-anhydrous live storage at different cooling rates, and modified atmosphere packaging with varying oxygen concentrations. By combining physicochemical analyses with flavor characterization, we evaluated changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying changes in seafood quality.
         </p>
 
         <h3 class="research-subheading">
