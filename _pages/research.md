@@ -1065,7 +1065,7 @@ Between harvest and consumption, seafood may undergo depuration, live holding, f
         </h3>
 
         <p>
-We investigated various postharvest preservation strategies for oysters and mussels, including depuration, liquid nitrogen quick-freezing under different temperature conditions, low-temperature semi-anhydrous live storage at different cooling rates, and modified atmosphere packaging with varying oxygen concentrations. By combining physicochemical analyses with flavor characterization, we evaluated changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying changes in seafood quality.
+We investigated various postharvest preservation strategies for oysters and mussels, including depuration, liquid nitrogen quick-freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. By combining physicochemical analyses with flavor characterization, we evaluated changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying changes in seafood quality.
         </p>
 
         <h3 class="research-subheading">
