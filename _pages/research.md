@@ -796,7 +796,7 @@ To address this question, my research focuses on understanding and improving aqu
         </h3>
 
         <p>
-We studied how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds under different environmental conditions. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, we investigated the underlying metabolic responses and identified pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
+During my master's studies, my research focused on understanding how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, I investigated the underlying metabolic responses and identified key pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
         </p>
 
         <h3 class="research-subheading">
@@ -880,7 +880,7 @@ Disease remains a major challenge in aquaculture, and feed-based delivery offers
         </h3>
 
         <p>
-We are developing PLGA-based oral delivery systems to encapsulate probiotics, probiotic-derived immunostimulants, and antigens for application as coatings on extruded aquafeeds. Our goal is to protect these bioactive components during storage while enabling controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
+During my doctoral studies, I have been involved in developing PLGA-based oral delivery systems to encapsulate probiotics, probiotic-derived immunostimulants, and antigens for application as coatings on extruded aquafeeds. These systems are designed to protect bioactive components during storage while enabling controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
         </p>
 
         <h3 class="research-subheading">
@@ -970,14 +970,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
         </h3>
 
         <p>
-          We are developing bio-based composite films that combine passive
-          radiative cooling with evaporative cooling to reach sub-ambient
-          temperatures without external energy input. Our design considers
-          cooling performance together with water retention and release, and
-          with the mechanical robustness required for handling and packaging
-          in real food-preservation settings. Using renewable, bio-based
-          components also aligns the materials with sustainability goals for
-          packaging and cold-chain systems.
+Specifically, my doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling to achieve sub-ambient temperatures without external energy input. Our research focuses on optimizing cooling performance, water retention and release, and mechanical properties to meet the practical requirements of food preservation and packaging. By utilizing renewable, bio-based materials, we aim to develop sustainable and energy-efficient cooling solutions for food packaging and cold-chain applications.
         </p>
 
         <h3 class="research-subheading">
@@ -1065,7 +1058,7 @@ Between harvest and consumption, seafood may undergo depuration, live holding, f
         </h3>
 
         <p>
-We investigated various postharvest preservation strategies for oysters and mussels, including depuration, liquid nitrogen quick-freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. By combining physicochemical analyses with flavor characterization, we evaluated changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying changes in seafood quality.
+During my master's studies, I also contributed to research projects investigating various postharvest preservation strategies for oysters and mussels, including depuration, liquid nitrogen quick-freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. By combining physicochemical analyses with flavor characterization, we evaluated changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying changes in seafood quality.
         </p>
 
         <h3 class="research-subheading">
