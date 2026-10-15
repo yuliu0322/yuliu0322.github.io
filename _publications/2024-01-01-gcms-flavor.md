@@ -1,5 +1,5 @@
 ---
-title: "The dynamic change of flavor characteristics in Pacific oyster (Crassostrea gigas) during depuration uncovered by mass spectrometry-based metabolomics combined with gas chromatography"
+title: "The dynamic change of flavor characteristics in Pacific oyster (Crassostrea gigas) during depuration uncovered by mass spectrometry-based metabolomics combined with gas chromatography-ion mobility spectrometry (GC-IMS)"
 collection: publications
 permalink: /publication/gcms-flavor/
 date: 2024-01-01
