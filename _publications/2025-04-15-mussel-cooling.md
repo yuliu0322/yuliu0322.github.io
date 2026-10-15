@@ -11,12 +11,5 @@ pdf: "/files/mussel-cooling.pdf"
 thumbnail: "/assets/images/mussel-cooling.png"
 category: "Seafood Preservation"
 summary: >
-  This study compared the physiological and flavor responses of thick-shell
-  mussels subjected to different cooling rates during low-temperature
-  semi-anhydrous living-preservation. Cooling rate influenced metabolic
-  activity, energy utilization, physiological stress, and the accumulation of
-  flavor-related compounds during storage. Mussels cooled at 4 °C/h exhibited
-  the lowest accumulation of bitter amino acids after two days, indicating
-  that an appropriate cooling rate can reduce stress-induced quality
-  deterioration and help preserve desirable flavor during cold-chain storage.
+This study investigated the effects of different cooling rates (1, 4, 8, and 16 °C/h) on the physiological metabolism, survival, and flavor quality of thick-shell mussels during low-temperature semi-anhydrous living-preservation. **A cooling rate of 4 °C/h demonstrated the best overall preservation performance, maintaining a 100% survival rate after 2 days and the highest survival rate after 7 days of storage.** Compared with other treatments, **the 4 °C/h group maintained higher ATP levels and adenosine energy charge (AEC), indicating better energy status and physiological vitality.** Flavor analysis revealed that **this cooling rate minimized the accumulation of bitter amino acids, particularly arginine, while helping preserve desirable taste characteristics.** Additionally, GC-IMS analysis demonstrated that **gradient cooling slowed the loss of volatile aroma compounds**, contributing to better flavor retention. The 4 °C/h treatment also maintained relatively higher levels of nutritionally important fatty acids, including EPA and DHA. Overall, **the findings identified 4 °C/h as a favorable cooling rate for maintaining mussel survival, physiological stability, and flavor quality**, providing practical insights for optimizing low-temperature storage and transportation of live shellfish.
 ---
