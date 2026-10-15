@@ -11,12 +11,32 @@ thumbnail: "/assets/images/liquid-nitrogen-oyster.png"
 pdf: "/files/liquid-nitrogen-oyster.pdf"
 category: "Seafood Processing"
 summary: >
-  This study compared the effects of different liquid nitrogen freezing
-  temperatures on the physicochemical quality and flavor characteristics of
-  Pacific oysters. Changes in water distribution, texture, protein properties,
-  free amino acids, and volatile compounds were evaluated to determine how
-  freezing temperature influenced muscle damage and flavor retention. The
-  results demonstrate that controlling the liquid nitrogen freezing temperature
-  is important for limiting structural deterioration and preserving the
-  sensory quality of frozen oysters.
+  This study investigated the effects of liquid nitrogen freezing
+  (LNF) at different temperatures (-20, -40, -60, -80, and -100 °C)
+  on the physicochemical quality, muscle microstructure, and
+  flavor characteristics of Pacific oysters (Crassostrea gigas).
+  <strong>Liquid nitrogen freezing at -80 °C provided the best
+  overall preservation performance, reducing centrifugal loss
+  by 9.61%, steaming loss by 3.78%, and thawing loss by 7.71%
+  compared with conventional refrigerator freezing.</strong>
+  Rapid freezing promoted the formation of smaller and more
+  uniformly distributed ice crystals, minimizing cellular
+  damage and preserving muscle tissue integrity.
+  <strong>The -60 °C and -80 °C treatments effectively maintained
+  the hardness of both the body trunk and adductor muscles,
+  while -80 °C produced the most intact muscle microstructure
+  with relatively narrow intercellular gaps.</strong>
+  GC-IMS analysis identified 51 volatile signals, including
+  aldehydes, alcohols, ketones, esters, and furans.
+  <strong>Electronic nose and GC-IMS analyses demonstrated
+  that -80 °C freezing better preserved the characteristic
+  volatile flavor profile of fresh oysters compared with
+  conventional freezing.</strong> In contrast, excessively low
+  freezing temperatures (-100 °C) caused structural damage,
+  potentially compromising texture and water retention.
+  Overall, <strong>-80 °C liquid nitrogen freezing was
+  identified as the most favorable condition for maintaining
+  oyster quality, muscle integrity, and flavor characteristics,
+  providing practical guidance for cryogenic seafood
+  preservation.</strong>
 ---
