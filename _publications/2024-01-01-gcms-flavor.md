@@ -11,13 +11,5 @@ pdf: "/files/gcms-flavor.pdf"
 thumbnail: "/assets/images/gcms-flavor.png"
 category: "Seafood Flavor"
 summary: >
-  This study investigated the dynamic evolution of Pacific oyster flavor
-  during depuration by integrating mass spectrometry-based metabolomics with
-  gas chromatography analysis. Temporal changes in nonvolatile metabolites and
-  volatile compounds revealed that depuration substantially altered both taste
-  and odor characteristics. The integrated analysis identified flavor-related
-  compounds associated with different depuration stages, providing insight
-  into the biochemical mechanisms underlying oyster flavor development and
-  guidance for optimizing depuration conditions while maintaining desirable
-  sensory quality.
+This study investigated the dynamic changes in Pacific oyster flavor during 72 h depuration using mass spectrometry-based metabolomics and GC-IMS. **The key finding was that 48 h depuration provided the most favorable overall flavor profile.** At 48 h, histidine, a bitterness-associated amino acid, showed its greatest reduction, while GMP increased and equivalent umami concentration (EUC) began to rise, indicating improved taste characteristics. GC-IMS analysis identified 52 volatile organic compounds and revealed that **furans reached their highest levels at 48 h, whereas aldehydes, ketones, and alcohols were at their lowest**, suggesting improved odor characteristics. However, these volatile compounds increased again after 72 h, potentially compromising flavor quality. Metabolomic analysis further revealed that early depuration primarily affected carbohydrate metabolism, particularly the TCA cycle, while prolonged depuration altered nucleotide-related and other metabolic pathways. Overall, **48 h was recommended as the optimal depuration duration for improving Pacific oyster flavor.**.
 ---
