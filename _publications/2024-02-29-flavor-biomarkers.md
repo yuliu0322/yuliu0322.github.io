@@ -11,13 +11,26 @@ pdf: "/files/flavor-biomarkers.pdf"
 thumbnail: "/assets/images/flavor-biomarkers.png"
 category: "Seafood Quality"
 summary: >
-  This study investigated how microplastic exposure influences flavor-related
-  characteristics in Pacific oysters by integrating metabolite, fatty acid,
-  and volatile-compound analyses. Microplastic exposure altered the oysters'
-  odor profile and induced changes in several metabolites associated with
-  flavor formation, while producing comparatively limited effects on the
-  overall fatty acid composition. The identified flavor-related biomarkers
-  provide insight into the biochemical responses of oysters to microplastic
-  stress and demonstrate that environmental contamination may affect seafood
-  quality even when conventional quality indicators show only minor changes.
+  This study investigated the effects of polystyrene microplastic
+  exposure (1, 10, and 100 mg/L) on the flavor characteristics
+  of Pacific oysters over 15 days. <strong>Microplastic exposure
+  substantially altered oyster flavor by increasing potentially
+  undesirable volatile compounds, particularly aldehydes and
+  ketones associated with unpleasant odors.</strong> GC-IMS analysis
+  detected 85 volatile signals, revealing concentration-dependent
+  changes in the volatile profiles. <strong>At 1 mg/L, microplastic
+  exposure significantly increased total free amino acids and
+  bitter amino acids, suggesting disturbances in amino acid
+  metabolism.</strong> At 10 mg/L, exposure promoted ATP degradation
+  and increased the levels of umami-related nucleotides,
+  including GMP and IMP. <strong>Notably, 10 mg/L exposure
+  significantly increased the equivalent umami concentration
+  (EUC), indicating enhanced calculated umami intensity despite
+  potentially unfavorable changes in overall flavor quality.</strong>
+  In contrast, microplastic exposure had relatively limited
+  effects on fatty acid composition. Overall, <strong>the findings
+  demonstrated that microplastic contamination can modify both
+  taste and odor characteristics of oysters, highlighting
+  potential implications for seafood quality and consumer
+  acceptance.</strong>
 ---
