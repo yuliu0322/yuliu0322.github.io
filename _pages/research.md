@@ -734,7 +734,7 @@ To address this question, my research focuses on understanding and improving aqu
 
 
 <div class="research-overview-node research-overview-node--aquaculture">
-  Sustainable Aquaculture
+  Seafood Sustainability
 </div>
 
 <div class="research-overview-node research-overview-node--oral-delivery">
@@ -746,7 +746,7 @@ To address this question, my research focuses on understanding and improving aqu
 </div>
 
 <div class="research-overview-node research-overview-node--seafood-science">
-  Seafood Quality
+  Seafood Flavor and Quality
 </div>
 
         <span class="research-microsphere research-microsphere--one"></span>
