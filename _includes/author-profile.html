@@ -166,27 +166,12 @@
         <li><a href="https://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right"></i>Zhihu</a></li>
       {% endif %}
 
+      <!-- Total website page views -->
       <li class="author__desktop" style="margin-top: 1rem;">
         <i class="fas fa-fw fa-eye icon-pad-right" aria-hidden="true"></i>
-        Total Page Views: <span id="profile-view-count">—</span>
+        Views: <span id="profile-view-count">—</span>
       </li>
 
     </ul>
   </div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const counter = document.getElementById("profile-view-count");
-  if (!counter) return;
-
-  fetch("https://yuliu0322.goatcounter.com/counter/TOTAL.json?start=2026-10-01", {
-    cache: "no-store"
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.count !== undefined) counter.textContent = data.count;
-    })
-    .catch(error => console.error("GoatCounter:", error));
-});
-</script>
