@@ -126,6 +126,31 @@
       {% if author.linkedin %}
         <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
       {% endif %}      
+      
+<!-- GoatCounter Profile Views -->
+<li class="author__desktop">
+  <i class="fas fa-fw fa-eye icon-pad-right" aria-hidden="true"></i>
+  Profile Views: <span id="profile-view-count">—</span>
+</li>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const counter = document.getElementById("profile-view-count");
+
+  fetch("https://yuliu0322.goatcounter.com/counter/TOTAL.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Counter unavailable");
+      return response.json();
+    })
+    .then(data => {
+      counter.textContent = data.count;
+    })
+    .catch(error => {
+      console.error("GoatCounter:", error);
+    });
+});
+</script>
+
       {% if author.mastodon %}
         <li><a href="{{ author.mastodon }}"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>
       {% endif %}
