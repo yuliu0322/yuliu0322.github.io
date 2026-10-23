@@ -108,15 +108,17 @@ html {
     margin-bottom: 0 !important;
   }
 
-  /* Keep profile visible while scrolling */
-  .sidebar.sticky {
-    position: sticky !important;
-    top: 5.5rem !important;
-    height: auto !important;
-    max-height: calc(100vh - 6rem) !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-  }
+/* Keep profile fixed on desktop */
+.sidebar.sticky {
+  position: fixed !important;
+  top: 5.5rem !important;
+  left: max(1rem, calc((100vw - 1600px) / 2 + 1rem));
+  width: var(--sidebar-width) !important;
+  height: calc(100vh - 6rem) !important;
+  max-height: none !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
 
   /* Remove profile-card background and border */
   .sidebar > div[itemscope] {
@@ -300,9 +302,13 @@ html {
     width: calc(100% - 8rem) !important;
   }
 
-  .sidebar {
-    margin-top: -3.5rem !important;
-  }
+.sidebar {
+  margin-top: 0 !important;
+}
+
+.sidebar.sticky {
+  left: max(4rem, calc((100vw - 1600px) / 2 + 4rem));
+}
 
   .greedy-nav .visible-links a {
     margin-left: 0;
