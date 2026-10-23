@@ -1,3 +1,4 @@
+
 ---
 ---
 
@@ -97,7 +98,6 @@ html {
   }
 
   /* Left profile column */
-
   .sidebar {
     grid-column: 1;
     width: 100% !important;
@@ -108,12 +108,13 @@ html {
     margin-bottom: 0 !important;
   }
 
-  /* Keep profile visible while scrolling */
+  /* Keep profile fixed on desktop */
   .sidebar.sticky {
-    position: sticky !important;
+    position: fixed !important;
     top: 5.5rem !important;
-    height: auto !important;
-    max-height: calc(100vh - 6rem) !important;
+    width: var(--sidebar-width) !important;
+    height: calc(100vh - 6rem) !important;
+    max-height: none !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
@@ -147,7 +148,6 @@ html {
   }
 
   /* Profile photo */
-
   .author__avatar {
     display: block !important;
     width: 100% !important;
@@ -167,7 +167,6 @@ html {
   }
 
   /* Profile text */
-
   .author__content {
     display: block !important;
     width: 100% !important;
@@ -194,7 +193,6 @@ html {
   }
 
   /* Profile links */
-
   .author__urls-wrapper {
     display: block !important;
     position: relative !important;
@@ -203,7 +201,7 @@ html {
     padding: 0 !important;
   }
 
-  /* Do not show Follow button on tablet and desktop */
+  /* Hide Follow button on tablet and desktop */
   .author__urls-wrapper button {
     display: none !important;
   }
@@ -247,7 +245,6 @@ html {
   }
 
   /* Right content column */
-
   .page,
   .archive {
     grid-column: 2;
@@ -279,7 +276,7 @@ html {
   }
 }
 
-/* Tablet links retain the theme's spacing except for Home */
+/* Tablet links retain theme spacing except Home */
 @media (min-width: 48em) and (max-width: 74.99em) {
   #site-nav .visible-links > li:nth-child(2) > a {
     margin-left: 0 !important;
@@ -287,7 +284,6 @@ html {
 }
 
 /* Large desktop */
-
 @media (min-width: 75em) {
 
   :root {
@@ -301,7 +297,7 @@ html {
   }
 
   .sidebar {
-    margin-top: -3.5rem !important;
+    margin-top: 0 !important;
   }
 
   .greedy-nav .visible-links a {
@@ -311,10 +307,9 @@ html {
 }
 
 /* Phone: profile above content */
-
 @media (max-width: 47.99em) {
 
-  /* The empty title cell must not reserve space in the mobile nav. */
+  /* Remove empty title cell from mobile nav */
   #site-nav .masthead__menu-item--lg {
     display: none !important;
   }
@@ -329,7 +324,6 @@ html {
   }
 
   /* Mobile profile row */
-
   .sidebar {
     position: relative !important;
     z-index: 100 !important;
@@ -345,15 +339,13 @@ html {
     overflow: visible !important;
   }
 
-.sidebar.sticky {
-  position: sticky !important;
-  top: 5.5rem !important;
-  align-self: start !important;
-  height: auto !important;
-  max-height: calc(100vh - 6rem) !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-}
+  .sidebar.sticky {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
 
   .sidebar > div[itemscope] {
     position: relative !important;
@@ -383,7 +375,6 @@ html {
   }
 
   /* Mobile photo */
-
   .author__avatar {
     display: block !important;
     width: 54px !important;
@@ -407,7 +398,6 @@ html {
   }
 
   /* Mobile name and pronouns */
-
   .author__content {
     display: block !important;
     min-width: 0 !important;
@@ -428,8 +418,7 @@ html {
     line-height: 1.2 !important;
   }
 
-  /* Mobile follow button and menu */
-
+  /* Mobile Follow button and menu */
   .author__urls-wrapper {
     position: relative !important;
     z-index: 1000 !important;
@@ -487,7 +476,6 @@ html {
   }
 
   /* Mobile page content */
-
   .page,
   .archive {
     position: relative !important;
