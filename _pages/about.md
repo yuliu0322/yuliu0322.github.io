@@ -314,10 +314,6 @@ html[data-theme="dark"] .home-welcome {
       and the Biopolymer Engineering Laboratory.
     </p>
 
-    <p class="home-description">
-      My research integrates food science, aquaculture, and biomaterials to address challenges in aquatic animal health, seafood quality, and sustainable food preservation.
-    </p>
-
   </section>
 
 
