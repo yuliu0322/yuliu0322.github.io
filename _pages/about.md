@@ -315,7 +315,7 @@ html[data-theme="dark"] .home-welcome {
     </p>
 
     <p class="home-description" style="margin-top: 18px;">
-  My research integrates food science, seafood processing, and biomaterials to address challenges in aquatic animal health, seafood quality, and sustainable food preservation.
+  My research integrates food science, seafood processing, and biomaterials, with a focus on aquatic animal health, seafood flavor and quality, and sustainable food preservation.
 </p>
 
   </section>
