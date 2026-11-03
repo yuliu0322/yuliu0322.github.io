@@ -42,6 +42,21 @@
 
 /* Global */
 
+/* Top navigation background */
+.masthead {
+  background: transparent;
+  border-bottom: none;
+}
+
+.masthead__inner-wrap {
+  background: #f0f7fa;
+  border-radius: 12px;
+}
+
+html[data-theme="dark"] .masthead__inner-wrap {
+  background: #29343e;
+}
+
 /* Hide the footer */
 .page__footer {
   display: none !important;
