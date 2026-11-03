@@ -329,6 +329,20 @@ html[data-theme="dark"] .news-image-wrapper {
   margin: 0 0 12px;
 }
 
+/* Publication links inside news descriptions */
+.news-content a.news-paper-link,
+.news-content a.news-paper-link:visited {
+  color: var(--news-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.news-content a.news-paper-link:hover,
+.news-content a.news-paper-link:focus-visible {
+  color: var(--news-blue);
+  text-decoration: underline;
+}
+
 .news-content p:last-child {
   margin-bottom: 0;
 }
