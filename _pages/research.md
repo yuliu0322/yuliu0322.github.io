@@ -880,7 +880,7 @@ Disease remains a major challenge in aquaculture, and feed-based delivery offers
         </h3>
 
         <p> 
-Currently, I am developing PLGA-based oral delivery systems to encapsulate probiotics, antigens, and phytochemicals for coating onto extruded aquafeeds. These systems are being designed to protect the encapsulated cargo during storage and enable controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
+Currently, I am developing PLGA-based oral delivery systems to encapsulate probiotics, antigens, and phytochemicals for application as coatings on extruded aquafeeds. These systems are intended to protect the encapsulated cargo during storage and enable controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, this work aims to support the development of feed-compatible oral vaccines and functional aquafeeds.
         </p>
 
         <h3 class="research-subheading">
