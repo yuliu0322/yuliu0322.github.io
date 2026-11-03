@@ -1,4 +1,5 @@
 ---
+title: ""
 collection: talks
 type: "Publication"
 permalink: /talks/food-chemistry-publication-2026/
