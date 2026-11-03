@@ -42,26 +42,6 @@
 
 /* Global */
 
-/* Top navigation */
-.masthead {
-  background: transparent;
-  border-bottom: none;
-}
-
-.masthead__inner-wrap {
-  background: #f0f7fa;
-  border-radius: 12px;
-}
-
-.masthead .greedy-nav,
-.masthead .greedy-nav .visible-links {
-  background: transparent;
-}
-
-html[data-theme="dark"] .masthead__inner-wrap {
-  background: #29343e;
-}
-
 /* Hide the footer */
 .page__footer {
   display: none !important;
