@@ -880,7 +880,7 @@ Disease remains a major challenge in aquaculture, and feed-based delivery offers
         </h3>
 
         <p> 
-Currently, I am developing PLGA-based oral delivery systems to encapsulate probiotics, antigens, and phytochemicals for application as coatings on extruded aquafeeds. These systems are intended to protect the encapsulated cargo during storage and enable controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, this work aims to support the development of feed-compatible oral vaccines and functional aquafeeds.
+Currently, I am developing PLGA-based oral delivery systems to encapsulate probiotics, antigens, and phytochemicals for application as coatings on extruded aquafeeds. These systems are intended to enhance the stability of encapsulated cargo during feed storage and enable controlled release in the digestive tract. By integrating formulation design, physicochemical characterization, stability evaluation, release characterization, and in vivo evaluation using aquatic animal models, this work aims to support the development of feed-compatible oral vaccines and functional aquafeeds for sustainable aquaculture.
         </p>
 
         <h3 class="research-subheading">
@@ -970,7 +970,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
         </h3>
 
         <p>
-My doctoral research now focuses on bio-based composite films that combine passive radiative cooling with evaporative cooling to achieve sub-ambient temperatures without external energy input. We aim to optimize cooling performance, water retention and release, and mechanical properties to meet the practical demands of food preservation and packaging. By harnessing renewable materials, we aim to provide sustainable, zero-energy cooling solutions for food packaging and cold-chain applications.
+My doctoral research focuses on bio-based composite films that combine passive radiative cooling with evaporative cooling to achieve sub-ambient temperatures without external energy input. We aim to optimize cooling performance, water retention and release, and mechanical properties to meet the practical demands of food preservation and packaging. By harnessing renewable materials, we aim to provide sustainable, zero-energy cooling solutions for food packaging and cold-chain applications.
         </p>
 
         <h3 class="research-subheading">
