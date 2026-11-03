@@ -39,7 +39,7 @@ author_profile: true
 }
 
 .research-intro-heading {
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
 }
 
 .research-kicker {
