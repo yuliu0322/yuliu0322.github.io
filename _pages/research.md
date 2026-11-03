@@ -879,8 +879,8 @@ Disease remains a major challenge in aquaculture, and feed-based delivery offers
           What I work on
         </h3>
 
-        <p>
-During my doctoral studies, I have been involved in developing PLGA-based oral delivery systems to encapsulate probiotics, probiotic-derived immunostimulants, and antigens for application as coatings on extruded aquafeeds. These systems are designed to protect bioactive components during storage while enabling controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
+        <p> 
+Currently, I am developing PLGA-based oral delivery systems to encapsulate probiotics, antigens, and phytochemicals for coating onto extruded aquafeeds. These systems are being designed to protect the encapsulated cargo during storage and enable controlled release in the digestive tract. By integrating formulation design, stability evaluation, and release characterization, we aim to support the development of feed-compatible oral vaccines and functional aquafeeds.
         </p>
 
         <h3 class="research-subheading">
@@ -888,7 +888,7 @@ During my doctoral studies, I have been involved in developing PLGA-based oral d
         </h3>
 
         <p>
-A feed-based oral delivery platform that protects bioactive cargo during feed storage and passage through the digestive tract could make vaccination and immunostimulation more practical at farm scale, particularly where injection is difficult. Such an approach could reduce handling stress and labor, support disease prevention with less reliance on therapeutic treatments, and create opportunities for feed manufacturers to develop value-added functional aquafeeds.
+A feed-based oral delivery platform that protects bioactive cargo during feed storage and passage through the digestive tract could make vaccination and immunostimulation more practical at farm scale, particularly where injection is difficult. Such an approach could reduce handling stress and labor, support disease prevention with less reliance on treatments, and create opportunities for feed manufacturers to develop value-added functional aquafeeds.
         </p>
 
       </div>
@@ -970,7 +970,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
         </h3>
 
         <p>
-Specifically, my doctoral research focuses on developing bio-based composite films that integrate passive radiative cooling with evaporative cooling to achieve sub-ambient temperatures without external energy input. Our research focuses on optimizing cooling performance, water retention and release, and mechanical properties to meet the practical requirements of food preservation and packaging. By utilizing renewable, bio-based materials, we aim to develop sustainable and energy-efficient cooling solutions for food packaging and cold-chain applications.
+My doctoral research now focuses on bio-based composite films that combine passive radiative cooling with evaporative cooling to achieve sub-ambient temperatures without external energy input. We aim to optimize cooling performance, water retention and release, and mechanical properties to meet the practical demands of food preservation and packaging. By harnessing renewable materials, we aim to provide sustainable, zero-energy cooling solutions for food packaging and cold-chain applications.
         </p>
 
         <h3 class="research-subheading">
@@ -978,11 +978,7 @@ Specifically, my doctoral research focuses on developing bio-based composite fil
         </h3>
 
         <p>
-          Passive cooling could complement conventional refrigeration by
-          lowering energy demand and providing cooling where power is limited,
-          helping reduce spoilage and post-harvest loss of perishables. For
-          cold-chain operators, packaging companies, and food producers, it
-          points to a low-energy, bio-based option for temperature control.
+          Passive cooling could complement conventional refrigeration by lowering energy demand and providing cooling where power is limited, helping reduce spoilage and post-harvest loss of perishables. For cold-chain operators, packaging companies, and food producers, it points to a low-energy, bio-based option for temperature control.
         </p>
 
       </div>
@@ -1058,7 +1054,7 @@ Between harvest and consumption, seafood may undergo depuration, live holding, f
         </h3>
 
         <p>
-During my master's studies, I also contributed to research projects investigating various postharvest preservation strategies for oysters and mussels, including depuration, liquid nitrogen quick-freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. By combining physicochemical analyses with flavor characterization, we evaluated changes in physiological status, biochemical composition, and flavor-related compounds under different preservation conditions to better understand the mechanisms underlying changes in seafood quality.
+During my earlier studies, I also contributed to research projects exploring various postharvest preservation technologies for oysters and mussels, including depuration, liquid nitrogen rapid freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. Using physicochemical analyses and flavor profiling, we examined how different preservation conditions affected physiological status, biochemical composition, and flavor-related compounds, thereby identifying key factors that influence flavor and quality during postharvest storage.
         </p>
 
         <h3 class="research-subheading">
@@ -1066,7 +1062,7 @@ During my master's studies, I also contributed to research projects investigatin
         </h3>
 
         <p>
-Maintaining freshness, flavor, and overall quality throughout the supply chain is essential for both live and frozen shellfish. Understanding how different preservation methods affect physiological and biochemical changes can provide valuable insights for seafood processors and distributors to optimize preservation conditions, extend shelf life, and reduce post-harvest losses.
+Maintaining the freshness, flavor, and overall quality of shellfish throughout the supply chain is critical for both live and frozen products. Elucidating how different preservation strategies influence post-harvest physiological and biochemical changes can help processors and distributors optimize storage conditions, extend shelf life, and minimize post-harvest losses.
         </p>
 
       </div>
