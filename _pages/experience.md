@@ -172,7 +172,12 @@ author_profile: true
       <div>
         <h2 class="experience-title">Assistant Editor</h2>
         <div class="experience-org">
-          <strong>MDPI</strong> · Wuhan, Hubei, China
+          <a href="https://www.mdpi.com/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="experience-link">
+  MDPI
+</a> · Wuhan, Hubei, China
         </div>
       </div>
       <div class="experience-date">
@@ -242,8 +247,12 @@ author_profile: true
       <div>
         <h2 class="experience-title">Project Manager</h2>
         <div class="experience-org">
-          <strong>IVC Nutrition Corporation</strong>
-          · Suzhou, Jiangsu, China
+          <a href="https://www.ivcinc.com/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="experience-link">
+  IVC Nutrition Corporation
+</a> · Suzhou, Jiangsu, China
         </div>
       </div>
       <div class="experience-date">
