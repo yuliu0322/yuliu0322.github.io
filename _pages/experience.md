@@ -1,80 +1,311 @@
 ---
-layout: archive
+layout: single
 title: "Work Experience"
 permalink: /experience/
 author_profile: true
 ---
 
 <style>
-/* Scoped to this page only */
-.experience-minimal { width: 100%; margin: 1.25rem 0 2rem; }
-.experience-minimal * { box-sizing: border-box; }
-.experience-minimal .exp-item { padding: 1.55rem 0 1.8rem; border-top: 1px solid #dfe4e8; }
-.experience-minimal .exp-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .7rem 1.5rem; margin-bottom: .3rem; }
-.experience-minimal .exp-role { margin: 0; font-size: 1.17rem; line-height: 1.4; font-weight: 700; color: #273449; }
-.experience-minimal .exp-date { flex: 0 0 auto; color: #788493; font-size: .82rem; font-weight: 500; white-space: nowrap; }
-.experience-minimal .exp-meta { margin: 0 0 1.05rem; font-size: .9rem; line-height: 1.55; color: #778290; }
-.experience-minimal .exp-company { color: #41566c; font-weight: 600; text-decoration: none !important; border: 0 !important; }
-.experience-minimal .exp-company:hover { text-decoration: underline !important; text-underline-offset: 3px; }
-.experience-minimal .exp-separator { padding: 0 .35rem; color: #aeb7c0; }
-.experience-minimal .exp-points { margin: 0 0 .9rem; padding-left: 1.15rem; color: #4c5867; font-size: .93rem; line-height: 1.6; }
-.experience-minimal .exp-points li { margin: 0 0 .42rem; padding-left: .12rem; }
-.experience-minimal .exp-points li:last-child { margin-bottom: 0; }
-.experience-minimal .exp-reflection { margin: .85rem 0 0; color: #778290; font-size: .89rem; line-height: 1.65; }
-.experience-minimal .exp-reflection strong { color: #657487; font-weight: 600; }
-@media (max-width: 640px) {
-  .experience-minimal .exp-item { padding: 1.2rem 0 1.45rem; }
-  .experience-minimal .exp-heading { display: block; }
-  .experience-minimal .exp-date { display: block; margin: .3rem 0 .4rem; white-space: normal; }
-  .experience-minimal .exp-role { font-size: 1.08rem; }
-  .experience-minimal .exp-meta { font-size: .85rem; }
-  .experience-minimal .exp-points { font-size: .9rem; }
+/* Experience page */
+.experience-page {
+  max-width: 100%;
 }
-/* Works with common Minimal Mistakes theme toggles */
-html[data-theme="dark"] .experience-minimal .exp-item,
-html.dark .experience-minimal .exp-item { border-top-color: #4b5563; }
-html[data-theme="dark"] .experience-minimal .exp-role,
-html.dark .experience-minimal .exp-role { color: #edf1f6; }
-html[data-theme="dark"] .experience-minimal .exp-company,
-html.dark .experience-minimal .exp-company { color: #c9d8e8; }
-html[data-theme="dark"] .experience-minimal .exp-date,
-html[data-theme="dark"] .experience-minimal .exp-meta,
-html[data-theme="dark"] .experience-minimal .exp-reflection,
-html.dark .experience-minimal .exp-date,
-html.dark .experience-minimal .exp-meta,
-html.dark .experience-minimal .exp-reflection { color: #adb8c5; }
-html[data-theme="dark"] .experience-minimal .exp-points,
-html.dark .experience-minimal .exp-points { color: #d1d9e2; }
-html[data-theme="dark"] .experience-minimal .exp-reflection strong,
-html.dark .experience-minimal .exp-reflection strong { color: #c4cfdb; }
+
+.experience-item {
+  padding: 1.7rem 0 2.1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.experience-item:first-child {
+  padding-top: 0.5rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #293449;
+  margin: 0 0 0.35rem;
+}
+
+.experience-org {
+  font-size: 0.95rem;
+  color: #66758a;
+  line-height: 1.5;
+}
+
+.experience-org strong {
+  color: #465a72;
+}
+
+.experience-date {
+  color: #7b8798;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding-top: 0.3rem;
+}
+
+.experience-contributions {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.experience-contribution {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.experience-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  background: #f0f4f8;
+  color: #506b87;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.experience-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.experience-content h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #34445b;
+  margin: 0 0 0.3rem;
+}
+
+.experience-content p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #586477;
+  margin: 0;
+}
+
+.experience-expertise {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.6rem;
+}
+
+.expertise-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #8993a1;
+  margin-right: 0.35rem;
+}
+
+.expertise-tag {
+  font-size: 0.76rem;
+  color: #52677e;
+  background: #f0f3f7;
+  border-radius: 5px;
+  padding: 0.3rem 0.65rem;
+}
+
+/* Dark mode */
+[data-theme="dark"] .experience-title,
+[data-theme="dark"] .experience-content h3 {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .experience-org,
+[data-theme="dark"] .experience-content p,
+[data-theme="dark"] .experience-date {
+  color: #a5b1c2;
+}
+
+[data-theme="dark"] .experience-icon,
+[data-theme="dark"] .expertise-tag {
+  background: #293445;
+  color: #c0cfdf;
+}
+
+[data-theme="dark"] .experience-item {
+  border-color: #394454;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .experience-date {
+    padding-top: 0;
+  }
+
+  .experience-item {
+    padding: 1.3rem 0 1.8rem;
+  }
+
+  .experience-content p {
+    font-size: 0.88rem;
+  }
+}
 </style>
 
-<div class="experience-minimal">
-  <section class="exp-item">
-    <div class="exp-heading">
-      <h2 class="exp-role">Assistant Editor</h2>
-      <span class="exp-date">Nov 2024 – Jul 2025</span>
+<div class="experience-page">
+
+  <!-- Assistant Editor -->
+  <section class="experience-item">
+
+    <div class="experience-header">
+      <div>
+        <h2 class="experience-title">Assistant Editor</h2>
+        <div class="experience-org">
+          <strong>MDPI</strong> · Wuhan, Hubei, China
+        </div>
+      </div>
+      <div class="experience-date">
+        Nov 2024 – Jul 2025
+      </div>
     </div>
-    <p class="exp-meta"><a class="exp-company" href="https://mdpi.cn/about/wuhan" target="_blank" rel="noopener noreferrer">MDPI</a><span class="exp-separator">·</span>Wuhan, Hubei, China</p>
-    <ul class="exp-points">
-      <li>Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.</li>
-      <li>Communicated with authors, reviewers, and academic editors to facilitate timely and transparent editorial decisions.</li>
-      <li>Evaluated manuscripts for journal scope, formatting requirements, research integrity, and adherence to editorial policies.</li>
-    </ul>
-    <p class="exp-reflection"><strong>Key takeaway.</strong> Developed a deeper understanding of scholarly publishing and the peer-review process while strengthening my scientific communication, critical evaluation, and editorial judgment.</p>
+
+    <div class="experience-contributions">
+
+      <div class="experience-contribution">
+        <div class="experience-icon">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="experience-content">
+          <h3>Manuscript &amp; Editorial Management</h3>
+          <p>
+            Managed manuscripts throughout the editorial
+            process, from initial screening and peer review
+            to final publication.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-contribution">
+        <div class="experience-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="experience-content">
+          <h3>Peer Review Coordination</h3>
+          <p>
+            Collaborated with authors, reviewers, and
+            academic editors to facilitate efficient
+            communication and timely editorial decisions.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-contribution">
+        <div class="experience-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="experience-content">
+          <h3>Quality &amp; Research Integrity</h3>
+          <p>
+            Assessed manuscripts for journal scope,
+            formatting standards, research integrity,
+            and compliance with editorial policies.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="experience-expertise">
+      <span class="expertise-label">EXPERTISE</span>
+      <span class="expertise-tag">Scholarly Publishing</span>
+      <span class="expertise-tag">Peer Review</span>
+      <span class="expertise-tag">Editorial Management</span>
+    </div>
+
   </section>
 
-  <section class="exp-item">
-    <div class="exp-heading">
-      <h2 class="exp-role">Project Manager</h2>
-      <span class="exp-date">Jul 2024 – Sep 2024</span>
+  <!-- Project Manager -->
+  <section class="experience-item">
+
+    <div class="experience-header">
+      <div>
+        <h2 class="experience-title">Project Manager</h2>
+        <div class="experience-org">
+          <strong>IVC Nutrition Corporation</strong>
+          · Suzhou, Jiangsu, China
+        </div>
+      </div>
+      <div class="experience-date">
+        Jul 2024 – Sep 2024
+      </div>
     </div>
-    <p class="exp-meta"><a class="exp-company" href="https://www.ivcinc.net/" target="_blank" rel="noopener noreferrer">IVC Nutrition Corporation</a><span class="exp-separator">·</span>Suzhou, Jiangsu, China</p>
-    <ul class="exp-points">
-      <li>Managed cross-border dietary supplement product development projects with clients and internal marketing and sales teams.</li>
-      <li>Conducted market research and literature reviews to identify industry trends, consumer preferences, and emerging ingredients.</li>
-      <li>Translated client requirements into product specifications and monitored project progress from initial concept through order fulfillment.</li>
-    </ul>
-    <p class="exp-reflection"><strong>Key takeaway.</strong> Gained practical experience in translating scientific and market information into product development decisions while strengthening my project management, cross-functional communication, and understanding of dietary supplement commercialization.</p>
+
+    <div class="experience-contributions">
+
+      <div class="experience-contribution">
+        <div class="experience-icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+        <div class="experience-content">
+          <h3>Project Planning &amp; Management</h3>
+          <p>
+            Supported project planning, coordination,
+            and implementation within the nutrition industry,
+            helping align activities with project objectives.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-contribution">
+        <div class="experience-icon">
+          <i class="fas fa-people-arrows"></i>
+        </div>
+        <div class="experience-content">
+          <h3>Cross-functional Collaboration</h3>
+          <p>
+            Facilitated communication among project
+            stakeholders to coordinate activities,
+            address operational needs, and support
+            project execution.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-contribution">
+        <div class="experience-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="experience-content">
+          <h3>Project Execution &amp; Progress Tracking</h3>
+          <p>
+            Assisted with monitoring project progress,
+            organizing deliverables, and coordinating
+            follow-up activities to maintain workflow
+            efficiency.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="experience-expertise">
+      <span class="expertise-label">EXPERTISE</span>
+      <span class="expertise-tag">Project Management</span>
+      <span class="expertise-tag">Cross-functional Collaboration</span>
+      <span class="expertise-tag">Project Coordination</span>
+    </div>
+
   </section>
+
 </div>
