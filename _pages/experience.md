@@ -227,7 +227,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Manuscript &amp; Editorial Management</h3>
           <p>
-            Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.
+            Managed the peer-review and editorial workflow of manuscripts from initial screening through final publication.
           </p>
         </div>
       </div>
@@ -251,7 +251,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Quality &amp; Research Integrity</h3>
           <p>
-            Evaluated manuscripts for journal scope, formatting requirements, research integrity, and adherence to editorial policies.
+            Evaluated manuscripts for scope, formatting requirements, research integrity, and adherence to editorial policies.
           </p>
         </div>
       </div>
