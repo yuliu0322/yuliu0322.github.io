@@ -6,589 +6,67 @@ author_profile: true
 ---
 
 <style>
-
-/* =========================
-   Experience timeline
-   ========================= */
-
-.experience-list {
-  position: relative;
-  width: 100%;
-  margin-top: 1.8rem;
-  padding-left: 38px;
+/* Editorial experience layout — scoped to this page */
+.experience-editorial { margin-top: 1.65rem; width: 100%; }
+.experience-editorial *, .experience-editorial *::before, .experience-editorial *::after { box-sizing: border-box; }
+.experience-editorial__item { display: grid; grid-template-columns: minmax(100px, 23%) minmax(0, 1fr); column-gap: clamp(1.2rem, 4vw, 2.8rem); padding: 1.75rem 0 2rem; border-top: 1px solid #dce2e8; }
+.experience-editorial__item:first-child { padding-top: 1.15rem; }
+.experience-editorial__year { color: #7c8794; font-size: .86rem; font-weight: 600; letter-spacing: .015em; line-height: 1.55; }
+.experience-editorial__body { min-width: 0; }
+.experience-editorial__role { margin: 0 0 .3rem; font-size: 1.2rem; line-height: 1.35; font-weight: 700; color: #253248; }
+.experience-editorial__company { color: #425b73; font-weight: 600; text-decoration: none !important; border-bottom: none !important; }
+.experience-editorial__company:hover { color: #247e9d; text-decoration: underline !important; text-underline-offset: 3px; }
+.experience-editorial__meta { margin: .3rem 0 1.15rem; color: #778390; font-size: .87rem; line-height: 1.55; }
+.experience-editorial__summary { margin: 0 0 .75rem; color: #4f5967; line-height: 1.7; }
+.experience-editorial__points { margin: 0 0 .95rem; padding-left: 1.2rem; color: #4f5967; }
+.experience-editorial__points li { margin-bottom: .42rem; line-height: 1.65; }
+.experience-editorial__points li:last-child { margin-bottom: 0; }
+.experience-editorial__reflection { margin: 1rem 0 0; padding-left: .9rem; border-left: 2px solid #dce5eb; color: #697583; font-size: .93rem; line-height: 1.7; }
+html[data-theme="dark"] .experience-editorial__item { border-top-color: #56616b; }
+html[data-theme="dark"] .experience-editorial__year, html[data-theme="dark"] .experience-editorial__meta { color: #aeb9c5; }
+html[data-theme="dark"] .experience-editorial__role { color: #f0f3f7; }
+html[data-theme="dark"] .experience-editorial__company { color: #b7d7e7; }
+html[data-theme="dark"] .experience-editorial__company:hover { color: #83d2ef; }
+html[data-theme="dark"] .experience-editorial__summary, html[data-theme="dark"] .experience-editorial__points { color: #cbd3dd; }
+html[data-theme="dark"] .experience-editorial__reflection { color: #b4c0cb; border-left-color: #60717d; }
+@media (max-width: 600px) {
+  .experience-editorial { margin-top: 1.2rem; }
+  .experience-editorial__item { grid-template-columns: minmax(0, 1fr); gap: .5rem; padding: 1.45rem 0 1.7rem; }
+  .experience-editorial__item:first-child { padding-top: 1rem; }
+  .experience-editorial__year { font-size: .8rem; }
+  .experience-editorial__role { font-size: 1.12rem; }
+  .experience-editorial__meta { margin-bottom: .9rem; }
 }
-
-/* Timeline vertical line */
-.experience-list::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  bottom: 12px;
-  left: 8px;
-
-  width: 2px;
-  background: #d7e8ee;
-}
-
-
-/* =========================
-   Experience entry
-   ========================= */
-
-.experience-entry {
-  position: relative;
-  width: 100%;
-
-  margin: 0 0 2.5rem;
-  padding: 0 0 2.5rem;
-
-  border-bottom: 1px solid #e3e8ec;
-}
-
-/* Timeline point */
-.experience-entry::before {
-  content: "";
-  position: absolute;
-
-  top: 7px;
-  left: -37px;
-
-  width: 14px;
-  height: 14px;
-
-  box-sizing: border-box;
-
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-
-  background: #52adc8;
-  box-shadow: 0 0 0 3px #b9deea;
-}
-
-.experience-entry:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-
-/* =========================
-   Position
-   ========================= */
-
-.experience-position {
-  margin: 0 0 6px;
-
-  color: #253248;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-
-/* =========================
-   Company / Location / Date
-   ========================= */
-
-.experience-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  gap: 5px 9px;
-
-  margin: 0 0 1.3rem;
-
-  color: #7a8491;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-
-/* Company */
-
-.experience-company {
-  color: #445268;
-  font-weight: 600;
-
-  text-decoration: none !important;
-  border-bottom: none;
-}
-
-.experience-company:hover {
-  color: #45a6c4;
-
-  text-decoration-line: underline !important;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-
-/* Separator */
-
-.experience-divider {
-  color: #c0c7ce;
-}
-
-
-/* Location */
-
-.experience-location {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.experience-location svg {
-  width: 14px;
-  height: 14px;
-
-  flex: 0 0 auto;
-
-  stroke: currentColor;
-}
-
-
-/* Date */
-
-.experience-date {
-  color: #b17622;
-  font-weight: 700;
-}
-
-
-/* =========================
-   Content sections
-   ========================= */
-
-.experience-section {
-  max-width: 760px;
-  margin-top: 1.15rem;
-}
-
-.experience-section:first-of-type {
-  margin-top: 0;
-}
-
-
-/* Section heading */
-
-.experience-label {
-  margin: 0 0 0.45rem;
-
-  color: #566274;
-
-  font-size: 0.82rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-
-/* =========================
-   Responsibilities
-   ========================= */
-
-.experience-responsibilities {
-  margin: 0;
-  padding-left: 1.15rem;
-
-  color: #4f5967;
-}
-
-.experience-responsibilities li {
-  margin-bottom: 0.4rem;
-  padding-left: 0.08rem;
-
-  line-height: 1.6;
-}
-
-.experience-responsibilities li:last-child {
-  margin-bottom: 0;
-}
-
-
-/* =========================
-   What I Gained
-   ========================= */
-
-.experience-gained {
-  margin: 0;
-
-  color: #4f5967;
-  line-height: 1.65;
-}
-
-
-/* =========================
-   Dark mode
-   ========================= */
-
-html[data-theme="dark"] .experience-list::before {
-  background: #61727b;
-}
-
-html[data-theme="dark"] .experience-entry {
-  border-bottom-color: #5f666e;
-}
-
-html[data-theme="dark"] .experience-entry::before {
-  border-color: #474a4e;
-
-  background: #65c2dd;
-
-  box-shadow: 0 0 0 3px #637c85;
-}
-
-html[data-theme="dark"] .experience-position {
-  color: #f2f5f8;
-}
-
-html[data-theme="dark"] .experience-meta,
-html[data-theme="dark"] .experience-location {
-  color: #b9c2cc;
-}
-
-html[data-theme="dark"] .experience-company {
-  color: #e6ebf0;
-}
-
-html[data-theme="dark"] .experience-company:hover {
-  color: #65c2dd;
-}
-
-html[data-theme="dark"] .experience-divider {
-  color: #747d87;
-}
-
-html[data-theme="dark"] .experience-date {
-  color: #e0ad60;
-}
-
-html[data-theme="dark"] .experience-label {
-  color: #aeb8c4;
-}
-
-html[data-theme="dark"] .experience-responsibilities,
-html[data-theme="dark"] .experience-gained {
-  color: #c8d0da;
-}
-
-
-/* =========================
-   Mobile
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .experience-list {
-    margin-top: 1.4rem;
-    padding-left: 27px;
-  }
-
-  .experience-list::before {
-    left: 5px;
-  }
-
-  .experience-entry {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .experience-entry::before {
-    top: 6px;
-    left: -27px;
-
-    width: 12px;
-    height: 12px;
-
-    border-width: 3px;
-  }
-
-  .experience-position {
-    margin-bottom: 6px;
-
-    font-size: 1.12rem;
-  }
-
-  .experience-meta {
-    gap: 4px 7px;
-
-    margin-bottom: 1.05rem;
-
-    font-size: 0.84rem;
-  }
-
-  .experience-section {
-    margin-top: 1rem;
-  }
-
-  .experience-label {
-    font-size: 0.8rem;
-  }
-
-  .experience-responsibilities {
-    padding-left: 1.05rem;
-  }
-
-  .experience-responsibilities li,
-  .experience-gained {
-    line-height: 1.55;
-  }
-
-}
-
 </style>
 
-
-<div class="experience-list">
-
-
-  <!-- ==================================================
-       Assistant Editor
-       ================================================== -->
-
-  <section class="experience-entry">
-
-    <h2 class="experience-position">
-      Assistant Editor
-    </h2>
-
-
-    <!-- Company / Location / Date -->
-
-    <p class="experience-meta">
-
-      <a
-        class="experience-company"
-        href="https://mdpi.cn/about/wuhan"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        MDPI
-      </a>
-
-
-      <span
-        class="experience-divider"
-        aria-hidden="true"
-      >
-        ·
-      </span>
-
-
-      <span class="experience-location">
-
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path
-            d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
-          ></path>
-
-          <circle
-            cx="12"
-            cy="10"
-            r="2.5"
-          ></circle>
-        </svg>
-
-        Wuhan, Hubei, China
-
-      </span>
-
-
-      <span
-        class="experience-divider"
-        aria-hidden="true"
-      >
-        ·
-      </span>
-
-
-      <span class="experience-date">
-        Nov 2024 – Jul 2025
-      </span>
-
-    </p>
-
-
-    <!-- Responsibilities -->
-
-    <div class="experience-section">
-
-      <h3 class="experience-label">
-        Responsibilities
-      </h3>
-
-      <ul class="experience-responsibilities">
-
-        <li>
-          Managed the peer-review and editorial workflow of submitted
-          manuscripts from initial screening through final publication.
-        </li>
-
-        <li>
-          Communicated with authors, reviewers, and academic editors to
-          facilitate timely and transparent editorial decisions.
-        </li>
-
-        <li>
-          Evaluated manuscripts for journal scope, formatting requirements,
-          research integrity, and adherence to editorial policies.
-        </li>
-
+<div class="experience-editorial">
+  <section class="experience-editorial__item" aria-labelledby="experience-mdpi">
+    <div class="experience-editorial__year">2024 — 2025</div>
+    <div class="experience-editorial__body">
+      <h2 class="experience-editorial__role" id="experience-mdpi">Assistant Editor</h2>
+      <a class="experience-editorial__company" href="https://mdpi.cn/about/wuhan" target="_blank" rel="noopener noreferrer">MDPI</a>
+      <p class="experience-editorial__meta">Wuhan, Hubei, China · Nov 2024 – Jul 2025</p>
+      <ul class="experience-editorial__points">
+        <li>Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.</li>
+        <li>Communicated with authors, reviewers, and academic editors to facilitate timely and transparent editorial decisions.</li>
+        <li>Evaluated manuscripts for journal scope, formatting requirements, research integrity, and adherence to editorial policies.</li>
       </ul>
-
+      <p class="experience-editorial__reflection">Developed a deeper understanding of scholarly publishing and the peer-review process while strengthening my scientific communication, critical evaluation, and editorial judgment.</p>
     </div>
-
-
-    <!-- What I Gained -->
-
-    <div class="experience-section">
-
-      <h3 class="experience-label">
-        What I Gained
-      </h3>
-
-      <p class="experience-gained">
-        Developed a deeper understanding of scholarly publishing and the
-        peer-review process while strengthening my scientific communication,
-        critical evaluation, and editorial judgment.
-      </p>
-
-    </div>
-
   </section>
 
-
-  <!-- ==================================================
-       Project Manager
-       ================================================== -->
-
-  <section class="experience-entry">
-
-    <h2 class="experience-position">
-      Project Manager
-    </h2>
-
-
-    <!-- Company / Location / Date -->
-
-    <p class="experience-meta">
-
-      <a
-        class="experience-company"
-        href="https://www.ivcinc.net/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        IVC Nutrition Corporation
-      </a>
-
-
-      <span
-        class="experience-divider"
-        aria-hidden="true"
-      >
-        ·
-      </span>
-
-
-      <span class="experience-location">
-
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path
-            d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
-          ></path>
-
-          <circle
-            cx="12"
-            cy="10"
-            r="2.5"
-          ></circle>
-        </svg>
-
-        Suzhou, Jiangsu, China
-
-      </span>
-
-
-      <span
-        class="experience-divider"
-        aria-hidden="true"
-      >
-        ·
-      </span>
-
-
-      <span class="experience-date">
-        Jul 2024 – Sep 2024
-      </span>
-
-    </p>
-
-
-    <!-- Responsibilities -->
-
-    <div class="experience-section">
-
-      <h3 class="experience-label">
-        Responsibilities
-      </h3>
-
-      <ul class="experience-responsibilities">
-
-        <li>
-          Managed cross-border dietary supplement product development
-          projects with clients and internal marketing and sales teams.
-        </li>
-
-        <li>
-          Conducted market research and literature reviews to identify
-          industry trends, consumer preferences, and emerging ingredients.
-        </li>
-
-        <li>
-          Translated client requirements into product specifications and
-          monitored project progress from initial concept through order
-          fulfillment.
-        </li>
-
+  <section class="experience-editorial__item" aria-labelledby="experience-ivc">
+    <div class="experience-editorial__year">2024</div>
+    <div class="experience-editorial__body">
+      <h2 class="experience-editorial__role" id="experience-ivc">Project Manager</h2>
+      <a class="experience-editorial__company" href="https://www.ivcinc.net/" target="_blank" rel="noopener noreferrer">IVC Nutrition Corporation</a>
+      <p class="experience-editorial__meta">Suzhou, Jiangsu, China · Jul 2024 – Sep 2024</p>
+      <ul class="experience-editorial__points">
+        <li>Managed cross-border dietary supplement product development projects with clients and internal marketing and sales teams.</li>
+        <li>Conducted market research and literature reviews to identify industry trends, consumer preferences, and emerging ingredients.</li>
+        <li>Translated client requirements into product specifications and monitored project progress from initial concept through order fulfillment.</li>
       </ul>
-
+      <p class="experience-editorial__reflection">Gained practical experience in translating scientific and market information into product development decisions while strengthening my project management, cross-functional communication, and understanding of dietary supplement commercialization.</p>
     </div>
-
-
-    <!-- What I Gained -->
-
-    <div class="experience-section">
-
-      <h3 class="experience-label">
-        What I Gained
-      </h3>
-
-      <p class="experience-gained">
-        Gained practical experience in translating scientific and market
-        information into product development decisions while strengthening
-        my project management, cross-functional communication, and
-        understanding of dietary supplement commercialization.
-      </p>
-
-    </div>
-
   </section>
-
-
 </div>
