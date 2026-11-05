@@ -301,10 +301,10 @@ author_profile: true
 
       <div class="experience-contribution">
         <div class="experience-icon">
-          <i class="fas fa-users" aria-hidden="true"></i>
+  <i class="fas fa-chart-bar" aria-hidden="true"></i>
         </div>
         <div class="experience-content">
-          <h3>Cross-functional Collaboration</h3>
+          <h3>Market Research &amp; Scientific Analysis</h3>
           <p>
             Conducted market research and literature reviews to identify industry trends, consumer preferences, and emerging ingredients.
           </p>
