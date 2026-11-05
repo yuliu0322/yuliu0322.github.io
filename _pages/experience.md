@@ -227,9 +227,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Manuscript &amp; Editorial Management</h3>
           <p>
-            Managed manuscripts throughout the editorial
-            process, from initial screening and peer review
-            to final publication.
+            Managed the peer-review and editorial workflow of submitted manuscripts from initial screening through final publication.
           </p>
         </div>
       </div>
@@ -241,9 +239,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Peer Review Coordination</h3>
           <p>
-            Collaborated with authors, reviewers, and
-            academic editors to facilitate efficient
-            communication and timely editorial decisions.
+            Communicated with authors, reviewers, and academic editors to support timely, transparent editorial decisions.
           </p>
         </div>
       </div>
@@ -255,9 +251,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Quality &amp; Research Integrity</h3>
           <p>
-            Assessed manuscripts for journal scope,
-            formatting standards, research integrity,
-            and compliance with editorial policies.
+            Evaluated manuscripts for journal scope, formatting requirements, research integrity, and adherence to editorial policies.
           </p>
         </div>
       </div>
@@ -267,7 +261,7 @@ author_profile: true
     <div class="experience-expertise">
       <span class="expertise-label">EXPERTISE</span>
       <span class="expertise-tag">Scholarly Publishing</span>
-      <span class="expertise-tag">Peer Review</span>
+      <span class="expertise-tag">Peer Review Coordination</span>
       <span class="expertise-tag">Editorial Management</span>
     </div>
 
@@ -300,9 +294,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Project Planning &amp; Management</h3>
           <p>
-            Supported project planning, coordination,
-            and implementation within the nutrition industry,
-            helping align activities with project objectives.
+            Managed cross-border dietary supplement product development projects with clients and internal marketing and sales teams.
           </p>
         </div>
       </div>
@@ -314,10 +306,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Cross-functional Collaboration</h3>
           <p>
-            Facilitated communication among project
-            stakeholders to coordinate activities,
-            address operational needs, and support
-            project execution.
+            Conducted market research and literature reviews to identify industry trends, consumer preferences, and emerging ingredients.
           </p>
         </div>
       </div>
@@ -329,10 +318,7 @@ author_profile: true
         <div class="experience-content">
           <h3>Project Execution &amp; Progress Tracking</h3>
           <p>
-            Assisted with monitoring project progress,
-            organizing deliverables, and coordinating
-            follow-up activities to maintain workflow
-            efficiency.
+            Translated client requirements into product specifications and monitored project progress from initial concept through order fulfillment.
           </p>
         </div>
       </div>
@@ -343,7 +329,7 @@ author_profile: true
       <span class="expertise-label">EXPERTISE</span>
       <span class="expertise-tag">Project Management</span>
       <span class="expertise-tag">Cross-functional Collaboration</span>
-      <span class="expertise-tag">Project Coordination</span>
+      <span class="expertise-tag">Product Commercialization</span>
     </div>
 
   </section>
