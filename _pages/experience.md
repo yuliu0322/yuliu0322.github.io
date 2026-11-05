@@ -40,6 +40,8 @@ author_profile: true
   font-size: 1.25rem;
   font-weight: 700;
   color: #293449;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
 }
 
 .experience-org {
