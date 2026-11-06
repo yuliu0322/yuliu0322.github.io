@@ -1090,7 +1090,7 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
 
           <ul class="research-topics">
             <li>Seafood processing and preservation</li>
-            <li>Shellfish flavor chemistry</li>
+            <li>Shellfish flavor and quality</li>
             <li>Live storage</li>
             <li>Shelf-life extension</li>
             <li>Seafood sensory evaluation</li>
