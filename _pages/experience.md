@@ -7,7 +7,6 @@ author_profile: true
 
 <style>
 /* ===== Work Experience Theme ===== */
-/* Colors matched to News & Highlights */
 
 :root {
   --experience-blue: #52adc8;
@@ -15,7 +14,6 @@ author_profile: true
   --experience-text: #4f5865;
   --experience-muted: #7a8491;
   --experience-border: #dfe5eb;
-  --experience-background: #ffffff;
   --experience-soft: #eef2f5;
 }
 
@@ -27,18 +25,15 @@ html[data-theme="dark"] {
   --experience-text: #c7d0da;
   --experience-muted: #aeb9c4;
   --experience-border: #4c5661;
-  --experience-background: #343a40;
   --experience-soft: #394b59;
 }
 
-/* ===== Page ===== */
+/* ===== Page & Items ===== */
 
 .experience-page {
   width: 100%;
   color: var(--experience-text);
 }
-
-/* ===== Experience Items ===== */
 
 .experience-item {
   padding: 1.6rem 0 2rem;
@@ -65,11 +60,11 @@ html[data-theme="dark"] {
 
 .experience-title {
   margin: 0 0 0.35rem;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--experience-dark);
-  border-bottom: none !important;
-  padding-bottom: 0 !important;
 }
 
 .experience-org {
@@ -77,8 +72,6 @@ html[data-theme="dark"] {
   line-height: 1.5;
   color: var(--experience-muted);
 }
-
-/* Organization Links */
 
 .experience-link,
 .experience-link:visited {
@@ -93,8 +86,6 @@ html[data-theme="dark"] {
   color: var(--experience-blue) !important;
   text-decoration: underline !important;
 }
-
-/* Dates */
 
 .experience-date {
   padding-top: 0.3rem;
@@ -117,8 +108,6 @@ html[data-theme="dark"] {
   gap: 0.9rem;
 }
 
-/* Icons */
-
 .experience-icon {
   flex-shrink: 0;
   display: flex;
@@ -127,12 +116,10 @@ html[data-theme="dark"] {
   width: 38px;
   height: 38px;
   border-radius: 9px;
-  background: var(--experience-soft);
-  color: var(--experience-text);
+  background: rgba(82, 173, 200, 0.10);
+  color: var(--experience-blue);
   font-size: 0.95rem;
 }
-
-/* Contribution Text */
 
 .experience-content {
   flex: 1;
@@ -173,16 +160,16 @@ html[data-theme="dark"] {
 
 .expertise-tag {
   padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(82, 173, 200, 0.20);
   border-radius: 5px;
-  background: var(--experience-soft);
-  color: var(--experience-text);
+  background: rgba(82, 173, 200, 0.08);
+  color: var(--experience-dark);
   font-size: 0.76rem;
 }
 
 /* ===== Mobile ===== */
 
 @media (max-width: 600px) {
-
   .experience-header {
     flex-direction: column;
     gap: 0.35rem;
@@ -199,24 +186,7 @@ html[data-theme="dark"] {
   .experience-content p {
     font-size: 0.88rem;
   }
-
 }
-
-/* ===== Experience Icon & Tag Colors Only ===== */
-
-/* Contribution icons */
-.experience-page .experience-icon {
-  color: var(--experience-blue) !important;
-  background: rgba(82, 173, 200, 0.10) !important;
-}
-
-/* Expertise tags */
-.experience-page .expertise-tag {
-  color: var(--experience-blue) !important;
-  background: rgba(82, 173, 200, 0.08) !important;
-  border: 1px solid rgba(82, 173, 200, 0.20) !important;
-}
-  
 </style>
 
 <div class="experience-page">
