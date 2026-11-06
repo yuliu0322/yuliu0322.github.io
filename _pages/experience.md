@@ -152,17 +152,19 @@ html[data-theme="dark"] {
 
 .expertise-label {
   margin-right: 0.35rem;
+  padding-left: 0.65rem;
+  border-left: 3px solid var(--experience-blue);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--experience-muted);
+  color: var(--experience-dark);
 }
 
 .expertise-tag {
   padding: 0.3rem 0.65rem;
   border-radius: 5px;
-  background: var(--experience-soft);
-  color: var(--experience-text);
+  background: #f2f6f8;
+  color: var(--experience-dark);
   font-size: 0.76rem;
 }
 
