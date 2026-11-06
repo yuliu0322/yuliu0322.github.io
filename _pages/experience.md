@@ -160,10 +160,9 @@ html[data-theme="dark"] {
 
 .expertise-tag {
   padding: 0.3rem 0.65rem;
-  border: 1px solid rgba(82, 173, 200, 0.20);
   border-radius: 5px;
-  background: rgba(82, 173, 200, 0.08);
-  color: var(--experience-dark);
+  background: var(--experience-soft);
+  color: var(--experience-text);
   font-size: 0.76rem;
 }
 
