@@ -201,6 +201,52 @@ html[data-theme="dark"] {
   }
 
 }
+
+  /* ===== Experience Theme Color Refinement ===== */
+
+/* Job titles */
+.experience-page .experience-title {
+  color: var(--experience-blue) !important;
+}
+
+/* Organization links */
+.experience-page .experience-link,
+.experience-page .experience-link:visited {
+  color: var(--experience-blue) !important;
+}
+
+.experience-page .experience-link:hover {
+  opacity: 0.8;
+}
+
+/* Contribution icons */
+.experience-page .experience-icon {
+  color: var(--experience-blue) !important;
+  background: rgba(82, 173, 200, 0.10);
+}
+
+/* Contribution headings */
+.experience-page .experience-content h3 {
+  color: var(--experience-dark);
+}
+
+/* Dates */
+.experience-page .experience-date {
+  color: var(--experience-muted);
+}
+
+/* Expertise tags */
+.experience-page .expertise-tag {
+  color: var(--experience-blue);
+  background: rgba(82, 173, 200, 0.08);
+  border: 1px solid rgba(82, 173, 200, 0.20);
+}
+
+/* Expertise label */
+.experience-page .expertise-label {
+  color: var(--experience-blue);
+}
+  
 </style>
 
 <div class="experience-page">
