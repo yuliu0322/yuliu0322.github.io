@@ -15,8 +15,9 @@ author_profile: true
   --experience-muted: #7a8491;
   --experience-border: #dfe5eb;
   --experience-soft: #eef2f5;
+  --experience-tag-bg: #f2f6f8;
 }
-
+  
 /* Dark Mode */
 
 html[data-theme="dark"] {
@@ -26,6 +27,7 @@ html[data-theme="dark"] {
   --experience-muted: #aeb9c4;
   --experience-border: #4c5661;
   --experience-soft: #394b59;
+  --experience-tag-bg: #394b59;
 }
 
 /* ===== Page & Items ===== */
@@ -163,7 +165,7 @@ html[data-theme="dark"] {
 .expertise-tag {
   padding: 0.3rem 0.65rem;
   border-radius: 5px;
-  background: #f2f6f8;
+  background: var(--experience-tag-bg);
   color: var(--experience-dark);
   font-size: 0.76rem;
 }
