@@ -236,29 +236,14 @@
 
     a {
       position: relative;
+      border-radius: 6px;
+      transition: background-color 0.25s ease,
+                  color 0.25s ease;
 
-      &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 4px;
-        background: var(--global-border-color);
-        width: 100%;
-        -webkit-transition: $global-transition;
-        transition: $global-transition;
-        -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-                transform: scaleX(0); /* hide*/
-      }
-
-      &:hover:before {
-        -webkit-transform: scaleX(1);
-            -ms-transform: scaleX(1);
-                transform: scaleX(1); /* reveal*/
+      &:hover {
+        background-color: rgba(82, 173, 200, 0.12);
       }
     }
-  }
 
   .hidden-links {
     position: absolute;
