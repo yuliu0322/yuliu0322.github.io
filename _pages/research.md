@@ -1230,7 +1230,7 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
     document.querySelectorAll(".research-section").forEach((section) => {
       const headings = [...section.querySelectorAll(".research-subheading")];
       const whyHeading = headings.find((heading) =>
-        heading.textContent.trim() === "Why it matters"
+        heading.textContent.trim().endsWith("Why it matters")
       );
       const topicsBlock = section.querySelector(".research-topics-block");
       const topicsHeading = topicsBlock?.querySelector(".research-side-label");
