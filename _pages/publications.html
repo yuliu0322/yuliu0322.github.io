@@ -292,7 +292,7 @@ button.publication-filter-option.is-active {
   line-height: 1.55;
 }
 
-  .patent-card .publication-title a,
+.patent-card .publication-title a,
 .patent-card .publication-title a:visited {
   color: var(--pub-dark);
   text-decoration: none;
@@ -325,8 +325,8 @@ button.publication-filter-option.is-active {
   margin-top: 1.1rem;
 }
 
-  .archive a.publication-action-button,
-  .archive button.publication-action-button {
+.archive a.publication-action-button,
+.archive button.publication-action-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -347,13 +347,15 @@ button.publication-filter-option.is-active {
   cursor: pointer;
 }
 
-.publication-action-button:hover,
-.publication-action-button:focus-visible,
-.summary-toggle[aria-expanded="true"] {
+.archive a.publication-action-button:hover,
+.archive a.publication-action-button:focus-visible,
+.archive button.publication-action-button:hover,
+.archive button.publication-action-button:focus-visible,
+.archive .summary-toggle[aria-expanded="true"] {
   border-color: var(--pub-blue);
   background: var(--pub-blue);
   color: #ffffff;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .publication-action-button:focus-visible {
@@ -530,7 +532,8 @@ html[data-theme="dark"] .publication-no-results {
     font-size: 1.1rem;
   }
 
-  .publication-action-button {
+  .archive a.publication-action-button,
+  .archive button.publication-action-button {
     padding: 7px 12px;
     font-size: 0.78rem;
   }
@@ -832,7 +835,7 @@ html[data-theme="dark"] .publication-no-results {
                   rel="noopener noreferrer"
                 >
                   DOI
-                  <span class="publication-external-icon" aria-hidden="true">↗</span>
+                  <span class="publication-external-icon" aria-hidden="true">↗&#xfe0e;</span>
                 </a>
               {% endif %}
 
@@ -844,7 +847,7 @@ html[data-theme="dark"] .publication-no-results {
                   rel="noopener noreferrer"
                 >
                   PDF
-                  <span class="publication-external-icon" aria-hidden="true">↗</span>
+                  <span class="publication-external-icon" aria-hidden="true">↗&#xfe0e;</span>
                 </a>
               {% endif %}
 
