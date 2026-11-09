@@ -177,13 +177,18 @@
   min-width: 250px;
   background: var(--global-bg-color);
 
-  a {
-    display: block;
-    margin: 0 1rem;
-    padding: 0.2rem 0.4rem;
-    color: var(--global-masthead-link-color);
-    text-decoration: none;
+a {
+  display: block;
+  margin: 0 1rem;
 
+  @include breakpoint(max-width 924px) {
+    margin-left: 0;
+  }
+
+  padding: 0.2rem 0.4rem;
+  color: var(--global-masthead-link-color);
+  text-decoration: none;
+   
     &:hover {
       color: var(--global-masthead-link-color-hover);
     }
