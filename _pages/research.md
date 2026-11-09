@@ -27,6 +27,8 @@ author_profile: true
 
 .research-page {
   width: 100%;
+  min-width: 0;
+  container: research-layout / inline-size;
   color: var(--research-text);
   font-size: 1rem;
   line-height: 1.72;
@@ -666,6 +668,40 @@ html[data-theme="dark"] .research-topics li {
   }
 }
 
+/* CONTENT-WIDTH RESPONSIVE LAYOUT
+   Minimal Mistakes reserves space for the author sidebar.
+   Container queries react to the actual Research content width,
+   rather than the full Safari/Chrome window width. */
+
+@container research-layout (max-width: 1000px) {
+  .research-intro-body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .research-grid,
+  .research-section--reverse .research-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "lead"
+      "details"
+      "visual";
+    gap: 1rem;
+  }
+
+  .research-visual-column {
+    padding-top: 0;
+  }
+
+  .research-figure {
+    max-width: 680px;
+  }
+
+  .research-overview-visual {
+    width: min(100%, 280px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .research-overview-orbit,
   .research-overview-orbit-inner,
@@ -1224,34 +1260,8 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
 
   }
 
-  /* ALIGN WHY IT MATTERS AND RESEARCH TOPICS */
-
-  const alignResearchTitles = () => {
-    document.querySelectorAll(".research-section").forEach((section) => {
-      const headings = [...section.querySelectorAll(".research-subheading")];
-      const whyHeading = headings.find((heading) =>
-        heading.textContent.trim().endsWith("Why it matters")
-      );
-      const topicsBlock = section.querySelector(".research-topics-block");
-      const topicsHeading = topicsBlock?.querySelector(".research-side-label");
-
-      if (!whyHeading || !topicsBlock || !topicsHeading) return;
-
-      topicsBlock.style.transform = "";
-      if (window.matchMedia("(max-width: 900px)").matches) return;
-
-      const difference = whyHeading.getBoundingClientRect().top -
-        topicsHeading.getBoundingClientRect().top;
-      topicsBlock.style.transform = `translateY(${difference.toFixed(1)}px)`;
-    });
-  };
-
-  window.addEventListener("load", alignResearchTitles);
-  window.addEventListener("resize", alignResearchTitles);
-  document.querySelectorAll(".research-figure img").forEach((img) => {
-    img.addEventListener("load", alignResearchTitles);
-  });
-  alignResearchTitles();
+  /* Research topics remain in normal document flow.
+     No negative translations: they could overlap the figure. */
 
   /* OVERVIEW POINTER MOVEMENT */
 
