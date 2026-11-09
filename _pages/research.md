@@ -712,7 +712,7 @@ html[data-theme="dark"] .research-topics li {
       <div class="research-intro-content">
 
         <p class="research-intro-text">
-To address this question, my research focuses on understanding and improving aquatic food quality, from aquaculture production to post-harvest preservation. I first examined how environmental conditions shape the health, metabolism, and product quality of aquatic animals. Building on these findings, I am now developing disease-prevention strategies, including PLGA-based oral delivery systems for antigens and immunostimulants derived from probiotics. On the post-harvest side, I characterized how processing and storage affect seafood freshness, biochemical composition, and flavor, and I am developing bio-based passive cooling materials to extend shelf life without energy-intensive refrigeration. Together, this work seeks to deliver safer, fresher, and more sustainably produced food from farm to table.
+To answer this question, my research focuses on understanding and improving aquatic food quality, from aquaculture production to post-harvest preservation. I first examined how environmental conditions shape the health, metabolism, and product quality of aquatic animals. Building on these findings, I am now developing disease-prevention strategies, including PLGA-based oral delivery systems for antigens and immunostimulants derived from probiotics. On the post-harvest side, I characterized how processing and storage affect seafood freshness, biochemical composition, and flavor, and I am developing bio-based passive cooling materials to extend shelf life without energy-intensive refrigeration. Together, this work seeks to deliver safer, fresher, and more sustainably produced food from farm to table.
         </p>
 
       </div>
@@ -792,7 +792,7 @@ To address this question, my research focuses on understanding and improving aqu
       <div class="research-details">
 
         <h3 class="research-subheading">
-          What I work on
+          1) What I work on
         </h3>
 
         <p>
@@ -800,7 +800,7 @@ During my master's studies, my research focused on understanding how environment
         </p>
 
         <h3 class="research-subheading">
-          Why it matters
+          2) Why it matters
         </h3>
 
         <p>
@@ -827,7 +827,7 @@ During my master's studies, my research focused on understanding how environment
         <div class="research-topics-block">
 
           <p class="research-side-label">
-            Research topics
+            3) Research topics
           </p>
 
           <ul class="research-topics">
@@ -876,7 +876,7 @@ Disease remains a major challenge in aquaculture, and feed-based delivery offers
       <div class="research-details">
 
         <h3 class="research-subheading">
-          What I work on
+          1) What I work on
         </h3>
 
         <p> 
@@ -884,7 +884,7 @@ Currently, I am developing PLGA-based oral delivery systems to encapsulate probi
         </p>
 
         <h3 class="research-subheading">
-          Why it matters
+          2) Why it matters
         </h3>
 
         <p>
@@ -911,7 +911,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
         <div class="research-topics-block">
 
           <p class="research-side-label">
-            Research topics
+            3) Research topics
           </p>
 
           <ul class="research-topics">
@@ -966,7 +966,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
       <div class="research-details">
 
         <h3 class="research-subheading">
-          What I work on
+          1) What I work on
         </h3>
 
         <p>
@@ -974,7 +974,7 @@ My doctoral research focuses on bio-based composite films that combine passive r
         </p>
 
         <h3 class="research-subheading">
-          Why it matters
+          2) Why it matters
         </h3>
 
         <p>
@@ -1001,7 +1001,7 @@ My doctoral research focuses on bio-based composite films that combine passive r
         <div class="research-topics-block">
 
           <p class="research-side-label">
-            Research topics
+            3) Research topics
           </p>
 
           <ul class="research-topics">
@@ -1050,7 +1050,7 @@ Between harvest and consumption, seafood may undergo depuration, live holding, f
       <div class="research-details">
 
         <h3 class="research-subheading">
-          What I work on
+          1) What I work on
         </h3>
 
         <p>
@@ -1058,7 +1058,7 @@ During my earlier studies, I also contributed to research projects exploring var
         </p>
 
         <h3 class="research-subheading">
-          Why it matters
+          2) Why it matters
         </h3>
 
         <p>
@@ -1085,7 +1085,7 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
         <div class="research-topics-block">
 
           <p class="research-side-label">
-            Research topics
+            3) Research topics
           </p>
 
           <ul class="research-topics">
