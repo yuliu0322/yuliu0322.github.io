@@ -269,7 +269,7 @@ html[data-theme="dark"] .education-location {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Dr. Yiming Feng
+          Prof. Yiming Feng
         </a>
         <br>
 
@@ -341,7 +341,7 @@ html[data-theme="dark"] .education-location {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Dr. Lipin Chen
+          Prof. Lipin Chen
         </a>
       </p>
 
