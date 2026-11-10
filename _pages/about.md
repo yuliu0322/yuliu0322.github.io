@@ -146,7 +146,7 @@ redirect_from:
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.3rem;
   margin-bottom: 0;
   color: var(--home-muted);
   font-size: 1rem;
@@ -157,7 +157,7 @@ redirect_from:
 
 .home-research-index {
   color: var(--home-blue-dark);
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 750;
   letter-spacing: -0.025em;
 }
