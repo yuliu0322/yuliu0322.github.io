@@ -28,6 +28,23 @@ description: "Peer-reviewed journal articles, book chapters, and patents by Yu L
   margin: 2.8rem 0 1.5rem;
 }
 
+/* Numbered publication categories */
+.publication-section-index {
+  color: var(--pub-dark);
+  font-size: 0.82em;
+  font-weight: 650;
+}
+
+.publication-section-separator {
+  color: #9aafbd;
+  font-weight: 400;
+  margin: 0 0.3em;
+}
+
+html[data-theme="dark"] .publication-section-separator {
+  color: #95a7b4;
+}
+
 /* Search and filter toolbar */
 
 .publication-toolbar {
@@ -754,7 +771,7 @@ html[data-theme="dark"] .publication-no-results {
 <section class="publication-section">
 
   <h2 class="publication-section-title">
-    Peer-Reviewed Journal Articles
+    <span class="publication-section-index">01</span><span class="publication-section-separator">/</span> Peer-Reviewed Journal Articles
   </h2>
 
   <div class="publication-list">
@@ -876,7 +893,7 @@ html[data-theme="dark"] .publication-no-results {
 <section class="publication-section">
 
   <h2 class="publication-section-title">
-    Book Chapters
+    <span class="publication-section-index">02</span><span class="publication-section-separator">/</span> Book Chapters
   </h2>
 
   <div class="publication-list">
@@ -1007,7 +1024,7 @@ html[data-theme="dark"] .publication-no-results {
 <section class="publication-section">
 
   <h2 class="publication-section-title">
-    Patents
+    <span class="publication-section-index">03</span><span class="publication-section-separator">/</span> Patents
   </h2>
 
   <div class="publication-list">
