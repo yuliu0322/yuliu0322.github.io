@@ -450,40 +450,6 @@ author_profile: true
   line-height: 1.4;
 }
 
-/* PUBLICATIONS — integrated responsive typography and layout */
-.research-publications {
-  margin: 0;
-  padding-left: 1.45em;
-  color: var(--research-text);
-  font-size: clamp(0.88rem, 0.84rem + 0.18vw, 1rem);
-  line-height: 1.65;
-}
-.research-publications li {
-  padding-left: 0.15em;
-  margin: 0 0 0.85em;
-  overflow-wrap: break-word;
-}
-.research-publications li:last-child { margin-bottom: 0; }
-.research-publication-title { display: inline; }
-.research-publication-doi {
-  display: inline;
-  margin: 0;
-  color: var(--research-blue);
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-  overflow-wrap: anywhere;
-}
-.research-publication-doi:hover { text-decoration-thickness: 2px; }
-/* Both columns must be allowed to shrink inside the grid. */
-.research-grid > * { min-width: 0; }
-.research-figure, .research-image-button, .research-figure img { max-width: 100%; }
-@container (max-width: 760px) {
-  .research-publications { font-size: 1rem; }
-}
-@media (max-width: 480px) {
-  .research-publications { font-size: 0.94rem; padding-left: 1.25em; }
-}
-
 /* IMAGE LIGHTBOX */
 
 .research-lightbox[hidden] {
@@ -723,6 +689,19 @@ html[data-theme="dark"] .research-topics li {
   }
 }
 
+/* RELATED PUBLICATIONS — scoped to areas 01 and 04 only */
+.research-publications {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--research-text);
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+.research-publications li { padding-left: 0.15rem; margin: 0 0 0.75rem; overflow-wrap: anywhere; }
+.research-publication-title { display: block; }
+.research-publication-doi { display: inline-block; margin-top: 0.15rem; color: var(--research-blue); text-decoration: none; overflow-wrap: anywhere; }
+.research-publication-doi:hover { text-decoration: underline; }
+
 </style>
 
 <div class="research-page">
@@ -809,8 +788,8 @@ During my master's studies, my research focused on understanding how environment
 </figure></div><div class="research-visual-topics"><div class="research-topics-block">
 <p class="research-side-label">4) Related publications</p>
 <ol class="research-publications">
-<li><span class="research-publication-title">Metabolic profiles and protein expression responses of Pacific oyster (<i>Crassostrea gigas</i>) to polystyrene microplastic stress (2025).</span> <a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2024.140961" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2024.140961</a></li>
-<li><span class="research-publication-title">Changes in Flavor-Related Biomarkers in Pacific Oysters (<i>Crassostrea gigas</i>) Following Microplastic Exposure (2024).</span> <a class="research-publication-doi" href="https://doi.org/10.3390/foods13050765" target="_blank" rel="noopener noreferrer">DOI: 10.3390/foods13050765</a></li>
+<li><span class="research-publication-title">Metabolic profiles and protein expression responses of Pacific oyster (<i>Crassostrea gigas</i>) to polystyrene microplastic stress (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2024.140961" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2024.140961</a></li>
+<li><span class="research-publication-title">Changes in Flavor-Related Biomarkers in Pacific Oysters (<i>Crassostrea gigas</i>) Following Microplastic Exposure (2024).</span><a class="research-publication-doi" href="https://doi.org/10.3390/foods13050765" target="_blank" rel="noopener noreferrer">DOI: 10.3390/foods13050765</a></li>
 </ol>
 </div></div></div>
 </section>
@@ -945,8 +924,8 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
 </figure></div><div class="research-visual-topics"><div class="research-topics-block">
 <p class="research-side-label">4) Related publications</p>
 <ol class="research-publications">
-<li><span class="research-publication-title">Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation (2025).</span> <a class="research-publication-doi" href="https://doi.org/10.1016/j.aquaculture.2024.742066" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.aquaculture.2024.742066</a></li>
-<li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span> <a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
+<li><span class="research-publication-title">Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.aquaculture.2024.742066" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.aquaculture.2024.742066</a></li>
+<li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
 </ol>
 </div></div></div>
 </section>
