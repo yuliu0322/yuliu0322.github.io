@@ -262,26 +262,12 @@ html[data-theme="dark"] .education-location {
         Ph.D. in Biological Systems Engineering
       </p>
 
-      <p class="education-advisors">
-        <strong>Advisor:</strong>
-        <a
-          href="https://www.bse.vt.edu/about/people/faculty/yiming-feng.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Prof. Yiming Feng
-        </a>
-        <br>
-
-        <strong>Co-advisor:</strong>
-        <a
-          href="https://www.bse.vt.edu/about/people/faculty/justin-barone.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Prof. Justin R. Barone
-        </a>
-      </p>
+<p class="education-advisors">
+  <strong>Advisors:</strong>
+  <a href="https://www.bse.vt.edu/about/people/faculty/yiming-feng.html" target="_blank" rel="noopener noreferrer">Prof. Yiming Feng</a>
+  and
+  <a href="https://www.bse.vt.edu/about/people/faculty/justin-barone.html" target="_blank" rel="noopener noreferrer">Prof. Justin R. Barone</a>
+</p>
 
       <p class="education-location">
         <svg
@@ -324,26 +310,12 @@ html[data-theme="dark"] .education-location {
         M.Eng. in Food Science and Engineering
       </p>
 
-      <p class="education-advisors">
-        <strong>Advisor:</strong>
-        <a
-          href="https://cfse.ouc.edu.cn/2014/0108/c19355a291400/page.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Prof. Zhaojie Li
-        </a>
-        <br>
-
-        <strong>Co-advisor:</strong>
-        <a
-          href="https://foodsci.hainanu.edu.cn/info/1232/11384.htm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Prof. Lipin Chen
-        </a>
-      </p>
+<p class="education-advisors">
+  <strong>Advisors:</strong>
+  <a href="https://cfse.ouc.edu.cn/2014/0108/c19355a291400/page.htm" target="_blank" rel="noopener noreferrer">Prof. Zhaojie Li</a>
+  and
+  <a href="https://foodsci.hainanu.edu.cn/info/1232/11384.htm" target="_blank" rel="noopener noreferrer">Prof. Lipin Chen</a>
+</p>
 
       <p class="education-location">
         <svg
