@@ -1,5 +1,5 @@
 ---
-title: "Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (Mytilus coruscus) during low-temperature semi-anhydrous living-preservation"
+title: "Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation"
 collection: publications
 permalink: /publication/mussel-cooling/
 date: 2025-04-15
@@ -13,7 +13,7 @@ category: "Seafood Preservation"
 summary: >
   This study investigated the effects of different cooling rates
   (1, 4, 8, and 16 °C/h) on the physiological metabolism, survival,
-  and flavor quality of thick-shell mussels (Mytilus coruscus)
+  and flavor quality of thick-shell mussels (<i>Mytilus coruscus</i>)
   during low-temperature semi-anhydrous living-preservation.
   <strong>A cooling rate of 4 °C/h demonstrated the best overall
   preservation performance, maintaining a 100% survival rate
