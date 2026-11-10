@@ -750,8 +750,8 @@ To answer this question, my research focuses on understanding and improving aqua
           anthropogenic contaminants throughout culture, and these exposures
           can carry through to the biochemical composition, flavor, and safety
           profile of the harvested product. We use the Pacific oyster
-          (Crassostrea gigas) and the thick-shell mussel
-          (Mytilus coruscus) as model species to trace this pathway
+          (<i>Crassostrea gigas</i>) and the thick-shell mussel
+          (<i>Mytilus coruscus</i>) as model species to trace this pathway
           from environmental exposure to product quality.
         </p>
 </div>
