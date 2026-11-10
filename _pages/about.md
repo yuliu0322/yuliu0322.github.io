@@ -136,12 +136,10 @@ redirect_from:
 
 .home-research-item {
   min-width: 0;
-  padding-top: 1.25rem;
-  border-top: 2px solid var(--home-blue-dark);
 }
 
 .home-research-header {
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
 .home-research-number {
@@ -149,11 +147,11 @@ redirect_from:
   align-items: baseline;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0;
   color: var(--home-muted);
-  font-size: 0.71rem;
+  font-size: 1rem;
   font-weight: 750;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   line-height: 1.3;
 }
 
@@ -175,10 +173,11 @@ redirect_from:
   display: inline;
   margin: 0;
   color: var(--home-navy);
-  font-size: clamp(1.08rem, 1.4vw, 1.3rem);
+  font-size: clamp(1.02rem, 1.35vw, 1.2rem);
   font-weight: 750;
-  line-height: 1.5;
-  box-shadow: inset 0 -0.3em 0 rgba(72, 169, 197, 0.13);
+  line-height: 1.4;
+  letter-spacing: 0;
+  box-shadow: inset 0 -0.25em 0 rgba(72, 169, 197, 0.13);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
@@ -382,10 +381,7 @@ html[data-theme="dark"] .home-welcome {
       <article class="home-research-item">
 
         <div class="home-research-header">
-          <span class="home-research-number"><span class="home-research-index">01</span><span class="home-research-slash">/</span><span>CURRENT RESEARCH</span></span>
-          <h3 class="home-research-title">
-            Oral Delivery Systems
-          </h3>
+          <div class="home-research-number"><span class="home-research-index">01</span><span class="home-research-slash">/</span><h3 class="home-research-title">Oral Delivery Systems</h3></div>
         </div>
 
         <p class="home-research-text">
@@ -407,10 +403,7 @@ html[data-theme="dark"] .home-welcome {
       <article class="home-research-item">
 
         <div class="home-research-header">
-          <span class="home-research-number"><span class="home-research-index">02</span><span class="home-research-slash">/</span><span>CURRENT RESEARCH</span></span>
-          <h3 class="home-research-title">
-            Passive Cooling Materials
-          </h3>
+          <div class="home-research-number"><span class="home-research-index">02</span><span class="home-research-slash">/</span><h3 class="home-research-title">Passive Cooling Materials</h3></div>
         </div>
 
         <p class="home-research-text">
