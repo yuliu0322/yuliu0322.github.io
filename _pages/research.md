@@ -27,8 +27,6 @@ author_profile: true
 
 .research-page {
   width: 100%;
-  min-width: 0;
-  container: research-layout / inline-size;
   color: var(--research-text);
   font-size: 1rem;
   line-height: 1.72;
@@ -315,23 +313,30 @@ author_profile: true
   text-transform: uppercase;
 }
 
+.research-section {
+  container-type: inline-size;
+}
+
+/* Keep the original two-column composition, with a shared second row:
+   Why it matters and Research topics start at exactly the same height. */
 .research-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
   grid-template-areas:
     "lead lead"
-    "details visual";
-  column-gap: clamp(1.5rem, 3vw, 2.7rem);
+    "work figure"
+    "why topics";
+  column-gap: clamp(1rem, 2.4vw, 2.7rem);
   row-gap: 0.7rem;
   align-items: start;
 }
 
-.research-section--reverse .research-grid {
-  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
-  grid-template-areas:
-    "lead lead"
-    "visual details";
-}
+.research-work { grid-area: work; min-width: 0; }
+.research-why { grid-area: why; min-width: 0; }
+.research-visual-figure { grid-area: figure; min-width: 0; }
+.research-visual-topics { grid-area: topics; min-width: 0; }
+.research-work p, .research-why p { margin: 0; }
+.research-visual-figure img { max-width: 100%; height: auto; }
 
 .research-lead {
   grid-area: lead;
@@ -353,14 +358,6 @@ author_profile: true
   margin: 0;
 }
 
-.research-details {
-  grid-area: details;
-  min-width: 0;
-}
-
-.research-details p {
-  margin: 0;
-}
 
 .research-subheading {
   margin: 0.9rem 0 0.28rem;
@@ -374,15 +371,13 @@ author_profile: true
   margin-top: 0;
 }
 
+/* The illustration label remains visible in both desktop and single-column layouts. */
+.research-illustration-heading {
+  margin: 0 0 0.55rem;
+}
+
 /* RESEARCH FIGURES */
 
-.research-visual-column {
-  grid-area: visual;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
 
 .research-figure {
   width: 100%;
@@ -586,9 +581,7 @@ html[data-theme="dark"] .research-topics li {
 /* RESPONSIVE */
 
 @media (min-width: 901px) {
-  .research-visual-column {
-    padding-top: 2.4rem;
-  }
+  /* Figure and work start in the same grid row. */
 
   .research-figure img {
     max-height: 420px;
@@ -606,24 +599,36 @@ html[data-theme="dark"] .research-topics li {
     width: min(100%, 280px);
   }
 
-  .research-grid,
-  .research-section--reverse .research-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "lead"
-      "details"
-      "visual";
-    gap: 1rem;
-  }
-
-  .research-visual-column {
-    gap: 0.9rem;
-    padding-top: 0;
-  }
 
   .research-figure {
     max-width: 680px;
     margin-top: 0;
+  }
+}
+
+/* Switch only when the Research content column itself is too narrow.
+   This protects MacBooks with a sidebar without changing roomy Windows layouts. */
+@container (max-width: 760px) {
+  .research-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "lead"
+      "work"
+      "why"
+      "figure"
+      "topics";
+    row-gap: 1rem;
+  }
+  .research-visual-figure { width: min(100%, 680px); }
+}
+
+/* Fallback for browsers without container queries on small screens. */
+@supports not (container-type: inline-size) {
+  @media (max-width: 1000px) {
+    .research-grid {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "lead" "work" "why" "figure" "topics";
+    }
   }
 }
 
@@ -668,72 +673,6 @@ html[data-theme="dark"] .research-topics li {
   }
 }
 
-/* MACBOOK / MEDIUM CONTENT WIDTH: keep the two-column design. */
-@container research-layout (min-width: 681px) and (max-width: 1000px) {
-  .research-grid {
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-    column-gap: 1.2rem;
-  }
-
-  .research-section--reverse .research-grid {
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  }
-
-  .research-visual-column {
-    padding-top: 1rem;
-  }
-
-  .research-figure,
-  .research-image-button,
-  .research-figure img {
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .research-figure img {
-    max-height: 350px;
-    object-fit: contain;
-  }
-
-  .research-topics {
-    gap: 0.55rem 0.45rem;
-  }
-}
-
-/* CONTENT-WIDTH RESPONSIVE LAYOUT
-   Minimal Mistakes reserves space for the author sidebar.
-   Container queries react to the actual Research content width,
-   rather than the full Safari/Chrome window width. */
-
-@container research-layout (max-width: 680px) {
-  .research-intro-body {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-  }
-
-  .research-grid,
-  .research-section--reverse .research-grid {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "lead"
-      "details"
-      "visual";
-    gap: 1rem;
-  }
-
-  .research-visual-column {
-    padding-top: 0;
-  }
-
-  .research-figure {
-    max-width: 680px;
-  }
-
-  .research-overview-visual {
-    width: min(100%, 280px);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .research-overview-orbit,
   .research-overview-orbit-inner,
@@ -752,100 +691,61 @@ html[data-theme="dark"] .research-topics li {
 </style>
 
 <div class="research-page">
-
-  <!-- INTRO -->
-
-  <section
-    class="research-intro"
-    aria-labelledby="research-question-heading"
-  >
-
-    <div class="research-intro-heading">
-
-      <p class="research-kicker">
+<!-- INTRO -->
+<section aria-labelledby="research-question-heading" class="research-intro">
+<div class="research-intro-heading">
+<p class="research-kicker">
         A question runs through my research
       </p>
-
-      <p
-        class="research-question"
-        id="research-question-heading"
-      >
+<p class="research-question" id="research-question-heading">
         How can we improve aquatic animal health and seafood quality while promoting sustainability?
       </p>
-
-    </div>
-
-    <div class="research-intro-body">
-
-      <div class="research-intro-content">
-
-        <p class="research-intro-text">
+</div>
+<div class="research-intro-body">
+<div class="research-intro-content">
+<p class="research-intro-text">
 To answer this question, my research focuses on understanding and improving aquatic food quality, from aquaculture production to post-harvest preservation. I first examined how environmental conditions shape the health, metabolism, and product quality of aquatic animals. Building on these findings, I am now developing disease-prevention strategies, including PLGA-based oral delivery systems for antigens and immunostimulants derived from probiotics. On the post-harvest side, I characterized how processing and storage affect seafood freshness, biochemical composition, and flavor, and I am developing bio-based passive cooling materials to extend shelf life without energy-intensive refrigeration. Together, this work seeks to deliver safer, fresher, and more sustainably produced food from farm to table.
         </p>
-
-      </div>
-
-      <div
-        class="research-overview-visual"
-        role="img"
-        aria-label="Abstract visualization of four interconnected research areas"
-      >
-
-        <div class="research-overview-orbit"></div>
-        <div class="research-overview-orbit-inner"></div>
-
-        <div class="research-ocean-current" aria-hidden="true">
-          <span class="research-ocean-wave research-ocean-wave--one"></span>
-          <span class="research-ocean-wave research-ocean-wave--two"></span>
-          <span class="research-ocean-wave research-ocean-wave--three"></span>
-        </div>
-
-
+</div>
+<div aria-label="Abstract visualization of four interconnected research areas" class="research-overview-visual" role="img">
+<div class="research-overview-orbit"></div>
+<div class="research-overview-orbit-inner"></div>
+<div aria-hidden="true" class="research-ocean-current">
+<span class="research-ocean-wave research-ocean-wave--one"></span>
+<span class="research-ocean-wave research-ocean-wave--two"></span>
+<span class="research-ocean-wave research-ocean-wave--three"></span>
+</div>
 <div class="research-overview-node research-overview-node--aquaculture">
   Seafood Sustainability
 </div>
-
 <div class="research-overview-node research-overview-node--oral-delivery">
   Oral Delivery Systems
 </div>
-
 <div class="research-overview-node research-overview-node--passive-cooling">
   Passive Cooling Materials
 </div>
-
 <div class="research-overview-node research-overview-node--seafood-science">
   Seafood Flavor and Quality
 </div>
-
-        <span class="research-microsphere research-microsphere--one"></span>
-        <span class="research-microsphere research-microsphere--two"></span>
-        <span class="research-microsphere research-microsphere--three"></span>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- 01 AQUACULTURE ENVIRONMENT -->
-
-  <section class="research-section" id="environment">
-
-    <div class="research-section-heading">
-      <span class="research-number">
+<span class="research-microsphere research-microsphere--one"></span>
+<span class="research-microsphere research-microsphere--two"></span>
+<span class="research-microsphere research-microsphere--three"></span>
+</div>
+</div>
+</section>
+<!-- 01 AQUACULTURE ENVIRONMENT -->
+<section class="research-section" id="environment">
+<div class="research-section-heading">
+<span class="research-number">
         01 · Aquaculture Environment, Animal Health &amp; Seafood Quality
       </span>
-    </div>
-
-    <div class="research-grid">
-
-      <div class="research-lead">
-
-        <h2 class="research-focus">
+</div>
+<div class="research-grid">
+<div class="research-lead">
+<h2 class="research-focus">
           Linking the aquaculture environment to shellfish health and seafood quality
         </h2>
-
-        <p>
+<p>
           Shellfish are exposed to fluctuating temperature, salinity, and
           anthropogenic contaminants throughout culture, and these exposures
           can carry through to the biochemical composition, flavor, and safety
@@ -854,173 +754,95 @@ To answer this question, my research focuses on understanding and improving aqua
           (Mytilus coruscus) as model species to trace this pathway
           from environmental exposure to product quality.
         </p>
-
-      </div>
-
-      <div class="research-details">
-
-        <h3 class="research-subheading">
+</div>
+<div class="research-work"><h3 class="research-subheading">
           1) What I work on
-        </h3>
-
-        <p>
+        </h3><p>
 During my master's studies, my research focused on understanding how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, I investigated the underlying metabolic responses and identified key pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
-        </p>
-
-        <h3 class="research-subheading">
+        </p></div>
+<div class="research-why"><h3 class="research-subheading">
           2) Why it matters
-        </h3>
-
-        <p>
+        </h3><p>
           Shellfish quality is shaped by environmental conditions long before harvest. Identifying the environmental stressors and metabolic pathways associated with changes in shellfish health and flavor can provide valuable insights for aquaculture site selection and culture management, while also informing efforts by inspectors and regulators to assess microplastic contamination in seafood.
-        </p>
-
-      </div>
-
-      <div class="research-visual-column">
-
-        <figure class="research-figure">
-          <button
-            class="research-image-button"
-            type="button"
-            aria-label="Enlarge Aqua Environment figure"
-          >
-            <img
-              src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}"
-              alt="Aquaculture environment, shellfish physiology, and seafood quality"
-            >
-          </button>
-        </figure>
-
-        <div class="research-topics-block">
-
-          <p class="research-side-label">
-            3) Research topics
+        </p></div>
+<div class="research-visual-figure">
+<h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
+<figure class="research-figure">
+<button aria-label="Enlarge Aqua Environment figure" class="research-image-button" type="button">
+<img alt="Aquaculture environment, shellfish physiology, and seafood quality" src="{{ '/assets/images/Aqua-Environment.png' | relative_url }}"/>
+</button>
+</figure></div><div class="research-visual-topics"><div class="research-topics-block">
+<p class="research-side-label">
+            4) Research topics
           </p>
-
-          <ul class="research-topics">
-            <li>Aquaculture environmental stressors</li>
-            <li>Shellfish physiology and metabolism</li>
-            <li>Flavor biochemistry</li>
-            <li>Microplastic ecotoxicology</li>
-            <li>Metabolomics</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- 02 ORAL DELIVERY -->
-
-  <section
-    class="research-section research-section--reverse"
-    id="oral-delivery"
-  >
-
-    <div class="research-section-heading">
-      <span class="research-number">
+<ul class="research-topics">
+<li>Aquaculture environmental stressors</li>
+<li>Shellfish physiology and metabolism</li>
+<li>Flavor biochemistry</li>
+<li>Microplastic ecotoxicology</li>
+<li>Metabolomics</li>
+</ul>
+</div></div></div>
+</section>
+<!-- 02 ORAL DELIVERY -->
+<section class="research-section research-section--reverse" id="oral-delivery">
+<div class="research-section-heading">
+<span class="research-number">
         02 · Aquaculture Health &amp; Oral Delivery Systems
       </span>
-    </div>
-
-    <div class="research-grid">
-
-      <div class="research-lead">
-
-        <h2 class="research-focus">
+</div>
+<div class="research-grid">
+<div class="research-lead">
+<h2 class="research-focus">
           Feed-based delivery systems for aquatic animal health
         </h2>
-
-        <p>
+<p>
 Disease remains a major challenge in aquaculture, and feed-based delivery offers a practical approach to administering vaccines and functional supplements at farm scale. However, probiotics, immunostimulants, and antigens may lose their stability or biological activity during storage and passage through the digestive tract, limiting their effectiveness.
         </p>
-
-      </div>
-
-      <div class="research-details">
-
-        <h3 class="research-subheading">
+</div>
+<div class="research-work"><h3 class="research-subheading">
           1) What I work on
-        </h3>
-
-        <p> 
+        </h3><p> 
 Currently, I am developing PLGA-based oral delivery systems to encapsulate probiotics, antigens, and phytochemicals for coating on extruded aquafeeds. These systems are intended to protect the encapsulated cargo during storage and enable controlled release in the digestive tract. By integrating formulation design, physicochemical characterization, stability evaluation, release characterization, and in vivo evaluation, this work aims to support the development of feed-compatible oral vaccines and functional aquafeeds for sustainable aquaculture.
-        </p>
-
-        <h3 class="research-subheading">
+        </p></div>
+<div class="research-why"><h3 class="research-subheading">
           2) Why it matters
-        </h3>
-
-        <p>
+        </h3><p>
 A feed-based oral delivery platform that protects bioactive cargo during feed storage and passage through the digestive tract could make vaccination and immunostimulation more practical at farm scale, particularly where injection is difficult. Such an approach could reduce handling stress and labor, support disease prevention with less reliance on treatments, and create opportunities for feed manufacturers to develop value-added functional aquafeeds.
-        </p>
-
-      </div>
-
-      <div class="research-visual-column">
-
-        <figure class="research-figure">
-          <button
-            class="research-image-button"
-            type="button"
-            aria-label="Enlarge Aquaculture Oral Delivery System figure"
-          >
-            <img
-              src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}"
-              alt="PLGA-based oral delivery system for aquaculture"
-            >
-          </button>
-        </figure>
-
-        <div class="research-topics-block">
-
-          <p class="research-side-label">
-            3) Research topics
+        </p></div>
+<div class="research-visual-figure">
+<h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
+<figure class="research-figure">
+<button aria-label="Enlarge Aquaculture Oral Delivery System figure" class="research-image-button" type="button">
+<img alt="PLGA-based oral delivery system for aquaculture" src="{{ '/assets/images/PLGA-Delivery.png' | relative_url }}"/>
+</button>
+</figure></div><div class="research-visual-topics"><div class="research-topics-block">
+<p class="research-side-label">
+            4) Research topics
           </p>
-
-          <ul class="research-topics">
-            <li>Feed-based oral delivery systems</li>
-            <li>Oral vaccines</li>
-            <li>PLGA-based micro- and nanoparticles</li>
-            <li>Controlled-release</li>
-            <li>Functional aquafeeds</li>
-            <li>Aquatic animal disease control</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- 03 PASSIVE COOLING -->
-
-  <section
-    class="research-section"
-    id="thermal-management"
-  >
-
-    <div class="research-section-heading">
-      <span class="research-number">
+<ul class="research-topics">
+<li>Feed-based oral delivery systems</li>
+<li>Oral vaccines</li>
+<li>PLGA-based micro- and nanoparticles</li>
+<li>Controlled-release</li>
+<li>Functional aquafeeds</li>
+<li>Aquatic animal disease control</li>
+</ul>
+</div></div></div>
+</section>
+<!-- 03 PASSIVE COOLING -->
+<section class="research-section" id="thermal-management">
+<div class="research-section-heading">
+<span class="research-number">
         03 · Sustainable Cold Chain &amp; Thermal Management
       </span>
-    </div>
-
-    <div class="research-grid">
-
-      <div class="research-lead">
-
-        <h2 class="research-focus">
+</div>
+<div class="research-grid">
+<div class="research-lead">
+<h2 class="research-focus">
           Bio-based passive cooling materials for energy-efficient cold chains
         </h2>
-
-        <p>
+<p>
           Refrigeration is the backbone of the cold chain, but it is
           energy-intensive and not always available at harvest sites, during
           short-distance transport, or in resource-limited settings. We are
@@ -1028,149 +850,81 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
           to support more sustainable thermal management of agricultural and
           aquatic foods and other perishable products.
         </p>
-
-      </div>
-
-      <div class="research-details">
-
-        <h3 class="research-subheading">
+</div>
+<div class="research-work"><h3 class="research-subheading">
           1) What I work on
-        </h3>
-
-        <p>
+        </h3><p>
 My doctoral research focuses on bio-based composite films that combine passive radiative cooling with evaporative cooling to achieve sub-ambient temperatures without external energy input. We aim to optimize cooling performance, water retention and release, and mechanical properties to meet the practical demands of food preservation and packaging. By harnessing renewable materials, we aim to provide sustainable, zero-energy cooling solutions for food packaging and cold-chain applications.
-        </p>
-
-        <h3 class="research-subheading">
+        </p></div>
+<div class="research-why"><h3 class="research-subheading">
           2) Why it matters
-        </h3>
-
-        <p>
+        </h3><p>
           Passive cooling could complement conventional refrigeration by lowering energy demand and providing cooling where power is limited, helping reduce spoilage and post-harvest loss of perishables. For cold-chain operators, packaging companies, and food producers, it points to a low-energy, bio-based option for temperature control.
-        </p>
-
-      </div>
-
-      <div class="research-visual-column">
-
-        <figure class="research-figure">
-          <button
-            class="research-image-button"
-            type="button"
-            aria-label="Enlarge Passive Radiative Cooling System figure"
-          >
-            <img
-              src="{{ '/assets/images/PRC-workflow.png' | relative_url }}"
-              alt="Bio-based passive radiative and evaporative cooling system"
-            >
-          </button>
-        </figure>
-
-        <div class="research-topics-block">
-
-          <p class="research-side-label">
-            3) Research topics
+        </p></div>
+<div class="research-visual-figure">
+<h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
+<figure class="research-figure">
+<button aria-label="Enlarge Passive Radiative Cooling System figure" class="research-image-button" type="button">
+<img alt="Bio-based passive radiative and evaporative cooling system" src="{{ '/assets/images/PRC-workflow.png' | relative_url }}"/>
+</button>
+</figure></div><div class="research-visual-topics"><div class="research-topics-block">
+<p class="research-side-label">
+            4) Research topics
           </p>
-
-          <ul class="research-topics">
-            <li>Passive radiative and evaporative cooling</li>
-            <li>Bio-based composite films</li>
-            <li>Food packages</li>
-            <li>Food preservation</li>
-            <li>Food cold-chain technologies</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- 04 POST-HARVEST -->
-
-  <section
-    class="research-section research-section--reverse"
-    id="post-harvest"
-  >
-
-    <div class="research-section-heading">
-      <span class="research-number">
+<ul class="research-topics">
+<li>Passive radiative and evaporative cooling</li>
+<li>Bio-based composite films</li>
+<li>Food packages</li>
+<li>Food preservation</li>
+<li>Food cold-chain technologies</li>
+</ul>
+</div></div></div>
+</section>
+<!-- 04 POST-HARVEST -->
+<section class="research-section research-section--reverse" id="post-harvest">
+<div class="research-section-heading">
+<span class="research-number">
         04 · Seafood Processing, Storage &amp; Flavor Quality
       </span>
-    </div>
-
-    <div class="research-grid">
-
-      <div class="research-lead">
-
-        <h2 class="research-focus">
+</div>
+<div class="research-grid">
+<div class="research-lead">
+<h2 class="research-focus">
           Evaluating the effects of postharvest preservation on seafood freshness and flavor quality
         </h2>
-
-        <p>
+<p>
 Between harvest and consumption, seafood may undergo depuration, live holding, freezing, storage, and transportation. These processes can affect physiological condition, biochemical composition, sensory quality, and shelf life. Understanding the underlying molecular mechanisms can help inform strategies to preserve seafood freshness, flavor, and overall quality.
         </p>
-
-      </div>
-
-      <div class="research-details">
-
-        <h3 class="research-subheading">
+</div>
+<div class="research-work"><h3 class="research-subheading">
           1) What I work on
-        </h3>
-
-        <p>
+        </h3><p>
 During my earlier studies, I also contributed to research projects exploring various postharvest preservation technologies for oysters and mussels, including depuration, liquid nitrogen rapid freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. Using physicochemical analyses and flavor profiling, we examined how different preservation conditions affected physiological status, biochemical composition, and flavor-related compounds, thereby identifying key factors that influence flavor and quality during postharvest storage.
-        </p>
-
-        <h3 class="research-subheading">
+        </p></div>
+<div class="research-why"><h3 class="research-subheading">
           2) Why it matters
-        </h3>
-
-        <p>
+        </h3><p>
 Maintaining the freshness, flavor, and overall quality of shellfish throughout the supply chain is critical for both live and frozen products. Elucidating how different preservation strategies influence post-harvest physiological and biochemical changes can help processors and distributors optimize storage conditions, extend shelf life, and minimize post-harvest losses.
-        </p>
-
-      </div>
-
-      <div class="research-visual-column">
-
-        <figure class="research-figure">
-          <button
-            class="research-image-button"
-            type="button"
-            aria-label="Enlarge Aquaculture Preservation figure"
-          >
-            <img
-              src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}"
-              alt="Post-harvest seafood preservation strategies"
-            >
-          </button>
-        </figure>
-
-        <div class="research-topics-block">
-
-          <p class="research-side-label">
-            3) Research topics
+        </p></div>
+<div class="research-visual-figure">
+<h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
+<figure class="research-figure">
+<button aria-label="Enlarge Aquaculture Preservation figure" class="research-image-button" type="button">
+<img alt="Post-harvest seafood preservation strategies" src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}"/>
+</button>
+</figure></div><div class="research-visual-topics"><div class="research-topics-block">
+<p class="research-side-label">
+            4) Research topics
           </p>
-
-          <ul class="research-topics">
-            <li>Seafood processing and preservation</li>
-            <li>Shellfish flavor and quality</li>
-            <li>Live storage</li>
-            <li>Shelf-life extension</li>
-            <li>Seafood sensory evaluation</li>
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
+<ul class="research-topics">
+<li>Seafood processing and preservation</li>
+<li>Shellfish flavor and quality</li>
+<li>Live storage</li>
+<li>Shelf-life extension</li>
+<li>Seafood sensory evaluation</li>
+</ul>
+</div></div></div>
+</section>
 </div>
 
 
@@ -1291,9 +1045,6 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
     );
 
   }
-
-  /* Research topics remain in normal document flow.
-     No negative translations: they could overlap the figure. */
 
   /* OVERVIEW POINTER MOVEMENT */
 
