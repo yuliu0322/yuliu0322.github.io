@@ -1,5 +1,5 @@
 ---
-title: "Metabolic profiles and protein expression responses of Pacific oyster (Crassostrea gigas) to polystyrene microplastic stress"
+title: "Metabolic profiles and protein expression responses of Pacific oyster (<i>Crassostrea gigas</i>) to polystyrene microplastic stress"
 collection: publications
 permalink: /publication/metabolomics-microplastic/
 date: 2025-01-01
