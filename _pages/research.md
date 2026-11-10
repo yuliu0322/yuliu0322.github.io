@@ -703,34 +703,72 @@ html[data-theme="dark"] .research-topics li {
 .research-publication-doi:hover { text-decoration: underline; }
 
 
-/* Research-in-progress illustration: scoped, responsive, motion-safe */
+/* RESEARCH JOURNEY — compact, responsive, no fixed background */
 .research-journey {
-  width:100%; min-width:0; overflow:hidden;
-  display:grid; grid-template-columns:minmax(0,0.95fr) minmax(0,1.5fr) minmax(0,.8fr);
-  align-items:center; gap:clamp(.25rem,1.2vw,.7rem);
-  position:relative; padding:.6rem .1rem 1.1rem;
-  min-height:150px; isolation:isolate;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(88px, 0.8fr) minmax(0, 1.7fr);
+  align-items: center;
+  column-gap: clamp(0.65rem, 2vw, 1.2rem);
+  width: 100%; min-width: 0;
+  min-height: 126px;
+  padding: 0.35rem 0 1.15rem;
+  isolation: isolate;
 }
-.research-journey-person {width:100%;max-width:160px;justify-self:center;position:relative;z-index:2;animation:research-run-bob .48s ease-in-out infinite alternate;transform-origin:center bottom;}
-.research-journey-paper {width:100%;max-width:142px;justify-self:center;position:relative;z-index:2;animation:research-paper-float 3.6s ease-in-out infinite;}
-.research-journey-copy {min-width:0;position:relative;z-index:2;padding-left:clamp(.4rem,1vw,.75rem);border-left:1px solid var(--research-line);}
-.research-journey-title {display:block;color:var(--research-ink);font-size:clamp(.77rem,1.35cqw,1rem);font-weight:750;line-height:1.35;}
-.research-journey-subtitle {display:block;color:var(--research-muted);font-size:clamp(.66rem,1.13cqw,.86rem);font-style:italic;line-height:1.5;margin-top:.22rem;}
-.research-journey-path {position:absolute;bottom:.9rem;left:12%;width:78%;height:25px;z-index:0;overflow:visible;}
-.research-journey-path path {fill:none;stroke:#a7c5df;stroke-width:2;stroke-linecap:round;stroke-dasharray:7 11;animation:research-path-flow 2.5s linear infinite;}
-@keyframes research-run-bob {from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-5px) rotate(1deg)}}
-@keyframes research-paper-float {0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-@keyframes research-path-flow {to{stroke-dashoffset:-36}}
-@container (max-width:500px) {
- .research-journey {grid-template-columns:minmax(0,.75fr) minmax(0,1.6fr);gap:.35rem;min-height:120px;}
- .research-journey-person {max-width:110px;}
- .research-journey-paper {display:none;}
- .research-journey-title {font-size:clamp(.78rem,3cqw,.98rem);}
- .research-journey-subtitle {font-size:clamp(.7rem,2.5cqw,.85rem);}
- .research-journey-path {width:75%;left:18%;}
+.research-journey-person {
+  display: block;
+  width: 100%; max-width: 145px; height: auto;
+  justify-self: end; align-self: center;
+  position: relative; z-index: 2;
+  background: transparent;
+  transform-origin: 50% 85%;
+  animation: research-run-bob 0.65s ease-in-out infinite alternate;
 }
-@media (prefers-reduced-motion:reduce) {
- .research-journey-person,.research-journey-paper,.research-journey-path path {animation:none!important;}
+.research-journey-copy {
+  position: relative; z-index: 2;
+  min-width: 0;
+  border-left: 1px solid var(--research-line);
+  padding-left: clamp(0.65rem, 2vw, 1rem);
+}
+.research-journey-title {
+  display: block; color: var(--research-ink);
+  font-size: clamp(0.83rem, 1.65cqw, 1.02rem);
+  font-weight: 750; line-height: 1.35;
+}
+.research-journey-subtitle {
+  display: block; color: var(--research-muted);
+  font-size: clamp(0.73rem, 1.4cqw, 0.88rem);
+  font-style: italic; line-height: 1.45;
+  margin-top: 0.2rem;
+}
+.research-journey-path {
+  position: absolute; left: 9%; bottom: 0.25rem;
+  width: 84%; height: 22px;
+  z-index: 0; pointer-events: none;
+}
+.research-journey-path path {
+  fill: none; stroke: var(--research-blue);
+  stroke-opacity: 0.52; stroke-width: 2;
+  stroke-linecap: round; stroke-dasharray: 6 11;
+  animation: research-path-flow 3s linear infinite;
+}
+@keyframes research-run-bob {
+  from { transform: translateY(1px) rotate(-0.6deg); }
+  to { transform: translateY(-3px) rotate(0.6deg); }
+}
+@keyframes research-path-flow { to { stroke-dashoffset: -34; } }
+@container (max-width: 420px) {
+  .research-journey {
+    grid-template-columns: minmax(70px, 0.75fr) minmax(0, 1.65fr);
+    min-height: 108px;
+    column-gap: 0.5rem;
+  }
+  .research-journey-person { max-width: 105px; }
+  .research-journey-title { font-size: clamp(0.78rem, 3cqw, 0.95rem); }
+  .research-journey-subtitle { font-size: clamp(0.69rem, 2.6cqw, 0.82rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .research-journey-person, .research-journey-path path { animation: none !important; }
 }
 
 </style>
@@ -858,12 +896,11 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
 </button>
 </figure></div><div class="research-visual-topics"><div class="research-topics-block">
 <p class="research-side-label">
-            4) Research topics
+            4) Related publications
           </p>
-<div class="research-journey" role="img" aria-label="Male researcher running toward a forthcoming publication; research in progress">
-<img class="research-journey-person" src="{{ '/assets/images/research_runner.png' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
-<div class="research-journey-copy"><span class="research-journey-title">Research in progress</span><span class="research-journey-subtitle">Publications forthcoming...</span></div>
-<img class="research-journey-paper" src="{{ '/assets/images/research_papers.png' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+<div class="research-journey" role="img" aria-label="Male researcher running along an open-ended path; research in progress">
+<img class="research-journey-person" src="{{ '/assets/images/research_runner_transparent.png' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+<div class="research-journey-copy"><span class="research-journey-title">Research in progress</span><span class="research-journey-subtitle">More to discover...</span></div>
 <svg class="research-journey-path" viewBox="0 0 350 25" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 Q85 -8 175 12 T350 12"/></svg>
 </div>
 </div></div></div>
@@ -907,12 +944,11 @@ My doctoral research focuses on bio-based composite films that combine passive r
 </button>
 </figure></div><div class="research-visual-topics"><div class="research-topics-block">
 <p class="research-side-label">
-            4) Research topics
+            4) Related publications
           </p>
-<div class="research-journey" role="img" aria-label="Male researcher running toward a forthcoming publication; research in progress">
-<img class="research-journey-person" src="{{ '/assets/images/research_runner.png' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
-<div class="research-journey-copy"><span class="research-journey-title">Research in progress</span><span class="research-journey-subtitle">Publications forthcoming...</span></div>
-<img class="research-journey-paper" src="{{ '/assets/images/research_papers.png' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+<div class="research-journey" role="img" aria-label="Male researcher running along an open-ended path; research in progress">
+<img class="research-journey-person" src="{{ '/assets/images/research_runner_transparent.png' | relative_url }}" alt="" aria-hidden="true" loading="lazy">
+<div class="research-journey-copy"><span class="research-journey-title">Research in progress</span><span class="research-journey-subtitle">More to discover...</span></div>
 <svg class="research-journey-path" viewBox="0 0 350 25" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 Q85 -8 175 12 T350 12"/></svg>
 </div>
 </div></div></div>
