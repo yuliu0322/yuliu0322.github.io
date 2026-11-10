@@ -1,5 +1,5 @@
 ---
-title: "Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (Crassostrea gigas)"
+title: "Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>)"
 collection: publications
 permalink: /publication/liquid-nitrogen-oyster/
 date: 2023-10-01
@@ -14,7 +14,7 @@ summary: >
   This study investigated the effects of liquid nitrogen freezing
   (LNF) at different temperatures (-20, -40, -60, -80, and -100 °C)
   on the physicochemical quality, muscle microstructure, and
-  flavor characteristics of Pacific oysters (Crassostrea gigas).
+  flavor characteristics of Pacific oysters (<i>Crassostrea gigas</i>).
   <strong>Liquid nitrogen freezing at -80 °C provided the best
   overall preservation performance, reducing centrifugal loss
   by 9.61%, steaming loss by 3.78%, and thawing loss by 7.71%
