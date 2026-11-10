@@ -1,5 +1,5 @@
 ---
-title: "Changes in Flavor-Related Biomarkers in Pacific Oysters (Crassostrea gigas) Following Microplastic Exposure"
+title: "Changes in Flavor-Related Biomarkers in Pacific Oysters (<i>Crassostrea gigas</i>) Following Microplastic Exposure"
 collection: publications
 permalink: /publication/flavor-biomarkers/
 date: 2024-02-29
