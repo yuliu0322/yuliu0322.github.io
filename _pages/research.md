@@ -702,6 +702,39 @@ html[data-theme="dark"] .research-topics li {
 .research-publication-doi { display: inline-block; margin-top: 0.15rem; color: var(--research-blue); text-decoration: none; overflow-wrap: anywhere; }
 .research-publication-doi:hover { text-decoration: underline; }
 
+
+/* RESEARCH-IN-PROGRESS ILLUSTRATION — areas 02 and 03 */
+.research-progress-scene {
+  width: 100%; min-width: 0; display: grid;
+  grid-template-columns: minmax(88px, 0.72fr) minmax(0, 1.4fr) minmax(64px, 0.55fr);
+  align-items: center; gap: clamp(0.25rem, 1vw, 0.7rem);
+  padding: clamp(0.5rem, 1.5vw, 0.85rem) 0;
+  color: var(--research-ink);
+}
+.research-runner { display: block; width: 100%; height: auto; overflow: visible; }
+.research-runner .runner-bob { animation: runner-bob 0.65s ease-in-out infinite alternate; transform-origin: 70px 80px; }
+.research-runner .runner-arm-front { animation: runner-arm 0.65s ease-in-out infinite alternate; transform-origin: 79px 62px; }
+.research-runner .runner-leg-front { animation: runner-leg 0.65s ease-in-out infinite alternate; transform-origin: 68px 90px; }
+.research-runner .runner-leg-back { animation: runner-leg 0.65s ease-in-out infinite alternate-reverse; transform-origin: 68px 90px; }
+.research-runner .runner-speed { animation: runner-speed 1.1s linear infinite; }
+.research-progress-copy { min-width: 0; border-left: 1px solid var(--research-line); padding-left: clamp(0.4rem, 1vw, 0.8rem); }
+.research-progress-heading { display: block; font-size: clamp(0.8rem, 1.25vw, 1.03rem); line-height: 1.3; font-weight: 750; color: var(--research-ink); }
+.research-progress-note { display: block; margin-top: 0.25rem; font-size: clamp(0.68rem, 1vw, 0.83rem); font-style: italic; line-height: 1.4; color: var(--research-muted); }
+.research-paper-art { display: block; width: 100%; height: auto; }
+@keyframes runner-bob { to { transform: translateY(-4px); } }
+@keyframes runner-arm { to { transform: rotate(-23deg); } }
+@keyframes runner-leg { to { transform: rotate(28deg); } }
+@keyframes runner-speed { to { transform: translateX(-10px); opacity: 0.2; } }
+@container (max-width: 370px) {
+  .research-progress-scene { grid-template-columns: minmax(65px, 0.7fr) minmax(0, 1.6fr); }
+  .research-paper-art { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .research-runner .runner-bob, .research-runner .runner-arm-front,
+  .research-runner .runner-leg-front, .research-runner .runner-leg-back,
+  .research-runner .runner-speed { animation: none; }
+}
+
 </style>
 
 <div class="research-page">
@@ -829,14 +862,34 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
 <p class="research-side-label">
             4) Research topics
           </p>
-<ul class="research-topics">
-<li>Feed-based oral delivery systems</li>
-<li>Oral vaccines</li>
-<li>PLGA-based micro- and nanoparticles</li>
-<li>Controlled-release</li>
-<li>Functional aquafeeds</li>
-<li>Aquatic animal disease control</li>
-</ul>
+<div class="research-progress-scene" role="img" aria-label="Animated male researcher running toward forthcoming publications; research in progress">
+  <svg class="research-runner" viewBox="0 0 145 135" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g class="runner-speed" fill="none" stroke="#a7c9df" stroke-width="2.5" stroke-linecap="round"><path d="M5 77h22"/><path d="M11 89h18"/><path d="M2 101h19"/></g>
+    <ellipse cx="74" cy="125" rx="47" ry="5" fill="#e8f1f7"/>
+    <g class="runner-bob">
+      <g class="runner-leg-back" stroke="#2d527c" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M67 89L48 107L30 105"/><path d="M30 105l-11 4" stroke="#8aadd1" stroke-width="7"/></g>
+      <g class="runner-leg-front" stroke="#315d8d" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M69 88l18 18 21-4"/><path d="M108 102l11 5" stroke="#8aadd1" stroke-width="7"/></g>
+      <path d="M61 53Q47 66 55 94L81 95Q88 74 79 54Z" fill="#f9fcff" stroke="#94b8d7" stroke-width="2"/>
+      <path d="M63 56l8 19 7-19" fill="#c7dfef"/><path d="M69 74v19" stroke="#a3c5dd" stroke-width="1.5"/>
+      <path d="M56 61Q45 72 36 72" stroke="#f9fcff" stroke-width="10" stroke-linecap="round"/><path d="M36 72l-7-6" stroke="#f2c6a9" stroke-width="6" stroke-linecap="round"/>
+      <g class="runner-arm-front"><path d="M79 62l16 13-8 8" fill="none" stroke="#f9fcff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M87 83l-5 3" stroke="#f2c6a9" stroke-width="6" stroke-linecap="round"/></g>
+      <path d="M59 52l-8-3q-5 14 1 25" fill="#315d8d" stroke="#254668" stroke-width="2"/>
+      <rect x="72" y="66" width="16" height="21" rx="2" transform="rotate(-15 72 66)" fill="#5a92c1" stroke="#2c658f" stroke-width="1.5"/>
+      <rect x="66" y="44" width="9" height="12" rx="3" fill="#f2c6a9"/>
+      <circle cx="70" cy="33" r="17" fill="#f2c6a9"/>
+      <path d="M54 35Q49 16 67 15Q84 13 87 27Q83 33 75 26Q64 31 54 35Z" fill="#303744"/>
+      <circle cx="80" cy="35" r="1.6" fill="#303744"/><path d="M80 43q4 3 7-1" stroke="#a96e61" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="research-progress-copy" aria-hidden="true"><span class="research-progress-heading">Research in progress</span><span class="research-progress-note">Publications forthcoming...</span></div>
+  <svg class="research-paper-art" viewBox="0 0 95 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="46" cy="115" rx="43" ry="6" fill="#e8f1f7"/>
+    <rect x="12" y="91" width="67" height="16" rx="4" fill="#6c9bc8" stroke="#426c9d" stroke-width="2"/>
+    <rect x="17" y="77" width="63" height="14" rx="3" fill="#f8fbff" stroke="#769bc3" stroke-width="2"/>
+    <g transform="rotate(9 51 47)"><rect x="29" y="13" width="51" height="64" rx="4" fill="#fff" stroke="#83a7cf" stroke-width="2"/><text x="54" y="34" text-anchor="middle" font-size="12" font-family="Georgia,serif" fill="#2d527c">Paper</text><path d="M38 44h33M38 51h29M38 58h33M38 65h20" stroke="#aec7de" stroke-width="2"/></g>
+    <path d="M83 13l6-7M89 26l5-1" stroke="#6c9bc8" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+</div>
 </div></div></div>
 </section>
 <!-- 03 PASSIVE COOLING -->
@@ -880,13 +933,34 @@ My doctoral research focuses on bio-based composite films that combine passive r
 <p class="research-side-label">
             4) Research topics
           </p>
-<ul class="research-topics">
-<li>Passive radiative and evaporative cooling</li>
-<li>Bio-based composite films</li>
-<li>Food packages</li>
-<li>Food preservation</li>
-<li>Food cold-chain technologies</li>
-</ul>
+<div class="research-progress-scene" role="img" aria-label="Animated male researcher running toward forthcoming publications; research in progress">
+  <svg class="research-runner" viewBox="0 0 145 135" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g class="runner-speed" fill="none" stroke="#a7c9df" stroke-width="2.5" stroke-linecap="round"><path d="M5 77h22"/><path d="M11 89h18"/><path d="M2 101h19"/></g>
+    <ellipse cx="74" cy="125" rx="47" ry="5" fill="#e8f1f7"/>
+    <g class="runner-bob">
+      <g class="runner-leg-back" stroke="#2d527c" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M67 89L48 107L30 105"/><path d="M30 105l-11 4" stroke="#8aadd1" stroke-width="7"/></g>
+      <g class="runner-leg-front" stroke="#315d8d" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M69 88l18 18 21-4"/><path d="M108 102l11 5" stroke="#8aadd1" stroke-width="7"/></g>
+      <path d="M61 53Q47 66 55 94L81 95Q88 74 79 54Z" fill="#f9fcff" stroke="#94b8d7" stroke-width="2"/>
+      <path d="M63 56l8 19 7-19" fill="#c7dfef"/><path d="M69 74v19" stroke="#a3c5dd" stroke-width="1.5"/>
+      <path d="M56 61Q45 72 36 72" stroke="#f9fcff" stroke-width="10" stroke-linecap="round"/><path d="M36 72l-7-6" stroke="#f2c6a9" stroke-width="6" stroke-linecap="round"/>
+      <g class="runner-arm-front"><path d="M79 62l16 13-8 8" fill="none" stroke="#f9fcff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M87 83l-5 3" stroke="#f2c6a9" stroke-width="6" stroke-linecap="round"/></g>
+      <path d="M59 52l-8-3q-5 14 1 25" fill="#315d8d" stroke="#254668" stroke-width="2"/>
+      <rect x="72" y="66" width="16" height="21" rx="2" transform="rotate(-15 72 66)" fill="#5a92c1" stroke="#2c658f" stroke-width="1.5"/>
+      <rect x="66" y="44" width="9" height="12" rx="3" fill="#f2c6a9"/>
+      <circle cx="70" cy="33" r="17" fill="#f2c6a9"/>
+      <path d="M54 35Q49 16 67 15Q84 13 87 27Q83 33 75 26Q64 31 54 35Z" fill="#303744"/>
+      <circle cx="80" cy="35" r="1.6" fill="#303744"/><path d="M80 43q4 3 7-1" stroke="#a96e61" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="research-progress-copy" aria-hidden="true"><span class="research-progress-heading">Research in progress</span><span class="research-progress-note">Publications forthcoming...</span></div>
+  <svg class="research-paper-art" viewBox="0 0 95 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="46" cy="115" rx="43" ry="6" fill="#e8f1f7"/>
+    <rect x="12" y="91" width="67" height="16" rx="4" fill="#6c9bc8" stroke="#426c9d" stroke-width="2"/>
+    <rect x="17" y="77" width="63" height="14" rx="3" fill="#f8fbff" stroke="#769bc3" stroke-width="2"/>
+    <g transform="rotate(9 51 47)"><rect x="29" y="13" width="51" height="64" rx="4" fill="#fff" stroke="#83a7cf" stroke-width="2"/><text x="54" y="34" text-anchor="middle" font-size="12" font-family="Georgia,serif" fill="#2d527c">Paper</text><path d="M38 44h33M38 51h29M38 58h33M38 65h20" stroke="#aec7de" stroke-width="2"/></g>
+    <path d="M83 13l6-7M89 26l5-1" stroke="#6c9bc8" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+</div>
 </div></div></div>
 </section>
 <!-- 04 POST-HARVEST -->
