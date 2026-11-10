@@ -668,12 +668,44 @@ html[data-theme="dark"] .research-topics li {
   }
 }
 
+/* MACBOOK / MEDIUM CONTENT WIDTH: keep the two-column design. */
+@container research-layout (min-width: 681px) and (max-width: 1000px) {
+  .research-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    column-gap: 1.2rem;
+  }
+
+  .research-section--reverse .research-grid {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .research-visual-column {
+    padding-top: 1rem;
+  }
+
+  .research-figure,
+  .research-image-button,
+  .research-figure img {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .research-figure img {
+    max-height: 350px;
+    object-fit: contain;
+  }
+
+  .research-topics {
+    gap: 0.55rem 0.45rem;
+  }
+}
+
 /* CONTENT-WIDTH RESPONSIVE LAYOUT
    Minimal Mistakes reserves space for the author sidebar.
    Container queries react to the actual Research content width,
    rather than the full Safari/Chrome window width. */
 
-@container research-layout (max-width: 1000px) {
+@container research-layout (max-width: 680px) {
   .research-intro-body {
     grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
