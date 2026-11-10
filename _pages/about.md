@@ -131,32 +131,56 @@ redirect_from:
 .home-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3.5rem;
+  gap: clamp(1.6rem, 4vw, 3.5rem);
 }
 
 .home-research-item {
   min-width: 0;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--home-blue-dark);
 }
 
 .home-research-header {
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .home-research-number {
-  display: block;
-  margin-bottom: 2px;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
   color: var(--home-muted);
-  font-size: 0.65rem;
+  font-size: 0.71rem;
   font-weight: 750;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+}
+
+.home-research-index {
+  color: var(--home-blue-dark);
+  font-size: 1.3rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.home-research-slash {
+  color: #9db8c4;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .home-research-title {
+  display: inline;
   margin: 0;
   color: var(--home-navy);
-  font-size: 1.02rem;
-  font-weight: 720;
-  line-height: 1.4;
+  font-size: clamp(1.08rem, 1.4vw, 1.3rem);
+  font-weight: 750;
+  line-height: 1.5;
+  box-shadow: inset 0 -0.3em 0 rgba(72, 169, 197, 0.13);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .home-research-text {
@@ -169,19 +193,39 @@ redirect_from:
 .home-research-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 1rem;
+  gap: 7px;
+  margin-top: 1.1rem;
 }
 
 .home-research-tag {
-  padding: 4px 8px;
-  color: var(--home-muted);
-  border: 1px solid var(--home-border);
+  padding: 4px 10px;
+  color: var(--home-navy);
+  border: 1px solid #c6dce5;
   border-radius: 999px;
   font-size: 0.66rem;
   font-weight: 650;
+  line-height: 1.5;
 }
 
+html[data-theme="dark"] .home-research-title {
+  box-shadow: inset 0 -0.3em 0 rgba(105, 200, 226, 0.22);
+}
+
+html[data-theme="dark"] .home-research-tag {
+  border-color: var(--home-border);
+}
+
+/* Use the actual research section width, including when a sidebar is present. */
+.home-current-research {
+  container-type: inline-size;
+}
+
+@container (max-width: 570px) {
+  .home-research-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
 
 /* ==================================================
    Beyond the laboratory
@@ -323,7 +367,7 @@ html[data-theme="dark"] .home-welcome {
 
   <!-- Current research -->
 
-  <section class="home-section">
+  <section class="home-section home-current-research">
 
     <div class="home-section-header">
       <h2 class="home-section-heading">
@@ -338,7 +382,7 @@ html[data-theme="dark"] .home-welcome {
       <article class="home-research-item">
 
         <div class="home-research-header">
-          <span class="home-research-number">RESEARCH 01</span>
+          <span class="home-research-number"><span class="home-research-index">01</span><span class="home-research-slash">/</span><span>CURRENT RESEARCH</span></span>
           <h3 class="home-research-title">
             Oral Delivery Systems
           </h3>
@@ -363,7 +407,7 @@ html[data-theme="dark"] .home-welcome {
       <article class="home-research-item">
 
         <div class="home-research-header">
-          <span class="home-research-number">RESEARCH 02</span>
+          <span class="home-research-number"><span class="home-research-index">02</span><span class="home-research-slash">/</span><span>CURRENT RESEARCH</span></span>
           <h3 class="home-research-title">
             Passive Cooling Materials
           </h3>
