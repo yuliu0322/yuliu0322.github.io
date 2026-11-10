@@ -12,7 +12,7 @@ thumbnail: "/assets/images/metabolomics-microplastic.png"
 category: "Seafood Safety"
 summary: >
   This study investigated the metabolic and biochemical responses
-  of Pacific oysters (Crassostrea gigas) exposed to polystyrene
+  of Pacific oysters (<i>Crassostrea gigas</i>) exposed to polystyrene
   microplastics (0.1, 1, and 10 mg/L) for 21 days using
   mass spectrometry-based metabolomics and enzymatic biomarker
   analyses. <strong>Microplastic exposure induced oxidative stress
