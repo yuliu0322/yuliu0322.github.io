@@ -1,5 +1,5 @@
 ---
-title: "Sex-specific lipidomic profiling of the marine mussel Mytilus coruscus: A comparative analysis of male and female lipid metabolism"
+title: "Sex-specific lipidomic profiling of the marine mussel <i>Mytilus coruscus</i>: A comparative analysis of male and female lipid metabolism"
 collection: publications
 permalink: /publication/mussel-sex-specific-lipidomics/
 date: "2026-09-28 "
@@ -12,7 +12,7 @@ thumbnail: "/assets/images/mussel-sex-specific-lipidomics.png"
 category: "Seafood Quality"
 summary: >
   This study investigated sex-specific lipid metabolic differences
-  in thick-shell mussels (Mytilus coruscus) using UPLC-HRMS-based
+  in thick-shell mussels (<i>Mytilus coruscus</i>) using UPLC-HRMS-based
   lipidomics. <strong>Female mussels exhibited higher levels of
   glycerophospholipids, particularly phosphatidylcholine (PC)
   and phosphatidylethanolamine (PE), along with greater
