@@ -35,7 +35,7 @@ author_profile: true
 /* INTRO */
 
 .research-intro {
-  margin: 0 0 2.4rem;
+  margin: 0 0 1rem;
 }
 
 .research-intro-heading {
