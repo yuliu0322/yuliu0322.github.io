@@ -873,7 +873,7 @@ To answer this question, my research focuses on understanding and improving aqua
 <section class="research-section" id="environment">
 <div class="research-section-heading">
 <span class="research-number">
-        01 · Aquaculture Environment, Animal Health &amp; Seafood Quality
+        01 · Aquaculture Environment, Shellfish Health &amp; Quality
       </span>
 </div>
 <div class="research-grid">
@@ -919,7 +919,7 @@ During my master's studies, my research focused on understanding how environment
 <section class="research-section research-section--reverse" id="oral-delivery">
 <div class="research-section-heading">
 <span class="research-number">
-        02 · Aquaculture Health &amp; Oral Delivery Systems
+        02 · Oral Delivery Systems for Aquaculture Health
       </span>
 </div>
 <div class="research-grid">
@@ -958,11 +958,55 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
 </div>
 </div></div></div>
 </section>
-<!-- 03 PASSIVE COOLING -->
+<!-- 03 POST-HARVEST -->
+<section class="research-section research-section--reverse" id="post-harvest">
+<div class="research-section-heading">
+<span class="research-number">
+        03 · Seafood Processing, Preservation &amp; Quality
+      </span>
+</div>
+<div class="research-grid">
+<div class="research-lead">
+<h2 class="research-focus">
+          Evaluating the effects of postharvest preservation on seafood freshness and flavor quality
+        </h2>
+<p>
+Between harvest and consumption, seafood may undergo depuration, live holding, freezing, storage, and transportation. These processes can affect physiological condition, biochemical composition, sensory quality, and shelf life. Understanding the underlying molecular mechanisms can help inform strategies to preserve seafood freshness, flavor, and overall quality.
+        </p>
+</div>
+<div class="research-work"><h3 class="research-subheading">
+          1) What I work on
+        </h3><p>
+During my earlier studies, I also contributed to research projects exploring various postharvest preservation technologies for oysters and mussels, including depuration, liquid nitrogen rapid freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. Using physicochemical analyses and flavor profiling, we examined how different preservation conditions affected physiological status, biochemical composition, and flavor-related compounds, thereby identifying key factors that influence flavor and quality during postharvest storage.
+        </p></div>
+<div class="research-why"><h3 class="research-subheading">
+          2) Why it matters
+        </h3><p>
+Maintaining the freshness, flavor, and overall quality of shellfish throughout the supply chain is critical for both live and frozen products. Elucidating how different preservation strategies influence post-harvest physiological and biochemical changes can help processors and distributors optimize storage conditions, extend shelf life, and minimize post-harvest losses.
+        </p></div>
+<div class="research-visual-figure">
+<h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
+<figure class="research-figure">
+<button aria-label="Enlarge Aquaculture Preservation figure" class="research-image-button" type="button">
+<img alt="Post-harvest seafood preservation strategies" src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}"/>
+</button>
+</figure></div><div class="research-visual-topics"><div class="research-topics-block">
+<p class="research-side-label">4) Related publications</p>
+<ol class="research-publications">
+<li><span class="research-publication-title">Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.aquaculture.2024.742066" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.aquaculture.2024.742066</a></li>
+<li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
+</ol>
+</div></div></div>
+</section>
+<!-- Transition between Research Areas 03 and 04; original research text unchanged -->
+<p class="research-transition" style="margin: 1.1rem auto; max-width: 760px; padding: 0.45rem 1rem; text-align: center; color: var(--research-muted); font-size: 0.88rem; line-height: 1.65; font-style: italic;">
+  Building on our previous research in postharvest seafood preservation, we are now exploring sustainable cooling technologies for agricultural and aquatic products.
+</p>
+<!-- 04 PASSIVE COOLING -->
 <section class="research-section" id="thermal-management">
 <div class="research-section-heading">
 <span class="research-number">
-        03 · Sustainable Cold Chain &amp; Thermal Management
+        04 · Passive Cooling Materials for Sustainable Food Preservation
       </span>
 </div>
 <div class="research-grid">
@@ -1006,46 +1050,7 @@ My doctoral research focuses on bio-based composite films that combine passive r
 </div>
 </div></div></div>
 </section>
-<!-- 04 POST-HARVEST -->
-<section class="research-section research-section--reverse" id="post-harvest">
-<div class="research-section-heading">
-<span class="research-number">
-        04 · Seafood Processing, Storage &amp; Flavor Quality
-      </span>
-</div>
-<div class="research-grid">
-<div class="research-lead">
-<h2 class="research-focus">
-          Evaluating the effects of postharvest preservation on seafood freshness and flavor quality
-        </h2>
-<p>
-Between harvest and consumption, seafood may undergo depuration, live holding, freezing, storage, and transportation. These processes can affect physiological condition, biochemical composition, sensory quality, and shelf life. Understanding the underlying molecular mechanisms can help inform strategies to preserve seafood freshness, flavor, and overall quality.
-        </p>
-</div>
-<div class="research-work"><h3 class="research-subheading">
-          1) What I work on
-        </h3><p>
-During my earlier studies, I also contributed to research projects exploring various postharvest preservation technologies for oysters and mussels, including depuration, liquid nitrogen rapid freezing, low-temperature semi-anhydrous live storage, and modified atmosphere packaging. Using physicochemical analyses and flavor profiling, we examined how different preservation conditions affected physiological status, biochemical composition, and flavor-related compounds, thereby identifying key factors that influence flavor and quality during postharvest storage.
-        </p></div>
-<div class="research-why"><h3 class="research-subheading">
-          2) Why it matters
-        </h3><p>
-Maintaining the freshness, flavor, and overall quality of shellfish throughout the supply chain is critical for both live and frozen products. Elucidating how different preservation strategies influence post-harvest physiological and biochemical changes can help processors and distributors optimize storage conditions, extend shelf life, and minimize post-harvest losses.
-        </p></div>
-<div class="research-visual-figure">
-<h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
-<figure class="research-figure">
-<button aria-label="Enlarge Aquaculture Preservation figure" class="research-image-button" type="button">
-<img alt="Post-harvest seafood preservation strategies" src="{{ '/assets/images/Aqua-Preservation.png' | relative_url }}"/>
-</button>
-</figure></div><div class="research-visual-topics"><div class="research-topics-block">
-<p class="research-side-label">4) Related publications</p>
-<ol class="research-publications">
-<li><span class="research-publication-title">Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.aquaculture.2024.742066" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.aquaculture.2024.742066</a></li>
-<li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
-</ol>
-</div></div></div>
-</section>
+
 </div>
 
 
