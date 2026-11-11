@@ -236,16 +236,16 @@ author_profile: true
 }
 
 .research-overview-node--passive-cooling {
-  bottom: 28%;
-  left: -6%;
+  right: 4%;
+  bottom: 7%;
   --node-color: var(--research-blue);
   --float-time: 7.6s;
   animation-delay: -1.4s;
 }
 
 .research-overview-node--seafood-science {
-  right: 4%;
-  bottom: 7%;
+  bottom: 28%;
+  left: -6%;
   --node-color: var(--research-purple);
   --float-time: 6.1s;
   animation-delay: -2.7s;
