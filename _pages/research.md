@@ -879,7 +879,7 @@ To answer this question, my research focuses on understanding and improving aqua
 <div class="research-grid">
 <div class="research-lead">
 <h2 class="research-focus">
-          Linking the aquaculture environment to shellfish health and seafood quality
+          Aquaculture Environmental Impacts on Shellfish Health, Metabolism, and Seafood Quality
         </h2>
 <p>
           Shellfish are exposed to fluctuating temperature, salinity, and
@@ -925,7 +925,7 @@ During my master's studies, my research focused on understanding how environment
 <div class="research-grid">
 <div class="research-lead">
 <h2 class="research-focus">
-          Feed-based delivery systems for aquatic animal health
+          Feed-Based Oral Delivery Systems for Aquatic Animal Health
         </h2>
 <p>
 Disease remains a major challenge in aquaculture, and feed-based delivery offers a practical approach to administering vaccines and functional supplements at farm scale. However, probiotics, immunostimulants, and antigens may lose their stability or biological activity during storage and passage through the digestive tract, limiting their effectiveness.
@@ -968,7 +968,7 @@ A feed-based oral delivery platform that protects bioactive cargo during feed st
 <div class="research-grid">
 <div class="research-lead">
 <h2 class="research-focus">
-          Evaluating the effects of postharvest preservation on seafood freshness and flavor quality
+          Effects of Postharvest Preservation on Seafood Freshness, Flavor, and Quality
         </h2>
 <p>
 Between harvest and consumption, seafood may undergo depuration, live holding, freezing, storage, and transportation. These processes can affect physiological condition, biochemical composition, sensory quality, and shelf life. Understanding the underlying molecular mechanisms can help inform strategies to preserve seafood freshness, flavor, and overall quality.
@@ -1006,7 +1006,7 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
 <section class="research-section" id="thermal-management">
 <div class="research-section-heading">
 <span class="research-number">
-        04 · Passive Cooling Materials for Sustainable Food Preservation
+        04 · Developing Bio-Based Passive Cooling Materials for Sustainable Food Preservation
       </span>
 </div>
 <div class="research-grid">
