@@ -879,7 +879,7 @@ To answer this question, my research focuses on understanding and improving aqua
 <div class="research-grid">
 <div class="research-lead">
 <h2 class="research-focus">
-          Aquaculture Environmental Impacts on Shellfish Health, Metabolism, and Seafood Quality
+          Environmental Impacts on Shellfish Health, Metabolism, and Quality
         </h2>
 <p>
           Shellfish are exposed to fluctuating temperature, salinity, and
