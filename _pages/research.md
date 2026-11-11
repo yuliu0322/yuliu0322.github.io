@@ -857,11 +857,11 @@ To answer this question, my research focuses on understanding and improving aqua
 <div class="research-overview-node research-overview-node--oral-delivery">
   Oral Delivery Systems
 </div>
+<div class="research-overview-node research-overview-node--seafood-science">
+  Seafood Processing &amp; Preservation
+</div>
 <div class="research-overview-node research-overview-node--passive-cooling">
   Passive Cooling Materials
-</div>
-<div class="research-overview-node research-overview-node--seafood-science">
-  Seafood Flavor and Quality
 </div>
 <span class="research-microsphere research-microsphere--one"></span>
 <span class="research-microsphere research-microsphere--two"></span>
