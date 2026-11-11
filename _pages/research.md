@@ -771,6 +771,59 @@ html[data-theme="dark"] .research-topics li {
   .research-journey-person, .research-journey-path path { animation: none !important; }
 }
 
+/* Center the complete journey illustration within the right-hand WHY row. */
+#oral-delivery .research-visual-topics,
+#thermal-management .research-visual-topics {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+#oral-delivery .research-topics-block,
+#thermal-management .research-topics-block {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+#oral-delivery .research-journey,
+#thermal-management .research-journey {
+  width: min(100%, 460px);
+  margin: auto;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+}
+#oral-delivery .research-journey-person,
+#thermal-management .research-journey-person {
+  min-width: 0;
+  max-width: 145px;
+}
+#oral-delivery .research-journey-copy,
+#thermal-management .research-journey-copy {
+  overflow-wrap: anywhere;
+}
+/* The existing section container query switches the overall page to one column. */
+@container (max-width: 760px) {
+  #oral-delivery .research-visual-topics,
+  #thermal-management .research-visual-topics {
+    align-self: auto;
+  }
+  #oral-delivery .research-journey,
+  #thermal-management .research-journey {
+    margin: 1rem auto;
+  }
+}
+@container (max-width: 320px) {
+  #oral-delivery .research-journey,
+  #thermal-management .research-journey {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+    column-gap: 0.4rem;
+  }
+  #oral-delivery .research-journey-person,
+  #thermal-management .research-journey-person { max-width: 85px; }
+  #oral-delivery .research-journey-title,
+  #thermal-management .research-journey-title { font-size: 0.78rem; }
+}
+
 </style>
 
 <div class="research-page">
