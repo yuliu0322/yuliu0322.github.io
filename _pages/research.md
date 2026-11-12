@@ -1005,7 +1005,7 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
   Building on our previous research in postharvest seafood preservation, we are now exploring sustainable cooling technologies for agricultural and aquatic products.
 </p>
 
-<div style="text-align: center; font-size: 1.8rem; margin: 0 0 12px;" aria-hidden="true">👇</div>
+<div style="text-align: center; font-size: 1.8rem; line-height: 1; margin: -4px 0 4px;" aria-hidden="true">👇</div>
   
 <!-- 04 PASSIVE COOLING -->
 <section class="research-section" id="thermal-management">
