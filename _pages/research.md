@@ -899,7 +899,7 @@ During my master's studies, my research focused on understanding how environment
 <div class="research-why"><h3 class="research-subheading">
           2) Why it matters
         </h3><p>
-          Shellfish quality is shaped by environmental conditions long before harvest. Identifying the environmental stressors and metabolic pathways associated with changes in shellfish health and flavor can provide valuable insights for aquaculture site selection and culture management, while also informing efforts by inspectors and regulators to assess microplastic contamination in seafood.
+          Shellfish quality is shaped by environmental conditions long before harvest. Identifying how environmental stressors affect shellfish physiology, metabolic pathways, and flavor-related compounds can provide valuable insights for aquaculture site selection and culture management. Understanding these relationships can also help identify potential indicators of environmental stress, while informing efforts by inspectors and regulators to assess microplastic contamination and its potential implications for seafood quality.
         </p></div>
 <div class="research-visual-figure">
 <h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
@@ -912,6 +912,7 @@ During my master's studies, my research focused on understanding how environment
 <ol class="research-publications">
 <li><span class="research-publication-title">Metabolic profiles and protein expression responses of Pacific oyster (<i>Crassostrea gigas</i>) to polystyrene microplastic stress (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2024.140961" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2024.140961</a></li>
 <li><span class="research-publication-title">Changes in Flavor-Related Biomarkers in Pacific Oysters (<i>Crassostrea gigas</i>) Following Microplastic Exposure (2024).</span><a class="research-publication-doi" href="https://doi.org/10.3390/foods13050765" target="_blank" rel="noopener noreferrer">DOI: 10.3390/foods13050765</a></li>
+<li><span class="research-publication-title">Sex-specific lipidomic profiling of the marine mussel <i>Mytilus coruscus</i>: A comparative analysis of male and female lipid metabolism (2026).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2026.151377" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2026.151377</a></li>
 </ol>
 </div></div></div>
 </section>
@@ -982,7 +983,7 @@ During my earlier studies, I also contributed to research projects exploring var
 <div class="research-why"><h3 class="research-subheading">
           2) Why it matters
         </h3><p>
-Maintaining the freshness, flavor, and overall quality of shellfish throughout the supply chain is critical for both live and frozen products. Elucidating how different preservation strategies influence post-harvest physiological and biochemical changes can help processors and distributors optimize storage conditions, extend shelf life, and minimize post-harvest losses.
+Maintaining the freshness, flavor, and overall quality of shellfish throughout the supply chain is critical for both live and frozen products. Different preservation conditions can influence physiological activity, biochemical stability, and the development of flavor-related compounds, ultimately affecting product quality and marketability. Understanding these changes can help processors and distributors select appropriate preservation technologies, optimize storage and transportation conditions, extend shelf life, and minimize post-harvest losses.
         </p></div>
 <div class="research-visual-figure">
 <h3 class="research-subheading research-illustration-heading">3) Research illustration</h3>
@@ -995,6 +996,7 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
 <ol class="research-publications">
 <li><span class="research-publication-title">Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.aquaculture.2024.742066" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.aquaculture.2024.742066</a></li>
 <li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
+<li><span class="research-publication-title">The dynamic change of flavor characteristics in Pacific oyster (<i>Crassostrea gigas</i>) during depuration uncovered by mass spectrometry-based metabolomics combined with gas chromatography-ion mobility spectrometry (GC-IMS) (2024).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.137277" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.137277</a></li>
 </ol>
 </div></div></div>
 </section>
