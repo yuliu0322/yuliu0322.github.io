@@ -910,9 +910,9 @@ During my master's studies, my research focused on understanding how environment
 </figure></div><div class="research-visual-topics"><div class="research-topics-block">
 <p class="research-side-label">4) Related publications</p>
 <ol class="research-publications">
+<li><span class="research-publication-title">Sex-specific lipidomic profiling of the marine mussel <i>Mytilus coruscus</i>: A comparative analysis of male and female lipid metabolism (2026).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2026.151377" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2026.151377</a></li>
 <li><span class="research-publication-title">Metabolic profiles and protein expression responses of Pacific oyster (<i>Crassostrea gigas</i>) to polystyrene microplastic stress (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2024.140961" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2024.140961</a></li>
 <li><span class="research-publication-title">Changes in Flavor-Related Biomarkers in Pacific Oysters (<i>Crassostrea gigas</i>) Following Microplastic Exposure (2024).</span><a class="research-publication-doi" href="https://doi.org/10.3390/foods13050765" target="_blank" rel="noopener noreferrer">DOI: 10.3390/foods13050765</a></li>
-<li><span class="research-publication-title">Sex-specific lipidomic profiling of the marine mussel <i>Mytilus coruscus</i>: A comparative analysis of male and female lipid metabolism (2026).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2026.151377" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2026.151377</a></li>
 </ol>
 </div></div></div>
 </section>
@@ -995,8 +995,8 @@ Maintaining the freshness, flavor, and overall quality of shellfish throughout t
 <p class="research-side-label">4) Related publications</p>
 <ol class="research-publications">
 <li><span class="research-publication-title">Effects of cooling rate on the physiological metabolism and flavor of thick-shell mussel (<i>Mytilus coruscus</i>) during low-temperature semi-anhydrous living-preservation (2025).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.aquaculture.2024.742066" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.aquaculture.2024.742066</a></li>
-<li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
 <li><span class="research-publication-title">The dynamic change of flavor characteristics in Pacific oyster (<i>Crassostrea gigas</i>) during depuration uncovered by mass spectrometry-based metabolomics combined with gas chromatography-ion mobility spectrometry (GC-IMS) (2024).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.137277" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.137277</a></li>
+<li><span class="research-publication-title">Effects of liquid nitrogen freezing at different temperatures on the quality and flavor of Pacific oyster (<i>Crassostrea gigas</i>) (2023).</span><a class="research-publication-doi" href="https://doi.org/10.1016/j.foodchem.2023.136162" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.foodchem.2023.136162</a></li>
 </ol>
 </div></div></div>
 </section>
