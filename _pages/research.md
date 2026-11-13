@@ -894,7 +894,7 @@ To answer this question, my research focuses on understanding and improving aqua
 <div class="research-work"><h3 class="research-subheading">
           1) What I work on
         </h3><p>
-During my master's studies, my research focused on understanding how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, I investigated the underlying metabolic responses and identified key pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
+During my master’s studies, my research focused on understanding how environmental factors, including temperature, salinity, and microplastic exposure, affected shellfish physiology, metabolism, biochemical composition, and flavor-related compounds. By integrating physiological measurements and biochemical assays with metabolomics, lipidomics, and protein expression analysis, I investigated the underlying metabolic responses and identified key pathways and potential biomarkers associated with environmental stress and changes in seafood quality.
         </p></div>
 <div class="research-why"><h3 class="research-subheading">
           2) Why it matters
